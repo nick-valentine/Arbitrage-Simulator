@@ -1,3 +1,5 @@
+<?php echo $error ?>
+
 <!-- vendor -->
 <script src="js/vendor/pixi.min.js"></script>
 
