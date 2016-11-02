@@ -4,22 +4,22 @@ use Phalcon\Mvc\Model;
 
 class City extends Model
 {
-	/**
-	 * @Primary
-	 * @Identity
-	 * @Column(type="integer", nullable=false) 
-	 */
 	private $id;
 
-	/**
-	 * @Column(type="string", nullable=false) 
-	 */
 	private $name;
 
-	/**
-	 * @Column(type="string", nullable=false)
-	 */
 	private $description;
+
+	private $tradePaths;
+
+	public function initialize()
+	{
+		$this->hasMany(
+			'tradePaths',
+			TradePath::class,
+			'id'
+		);
+	}
 
 	public function getId()
 	{
