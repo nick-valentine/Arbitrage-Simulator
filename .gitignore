@@ -1,3 +1,2 @@
-cache/
-.phalcon/migration-version
-
+*.o
+main

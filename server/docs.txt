@@ -1,0 +1,2 @@
+software needed to compile/run:
+sudo apt-get install odb libodb-2.4 libodb-dev libodb-mysql-2.4 libodb-mysql-dev
