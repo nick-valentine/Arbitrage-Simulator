@@ -10,13 +10,20 @@
 class City : public AbstractGameObject
 {
 public:
+    City();
     City(std::istringstream *iss);
     void fromStringStream(std::istringstream *iss);
     void toStringStream(std::ostringstream *oss);
 
-private:
-    City();
+    void setName(std::string name);
+    const std::string& getName() const;
 
+    void setPosX(int x);
+    int getPosX() const;
+
+    void setPosY(int y);
+    int getPosY() const;
+private:
     std::string name;
     int pos_x;
     int pos_y;
