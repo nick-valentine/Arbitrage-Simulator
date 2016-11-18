@@ -7,30 +7,34 @@ City::City()
     this->pos_y = 0;
 }
 
-City::City(std::istringstream *iss)
+City::City(std::stringstream *ss)
 {
-    this->fromStringStream(iss);
+    this->fromStringStream(ss);
 }
 
-void City::fromStringStream(std::istringstream *iss)
+void City::fromStringStream(std::stringstream *ss)
 {
     std::string pos_x_str, pos_y_str;
-    std::getline((*iss), this->name, Globals::file_delimeter);
-    std::getline((*iss), pos_x_str, Globals::file_delimeter);
-    std::getline((*iss), pos_y_str, Globals::file_delimeter);
+    std::getline((*ss), this->name, Globals::file_delimeter);
+    std::getline((*ss), pos_x_str, Globals::file_delimeter);
+    std::getline((*ss), pos_y_str);
 
-    std::stringstream ss;
-    ss.str(pos_x_str);
-    ss>>this->pos_x;
-    ss.str(pos_y_str);
-    ss>>this->pos_y;
+    std::stringstream temp_ss;
+    temp_ss.str(pos_x_str);
+    temp_ss>>this->pos_x;
+
+    temp_ss.str(std::string());
+    temp_ss.clear();
+
+    temp_ss.str(pos_y_str);
+    temp_ss>>this->pos_y;
 }
 
-void City::toStringStream(std::ostringstream *oss)
+void City::toStringStream(std::stringstream *ss)
 {
-    (*oss)<<this->name<<Globals::file_delimeter
+    (*ss)<<this->name<<Globals::file_delimeter
         <<this->pos_x<<Globals::file_delimeter
-        <<this->pos_y<<Globals::file_delimeter;
+        <<this->pos_y<<Globals::object_delimiter;
 }
 
 void City::setName(std::string name)

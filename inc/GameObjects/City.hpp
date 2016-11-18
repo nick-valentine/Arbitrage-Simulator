@@ -11,9 +11,9 @@ class City : public AbstractGameObject
 {
 public:
     City();
-    City(std::istringstream *iss);
-    void fromStringStream(std::istringstream *iss);
-    void toStringStream(std::ostringstream *oss);
+    City(std::stringstream *ss);
+    void fromStringStream(std::stringstream *ss);
+    void toStringStream(std::stringstream *ss);
 
     void setName(std::string name);
     const std::string& getName() const;

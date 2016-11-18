@@ -1,32 +1,32 @@
 #ifndef TILE_HPP
 #define TILE_HPP
 
+#include <sstream>
+#include <string>
+
+#include "GameObjects/AbstractGameObject.hpp"
+
 class Tile : public AbstractGameObject
 {
 public:
     Tile();
-    Tile(std::istringstream *iss);
-    void fromStringStream(std::istringstream *iss);
-    void toStringStream(std::ostringstream *oss);
+    Tile(std::stringstream *ss);
+    void fromStringStream(std::stringstream *ss);
+    void toStringStream(std::stringstream *ss);
 
 
 private:
     // @todo: add colors etc.
-    typedef struct TileType
+    struct TileType
     {
         char tile;
 
-        TypeType(char tile) : tile(tile) {}
+        TileType(char tile) : tile(tile) {}
     };
 
-    static const TileType[4] = 
-    {
-        {'.'}, //plains
-        {'M'}, //mountains
-        {'O'}, //water
-        {'s'} //swamps
-    }
+    static const TileType Tiles[4]; 
 
+    //index into Tiles 
     int myType;
 };
 

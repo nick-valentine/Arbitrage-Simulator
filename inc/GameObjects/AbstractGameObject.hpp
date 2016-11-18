@@ -6,7 +6,7 @@
 class AbstractGameObject
 {
 public:
-    virtual void fromStringStream(std::istringstream *iss) = 0;
-    virtual void toStringStream(std::ostringstream *oss) = 0;
+    virtual void fromStringStream(std::stringstream *ss) = 0;
+    virtual void toStringStream(std::stringstream *ss) = 0;
 };
 #endif //ABSTRACTGAMEOBJECT_HPP
