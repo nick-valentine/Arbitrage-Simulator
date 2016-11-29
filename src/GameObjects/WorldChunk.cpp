@@ -9,6 +9,26 @@ std::map<std::string, void (*)(WorldChunk *self, std::stringstream *ss)> WorldCh
         {WorldChunk::CityMarker, spawnCity}
     }; 
 
+const std::vector<std::string> WorldChunk::city_name_starts = 
+    {
+        "Oaken",
+        "Wilken",
+        "Shrunken",
+        "Fulmilka",
+        "Rolling",
+        "High"
+    };
+
+const std::vector<std::string> WorldChunk::city_name_ends = 
+    {
+        "greens",
+        "frost",
+        "plains",
+        "woods",
+        "shire",
+        "chestir"
+    };
+
 WorldChunk::WorldChunk()
 {
     
@@ -22,6 +42,7 @@ WorldChunk::WorldChunk(std::stringstream *ss)
 void WorldChunk::fromStringStream(std::stringstream *ss)
 {
     READ_STATE readState = object;
+    std::vector<Tile> tilesToSpawn;
     std::string nextObject;
     while(ss->good()) {
         if(readState == object) {
@@ -30,12 +51,13 @@ void WorldChunk::fromStringStream(std::stringstream *ss)
                 this->factoryMap[nextObject](this, ss);
             } else if( nextObject == "MAP" ) {
                 readState = map;
-                this->spawnTile(this, ss);
+                tilesToSpawn.push_back(Tile(ss));
             }
         } else if(readState == map) {
-            this->spawnTile(this, ss);
+            tilesToSpawn.push_back(Tile(ss));
         }
     }    
+    this->organizeTiles(tilesToSpawn);
 }
 
 void WorldChunk::toStringStream(std::stringstream *ss)
@@ -46,8 +68,35 @@ void WorldChunk::toStringStream(std::stringstream *ss)
     }
     (*ss)<<WorldChunk::MapMarker<<WorldChunk::SpaceConstant;
     for(unsigned int i = 0; i < this->tiles.size(); ++i) {
-        this->tiles[i].toStringStream(ss); 
-        (*ss)<<SpaceConstant;
+        for(unsigned int j = 0; j < this->tiles[i].size(); ++j) {
+            this->tiles[i][j].toStringStream(ss); 
+            (*ss)<<SpaceConstant;
+        }
+    }
+}
+
+void WorldChunk::generateChunk()
+{
+    this->cities.clear();
+    this->tiles.clear();
+
+    //@todo: base this off of a noise function rather than rand
+    for(unsigned int i = 0; i < WorldChunk::chunk_height; ++i) {
+        this->tiles.push_back(std::vector<Tile>());
+        for( unsigned int j = 0; j < WorldChunk::chunk_width; ++j) {
+            this->tiles[i].push_back(Tile(rand() % Tile::TypeCount)); 
+        }
+    }
+
+    int num_cities = rand() % WorldChunk::max_cities_per_chunk;
+
+    //@todo: make sure no two cities spawn on or near eachother
+    for(unsigned int i = 0; i < num_cities; ++i) {
+        std::string cityName = 
+            city_name_starts[rand() % city_name_starts.size()] 
+            + city_name_ends[rand() % city_name_ends.size()]
+        ;
+        this->cities.push_back(City(cityName, rand() % WorldChunk::chunk_height, rand() % WorldChunk::chunk_width));
     }
 }
 
@@ -56,8 +105,13 @@ void WorldChunk::spawnCity(WorldChunk *self, std::stringstream *ss)
     self->cities.push_back(City(ss));
 }
 
-void WorldChunk::spawnTile(WorldChunk *self, std::stringstream *ss)
+void WorldChunk::organizeTiles(std::vector<Tile> tiles)
 {
-    self->tiles.push_back(Tile(ss));
+    for(unsigned int i = 0; i < WorldChunk::chunk_height; ++i) {
+        this->tiles.push_back(std::vector<Tile>());
+        for( unsigned int j = 0; j < WorldChunk::chunk_width; ++j) {
+            this->tiles[i].push_back(tiles[(i*WorldChunk::chunk_height) + j]);
+        }
+    }
 }
 

@@ -7,6 +7,13 @@ City::City()
     this->pos_y = 0;
 }
 
+City::City(std::string name, int pos_x, int pos_y)
+{
+    this->name = name;
+    this->pos_x = pos_x;
+    this->pos_y = pos_y;
+}
+
 City::City(std::stringstream *ss)
 {
     this->fromStringStream(ss);

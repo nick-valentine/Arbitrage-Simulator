@@ -1,6 +1,6 @@
 #include "GameObjects/Tile.hpp"
 
-const Tile::TileType Tile::Tiles[4] = 
+const Tile::TileType Tile::Tiles[Tile::TypeCount] = 
 { 
     {'.'}, //plains
     {'M'}, //mountains
@@ -10,7 +10,12 @@ const Tile::TileType Tile::Tiles[4] =
 
 Tile::Tile()
 {
-    myType = 0;
+    this->myType = 0;
+}
+
+Tile::Tile(int type)
+{
+    this->myType = type;
 }
 
 Tile::Tile(std::stringstream *ss)

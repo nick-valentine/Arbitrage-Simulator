@@ -12,6 +12,7 @@ class City : public AbstractGameObject
 public:
     City();
     City(std::stringstream *ss);
+    City(std::string name, int pos_x, int pos_y);
     void fromStringStream(std::stringstream *ss);
     void toStringStream(std::stringstream *ss);
 

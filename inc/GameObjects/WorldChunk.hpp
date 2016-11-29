@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <stdlib.h>
 
 #include "Globals.hpp"
 #include "GameObjects/AbstractGameObject.hpp"
@@ -27,10 +28,19 @@ public:
     void fromStringStream(std::stringstream *ss);
     void toStringStream(std::stringstream *ss);
 
+    void generateChunk();
 private:
     static const std::string SpaceConstant;
     static const std::string CityMarker;
     static const std::string MapMarker;
+
+    static const unsigned int chunk_height = 30;
+    static const unsigned int chunk_width = 30;
+
+    //@todo: replace with config file options
+    static const int max_cities_per_chunk = 5;
+    static const std::vector<std::string> city_name_starts;
+    static const std::vector<std::string> city_name_ends;
 
     enum READ_STATE {
         object = 0,
@@ -41,10 +51,11 @@ private:
 
     //factory methods
     static void spawnCity(WorldChunk *self, std::stringstream *ss);
-    static void spawnTile(WorldChunk *self, std::stringstream *ss);
+
+    void organizeTiles(std::vector<Tile> tiles);
 
     std::vector<City> cities;
-    std::vector<Tile> tiles;
+    std::vector< std::vector<Tile> > tiles;
 };
 
 

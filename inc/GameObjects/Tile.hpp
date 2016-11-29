@@ -10,10 +10,12 @@ class Tile : public AbstractGameObject
 {
 public:
     Tile();
+    Tile(int type);
     Tile(std::stringstream *ss);
     void fromStringStream(std::stringstream *ss);
     void toStringStream(std::stringstream *ss);
 
+    static const int TypeCount = 4;
 
 private:
     // @todo: add colors etc.
@@ -24,7 +26,7 @@ private:
         TileType(char tile) : tile(tile) {}
     };
 
-    static const TileType Tiles[4]; 
+    static const TileType Tiles[TypeCount]; 
 
     //index into Tiles 
     int myType;
