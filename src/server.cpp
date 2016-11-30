@@ -5,6 +5,7 @@
 #include <time.h>
 
 #include "ConfigLoader.hpp"
+#include "GameObjects/City.hpp"
 #include "GameObjects/WorldChunk.hpp"
 
 void configure()
@@ -19,6 +20,7 @@ void configure()
 int main()
 {
     configure();
+    City::load_city_names();
 
     srand(time(NULL));
     WorldChunk myChunk;

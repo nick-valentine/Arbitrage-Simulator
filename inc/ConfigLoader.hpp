@@ -14,8 +14,8 @@ public:
     static void load();
     static void save();
 
-    static int getIntOption(std::string key);
-    static std::string getStringOption(std::string key);
+    static int getIntOption(std::string key, int defaultTo = -1);
+    static std::string getStringOption(std::string key, std::string defaultTo = "");
 
     static void mutateOption(std::string key, int value);
     static void mutateOption(std::string key, std::string value);

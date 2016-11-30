@@ -3,6 +3,8 @@
 
 #include <sstream>
 #include <string>
+#include <vector>
+#include <fstream>
 
 #include "Globals.hpp"
 #include "GameObjects/AbstractGameObject.hpp"
@@ -24,7 +26,13 @@ public:
 
     void setPosY(int y);
     int getPosY() const;
+
+    static void load_city_names();
+    static std::vector<std::string> city_name_starts;
+    static std::vector<std::string> city_name_ends;
 private:
+    static const std::string city_name_file_path;
+
     std::string name;
     int pos_x;
     int pos_y;

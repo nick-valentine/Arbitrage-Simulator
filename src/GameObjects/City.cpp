@@ -1,5 +1,10 @@
 #include "GameObjects/City.hpp"
 
+const std::string City::city_name_file_path = "GameData/city_names.txt";
+
+std::vector<std::string> City::city_name_starts = std::vector<std::string>();
+std::vector<std::string> City::city_name_ends = std::vector<std::string>();
+
 City::City()
 {
     this->name = "";
@@ -72,4 +77,20 @@ void City::setPosY(int y)
 int City::getPosY() const
 {
     return this->pos_y;
+}
+
+void City::load_city_names()
+{
+    std::ifstream ifile;
+    ifile.open(City::city_name_file_path.c_str());
+    std::string type, name;
+    while(ifile.good()) {
+        ifile>>type>>name;
+        if(type == "start") {
+            city_name_starts.push_back(name);
+        } else if(type == "end") {
+            city_name_ends.push_back(name);
+        }
+    }    
+    ifile.close();
 }

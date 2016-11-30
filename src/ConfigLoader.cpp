@@ -30,9 +30,11 @@ void ConfigLoader::save()
     ofile.close();
 }
 
-int ConfigLoader::getIntOption(std::string key) 
+int ConfigLoader::getIntOption(std::string key, int defaultTo) 
 {
-    std::string value = ConfigLoader::getStringOption(key);
+    std::stringstream dss;
+    dss<<defaultTo;
+    std::string value = ConfigLoader::getStringOption(key, dss.str());
     std::stringstream ss;
     ss.str(value);
     int x;
@@ -40,13 +42,17 @@ int ConfigLoader::getIntOption(std::string key)
     return x;
 }
 
-std::string ConfigLoader::getStringOption(std::string key) 
+std::string ConfigLoader::getStringOption(std::string key, std::string defaultTo) 
 {
     c_iter it = ConfigLoader::configuration.find(key);
     if(it != ConfigLoader::configuration.end()) {
         return it->second; 
     } else {
-        return "";
+        if( defaultTo != "-1" ) {
+            ConfigLoader::mutateOption(key, defaultTo);
+            ConfigLoader::save();
+        }
+        return defaultTo; 
     }
 }
 

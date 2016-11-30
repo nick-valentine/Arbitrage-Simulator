@@ -40,9 +40,6 @@ private:
     static unsigned int chunk_width;
     static int max_cities_per_chunk;
 
-    static const std::vector<std::string> city_name_starts;
-    static const std::vector<std::string> city_name_ends;
-
     enum READ_STATE {
         object = 0,
         map = 1

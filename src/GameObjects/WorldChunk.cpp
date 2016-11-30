@@ -9,26 +9,6 @@ std::map<std::string, void (*)(WorldChunk *self, std::stringstream *ss)> WorldCh
         {WorldChunk::CityMarker, spawnCity}
     }; 
 
-const std::vector<std::string> WorldChunk::city_name_starts = 
-    {
-        "Oaken",
-        "Wilken",
-        "Shrunken",
-        "Fulmilka",
-        "Rolling",
-        "High"
-    };
-
-const std::vector<std::string> WorldChunk::city_name_ends = 
-    {
-        "greens",
-        "frost",
-        "plains",
-        "woods",
-        "shire",
-        "chestir"
-    };
-
 bool WorldChunk::configured = false;
 unsigned int WorldChunk::chunk_height = 0;
 unsigned int WorldChunk::chunk_width = 0;
@@ -51,9 +31,9 @@ WorldChunk::WorldChunk(std::stringstream *ss)
 
 void WorldChunk::configure()
 {
-    WorldChunk::chunk_height = ConfigLoader::getIntOption("chunk_height");
-    WorldChunk::chunk_width = ConfigLoader::getIntOption("chunk_width");
-    WorldChunk::max_cities_per_chunk = ConfigLoader::getIntOption("max_cities_per_chunk");
+    WorldChunk::chunk_height = ConfigLoader::getIntOption("chunk_height", 30);
+    WorldChunk::chunk_width = ConfigLoader::getIntOption("chunk_width", 30);
+    WorldChunk::max_cities_per_chunk = ConfigLoader::getIntOption("max_cities_per_chunk", 5);
     WorldChunk::configured = true;
 }
 
@@ -111,8 +91,8 @@ void WorldChunk::generateChunk()
     //@todo: make sure no two cities spawn on or near eachother
     for(unsigned int i = 0; i < num_cities; ++i) {
         std::string cityName = 
-            city_name_starts[rand() % city_name_starts.size()] 
-            + city_name_ends[rand() % city_name_ends.size()]
+            City::city_name_starts[rand() % City::city_name_starts.size()] 
+            + City::city_name_ends[rand() % City::city_name_ends.size()]
         ;
         this->cities.push_back(City(cityName, rand() % WorldChunk::chunk_height, rand() % WorldChunk::chunk_width));
     }
