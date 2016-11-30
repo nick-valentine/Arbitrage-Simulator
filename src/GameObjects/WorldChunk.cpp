@@ -29,14 +29,32 @@ const std::vector<std::string> WorldChunk::city_name_ends =
         "chestir"
     };
 
+bool WorldChunk::configured = false;
+unsigned int WorldChunk::chunk_height = 0;
+unsigned int WorldChunk::chunk_width = 0;
+int WorldChunk::max_cities_per_chunk = 0;
+
 WorldChunk::WorldChunk()
 {
-    
+    if(!WorldChunk::configured) {
+        this->configure();
+    } 
 }
 
 WorldChunk::WorldChunk(std::stringstream *ss)
 {
     this->fromStringStream(ss);
+    if(!WorldChunk::configured) {
+        this->configure();
+    } 
+}
+
+void WorldChunk::configure()
+{
+    WorldChunk::chunk_height = ConfigLoader::getIntOption("chunk_height");
+    WorldChunk::chunk_width = ConfigLoader::getIntOption("chunk_width");
+    WorldChunk::max_cities_per_chunk = ConfigLoader::getIntOption("max_cities_per_chunk");
+    WorldChunk::configured = true;
 }
 
 void WorldChunk::fromStringStream(std::stringstream *ss)

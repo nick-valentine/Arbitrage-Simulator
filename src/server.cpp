@@ -4,10 +4,21 @@
 #include <stdlib.h>
 #include <time.h>
 
+#include "ConfigLoader.hpp"
 #include "GameObjects/WorldChunk.hpp"
+
+void configure()
+{
+    ConfigLoader::load(); 
+    std::cout<<"chunk_height: "<<ConfigLoader::getIntOption("chunk_height")<<'\n';
+    std::cout<<"chunk_width: "<<ConfigLoader::getIntOption("chunk_width")<<'\n';
+    std::cout<<"max_cities_per_chunk: "<<ConfigLoader::getIntOption("max_cities_per_chunk")<<'\n';
+    std::cout<<std::endl;
+}
 
 int main()
 {
+    configure();
 
     srand(time(NULL));
     WorldChunk myChunk;

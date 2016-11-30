@@ -8,6 +8,7 @@
 #include <stdlib.h>
 
 #include "Globals.hpp"
+#include "ConfigLoader.hpp"
 #include "GameObjects/AbstractGameObject.hpp"
 #include "GameObjects/City.hpp"
 #include "GameObjects/Tile.hpp"
@@ -34,11 +35,11 @@ private:
     static const std::string CityMarker;
     static const std::string MapMarker;
 
-    static const unsigned int chunk_height = 30;
-    static const unsigned int chunk_width = 30;
+    static bool configured;
+    static unsigned int chunk_height;
+    static unsigned int chunk_width;
+    static int max_cities_per_chunk;
 
-    //@todo: replace with config file options
-    static const int max_cities_per_chunk = 5;
     static const std::vector<std::string> city_name_starts;
     static const std::vector<std::string> city_name_ends;
 
@@ -51,6 +52,8 @@ private:
 
     //factory methods
     static void spawnCity(WorldChunk *self, std::stringstream *ss);
+
+    void configure();
 
     void organizeTiles(std::vector<Tile> tiles);
 
