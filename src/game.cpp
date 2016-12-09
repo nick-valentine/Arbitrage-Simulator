@@ -27,30 +27,39 @@ int main()
     configure();
     City::load_city_names();
     srand(time(NULL));
-    WorldChunk myChunk;
-    myChunk.generateChunk();
+    unsigned int x = 8, y = 5;
+    WorldChunk myChunk[y][x];
+    for(unsigned int i = 0; i < y; ++i) {
+        for(unsigned int j = 0; j < x; ++j) {
+            myChunk[i][j].generateChunk();
+        } 
+    } 
 
     int num=0;
-    (void) signal(SIGINT, finish);
+    signal(SIGINT, finish);
 
-    (void) initscr();
+    initscr();
     keypad(stdscr, TRUE);
-    (void) cbreak();
-    (void) echo();
+    cbreak();
+    echo();
+
+    int maxY, maxX;
+    getmaxyx(stdscr, maxY, maxX);
+
+    WorldChunk::setMaxYX(maxY, maxX);
 
     if(has_colors()) {
         start_color();
-
-        init_pair(1, COLOR_RED,     COLOR_BLACK);
-        init_pair(2, COLOR_GREEN,   COLOR_BLACK);
-        init_pair(3, COLOR_YELLOW,  COLOR_BLACK);
-        init_pair(4, COLOR_BLUE,    COLOR_BLACK);
-        init_pair(5, COLOR_CYAN,    COLOR_BLACK);
-        init_pair(6, COLOR_MAGENTA, COLOR_BLACK);
-        init_pair(7, COLOR_WHITE,   COLOR_BLACK);
     }
 
-    myChunk.draw(0, 0);
+    unsigned int chunkHeight = ConfigLoader::getIntOption("chunk_height");
+    unsigned int chunkWidth  = ConfigLoader::getIntOption("chunk_width");
+    for(unsigned int i = 0; i < y; ++i) {
+        for(unsigned int j = 0; j < x; ++j) {
+            myChunk[i][j].draw(i * chunkHeight, j * chunkWidth); 
+        } 
+    } 
+    //myChunk.draw(0, 0);
     
     int c = getch();
 

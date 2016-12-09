@@ -14,6 +14,9 @@ unsigned int WorldChunk::chunk_height = 0;
 unsigned int WorldChunk::chunk_width = 0;
 int WorldChunk::max_cities_per_chunk = 0;
 
+int WorldChunk::maxY = 0;
+int WorldChunk::maxX = 0;
+
 WorldChunk::WorldChunk()
 {
     if(!WorldChunk::configured) {
@@ -27,6 +30,12 @@ WorldChunk::WorldChunk(std::stringstream *ss)
     if(!WorldChunk::configured) {
         this->configure();
     } 
+}
+
+void WorldChunk::setMaxYX(unsigned int y, unsigned int x)
+{
+    WorldChunk::maxY = y;
+    WorldChunk::maxX = x;
 }
 
 void WorldChunk::configure()
@@ -123,10 +132,22 @@ void WorldChunk::organizeTiles(std::vector<Tile> tiles)
 
 void WorldChunk::draw(unsigned int top, unsigned int left)
 {
+    int currX, currY;
+    Tile::setPallete();
     for(unsigned int i = 0; i < WorldChunk::chunk_height; ++i) {
-        move(top + i, left);
-        for(unsigned int j = 0; j < WorldChunk::chunk_width; ++j) {
-            this->tiles[i][j].draw();
+        getyx(stdscr, currY, currX);
+        if(currY < WorldChunk::maxY && currX < WorldChunk::maxX) {
+            move(top + i, left);
+            for(unsigned int j = 0; j < WorldChunk::chunk_width; ++j) {
+                getyx(stdscr, currY, currX);
+                if(currX < WorldChunk::maxX) {
+                    this->tiles[i][j].draw();
+                } else {
+                    continue;
+                }
+            }
+        } else {
+            break;
         }
     }    
 }

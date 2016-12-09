@@ -20,6 +20,8 @@ public:
     WorldChunk();
     WorldChunk(std::stringstream *ss);
 
+    static void setMaxYX(unsigned int y, unsigned int x);
+
     /**
      * The stringstream structure expected into this is
      * ObjectName objectData1, objectData2, ...
@@ -42,6 +44,10 @@ private:
     static unsigned int chunk_height;
     static unsigned int chunk_width;
     static int max_cities_per_chunk;
+
+    //screen dimension maximums
+    static int maxX;
+    static int maxY;
 
     enum READ_STATE {
         object = 0,
