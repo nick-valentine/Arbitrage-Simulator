@@ -6,6 +6,7 @@
 #include <vector>
 #include <map>
 #include <stdlib.h>
+#include <curses.h>
 
 #include "Globals.hpp"
 #include "ConfigLoader.hpp"
@@ -30,6 +31,8 @@ public:
     void toStringStream(std::stringstream *ss);
 
     void generateChunk();
+
+    void draw(unsigned int top, unsigned int left);
 private:
     static const std::string SpaceConstant;
     static const std::string CityMarker;

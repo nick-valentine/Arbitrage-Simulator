@@ -82,7 +82,7 @@ void WorldChunk::generateChunk()
     for(unsigned int i = 0; i < WorldChunk::chunk_height; ++i) {
         this->tiles.push_back(std::vector<Tile>());
         for( unsigned int j = 0; j < WorldChunk::chunk_width; ++j) {
-            this->tiles[i].push_back(Tile(rand() % Tile::TypeCount)); 
+            this->tiles[i].push_back(Tile::randomSpawn()); 
         }
     }
 
@@ -95,6 +95,13 @@ void WorldChunk::generateChunk()
             + City::city_name_ends[rand() % City::city_name_ends.size()]
         ;
         this->cities.push_back(City(cityName, rand() % WorldChunk::chunk_height, rand() % WorldChunk::chunk_width));
+    }
+
+    for(unsigned int i = 0;  i < cities.size(); ++i) {
+        unsigned int x, y;
+        x = cities[i].getPosX();
+        y = cities[i].getPosY();
+       tiles[y][x] = Tile::CITIES; 
     }
 }
 
@@ -113,3 +120,13 @@ void WorldChunk::organizeTiles(std::vector<Tile> tiles)
     }
 }
 
+
+void WorldChunk::draw(unsigned int top, unsigned int left)
+{
+    for(unsigned int i = 0; i < WorldChunk::chunk_height; ++i) {
+        move(top + i, left);
+        for(unsigned int j = 0; j < WorldChunk::chunk_width; ++j) {
+            this->tiles[i][j].draw();
+        }
+    }    
+}
