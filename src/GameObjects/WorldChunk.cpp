@@ -22,6 +22,7 @@ WorldChunk::WorldChunk()
     if(!WorldChunk::configured) {
         this->configure();
     } 
+    myNoise = NoiseFunc(2500.0);
 }
 
 WorldChunk::WorldChunk(std::stringstream *ss)
@@ -30,6 +31,7 @@ WorldChunk::WorldChunk(std::stringstream *ss)
     if(!WorldChunk::configured) {
         this->configure();
     } 
+    myNoise = NoiseFunc(100.0);
 }
 
 void WorldChunk::setMaxYX(unsigned int y, unsigned int x)
@@ -91,7 +93,7 @@ void WorldChunk::generateChunk()
     for(unsigned int i = 0; i < WorldChunk::chunk_height; ++i) {
         this->tiles.push_back(std::vector<Tile>());
         for( unsigned int j = 0; j < WorldChunk::chunk_width; ++j) {
-            this->tiles[i].push_back(Tile::randomSpawn()); 
+            this->tiles[i].push_back(Tile::randomSpawn(this->myNoise.get(i, j))); 
         }
     }
 

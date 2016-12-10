@@ -15,7 +15,7 @@ public:
     Tile();
     Tile(int type);
     Tile(std::stringstream *ss);
-    static Tile randomSpawn();
+    static Tile randomSpawn(float randInput = -1.0);
     void fromStringStream(std::stringstream *ss);
     void toStringStream(std::stringstream *ss);
 
@@ -40,6 +40,7 @@ public:
 private:
     static void init();
 
+    static const int veryLargeMultiplyer = 1000000;
     static const int TypeCount = 5;
     static const int allowedSpawnCount = 4;
     // @todo: add colors etc.

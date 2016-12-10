@@ -10,6 +10,7 @@
 
 #include "Globals.hpp"
 #include "ConfigLoader.hpp"
+#include "WorldGen/NoiseFunc.hpp"
 #include "GameObjects/AbstractGameObject.hpp"
 #include "GameObjects/City.hpp"
 #include "GameObjects/Tile.hpp"
@@ -65,6 +66,9 @@ private:
 
     std::vector<City> cities;
     std::vector< std::vector<Tile> > tiles;
+
+    //not at all a perminant fixture, just to play with noise makign a world
+    NoiseFunc myNoise;
 };
 
 

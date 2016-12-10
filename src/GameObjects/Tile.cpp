@@ -30,10 +30,16 @@ Tile::Tile(int type)
 
 }
 
-Tile Tile::randomSpawn()
+Tile Tile::randomSpawn(float randomInput)
 {
     Tile::init();
-    return Tile(AllowedSpawns[rand() % Tile::allowedSpawnCount]);  
+    int spawn = -1;
+    if(randomInput == -1) {
+        spawn = AllowedSpawns[rand() % Tile::allowedSpawnCount];
+    } else {
+        spawn = AllowedSpawns[(int)abs((randomInput * Tile::veryLargeMultiplyer)) % Tile::allowedSpawnCount];
+    }
+    return Tile(spawn);  
 }
 
 Tile::Tile(std::stringstream *ss)

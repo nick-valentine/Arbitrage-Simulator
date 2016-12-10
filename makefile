@@ -29,7 +29,7 @@ server: server.o ConfigLoader.o GameObjects/City.o GameObjects/WorldChunk.o Game
 		obj/WorldGen/NoiseFunc.o \
 		-o server $(LIBS)
 
-game: game.o ConfigLoader.o GameObjects/City.o GameObjects/WorldChunk.o GameObjects/Tile.o ColorPallete.o
+game: game.o ConfigLoader.o GameObjects/City.o GameObjects/WorldChunk.o GameObjects/Tile.o ColorPallete.o WorldGen/NoiseFunc.o
 	$(CC) \
 		obj/game.o \
 		obj/GameObjects/City.o \
@@ -37,6 +37,7 @@ game: game.o ConfigLoader.o GameObjects/City.o GameObjects/WorldChunk.o GameObje
 		obj/GameObjects/Tile.o \
 		obj/ConfigLoader.o \
 		obj/ColorPallete.o \
+		obj/WorldGen/NoiseFunc.o \
 		-o game $(LIBS) 
 
 game.o: src/game.cpp
