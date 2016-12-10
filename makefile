@@ -1,4 +1,4 @@
-CC=g++ -std=c++11
+CC=g++ -std=c++11 -ggdb
 CFLAGS=-c -Iinc
 LIBS=-lncurses
 
@@ -9,6 +9,7 @@ main: game server
 
 makeObjFileStructure:
 	mkdir obj/GameObjects
+	mkdir obj/WorldGen
 
 rmObjFiles:
 	rm -rf obj/*
@@ -17,7 +18,7 @@ clean: rmObjFiles makeObjFileStructure
 
 rebuild: clean main
 
-server: server.o ConfigLoader.o GameObjects/City.o GameObjects/WorldChunk.o GameObjects/Tile.o ColorPallete.o
+server: server.o ConfigLoader.o GameObjects/City.o GameObjects/WorldChunk.o GameObjects/Tile.o ColorPallete.o WorldGen/NoiseFunc.o
 	$(CC) \
 		obj/server.o \
 		obj/GameObjects/City.o \
@@ -25,6 +26,7 @@ server: server.o ConfigLoader.o GameObjects/City.o GameObjects/WorldChunk.o Game
 		obj/GameObjects/Tile.o \
 		obj/ConfigLoader.o \
 		obj/ColorPallete.o \
+		obj/WorldGen/NoiseFunc.o \
 		-o server $(LIBS)
 
 game: game.o ConfigLoader.o GameObjects/City.o GameObjects/WorldChunk.o GameObjects/Tile.o ColorPallete.o
@@ -58,4 +60,6 @@ GameObjects/WorldChunk.o: src/GameObjects/WorldChunk.cpp inc/GameObjects/WorldCh
 GameObjects/Tile.o: src/GameObjects/Tile.cpp inc/GameObjects/Tile.hpp inc/GameObjects/AbstractGameObject.hpp inc/Globals.hpp
 	$(CC) $(CFLAGS) src/GameObjects/Tile.cpp -o obj/GameObjects/Tile.o
 
+WorldGen/NoiseFunc.o: src/WorldGen/NoiseFunc.cpp inc/WorldGen/NoiseFunc.hpp
+	$(CC) $(CFLAGS) src/WorldGen/NoiseFunc.cpp -o obj/WorldGen/NoiseFunc.o
 

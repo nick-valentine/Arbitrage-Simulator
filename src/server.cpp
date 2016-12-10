@@ -7,6 +7,7 @@
 #include "ConfigLoader.hpp"
 #include "GameObjects/City.hpp"
 #include "GameObjects/WorldChunk.hpp"
+#include "WorldGen/NoiseFunc.hpp"
 
 void configure()
 {
@@ -37,6 +38,21 @@ int main()
 //    myChunk.toStringStream(&oss);
 //    std::cout<<gameData<<std::endl;
 //    std::cout<<oss.str()<<std::endl;
+
+    NoiseFunc myNoise(10.0);
+    for(int i = 0; i < 10; ++i) {
+        for( int j = 0; j < 10; ++j) {
+            std::cout<<myNoise.get(i, j)<<"\t";
+        }
+        std::cout<<"\n";
+    }
+
+    std::stringstream noiseSS, noise2SS;
+    myNoise.toStringStream(&noiseSS);
+    std::cout<<noiseSS.str()<<std::endl;
+    NoiseFunc noise2(&noiseSS);
+    noise2.toStringStream(&noise2SS);
+    std::cout<<(bool)(noiseSS.str() == noise2SS.str())<<std::endl;
 
     return 0;
 }
