@@ -2,16 +2,24 @@
 
 const int Tile::AllowedSpawns[Tile::allowedSpawnCount] = 
 {
-    0, 1, 2, 3
+    0, 1, 2, 3, 5, 6, 7
+};
+
+const int Tile::TilesWhichMayHaveCities[Tile::allowedCityCount] =
+{
+    0, 1, 5, 6, 7 
 };
 
 const Tile::TileType Tile::Tiles[Tile::TypeCount] = 
 { 
-    {'-', 0, 30, 60},  //plains
+    {'-', 5, 30, 60},  //plains
     {'^', 1, 50, 128}, //mountains
-    {'.', 2, 0,  40},  //water
-    {',', 3, 20, 40},  //swamps
-    {'C', 4, 0,  0}    //Cities
+    {'#', 2, 0,  40},  //water
+    {'#', 3, 20, 40},  //swamps
+    {'C', 4, 0,  0},   //Cities
+    {'n', 5, 45, 80},  //Hills
+    {'_', 0, 20, 30},  //Deserts
+    {'T', 3, 45, 75}   //Forests
 };
 
 ColorPallete Tile::tilePallete = ColorPallete();
@@ -89,9 +97,21 @@ void Tile::setPallete()
     Tile::tilePallete.setCurrent();    
 }
 
-void Tile::convertToCity()
+bool Tile::convertToCity()
 {
-    this->myType = TilesReserved::CITIES;
+    bool canConvert = false;
+    for(int i = 0; i < Tile::allowedCityCount; ++i) {
+        if(this->myType == Tile::TilesWhichMayHaveCities[i]) {
+            canConvert = true;
+            break;
+        }
+    }
+
+    if(canConvert) { 
+        this->myType = TilesReserved::CITIES;
+        return true;
+    }
+    return false;
 }
 
 void Tile::draw()
@@ -108,6 +128,8 @@ void Tile::init()
         Tile::tilePallete.addColor(COLOR_BLUE,   COLOR_BLACK);
         Tile::tilePallete.addColor(COLOR_GREEN,  COLOR_BLACK);
         Tile::tilePallete.addColor(COLOR_CYAN,   COLOR_BLACK);
+        Tile::tilePallete.addColor(COLOR_WHITE, COLOR_BLACK);
+
         Tile::colorPalleteInitialized = true;
     }
 }

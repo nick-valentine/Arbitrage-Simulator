@@ -27,7 +27,10 @@ public:
         PLAINS = 0,
         MOUNTAINS = 1,
         WATER = 2,
-        SWAMPS = 3
+        SWAMPS = 3,
+        HILLS = 5,
+        DESERTS = 6,
+        FORESTS = 7
     };
 
     //specialized tiles that must be set
@@ -38,7 +41,7 @@ public:
 
     static void setPallete();
 
-    void convertToCity();
+    bool convertToCity();
     void draw();
 
 private:
@@ -46,8 +49,9 @@ private:
 
     static const int veryLargeMultiplyer = 1000000;
     static const int elevationMax = 128;
-    static const int TypeCount = 5;
-    static const int allowedSpawnCount = 4;
+    static const int TypeCount = 8;
+    static const int allowedSpawnCount = 7;
+    static const int allowedCityCount = 5;
     // @todo: add colors etc.
     struct TileType
     {
@@ -69,6 +73,7 @@ private:
     };
 
     static const int AllowedSpawns[allowedSpawnCount];
+    static const int TilesWhichMayHaveCities[allowedCityCount];
     static const TileType Tiles[TypeCount]; 
 
     static ColorPallete tilePallete;
