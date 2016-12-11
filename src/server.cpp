@@ -25,7 +25,7 @@ int main()
 
     srand(time(NULL));
     WorldChunk myChunk;
-    myChunk.generateChunk();
+    myChunk.generateChunk(0, 0);
     std::stringstream oss;
     myChunk.toStringStream(&oss);
     std::cout<<oss.str()<<std::endl;

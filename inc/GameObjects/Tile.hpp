@@ -1,10 +1,12 @@
 #ifndef TILE_HPP
 #define TILE_HPP
 
+#include <iostream>
 #include <stdlib.h>
 #include <sstream>
 #include <string>
 #include <curses.h>
+#include <vector>
 
 #include "GameObjects/AbstractGameObject.hpp"
 #include "ColorPallete.hpp"
@@ -13,9 +15,9 @@ class Tile : public AbstractGameObject
 {
 public:
     Tile();
-    Tile(int type);
+    Tile(int type, int elevation);
     Tile(std::stringstream *ss);
-    static Tile randomSpawn(float randInput = -1.0);
+    static Tile randomSpawn(float tileInput = -1.0, float elevationInput = -1.0);
     void fromStringStream(std::stringstream *ss);
     void toStringStream(std::stringstream *ss);
 
@@ -35,12 +37,15 @@ public:
     };
 
     static void setPallete();
+
+    void convertToCity();
     void draw();
 
 private:
     static void init();
 
     static const int veryLargeMultiplyer = 1000000;
+    static const int elevationMax = 128;
     static const int TypeCount = 5;
     static const int allowedSpawnCount = 4;
     // @todo: add colors etc.
@@ -48,8 +53,19 @@ private:
     {
         char tile;
         unsigned int colorPair;
+        unsigned int elevationMin;
+        unsigned int elevationMax;
 
-        TileType(char tile, unsigned int colorPair) : tile(tile), colorPair(colorPair) {}
+        TileType(
+            char tile, 
+            unsigned int colorPair,
+            unsigned int elevationMin,
+            unsigned int elevationMax
+        ) : tile(tile), 
+            colorPair(colorPair),
+            elevationMin(elevationMin),
+            elevationMax(elevationMax)
+        {}
     };
 
     static const int AllowedSpawns[allowedSpawnCount];
@@ -60,6 +76,7 @@ private:
 
     //index into Tiles 
     int myType;
+    int myElevation;
 };
 
 #endif //TILE_HPP

@@ -19,7 +19,7 @@ public:
     float getRaw(float x, float y);
     float get(int x, int y);
 private:
-    static const unsigned int rand_steps = 1024;
+    static const unsigned int rand_steps = 2048; 
 
     float perlin(float x, float y); 
     float dotGridGradient(int ix, int iy, float x, float y);

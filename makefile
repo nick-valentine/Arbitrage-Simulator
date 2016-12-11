@@ -7,6 +7,12 @@ all: main
 
 main: game server
 
+playGame: game
+	./game
+
+playServer: server
+	./server
+
 makeObjFileStructure:
 	mkdir obj/GameObjects
 	mkdir obj/WorldGen

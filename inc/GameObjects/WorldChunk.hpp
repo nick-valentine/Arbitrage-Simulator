@@ -7,6 +7,7 @@
 #include <map>
 #include <stdlib.h>
 #include <curses.h>
+#include <math.h>
 
 #include "Globals.hpp"
 #include "ConfigLoader.hpp"
@@ -19,6 +20,7 @@ class WorldChunk : public AbstractGameObject
 {
 public:
     WorldChunk();
+    WorldChunk(unsigned int top, unsigned int left);
     WorldChunk(std::stringstream *ss);
 
     static void setMaxYX(unsigned int y, unsigned int x);
@@ -33,9 +35,9 @@ public:
     void fromStringStream(std::stringstream *ss);
     void toStringStream(std::stringstream *ss);
 
-    void generateChunk();
+    void generateChunk(NoiseFunc *tileNoise, NoiseFunc *elevationNoise);
 
-    void draw(unsigned int top, unsigned int left);
+    void draw();
 private:
     static const std::string SpaceConstant;
     static const std::string CityMarker;
@@ -64,11 +66,12 @@ private:
 
     void organizeTiles(std::vector<Tile> tiles);
 
+    float elevationMap(float input);
+
+    unsigned int top;
+    unsigned int left;
     std::vector<City> cities;
     std::vector< std::vector<Tile> > tiles;
-
-    //not at all a perminant fixture, just to play with noise makign a world
-    NoiseFunc myNoise;
 };
 
 

@@ -22,7 +22,15 @@ WorldChunk::WorldChunk()
     if(!WorldChunk::configured) {
         this->configure();
     } 
-    myNoise = NoiseFunc(2500.0);
+}
+
+WorldChunk::WorldChunk(unsigned int top, unsigned int left)
+{
+    if(!WorldChunk::configured) {
+        this->configure();
+    } 
+    this->top = top;
+    this->left = left;
 }
 
 WorldChunk::WorldChunk(std::stringstream *ss)
@@ -31,7 +39,6 @@ WorldChunk::WorldChunk(std::stringstream *ss)
     if(!WorldChunk::configured) {
         this->configure();
     } 
-    myNoise = NoiseFunc(100.0);
 }
 
 void WorldChunk::setMaxYX(unsigned int y, unsigned int x)
@@ -53,6 +60,7 @@ void WorldChunk::fromStringStream(std::stringstream *ss)
     READ_STATE readState = object;
     std::vector<Tile> tilesToSpawn;
     std::string nextObject;
+    (*ss)>>top>>left;
     while(ss->good()) {
         if(readState == object) {
             (*ss)>>nextObject;
@@ -71,6 +79,7 @@ void WorldChunk::fromStringStream(std::stringstream *ss)
 
 void WorldChunk::toStringStream(std::stringstream *ss)
 {
+    (*ss)<<top<<" "<<left; 
     for(unsigned int i = 0; i < this->cities.size(); ++i) {
         (*ss)<<WorldChunk::CityMarker<<WorldChunk::SpaceConstant;
         this->cities[i].toStringStream(ss);
@@ -84,7 +93,7 @@ void WorldChunk::toStringStream(std::stringstream *ss)
     }
 }
 
-void WorldChunk::generateChunk()
+void WorldChunk::generateChunk(NoiseFunc *tileNoise, NoiseFunc *elevationNoise)
 {
     this->cities.clear();
     this->tiles.clear();
@@ -93,7 +102,10 @@ void WorldChunk::generateChunk()
     for(unsigned int i = 0; i < WorldChunk::chunk_height; ++i) {
         this->tiles.push_back(std::vector<Tile>());
         for( unsigned int j = 0; j < WorldChunk::chunk_width; ++j) {
-            this->tiles[i].push_back(Tile::randomSpawn(this->myNoise.get(i, j))); 
+            this->tiles[i].push_back(Tile::randomSpawn(
+                tileNoise->get(this->top + i, this->left + j),
+                this->elevationMap(elevationNoise->get(this->top + i, this->left + j))
+            )); 
         }
     }
 
@@ -112,7 +124,7 @@ void WorldChunk::generateChunk()
         unsigned int x, y;
         x = cities[i].getPosX();
         y = cities[i].getPosY();
-       tiles[y][x] = Tile::CITIES; 
+       tiles[y][x].convertToCity(); 
     }
 }
 
@@ -132,7 +144,7 @@ void WorldChunk::organizeTiles(std::vector<Tile> tiles)
 }
 
 
-void WorldChunk::draw(unsigned int top, unsigned int left)
+void WorldChunk::draw()
 {
     int currX, currY;
     Tile::setPallete();
@@ -152,4 +164,10 @@ void WorldChunk::draw(unsigned int top, unsigned int left)
             break;
         }
     }    
+}
+
+float WorldChunk::elevationMap(float input)
+{
+    float x = 1.0f - pow(2.00f, -1.25f * ((input + 1.0f) / 2.0f));
+    return x;
 }

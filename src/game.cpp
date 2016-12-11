@@ -10,6 +10,7 @@
 #include "ConfigLoader.hpp"
 #include "GameObjects/City.hpp"
 #include "GameObjects/WorldChunk.hpp"
+#include "WorldGen/NoiseFunc.hpp"
 
 static void finish(int sig);
 
@@ -29,9 +30,17 @@ int main()
     srand(time(NULL));
     unsigned int x = 8, y = 5;
     WorldChunk myChunk[y][x];
+
+    unsigned int chunkHeight = ConfigLoader::getIntOption("chunk_height");
+    unsigned int chunkWidth  = ConfigLoader::getIntOption("chunk_width");
+
+
+    NoiseFunc myNoise(20.0), myNoise2(6.0);
+
     for(unsigned int i = 0; i < y; ++i) {
         for(unsigned int j = 0; j < x; ++j) {
-            myChunk[i][j].generateChunk();
+            myChunk[i][j] = WorldChunk(i * chunkHeight, j * chunkWidth);
+            myChunk[i][j].generateChunk(&myNoise, &myNoise2);
         } 
     } 
 
@@ -45,21 +54,17 @@ int main()
 
     int maxY, maxX;
     getmaxyx(stdscr, maxY, maxX);
-
     WorldChunk::setMaxYX(maxY, maxX);
 
     if(has_colors()) {
         start_color();
     }
 
-    unsigned int chunkHeight = ConfigLoader::getIntOption("chunk_height");
-    unsigned int chunkWidth  = ConfigLoader::getIntOption("chunk_width");
     for(unsigned int i = 0; i < y; ++i) {
         for(unsigned int j = 0; j < x; ++j) {
-            myChunk[i][j].draw(i * chunkHeight, j * chunkWidth); 
+            myChunk[i][j].draw(); 
         } 
     } 
-    //myChunk.draw(0, 0);
     
     int c = getch();
 
