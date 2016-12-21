@@ -23,7 +23,7 @@ public:
 
     void draw(int playerY, int playerX);
 private:
-    static constexpr float elevationSkewNoiseSpread = 5.0;
+    static constexpr float elevationSkewNoiseSpread = 55.0;
     static constexpr float elevationNoiseSpread = 20.0;
     static constexpr float tileNoiseSpread = 6.0;
 
