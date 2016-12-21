@@ -24,11 +24,11 @@ int main()
     City::load_city_names();
 
     srand(time(NULL));
-    WorldChunk myChunk;
-    myChunk.generateChunk(0, 0);
-    std::stringstream oss;
-    myChunk.toStringStream(&oss);
-    std::cout<<oss.str()<<std::endl;
+//    WorldChunk myChunk;
+//    myChunk.generateChunk(0, 0);
+//    std::stringstream oss;
+//    myChunk.toStringStream(&oss);
+//    std::cout<<oss.str()<<std::endl;
 //    std::string gameData = "city Hamlet, 1, 1\nMAP\n1 2 3 1 2 2 1 1 1 2 2 3 1 1 2 3 1 1 2 3 1 1 1 2 1 1 1 1";
 //    std::stringstream iss;
 //    iss.str(gameData);

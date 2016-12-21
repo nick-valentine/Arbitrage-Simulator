@@ -58,7 +58,6 @@ float NoiseFunc::getRaw(float x, float y)
 
 float NoiseFunc::get(int x, int y)
 {
-    //std::cout<<x<<" "<<y<<std::endl;
     return this->perlin(x / this->gridPeriod, y / this->gridPeriod);
 }
 

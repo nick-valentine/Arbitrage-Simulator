@@ -35,7 +35,11 @@ public:
     void fromStringStream(std::stringstream *ss);
     void toStringStream(std::stringstream *ss);
 
-    void generateChunk(NoiseFunc *tileNoise, NoiseFunc *elevationNoise);
+    void generateChunk(
+        NoiseFunc *tileNoise, 
+        NoiseFunc *elevationNoise, 
+        NoiseFunc *elevationSkewNoise
+    );
 
     void draw();
 private:
@@ -66,7 +70,7 @@ private:
 
     void organizeTiles(std::vector<Tile> tiles);
 
-    float elevationMap(float input);
+    float elevationMap(float input, float skew);
 
     unsigned int top;
     unsigned int left;

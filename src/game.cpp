@@ -11,6 +11,7 @@
 #include "GameObjects/City.hpp"
 #include "GameObjects/WorldChunk.hpp"
 #include "WorldGen/NoiseFunc.hpp"
+#include "GameObjects/World.hpp"
 
 static void finish(int sig);
 
@@ -28,21 +29,13 @@ int main()
     configure();
     City::load_city_names();
     srand(time(NULL));
-    unsigned int x = 8, y = 5;
-    WorldChunk myChunk[y][x];
 
     unsigned int chunkHeight = ConfigLoader::getIntOption("chunk_height");
     unsigned int chunkWidth  = ConfigLoader::getIntOption("chunk_width");
 
+    World myWorld("testWorld");
 
-    NoiseFunc myNoise(20.0), myNoise2(6.0);
-
-    for(unsigned int i = 0; i < y; ++i) {
-        for(unsigned int j = 0; j < x; ++j) {
-            myChunk[i][j] = WorldChunk(i * chunkHeight, j * chunkWidth);
-            myChunk[i][j].generateChunk(&myNoise, &myNoise2);
-        } 
-    } 
+    myWorld.generateWorld();
 
     int num=0;
     signal(SIGINT, finish);
@@ -60,11 +53,7 @@ int main()
         start_color();
     }
 
-    for(unsigned int i = 0; i < y; ++i) {
-        for(unsigned int j = 0; j < x; ++j) {
-            myChunk[i][j].draw(); 
-        } 
-    } 
+    myWorld.draw(0, 0);
     
     int c = getch();
 

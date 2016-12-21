@@ -24,10 +24,11 @@ clean: rmObjFiles makeObjFileStructure
 
 rebuild: clean main
 
-server: server.o ConfigLoader.o GameObjects/City.o GameObjects/WorldChunk.o GameObjects/Tile.o ColorPallete.o WorldGen/NoiseFunc.o
+server: server.o ConfigLoader.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o ColorPallete.o WorldGen/NoiseFunc.o
 	$(CC) \
 		obj/server.o \
 		obj/GameObjects/City.o \
+		obj/GameObjects/World.o \
 		obj/GameObjects/WorldChunk.o \
 		obj/GameObjects/Tile.o \
 		obj/ConfigLoader.o \
@@ -35,10 +36,11 @@ server: server.o ConfigLoader.o GameObjects/City.o GameObjects/WorldChunk.o Game
 		obj/WorldGen/NoiseFunc.o \
 		-o server $(LIBS)
 
-game: game.o ConfigLoader.o GameObjects/City.o GameObjects/WorldChunk.o GameObjects/Tile.o ColorPallete.o WorldGen/NoiseFunc.o
+game: game.o ConfigLoader.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o ColorPallete.o WorldGen/NoiseFunc.o
 	$(CC) \
 		obj/game.o \
 		obj/GameObjects/City.o \
+		obj/GameObjects/World.o \
 		obj/GameObjects/WorldChunk.o \
 		obj/GameObjects/Tile.o \
 		obj/ConfigLoader.o \
@@ -63,6 +65,9 @@ GameObjects/City.o: src/GameObjects/City.cpp inc/GameObjects/City.hpp inc/GameOb
 
 GameObjects/WorldChunk.o: src/GameObjects/WorldChunk.cpp inc/GameObjects/WorldChunk.hpp inc/GameObjects/AbstractGameObject.hpp inc/GameObjects/City.hpp inc/Globals.hpp inc/ConfigLoader.hpp inc/ColorPallete.hpp
 	$(CC) $(CFLAGS) src/GameObjects/WorldChunk.cpp -o obj/GameObjects/WorldChunk.o
+
+GameObjects/World.o: src/GameObjects/World.cpp inc/GameObjects/World.hpp inc/GameObjects/WorldChunk.hpp
+	$(CC) $(CFLAGS) src/GameObjects/World.cpp -o obj/GameObjects/World.o
 
 GameObjects/Tile.o: src/GameObjects/Tile.cpp inc/GameObjects/Tile.hpp inc/GameObjects/AbstractGameObject.hpp inc/Globals.hpp
 	$(CC) $(CFLAGS) src/GameObjects/Tile.cpp -o obj/GameObjects/Tile.o

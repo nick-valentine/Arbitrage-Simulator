@@ -29,8 +29,8 @@ WorldChunk::WorldChunk(unsigned int top, unsigned int left)
     if(!WorldChunk::configured) {
         this->configure();
     } 
-    this->top = top;
-    this->left = left;
+    this->top = top * WorldChunk::chunk_height;
+    this->left = left * WorldChunk::chunk_width;
 }
 
 WorldChunk::WorldChunk(std::stringstream *ss)
@@ -61,7 +61,9 @@ void WorldChunk::fromStringStream(std::stringstream *ss)
     std::vector<Tile> tilesToSpawn;
     std::string nextObject;
     (*ss)>>top>>left;
-    while(ss->good()) {
+    while( ss->good() &&
+         tilesToSpawn.size() < WorldChunk::chunk_height * WorldChunk::chunk_width 
+    ) {
         if(readState == object) {
             (*ss)>>nextObject;
             if( this->factoryMap.find(nextObject) != this->factoryMap.end() ) {
@@ -93,7 +95,11 @@ void WorldChunk::toStringStream(std::stringstream *ss)
     }
 }
 
-void WorldChunk::generateChunk(NoiseFunc *tileNoise, NoiseFunc *elevationNoise)
+void WorldChunk::generateChunk(
+    NoiseFunc *tileNoise, 
+    NoiseFunc *elevationNoise, 
+    NoiseFunc *elevationSkewNoise
+)
 {
     this->cities.clear();
     this->tiles.clear();
@@ -104,7 +110,10 @@ void WorldChunk::generateChunk(NoiseFunc *tileNoise, NoiseFunc *elevationNoise)
         for( unsigned int j = 0; j < WorldChunk::chunk_width; ++j) {
             this->tiles[i].push_back(Tile::randomSpawn(
                 tileNoise->get(this->top + i, this->left + j),
-                this->elevationMap(elevationNoise->get(this->top + i, this->left + j))
+                this->elevationMap(
+                    elevationNoise->get(this->top + i, this->left + j), 
+                    elevationSkewNoise->get(this->top + i, this->left + j)
+                )
             )); 
         }
     }
@@ -166,8 +175,9 @@ void WorldChunk::draw()
     }    
 }
 
-float WorldChunk::elevationMap(float input)
+float WorldChunk::elevationMap(float input, float skew)
 {
-    float x = 1.0f - pow(2.00f, -1.25f * ((input + 1.0f) / 2.0f));
+    float x = 1.0f - pow(2.00f, -(0.75f) * (input + 0.90));
+    x += x*skew;
     return x;
 }

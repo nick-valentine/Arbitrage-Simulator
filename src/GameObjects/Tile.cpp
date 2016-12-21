@@ -36,7 +36,6 @@ Tile::Tile(int type, int elevation)
     this->myType = type;
     this->myElevation = elevation;
     Tile::init();
-
 }
 
 Tile Tile::randomSpawn(float tileInput, float elevationInput)

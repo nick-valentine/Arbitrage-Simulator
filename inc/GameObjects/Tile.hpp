@@ -52,7 +52,7 @@ private:
     static const int TypeCount = 8;
     static const int allowedSpawnCount = 7;
     static const int allowedCityCount = 5;
-    // @todo: add colors etc.
+
     struct TileType
     {
         char tile;
