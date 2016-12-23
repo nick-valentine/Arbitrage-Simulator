@@ -2,3 +2,5 @@
 chunk_height 30
 chunk_width 30
 max_cities_per_chunk 5
+world_name testWorld.txt
+

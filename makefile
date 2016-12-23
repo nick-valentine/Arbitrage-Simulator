@@ -16,6 +16,7 @@ playServer: server
 makeObjFileStructure:
 	mkdir obj/GameObjects
 	mkdir obj/WorldGen
+	mkdir obj/Managers
 
 rmObjFiles:
 	rm -rf obj/*
@@ -36,9 +37,10 @@ server: server.o ConfigLoader.o GameObjects/City.o GameObjects/World.o GameObjec
 		obj/WorldGen/NoiseFunc.o \
 		-o server $(LIBS)
 
-game: game.o ConfigLoader.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o ColorPallete.o WorldGen/NoiseFunc.o
+game: game.o Managers/Game.o ConfigLoader.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o ColorPallete.o WorldGen/NoiseFunc.o
 	$(CC) \
 		obj/game.o \
+		obj/Managers/Game.o \
 		obj/GameObjects/City.o \
 		obj/GameObjects/World.o \
 		obj/GameObjects/WorldChunk.o \
@@ -53,6 +55,9 @@ game.o: src/game.cpp
 
 server.o: src/server.cpp inc/GameObjects/City.hpp inc/GameObjects/WorldChunk.hpp
 	$(CC) $(CFLAGS) src/server.cpp -o obj/server.o
+
+Managers/Game.o: src/Managers/Game.cpp inc/Managers/Game.hpp inc/GameObjects/World.hpp 
+	$(CC) $(CFLAGS) src/Managers/Game.cpp -o obj/Managers/Game.o
 
 ConfigLoader.o: src/ConfigLoader.cpp inc/ConfigLoader.hpp
 	$(CC) $(CFLAGS) src/ConfigLoader.cpp -o obj/ConfigLoader.o
