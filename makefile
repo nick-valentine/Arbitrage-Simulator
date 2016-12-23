@@ -37,7 +37,7 @@ server: server.o ConfigLoader.o GameObjects/City.o GameObjects/World.o GameObjec
 		obj/WorldGen/NoiseFunc.o \
 		-o server $(LIBS)
 
-game: game.o Managers/Game.o ConfigLoader.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o ColorPallete.o WorldGen/NoiseFunc.o
+game: game.o Managers/Game.o ConfigLoader.o Camera.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o ColorPallete.o WorldGen/NoiseFunc.o
 	$(CC) \
 		obj/game.o \
 		obj/Managers/Game.o \
@@ -46,6 +46,7 @@ game: game.o Managers/Game.o ConfigLoader.o GameObjects/City.o GameObjects/World
 		obj/GameObjects/WorldChunk.o \
 		obj/GameObjects/Tile.o \
 		obj/ConfigLoader.o \
+		obj/Camera.o \
 		obj/ColorPallete.o \
 		obj/WorldGen/NoiseFunc.o \
 		-o game $(LIBS) 
@@ -61,6 +62,9 @@ Managers/Game.o: src/Managers/Game.cpp inc/Managers/Game.hpp inc/GameObjects/Wor
 
 ConfigLoader.o: src/ConfigLoader.cpp inc/ConfigLoader.hpp
 	$(CC) $(CFLAGS) src/ConfigLoader.cpp -o obj/ConfigLoader.o
+
+Camera.o: src/Camera.cpp inc/Camera.hpp
+	$(CC) $(CFLAGS) src/Camera.cpp -o obj/Camera.o
 
 ColorPallete.o: src/ColorPallete.cpp inc/ColorPallete.hpp
 	$(CC) $(CFLAGS) src/ColorPallete.cpp -o obj/ColorPallete.o

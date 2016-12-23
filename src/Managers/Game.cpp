@@ -11,8 +11,10 @@ Game::Game()
 int Game::setup()
 {
     this->world = World(
-        ConfigLoader::getStringOption(Game::configWorldNameKey),
-        Game::defaultWorldName
+        ConfigLoader::getStringOption(
+            Game::configWorldNameKey,
+            Game::defaultWorldName
+        )
     );
     this->world.generateWorld();
 }
