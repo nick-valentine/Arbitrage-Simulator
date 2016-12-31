@@ -47,7 +47,7 @@ void World::generateWorld()
     this->creationTimestamp = time(NULL);
     for(int i = 0; i < 20; ++i) {
         for(int j = 0; j < 20; ++j) {
-            this->spawnChunk(j, i);
+            this->spawnChunk(i, j);
         }
     }
 }
@@ -79,13 +79,18 @@ void World::spawnChunk(int y, int x)
         this->chunks.push_back(std::vector<WorldChunk>());
         int fillY = this->chunks.size() - 1;
         for(int j = 0; j < chunks[0].size(); ++j) {
-            this->chunks[fillY].push_back(this->prepareChunk(y, x));
+            this->chunks[fillY].push_back(this->prepareChunk(fillY, j));
         }
     }
 
     for(int i = 0; i < dx; ++i) {
         for(int j = 0; j < this->chunks.size(); ++j) {
-            this->chunks[j].push_back(this->prepareChunk(y, x));
+            this->chunks[j].push_back(
+                this->prepareChunk(
+                    this->chunks[j].size() - 1, 
+                    j
+                )
+            );
         }
     }
 }

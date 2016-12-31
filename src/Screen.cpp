@@ -75,7 +75,6 @@ void Screen::render()
                 attrset(COLOR_PAIR(ScreenBuffer[i][j].colorPair));
                 lastColorPair = ScreenBuffer[i][j].colorPair;
             }
-            std::cout<<ScreenBuffer[i][j].c<<std::endl;
             addch(ScreenBuffer[i][j].c);
         }
     }

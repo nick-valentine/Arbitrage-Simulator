@@ -26,6 +26,9 @@ private:
     Camera camera;
     Screen screen;
     World world;
+
+    int pos_x;
+    int pos_y;
 };
 
 #endif //MANAGER_GAME_HPP
