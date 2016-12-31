@@ -52,11 +52,11 @@ void World::generateWorld()
     }
 }
 
-void World::draw(int playerY, int playerX)
+void World::draw(Screen &screen, int playerY, int playerX)
 {
     for(int i = 0; i < this->chunks.size(); ++i) {
         for(int j = 0; j < this->chunks[i].size(); ++j) {
-            this->chunks[i][j].draw();
+            this->chunks[i][j].draw(screen, playerY, playerX);
         }
     }
 }

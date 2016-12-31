@@ -153,24 +153,17 @@ void WorldChunk::organizeTiles(std::vector<Tile> tiles)
 }
 
 
-void WorldChunk::draw()
+void WorldChunk::draw(Screen &screen, int offsetTop, int offsetLeft)
 {
     int currX, currY;
     Tile::setPallete();
     for(unsigned int i = 0; i < WorldChunk::chunk_height; ++i) {
-        getyx(stdscr, currY, currX);
-        if(currY < WorldChunk::maxY && currX < WorldChunk::maxX) {
-            move(top + i, left);
-            for(unsigned int j = 0; j < WorldChunk::chunk_width; ++j) {
-                getyx(stdscr, currY, currX);
-                if(currX < WorldChunk::maxX) {
-                    this->tiles[i][j].draw();
-                } else {
-                    continue;
-                }
-            }
-        } else {
-            break;
+        for(unsigned int j = 0; j < WorldChunk::chunk_width; ++j) {
+            this->tiles[i][j].drawAt(
+                screen, 
+                offsetTop + top + i, 
+                offsetLeft + left + j
+            );
         }
     }    
 }
@@ -180,4 +173,19 @@ float WorldChunk::elevationMap(float input, float skew)
     float x = 1.0f - pow(2.00f, -(0.75f) * (input + 0.90));
     x += x*skew;
     return x;
+}
+
+unsigned int WorldChunk::getChunkWidth()
+{
+    return WorldChunk::chunk_width;
+}
+
+unsigned int WorldChunk::getChunkHeight()
+{
+    return WorldChunk::chunk_height;
+}
+
+int WorldChunk::getMaxCitiesPerChunk()
+{
+    return WorldChunk::max_cities_per_chunk;
 }

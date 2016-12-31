@@ -10,6 +10,7 @@
 
 #include "GameObjects/AbstractGameObject.hpp"
 #include "ColorPallete.hpp"
+#include "Screen.hpp"
 
 class Tile : public AbstractGameObject
 {
@@ -42,7 +43,7 @@ public:
     static void setPallete();
 
     bool convertToCity();
-    void draw();
+    void drawAt(Screen &screen, int top, int left);
 
 private:
     static void init();

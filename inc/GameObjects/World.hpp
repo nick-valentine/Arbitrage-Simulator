@@ -1,7 +1,9 @@
 #ifndef WORLD_HPP
 #define WORLD_HPP
 
+#include "ConfigLoader.hpp"
 #include "GameObjects/WorldChunk.hpp"
+#include "Screen.hpp"
 #include "WorldGen/NoiseFunc.hpp"
 
 #include <vector>
@@ -21,7 +23,7 @@ public:
 
     void generateWorld();
 
-    void draw(int playerY, int playerX);
+    void draw(Screen &screen, int playerY, int playerX);
 private:
     static constexpr float elevationSkewNoiseSpread = 55.0;
     static constexpr float elevationNoiseSpread = 20.0;

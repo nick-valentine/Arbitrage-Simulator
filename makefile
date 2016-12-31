@@ -25,31 +25,33 @@ clean: rmObjFiles makeObjFileStructure
 
 rebuild: clean main
 
-server: server.o ConfigLoader.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o ColorPallete.o WorldGen/NoiseFunc.o
+server: server.o ConfigLoader.o Screen.o Camera.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o ColorPallete.o WorldGen/NoiseFunc.o
 	$(CC) \
-		obj/server.o \
+		obj/Camera.o \
+		obj/ColorPallete.o \
+		obj/ConfigLoader.o \
 		obj/GameObjects/City.o \
+		obj/GameObjects/Tile.o \
 		obj/GameObjects/World.o \
 		obj/GameObjects/WorldChunk.o \
-		obj/GameObjects/Tile.o \
-		obj/ConfigLoader.o \
-		obj/ColorPallete.o \
+		obj/Screen.o \
 		obj/WorldGen/NoiseFunc.o \
+		obj/server.o \
 		-o server $(LIBS)
 
 game: game.o Managers/Game.o ConfigLoader.o Camera.o Screen.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o ColorPallete.o WorldGen/NoiseFunc.o
 	$(CC) \
-		obj/game.o \
-		obj/Managers/Game.o \
+		obj/Camera.o \
+		obj/ColorPallete.o \
+		obj/ConfigLoader.o \
 		obj/GameObjects/City.o \
+		obj/GameObjects/Tile.o \
 		obj/GameObjects/World.o \
 		obj/GameObjects/WorldChunk.o \
-		obj/GameObjects/Tile.o \
-		obj/ConfigLoader.o \
-		obj/Camera.o \
+		obj/Managers/Game.o \
 		obj/Screen.o \
-		obj/ColorPallete.o \
 		obj/WorldGen/NoiseFunc.o \
+		obj/game.o \
 		-o game $(LIBS) 
 
 game.o: src/game.cpp

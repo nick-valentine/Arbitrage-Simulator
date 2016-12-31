@@ -113,10 +113,15 @@ bool Tile::convertToCity()
     return false;
 }
 
-void Tile::draw()
+void Tile::drawAt(Screen &screen, int top, int left)
 {
-    attrset(COLOR_PAIR(Tile::Tiles[myType].colorPair));
-    addch(Tile::Tiles[myType].tile); 
+    screen.put(
+        Tile::Tiles[myType].colorPair,
+        /* layer */ 1,
+        Tile::Tiles[myType].tile,
+        top,
+        left
+    ); 
 }
 
 void Tile::init()

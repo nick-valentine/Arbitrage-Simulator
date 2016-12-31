@@ -3,6 +3,9 @@
 
 #include <curses.h>
 #include <algorithm>
+#include <vector>
+
+#include "GameObjects/World.hpp"
 
 class Camera
 {
@@ -15,7 +18,7 @@ public:
     int getY() const;
     int getX() const;
     
-    void render();
+    void render(Screen &screen, World &world);
 private:
     unsigned int pos_y;
     unsigned int pos_x;

@@ -1,6 +1,7 @@
 #ifndef SCREEN_HPP
 #define SCREEN_HPP
 
+#include <iostream>
 #include <curses.h>
 #include <vector>
 

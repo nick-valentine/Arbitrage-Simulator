@@ -1,20 +1,21 @@
 #ifndef WORLDCHUNK_HPP
 #define WORLDCHUNK_HPP
 
+#include <curses.h>
+#include <map>
+#include <math.h>
 #include <sstream>
+#include <stdlib.h>
 #include <string>
 #include <vector>
-#include <map>
-#include <stdlib.h>
-#include <curses.h>
-#include <math.h>
 
-#include "Globals.hpp"
 #include "ConfigLoader.hpp"
-#include "WorldGen/NoiseFunc.hpp"
 #include "GameObjects/AbstractGameObject.hpp"
 #include "GameObjects/City.hpp"
 #include "GameObjects/Tile.hpp"
+#include "Globals.hpp"
+#include "Screen.hpp"
+#include "WorldGen/NoiseFunc.hpp"
 
 class WorldChunk : public AbstractGameObject
 {
@@ -22,6 +23,7 @@ public:
     WorldChunk();
     WorldChunk(unsigned int top, unsigned int left);
     WorldChunk(std::stringstream *ss);
+    static void configure();
 
     static void setMaxYX(unsigned int y, unsigned int x);
 
@@ -41,7 +43,11 @@ public:
         NoiseFunc *elevationSkewNoise
     );
 
-    void draw();
+    void draw(Screen &screen, int offsetTop, int offsetLeft);
+
+    static unsigned int getChunkWidth();
+    static unsigned int getChunkHeight();
+    static int getMaxCitiesPerChunk();
 private:
     static const std::string SpaceConstant;
     static const std::string CityMarker;
@@ -65,8 +71,6 @@ private:
 
     //factory methods
     static void spawnCity(WorldChunk *self, std::stringstream *ss);
-
-    void configure();
 
     void organizeTiles(std::vector<Tile> tiles);
 

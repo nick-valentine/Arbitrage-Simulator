@@ -10,6 +10,7 @@ Screen::Screen()
     templ.colorPair = 0;
     templ.layer = 0;
     templ.c = ' ';
+    std::cout<<height<<width<<std::endl;
 
     for(unsigned int i = 0; i < height; ++i) {
         ScreenBuffer.push_back(std::vector< TextElement >());
@@ -30,15 +31,17 @@ void Screen::put(unsigned int colorPair, unsigned int layer, char c, int y, int 
 
 void Screen::put(TextElement c, int y, int x)
 {
-    if(c.layer > ScreenBuffer[y][x].layer) {
-        ScreenBuffer[y][x] = c;
+    if(x < width && x > 0 && y < height && y > 0) {
+        if(c.layer > ScreenBuffer[y][x].layer) {
+            ScreenBuffer[y][x] = c;
+        }
     }
 }
 
 bool Screen::moveTo(int y, int x)
 {
-    if( y < height && y > 0 && 
-        x < width && x > 0 ) { 
+    if(y < height && y > 0 && 
+        x < width && x > 0) { 
         this->cursor_y = y;
         this->cursor_x = x;
         return true;
@@ -63,5 +66,17 @@ void Screen::clear()
 
 void Screen::render()
 {
-    
+    unsigned int lastColorPair = 0;
+    attrset(COLOR_PAIR(0));
+    move(0, 0);
+    for(int i = 0; i < height; ++i) {
+        for(int j = 0; j < width; ++j) {
+            if(ScreenBuffer[i][j].colorPair != lastColorPair) {
+                attrset(COLOR_PAIR(ScreenBuffer[i][j].colorPair));
+                lastColorPair = ScreenBuffer[i][j].colorPair;
+            }
+            std::cout<<ScreenBuffer[i][j].c<<std::endl;
+            addch(ScreenBuffer[i][j].c);
+        }
+    }
 }
