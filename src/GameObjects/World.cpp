@@ -45,11 +45,8 @@ void World::toStringStream(std::stringstream *ss)
 void World::generateWorld()
 {
     this->creationTimestamp = time(NULL);
-    for(int i = 0; i < 20; ++i) {
-        for(int j = 0; j < 20; ++j) {
-            this->spawnChunk(i, j);
-        }
-    }
+    //spawning the bottom left chunk spawns all interim chunks.
+    this->spawnChunk(20, 20);
 }
 
 void World::draw(Screen &screen, int playerY, int playerX)
@@ -85,12 +82,7 @@ void World::spawnChunk(int y, int x)
 
     for(int i = 0; i < dx; ++i) {
         for(int j = 0; j < this->chunks.size(); ++j) {
-            this->chunks[j].push_back(
-                this->prepareChunk(
-                    this->chunks[j].size() - 1, 
-                    j
-                )
-            );
+            this->chunks[j].push_back(this->prepareChunk(j, i));
         }
     }
 }
