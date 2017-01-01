@@ -17,6 +17,7 @@ public:
     World();
     World(std::stringstream *ss);
     World(std::string name);
+    static void configure();
 
     void fromStringStream(std::stringstream *ss);
     void toStringStream(std::stringstream *ss);
@@ -24,10 +25,18 @@ public:
     void generateWorld();
 
     void draw(Screen &screen, int playerY, int playerX);
+
+    static int getWorldHeight();
+    static int getWorldWidth();
 private:
     static constexpr float elevationSkewNoiseSpread = 55.0;
     static constexpr float elevationNoiseSpread = 20.0;
     static constexpr float tileNoiseSpread = 6.0;
+
+    static unsigned int worldHeight;
+    static unsigned int worldWidth;
+    int chunkHeight;
+    int chunkWidth;
 
     void init();
 

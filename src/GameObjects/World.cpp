@@ -1,5 +1,8 @@
 #include "GameObjects/World.hpp"
 
+unsigned int World::worldHeight = 0;
+unsigned int World::worldWidth = 0;
+
 World::World()
 {
     this->init();
@@ -15,6 +18,12 @@ World::World(std::string name)
 {
     this->init();
     this->name = name;
+}
+
+void World::configure()
+{
+    World::worldHeight = ConfigLoader::getIntOption("world_height", 20);
+    World::worldWidth = ConfigLoader::getIntOption("world_width", 20);
 }
 
 void World::fromStringStream(std::stringstream *ss)
@@ -45,8 +54,12 @@ void World::toStringStream(std::stringstream *ss)
 void World::generateWorld()
 {
     this->creationTimestamp = time(NULL);
+
+    this->chunkHeight = WorldChunk::getChunkHeight();
+    this->chunkWidth = WorldChunk::getChunkWidth();
+
     //spawning the bottom left chunk spawns all interim chunks.
-    this->spawnChunk(20, 20);
+    this->spawnChunk(World::worldHeight, World::worldWidth);
 }
 
 void World::draw(Screen &screen, int playerY, int playerX)
@@ -92,4 +105,14 @@ WorldChunk World::prepareChunk(int y, int x)
     WorldChunk temp(y, x);
     temp.generateChunk(&this->tileNoise, &this->elevationNoise, &this->elevationSkewNoise);
     return temp;
+}
+
+int World::getWorldHeight()
+{
+    return World::worldHeight;
+}
+
+int World::getWorldWidth()
+{
+    return World::worldWidth;
 }

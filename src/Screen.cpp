@@ -79,3 +79,13 @@ void Screen::render()
         }
     }
 }
+
+int Screen::getHeight()
+{
+    return this->height;
+}
+
+int Screen::getWidth()
+{
+    return this->width;
+}

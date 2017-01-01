@@ -34,7 +34,8 @@ int Camera::getX() const
     return this->pos_x;
 }
 
-void Camera::render(Screen &screen, World &world)
+void Camera::render(Screen &screen, World &world, Player &player)
 {
     world.draw(screen, this->pos_y, this->pos_x);
+    player.draw(screen, this->pos_y, this->pos_x);
 }

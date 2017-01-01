@@ -10,13 +10,12 @@ Game::Game()
 
 int Game::setup()
 {
-    this->pos_x = 0;
-    this->pos_y = 0;
-
     this->configure();
 
     this->camera = Camera(0, 0);
     this->screen = Screen();
+
+    this->player = Player("Bob", 0, 0);
 
     this->world = World(
         ConfigLoader::getStringOption(
@@ -30,23 +29,29 @@ int Game::setup()
 int Game::run()
 {
     while(true) {
-        this->camera.moveTo(this->pos_y, this->pos_x);
-        this->camera.render(this->screen, this->world);
+        int pos_x, pos_y;
+        player.getYX(pos_y, pos_x);
+
+        this->camera.moveTo(
+            -pos_y + (this->screenHeight / 2), 
+            -pos_x + (this->screenWidth / 2)
+        );
+        this->camera.render(this->screen, this->world, this->player);
         this->screen.render();
         this->screen.clear();
         unsigned int input = getch();
         switch(input) {
             case KEY_UP:
-                pos_y++;
+                this->player.move(-1,0);
                 break;
             case KEY_DOWN:
-                pos_y--;
+                this->player.move(1,0);
                 break;
             case KEY_LEFT:
-                pos_x++;
+                this->player.move(0,-1);
                 break;
             case KEY_RIGHT:
-                pos_x--;
+                this->player.move(0,1);
                 break;
             case 27: //ESC
                 return 0;
@@ -60,6 +65,7 @@ void Game::configure()
     ConfigLoader::load(); 
 
     WorldChunk::configure();
+    World::configure();
     City::load_city_names();
 
     std::cout<<"chunk_height: "<<ConfigLoader::getIntOption("chunk_height")<<'\n';
@@ -69,8 +75,12 @@ void Game::configure()
 
     unsigned int chunkHeight = ConfigLoader::getIntOption("chunk_height");
     unsigned int chunkWidth  = ConfigLoader::getIntOption("chunk_width");
-
+    
     int maxY, maxX;
     getmaxyx(stdscr, maxY, maxX);
+
+    this->screenHeight = maxY;
+    this->screenWidth = maxX;
+
     WorldChunk::setMaxYX(maxY, maxX);
 }

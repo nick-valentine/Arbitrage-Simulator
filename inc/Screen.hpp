@@ -22,6 +22,9 @@ public:
     void clear();
 
     void render();
+
+    int getHeight();
+    int getWidth();
 private:
     std::vector< std::vector< TextElement > >ScreenBuffer;
     int width;

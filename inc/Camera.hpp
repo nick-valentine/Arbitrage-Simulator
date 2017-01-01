@@ -6,6 +6,7 @@
 #include <vector>
 
 #include "GameObjects/World.hpp"
+#include "GameObjects/Player.hpp"
 
 class Camera
 {
@@ -18,7 +19,7 @@ public:
     int getY() const;
     int getX() const;
     
-    void render(Screen &screen, World &world);
+    void render(Screen &screen, World &world, Player &player);
 private:
     unsigned int pos_y;
     unsigned int pos_x;

@@ -39,11 +39,12 @@ server: server.o ConfigLoader.o Screen.o Camera.o GameObjects/City.o GameObjects
 		obj/server.o \
 		-o server $(LIBS)
 
-game: game.o Managers/Game.o ConfigLoader.o Camera.o Screen.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o ColorPallete.o WorldGen/NoiseFunc.o
+game: game.o Managers/Game.o ConfigLoader.o Camera.o Screen.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o GameObjects/Player.o ColorPallete.o WorldGen/NoiseFunc.o
 	$(CC) \
 		obj/Camera.o \
 		obj/ColorPallete.o \
 		obj/ConfigLoader.o \
+		obj/GameObjects/Player.o \
 		obj/GameObjects/City.o \
 		obj/GameObjects/Tile.o \
 		obj/GameObjects/World.o \
@@ -86,6 +87,9 @@ GameObjects/World.o: src/GameObjects/World.cpp inc/GameObjects/World.hpp inc/Gam
 
 GameObjects/Tile.o: src/GameObjects/Tile.cpp inc/GameObjects/Tile.hpp inc/GameObjects/AbstractGameObject.hpp inc/Globals.hpp
 	$(CC) $(CFLAGS) src/GameObjects/Tile.cpp -o obj/GameObjects/Tile.o
+
+GameObjects/Player.o: src/GameObjects/Player.cpp inc/GameObjects/Player.hpp
+	$(CC) $(CFLAGS) src/GameObjects/Player.cpp -o obj/GameObjects/Player.o
 
 WorldGen/NoiseFunc.o: src/WorldGen/NoiseFunc.cpp inc/WorldGen/NoiseFunc.hpp
 	$(CC) $(CFLAGS) src/WorldGen/NoiseFunc.cpp -o obj/WorldGen/NoiseFunc.o

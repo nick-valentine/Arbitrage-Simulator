@@ -6,9 +6,10 @@
 
 #include "Camera.hpp"
 #include "ConfigLoader.hpp"
+#include "GameObjects/City.hpp"
+#include "GameObjects/Player.hpp"
 #include "GameObjects/World.hpp"
 #include "GameObjects/WorldChunk.hpp"
-#include "GameObjects/City.hpp"
 #include "Screen.hpp"
 
 class Game
@@ -26,9 +27,10 @@ private:
     Camera camera;
     Screen screen;
     World world;
+    Player player;
 
-    int pos_x;
-    int pos_y;
+    int screenHeight;
+    int screenWidth;
 };
 
 #endif //MANAGER_GAME_HPP
