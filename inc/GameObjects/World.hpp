@@ -3,6 +3,7 @@
 
 #include "ConfigLoader.hpp"
 #include "GameObjects/WorldChunk.hpp"
+#include "GameObjects/Player.hpp"
 #include "Screen.hpp"
 #include "WorldGen/NoiseFunc.hpp"
 

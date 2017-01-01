@@ -28,6 +28,7 @@ bool Tile::colorPalleteInitialized = false;
 Tile::Tile()
 {
     this->myType = 0;
+    this->hasBeenVisible = false;
     Tile::init();
 }
 
@@ -35,6 +36,7 @@ Tile::Tile(int type, int elevation)
 {
     this->myType = type;
     this->myElevation = elevation;
+    this->hasBeenVisible = false;
     Tile::init();
 }
 
@@ -83,12 +85,12 @@ Tile::Tile(std::stringstream *ss)
 
 void Tile::fromStringStream(std::stringstream *ss)
 {
-    (*ss)>>myType>>myElevation;
+    (*ss)>>myType>>myElevation>>hasBeenVisible;
 }
 
 void Tile::toStringStream(std::stringstream *ss)
 {
-    (*ss)<<myType<<" "<<myElevation;
+    (*ss)<<myType<<" "<<myElevation<<" "<<hasBeenVisible;
 }
 
 void Tile::setPallete()
@@ -113,15 +115,26 @@ bool Tile::convertToCity()
     return false;
 }
 
-void Tile::drawAt(Screen &screen, int top, int left)
+void Tile::drawAt(Screen &screen, int top, int left, bool cull)
 {
-    screen.put(
-        Tile::Tiles[myType].colorPair,
-        /* layer */ 1,
-        Tile::Tiles[myType].tile,
-        top,
-        left
-    ); 
+    if(!cull) {
+        screen.put(
+            Tile::Tiles[myType].colorPair,
+            /* layer */ 1,
+            Tile::Tiles[myType].tile,
+            top,
+            left
+        ); 
+        this->hasBeenVisible = true;
+    } else if(this->hasBeenVisible) {
+        screen.put(
+            /* White on Black */ 5,
+            /* layer */ 1,
+            Tile::Tiles[myType].tile,
+            top,
+            left
+        ); 
+    }
 }
 
 void Tile::init()
@@ -136,4 +149,14 @@ void Tile::init()
 
         Tile::colorPalleteInitialized = true;
     }
+}
+
+int Tile::getElevation() const
+{
+    return this->myElevation;
+}
+
+int Tile::getType() const
+{
+    return this->myType;
 }

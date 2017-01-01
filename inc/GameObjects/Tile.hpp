@@ -43,8 +43,10 @@ public:
     static void setPallete();
 
     bool convertToCity();
-    void drawAt(Screen &screen, int top, int left);
+    void drawAt(Screen &screen, int top, int left, bool cull);
 
+    int getElevation() const;
+    int getType() const;
 private:
     static void init();
 
@@ -83,6 +85,7 @@ private:
     //index into Tiles 
     int myType;
     int myElevation;
+    bool hasBeenVisible;
 };
 
 #endif //TILE_HPP

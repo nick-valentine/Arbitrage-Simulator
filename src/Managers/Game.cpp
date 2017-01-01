@@ -32,10 +32,8 @@ int Game::run()
         int pos_x, pos_y;
         player.getYX(pos_y, pos_x);
 
-        this->camera.moveTo(
-            -pos_y + (this->screenHeight / 2), 
-            -pos_x + (this->screenWidth / 2)
-        );
+        //move camera to player
+        this->camera.moveTo(pos_y, pos_x);
         this->camera.render(this->screen, this->world, this->player);
         this->screen.render();
         this->screen.clear();

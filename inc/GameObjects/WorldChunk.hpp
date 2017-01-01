@@ -1,6 +1,7 @@
 #ifndef WORLDCHUNK_HPP
 #define WORLDCHUNK_HPP
 
+#include <algorithm>
 #include <curses.h>
 #include <map>
 #include <math.h>
@@ -43,7 +44,7 @@ public:
         NoiseFunc *elevationSkewNoise
     );
 
-    void draw(Screen &screen, int offsetTop, int offsetLeft);
+    void draw(Screen &screen, int playerY, int playerX);
 
     static unsigned int getChunkWidth();
     static unsigned int getChunkHeight();
@@ -52,6 +53,8 @@ private:
     static const std::string SpaceConstant;
     static const std::string CityMarker;
     static const std::string MapMarker;
+    static const int maxViewDistance = 10;
+    static const bool cullingEnabled = true;
 
     static bool configured;
     static unsigned int chunk_height;
@@ -66,6 +69,9 @@ private:
         object = 0,
         map = 1
     };
+
+    //@todo: replace with more powerful class
+    bool doCullTile(int playerY, int playerX, int tileY, int tileX, int localTileI, int localTileJ);
 
     static std::map<std::string, void (*)(WorldChunk *self, std::stringstream *ss)> factoryMap; 
 

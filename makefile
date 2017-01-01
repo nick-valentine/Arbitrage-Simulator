@@ -82,7 +82,7 @@ GameObjects/City.o: src/GameObjects/City.cpp inc/GameObjects/City.hpp inc/GameOb
 GameObjects/WorldChunk.o: src/GameObjects/WorldChunk.cpp inc/GameObjects/WorldChunk.hpp inc/GameObjects/AbstractGameObject.hpp inc/GameObjects/City.hpp inc/Globals.hpp inc/ConfigLoader.hpp inc/ColorPallete.hpp
 	$(CC) $(CFLAGS) src/GameObjects/WorldChunk.cpp -o obj/GameObjects/WorldChunk.o
 
-GameObjects/World.o: src/GameObjects/World.cpp inc/GameObjects/World.hpp inc/GameObjects/WorldChunk.hpp
+GameObjects/World.o: src/GameObjects/World.cpp inc/GameObjects/World.hpp inc/GameObjects/WorldChunk.hpp inc/GameObjects/Player.hpp
 	$(CC) $(CFLAGS) src/GameObjects/World.cpp -o obj/GameObjects/World.o
 
 GameObjects/Tile.o: src/GameObjects/Tile.cpp inc/GameObjects/Tile.hpp inc/GameObjects/AbstractGameObject.hpp inc/Globals.hpp

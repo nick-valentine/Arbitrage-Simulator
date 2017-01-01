@@ -153,20 +153,113 @@ void WorldChunk::organizeTiles(std::vector<Tile> tiles)
 }
 
 
-void WorldChunk::draw(Screen &screen, int offsetTop, int offsetLeft)
+void WorldChunk::draw(Screen &screen, int playerY, int playerX)
 {
     int currX, currY;
+    int halfHeight = screen.getHeight() / 2;
+    int halfWidth = screen.getWidth() / 2;
     Tile::setPallete();
     for(unsigned int i = 0; i < WorldChunk::chunk_height; ++i) {
         for(unsigned int j = 0; j < WorldChunk::chunk_width; ++j) {
             this->tiles[i][j].drawAt(
                 screen, 
-                offsetTop + top + i, 
-                offsetLeft + left + j
+                (top + i - playerY) + halfHeight,
+                (left + j - playerX) + halfWidth,
+                this->doCullTile(playerY, playerX, top + i, left + j, i, j)
             );
         }
     }    
 }
+
+bool WorldChunk::doCullTile(
+    int playerY, 
+    int playerX, 
+    int tileY, 
+    int tileX, 
+    int localTileI, 
+    int localTileJ
+)
+{
+    int diffY = playerY - tileY; 
+    int diffX = playerX - tileX;
+    int distance = sqrt((diffY*diffY)+(diffX*diffX));
+    if(distance < WorldChunk::maxViewDistance) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+//@todo: implement elevation based culling
+//bool WorldChunk::doCullTile(
+//    int playerY, 
+//    int playerX, 
+//    int tileY, 
+//    int tileX, 
+//    int localTileI, 
+//    int localTileJ
+//)
+//{
+//    int diffY = playerY - tileY; 
+//    int diffX = playerX - tileX;
+//    int distance = sqrt((diffY*diffY)+(diffX*diffX));
+//    if(distance < WorldChunk::maxViewDistance) {
+//        if(distance == 0) {
+//            //the immediate tile is always visible
+//            return false;
+//        }
+//        int vecY = diffY / distance;
+//        int vecX = diffX / distance;
+//        if(vecY == 0) {
+//            vecY = (diffY < 0) ? -1 : (diffY > 0) ? 1 : 0;
+//        }
+//        if(vecX == 0) {
+//            vecX = (diffX < 0) ? -1 : (diffX > 0) ? 1 : 0;
+//        }
+//
+//        //shoot a vector player to tile and if the elevation
+//        //ever goes up, then goes down, the player can not see past it.
+//        bool tileReached = false;
+//        int tracerY = playerY;
+//        int tracerX = playerX;
+//
+//        bool elevationHasGoneUp = false;
+//        int elevation = 0;
+//        int lastElevation = 0;
+//        while(!tileReached) {
+//            if(localTileI + tracerY < 0 || localTileI + tracerY > chunk_height ||
+//                localTileJ + tracerX < 0 || localTileJ + tracerX > chunk_width) {
+//                return true;
+//            } 
+//            elevation = this->tiles[localTileI + tracerY][localTileJ + tracerX].getElevation();
+//
+//            if(elevation > lastElevation) {
+//                elevationHasGoneUp = true;
+//                return true;
+//            }
+//            if(elevation < lastElevation && elevationHasGoneUp) {
+//                //elevation has gone up and is now going down
+//                return true;
+//            }
+//            lastElevation = elevation;
+//
+//
+//            tracerY -= vecY;
+//            tracerX -= vecX; 
+//            if((playerY <= tileY && tracerY >= tileY) ||
+//                (playerY >= tileY && tracerY <= tileY)) {
+//                if((playerX <= tileX && tracerX >= tileX) ||
+//                    (playerX >= tileX && tracerX <= tileX)) {
+//
+//                    tileReached = true;
+//                }
+//            }
+//        }
+//        return false;
+//    } else {
+//        return true;
+//    }
+//}
 
 float WorldChunk::elevationMap(float input, float skew)
 {
