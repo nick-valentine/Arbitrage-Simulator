@@ -17,17 +17,46 @@ int Game::setup()
 
     this->player = Player("Bob", 0, 0);
 
-    this->world = World(
-        ConfigLoader::getStringOption(
-            Game::configWorldNameKey,
-            Game::defaultWorldName
-        )
-    );
     this->world.generateWorld();
+
+    return 0;
 }
 
 int Game::run()
 {
+    using boost::asio::ip::tcp;
+    try {
+        std::string server = "localhost";
+        std::string serviceName = "9797";
+        boost::asio::io_service io_service;
+        tcp::resolver resolver(io_service);
+        tcp::resolver::query query(server.c_str(), serviceName.c_str());
+        tcp::resolver::iterator endpoint_iterator = resolver.resolve(query);
+        tcp::socket socket(io_service);
+        boost::asio::connect(socket, endpoint_iterator);
+
+        boost::system::error_code ignored_error;
+        boost::asio::write(socket, boost::asio::buffer("Hello, World\n"), ignored_error);
+
+        while(true) {
+            boost::array<char, 128> buff;
+            boost::system::error_code error;
+
+            std::size_t len = socket.read_some(boost::asio::buffer(buff), error);
+    
+            if (error == boost::asio::error::eof) {
+                break; //connection closed
+            } else if (error) {
+                throw boost::system::system_error(error);
+            }
+            std::cerr.write(buff.data(), len);
+        }
+    } catch (std::exception& e) {
+        std::cout<<e.what()<<std::endl;
+        return -1;
+    }
+    return 0;
+
     while(true) {
         int pos_x, pos_y;
         player.getYX(pos_y, pos_x);
@@ -56,6 +85,7 @@ int Game::run()
                 break;
         };
     }
+    return 0;
 }
 
 void Game::configure()
@@ -65,6 +95,13 @@ void Game::configure()
     WorldChunk::configure();
     World::configure();
     City::load_city_names();
+
+    this->world = World(
+        ConfigLoader::getStringOption(
+            Game::configWorldNameKey,
+            Game::defaultWorldName
+        )
+    );
 
     std::cout<<"chunk_height: "<<ConfigLoader::getIntOption("chunk_height")<<'\n';
     std::cout<<"chunk_width: "<<ConfigLoader::getIntOption("chunk_width")<<'\n';

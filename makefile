@@ -1,6 +1,6 @@
 CC=g++ -std=c++11 -ggdb
 CFLAGS=-c -Iinc
-LIBS=-lncurses
+LIBS=-lncurses -lboost_system -lboost_thread -lpthread
 
 
 all: main
@@ -17,6 +17,7 @@ makeObjFileStructure:
 	mkdir obj/GameObjects
 	mkdir obj/WorldGen
 	mkdir obj/Managers
+	mkdir obj/Helpers
 
 rmObjFiles:
 	rm -rf obj/*
@@ -25,21 +26,24 @@ clean: rmObjFiles makeObjFileStructure
 
 rebuild: clean main
 
-server: server.o ConfigLoader.o Screen.o Camera.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o ColorPallete.o WorldGen/NoiseFunc.o
+server: server.o Managers/Server.o ConfigLoader.o Screen.o Camera.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o GameObjects/Player.o ColorPallete.o WorldGen/NoiseFunc.o Helpers/String.o
 	$(CC) \
 		obj/Camera.o \
 		obj/ColorPallete.o \
 		obj/ConfigLoader.o \
+		obj/GameObjects/Player.o \
 		obj/GameObjects/City.o \
 		obj/GameObjects/Tile.o \
 		obj/GameObjects/World.o \
 		obj/GameObjects/WorldChunk.o \
+		obj/Managers/Server.o \
 		obj/Screen.o \
 		obj/WorldGen/NoiseFunc.o \
 		obj/server.o \
+		obj/Helpers/String.o \
 		-o server $(LIBS)
 
-game: game.o Managers/Game.o ConfigLoader.o Camera.o Screen.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o GameObjects/Player.o ColorPallete.o WorldGen/NoiseFunc.o
+game: game.o Managers/Game.o ConfigLoader.o Camera.o Screen.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o GameObjects/Player.o ColorPallete.o WorldGen/NoiseFunc.o Helpers/String.o
 	$(CC) \
 		obj/Camera.o \
 		obj/ColorPallete.o \
@@ -53,6 +57,7 @@ game: game.o Managers/Game.o ConfigLoader.o Camera.o Screen.o GameObjects/City.o
 		obj/Screen.o \
 		obj/WorldGen/NoiseFunc.o \
 		obj/game.o \
+		obj/Helpers/String.o \
 		-o game $(LIBS) 
 
 game.o: src/game.cpp
@@ -63,6 +68,9 @@ server.o: src/server.cpp inc/GameObjects/City.hpp inc/GameObjects/WorldChunk.hpp
 
 Managers/Game.o: src/Managers/Game.cpp inc/Managers/Game.hpp inc/GameObjects/World.hpp 
 	$(CC) $(CFLAGS) src/Managers/Game.cpp -o obj/Managers/Game.o
+
+Managers/Server.o: src/Managers/Server.cpp inc/Managers/Server.hpp
+	$(CC) $(CFLAGS) src/Managers/Server.cpp -o obj/Managers/Server.o
 
 ConfigLoader.o: src/ConfigLoader.cpp inc/ConfigLoader.hpp
 	$(CC) $(CFLAGS) src/ConfigLoader.cpp -o obj/ConfigLoader.o
@@ -93,4 +101,7 @@ GameObjects/Player.o: src/GameObjects/Player.cpp inc/GameObjects/Player.hpp
 
 WorldGen/NoiseFunc.o: src/WorldGen/NoiseFunc.cpp inc/WorldGen/NoiseFunc.hpp
 	$(CC) $(CFLAGS) src/WorldGen/NoiseFunc.cpp -o obj/WorldGen/NoiseFunc.o
+
+Helpers/String.o: src/Helpers/String.cpp inc/Helpers/String.hpp
+	$(CC) $(CFLAGS) src/Helpers/String.cpp -o obj/Helpers/String.o
 
