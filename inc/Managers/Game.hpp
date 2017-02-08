@@ -4,9 +4,13 @@
 #include <iostream>
 #include <curses.h>
 #include <string>
+#include <sstream>
+#include <stdio.h>
 #include <boost/array.hpp>
 #include <boost/asio.hpp>
+#include <boost/lexical_cast.hpp>
 
+#include "Server.hpp"
 #include "Camera.hpp"
 #include "ConfigLoader.hpp"
 #include "GameObjects/City.hpp"

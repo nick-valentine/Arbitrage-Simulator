@@ -36,7 +36,9 @@ int Game::run()
         boost::asio::connect(socket, endpoint_iterator);
 
         boost::system::error_code ignored_error;
-        boost::asio::write(socket, boost::asio::buffer("Hello, World\n"), ignored_error);
+        std::string message = boost::lexical_cast<std::string>(Server::LOGIN) + " Username Password\n";
+        std::cerr<<message;
+        boost::asio::write(socket, boost::asio::buffer(message), ignored_error);
 
         while(true) {
             boost::array<char, 128> buff;
@@ -52,7 +54,7 @@ int Game::run()
             std::cerr.write(buff.data(), len);
         }
     } catch (std::exception& e) {
-        std::cout<<e.what()<<std::endl;
+        std::cerr<<e.what()<<std::endl;
         return -1;
     }
     return 0;

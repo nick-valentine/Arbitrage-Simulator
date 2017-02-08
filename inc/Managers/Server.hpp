@@ -3,9 +3,11 @@
 
 #include <iostream>
 #include <string>
+#include <sstream>
 #include <map>
 #include <boost/asio.hpp>
 #include <boost/array.hpp>
+#include <boost/lexical_cast.hpp>
 
 #include "Helpers/String.hpp"
 #include "GameObjects/World.hpp"
@@ -20,6 +22,7 @@ public:
     int run();
 
     enum REQUST_TYPE {
+        ERROR = 0,
         LOGIN = 1,
         REQUEST_CHARACTER = 2,
         REQUEST_WORLD = 3,

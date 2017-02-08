@@ -25,25 +25,33 @@ int Server::setup()
 int Server::run()
 {
     using boost::asio::ip::tcp;
-    try {
-        boost::asio::io_service io_service;
-        tcp::acceptor acceptor(io_service, tcp::endpoint(tcp::v4(), this->portNumber));
-        while (true) {
-            tcp::socket socket(io_service);
-            
-            acceptor.accept(socket);
-            try {
-                std::cout<<this->read(socket);
-            } catch(std::exception& e) {
-                std::cerr<<e.what()<<std::endl;
-            }
+    boost::asio::io_service io_service;
+    tcp::acceptor acceptor(io_service, tcp::endpoint(tcp::v4(), this->portNumber));
+    while (true) {
+        tcp::socket socket(io_service);
+        
+        acceptor.accept(socket);
+        try {
+            std::string message = this->read(socket);
+            std::cout<<message<<std::endl;
+            std::stringstream ss;
+            int request_type;
 
+            ss.str(message);
+            ss>>request_type;
+            std::string response = boost::lexical_cast<std::string>(ERROR) + " invalid message";
+            if (this->requestMap.find(request_type) != this->requestMap.end()) {
+                response = this->requestMap[request_type](message);
+            }
+            
+            std::cout<<response;
             boost::system::error_code ignored_error;
-            boost::asio::write(socket, boost::asio::buffer("Hello, World\n"), ignored_error);
+            boost::asio::write(socket, boost::asio::buffer(response), ignored_error);
+
+        } catch(std::exception& e) {
+            std::cerr<<e.what()<<std::endl;
         }
-    } catch (std::exception& e) {
-        std::cerr<<e.what()<<std::endl;
-        return -1;
+    
     }
     return 0;
 }
@@ -83,5 +91,10 @@ std::string Server::read(tcp::socket &socket)
 
 std::string Server::LoginHandler(std::string msg)
 {
-    return "Welcome";
+    int type;
+    std::string username, password;
+    std::stringstream ss;
+    ss.str(msg);
+    ss>>type>>username>>password;
+    return "Welcome, " + username;
 }
