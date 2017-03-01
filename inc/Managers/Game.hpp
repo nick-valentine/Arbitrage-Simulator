@@ -19,6 +19,8 @@
 #include "GameObjects/WorldChunk.hpp"
 #include "Screen.hpp"
 
+using boost::asio::ip::tcp;
+
 class Game
 {
 public:
@@ -30,6 +32,7 @@ private:
     static const std::string defaultWorldName;
 
     void configure();
+    std::string version;
 
     Camera camera;
     Screen screen;
@@ -38,6 +41,11 @@ private:
 
     int screenHeight;
     int screenWidth;
+
+    std::string read(tcp::socket &socket);
+
+    std::string checkVersion(tcp::socket &socket);
+    int login(tcp::socket &socket);
 };
 
 #endif //MANAGER_GAME_HPP

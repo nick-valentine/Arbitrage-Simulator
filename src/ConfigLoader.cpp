@@ -1,7 +1,9 @@
 #include "ConfigLoader.hpp"
 
 const std::string ConfigLoader::config_path = "./GameData/config.txt";
+const std::string ConfigLoader::version_path = "./GameData/version.txt";
 std::map<std::string, std::string> ConfigLoader::configuration = std::map<std::string, std::string>();
+std::string ConfigLoader::version = std::string();
 
 ConfigLoader::ConfigLoader()
 {
@@ -18,6 +20,12 @@ void ConfigLoader::load()
         configuration[key] = value;
     }
     ifile.close();
+
+    ifile.open(ConfigLoader::version_path.c_str());
+    while(ifile.good()) {
+        ifile>>version;
+    }
+    ifile.close();
 }
 
 void ConfigLoader::save()
@@ -28,6 +36,11 @@ void ConfigLoader::save()
         ofile<<it->first<<' '<<it->second<<'\n';
     }
     ofile.close();
+}
+
+std::string ConfigLoader::getVersion()
+{
+    return version;
 }
 
 int ConfigLoader::getIntOption(std::string key, int defaultTo) 

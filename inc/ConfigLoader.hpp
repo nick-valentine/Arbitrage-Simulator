@@ -14,6 +14,8 @@ public:
     static void load();
     static void save();
 
+    static std::string getVersion();
+
     static int getIntOption(std::string key, int defaultTo = -1);
     static std::string getStringOption(std::string key, std::string defaultTo = "");
 
@@ -25,10 +27,13 @@ private:
     ConfigLoader();
 
     static const std::string config_path;
+    static const std::string version_path;
     using c_iter = std::map<std::string, std::string>::const_iterator;
 
     //map key to value
     static std::map<std::string, std::string> configuration;
+
+    static std::string version;
 };
 
 #endif //CONFIGLOADER_HPP

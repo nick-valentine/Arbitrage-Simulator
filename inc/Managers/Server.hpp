@@ -23,11 +23,14 @@ public:
 
     enum REQUST_TYPE {
         ERROR = 0,
-        LOGIN = 1,
-        REQUEST_CHARACTER = 2,
-        REQUEST_WORLD = 3,
-        REQUEST_CHUNK = 4,
-        REQUEST_CITY = 5,
+        VERSION_CHECK = 1,
+        VERSION_CHECK_OK = 2,
+        VERSION_INCOMPATIBLE = 3,
+        LOGIN = 10,
+        REQUEST_CHARACTER = 100,
+        REQUEST_WORLD = 110,
+        REQUEST_CHUNK = 120,
+        REQUEST_CITY = 130,
     };
 private:
     static const std::string configWorldNameKey;
@@ -36,8 +39,11 @@ private:
     static const int defaultPortNumber;
 
     int portNumber;
+    std::string version;
 
     void configure();
+
+    World world;
 
     std::string read(tcp::socket &socket);
 
@@ -45,8 +51,9 @@ private:
      * Request Handlers
      * All handlers will take a string message and return a string response
      */
-    static std::map<int, std::string (*)(std::string msg)> requestMap; 
-    static std::string LoginHandler(std::string msg);
+    static std::map<int, std::string (*)(Server &myself, std::string msg)> requestMap; 
+    static std::string VersionCheckHandler(Server &myself, std::string msg);
+    static std::string LoginHandler(Server &myself, std::string msg);
 };
 
 #endif //MANAGER_SERVER_HPP

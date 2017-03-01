@@ -24,7 +24,6 @@ int Game::setup()
 
 int Game::run()
 {
-    using boost::asio::ip::tcp;
     try {
         std::string server = "localhost";
         std::string serviceName = "9797";
@@ -35,24 +34,19 @@ int Game::run()
         tcp::socket socket(io_service);
         boost::asio::connect(socket, endpoint_iterator);
 
-        boost::system::error_code ignored_error;
-        std::string message = boost::lexical_cast<std::string>(Server::LOGIN) + " Username Password\n";
-        std::cerr<<message;
-        boost::asio::write(socket, boost::asio::buffer(message), ignored_error);
-
-        while(true) {
-            boost::array<char, 128> buff;
-            boost::system::error_code error;
-
-            std::size_t len = socket.read_some(boost::asio::buffer(buff), error);
-    
-            if (error == boost::asio::error::eof) {
-                break; //connection closed
-            } else if (error) {
-                throw boost::system::system_error(error);
-            }
-            std::cerr.write(buff.data(), len);
+        std::string sVersion;
+        if ("" == (sVersion = this->checkVersion(socket))) {
+            std::cerr<<"Version OK, good to continue\n";
+        } else {
+            std::cerr<<"Your version does not match the servers.\nYou are running " +
+                this->version +
+                ".\n The server is running " +
+                sVersion
+            ;
+            return -1;
         }
+
+
     } catch (std::exception& e) {
         std::cerr<<e.what()<<std::endl;
         return -1;
@@ -105,6 +99,8 @@ void Game::configure()
         )
     );
 
+    this->version = ConfigLoader::getVersion();
+
     std::cout<<"chunk_height: "<<ConfigLoader::getIntOption("chunk_height")<<'\n';
     std::cout<<"chunk_width: "<<ConfigLoader::getIntOption("chunk_width")<<'\n';
     std::cout<<"max_cities_per_chunk: "<<ConfigLoader::getIntOption("max_cities_per_chunk")<<'\n';
@@ -120,4 +116,49 @@ void Game::configure()
     this->screenWidth = maxX;
 
     WorldChunk::setMaxYX(maxY, maxX);
+}
+
+std::string Game::read(tcp::socket &socket)
+{
+    boost::system::error_code error;
+    boost::asio::streambuf sb;
+    std::size_t len = boost::asio::read_until(socket, sb, "\n",error);
+    std::string buff;
+    buff.resize(len);
+    sb.sgetn(&buff[0], buff.size());
+
+    if (error) {
+        throw boost::system::system_error(error);
+    }
+
+    return buff;
+}
+
+std::string Game::checkVersion(tcp::socket &socket)
+{
+    boost::system::error_code ignored_error;
+    std::string message = boost::lexical_cast<std::string>(Server::VERSION_CHECK) + " " + this->version + "\n";
+    std::cerr<<message;
+    boost::asio::write(socket, boost::asio::buffer(message), ignored_error);
+    std::string response = this->read(socket);
+    std::stringstream ss;
+
+    ss.str(response);
+    int responseType;
+    ss>>responseType;
+    if (responseType == Server::VERSION_CHECK_OK) {
+        return "";
+    } else if (responseType == Server::VERSION_INCOMPATIBLE) {
+        std::string serverVersion;
+        ss>>serverVersion;
+        return serverVersion;
+    }
+}
+
+int Game::login(tcp::socket &socket)
+{
+    boost::system::error_code ignored_error;
+    std::string message = boost::lexical_cast<std::string>(Server::LOGIN) + " Username Password\n";
+    std::cerr<<message;
+    boost::asio::write(socket, boost::asio::buffer(message), ignored_error);
 }
