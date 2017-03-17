@@ -18,6 +18,7 @@
 #include "GameObjects/World.hpp"
 #include "GameObjects/WorldChunk.hpp"
 #include "Screen.hpp"
+#include "Networking/Connection.hpp"
 
 using boost::asio::ip::tcp;
 
@@ -42,10 +43,10 @@ private:
     int screenHeight;
     int screenWidth;
 
-    std::string read(tcp::socket &socket);
+    Connection connection;
 
-    std::string checkVersion(tcp::socket &socket);
-    int login(tcp::socket &socket);
+    std::string checkVersion();
+    int login();
 };
 
 #endif //MANAGER_GAME_HPP

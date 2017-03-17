@@ -18,6 +18,7 @@ makeObjFileStructure:
 	mkdir obj/WorldGen
 	mkdir obj/Managers
 	mkdir obj/Helpers
+	mkdir obj/Networking
 
 rmObjFiles:
 	rm -rf obj/*
@@ -26,7 +27,7 @@ clean: rmObjFiles makeObjFileStructure
 
 rebuild: clean main
 
-server: server.o Managers/Server.o ConfigLoader.o Screen.o Camera.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o GameObjects/Player.o ColorPallete.o WorldGen/NoiseFunc.o Helpers/String.o
+server: server.o Managers/Server.o ConfigLoader.o Screen.o Camera.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o GameObjects/Player.o ColorPallete.o WorldGen/NoiseFunc.o Helpers/String.o Networking/Connection.o
 	$(CC) \
 		obj/Camera.o \
 		obj/ColorPallete.o \
@@ -41,9 +42,10 @@ server: server.o Managers/Server.o ConfigLoader.o Screen.o Camera.o GameObjects/
 		obj/WorldGen/NoiseFunc.o \
 		obj/server.o \
 		obj/Helpers/String.o \
+		obj/Networking/Connection.o \
 		-o server $(LIBS)
 
-game: game.o Managers/Game.o ConfigLoader.o Camera.o Screen.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o GameObjects/Player.o ColorPallete.o WorldGen/NoiseFunc.o Helpers/String.o
+game: game.o Managers/Game.o ConfigLoader.o Camera.o Screen.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o GameObjects/Player.o ColorPallete.o WorldGen/NoiseFunc.o Helpers/String.o Networking/Connection.o
 	$(CC) \
 		obj/Camera.o \
 		obj/ColorPallete.o \
@@ -58,6 +60,7 @@ game: game.o Managers/Game.o ConfigLoader.o Camera.o Screen.o GameObjects/City.o
 		obj/WorldGen/NoiseFunc.o \
 		obj/game.o \
 		obj/Helpers/String.o \
+		obj/Networking/Connection.o \
 		-o game $(LIBS) 
 
 game.o: src/game.cpp
@@ -66,7 +69,7 @@ game.o: src/game.cpp
 server.o: src/server.cpp inc/GameObjects/City.hpp inc/GameObjects/WorldChunk.hpp
 	$(CC) $(CFLAGS) src/server.cpp -o obj/server.o
 
-Managers/Game.o: src/Managers/Game.cpp inc/Managers/Game.hpp inc/GameObjects/World.hpp 
+Managers/Game.o: src/Managers/Game.cpp inc/Managers/Game.hpp inc/GameObjects/World.hpp inc/Networking/Connection.hpp
 	$(CC) $(CFLAGS) src/Managers/Game.cpp -o obj/Managers/Game.o
 
 Managers/Server.o: src/Managers/Server.cpp inc/Managers/Server.hpp
@@ -105,3 +108,5 @@ WorldGen/NoiseFunc.o: src/WorldGen/NoiseFunc.cpp inc/WorldGen/NoiseFunc.hpp
 Helpers/String.o: src/Helpers/String.cpp inc/Helpers/String.hpp
 	$(CC) $(CFLAGS) src/Helpers/String.cpp -o obj/Helpers/String.o
 
+Networking/Connection.o: src/Networking/Connection.cpp inc/Networking/Connection.hpp
+	$(CC) $(CFLAGS) src/Networking/Connection.cpp -o obj/Networking/Connection.o

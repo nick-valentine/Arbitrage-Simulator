@@ -25,17 +25,10 @@ int Game::setup()
 int Game::run()
 {
     try {
-        std::string server = "localhost";
-        std::string serviceName = "9797";
-        boost::asio::io_service io_service;
-        tcp::resolver resolver(io_service);
-        tcp::resolver::query query(server.c_str(), serviceName.c_str());
-        tcp::resolver::iterator endpoint_iterator = resolver.resolve(query);
-        tcp::socket socket(io_service);
-        boost::asio::connect(socket, endpoint_iterator);
+        this->connection.connect("localhost", "9797");
 
         std::string sVersion;
-        if ("" == (sVersion = this->checkVersion(socket))) {
+        if ("" == (sVersion = this->checkVersion())) {
             std::cerr<<"Version OK, good to continue\n";
         } else {
             std::cerr<<"Your version does not match the servers.\nYou are running " +
@@ -118,29 +111,12 @@ void Game::configure()
     WorldChunk::setMaxYX(maxY, maxX);
 }
 
-std::string Game::read(tcp::socket &socket)
+std::string Game::checkVersion()
 {
-    boost::system::error_code error;
-    boost::asio::streambuf sb;
-    std::size_t len = boost::asio::read_until(socket, sb, "\n",error);
-    std::string buff;
-    buff.resize(len);
-    sb.sgetn(&buff[0], buff.size());
-
-    if (error) {
-        throw boost::system::system_error(error);
-    }
-
-    return buff;
-}
-
-std::string Game::checkVersion(tcp::socket &socket)
-{
-    boost::system::error_code ignored_error;
     std::string message = boost::lexical_cast<std::string>(Server::VERSION_CHECK) + " " + this->version + "\n";
     std::cerr<<message;
-    boost::asio::write(socket, boost::asio::buffer(message), ignored_error);
-    std::string response = this->read(socket);
+    this->connection.write(message);
+    std::string response = this->connection.read();
     std::stringstream ss;
 
     ss.str(response);
@@ -155,10 +131,9 @@ std::string Game::checkVersion(tcp::socket &socket)
     }
 }
 
-int Game::login(tcp::socket &socket)
+int Game::login()
 {
-    boost::system::error_code ignored_error;
     std::string message = boost::lexical_cast<std::string>(Server::LOGIN) + " Username Password\n";
     std::cerr<<message;
-    boost::asio::write(socket, boost::asio::buffer(message), ignored_error);
+    this->connection.write(message);
 }
