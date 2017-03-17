@@ -19,10 +19,13 @@ public:
     Connection(socket_ptr sock);
     
     void connect(std::string ip, std::string port);
+    void bind(socket_ptr sock);
 
     std::string read();
     bool write(std::string msg);
 
+    socket_ptr get();
+    bool isConnected();
 private:
     bool connected;
     socket_ptr socket;

@@ -11,6 +11,7 @@
 
 #include "Helpers/String.hpp"
 #include "GameObjects/World.hpp"
+#include "Networking/Connection.hpp"
 
 using boost::asio::ip::tcp;
 
@@ -44,8 +45,7 @@ private:
     void configure();
 
     World world;
-
-    std::string read(tcp::socket &socket);
+    Connection connection; //@TODO: replace with threaded connection pool
 
     /** 
      * Request Handlers

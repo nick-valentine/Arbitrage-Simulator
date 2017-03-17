@@ -29,11 +29,12 @@ int Server::run()
     boost::asio::io_service io_service;
     tcp::acceptor acceptor(io_service, tcp::endpoint(tcp::v4(), this->portNumber));
     while (true) {
-        tcp::socket socket(io_service);
-        
-        acceptor.accept(socket);
+        Connection::socket_ptr sock(new tcp::socket(io_service));
+        this->connection.bind(sock);
+        acceptor.accept(*this->connection.get());
+
         try {
-            std::string message = this->read(socket);
+            std::string message = this->connection.read();
             std::cout<<message<<std::endl;
             std::stringstream ss;
             int request_type;
@@ -46,8 +47,7 @@ int Server::run()
             }
             
             std::cout<<response;
-            boost::system::error_code ignored_error;
-            boost::asio::write(socket, boost::asio::buffer(response), ignored_error);
+            this->connection.write(response);
 
         } catch(std::exception& e) {
             std::cerr<<e.what()<<std::endl;
@@ -74,22 +74,6 @@ void Server::configure()
             Server::defaultWorldName
         )
     );
-}
-
-std::string Server::read(tcp::socket &socket)
-{
-    boost::system::error_code error;
-    boost::asio::streambuf sb;
-    std::size_t len = boost::asio::read_until(socket, sb, "\n",error);
-    std::string buff;
-    buff.resize(len);
-    sb.sgetn(&buff[0], buff.size());
-
-    if (error) {
-        throw boost::system::system_error(error);
-    }
-
-    return buff;
 }
 
 std::string Server::VersionCheckHandler(Server &myself, std::string msg)
