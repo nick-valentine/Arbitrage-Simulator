@@ -73,6 +73,12 @@ bool Connection::write(std::string msg)
     }
 }
 
+void Connection::close()
+{
+    this->socket->close();
+    this->connected = false;
+}
+
 Connection::socket_ptr Connection::get()
 {
     return this->socket;

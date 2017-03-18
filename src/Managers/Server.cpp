@@ -20,6 +20,7 @@ Server::Server()
 int Server::setup()
 {
     this->configure();
+    this->initialize();
     return 0;
 }
 
@@ -30,31 +31,24 @@ int Server::run()
     tcp::acceptor acceptor(io_service, tcp::endpoint(tcp::v4(), this->portNumber));
     while (true) {
         Connection::socket_ptr sock(new tcp::socket(io_service));
-        this->connection.bind(sock);
-        acceptor.accept(*this->connection.get());
-
-        try {
-            std::string message = this->connection.read();
-            std::cout<<message<<std::endl;
-            std::stringstream ss;
-            int request_type;
-
-            ss.str(message);
-            ss>>request_type;
-            std::string response = boost::lexical_cast<std::string>(ERROR) + " invalid message";
-            if (this->requestMap.find(request_type) != this->requestMap.end()) {
-                response = this->requestMap[request_type](*this, message);
-            }
-            
-            std::cout<<response;
-            this->connection.write(response);
-
-        } catch(std::exception& e) {
-            std::cerr<<e.what()<<std::endl;
+        int connectionIndex = this->connections.size();
+        this->connections.push_back(Connection());
+        this->connections[connectionIndex].bind(sock);
+        acceptor.accept(*this->connections[connectionIndex].get());
+        if (threads.size() < 32) {
+            int threadIndex = this->threads.size();
+            this->threads.push_back(std::thread(&Server::manageSession, this, connectionIndex, threadIndex));
+        } else {
+            std::cerr<<threads.size()<<" connections open already, connection denied"<<std::endl;
+            this->connections[connectionIndex].close();
         }
-    
     }
     return 0;
+}
+
+void Server::initialize()
+{
+    this->cleaner = std::thread(&Server::cleanup, this);
 }
 
 void Server::configure()
@@ -74,6 +68,53 @@ void Server::configure()
             Server::defaultWorldName
         )
     );
+}
+
+void Server::manageSession(int connectionIndex, int threadIndex)
+{
+    while (true) {
+        try {
+            std::string message = this->connections[connectionIndex].read();
+            std::cout<<message<<std::endl;
+            std::stringstream ss;
+            int request_type;
+        
+            ss.str(message);
+            ss>>request_type;
+            std::string response = boost::lexical_cast<std::string>(ERROR) + " invalid message";
+            if (this->requestMap.find(request_type) != this->requestMap.end()) {
+                response = this->requestMap[request_type](*this, message);
+            }
+            
+            std::cout<<response;
+            this->connections[connectionIndex].write(response);
+        
+        } catch(std::exception& e) {
+            std::cerr<<e.what()<<std::endl;
+            this->connections[connectionIndex].close();
+            this->connections[connectionIndex] = this->connections[this->connections.size() - 1];
+            this->connections.pop_back();
+            this->closed.push_back(threadIndex);
+            return;
+        }
+    }
+}
+
+void Server::cleanup()
+{
+    while (true) {
+        std::unique_lock<std::mutex> lock(closedMutex, std::try_to_lock);
+        if(lock.owns_lock()) {
+            for (int i = 0; i < this->closed.size(); ++i) {
+                this->threads[this->closed[i]] = std::thread(std::move(this->threads[this->threads.size() - 1]));
+                this->threads.pop_back();
+            }
+            this->closed.clear();
+        } else {
+            std::cerr<<"Lock on cleanup threads failed.";
+        }
+        std::this_thread::sleep_for(std::chrono::seconds(5));
+    }
 }
 
 std::string Server::VersionCheckHandler(Server &myself, std::string msg)

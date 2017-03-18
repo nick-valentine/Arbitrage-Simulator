@@ -24,6 +24,8 @@ public:
     std::string read();
     bool write(std::string msg);
 
+    void close();
+
     socket_ptr get();
     bool isConnected();
 private:

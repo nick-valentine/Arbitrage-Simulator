@@ -3,8 +3,12 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 #include <sstream>
 #include <map>
+#include <thread>
+#include <chrono>
+#include <mutex>
 #include <boost/asio.hpp>
 #include <boost/array.hpp>
 #include <boost/lexical_cast.hpp>
@@ -42,10 +46,19 @@ private:
     int portNumber;
     std::string version;
 
+    void initialize();
     void configure();
 
+    void manageSession(int connectionIndex, int threadIndex);
+
     World world;
-    Connection connection; //@TODO: replace with threaded connection pool
+    std::vector<std::thread> threads;
+    std::vector<int> closed;
+    std::mutex closedMutex;
+    std::vector<Connection> connections;
+    std::thread cleaner;
+
+    void cleanup();
 
     /** 
      * Request Handlers
