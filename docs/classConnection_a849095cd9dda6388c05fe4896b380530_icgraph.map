@@ -1,5 +1,9 @@
 <map id="Connection::read" name="Connection::read">
-<area shape="rect" id="node2" href="$classGame.html#ab07ed0ff4045e2303ea97499d9642fc8" title="Game::checkVersion" alt="" coords="175,5,319,32"/>
-<area shape="rect" id="node3" href="$classGame.html#a99fb161fbbe87d25a8b73265a0611e58" title="Game::run" alt="" coords="367,5,449,32"/>
-<area shape="rect" id="node4" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="497,5,548,32"/>
+<area shape="rect" id="node2" href="$classGame.html#ab07ed0ff4045e2303ea97499d9642fc8" title="Game::checkVersion" alt="" coords="197,5,341,32"/>
+<area shape="rect" id="node5" href="$classServerSession.html#adc44562be2fb27c3cd5242503fe60bf9" title="ServerSession::sessionLoop" alt="" coords="175,56,363,83"/>
+<area shape="rect" id="node3" href="$classGame.html#a99fb161fbbe87d25a8b73265a0611e58" title="Game::run" alt="" coords="436,5,519,32"/>
+<area shape="rect" id="node4" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="610,5,661,32"/>
+<area shape="rect" id="node6" href="$classServerSession.html#a9618739dcf123159134c03418f5d43d5" title="Launch thread to manage this session. " alt="" coords="411,56,544,83"/>
+<area shape="rect" id="node7" href="$classServer.html#a30362b937b125d27916cf595bfc4c1a7" title="Server::run" alt="" coords="592,56,679,83"/>
+<area shape="rect" id="node8" href="$server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="727,56,777,83"/>
 </map>

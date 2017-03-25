@@ -11,6 +11,7 @@ var annotated_dup =
     [ "Player", "classPlayer.html", "classPlayer" ],
     [ "Screen", "classScreen.html", "classScreen" ],
     [ "Server", "classServer.html", "classServer" ],
+    [ "ServerSession", "classServerSession.html", "classServerSession" ],
     [ "Tile", "classTile.html", "classTile" ],
     [ "World", "classWorld.html", "classWorld" ],
     [ "WorldChunk", "classWorldChunk.html", "classWorldChunk" ]

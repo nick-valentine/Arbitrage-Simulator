@@ -3,7 +3,7 @@ var searchData=
   ['camera',['Camera',['../classCamera.html#a01f94c3543f56ede7af49dc778f19331',1,'Camera::Camera()'],['../classCamera.html#af30efa9cdf7ca6c4137b1e906e1537e9',1,'Camera::Camera(unsigned int y, unsigned int x)']]],
   ['checkversion',['checkVersion',['../classGame.html#ab07ed0ff4045e2303ea97499d9642fc8',1,'Game']]],
   ['city',['City',['../classCity.html#a1b1f549430f0a7ecd0ec7b1605415193',1,'City::City()'],['../classCity.html#ab9e123e275fe206ddc6ce96bc04b03dc',1,'City::City(std::stringstream *ss)'],['../classCity.html#a40f4d35bf7316f35cfe095bd8d74222c',1,'City::City(std::string name, int pos_x, int pos_y)']]],
-  ['cleanup',['cleanup',['../classServer.html#a452594d15d1943b0be0569475d4375ec',1,'Server']]],
+  ['cleanupsessions',['cleanupSessions',['../classServer.html#a0b609eb0fc5082c2cd086446ae7342d5',1,'Server']]],
   ['clear',['clear',['../classScreen.html#a35e74266b2a04e37b354ceff7a5f1031',1,'Screen']]],
   ['close',['close',['../classConnection.html#aea9f9d78e2b92747d4e4575ccb97361e',1,'Connection']]],
   ['colorpallete',['ColorPallete',['../classColorPallete.html#af7e78a4fedd5269ad24da8412fdce6bd',1,'ColorPallete']]],

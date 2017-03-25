@@ -126,22 +126,22 @@ $(document).ready(function(){initNavTree('game_8cpp.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="game_8cpp__incl.png" border="0" usemap="#game_8cpp" alt=""/></div>
 <map name="game_8cpp" id="game_8cpp">
-<area shape="rect" id="node9" href="Game_8hpp.html" title="Managers/Game.hpp" alt="" coords="1309,80,1451,107"/>
-<area shape="rect" id="node14" href="Server_8hpp.html" title="Server.hpp" alt="" coords="959,155,1044,181"/>
-<area shape="rect" id="node21" href="World_8hpp.html" title="GameObjects/World.hpp" alt="" coords="1547,229,1712,256"/>
-<area shape="rect" id="node22" href="ConfigLoader_8hpp.html" title="ConfigLoader.hpp" alt="" coords="1638,379,1762,405"/>
-<area shape="rect" id="node25" href="WorldChunk_8hpp.html" title="GameObjects/WorldChunk.hpp" alt="" coords="1924,304,2127,331"/>
-<area shape="rect" id="node29" href="City_8hpp.html" title="GameObjects/City.hpp" alt="" coords="1357,379,1512,405"/>
-<area shape="rect" id="node33" href="Screen_8hpp.html" title="Screen.hpp" alt="" coords="2307,461,2395,487"/>
-<area shape="rect" id="node35" href="Player_8hpp.html" title="GameObjects/Player.hpp" alt="" coords="1064,379,1232,405"/>
-<area shape="rect" id="node36" href="Connection_8hpp.html" title="Networking/Connection.hpp" alt="" coords="374,229,557,256"/>
-<area shape="rect" id="node38" href="Camera_8hpp.html" title="Camera.hpp" alt="" coords="2668,155,2761,181"/>
-<area shape="rect" id="node20" href="String_8hpp.html" title="Helpers/String.hpp" alt="" coords="683,229,813,256"/>
-<area shape="rect" id="node34" href="NoiseFunc_8hpp.html" title="WorldGen/NoiseFunc.hpp" alt="" coords="1939,379,2111,405"/>
-<area shape="rect" id="node28" href="AbstractGameObject_8hpp.html" title="GameObjects/AbstractGame\lObject.hpp" alt="" coords="1118,453,1309,495"/>
-<area shape="rect" id="node30" href="Globals_8hpp.html" title="Globals.hpp" alt="" coords="1435,461,1525,487"/>
-<area shape="rect" id="node31" href="Tile_8hpp.html" title="GameObjects/Tile.hpp" alt="" coords="2275,379,2427,405"/>
-<area shape="rect" id="node32" href="ColorPallete_8hpp.html" title="ColorPallete.hpp" alt="" coords="2419,461,2538,487"/>
+<area shape="rect" id="node9" href="Game_8hpp.html" title="Managers/Game.hpp" alt="" coords="1142,80,1285,107"/>
+<area shape="rect" id="node14" href="Server_8hpp.html" title="Server.hpp" alt="" coords="1091,155,1176,181"/>
+<area shape="rect" id="node19" href="World_8hpp.html" title="GameObjects/World.hpp" alt="" coords="1547,304,1712,331"/>
+<area shape="rect" id="node20" href="ConfigLoader_8hpp.html" title="ConfigLoader.hpp" alt="" coords="1405,453,1529,480"/>
+<area shape="rect" id="node23" href="WorldChunk_8hpp.html" title="GameObjects/WorldChunk.hpp" alt="" coords="1699,379,1902,405"/>
+<area shape="rect" id="node27" href="City_8hpp.html" title="GameObjects/City.hpp" alt="" coords="1124,453,1279,480"/>
+<area shape="rect" id="node31" href="Screen_8hpp.html" title="Screen.hpp" alt="" coords="2434,535,2522,562"/>
+<area shape="rect" id="node33" href="Player_8hpp.html" title="GameObjects/Player.hpp" alt="" coords="780,453,948,480"/>
+<area shape="rect" id="node34" href="ServerSession_8hpp.html" title="Managers/ServerSession.hpp" alt="" coords="670,229,864,256"/>
+<area shape="rect" id="node36" href="Connection_8hpp.html" title="Networking/Connection.hpp" alt="" coords="380,304,562,331"/>
+<area shape="rect" id="node38" href="Camera_8hpp.html" title="Camera.hpp" alt="" coords="2503,229,2596,256"/>
+<area shape="rect" id="node32" href="NoiseFunc_8hpp.html" title="WorldGen/NoiseFunc.hpp" alt="" coords="1706,453,1878,480"/>
+<area shape="rect" id="node26" href="AbstractGameObject_8hpp.html" title="GameObjects/AbstractGame\lObject.hpp" alt="" coords="953,528,1144,569"/>
+<area shape="rect" id="node28" href="Globals_8hpp.html" title="Globals.hpp" alt="" coords="1270,535,1360,562"/>
+<area shape="rect" id="node29" href="Tile_8hpp.html" title="GameObjects/Tile.hpp" alt="" coords="2143,453,2295,480"/>
+<area shape="rect" id="node30" href="ColorPallete_8hpp.html" title="ColorPallete.hpp" alt="" coords="2290,535,2409,562"/>
 </map>
 </div>
 </div>
@@ -213,7 +213,7 @@ Functions</h2></td></tr>
 <p>References <a class="el" href="game_8cpp_source.html#l00037">finish()</a>, <a class="el" href="Game_8cpp_source.html#l00025">Game::run()</a>, and <a class="el" href="Game_8cpp_source.html#l00011">Game::setup()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    srand(time(NULL));</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span> num=0;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    signal(SIGINT, <a class="code" href="game_8cpp.html#af620af65350c4af61494473541021019">finish</a>);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    initscr();</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    keypad(stdscr, TRUE);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    cbreak();</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    echo();</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span>(has_colors()) {</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        start_color();</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classGame.html">Game</a> myGame;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    myGame.<a class="code" href="classGame.html#ad7a2b7ff71e3064a289680944a27a42e">setup</a>();</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    myGame.<a class="code" href="classGame.html#a99fb161fbbe87d25a8b73265a0611e58">run</a>();</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="game_8cpp.html#af620af65350c4af61494473541021019">finish</a>(0);</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div><div class="ttc" id="game_8cpp_html_af620af65350c4af61494473541021019"><div class="ttname"><a href="game_8cpp.html#af620af65350c4af61494473541021019">finish</a></div><div class="ttdeci">static void finish(int sig)</div><div class="ttdef"><b>Definition:</b> <a href="game_8cpp_source.html#l00037">game.cpp:37</a></div></div>
 <div class="ttc" id="classGame_html_ad7a2b7ff71e3064a289680944a27a42e"><div class="ttname"><a href="classGame.html#ad7a2b7ff71e3064a289680944a27a42e">Game::setup</a></div><div class="ttdeci">int setup()</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cpp_source.html#l00011">Game.cpp:11</a></div></div>
-<div class="ttc" id="classGame_html"><div class="ttname"><a href="classGame.html">Game</a></div><div class="ttdoc">Manager for Game State. </div><div class="ttdef"><b>Definition:</b> <a href="Game_8hpp_source.html#l00029">Game.hpp:29</a></div></div>
+<div class="ttc" id="classGame_html"><div class="ttname"><a href="classGame.html">Game</a></div><div class="ttdoc">Manager for Game State. </div><div class="ttdef"><b>Definition:</b> <a href="Game_8hpp_source.html#l00030">Game.hpp:30</a></div></div>
 <div class="ttc" id="classGame_html_a99fb161fbbe87d25a8b73265a0611e58"><div class="ttname"><a href="classGame.html#a99fb161fbbe87d25a8b73265a0611e58">Game::run</a></div><div class="ttdeci">int run()</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cpp_source.html#l00025">Game.cpp:25</a></div></div>
 </div><!-- fragment -->
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -282,7 +282,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="game_8cpp.html">game.cpp</a></li>
-    <li class="footer">Generated on Fri Mar 24 2017 19:49:28 for Trade App by
+    <li class="footer">Generated on Sat Mar 25 2017 11:13:11 for Trade App by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

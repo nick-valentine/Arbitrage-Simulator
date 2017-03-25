@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cities',['CITIES',['../classTile.html#a44ff0cf0c691f207100dc75d953e3cf9a83b409c87be7ae9c4d871ed057bdb4c6',1,'Tile']]]
+  ['authenticating',['AUTHENTICATING',['../classServerSession.html#a2be6b76c788abd809e08904b3e50037fa43354471e49721e9ed077f0ff3fdb31a',1,'ServerSession']]]
 ];

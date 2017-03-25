@@ -18,6 +18,7 @@ var searchData=
   ['getposx',['getPosX',['../classCity.html#a94ad8c13a80d2423529a5896fce7b816',1,'City']]],
   ['getposy',['getPosY',['../classCity.html#a63c2bcda2430ecca0ddb4f63b0ab2d31',1,'City']]],
   ['getraw',['getRaw',['../classNoiseFunc.html#ae1ff84e5317b8a79af66e11e1f9c16d2',1,'NoiseFunc']]],
+  ['getstate',['getState',['../classServerSession.html#adcae3128a94d8addd2bb2d108ac55dbf',1,'ServerSession']]],
   ['getstringoption',['getStringOption',['../classConfigLoader.html#a162bb553780887f9c73861c39fb19e90',1,'ConfigLoader']]],
   ['gettype',['getType',['../classTile.html#a7981f0d1f55e0e6e72ab4e77796de847',1,'Tile']]],
   ['getversion',['getVersion',['../classConfigLoader.html#a16592ceeebe506f6a501bdc4cf76ef97',1,'ConfigLoader']]],

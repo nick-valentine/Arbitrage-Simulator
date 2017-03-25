@@ -7,5 +7,5 @@
 <area shape="rect" id="node8" href="$classConfigLoader.html#afaece3ad25b7221017affe9566e46af7" title="ConfigLoader::load" alt="" coords="347,157,477,184"/>
 <area shape="rect" id="node5" href="$classConfigLoader.html#a8d086e4fc43dbbf3ea03b25e7808d52d" title="ConfigLoader::mutateOption" alt="" coords="795,5,980,32"/>
 <area shape="rect" id="node6" href="$classConfigLoader.html#a75640e185ea0090519fce7df634cc48a" title="ConfigLoader::save" alt="" coords="820,56,955,83"/>
-<area shape="rect" id="node10" href="$classServer.html#a452594d15d1943b0be0569475d4375ec" title="Server::cleanup" alt="" coords="355,208,469,235"/>
+<area shape="rect" id="node10" href="$classServer.html#a0b609eb0fc5082c2cd086446ae7342d5" title="Server::cleanupSessions" alt="" coords="329,208,495,235"/>
 </map>

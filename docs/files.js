@@ -47,6 +47,10 @@ var files =
     [ "Server.hpp", "Server_8hpp.html", [
       [ "Server", "classServer.html", "classServer" ]
     ] ],
+    [ "ServerSession.cpp", "ServerSession_8cpp.html", null ],
+    [ "ServerSession.hpp", "ServerSession_8hpp.html", [
+      [ "ServerSession", "classServerSession.html", "classServerSession" ]
+    ] ],
     [ "String.cpp", "String_8cpp.html", null ],
     [ "String.hpp", "String_8hpp.html", "String_8hpp" ],
     [ "Tile.cpp", "Tile_8cpp.html", null ],

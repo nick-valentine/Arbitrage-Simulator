@@ -14,6 +14,7 @@ var hierarchy =
     [ "NoiseFunc", "classNoiseFunc.html", null ],
     [ "Screen", "classScreen.html", null ],
     [ "Server", "classServer.html", null ],
+    [ "ServerSession", "classServerSession.html", null ],
     [ "Screen::TextElement", "structScreen_1_1TextElement.html", null ],
     [ "Tile::TileType", "structTile_1_1TileType.html", null ],
     [ "World", "classWorld.html", null ]

@@ -7,5 +7,5 @@ var searchData=
   ['elevationnoisespread',['elevationNoiseSpread',['../classWorld.html#a8a5c19085cdf2a499e6497c8bbb2aac8',1,'World']]],
   ['elevationskewnoise',['elevationSkewNoise',['../classWorld.html#ae97ed5c4852491cc91e2fbb1e165e8f1',1,'World']]],
   ['elevationskewnoisespread',['elevationSkewNoiseSpread',['../classWorld.html#ab29028a5114a84b1d2c2e28eafcc769d',1,'World']]],
-  ['error',['ERROR',['../classServer.html#a7be0226f0472c4acaf51c931be84b1dba345dd76fa240f15996a41dc88839e44a',1,'Server']]]
+  ['error',['ERROR',['../classServerSession.html#ae34485de6117ea26f500189ae3499114afab5ceef0e493b25fa0fe717ac7c293c',1,'ServerSession']]]
 ];

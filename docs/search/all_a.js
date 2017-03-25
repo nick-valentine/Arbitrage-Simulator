@@ -1,7 +1,6 @@
 var searchData=
 [
   ['main',['main',['../game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;game.cpp'],['../server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;server.cpp']]],
-  ['managesession',['manageSession',['../classServer.html#a218dd53e9d0627964860bd9e42c7648a',1,'Server']]],
   ['map',['map',['../classWorldChunk.html#a0334bbf1ca1455571d621f40cb67f4afa731b39a49e00e1f2c2529d3f30e33553',1,'WorldChunk']]],
   ['mapmarker',['MapMarker',['../classWorldChunk.html#abdc90ec149a6094b9795c717c31de668',1,'WorldChunk']]],
   ['max_5fcities_5fper_5fchunk',['max_cities_per_chunk',['../classWorldChunk.html#aecba311a0f66a680df73bb21406119d0',1,'WorldChunk']]],

@@ -13,7 +13,7 @@ playGame: game
 playServer: server
 	./server
 	
-docs:
+docs: all
 	doxygen doxyfile
 
 makeObjFileStructure:
