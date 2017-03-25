@@ -11,6 +11,7 @@
 #include <boost/lexical_cast.hpp>
 
 #include "Server.hpp"
+#include "ServerSession.hpp"
 #include "Camera.hpp"
 #include "ConfigLoader.hpp"
 #include "GameObjects/City.hpp"

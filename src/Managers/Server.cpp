@@ -5,16 +5,19 @@ const std::string Server::defaultWorldName = "world";
 
 const std::string Server::configPortNumberKey = "server_port";
 const int Server::defaultPortNumber = 9797;
-
-std::map<int, std::string (*)(Server &myself, std::string msg)> Server::requestMap = 
-    {
-        {Server::VERSION_CHECK, VersionCheckHandler},
-        {Server::LOGIN, LoginHandler}
-    }; 
+const int Server::cleanupInterval = 10; //seconds
 
 Server::Server()
 {
 
+}
+
+Server::~Server()
+{
+    auto i = std::begin(this->sessions);
+    while (i != std::end(this->sessions)) {
+        delete *i;
+    }
 }
 
 int Server::setup()
@@ -31,16 +34,18 @@ int Server::run()
     tcp::acceptor acceptor(io_service, tcp::endpoint(tcp::v4(), this->portNumber));
     while (true) {
         Connection::socket_ptr sock(new tcp::socket(io_service));
-        int connectionIndex = this->connections.size();
-        this->connections.push_back(Connection());
-        this->connections[connectionIndex].bind(sock);
-        acceptor.accept(*this->connections[connectionIndex].get());
-        if (threads.size() < 32) {
-            int threadIndex = this->threads.size();
-            this->threads.push_back(std::thread(&Server::manageSession, this, connectionIndex, threadIndex));
+        Connection conn;
+        conn.bind(sock);
+
+        acceptor.accept(*conn.get());
+        if (this->sessions.size() < 32) {
+            ServerSession *temp = new ServerSession(conn);
+            temp->init(this->version);
+            temp->run();
+            this->sessions.push_back(temp);
         } else {
-            std::cerr<<threads.size()<<" connections open already, connection denied"<<std::endl;
-            this->connections[connectionIndex].close();
+            std::cerr<<this->sessions.size()<<" connections open already, connection denied"<<std::endl;
+            conn.close();
         }
     }
     return 0;
@@ -48,7 +53,7 @@ int Server::run()
 
 void Server::initialize()
 {
-    this->cleaner = std::thread(&Server::cleanup, this);
+    this->cleaner = std::thread(&Server::cleanupSessions, this);
 }
 
 void Server::configure()
@@ -70,80 +75,16 @@ void Server::configure()
     );
 }
 
-void Server::manageSession(int connectionIndex, int threadIndex)
+void Server::cleanupSessions()
 {
-    while (true) {
-        try {
-            std::string message = this->connections[connectionIndex].read();
-            std::cout<<message<<std::endl;
-            std::stringstream ss;
-            int request_type;
-        
-            ss.str(message);
-            ss>>request_type;
-            std::string response = boost::lexical_cast<std::string>(ERROR) + " invalid message";
-            if (this->requestMap.find(request_type) != this->requestMap.end()) {
-                response = this->requestMap[request_type](*this, message);
-            }
-            
-            std::cout<<response;
-            this->connections[connectionIndex].write(response);
-        
-        } catch(std::exception& e) {
-            std::cerr<<e.what()<<std::endl;
-            this->connections[connectionIndex].close();
-            this->connections[connectionIndex] = this->connections[this->connections.size() - 1];
-            this->connections.pop_back();
-            this->closed.push_back(threadIndex);
-            return;
-        }
-    }
-}
-
-void Server::cleanup()
-{
-    while (true) {
-        std::unique_lock<std::mutex> lock(closedMutex, std::try_to_lock);
-        if(lock.owns_lock()) {
-            for (int i = 0; i < this->closed.size(); ++i) {
-                this->threads[this->closed[i]] = std::thread(std::move(this->threads[this->threads.size() - 1]));
-                this->threads.pop_back();
-            }
-            this->closed.clear();
+    auto i = std::begin(this->sessions);
+    while (i != std::end(this->sessions)) {
+        if ((*i)->getState() == ServerSession::DISCONNECTED) {
+            delete *i;
+            i = this->sessions.erase(i);
         } else {
-            std::cerr<<"Lock on cleanup threads failed.";
+            ++i;
         }
-        std::this_thread::sleep_for(std::chrono::seconds(5));
     }
-}
-
-std::string Server::VersionCheckHandler(Server &myself, std::string msg)
-{
-    int type;
-    std::string version;
-    std::stringstream ss;
-    ss.str(msg);
-    ss>>type>>version;
-    std::cout<<"Client request version check ";
-    if (myself.version == version) {
-        std::cout<<"version OK\n";
-        return boost::lexical_cast<std::string>(Server::VERSION_CHECK_OK) + "\n";
-    } else {
-        std::cout<<"version INCOMPATIBLE\n";
-        return boost::lexical_cast<std::string>(Server::VERSION_INCOMPATIBLE) + 
-            " " + 
-            myself.version + 
-            "\n"
-        ;
-    }
-}
-
-std::string Server::LoginHandler(Server &myself, std::string msg)
-{
-    int type;
-    std::string username, password;
-    std::stringstream ss;
-    ss.str(msg);
-    ss>>type>>username>>password;
-    return "Welcome, " + username;
+    std::this_thread::sleep_for(std::chrono::seconds(Server::cleanupInterval));
 }

@@ -113,7 +113,7 @@ void Game::configure()
 
 std::string Game::checkVersion()
 {
-    std::string message = boost::lexical_cast<std::string>(Server::VERSION_CHECK) + " " + this->version + "\n";
+    std::string message = boost::lexical_cast<std::string>(ServerSession::VERSION_CHECK) + " " + this->version + "\n";
     std::cerr<<message;
     this->connection.write(message);
     std::string response = this->connection.read();
@@ -122,9 +122,9 @@ std::string Game::checkVersion()
     ss.str(response);
     int responseType;
     ss>>responseType;
-    if (responseType == Server::VERSION_CHECK_OK) {
+    if (responseType == ServerSession::VERSION_CHECK_OK) {
         return "";
-    } else if (responseType == Server::VERSION_INCOMPATIBLE) {
+    } else if (responseType == ServerSession::VERSION_INCOMPATIBLE) {
         std::string serverVersion;
         ss>>serverVersion;
         return serverVersion;
@@ -133,7 +133,7 @@ std::string Game::checkVersion()
 
 int Game::login()
 {
-    std::string message = boost::lexical_cast<std::string>(Server::LOGIN) + " Username Password\n";
+    std::string message = boost::lexical_cast<std::string>(ServerSession::LOGIN) + " Username Password\n";
     std::cerr<<message;
     this->connection.write(message);
 }
