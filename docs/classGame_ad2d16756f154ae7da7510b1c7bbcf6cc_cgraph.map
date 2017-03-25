@@ -1,0 +1,12 @@
+<map id="Game::configure" name="Game::configure">
+<area shape="rect" id="node2" href="$classWorldChunk.html#ae67bd7d234bca44740a3418b4a00e64f" title="WorldChunk::configure" alt="" coords="179,5,334,32"/>
+<area shape="rect" id="node3" href="$classConfigLoader.html#a99778c30f3d79e84995d9e9c7245b089" title="ConfigLoader::getIntOption" alt="" coords="389,81,568,108"/>
+<area shape="rect" id="node4" href="$classConfigLoader.html#a162bb553780887f9c73861c39fb19e90" title="ConfigLoader::getStringOption" alt="" coords="616,120,813,147"/>
+<area shape="rect" id="node7" href="$classWorld.html#adf1ca48fa67ae65fcfddf24bddcaf1c6" title="World::configure" alt="" coords="198,107,315,133"/>
+<area shape="rect" id="node8" href="$classConfigLoader.html#a16592ceeebe506f6a501bdc4cf76ef97" title="ConfigLoader::getVersion" alt="" coords="172,208,341,235"/>
+<area shape="rect" id="node9" href="$classConfigLoader.html#afaece3ad25b7221017affe9566e46af7" title="ConfigLoader::load" alt="" coords="191,259,322,285"/>
+<area shape="rect" id="node10" href="$classCity.html#a404709b7000a90155400c0ea43936ac9" title="Load City Names. " alt="" coords="181,309,333,336"/>
+<area shape="rect" id="node11" href="$classWorldChunk.html#a538965747758546c9097245ec9bfe930" title="WorldChunk::setMaxYX" alt="" coords="175,360,338,387"/>
+<area shape="rect" id="node5" href="$classConfigLoader.html#a8d086e4fc43dbbf3ea03b25e7808d52d" title="ConfigLoader::mutateOption" alt="" coords="861,95,1047,121"/>
+<area shape="rect" id="node6" href="$classConfigLoader.html#a75640e185ea0090519fce7df634cc48a" title="ConfigLoader::save" alt="" coords="887,145,1021,172"/>
+</map>

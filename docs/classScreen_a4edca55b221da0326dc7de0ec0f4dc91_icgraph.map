@@ -1,0 +1,7 @@
+<map id="Screen::getHeight" name="Screen::getHeight">
+<area shape="rect" id="node2" href="$classPlayer.html#a1e1e3c70cc431b185c89b5e00d3b95b4" title="Player::draw" alt="" coords="198,5,293,32"/>
+<area shape="rect" id="node6" href="$classWorldChunk.html#aab153d42421b3a7f156dc84ee8a20ba0" title="WorldChunk::draw" alt="" coords="180,56,311,83"/>
+<area shape="rect" id="node3" href="$classCamera.html#a6a9003a2b3e68b4330225f8d74215d26" title="Render the world and player onto the screen. " alt="" coords="359,5,471,32"/>
+<area shape="rect" id="node4" href="$classGame.html#a99fb161fbbe87d25a8b73265a0611e58" title="Game::run" alt="" coords="519,5,601,32"/>
+<area shape="rect" id="node5" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="649,5,700,32"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Connection::write" name="Connection::write">
+<area shape="rect" id="node2" href="$classGame.html#ab07ed0ff4045e2303ea97499d9642fc8" title="Game::checkVersion" alt="" coords="177,5,321,32"/>
+<area shape="rect" id="node5" href="$classGame.html#a3c62293bfbda070be4cceb148cd33dd5" title="Game::login" alt="" coords="203,56,295,83"/>
+<area shape="rect" id="node3" href="$classGame.html#a99fb161fbbe87d25a8b73265a0611e58" title="Game::run" alt="" coords="369,5,452,32"/>
+<area shape="rect" id="node4" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="500,5,551,32"/>
+</map>

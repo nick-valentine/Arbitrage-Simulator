@@ -2,6 +2,8 @@ CC=g++ -std=c++11 -ggdb
 CFLAGS=-c -Iinc
 LIBS=-lncurses -lboost_system -lboost_thread -lpthread
 
+docs:
+	doxygen doxyfile
 
 all: main
 
