@@ -2,6 +2,7 @@
 <area shape="rect" id="node2" href="$classGame.html#ab07ed0ff4045e2303ea97499d9642fc8" title="Game::checkVersion" alt="" coords="199,5,343,32"/>
 <area shape="rect" id="node5" href="$classGame.html#a3c62293bfbda070be4cceb148cd33dd5" title="Game::login" alt="" coords="225,56,317,83"/>
 <area shape="rect" id="node6" href="$classServerSession.html#adc44562be2fb27c3cd5242503fe60bf9" title="ServerSession::sessionLoop" alt="" coords="177,107,365,133"/>
+<area shape="rect" id="node10" href="$classServerSession.html#a66d967ee12c83767d852b3bfa2fc94d5" title="Wrapper for connection write. " alt="" coords="200,157,343,184"/>
 <area shape="rect" id="node3" href="$classGame.html#a99fb161fbbe87d25a8b73265a0611e58" title="Game::run" alt="" coords="439,5,521,32"/>
 <area shape="rect" id="node4" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="613,5,663,32"/>
 <area shape="rect" id="node7" href="$classServerSession.html#a9618739dcf123159134c03418f5d43d5" title="Launch thread to manage this session. " alt="" coords="413,107,547,133"/>

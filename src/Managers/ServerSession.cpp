@@ -29,6 +29,11 @@ int ServerSession::run()
     this->thread = std::thread(&ServerSession::sessionLoop, this);
 }
 
+bool ServerSession::write(std::string msg)
+{
+    return this->conn.write(msg);
+}
+
 void ServerSession::setConnection(Connection conn)
 {
     this->conn = conn;
