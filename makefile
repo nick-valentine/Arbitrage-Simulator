@@ -2,8 +2,6 @@ CC=g++ -std=c++11 -ggdb
 CFLAGS=-c -Iinc
 LIBS=-lncurses -lboost_system -lboost_thread -lpthread
 
-docs:
-	doxygen doxyfile
 
 all: main
 
@@ -14,6 +12,9 @@ playGame: game
 
 playServer: server
 	./server
+	
+docs:
+	doxygen doxyfile
 
 makeObjFileStructure:
 	mkdir obj/GameObjects
