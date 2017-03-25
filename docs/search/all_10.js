@@ -2,7 +2,7 @@ var searchData=
 [
   ['trade_20app',['Trade App',['../md_README.html',1,'']]],
   ['textelement',['TextElement',['../structScreen_1_1TextElement.html',1,'Screen']]],
-  ['threads',['threads',['../classServer.html#a13f0557975201d7f56a8bc6afc89806f',1,'Server']]],
+  ['thread',['thread',['../classServerSession.html#aba7ba3719385abf86d91e6595866d4f2',1,'ServerSession']]],
   ['tile',['Tile',['../classTile.html',1,'Tile'],['../classTile.html#aeeb5593bb6b75aae2edfcccbc84ab378',1,'Tile::Tile()'],['../classTile.html#a1f6d3e7fcfb4fe7ee51efbf9c8b8280e',1,'Tile::Tile(int type, int elevation)'],['../classTile.html#a4bea5ec31700bc0c45de6897fad67f30',1,'Tile::Tile(std::stringstream *ss)'],['../structTile_1_1TileType.html#a22145646a563c1c4afd56889e6f16421',1,'Tile::TileType::tile()']]],
   ['tile_2ecpp',['Tile.cpp',['../Tile_8cpp.html',1,'']]],
   ['tile_2ehpp',['Tile.hpp',['../Tile_8hpp.html',1,'']]],

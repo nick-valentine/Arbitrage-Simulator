@@ -106,7 +106,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_s"><span>s</span></a></li>
       <li><a href="#index_t"><span>t</span></a></li>
       <li><a href="#index_v"><span>v</span></a></li>
-      <li class="current"><a href="#index_w"><span>w</span></a></li>
+      <li><a href="#index_w"><span>w</span></a></li>
+      <li class="current"><a href="#index_0x7e"><span>~</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -168,8 +169,8 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>City()
 : <a class="el" href="classCity.html#a1b1f549430f0a7ecd0ec7b1605415193">City</a>
 </li>
-<li>cleanup()
-: <a class="el" href="classServer.html#a452594d15d1943b0be0569475d4375ec">Server</a>
+<li>cleanupSessions()
+: <a class="el" href="classServer.html#a0b609eb0fc5082c2cd086446ae7342d5">Server</a>
 </li>
 <li>clear()
 : <a class="el" href="classScreen.html#a35e74266b2a04e37b354ceff7a5f1031">Screen</a>
@@ -193,7 +194,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classConnection.html#a83fb03cd6e0b4adf5b6c794e4e05fdb4">Connection</a>
 </li>
 <li>Connection()
-: <a class="el" href="classConnection.html#abd9a704d8c1a3a39d277a18129f77cd7">Connection</a>
+: <a class="el" href="classConnection.html#a85402f2acb1c3caacc065bc3391747bf">Connection</a>
 </li>
 <li>convertToCity()
 : <a class="el" href="classTile.html#ad18dc829e0b9c7e6a9c52272c902704e">Tile</a>
@@ -289,6 +290,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>getRaw()
 : <a class="el" href="classNoiseFunc.html#ae1ff84e5317b8a79af66e11e1f9c16d2">NoiseFunc</a>
 </li>
+<li>getState()
+: <a class="el" href="classServerSession.html#adcae3128a94d8addd2bb2d108ac55dbf">ServerSession</a>
+</li>
 <li>getStringOption()
 : <a class="el" href="classConfigLoader.html#a162bb553780887f9c73861c39fb19e90">ConfigLoader</a>
 </li>
@@ -321,7 +325,8 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 <h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
 <li>init()
-: <a class="el" href="classTile.html#a96ce55d5fcb4b12880531af2138ba6b2">Tile</a>
+: <a class="el" href="classServerSession.html#aa81769fe6e7a27a16f2c858228e8ec38">ServerSession</a>
+, <a class="el" href="classTile.html#a96ce55d5fcb4b12880531af2138ba6b2">Tile</a>
 , <a class="el" href="classWorld.html#a0150607a49c2400d5c848159dd02d533">World</a>
 </li>
 <li>initialize()
@@ -347,15 +352,12 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classGame.html#a3c62293bfbda070be4cceb148cd33dd5">Game</a>
 </li>
 <li>LoginHandler()
-: <a class="el" href="classServer.html#a277746d64ab857d109e256c2cec9da45">Server</a>
+: <a class="el" href="classServerSession.html#a706e60aef6bac44a83589911c454c7fd">ServerSession</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
-<li>manageSession()
-: <a class="el" href="classServer.html#a218dd53e9d0627964860bd9e42c7648a">Server</a>
-</li>
 <li>move()
 : <a class="el" href="classCamera.html#a7c69021895c95c3b27f97e8c295b3990">Camera</a>
 , <a class="el" href="classPlayer.html#a955e68fc1da6565d43649b27a0ecabee">Player</a>
@@ -378,7 +380,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classNoiseFunc.html#a6675a19eec4a812f3bac096cceae51a0">NoiseFunc</a>
 </li>
 <li>NoiseFunc()
-: <a class="el" href="classNoiseFunc.html#a1a3da776937224be2b609defeb31f19c">NoiseFunc</a>
+: <a class="el" href="classNoiseFunc.html#a4855969958b5ebdc250fca60df5266ad">NoiseFunc</a>
 </li>
 </ul>
 
@@ -420,6 +422,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>run()
 : <a class="el" href="classGame.html#a99fb161fbbe87d25a8b73265a0611e58">Game</a>
 , <a class="el" href="classServer.html#a30362b937b125d27916cf595bfc4c1a7">Server</a>
+, <a class="el" href="classServerSession.html#a9618739dcf123159134c03418f5d43d5">ServerSession</a>
 </li>
 </ul>
 
@@ -433,6 +436,15 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </li>
 <li>Server()
 : <a class="el" href="classServer.html#ad5ec9462b520e59f7ea831e157ee5e59">Server</a>
+</li>
+<li>ServerSession()
+: <a class="el" href="classServerSession.html#a301bd6fbd2e17b91b8b2297c5b5cf003">ServerSession</a>
+</li>
+<li>sessionLoop()
+: <a class="el" href="classServerSession.html#adc44562be2fb27c3cd5242503fe60bf9">ServerSession</a>
+</li>
+<li>setConnection()
+: <a class="el" href="classServerSession.html#afd7e4db5986abe710dfbae832f119710">ServerSession</a>
 </li>
 <li>setCurrent()
 : <a class="el" href="classColorPallete.html#af03dece923247d3abd4f6ecbf344474b">ColorPallete</a>
@@ -486,7 +498,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 <h3><a class="anchor" id="index_v"></a>- v -</h3><ul>
 <li>VersionCheckHandler()
-: <a class="el" href="classServer.html#a0b9d47df5266abca931e559207d54275">Server</a>
+: <a class="el" href="classServerSession.html#ae938a65121023b3ebbac30e507888f0d">ServerSession</a>
 </li>
 </ul>
 
@@ -500,6 +512,14 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </li>
 <li>write()
 : <a class="el" href="classConnection.html#a6fff1bda7a9e0dc4997792ac29ce1af1">Connection</a>
+, <a class="el" href="classServerSession.html#a66d967ee12c83767d852b3bfa2fc94d5">ServerSession</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_0x7e"></a>- ~ -</h3><ul>
+<li>~Server()
+: <a class="el" href="classServer.html#a4b3aa2579cb1c8cd1d069582c14d0fa6">Server</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -507,7 +527,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Mar 24 2017 19:49:28 for Trade App by
+    <li class="footer">Generated on Sat Mar 25 2017 11:13:11 for Trade App by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

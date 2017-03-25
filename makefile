@@ -13,7 +13,7 @@ playGame: game
 playServer: server
 	./server
 	
-docs:
+docs: all
 	doxygen doxyfile
 
 makeObjFileStructure:
@@ -30,7 +30,7 @@ clean: rmObjFiles makeObjFileStructure
 
 rebuild: clean main
 
-server: server.o Managers/Server.o ConfigLoader.o Screen.o Camera.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o GameObjects/Player.o ColorPallete.o WorldGen/NoiseFunc.o Helpers/String.o Networking/Connection.o
+server: server.o Managers/Server.o Managers/ServerSession.o ConfigLoader.o Screen.o Camera.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o GameObjects/Player.o ColorPallete.o WorldGen/NoiseFunc.o Helpers/String.o Networking/Connection.o 
 	$(CC) \
 		obj/Camera.o \
 		obj/ColorPallete.o \
@@ -41,6 +41,7 @@ server: server.o Managers/Server.o ConfigLoader.o Screen.o Camera.o GameObjects/
 		obj/GameObjects/World.o \
 		obj/GameObjects/WorldChunk.o \
 		obj/Managers/Server.o \
+		obj/Managers/ServerSession.o \
 		obj/Screen.o \
 		obj/WorldGen/NoiseFunc.o \
 		obj/server.o \
@@ -75,8 +76,11 @@ server.o: src/server.cpp inc/GameObjects/City.hpp inc/GameObjects/WorldChunk.hpp
 Managers/Game.o: src/Managers/Game.cpp inc/Managers/Game.hpp inc/GameObjects/World.hpp inc/Networking/Connection.hpp
 	$(CC) $(CFLAGS) src/Managers/Game.cpp -o obj/Managers/Game.o
 
-Managers/Server.o: src/Managers/Server.cpp inc/Managers/Server.hpp
+Managers/Server.o: src/Managers/Server.cpp inc/Managers/Server.hpp inc/Managers/ServerSession.hpp
 	$(CC) $(CFLAGS) src/Managers/Server.cpp -o obj/Managers/Server.o
+
+Managers/ServerSession.o: src/Managers/ServerSession.cpp inc/Managers/ServerSession.hpp
+	$(CC) $(CFLAGS) src/Managers/ServerSession.cpp -o obj/Managers/ServerSession.o
 
 ConfigLoader.o: src/ConfigLoader.cpp inc/ConfigLoader.hpp
 	$(CC) $(CFLAGS) src/ConfigLoader.cpp -o obj/ConfigLoader.o

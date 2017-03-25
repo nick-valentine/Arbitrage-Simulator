@@ -1,0 +1,6 @@
+<map id="Connection::close" name="Connection::close">
+<area shape="rect" id="node2" href="$classServer.html#a30362b937b125d27916cf595bfc4c1a7" title="Server::run" alt="" coords="597,5,684,32"/>
+<area shape="rect" id="node4" href="$classServerSession.html#adc44562be2fb27c3cd5242503fe60bf9" title="ServerSession::sessionLoop" alt="" coords="180,31,368,57"/>
+<area shape="rect" id="node3" href="$server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="732,5,783,32"/>
+<area shape="rect" id="node5" href="$classServerSession.html#a9618739dcf123159134c03418f5d43d5" title="Launch thread to manage this session. " alt="" coords="416,31,549,57"/>
+</map>

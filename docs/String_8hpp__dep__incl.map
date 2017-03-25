@@ -1,9 +1,3 @@
 <map id="String.hpp" name="String.hpp">
-<area shape="rect" id="node2" href="$Server_8hpp.html" title="Server.hpp" alt="" coords="162,80,247,107"/>
-<area shape="rect" id="node8" href="$String_8cpp.html" title="String.cpp" alt="" coords="272,80,353,107"/>
-<area shape="rect" id="node3" href="$Game_8hpp.html" title="Game.hpp" alt="" coords="55,155,138,181"/>
-<area shape="rect" id="node6" href="$Server_8cpp.html" title="Server.cpp" alt="" coords="162,155,247,181"/>
-<area shape="rect" id="node7" href="$server_8cpp.html" title="server.cpp" alt="" coords="271,155,354,181"/>
-<area shape="rect" id="node4" href="$game_8cpp.html" title="game.cpp" alt="" coords="5,229,84,256"/>
-<area shape="rect" id="node5" href="$Game_8cpp.html" title="Game.cpp" alt="" coords="109,229,191,256"/>
+<area shape="rect" id="node2" href="$String_8cpp.html" title="String.cpp" alt="" coords="5,80,87,107"/>
 </map>

@@ -7,11 +7,11 @@ var searchData=
   ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
   ['render',['render',['../classCamera.html#a6a9003a2b3e68b4330225f8d74215d26',1,'Camera::render()'],['../classScreen.html#a819aa32ece0c9bf2b173e747d8713c0b',1,'Screen::render()']]],
   ['representation',['representation',['../classPlayer.html#a0c64cdfa9162319e7f17f75554e97484',1,'Player']]],
-  ['request_5fcharacter',['REQUEST_CHARACTER',['../classServer.html#a7be0226f0472c4acaf51c931be84b1dba27dd46eca01e52011a334169fa53ce9e',1,'Server']]],
-  ['request_5fchunk',['REQUEST_CHUNK',['../classServer.html#a7be0226f0472c4acaf51c931be84b1dba73d581a143b50fa6d3dcee66bc577779',1,'Server']]],
-  ['request_5fcity',['REQUEST_CITY',['../classServer.html#a7be0226f0472c4acaf51c931be84b1dba67c6e59583ca252db55108d4c112a030',1,'Server']]],
-  ['request_5fworld',['REQUEST_WORLD',['../classServer.html#a7be0226f0472c4acaf51c931be84b1dba5ee0e36aacee0871ae8be383e146eee2',1,'Server']]],
-  ['requestmap',['requestMap',['../classServer.html#a4af29bf5c822834ed454bf7ab34311e6',1,'Server']]],
-  ['requst_5ftype',['REQUST_TYPE',['../classServer.html#a7be0226f0472c4acaf51c931be84b1db',1,'Server']]],
-  ['run',['run',['../classGame.html#a99fb161fbbe87d25a8b73265a0611e58',1,'Game::run()'],['../classServer.html#a30362b937b125d27916cf595bfc4c1a7',1,'Server::run()']]]
+  ['request_5fcharacter',['REQUEST_CHARACTER',['../classServerSession.html#ae34485de6117ea26f500189ae3499114aca12ab0260beab31ed6586f02af30ace',1,'ServerSession']]],
+  ['request_5fchunk',['REQUEST_CHUNK',['../classServerSession.html#ae34485de6117ea26f500189ae3499114a9857b3fe0d5f1f2d10011f62c6ff89e7',1,'ServerSession']]],
+  ['request_5fcity',['REQUEST_CITY',['../classServerSession.html#ae34485de6117ea26f500189ae3499114a3ce4124d88ecc7e539aae634e349b678',1,'ServerSession']]],
+  ['request_5fworld',['REQUEST_WORLD',['../classServerSession.html#ae34485de6117ea26f500189ae3499114a58de680e8f3ffeabc2420b94782e98c9',1,'ServerSession']]],
+  ['requestmap',['requestMap',['../classServerSession.html#ad81b2ea9cf9183be8f74623f14c12d37',1,'ServerSession']]],
+  ['requst_5ftype',['REQUST_TYPE',['../classServerSession.html#ae34485de6117ea26f500189ae3499114',1,'ServerSession']]],
+  ['run',['run',['../classGame.html#a99fb161fbbe87d25a8b73265a0611e58',1,'Game::run()'],['../classServer.html#a30362b937b125d27916cf595bfc4c1a7',1,'Server::run()'],['../classServerSession.html#a9618739dcf123159134c03418f5d43d5',1,'ServerSession::run()']]]
 ];

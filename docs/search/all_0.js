@@ -6,5 +6,6 @@ var searchData=
   ['addgridgradient',['addGridGradient',['../classNoiseFunc.html#a8605b20ed7a02c74cef4a77379725785',1,'NoiseFunc']]],
   ['allowedcitycount',['allowedCityCount',['../classTile.html#a963c997f44256bf68102beeb9e2f1d91',1,'Tile']]],
   ['allowedspawncount',['allowedSpawnCount',['../classTile.html#ac630908dcd40130cb5cf4e17a01d7094',1,'Tile']]],
-  ['allowedspawns',['AllowedSpawns',['../classTile.html#a1262e822c498e150a0868144941340bd',1,'Tile']]]
+  ['allowedspawns',['AllowedSpawns',['../classTile.html#a1262e822c498e150a0868144941340bd',1,'Tile']]],
+  ['authenticating',['AUTHENTICATING',['../classServerSession.html#a2be6b76c788abd809e08904b3e50037fa43354471e49721e9ed077f0ff3fdb31a',1,'ServerSession']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['plains',['PLAINS',['../classTile.html#a23e11e1d5997c76090e18f7a7238aa59a176d5e58db8c0cf9c5016ad21fef3978',1,'Tile']]]
+  ['object',['object',['../classWorldChunk.html#a0334bbf1ca1455571d621f40cb67f4afa70fcc3a31b0d281267a10e5fcc9dc638',1,'WorldChunk']]]
 ];

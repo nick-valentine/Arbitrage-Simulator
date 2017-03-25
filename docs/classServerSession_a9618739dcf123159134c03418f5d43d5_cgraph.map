@@ -1,0 +1,6 @@
+<map id="ServerSession::run" name="ServerSession::run">
+<area shape="rect" id="node2" href="$classServerSession.html#adc44562be2fb27c3cd5242503fe60bf9" title="ServerSession::sessionLoop" alt="" coords="187,56,375,83"/>
+<area shape="rect" id="node3" href="$classConnection.html#a849095cd9dda6388c05fe4896b380530" title="Blocking read on this socket. " alt="" coords="425,5,547,32"/>
+<area shape="rect" id="node4" href="$classConnection.html#a6fff1bda7a9e0dc4997792ac29ce1af1" title="Write msg to this socket. " alt="" coords="424,56,548,83"/>
+<area shape="rect" id="node5" href="$classConnection.html#aea9f9d78e2b92747d4e4575ccb97361e" title="Connection::close" alt="" coords="423,107,549,133"/>
+</map>
