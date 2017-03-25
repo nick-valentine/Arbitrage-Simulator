@@ -15,3 +15,7 @@ Dependencies
 libboost\*
 
 ncurses
+
+Documentation
+-------------
+https://nick-valentine.github.io/TradeApp/index.html
