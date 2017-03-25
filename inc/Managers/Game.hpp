@@ -22,6 +22,10 @@
 
 using boost::asio::ip::tcp;
 
+/**
+ * Manager for Game State.
+ * Main interface for players playing the game.
+ */
 class Game
 {
 public:

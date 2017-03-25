@@ -3,6 +3,11 @@
 
 #include <curses.h>
 
+/**
+ * CollorPallete.
+ * Holder for color pairs to facilitate that different parts of the game might
+ * need different color pairs.
+ */
 class ColorPallete 
 {
 public:

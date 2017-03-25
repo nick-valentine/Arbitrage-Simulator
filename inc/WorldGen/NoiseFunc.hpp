@@ -6,6 +6,9 @@
 #include <utility>
 #include <sstream>
 
+/**
+ * Noise Function Based on Perlin Noise.
+ */
 class NoiseFunc
 {
 public:
@@ -16,7 +19,20 @@ public:
     void fromStringStream(std::stringstream *ss);
     void toStringStream(std::stringstream *ss);
 
+    /**
+     * Get the return of this noise function not modified by gridPeriod.
+     *
+     * @param  float x x position in grid to get noise at
+     * @param  float y y position in grid to get noise at
+     */
     float getRaw(float x, float y);
+
+    /**
+     * Get the return of this noise function modified by gridPeriod.
+     *
+     * @param  float x x position in grid to get noise at
+     * @param  float y y position in grid to get noise at
+     */
     float get(int x, int y);
 private:
     static const unsigned int rand_steps = 2048; 

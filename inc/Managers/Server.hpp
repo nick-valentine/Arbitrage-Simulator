@@ -19,6 +19,10 @@
 
 using boost::asio::ip::tcp;
 
+/**
+ * Server Manager.
+ * Dispatcher and manager for all server sessions. Owns and maintains world state.
+ */
 class Server
 {
 public:
@@ -26,6 +30,11 @@ public:
     int setup();
     int run();
 
+    /**
+     * Request Type.
+     * An enumeration of all possible requests a client can make, or responses
+     * a server can return.
+     */
     enum REQUST_TYPE {
         ERROR = 0,
         VERSION_CHECK = 1,
@@ -52,6 +61,7 @@ private:
     void manageSession(int connectionIndex, int threadIndex);
 
     World world;
+    //@todo: the current method of managing connections/threads won't work for more than one person.
     std::vector<std::thread> threads;
     std::vector<int> closed;
     std::mutex closedMutex;
@@ -61,11 +71,30 @@ private:
     void cleanup();
 
     /** 
-     * Request Handlers
+     * Request Handlers.
      * All handlers will take a string message and return a string response
      */
     static std::map<int, std::string (*)(Server &myself, std::string msg)> requestMap; 
+
+    /**
+     * Request Handler: Version Check.
+     * Handle a request to check the compatibility of this server and a client.
+     *
+     * @param  Server &myself
+     * @param  std::string msg the message the client sent
+     * @return std::string the response
+     */
     static std::string VersionCheckHandler(Server &myself, std::string msg);
+
+    /**
+     * Request Handler: Login Handler
+     * Check for existing user with same username and password, if match then
+     * this session may use that users character. Otherwise, deny access.
+     *
+     * @param  Server &myself
+     * @param  std::string msg the message the client sent
+     * @return std::string the response
+     */
     static std::string LoginHandler(Server &myself, std::string msg);
 };
 

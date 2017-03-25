@@ -8,6 +8,10 @@
 #include <map>
 #include <utility>
 
+/**
+ * Configuration Loader.
+ * Loads and manages Configuration.
+ */
 class ConfigLoader
 {
 public:
@@ -30,7 +34,9 @@ private:
     static const std::string version_path;
     using c_iter = std::map<std::string, std::string>::const_iterator;
 
-    //map key to value
+    /**
+     * map of key to value
+     */
     static std::map<std::string, std::string> configuration;
 
     static std::string version;
