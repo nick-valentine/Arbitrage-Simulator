@@ -1,0 +1,6 @@
+<map id="World::configure" name="World::configure">
+<area shape="rect" id="node2" href="$classConfigLoader.html#a99778c30f3d79e84995d9e9c7245b089" title="ConfigLoader::getIntOption" alt="" coords="171,31,349,57"/>
+<area shape="rect" id="node3" href="$classConfigLoader.html#a162bb553780887f9c73861c39fb19e90" title="ConfigLoader::getStringOption" alt="" coords="397,31,595,57"/>
+<area shape="rect" id="node4" href="$classConfigLoader.html#a8d086e4fc43dbbf3ea03b25e7808d52d" title="ConfigLoader::mutateOption" alt="" coords="643,5,828,32"/>
+<area shape="rect" id="node5" href="$classConfigLoader.html#a75640e185ea0090519fce7df634cc48a" title="ConfigLoader::save" alt="" coords="668,56,803,83"/>
+</map>

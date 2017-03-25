@@ -12,17 +12,35 @@
 #include "ColorPallete.hpp"
 #include "Screen.hpp"
 
+/**
+ * Tile.
+ * A flyweight style class for managing each world unit. To the end user, these
+ * appear as simple characters on a screen representing a mountain, or a
+ * forest.
+ */
 class Tile : public AbstractGameObject
 {
 public:
     Tile();
     Tile(int type, int elevation);
     Tile(std::stringstream *ss);
+
+    /**
+     * Random Spawn.
+     * Factory function which can take a bias and an elevation, then returns a
+     * tile allowed at that elevation, with the random choosing biased.
+     *
+     * @param  float tileInput bias for the random function
+     * @param  float elevationInput elevation that this tile is to spawn at
+     */
     static Tile randomSpawn(float tileInput = -1.0, float elevationInput = -1.0);
     void fromStringStream(std::stringstream *ss);
     void toStringStream(std::stringstream *ss);
 
-    //generalized tiles that may be spawned randomly
+    /**
+     * Tile Lookup.
+     * Generalized tiles that may be spawned randomly
+     */
     enum TileLookup
     {
         PLAINS = 0,
@@ -34,15 +52,38 @@ public:
         FORESTS = 7
     };
 
-    //specialized tiles that must be set
+    /**
+     * Reserved Tiles.
+     * Specialized tiles that must be set.
+     */
     enum TilesReserved
     {
         CITIES = 4
     };
 
+    /**
+     * Set Pallete.
+     * Set the color pallete for all tiles to be the current one.
+     */
     static void setPallete();
 
+    /**
+     * Convert this tile to a city tile if this tile may contain a city.
+     *
+     * @return bool If this tile was converted to a city.
+     */
     bool convertToCity();
+
+    /**
+     * Draw this tile.
+     *
+     * @param  Screen &screen buffer to draw the tile on to
+     * @param  int top Y coordinate to draw the tile on
+     * @param  int left X coordinate to draw the tile on
+     * @param  bool cull if the player has never seen this tile, do not draw
+     *                      it, If the player has seen this tile, draw it in
+     *                      greyscale.
+     */
     void drawAt(Screen &screen, int top, int left, bool cull);
 
     int getElevation() const;
@@ -77,12 +118,20 @@ private:
 
     static const int AllowedSpawns[allowedSpawnCount];
     static const int TilesWhichMayHaveCities[allowedCityCount];
+
+    /**
+     * Static array of TileType to work as a lookup map, tiles contain the
+     * index of their own type to get all metadata about that type from this
+     * map.
+     */
     static const TileType Tiles[TypeCount]; 
 
     static ColorPallete tilePallete;
     static bool colorPalleteInitialized;
 
-    //index into Tiles 
+    /**
+     * Index into Tiles 
+     */
     int myType;
     int myElevation;
     bool hasBeenVisible;

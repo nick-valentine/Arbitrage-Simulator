@@ -1,0 +1,6 @@
+<map id="AbstractGameObject" name="AbstractGameObject">
+<area shape="rect" id="node2" href="$classCity.html" title="City Game Object. " alt="" coords="5,248,152,560"/>
+<area shape="rect" id="node3" href="$classPlayer.html" title="Player. " alt="" coords="176,292,320,516"/>
+<area shape="rect" id="node4" href="$classTile.html" title="Tile. " alt="" coords="345,197,530,611"/>
+<area shape="rect" id="node5" href="$classWorldChunk.html" title="{WorldChunk\n|&#45; top\l&#45; left\l&#45; cities\l&#45; tiles\l&#45; SpaceConstant\l&#45; CityMarker\l&#45; MapMarker\l&#45; maxViewDistance\l&#45; cullingEnabled\l&#45; configured\l&#45; chunk_height\l&#45; chunk_width\l&#45; max_cities_per_chunk\l&#45; maxX\l&#45; maxY\l&#45; factoryMap\l|+ WorldChunk()\l+ WorldChunk()\l+ WorldChunk()\l+ fromStringStream()\l+ toStringStream()\l+ generateChunk()\l+ draw()\l+ configure()\l+ setMaxYX()\l+ getChunkWidth()\l+ getChunkHeight()\l+ getMaxCitiesPerChunk()\l&#45; doCullTile()\l&#45; organizeTiles()\l&#45; elevationMap()\l&#45; spawnCity()\l}" alt="" coords="554,145,731,663"/>
+</map>

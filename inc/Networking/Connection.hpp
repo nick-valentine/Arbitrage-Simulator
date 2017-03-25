@@ -10,6 +10,10 @@
 
 using boost::asio::ip::tcp;
 
+/**
+ * Connection.
+ * Wrapper for boost sockets to make reading and writing easier.
+ */
 class Connection
 {
 public:
@@ -19,9 +23,27 @@ public:
     Connection(socket_ptr sock);
     
     void connect(std::string ip, std::string port);
+
+    /**
+     * If a connection was already made, bind this Connection class to it.
+     *
+     * @param  socket_ptr sock
+     */
     void bind(socket_ptr sock);
 
+    /**
+     * Blocking read on this socket.
+     *
+     * @return  std::string
+     */
     std::string read();
+
+    /**
+     * Write msg to this socket.
+     *
+     * @param  std::string msg
+     * @return bool success
+     */
     bool write(std::string msg);
 
     void close();

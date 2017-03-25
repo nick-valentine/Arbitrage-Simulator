@@ -8,6 +8,9 @@
 #include "GameObjects/World.hpp"
 #include "GameObjects/Player.hpp"
 
+/**
+ * Viewport for drawing the world and player modified by own position.
+ */
 class Camera
 {
 public:
@@ -19,6 +22,13 @@ public:
     int getY() const;
     int getX() const;
     
+    /**
+     * Render the world and player onto the screen
+     *
+     * @param  Screen &screen
+     * @param  World  &world
+     * @param  Player &player
+     */
     void render(Screen &screen, World &world, Player &player);
 private:
     unsigned int pos_y;

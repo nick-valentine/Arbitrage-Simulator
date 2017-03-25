@@ -1,0 +1,14 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$classServer.html#a30362b937b125d27916cf595bfc4c1a7" title="Server::run" alt="" coords="111,56,197,83"/>
+<area shape="rect" id="node4" href="$classServer.html#a8b1fafda0754578f16a974195d120e92" title="Server::setup" alt="" coords="104,107,204,133"/>
+<area shape="rect" id="node3" href="$classServer.html#a218dd53e9d0627964860bd9e42c7648a" title="Server::manageSession" alt="" coords="252,56,413,83"/>
+<area shape="rect" id="node5" href="$classServer.html#a011fa4233b24eb0397524c33cb6ea73f" title="Server::configure" alt="" coords="272,107,393,133"/>
+<area shape="rect" id="node12" href="$classServer.html#a0f7d094516801f6c918059628b715098" title="Server::initialize" alt="" coords="275,183,390,209"/>
+<area shape="rect" id="node6" href="$classConfigLoader.html#afaece3ad25b7221017affe9566e46af7" title="ConfigLoader::load" alt="" coords="485,5,616,32"/>
+<area shape="rect" id="node7" href="$classConfigLoader.html#a99778c30f3d79e84995d9e9c7245b089" title="ConfigLoader::getIntOption" alt="" coords="461,56,640,83"/>
+<area shape="rect" id="node8" href="$classConfigLoader.html#a162bb553780887f9c73861c39fb19e90" title="ConfigLoader::getStringOption" alt="" coords="688,81,885,108"/>
+<area shape="rect" id="node11" href="$classConfigLoader.html#a16592ceeebe506f6a501bdc4cf76ef97" title="ConfigLoader::getVersion" alt="" coords="466,157,635,184"/>
+<area shape="rect" id="node9" href="$classConfigLoader.html#a8d086e4fc43dbbf3ea03b25e7808d52d" title="ConfigLoader::mutateOption" alt="" coords="933,56,1119,83"/>
+<area shape="rect" id="node10" href="$classConfigLoader.html#a75640e185ea0090519fce7df634cc48a" title="ConfigLoader::save" alt="" coords="959,107,1093,133"/>
+<area shape="rect" id="node13" href="$classServer.html#a452594d15d1943b0be0569475d4375ec" title="Server::cleanup" alt="" coords="494,208,607,235"/>
+</map>

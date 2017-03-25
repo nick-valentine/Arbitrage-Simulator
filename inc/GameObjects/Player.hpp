@@ -7,6 +7,13 @@
 #include "Screen.hpp"
 #include "GameObjects/AbstractGameObject.hpp"
 
+/**
+ * Player.
+ * A player controlled avatar, could be controlled via keyboard, or network
+ * replication.
+ *
+ * @todo: allow for one of several representations and colors
+ */
 class Player : public AbstractGameObject
 {
 public:

@@ -5,6 +5,11 @@
 #include <curses.h>
 #include <vector>
 
+/**
+ * Screen.
+ * Buffer and wrapper for ncurses screen in case this is to be ported to a
+ * system where ncurses is unavailable, or a gui is made.
+ */
 class Screen
 {
 public:
@@ -18,6 +23,14 @@ public:
 
     void put(unsigned int colorPair, unsigned int layer, char c, int y, int x);
     void put(TextElement c, int y, int x);
+
+    /**
+     * Move the internal cursor to x, y
+     *
+     * @param  int y
+     * @param  int x
+     * @return bool success
+     */
     bool moveTo(int y, int x);
     void clear();
 
