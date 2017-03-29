@@ -29,6 +29,14 @@ var files =
       [ "Game", "classGame.html", "classGame" ]
     ] ],
     [ "Globals.hpp", "Globals_8hpp.html", "Globals_8hpp" ],
+    [ "LocalWorldInteraction.cpp", "LocalWorldInteraction_8cpp.html", null ],
+    [ "LocalWorldInteraction.hpp", "LocalWorldInteraction_8hpp.html", [
+      [ "LocalWorldInteraction", "classLocalWorldInteraction.html", "classLocalWorldInteraction" ]
+    ] ],
+    [ "NetworkedWorldInteraction.cpp", "NetworkedWorldInteraction_8cpp.html", null ],
+    [ "NetworkedWorldInteraction.hpp", "NetworkedWorldInteraction_8hpp.html", [
+      [ "NetworkedWorldInteraction", "classNetworkedWorldInteraction.html", "classNetworkedWorldInteraction" ]
+    ] ],
     [ "NoiseFunc.cpp", "NoiseFunc_8cpp.html", null ],
     [ "NoiseFunc.hpp", "NoiseFunc_8hpp.html", [
       [ "NoiseFunc", "classNoiseFunc.html", "classNoiseFunc" ]
@@ -65,5 +73,8 @@ var files =
     [ "WorldChunk.cpp", "WorldChunk_8cpp.html", null ],
     [ "WorldChunk.hpp", "WorldChunk_8hpp.html", [
       [ "WorldChunk", "classWorldChunk.html", "classWorldChunk" ]
+    ] ],
+    [ "WorldInteractionInterface.hpp", "WorldInteractionInterface_8hpp.html", [
+      [ "WorldInteractionInterface", "classWorldInteractionInterface.html", "classWorldInteractionInterface" ]
     ] ]
 ];

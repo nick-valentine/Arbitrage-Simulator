@@ -1,7 +1,7 @@
 <map id="WorldChunk::generateChunk" name="WorldChunk::generateChunk">
-<area shape="rect" id="node2" href="$classWorld.html#a333864e5d6f9cc6bb8c57753ceb4e44f" title="Prepare Chunk. " alt="" coords="244,5,389,32"/>
-<area shape="rect" id="node3" href="$classWorld.html#a8d8b39ed30b8b25d17a633a27e1942c1" title="Spawn a chunk at x,y. " alt="" coords="437,5,577,32"/>
-<area shape="rect" id="node4" href="$classWorld.html#a3d897d6953d0876aeab57d3ca951bea2" title="World::generateWorld" alt="" coords="625,5,773,32"/>
-<area shape="rect" id="node5" href="$classGame.html#ad7a2b7ff71e3064a289680944a27a42e" title="Game::setup" alt="" coords="821,5,919,32"/>
-<area shape="rect" id="node6" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="967,5,1017,32"/>
+<area shape="rect" id="node2" href="$classWorld.html#a333864e5d6f9cc6bb8c57753ceb4e44f" title="Prepare Chunk. " alt="" coords="244,46,389,73"/>
+<area shape="rect" id="node3" href="$classWorld.html#a8d8b39ed30b8b25d17a633a27e1942c1" title="Spawn a chunk at x,y. " alt="" coords="437,46,577,73"/>
+<area shape="rect" id="node4" href="$classWorld.html#a3d897d6953d0876aeab57d3ca951bea2" title="World::generateWorld" alt="" coords="625,46,773,73"/>
+<area shape="rect" id="node5" href="$classLocalWorldInteraction.html#abf8c3ee610ba923a2348437d0c2c6021" title="LocalWorldInteraction\l::loadWorld" alt="" coords="837,5,985,47"/>
+<area shape="rect" id="node6" href="$classNetworkedWorldInteraction.html#ac899a98641a9c1958154f4bde230c834" title="NetworkedWorldInteraction\l::loadWorld" alt="" coords="821,71,1001,112"/>
 </map>

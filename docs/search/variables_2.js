@@ -23,7 +23,7 @@ var searchData=
   ['configworldnamekey',['configWorldNameKey',['../classGame.html#abaa93a150f9763e96962c3293c62b5dd',1,'Game::configWorldNameKey()'],['../classServer.html#a7c6fefc21053d97d4a965658a166ec8f',1,'Server::configWorldNameKey()']]],
   ['conn',['conn',['../classServerSession.html#a07750760357613a48c0470f662157c4d',1,'ServerSession']]],
   ['connected',['connected',['../classConnection.html#a1445f1ca4d7fd2155a7de480340b370a',1,'Connection']]],
-  ['connection',['connection',['../classGame.html#a9564ed6fd16b549ad3691b887e8076cf',1,'Game']]],
+  ['connection',['connection',['../classNetworkedWorldInteraction.html#aa241b42b48b72fde6426ddb834f0e78b',1,'NetworkedWorldInteraction']]],
   ['creationtimestamp',['creationTimestamp',['../classWorld.html#a00dd47dfd18e1110a25f947caa726d1b',1,'World']]],
   ['cullingenabled',['cullingEnabled',['../classWorldChunk.html#a30c820ce5e5190b084f598148472d8c4',1,'WorldChunk']]],
   ['cursor_5fx',['cursor_x',['../classScreen.html#a42aa3ca2b8428b96a6212a1ebf7ac4b0',1,'Screen']]],

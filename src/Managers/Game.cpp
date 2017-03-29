@@ -5,7 +5,14 @@ const std::string Game::defaultWorldName = "world";
 
 Game::Game()
 {
+    this->worldProxy = NULL;
+}
 
+Game::~Game()
+{
+    if (this->worldProxy != NULL) {
+        delete this->worldProxy;
+    }
 }
 
 int Game::setup()
@@ -17,42 +24,21 @@ int Game::setup()
 
     this->player = Player("Bob", 0, 0);
 
-    this->world.generateWorld();
+    this->worldProxy->loadWorld();
 
     return 0;
 }
 
 int Game::run()
 {
-    try {
-        this->connection.connect("localhost", "9797");
-
-        std::string sVersion;
-        if ("" == (sVersion = this->checkVersion())) {
-            std::cerr<<"Version OK, good to continue\n";
-        } else {
-            std::cerr<<"Your version does not match the servers.\nYou are running " +
-                this->version +
-                ".\n The server is running " +
-                sVersion
-            ;
-            return -1;
-        }
-
-
-    } catch (std::exception& e) {
-        std::cerr<<e.what()<<std::endl;
-        return -1;
-    }
-    return 0;
-
     while(true) {
         int pos_x, pos_y;
         player.getYX(pos_y, pos_x);
 
         //move camera to player
         this->camera.moveTo(pos_y, pos_x);
-        this->camera.render(this->screen, this->world, this->player);
+        this->worldProxy->movePlayerToCoordinate(pos_y, pos_x);
+        this->camera.render(this->screen, *this->worldProxy, this->player);
         this->screen.render();
         this->screen.clear();
         unsigned int input = getch();
@@ -85,14 +71,17 @@ void Game::configure()
     World::configure();
     City::load_city_names();
 
-    this->world = World(
-        ConfigLoader::getStringOption(
-            Game::configWorldNameKey,
-            Game::defaultWorldName
-        )
+    //this->worldProxy = new LocalWorldInteraction(
+    //    ConfigLoader::getStringOption(
+    //        Game::configWorldNameKey,
+    //        Game::defaultWorldName
+    //    )
+    //);
+    
+    this->worldProxy = new NetworkedWorldInteraction(
+        "localhost",
+        "9797"
     );
-
-    this->version = ConfigLoader::getVersion();
 
     std::cout<<"chunk_height: "<<ConfigLoader::getIntOption("chunk_height")<<'\n';
     std::cout<<"chunk_width: "<<ConfigLoader::getIntOption("chunk_width")<<'\n';
@@ -111,29 +100,3 @@ void Game::configure()
     WorldChunk::setMaxYX(maxY, maxX);
 }
 
-std::string Game::checkVersion()
-{
-    std::string message = boost::lexical_cast<std::string>(ServerSession::VERSION_CHECK) + " " + this->version + "\n";
-    std::cerr<<message;
-    this->connection.write(message);
-    std::string response = this->connection.read();
-    std::stringstream ss;
-
-    ss.str(response);
-    int responseType;
-    ss>>responseType;
-    if (responseType == ServerSession::VERSION_CHECK_OK) {
-        return "";
-    } else if (responseType == ServerSession::VERSION_INCOMPATIBLE) {
-        std::string serverVersion;
-        ss>>serverVersion;
-        return serverVersion;
-    }
-}
-
-int Game::login()
-{
-    std::string message = boost::lexical_cast<std::string>(ServerSession::LOGIN) + " Username Password\n";
-    std::cerr<<message;
-    this->connection.write(message);
-}

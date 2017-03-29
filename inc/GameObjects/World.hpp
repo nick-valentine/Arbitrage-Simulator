@@ -35,7 +35,7 @@ public:
 
     static int getWorldHeight();
     static int getWorldWidth();
-private:
+protected:
     static constexpr float elevationSkewNoiseSpread = 55.0;
     static constexpr float elevationNoiseSpread = 20.0;
     static constexpr float tileNoiseSpread = 6.0;

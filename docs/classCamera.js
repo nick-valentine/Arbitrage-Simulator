@@ -6,7 +6,7 @@ var classCamera =
     [ "getY", "classCamera.html#add494078e64a271c871e9cf63d0123d9", null ],
     [ "move", "classCamera.html#a7c69021895c95c3b27f97e8c295b3990", null ],
     [ "moveTo", "classCamera.html#af05f81e8e5ba8851826242acbb824086", null ],
-    [ "render", "classCamera.html#a6a9003a2b3e68b4330225f8d74215d26", null ],
+    [ "render", "classCamera.html#aef1aa0a75a91a83015a29239ef730086", null ],
     [ "pos_x", "classCamera.html#ac69365b3dccea51c61e7d011533d0c14", null ],
     [ "pos_y", "classCamera.html#a762a825ed32a8e9cd78f41bb579e8416", null ]
 ];

@@ -1,11 +1,11 @@
 <map id="ColorPallete::addColor" name="ColorPallete::addColor">
-<area shape="rect" id="node2" href="$classTile.html#a96ce55d5fcb4b12880531af2138ba6b2" title="Tile::init" alt="" coords="207,31,275,57"/>
-<area shape="rect" id="node3" href="$classTile.html#aeeb5593bb6b75aae2edfcccbc84ab378" title="Tile::Tile" alt="" coords="323,5,395,32"/>
-<area shape="rect" id="node4" href="$classTile.html#a257eb65b1bc19fc77e2964b8325e2680" title="Random Spawn. " alt="" coords="443,31,577,57"/>
-<area shape="rect" id="node5" href="$classWorldChunk.html#a0428cb7066e8cb921b37a2ff7a2ba9dc" title="WorldChunk::generateChunk" alt="" coords="625,31,816,57"/>
-<area shape="rect" id="node6" href="$classWorld.html#a333864e5d6f9cc6bb8c57753ceb4e44f" title="Prepare Chunk. " alt="" coords="864,31,1009,57"/>
-<area shape="rect" id="node7" href="$classWorld.html#a8d8b39ed30b8b25d17a633a27e1942c1" title="Spawn a chunk at x,y. " alt="" coords="1057,31,1197,57"/>
-<area shape="rect" id="node8" href="$classWorld.html#a3d897d6953d0876aeab57d3ca951bea2" title="World::generateWorld" alt="" coords="1245,31,1393,57"/>
-<area shape="rect" id="node9" href="$classGame.html#ad7a2b7ff71e3064a289680944a27a42e" title="Game::setup" alt="" coords="1441,31,1539,57"/>
-<area shape="rect" id="node10" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1587,31,1637,57"/>
+<area shape="rect" id="node2" href="$classTile.html#a96ce55d5fcb4b12880531af2138ba6b2" title="Tile::init" alt="" coords="207,46,275,73"/>
+<area shape="rect" id="node3" href="$classTile.html#aeeb5593bb6b75aae2edfcccbc84ab378" title="Tile::Tile" alt="" coords="323,21,395,47"/>
+<area shape="rect" id="node4" href="$classTile.html#a257eb65b1bc19fc77e2964b8325e2680" title="Random Spawn. " alt="" coords="443,46,577,73"/>
+<area shape="rect" id="node5" href="$classWorldChunk.html#a0428cb7066e8cb921b37a2ff7a2ba9dc" title="WorldChunk::generateChunk" alt="" coords="625,46,816,73"/>
+<area shape="rect" id="node6" href="$classWorld.html#a333864e5d6f9cc6bb8c57753ceb4e44f" title="Prepare Chunk. " alt="" coords="864,46,1009,73"/>
+<area shape="rect" id="node7" href="$classWorld.html#a8d8b39ed30b8b25d17a633a27e1942c1" title="Spawn a chunk at x,y. " alt="" coords="1057,46,1197,73"/>
+<area shape="rect" id="node8" href="$classWorld.html#a3d897d6953d0876aeab57d3ca951bea2" title="World::generateWorld" alt="" coords="1245,46,1393,73"/>
+<area shape="rect" id="node9" href="$classLocalWorldInteraction.html#abf8c3ee610ba923a2348437d0c2c6021" title="LocalWorldInteraction\l::loadWorld" alt="" coords="1457,5,1605,47"/>
+<area shape="rect" id="node10" href="$classNetworkedWorldInteraction.html#ac899a98641a9c1958154f4bde230c834" title="NetworkedWorldInteraction\l::loadWorld" alt="" coords="1441,71,1621,112"/>
 </map>

@@ -17,5 +17,11 @@ var hierarchy =
     [ "ServerSession", "classServerSession.html", null ],
     [ "Screen::TextElement", "structScreen_1_1TextElement.html", null ],
     [ "Tile::TileType", "structTile_1_1TileType.html", null ],
-    [ "World", "classWorld.html", null ]
+    [ "World", "classWorld.html", [
+      [ "NetworkedWorldInteraction", "classNetworkedWorldInteraction.html", null ]
+    ] ],
+    [ "WorldInteractionInterface", "classWorldInteractionInterface.html", [
+      [ "LocalWorldInteraction", "classLocalWorldInteraction.html", null ],
+      [ "NetworkedWorldInteraction", "classNetworkedWorldInteraction.html", null ]
+    ] ]
 ];

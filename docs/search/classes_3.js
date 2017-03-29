@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['noisefunc',['NoiseFunc',['../classNoiseFunc.html',1,'']]]
+  ['localworldinteraction',['LocalWorldInteraction',['../classLocalWorldInteraction.html',1,'']]]
 ];

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['save',['save',['../classConfigLoader.html#a75640e185ea0090519fce7df634cc48a',1,'ConfigLoader']]],
-  ['screen',['Screen',['../classScreen.html',1,'Screen'],['../classGame.html#adcabca50c3e48f8e1e9e5798f143a787',1,'Game::screen()'],['../classScreen.html#ae7576476fc6e6a6eaa66389fdc41fe72',1,'Screen::Screen()']]],
+  ['screen',['Screen',['../classScreen.html',1,'Screen'],['../classScreen.html#ae7576476fc6e6a6eaa66389fdc41fe72',1,'Screen::Screen()'],['../classGame.html#adcabca50c3e48f8e1e9e5798f143a787',1,'Game::screen()']]],
   ['screen_2ecpp',['Screen.cpp',['../Screen_8cpp.html',1,'']]],
   ['screen_2ehpp',['Screen.hpp',['../Screen_8hpp.html',1,'']]],
   ['screenbuffer',['ScreenBuffer',['../classScreen.html#aac80a29ca2d1b94557346d85acf45595',1,'Screen']]],

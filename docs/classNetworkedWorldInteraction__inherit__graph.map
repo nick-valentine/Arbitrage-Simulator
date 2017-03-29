@@ -1,0 +1,4 @@
+<map id="NetworkedWorldInteraction" name="NetworkedWorldInteraction">
+<area shape="rect" id="node2" href="$classWorldInteractionInterface.html" title="Class to proxy all interactions with the world through. " alt="" coords="5,167,195,273"/>
+<area shape="rect" id="node3" href="$classWorld.html" title="World. " alt="" coords="219,5,413,435"/>
+</map>

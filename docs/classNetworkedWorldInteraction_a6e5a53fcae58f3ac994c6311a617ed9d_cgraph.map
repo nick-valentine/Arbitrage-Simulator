@@ -1,0 +1,5 @@
+<map id="NetworkedWorldInteraction::handShake" name="NetworkedWorldInteraction::handShake">
+<area shape="rect" id="node2" href="$classNetworkedWorldInteraction.html#ab832ce455f976b6ad4496a94082979d5" title="NetworkedWorldInteraction\l::checkVersion" alt="" coords="233,23,413,65"/>
+<area shape="rect" id="node3" href="$classConnection.html#a849095cd9dda6388c05fe4896b380530" title="Blocking read on this socket. " alt="" coords="463,5,584,32"/>
+<area shape="rect" id="node4" href="$classConnection.html#a6fff1bda7a9e0dc4997792ac29ce1af1" title="Write msg to this socket. " alt="" coords="461,56,585,83"/>
+</map>
