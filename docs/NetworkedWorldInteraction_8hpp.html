@@ -122,6 +122,7 @@ $(document).ready(function(){initNavTree('NetworkedWorldInteraction_8hpp.html','
 <code>#include &quot;<a class="el" href="ServerSession_8hpp_source.html">Managers/ServerSession.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Connection_8hpp_source.html">Networking/Connection.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Screen_8hpp_source.html">Screen.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="LocalWorldInteraction_8hpp_source.html">Services/WorldInteraction/LocalWorldInteraction.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="WorldInteractionInterface_8hpp_source.html">Services/WorldInteraction/WorldInteractionInterface.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for NetworkedWorldInteraction.hpp:</div>
@@ -130,20 +131,21 @@ $(document).ready(function(){initNavTree('NetworkedWorldInteraction_8hpp.html','
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="NetworkedWorldInteraction_8hpp__incl.png" border="0" usemap="#NetworkedWorldInteraction_8hpp" alt=""/></div>
 <map name="NetworkedWorldInteraction_8hpp" id="NetworkedWorldInteraction_8hpp">
-<area shape="rect" id="node8" href="ConfigLoader_8hpp.html" title="ConfigLoader.hpp" alt="" coords="1109,319,1233,345"/>
-<area shape="rect" id="node14" href="World_8hpp.html" title="GameObjects/World.hpp" alt="" coords="1263,169,1428,196"/>
-<area shape="rect" id="node24" href="Screen_8hpp.html" title="Screen.hpp" alt="" coords="67,401,155,427"/>
-<area shape="rect" id="node28" href="ServerSession_8hpp.html" title="Managers/ServerSession.hpp" alt="" coords="1967,87,2161,114"/>
-<area shape="rect" id="node32" href="Connection_8hpp.html" title="Networking/Connection.hpp" alt="" coords="2335,169,2518,196"/>
-<area shape="rect" id="node35" href="WorldInteractionInterface_8hpp.html" title="Services/WorldInteraction\l/WorldInteractionInterface.hpp" alt="" coords="1247,80,1444,121"/>
-<area shape="rect" id="node15" href="WorldChunk_8hpp.html" title="GameObjects/WorldChunk.hpp" alt="" coords="859,244,1061,271"/>
-<area shape="rect" id="node25" href="NoiseFunc_8hpp.html" title="WorldGen/NoiseFunc.hpp" alt="" coords="625,319,797,345"/>
-<area shape="rect" id="node26" href="Player_8hpp.html" title="GameObjects/Player.hpp" alt="" coords="1537,319,1705,345"/>
-<area shape="rect" id="node19" href="AbstractGameObject_8hpp.html" title="GameObjects/AbstractGame\lObject.hpp" alt="" coords="1434,393,1625,435"/>
-<area shape="rect" id="node20" href="City_8hpp.html" title="GameObjects/City.hpp" alt="" coords="1308,319,1463,345"/>
-<area shape="rect" id="node21" href="Globals_8hpp.html" title="Globals.hpp" alt="" coords="1217,401,1308,427"/>
-<area shape="rect" id="node22" href="Tile_8hpp.html" title="GameObjects/Tile.hpp" alt="" coords="397,319,549,345"/>
-<area shape="rect" id="node23" href="ColorPallete_8hpp.html" title="ColorPallete.hpp" alt="" coords="369,401,487,427"/>
+<area shape="rect" id="node8" href="ConfigLoader_8hpp.html" title="ConfigLoader.hpp" alt="" coords="1057,408,1181,435"/>
+<area shape="rect" id="node14" href="World_8hpp.html" title="GameObjects/World.hpp" alt="" coords="1469,259,1635,285"/>
+<area shape="rect" id="node24" href="Screen_8hpp.html" title="Screen.hpp" alt="" coords="2653,490,2741,517"/>
+<area shape="rect" id="node28" href="ServerSession_8hpp.html" title="Managers/ServerSession.hpp" alt="" coords="562,87,755,114"/>
+<area shape="rect" id="node32" href="Connection_8hpp.html" title="Networking/Connection.hpp" alt="" coords="238,177,421,203"/>
+<area shape="rect" id="node35" href="LocalWorldInteraction_8hpp.html" title="Services/WorldInteraction\l/LocalWorldInteraction.hpp" alt="" coords="1463,80,1641,121"/>
+<area shape="rect" id="node36" href="WorldInteractionInterface_8hpp.html" title="Services/WorldInteraction\l/WorldInteractionInterface.hpp" alt="" coords="2320,169,2517,211"/>
+<area shape="rect" id="node15" href="WorldChunk_8hpp.html" title="GameObjects/WorldChunk.hpp" alt="" coords="1661,333,1864,360"/>
+<area shape="rect" id="node25" href="NoiseFunc_8hpp.html" title="WorldGen/NoiseFunc.hpp" alt="" coords="2017,408,2189,435"/>
+<area shape="rect" id="node26" href="Player_8hpp.html" title="GameObjects/Player.hpp" alt="" coords="1256,408,1424,435"/>
+<area shape="rect" id="node19" href="AbstractGameObject_8hpp.html" title="GameObjects/AbstractGame\lObject.hpp" alt="" coords="1585,483,1775,524"/>
+<area shape="rect" id="node20" href="City_8hpp.html" title="GameObjects/City.hpp" alt="" coords="1685,408,1840,435"/>
+<area shape="rect" id="node21" href="Globals_8hpp.html" title="Globals.hpp" alt="" coords="1851,490,1941,517"/>
+<area shape="rect" id="node22" href="Tile_8hpp.html" title="GameObjects/Tile.hpp" alt="" coords="2264,408,2416,435"/>
+<area shape="rect" id="node23" href="ColorPallete_8hpp.html" title="ColorPallete.hpp" alt="" coords="2270,490,2389,517"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -174,7 +176,7 @@ Classes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_48d5250d02c2629cbdf380a5f0d54873.html">Services</a></li><li class="navelem"><a class="el" href="dir_f54a7c4fdde0b0b1a4e2c16e0c8dae7c.html">WorldInteraction</a></li><li class="navelem"><a class="el" href="NetworkedWorldInteraction_8hpp.html">NetworkedWorldInteraction.hpp</a></li>
-    <li class="footer">Generated on Tue Mar 28 2017 20:27:23 for Trade App by
+    <li class="footer">Generated on Tue Mar 28 2017 21:02:35 for Trade App by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

@@ -1,7 +1,7 @@
 <map id="ConfigLoader::getVersion" name="ConfigLoader::getVersion">
-<area shape="rect" id="node2" href="$classServer.html#a011fa4233b24eb0397524c33cb6ea73f" title="Server::configure" alt="" coords="252,5,373,32"/>
-<area shape="rect" id="node5" href="$classNetworkedWorldInteraction.html#a4dc0bf5364af285ebfe21d0f06f53c02" title="NetworkedWorldInteraction\l::configure" alt="" coords="223,57,403,98"/>
-<area shape="rect" id="node3" href="$classServer.html#a8b1fafda0754578f16a974195d120e92" title="Server::setup" alt="" coords="495,5,595,32"/>
-<area shape="rect" id="node4" href="$server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="687,5,737,32"/>
-<area shape="rect" id="node6" href="$classNetworkedWorldInteraction.html#aeb62fc90317746434729b8e8266a2752" title="NetworkedWorldInteraction\l::NetworkedWorldInteraction" alt="" coords="451,57,639,98"/>
+<area shape="rect" id="node2" href="$classNetworkedWorldInteraction.html#a4dc0bf5364af285ebfe21d0f06f53c02" title="NetworkedWorldInteraction\l::configure" alt="" coords="223,5,403,47"/>
+<area shape="rect" id="node4" href="$classServer.html#a011fa4233b24eb0397524c33cb6ea73f" title="Server::configure" alt="" coords="252,71,373,98"/>
+<area shape="rect" id="node3" href="$classNetworkedWorldInteraction.html#aeb62fc90317746434729b8e8266a2752" title="NetworkedWorldInteraction\l::NetworkedWorldInteraction" alt="" coords="451,5,639,47"/>
+<area shape="rect" id="node5" href="$classServer.html#a8b1fafda0754578f16a974195d120e92" title="Server::setup" alt="" coords="495,71,595,98"/>
+<area shape="rect" id="node6" href="$server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="687,71,737,98"/>
 </map>

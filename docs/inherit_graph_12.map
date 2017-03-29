@@ -1,6 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="node1" href="$classWorld.html" title="World. " alt="" coords="61,5,117,32"/>
-<area shape="rect" id="node2" href="$classNetworkedWorldInteraction.html" title="Manager for networked world interaction. " alt="" coords="221,5,401,32"/>
-<area shape="rect" id="node3" href="$classWorldInteractionInterface.html" title="Class to proxy all interactions with the world through. " alt="" coords="5,56,173,83"/>
-<area shape="rect" id="node4" href="$classLocalWorldInteraction.html" title="Manager for non&#45;networked world interaction. " alt="" coords="237,56,385,83"/>
+<area shape="rect" id="node2" href="$classLocalWorldInteraction.html" title="Manager for non&#45;networked world interaction. " alt="" coords="221,5,369,32"/>
+<area shape="rect" id="node3" href="$classNetworkedWorldInteraction.html" title="Manager for networked world interaction. " alt="" coords="417,31,597,57"/>
+<area shape="rect" id="node4" href="$classWorldInteractionInterface.html" title="Class to proxy all interactions with the world through. " alt="" coords="5,56,173,83"/>
 </map>

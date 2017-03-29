@@ -13,6 +13,7 @@
 #include "Managers/ServerSession.hpp"
 #include "Networking/Connection.hpp"
 #include "Screen.hpp"
+#include "Services/WorldInteraction/LocalWorldInteraction.hpp"
 #include "Services/WorldInteraction/WorldInteractionInterface.hpp"
 
 using boost::asio::ip::tcp;
@@ -26,7 +27,7 @@ using boost::asio::ip::tcp;
  * @TODO: send player movement notices to server
  * @TODO: fetch city objects from server
  */
-class NetworkedWorldInteraction : public WorldInteractionInterface, private World
+class NetworkedWorldInteraction : virtual public WorldInteractionInterface, private LocalWorldInteraction
 {
 public:
     NetworkedWorldInteraction(std::string server, std::string port);
@@ -35,9 +36,6 @@ public:
     void draw(Screen &screen);
     void movePlayerToCoordinate(int y, int x);
 private:
-    int playerX;
-    int playerY;
-
     std::string version;
     void configure();
 

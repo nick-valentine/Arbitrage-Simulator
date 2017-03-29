@@ -10,7 +10,7 @@
 /**
  * Manager for non-networked world interaction.
  */
-class LocalWorldInteraction : public WorldInteractionInterface
+class LocalWorldInteraction : virtual public WorldInteractionInterface, protected World
 {
 public:
     LocalWorldInteraction(std::string worldName);
@@ -18,11 +18,9 @@ public:
     void loadWorld();
     void draw(Screen &screen);
     void movePlayerToCoordinate(int y, int x);
-private:
+protected:
     int playerX;
     int playerY;
-
-    World world;
 };
 
 #endif //LOCAL_WORLD_INTERACTION

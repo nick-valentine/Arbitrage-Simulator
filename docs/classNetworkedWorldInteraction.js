@@ -9,7 +9,5 @@ var classNetworkedWorldInteraction =
     [ "login", "classNetworkedWorldInteraction.html#aeb516faf06a8fe474cc389ba7f48e125", null ],
     [ "movePlayerToCoordinate", "classNetworkedWorldInteraction.html#a951bdc14887bba2797479057ab6080bd", null ],
     [ "connection", "classNetworkedWorldInteraction.html#aa241b42b48b72fde6426ddb834f0e78b", null ],
-    [ "playerX", "classNetworkedWorldInteraction.html#a8a6f677f27bb7e283f8bb791a3e80143", null ],
-    [ "playerY", "classNetworkedWorldInteraction.html#a667e4d1b0a788e7d0a8400b2efc3f3a9", null ],
     [ "version", "classNetworkedWorldInteraction.html#a27751b7743cec4a0b5f61f639c9efa90", null ]
 ];

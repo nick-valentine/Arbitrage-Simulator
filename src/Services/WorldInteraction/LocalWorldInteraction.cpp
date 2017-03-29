@@ -1,20 +1,19 @@
 #include "Services/WorldInteraction/LocalWorldInteraction.hpp"
 
-LocalWorldInteraction::LocalWorldInteraction(std::string worldName)
+LocalWorldInteraction::LocalWorldInteraction(std::string worldName) : World(worldName)
 {
-    this->world = World(worldName);
     this->playerY = 0;
     this->playerX = 0;
 }
 
 void LocalWorldInteraction::loadWorld()
 {
-    this->world.generateWorld();
+    this->generateWorld();
 }
 
 void LocalWorldInteraction::draw(Screen &screen)
 {
-    this->world.draw(screen, this->playerY, this->playerX);
+    World::draw(screen, this->playerY, this->playerX);
 }
 
 void LocalWorldInteraction::movePlayerToCoordinate(int y, int x)

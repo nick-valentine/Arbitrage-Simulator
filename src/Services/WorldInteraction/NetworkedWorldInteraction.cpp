@@ -1,6 +1,6 @@
 #include "Services/WorldInteraction/NetworkedWorldInteraction.hpp"
 
-NetworkedWorldInteraction::NetworkedWorldInteraction(std::string server, std::string port) : World("testName")
+NetworkedWorldInteraction::NetworkedWorldInteraction(std::string server, std::string port) : LocalWorldInteraction("NetworkedWorld")
 {
     this->connection.connect(server, port);
     this->configure();

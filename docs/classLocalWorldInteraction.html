@@ -109,7 +109,7 @@ $(document).ready(function(){initNavTree('classLocalWorldInteraction.html','');}
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classLocalWorldInteraction-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">LocalWorldInteraction Class Reference</div>  </div>
@@ -127,7 +127,9 @@ $(document).ready(function(){initNavTree('classLocalWorldInteraction.html','');}
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classLocalWorldInteraction__inherit__graph.png" border="0" usemap="#LocalWorldInteraction_inherit__map" alt="Inheritance graph"/></div>
 <map name="LocalWorldInteraction_inherit__map" id="LocalWorldInteraction_inherit__map">
-<area shape="rect" id="node2" href="classWorldInteractionInterface.html" title="Class to proxy all interactions with the world through. " alt="" coords="5,5,195,112"/>
+<area shape="rect" id="node4" href="classNetworkedWorldInteraction.html" title="Manager for networked world interaction. " alt="" coords="108,667,308,861"/>
+<area shape="rect" id="node2" href="classWorldInteractionInterface.html" title="Class to proxy all interactions with the world through. " alt="" coords="5,167,195,273"/>
+<area shape="rect" id="node3" href="classWorld.html" title="World. " alt="" coords="219,5,413,435"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -154,14 +156,74 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2434c098080bbf322dc0af6817b44620"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalWorldInteraction.html#a2434c098080bbf322dc0af6817b44620">movePlayerToCoordinate</a> (int y, int x)</td></tr>
 <tr class="separator:a2434c098080bbf322dc0af6817b44620"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
 <tr class="memitem:aebf76983d9dc2b87c0de576527c90525"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalWorldInteraction.html#aebf76983d9dc2b87c0de576527c90525">playerX</a></td></tr>
 <tr class="separator:aebf76983d9dc2b87c0de576527c90525"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2608809e92025cbdfa49400fa601cb6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalWorldInteraction.html#ab2608809e92025cbdfa49400fa601cb6">playerY</a></td></tr>
 <tr class="separator:ab2608809e92025cbdfa49400fa601cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10ed753983e949ba66dc3d5e416e2275"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWorld.html">World</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalWorldInteraction.html#a10ed753983e949ba66dc3d5e416e2275">world</a></td></tr>
-<tr class="separator:a10ed753983e949ba66dc3d5e416e2275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classWorld"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classWorld')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classWorld.html">World</a></td></tr>
+<tr class="memitem:a999c2f69d4001e2ea671617748a05b03 inherit pro_attribs_classWorld"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a999c2f69d4001e2ea671617748a05b03">chunkHeight</a></td></tr>
+<tr class="separator:a999c2f69d4001e2ea671617748a05b03 inherit pro_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153d1e50db1cbd48412f3cc6933ea3dc inherit pro_attribs_classWorld"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a153d1e50db1cbd48412f3cc6933ea3dc">chunkWidth</a></td></tr>
+<tr class="separator:a153d1e50db1cbd48412f3cc6933ea3dc inherit pro_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff32affa449788597cd85434b8bcbd38 inherit pro_attribs_classWorld"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="classWorldChunk.html">WorldChunk</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#aff32affa449788597cd85434b8bcbd38">chunks</a></td></tr>
+<tr class="separator:aff32affa449788597cd85434b8bcbd38 inherit pro_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a518dd91224f21362bba2ec397ef1eb29 inherit pro_attribs_classWorld"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a518dd91224f21362bba2ec397ef1eb29">name</a></td></tr>
+<tr class="separator:a518dd91224f21362bba2ec397ef1eb29 inherit pro_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00dd47dfd18e1110a25f947caa726d1b inherit pro_attribs_classWorld"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a00dd47dfd18e1110a25f947caa726d1b">creationTimestamp</a></td></tr>
+<tr class="separator:a00dd47dfd18e1110a25f947caa726d1b inherit pro_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae97ed5c4852491cc91e2fbb1e165e8f1 inherit pro_attribs_classWorld"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNoiseFunc.html">NoiseFunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#ae97ed5c4852491cc91e2fbb1e165e8f1">elevationSkewNoise</a></td></tr>
+<tr class="separator:ae97ed5c4852491cc91e2fbb1e165e8f1 inherit pro_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee9c57a8b08f6bfa27335ce8f9ca0e09 inherit pro_attribs_classWorld"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNoiseFunc.html">NoiseFunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#aee9c57a8b08f6bfa27335ce8f9ca0e09">elevationNoise</a></td></tr>
+<tr class="separator:aee9c57a8b08f6bfa27335ce8f9ca0e09 inherit pro_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb37cf2db530a2d99c6e0828dac4826a inherit pro_attribs_classWorld"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNoiseFunc.html">NoiseFunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#abb37cf2db530a2d99c6e0828dac4826a">tileNoise</a></td></tr>
+<tr class="separator:abb37cf2db530a2d99c6e0828dac4826a inherit pro_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classWorld"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classWorld')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classWorld.html">World</a></td></tr>
+<tr class="memitem:a0150607a49c2400d5c848159dd02d533 inherit pro_methods_classWorld"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a0150607a49c2400d5c848159dd02d533">init</a> ()</td></tr>
+<tr class="memdesc:a0150607a49c2400d5c848159dd02d533 inherit pro_methods_classWorld"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize.  <a href="#a0150607a49c2400d5c848159dd02d533">More...</a><br /></td></tr>
+<tr class="separator:a0150607a49c2400d5c848159dd02d533 inherit pro_methods_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d8b39ed30b8b25d17a633a27e1942c1 inherit pro_methods_classWorld"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a8d8b39ed30b8b25d17a633a27e1942c1">spawnChunk</a> (int y, int x)</td></tr>
+<tr class="memdesc:a8d8b39ed30b8b25d17a633a27e1942c1 inherit pro_methods_classWorld"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawn a chunk at x,y.  <a href="#a8d8b39ed30b8b25d17a633a27e1942c1">More...</a><br /></td></tr>
+<tr class="separator:a8d8b39ed30b8b25d17a633a27e1942c1 inherit pro_methods_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a333864e5d6f9cc6bb8c57753ceb4e44f inherit pro_methods_classWorld"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWorldChunk.html">WorldChunk</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a333864e5d6f9cc6bb8c57753ceb4e44f">prepareChunk</a> (int y, int x)</td></tr>
+<tr class="memdesc:a333864e5d6f9cc6bb8c57753ceb4e44f inherit pro_methods_classWorld"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare Chunk.  <a href="#a333864e5d6f9cc6bb8c57753ceb4e44f">More...</a><br /></td></tr>
+<tr class="separator:a333864e5d6f9cc6bb8c57753ceb4e44f inherit pro_methods_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa39d4e6f714a7a3691ac0c656f5e8a8 inherit pro_methods_classWorld"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#afa39d4e6f714a7a3691ac0c656f5e8a8">World</a> ()</td></tr>
+<tr class="separator:afa39d4e6f714a7a3691ac0c656f5e8a8 inherit pro_methods_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a3cbd89a9deaab59376b02540d0092a inherit pro_methods_classWorld"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a8a3cbd89a9deaab59376b02540d0092a">World</a> (std::stringstream *ss)</td></tr>
+<tr class="separator:a8a3cbd89a9deaab59376b02540d0092a inherit pro_methods_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cb840db7b54d4fa3d4474f6c8bfc291 inherit pro_methods_classWorld"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a7cb840db7b54d4fa3d4474f6c8bfc291">World</a> (std::string <a class="el" href="classWorld.html#a518dd91224f21362bba2ec397ef1eb29">name</a>)</td></tr>
+<tr class="separator:a7cb840db7b54d4fa3d4474f6c8bfc291 inherit pro_methods_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4ec347800796f18abfdb120ab85ed7e inherit pro_methods_classWorld"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#ac4ec347800796f18abfdb120ab85ed7e">fromStringStream</a> (std::stringstream *ss)</td></tr>
+<tr class="separator:ac4ec347800796f18abfdb120ab85ed7e inherit pro_methods_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cf2da4646e9653bd1a9a79d6a14c73e inherit pro_methods_classWorld"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a1cf2da4646e9653bd1a9a79d6a14c73e">toStringStream</a> (std::stringstream *ss)</td></tr>
+<tr class="separator:a1cf2da4646e9653bd1a9a79d6a14c73e inherit pro_methods_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d897d6953d0876aeab57d3ca951bea2 inherit pro_methods_classWorld"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a3d897d6953d0876aeab57d3ca951bea2">generateWorld</a> ()</td></tr>
+<tr class="separator:a3d897d6953d0876aeab57d3ca951bea2 inherit pro_methods_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9608989365e085b1c0e34d6725e23b38 inherit pro_methods_classWorld"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a9608989365e085b1c0e34d6725e23b38">draw</a> (<a class="el" href="classScreen.html">Screen</a> &amp;screen, int playerY, int playerX)</td></tr>
+<tr class="separator:a9608989365e085b1c0e34d6725e23b38 inherit pro_methods_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_methods_classWorld"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classWorld')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classWorld.html">World</a></td></tr>
+<tr class="memitem:adf1ca48fa67ae65fcfddf24bddcaf1c6 inherit pro_static_methods_classWorld"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#adf1ca48fa67ae65fcfddf24bddcaf1c6">configure</a> ()</td></tr>
+<tr class="separator:adf1ca48fa67ae65fcfddf24bddcaf1c6 inherit pro_static_methods_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0edc612bd3defdcde0593d75f20e0f3 inherit pro_static_methods_classWorld"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#aa0edc612bd3defdcde0593d75f20e0f3">getWorldHeight</a> ()</td></tr>
+<tr class="separator:aa0edc612bd3defdcde0593d75f20e0f3 inherit pro_static_methods_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbfffbc8da85a130e273414dca3e4d08 inherit pro_static_methods_classWorld"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#adbfffbc8da85a130e273414dca3e4d08">getWorldWidth</a> ()</td></tr>
+<tr class="separator:adbfffbc8da85a130e273414dca3e4d08 inherit pro_static_methods_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_attribs_classWorld"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classWorld')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="classWorld.html">World</a></td></tr>
+<tr class="memitem:ab29028a5114a84b1d2c2e28eafcc769d inherit pro_static_attribs_classWorld"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#ab29028a5114a84b1d2c2e28eafcc769d">elevationSkewNoiseSpread</a> = 55.0</td></tr>
+<tr class="separator:ab29028a5114a84b1d2c2e28eafcc769d inherit pro_static_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a5c19085cdf2a499e6497c8bbb2aac8 inherit pro_static_attribs_classWorld"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a8a5c19085cdf2a499e6497c8bbb2aac8">elevationNoiseSpread</a> = 20.0</td></tr>
+<tr class="separator:a8a5c19085cdf2a499e6497c8bbb2aac8 inherit pro_static_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae60f509cea81ca112604558707bec7a inherit pro_static_attribs_classWorld"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#aae60f509cea81ca112604558707bec7a">tileNoiseSpread</a> = 6.0</td></tr>
+<tr class="separator:aae60f509cea81ca112604558707bec7a inherit pro_static_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a548e244676fccbc1b5ffbdfc257a02d7 inherit pro_static_attribs_classWorld"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a548e244676fccbc1b5ffbdfc257a02d7">worldHeight</a> = 0</td></tr>
+<tr class="separator:a548e244676fccbc1b5ffbdfc257a02d7 inherit pro_static_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac86e8d117a04eec7800fdbca12f3fc4c inherit pro_static_attribs_classWorld"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#ac86e8d117a04eec7800fdbca12f3fc4c">worldWidth</a> = 0</td></tr>
+<tr class="separator:ac86e8d117a04eec7800fdbca12f3fc4c inherit pro_static_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manager for non-networked world interaction. </p>
@@ -184,7 +246,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00003">3</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00022">playerX</a>, <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00023">playerY</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00025">world</a>.</p>
+<p>References <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00022">playerX</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00023">playerY</a>.</p>
 
 </div>
 </div>
@@ -213,9 +275,11 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classWorldInteractionInterface.html#a5e16c72d8dbfc2929d1b27507690e813">WorldInteractionInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00015">15</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
+<p>Reimplemented in <a class="el" href="classNetworkedWorldInteraction.html#a0c1750f6974a4c312e2f0dc1a09e4a58">NetworkedWorldInteraction</a>.</p>
 
-<p>References <a class="el" href="World_8cpp_source.html#l00065">World::draw()</a>, <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00022">playerX</a>, <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00023">playerY</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00025">world</a>.</p>
+<p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00014">14</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
+
+<p>References <a class="el" href="World_8cpp_source.html#l00065">World::draw()</a>, <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00022">playerX</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00023">playerY</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -254,9 +318,11 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classWorldInteractionInterface.html#a5ea6a25f75827f5f1ff6d40c1f4d0412">WorldInteractionInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00010">10</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
+<p>Reimplemented in <a class="el" href="classNetworkedWorldInteraction.html#ac899a98641a9c1958154f4bde230c834">NetworkedWorldInteraction</a>.</p>
 
-<p>References <a class="el" href="World_8cpp_source.html#l00054">World::generateWorld()</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00025">world</a>.</p>
+<p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00009">9</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
+
+<p>References <a class="el" href="World_8cpp_source.html#l00054">World::generateWorld()</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -323,7 +389,9 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classWorldInteractionInterface.html#a275d3637a9886be9ea98cdafbdd6ae25">WorldInteractionInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00020">20</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
+<p>Reimplemented in <a class="el" href="classNetworkedWorldInteraction.html#a951bdc14887bba2797479057ab6080bd">NetworkedWorldInteraction</a>.</p>
+
+<p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00019">19</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
 
 <p>References <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00022">playerX</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00023">playerY</a>.</p>
 
@@ -343,14 +411,14 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00022">22</a> of file <a class="el" href="LocalWorldInteraction_8hpp_source.html">LocalWorldInteraction.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00015">draw()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00003">LocalWorldInteraction()</a>, and <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00020">movePlayerToCoordinate()</a>.</p>
+<p>Referenced by <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00014">draw()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00020">NetworkedWorldInteraction::draw()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00003">LocalWorldInteraction()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00019">movePlayerToCoordinate()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00025">NetworkedWorldInteraction::movePlayerToCoordinate()</a>, and <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00003">NetworkedWorldInteraction::NetworkedWorldInteraction()</a>.</p>
 
 </div>
 </div>
@@ -367,38 +435,14 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00023">23</a> of file <a class="el" href="LocalWorldInteraction_8hpp_source.html">LocalWorldInteraction.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00015">draw()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00003">LocalWorldInteraction()</a>, and <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00020">movePlayerToCoordinate()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a10ed753983e949ba66dc3d5e416e2275"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classWorld.html">World</a> LocalWorldInteraction::world</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00025">25</a> of file <a class="el" href="LocalWorldInteraction_8hpp_source.html">LocalWorldInteraction.hpp</a>.</p>
-
-<p>Referenced by <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00015">draw()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00010">loadWorld()</a>, and <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00003">LocalWorldInteraction()</a>.</p>
+<p>Referenced by <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00014">draw()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00020">NetworkedWorldInteraction::draw()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00003">LocalWorldInteraction()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00019">movePlayerToCoordinate()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00025">NetworkedWorldInteraction::movePlayerToCoordinate()</a>, and <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00003">NetworkedWorldInteraction::NetworkedWorldInteraction()</a>.</p>
 
 </div>
 </div>
@@ -412,7 +456,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classLocalWorldInteraction.html">LocalWorldInteraction</a></li>
-    <li class="footer">Generated on Tue Mar 28 2017 20:27:23 for Trade App by
+    <li class="footer">Generated on Tue Mar 28 2017 21:02:35 for Trade App by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

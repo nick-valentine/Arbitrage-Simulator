@@ -18,7 +18,9 @@ var hierarchy =
     [ "Screen::TextElement", "structScreen_1_1TextElement.html", null ],
     [ "Tile::TileType", "structTile_1_1TileType.html", null ],
     [ "World", "classWorld.html", [
-      [ "NetworkedWorldInteraction", "classNetworkedWorldInteraction.html", null ]
+      [ "LocalWorldInteraction", "classLocalWorldInteraction.html", [
+        [ "NetworkedWorldInteraction", "classNetworkedWorldInteraction.html", null ]
+      ] ]
     ] ],
     [ "WorldInteractionInterface", "classWorldInteractionInterface.html", [
       [ "LocalWorldInteraction", "classLocalWorldInteraction.html", null ],
