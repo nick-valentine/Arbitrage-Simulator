@@ -13,6 +13,7 @@
 class LocalWorldInteraction : virtual public WorldInteractionInterface, protected World
 {
 public:
+    LocalWorldInteraction();
     LocalWorldInteraction(std::string worldName);
 
     void loadWorld();
@@ -21,6 +22,36 @@ public:
 protected:
     int playerX;
     int playerY;
+
+    /**
+     * Convert the player's current global coordinates into a chunk, and
+     * coordinates in that chunk.
+     *
+     * @param  int &chunkY
+     * @param  int &chunkX
+     * @param  int &Y
+     * @param  int &X
+     */
+    void playerCoordinatesToChunkCoordinates(
+        int &chunkY, int &chunkX, 
+        int &Y, int &X
+    );
+
+    /**
+     * convert global coordinates to into a chunk, and coordinates in that chunk.
+     *
+     * @param  int inY
+     * @param  int inX
+     * @param  int &chunkY
+     * @param  int &chunkX
+     * @param  int &outY
+     * @param  int &outX
+     */
+    void globalCoordinatesToChunkCoordinates(
+        int inY, int inX, 
+        int &chunkY, int &chunkX, 
+        int &outY, int &outX
+    );
 };
 
 #endif //LOCAL_WORLD_INTERACTION

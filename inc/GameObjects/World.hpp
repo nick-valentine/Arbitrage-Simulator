@@ -75,6 +75,7 @@ protected:
      */
     WorldChunk prepareChunk(int y, int x);
 
+    //Y major, X inner
     std::vector< std::vector<WorldChunk> > chunks;
     std::string name;
     time_t creationTimestamp;

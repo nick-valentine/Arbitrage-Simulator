@@ -6,9 +6,10 @@
 #include <mutex>
 #include <string>
 #include <boost/lexical_cast.hpp>
+#include <boost/shared_ptr.hpp>
 
 #include "Networking/Connection.hpp"
-#include "GameObjects/World.hpp"
+#include "Services/WorldInteraction/LocalWorldInteraction.hpp"
 
 using boost::asio::ip::tcp;
 
@@ -19,6 +20,7 @@ using boost::asio::ip::tcp;
 class ServerSession
 {
 public:
+    typedef boost::shared_ptr<LocalWorldInteraction> world_ptr;
 
     /**
      * Request Type.
@@ -27,10 +29,11 @@ public:
      */
     enum REQUST_TYPE {
         ERROR = 0,
-        VERSION_CHECK = 1,
-        VERSION_CHECK_OK = 2,
-        VERSION_INCOMPATIBLE = 3,
-        LOGIN = 10,
+        REQUEST_OK = 1,
+        VERSION_CHECK = 10,
+        VERSION_CHECK_OK = 12,
+        VERSION_INCOMPATIBLE = 13,
+        LOGIN = 20,
         REQUEST_CHARACTER = 100,
         REQUEST_WORLD = 110,
         REQUEST_CHUNK = 120,
@@ -48,12 +51,17 @@ public:
 
     ServerSession();
     ServerSession(Connection conn);
-    int init(std::string version);
+    int init(world_ptr world, std::string version);
 
     /**
      * Launch thread to manage this session.
      */
     int run();
+
+    /**
+     * Join threads and do work to end this session.
+     */
+    int cleanup();
 
     /**
      * Wrapper for connection write.
@@ -72,6 +80,7 @@ private:
     std::string version;
     std::thread thread;
     Connection conn;
+    world_ptr world;
 
     void sessionLoop();
 

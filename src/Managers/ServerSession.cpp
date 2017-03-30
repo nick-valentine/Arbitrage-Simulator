@@ -19,14 +19,20 @@ ServerSession::ServerSession(Connection conn)
     this->setConnection(conn);
 }
 
-int ServerSession::init(std::string version)
+int ServerSession::init(world_ptr world, std::string version)
 {
+    this->world = world;
     this->version = version;
 }
 
 int ServerSession::run()
 {
     this->thread = std::thread(&ServerSession::sessionLoop, this);
+}
+
+int ServerSession::cleanup()
+{
+    this->thread.join();
 }
 
 bool ServerSession::write(std::string msg)
@@ -49,6 +55,7 @@ void ServerSession::sessionLoop()
     this->state = HANDSHAKING;
     while (true) {
         try {
+            std::cout<<"Reading"<<std::endl;
             std::string message = this->conn.read();
             std::cout<<message<<std::endl;
             std::stringstream ss;
@@ -61,7 +68,8 @@ void ServerSession::sessionLoop()
                 response = this->requestMap[request_type](*this, message);
             }
             
-            std::cout<<response;
+            std::cout<<response<<std::endl;
+            std::cout<<"Writing"<<std::endl;
             this->conn.write(response);
 
             if (state == DISCONNECTING) {

@@ -32,7 +32,7 @@ clean: rmObjFiles makeObjFileStructure
 
 rebuild: clean main
 
-server: server.o Managers/Server.o Managers/ServerSession.o ConfigLoader.o Screen.o Camera.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o GameObjects/Player.o ColorPallete.o WorldGen/NoiseFunc.o Helpers/String.o Networking/Connection.o 
+server: server.o Managers/Server.o Managers/ServerSession.o ConfigLoader.o Screen.o Camera.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o GameObjects/Player.o ColorPallete.o WorldGen/NoiseFunc.o Helpers/String.o Networking/Connection.o Services/WorldInteraction/LocalWorldInteraction.o
 	$(CC) \
 		obj/Camera.o \
 		obj/ColorPallete.o \
@@ -49,6 +49,7 @@ server: server.o Managers/Server.o Managers/ServerSession.o ConfigLoader.o Scree
 		obj/server.o \
 		obj/Helpers/String.o \
 		obj/Networking/Connection.o \
+		obj/Services/WorldInteraction/LocalWorldInteraction.o \
 		-o server $(LIBS)
 
 game: game.o Managers/Game.o ConfigLoader.o Camera.o Screen.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o GameObjects/Player.o ColorPallete.o WorldGen/NoiseFunc.o Helpers/String.o Networking/Connection.o Services/WorldInteraction/LocalWorldInteraction.o Services/WorldInteraction/NetworkedWorldInteraction.o
