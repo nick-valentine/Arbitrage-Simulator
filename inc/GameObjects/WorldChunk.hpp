@@ -9,7 +9,9 @@
 #include <stdlib.h>
 #include <string>
 #include <vector>
+#include <iostream>
 
+#include "Globals.hpp"
 #include "ConfigLoader.hpp"
 #include "GameObjects/AbstractGameObject.hpp"
 #include "GameObjects/City.hpp"
@@ -50,7 +52,6 @@ public:
     static unsigned int getChunkHeight();
     static int getMaxCitiesPerChunk();
 private:
-    static const std::string SpaceConstant;
     static const std::string CityMarker;
     static const std::string MapMarker;
     static const int maxViewDistance = 10;

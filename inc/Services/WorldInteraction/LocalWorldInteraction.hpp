@@ -19,6 +19,7 @@ public:
     void loadWorld();
     void draw(Screen &screen);
     void movePlayerToCoordinate(int y, int x);
+    WorldChunk getChunk(int y, int x) const;
 protected:
     int playerX;
     int playerY;

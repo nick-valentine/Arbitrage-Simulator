@@ -49,11 +49,22 @@ int Server::run()
 void Server::initialize()
 {
     this->cleaner = std::thread(&Server::cleanupSessions, this);
+
+    this->world = ServerSession::world_ptr(
+        new LocalWorldInteraction(this->worldName)
+    );
+
+    (*this->world).loadWorld();
 }
 
 void Server::configure()
 {
     ConfigLoader::load();
+
+    //@todo: abstract configuration out to a common point between Client and Server
+    WorldChunk::configure();
+    World::configure();
+    City::load_city_names();
 
     this->portNumber = ConfigLoader::getIntOption(
         Server::configPortNumberKey,
@@ -61,15 +72,11 @@ void Server::configure()
     );
 
     this->version = ConfigLoader::getVersion();
-
-    this->world = ServerSession::world_ptr(
-        new LocalWorldInteraction(
-            ConfigLoader::getStringOption(
-                Server::configWorldNameKey,
-                Server::defaultWorldName
-            ).c_str()
-        )
+    this->worldName = ConfigLoader::getStringOption(
+        Server::configWorldNameKey,
+        Server::defaultWorldName
     );
+
 }
 
 void Server::cleanupSessions()

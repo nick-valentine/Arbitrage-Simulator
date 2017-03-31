@@ -19,7 +19,19 @@ void NetworkedWorldInteraction::loadWorld()
 
 void NetworkedWorldInteraction::draw(Screen &screen)
 {
-    World::draw(screen, playerY, playerX);
+    this->draw(screen, playerY, playerX);
+}
+
+void NetworkedWorldInteraction::draw(Screen &screen, int playerY, int playerX)
+{
+    for (int i = 0; i < this->chunks.size(); ++i) {
+        for (int j = 0; j < this->chunks[i].size(); ++j) {
+            if (this->hasChunkLoaded(i, j)) {
+                std::cerr<<"drawing chunk "<<i<<" "<<j<<std::endl;
+                this->chunks[i][j].draw(screen, playerY, playerX);
+            }
+        }
+    }
 }
 
 void NetworkedWorldInteraction::movePlayerToCoordinate(int y, int x)
@@ -106,7 +118,7 @@ int NetworkedWorldInteraction::fetchChunk(int chunkY, int chunkX)
     std::stringstream ss;
     ss.str(response);
     int responseType;
-    ss<<responseType;
+    ss>>responseType;
     if (responseType == ServerSession::REQUEST_OK) {
         this->chunks.resize(
             std::max(
@@ -120,9 +132,7 @@ int NetworkedWorldInteraction::fetchChunk(int chunkY, int chunkX)
                 chunkX + 1
             )
         );
-        std::string message = ss.str();
-        ss.str(message);
         this->chunks[chunkY][chunkX].fromStringStream(&ss);
-        std::cerr<<message<<std::endl;
+        this->chunksLoaded.push_back(std::pair<int, int>(chunkY, chunkX));
     }
 }

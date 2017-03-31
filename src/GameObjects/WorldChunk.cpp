@@ -1,6 +1,5 @@
 #include "GameObjects/WorldChunk.hpp"
 
-const std::string WorldChunk::SpaceConstant = " ";
 const std::string WorldChunk::CityMarker = "city";
 const std::string WorldChunk::MapMarker = "MAP";
     
@@ -68,9 +67,8 @@ void WorldChunk::fromStringStream(std::stringstream *ss)
             (*ss)>>nextObject;
             if( this->factoryMap.find(nextObject) != this->factoryMap.end() ) {
                 this->factoryMap[nextObject](this, ss);
-            } else if( nextObject == "MAP" ) {
+            } else if( nextObject == WorldChunk::MapMarker ) {
                 readState = map;
-                tilesToSpawn.push_back(Tile(ss));
             }
         } else if(readState == map) {
             tilesToSpawn.push_back(Tile(ss));
@@ -81,16 +79,16 @@ void WorldChunk::fromStringStream(std::stringstream *ss)
 
 void WorldChunk::toStringStream(std::stringstream *ss)
 {
-    (*ss)<<top<<" "<<left; 
+    (*ss)<<top<<Globals::space_delimiter<<left<<Globals::space_delimiter; 
     for(unsigned int i = 0; i < this->cities.size(); ++i) {
-        (*ss)<<WorldChunk::CityMarker<<WorldChunk::SpaceConstant;
+        (*ss)<<WorldChunk::CityMarker<<Globals::space_delimiter;
         this->cities[i].toStringStream(ss);
     }
-    (*ss)<<WorldChunk::MapMarker<<WorldChunk::SpaceConstant;
+    (*ss)<<Globals::space_delimiter<<WorldChunk::MapMarker<<Globals::space_delimiter;
     for(unsigned int i = 0; i < this->tiles.size(); ++i) {
         for(unsigned int j = 0; j < this->tiles[i].size(); ++j) {
             this->tiles[i][j].toStringStream(ss); 
-            (*ss)<<SpaceConstant;
+            (*ss)<<Globals::space_delimiter;
         }
     }
 }

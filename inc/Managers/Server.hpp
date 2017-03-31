@@ -35,6 +35,7 @@ private:
 
     int portNumber;
     std::string version;
+    std::string worldName;
 
     void initialize();
     void configure();

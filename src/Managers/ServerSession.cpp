@@ -3,7 +3,8 @@
 std::map<int, std::string (*)(ServerSession &myself, std::string msg)> ServerSession::requestMap = 
     {
         {ServerSession::VERSION_CHECK, VersionCheckHandler},
-        {ServerSession::LOGIN, LoginHandler}
+        {ServerSession::LOGIN, LoginHandler},
+        {ServerSession::REQUEST_CHUNK, GetWorldChunkHandler},
     }; 
 
 ServerSession::ServerSession()
@@ -63,13 +64,13 @@ void ServerSession::sessionLoop()
         
             ss.str(message);
             ss>>request_type;
-            std::string response = boost::lexical_cast<std::string>(ERROR) + " invalid message";
+            std::string response = boost::lexical_cast<std::string>(ERROR) + " invalid message" + Globals::network_message_delimiter;
             if (this->requestMap.find(request_type) != this->requestMap.end()) {
                 response = this->requestMap[request_type](*this, message);
             }
             
-            std::cout<<response<<std::endl;
             std::cout<<"Writing"<<std::endl;
+            std::cout<<response<<std::endl;
             this->conn.write(response);
 
             if (state == DISCONNECTING) {
@@ -99,14 +100,14 @@ std::string ServerSession::VersionCheckHandler(ServerSession &myself, std::strin
     if (myself.version == version) {
         std::cout<<"version OK\n";
         myself.state = AUTHENTICATING; // continue to next state
-        return boost::lexical_cast<std::string>(ServerSession::VERSION_CHECK_OK) + "\n";
+        return boost::lexical_cast<std::string>(ServerSession::VERSION_CHECK_OK) + Globals::network_message_delimiter;
     } else {
         std::cout<<"version INCOMPATIBLE\n";
         myself.state = DISCONNECTING; // flag to disconnect
         return boost::lexical_cast<std::string>(ServerSession::VERSION_INCOMPATIBLE) + 
             " " + 
             myself.version + 
-            "\n"
+            Globals::network_message_delimiter
         ;
     }
 }
@@ -121,4 +122,20 @@ std::string ServerSession::LoginHandler(ServerSession &myself, std::string msg)
     return "Welcome, " + username;
 }
 
+std::string ServerSession::GetWorldChunkHandler(ServerSession &myself, std::string msg)
+{
+    int type, chunkY, chunkX;
+    std::stringstream ss;
+    ss.str(msg);
+    ss>>type>>chunkY>>chunkX;
+    std::cout<<"Client request chunk ("<<chunkY<<", "<<chunkX<<")"<<std::endl;
+    ss.str("");
 
+    ss<<ServerSession::REQUEST_OK<<" ";
+    
+    (*myself.world).getChunk(chunkY, chunkX).toStringStream(&ss);
+    ss<<Globals::network_message_delimiter;
+
+    return ss.str();
+    
+}

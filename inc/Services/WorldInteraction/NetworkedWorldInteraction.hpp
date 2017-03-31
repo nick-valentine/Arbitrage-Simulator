@@ -37,6 +37,7 @@ public:
 
     void loadWorld();
     void draw(Screen &screen);
+    void draw(Screen &screen, int playerY, int playerX);
     void movePlayerToCoordinate(int y, int x);
 private:
     std::string version;

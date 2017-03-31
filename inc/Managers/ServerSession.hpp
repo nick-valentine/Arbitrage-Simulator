@@ -8,6 +8,7 @@
 #include <boost/lexical_cast.hpp>
 #include <boost/shared_ptr.hpp>
 
+#include "Globals.hpp"
 #include "Networking/Connection.hpp"
 #include "Services/WorldInteraction/LocalWorldInteraction.hpp"
 
@@ -110,6 +111,18 @@ private:
      * @return std::string the response
      */
     static std::string LoginHandler(ServerSession &myself, std::string msg);
+
+    /**
+     * Request Handler: Get World Chunk.
+     * Get the world chunk at the Y, X coordinates requested by the client and
+     * return it.
+     *
+     * @param  ServerSession &myself
+     * @param  std::string msg the message the client sent
+     * @return std::string the response
+     */
+    static std::string GetWorldChunkHandler(ServerSession &myself, std::string msg);
+
 };
 
 #endif //SERVER_SESSION_HPP

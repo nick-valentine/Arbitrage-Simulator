@@ -29,7 +29,7 @@ void City::fromStringStream(std::stringstream *ss)
     std::string pos_x_str, pos_y_str;
     std::getline((*ss), this->name, Globals::file_delimeter);
     std::getline((*ss), pos_x_str, Globals::file_delimeter);
-    std::getline((*ss), pos_y_str);
+    std::getline((*ss), pos_y_str, Globals::object_delimiter);
 
     std::stringstream temp_ss;
     temp_ss.str(pos_x_str);
