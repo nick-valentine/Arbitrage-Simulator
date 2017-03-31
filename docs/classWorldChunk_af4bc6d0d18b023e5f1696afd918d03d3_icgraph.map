@@ -1,5 +1,4 @@
 <map id="WorldChunk::getChunkWidth" name="WorldChunk::getChunkWidth">
-<area shape="rect" id="node2" href="$classWorld.html#a3d897d6953d0876aeab57d3ca951bea2" title="World::generateWorld" alt="" coords="245,46,393,73"/>
-<area shape="rect" id="node3" href="$classLocalWorldInteraction.html#abf8c3ee610ba923a2348437d0c2c6021" title="LocalWorldInteraction\l::loadWorld" alt="" coords="457,5,605,47"/>
-<area shape="rect" id="node4" href="$classNetworkedWorldInteraction.html#ac899a98641a9c1958154f4bde230c834" title="NetworkedWorldInteraction\l::loadWorld" alt="" coords="441,71,621,112"/>
+<area shape="rect" id="node2" href="$classWorld.html#a0150607a49c2400d5c848159dd02d533" title="Initialize. " alt="" coords="245,5,327,32"/>
+<area shape="rect" id="node3" href="$classWorld.html#afa39d4e6f714a7a3691ac0c656f5e8a8" title="World::World" alt="" coords="375,5,473,32"/>
 </map>

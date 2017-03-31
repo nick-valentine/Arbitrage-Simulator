@@ -1,7 +1,9 @@
 var classServerSession =
 [
+    [ "world_ptr", "classServerSession.html#a58b641dbd3a06b729038b5e3de03ad07", null ],
     [ "REQUST_TYPE", "classServerSession.html#ae34485de6117ea26f500189ae3499114", [
       [ "ERROR", "classServerSession.html#ae34485de6117ea26f500189ae3499114afab5ceef0e493b25fa0fe717ac7c293c", null ],
+      [ "REQUEST_OK", "classServerSession.html#ae34485de6117ea26f500189ae3499114aa703653f6a827994ab18c5b58f9f68fa", null ],
       [ "VERSION_CHECK", "classServerSession.html#ae34485de6117ea26f500189ae3499114acb59aa30f18692eb9fe807d566a95e46", null ],
       [ "VERSION_CHECK_OK", "classServerSession.html#ae34485de6117ea26f500189ae3499114a88025d56c898c2b1a5bca6627c1abda2", null ],
       [ "VERSION_INCOMPATIBLE", "classServerSession.html#ae34485de6117ea26f500189ae3499114accf3af22c15011cd01670152ab9a984e", null ],
@@ -21,8 +23,10 @@ var classServerSession =
     ] ],
     [ "ServerSession", "classServerSession.html#a301bd6fbd2e17b91b8b2297c5b5cf003", null ],
     [ "ServerSession", "classServerSession.html#a8ed9792c3ef780b9b236a0133e7de7e1", null ],
+    [ "cleanup", "classServerSession.html#a3729554c6c39678e2928f85b1ce73085", null ],
     [ "getState", "classServerSession.html#adcae3128a94d8addd2bb2d108ac55dbf", null ],
-    [ "init", "classServerSession.html#aa81769fe6e7a27a16f2c858228e8ec38", null ],
+    [ "GetWorldChunkHandler", "classServerSession.html#a8387ea34dbf6c4e78f58b83d490ee88d", null ],
+    [ "init", "classServerSession.html#acd2886a4169b9dceb30444b0f3b9f350", null ],
     [ "LoginHandler", "classServerSession.html#a706e60aef6bac44a83589911c454c7fd", null ],
     [ "run", "classServerSession.html#a9618739dcf123159134c03418f5d43d5", null ],
     [ "sessionLoop", "classServerSession.html#adc44562be2fb27c3cd5242503fe60bf9", null ],
@@ -33,5 +37,6 @@ var classServerSession =
     [ "requestMap", "classServerSession.html#ad81b2ea9cf9183be8f74623f14c12d37", null ],
     [ "state", "classServerSession.html#a91ba3b265b9ad05eacfb7dfeefdc97d3", null ],
     [ "thread", "classServerSession.html#aba7ba3719385abf86d91e6595866d4f2", null ],
-    [ "version", "classServerSession.html#a319f6b069b373b321b3708946ab2d025", null ]
+    [ "version", "classServerSession.html#a319f6b069b373b321b3708946ab2d025", null ],
+    [ "world", "classServerSession.html#a45d8bc8a439a074ee70078cab322ea1d", null ]
 ];

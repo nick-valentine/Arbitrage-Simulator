@@ -117,10 +117,14 @@ $(document).ready(function(){initNavTree('namespaceGlobals.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:aefca3806818b35922e55c31f49bcb190"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGlobals.html#aefca3806818b35922e55c31f49bcb190">space_delimiter</a> = ' '</td></tr>
+<tr class="separator:aefca3806818b35922e55c31f49bcb190"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadf7a668c1a6edfd8490e69b450713fa"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGlobals.html#aadf7a668c1a6edfd8490e69b450713fa">file_delimeter</a> = ','</td></tr>
 <tr class="separator:aadf7a668c1a6edfd8490e69b450713fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae52388b0a97f96c6e2af456d4c7d42d"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGlobals.html#aae52388b0a97f96c6e2af456d4c7d42d">object_delimiter</a> = '\n'</td></tr>
+<tr class="memitem:aae52388b0a97f96c6e2af456d4c7d42d"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGlobals.html#aae52388b0a97f96c6e2af456d4c7d42d">object_delimiter</a> = '\t'</td></tr>
 <tr class="separator:aae52388b0a97f96c6e2af456d4c7d42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab479cf9e9e67904c2371b0798cb26747"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGlobals.html#ab479cf9e9e67904c2371b0798cb26747">network_message_delimiter</a> = '\n'</td></tr>
+<tr class="separator:ab479cf9e9e67904c2371b0798cb26747"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Useful constants through the game as a whole. </p>
@@ -143,9 +147,33 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Globals_8hpp_source.html#l00009">9</a> of file <a class="el" href="Globals_8hpp_source.html">Globals.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Globals_8hpp_source.html#l00010">10</a> of file <a class="el" href="Globals_8hpp_source.html">Globals.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="City_8cpp_source.html#l00027">City::fromStringStream()</a>, and <a class="el" href="City_8cpp_source.html#l00045">City::toStringStream()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab479cf9e9e67904c2371b0798cb26747"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char Globals::network_message_delimiter = '\n'</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Globals_8hpp_source.html#l00012">12</a> of file <a class="el" href="Globals_8hpp_source.html">Globals.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ServerSession_8cpp_source.html#l00125">ServerSession::GetWorldChunkHandler()</a>, <a class="el" href="ServerSession_8cpp_source.html#l00054">ServerSession::sessionLoop()</a>, and <a class="el" href="ServerSession_8cpp_source.html#l00092">ServerSession::VersionCheckHandler()</a>.</p>
 
 </div>
 </div>
@@ -157,7 +185,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const char Globals::object_delimiter = '\n'</td>
+          <td class="memname">const char Globals::object_delimiter = '\t'</td>
         </tr>
       </table>
   </td>
@@ -167,9 +195,33 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Globals_8hpp_source.html#l00010">10</a> of file <a class="el" href="Globals_8hpp_source.html">Globals.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Globals_8hpp_source.html#l00011">11</a> of file <a class="el" href="Globals_8hpp_source.html">Globals.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="City_8cpp_source.html#l00045">City::toStringStream()</a>.</p>
+<p>Referenced by <a class="el" href="City_8cpp_source.html#l00027">City::fromStringStream()</a>, and <a class="el" href="City_8cpp_source.html#l00045">City::toStringStream()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aefca3806818b35922e55c31f49bcb190"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char Globals::space_delimiter = ' '</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Globals_8hpp_source.html#l00009">9</a> of file <a class="el" href="Globals_8hpp_source.html">Globals.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="WorldChunk_8cpp_source.html#l00080">WorldChunk::toStringStream()</a>.</p>
 
 </div>
 </div>
@@ -179,7 +231,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceGlobals.html">Globals</a></li>
-    <li class="footer">Generated on Tue Mar 28 2017 21:02:35 for Trade App by
+    <li class="footer">Generated on Thu Mar 30 2017 21:55:00 for Trade App by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

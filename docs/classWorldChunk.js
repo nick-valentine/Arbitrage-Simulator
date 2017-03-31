@@ -33,7 +33,6 @@ var classWorldChunk =
     [ "maxViewDistance", "classWorldChunk.html#a293ce038ebb01c7e1ec4af304dfacf7d", null ],
     [ "maxX", "classWorldChunk.html#a7fb88e72fc1297816e29313707231aa1", null ],
     [ "maxY", "classWorldChunk.html#aa817f545740f858e2207cc7aac125ce4", null ],
-    [ "SpaceConstant", "classWorldChunk.html#a0ef9420a9042d84101e5cf41e4dc9732", null ],
     [ "tiles", "classWorldChunk.html#a3e8d73563864a3124e23d2a80d7cf948", null ],
     [ "top", "classWorldChunk.html#ad33db970402ee29b4064bee2c987f3cb", null ]
 ];

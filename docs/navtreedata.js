@@ -37,7 +37,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "AbstractGameObject_8hpp.html",
-"classServerSession.html#a2be6b76c788abd809e08904b3e50037facd39ec46c6a847de83467461ee3be637"
+"classServer.html#ad5ec9462b520e59f7ea831e157ee5e59"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

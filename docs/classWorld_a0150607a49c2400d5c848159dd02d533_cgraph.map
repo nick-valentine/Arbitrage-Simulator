@@ -1,0 +1,4 @@
+<map id="World::init" name="World::init">
+<area shape="rect" id="node2" href="$classWorldChunk.html#a69efb1c1bc62d8464cce367f29665f38" title="WorldChunk::getChunkHeight" alt="" coords="135,5,331,32"/>
+<area shape="rect" id="node3" href="$classWorldChunk.html#af4bc6d0d18b023e5f1696afd918d03d3" title="WorldChunk::getChunkWidth" alt="" coords="137,56,329,83"/>
+</map>

@@ -1,11 +1,14 @@
 <map id="Server::setup" name="Server::setup">
-<area shape="rect" id="node2" href="$classServer.html#a011fa4233b24eb0397524c33cb6ea73f" title="Server::configure" alt="" coords="153,107,275,133"/>
-<area shape="rect" id="node9" href="$classServer.html#a0f7d094516801f6c918059628b715098" title="Server::initialize" alt="" coords="157,183,271,209"/>
-<area shape="rect" id="node3" href="$classConfigLoader.html#a99778c30f3d79e84995d9e9c7245b089" title="ConfigLoader::getIntOption" alt="" coords="323,5,501,32"/>
-<area shape="rect" id="node4" href="$classConfigLoader.html#a162bb553780887f9c73861c39fb19e90" title="ConfigLoader::getStringOption" alt="" coords="549,31,747,57"/>
-<area shape="rect" id="node7" href="$classConfigLoader.html#a16592ceeebe506f6a501bdc4cf76ef97" title="ConfigLoader::getVersion" alt="" coords="327,107,497,133"/>
-<area shape="rect" id="node8" href="$classConfigLoader.html#afaece3ad25b7221017affe9566e46af7" title="ConfigLoader::load" alt="" coords="347,157,477,184"/>
-<area shape="rect" id="node5" href="$classConfigLoader.html#a8d086e4fc43dbbf3ea03b25e7808d52d" title="ConfigLoader::mutateOption" alt="" coords="795,5,980,32"/>
-<area shape="rect" id="node6" href="$classConfigLoader.html#a75640e185ea0090519fce7df634cc48a" title="ConfigLoader::save" alt="" coords="820,56,955,83"/>
-<area shape="rect" id="node10" href="$classServer.html#a0b609eb0fc5082c2cd086446ae7342d5" title="Server::cleanupSessions" alt="" coords="329,208,495,235"/>
+<area shape="rect" id="node2" href="$classServer.html#a011fa4233b24eb0397524c33cb6ea73f" title="Server::configure" alt="" coords="153,183,275,209"/>
+<area shape="rect" id="node12" href="$classServer.html#a0f7d094516801f6c918059628b715098" title="Server::initialize" alt="" coords="157,284,271,311"/>
+<area shape="rect" id="node3" href="$classWorld.html#adf1ca48fa67ae65fcfddf24bddcaf1c6" title="World::configure" alt="" coords="349,5,466,32"/>
+<area shape="rect" id="node4" href="$classConfigLoader.html#a99778c30f3d79e84995d9e9c7245b089" title="ConfigLoader::getIntOption" alt="" coords="540,81,719,108"/>
+<area shape="rect" id="node5" href="$classConfigLoader.html#a162bb553780887f9c73861c39fb19e90" title="ConfigLoader::getStringOption" alt="" coords="767,120,964,147"/>
+<area shape="rect" id="node8" href="$classWorldChunk.html#ae67bd7d234bca44740a3418b4a00e64f" title="WorldChunk::configure" alt="" coords="330,107,485,133"/>
+<area shape="rect" id="node9" href="$classConfigLoader.html#a16592ceeebe506f6a501bdc4cf76ef97" title="ConfigLoader::getVersion" alt="" coords="323,208,492,235"/>
+<area shape="rect" id="node10" href="$classConfigLoader.html#afaece3ad25b7221017affe9566e46af7" title="ConfigLoader::load" alt="" coords="342,259,473,285"/>
+<area shape="rect" id="node11" href="$classCity.html#a404709b7000a90155400c0ea43936ac9" title="Load City Names. " alt="" coords="331,309,483,336"/>
+<area shape="rect" id="node6" href="$classConfigLoader.html#a8d086e4fc43dbbf3ea03b25e7808d52d" title="ConfigLoader::mutateOption" alt="" coords="1012,95,1197,121"/>
+<area shape="rect" id="node7" href="$classConfigLoader.html#a75640e185ea0090519fce7df634cc48a" title="ConfigLoader::save" alt="" coords="1037,145,1172,172"/>
+<area shape="rect" id="node13" href="$classServer.html#a0b609eb0fc5082c2cd086446ae7342d5" title="Server::cleanupSessions" alt="" coords="324,360,491,387"/>
 </map>

@@ -1,9 +1,9 @@
 <map id="Game::setup" name="Game::setup">
 <area shape="rect" id="node2" href="$classGame.html#ad2d16756f154ae7da7510b1c7bbcf6cc" title="Game::configure" alt="" coords="175,132,294,159"/>
 <area shape="rect" id="node12" href="$classWorldInteractionInterface.html#a5ea6a25f75827f5f1ff6d40c1f4d0412" title="WorldInteractionInterface\l::loadWorld" alt="" coords="151,183,319,225"/>
-<area shape="rect" id="node3" href="$classWorldChunk.html#ae67bd7d234bca44740a3418b4a00e64f" title="WorldChunk::configure" alt="" coords="371,5,525,32"/>
+<area shape="rect" id="node3" href="$classWorld.html#adf1ca48fa67ae65fcfddf24bddcaf1c6" title="World::configure" alt="" coords="389,5,507,32"/>
 <area shape="rect" id="node4" href="$classConfigLoader.html#a99778c30f3d79e84995d9e9c7245b089" title="ConfigLoader::getIntOption" alt="" coords="577,56,756,83"/>
-<area shape="rect" id="node8" href="$classWorld.html#adf1ca48fa67ae65fcfddf24bddcaf1c6" title="World::configure" alt="" coords="389,107,507,133"/>
+<area shape="rect" id="node8" href="$classWorldChunk.html#ae67bd7d234bca44740a3418b4a00e64f" title="WorldChunk::configure" alt="" coords="371,107,525,133"/>
 <area shape="rect" id="node9" href="$classConfigLoader.html#afaece3ad25b7221017affe9566e46af7" title="ConfigLoader::load" alt="" coords="383,157,513,184"/>
 <area shape="rect" id="node10" href="$classCity.html#a404709b7000a90155400c0ea43936ac9" title="Load City Names. " alt="" coords="372,208,524,235"/>
 <area shape="rect" id="node11" href="$classWorldChunk.html#a538965747758546c9097245ec9bfe930" title="WorldChunk::setMaxYX" alt="" coords="367,259,529,285"/>

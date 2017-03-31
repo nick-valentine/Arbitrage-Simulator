@@ -14,7 +14,8 @@ var classServer =
     [ "defaultPortNumber", "classServer.html#acf664ae32511bb3c5c974c20f1de44c9", null ],
     [ "defaultWorldName", "classServer.html#a19331a941a3c32846697bf75a27deabb", null ],
     [ "portNumber", "classServer.html#a72256f23fe1dbb301a6a19e440f5d089", null ],
-    [ "sessions", "classServer.html#a5a5760178267f8b7a0877dd7c40619dc", null ],
+    [ "sessions", "classServer.html#ab4f438d8a4db38141914a80da3e50bb5", null ],
     [ "version", "classServer.html#addd3f56d5930686641751ce58f6750d6", null ],
-    [ "world", "classServer.html#a95d3efbba004f4a24e9c745fa8f47146", null ]
+    [ "world", "classServer.html#a1ed49aeed83b399d2e192e0c8d3c1ce1", null ],
+    [ "worldName", "classServer.html#af671ca48d89bc39d6f588dbf0aeb2c27", null ]
 ];

@@ -1,13 +1,13 @@
 <map id="ConfigLoader::save" name="ConfigLoader::save">
-<area shape="rect" id="node2" href="$classConfigLoader.html#a162bb553780887f9c73861c39fb19e90" title="ConfigLoader::getStringOption" alt="" coords="188,31,385,57"/>
-<area shape="rect" id="node3" href="$classServer.html#a011fa4233b24eb0397524c33cb6ea73f" title="Server::configure" alt="" coords="677,5,798,32"/>
+<area shape="rect" id="node2" href="$classConfigLoader.html#a162bb553780887f9c73861c39fb19e90" title="ConfigLoader::getStringOption" alt="" coords="188,5,385,32"/>
+<area shape="rect" id="node3" href="$classServer.html#a011fa4233b24eb0397524c33cb6ea73f" title="Server::configure" alt="" coords="889,19,1011,45"/>
 <area shape="rect" id="node6" href="$classConfigLoader.html#a99778c30f3d79e84995d9e9c7245b089" title="ConfigLoader::getIntOption" alt="" coords="433,56,612,83"/>
-<area shape="rect" id="node4" href="$classServer.html#a8b1fafda0754578f16a974195d120e92" title="Server::setup" alt="" coords="900,5,1000,32"/>
-<area shape="rect" id="node5" href="$server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1109,5,1159,32"/>
+<area shape="rect" id="node4" href="$classServer.html#a8b1fafda0754578f16a974195d120e92" title="Server::setup" alt="" coords="1085,19,1185,45"/>
+<area shape="rect" id="node5" href="$server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1233,19,1284,45"/>
 <area shape="rect" id="node7" href="$classWorld.html#adf1ca48fa67ae65fcfddf24bddcaf1c6" title="World::configure" alt="" coords="679,56,796,83"/>
-<area shape="rect" id="node8" href="$classGame.html#ad2d16756f154ae7da7510b1c7bbcf6cc" title="Game::configure" alt="" coords="891,107,1009,133"/>
-<area shape="rect" id="node11" href="$classWorldChunk.html#ae67bd7d234bca44740a3418b4a00e64f" title="WorldChunk::configure" alt="" coords="660,157,815,184"/>
-<area shape="rect" id="node9" href="$classGame.html#ad7a2b7ff71e3064a289680944a27a42e" title="Game::setup" alt="" coords="1085,107,1183,133"/>
-<area shape="rect" id="node10" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1231,107,1281,133"/>
-<area shape="rect" id="node12" href="$classWorldChunk.html#a91bb3617decfca9f60c0db40e478e682" title="WorldChunk::WorldChunk" alt="" coords="863,157,1037,184"/>
+<area shape="rect" id="node8" href="$classGame.html#ad2d16756f154ae7da7510b1c7bbcf6cc" title="Game::configure" alt="" coords="891,145,1009,172"/>
+<area shape="rect" id="node11" href="$classWorldChunk.html#ae67bd7d234bca44740a3418b4a00e64f" title="WorldChunk::configure" alt="" coords="660,107,815,133"/>
+<area shape="rect" id="node9" href="$classGame.html#ad7a2b7ff71e3064a289680944a27a42e" title="Game::setup" alt="" coords="1087,145,1184,172"/>
+<area shape="rect" id="node10" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1233,145,1284,172"/>
+<area shape="rect" id="node12" href="$classWorldChunk.html#a91bb3617decfca9f60c0db40e478e682" title="WorldChunk::WorldChunk" alt="" coords="863,95,1037,121"/>
 </map>

@@ -5,6 +5,7 @@ var searchData=
   ['generateworld',['generateWorld',['../classWorld.html#a3d897d6953d0876aeab57d3ca951bea2',1,'World']]],
   ['get',['get',['../classConnection.html#a8c99eecd6637746b701c77b1af45301f',1,'Connection::get()'],['../classNoiseFunc.html#a86b87334b40c251168a191bcf14ef761',1,'NoiseFunc::get()']]],
   ['getalloptions',['getAllOptions',['../classConfigLoader.html#ac3ee7c01edaa63458b7ac5002b5d1630',1,'ConfigLoader']]],
+  ['getchunk',['getChunk',['../classLocalWorldInteraction.html#a2b4ebf8d835fcb0aa30a98183e6647a3',1,'LocalWorldInteraction']]],
   ['getchunkheight',['getChunkHeight',['../classWorldChunk.html#a69efb1c1bc62d8464cce367f29665f38',1,'WorldChunk']]],
   ['getchunkwidth',['getChunkWidth',['../classWorldChunk.html#af4bc6d0d18b023e5f1696afd918d03d3',1,'WorldChunk']]],
   ['getelevation',['getElevation',['../classTile.html#ae75c7799f63fff2f6e2932bdb89f6b9c',1,'Tile']]],
@@ -21,9 +22,11 @@ var searchData=
   ['gettype',['getType',['../classTile.html#a7981f0d1f55e0e6e72ab4e77796de847',1,'Tile']]],
   ['getversion',['getVersion',['../classConfigLoader.html#a16592ceeebe506f6a501bdc4cf76ef97',1,'ConfigLoader']]],
   ['getwidth',['getWidth',['../classScreen.html#ab71b25e991771611d4acab431f92b518',1,'Screen']]],
+  ['getworldchunkhandler',['GetWorldChunkHandler',['../classServerSession.html#a8387ea34dbf6c4e78f58b83d490ee88d',1,'ServerSession']]],
   ['getworldheight',['getWorldHeight',['../classWorld.html#aa0edc612bd3defdcde0593d75f20e0f3',1,'World']]],
   ['getworldwidth',['getWorldWidth',['../classWorld.html#adbfffbc8da85a130e273414dca3e4d08',1,'World']]],
   ['getx',['getX',['../classCamera.html#a905075b9b35583cd69f2ec7f86664603',1,'Camera']]],
   ['gety',['getY',['../classCamera.html#add494078e64a271c871e9cf63d0123d9',1,'Camera']]],
-  ['getyx',['getYX',['../classPlayer.html#a6e3e621902e7d1d718e5cd5c2004f2ef',1,'Player']]]
+  ['getyx',['getYX',['../classPlayer.html#a6e3e621902e7d1d718e5cd5c2004f2ef',1,'Player']]],
+  ['globalcoordinatestochunkcoordinates',['globalCoordinatesToChunkCoordinates',['../classLocalWorldInteraction.html#a7e533622fb19fe40f7b81b27f475a4e5',1,'LocalWorldInteraction']]]
 ];

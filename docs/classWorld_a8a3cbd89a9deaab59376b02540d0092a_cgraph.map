@@ -1,4 +1,6 @@
 <map id="World::World" name="World::World">
 <area shape="rect" id="node2" href="$classWorld.html#ac4ec347800796f18abfdb120ab85ed7e" title="World::fromStringStream" alt="" coords="152,5,319,32"/>
 <area shape="rect" id="node3" href="$classWorld.html#a0150607a49c2400d5c848159dd02d533" title="Initialize. " alt="" coords="195,56,276,83"/>
+<area shape="rect" id="node4" href="$classWorldChunk.html#a69efb1c1bc62d8464cce367f29665f38" title="WorldChunk::getChunkHeight" alt="" coords="367,31,563,57"/>
+<area shape="rect" id="node5" href="$classWorldChunk.html#af4bc6d0d18b023e5f1696afd918d03d3" title="WorldChunk::getChunkWidth" alt="" coords="369,81,561,108"/>
 </map>

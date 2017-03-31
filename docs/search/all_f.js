@@ -1,7 +1,7 @@
 var searchData=
 [
   ['save',['save',['../classConfigLoader.html#a75640e185ea0090519fce7df634cc48a',1,'ConfigLoader']]],
-  ['screen',['Screen',['../classScreen.html',1,'Screen'],['../classScreen.html#ae7576476fc6e6a6eaa66389fdc41fe72',1,'Screen::Screen()'],['../classGame.html#adcabca50c3e48f8e1e9e5798f143a787',1,'Game::screen()']]],
+  ['screen',['Screen',['../classScreen.html',1,'Screen'],['../classGame.html#adcabca50c3e48f8e1e9e5798f143a787',1,'Game::screen()'],['../classScreen.html#ae7576476fc6e6a6eaa66389fdc41fe72',1,'Screen::Screen()']]],
   ['screen_2ecpp',['Screen.cpp',['../Screen_8cpp.html',1,'']]],
   ['screen_2ehpp',['Screen.hpp',['../Screen_8hpp.html',1,'']]],
   ['screenbuffer',['ScreenBuffer',['../classScreen.html#aac80a29ca2d1b94557346d85acf45595',1,'Screen']]],
@@ -15,7 +15,7 @@ var searchData=
   ['serversession_2ehpp',['ServerSession.hpp',['../ServerSession_8hpp.html',1,'']]],
   ['session_5fstate',['SESSION_STATE',['../classServerSession.html#a2be6b76c788abd809e08904b3e50037f',1,'ServerSession']]],
   ['sessionloop',['sessionLoop',['../classServerSession.html#adc44562be2fb27c3cd5242503fe60bf9',1,'ServerSession']]],
-  ['sessions',['sessions',['../classServer.html#a5a5760178267f8b7a0877dd7c40619dc',1,'Server']]],
+  ['sessions',['sessions',['../classServer.html#ab4f438d8a4db38141914a80da3e50bb5',1,'Server']]],
   ['setconnection',['setConnection',['../classServerSession.html#afd7e4db5986abe710dfbae832f119710',1,'ServerSession']]],
   ['setcurrent',['setCurrent',['../classColorPallete.html#af03dece923247d3abd4f6ecbf344474b',1,'ColorPallete']]],
   ['setmaxyx',['setMaxYX',['../classWorldChunk.html#a538965747758546c9097245ec9bfe930',1,'WorldChunk']]],
@@ -26,7 +26,7 @@ var searchData=
   ['setup',['setup',['../classGame.html#ad7a2b7ff71e3064a289680944a27a42e',1,'Game::setup()'],['../classServer.html#a8b1fafda0754578f16a974195d120e92',1,'Server::setup()']]],
   ['socket',['socket',['../classConnection.html#ac16e8dcf22ee47ecff605077e5cdc715',1,'Connection']]],
   ['socket_5fptr',['socket_ptr',['../classConnection.html#a46f0ce70fa5cae0398f32340c7c137a4',1,'Connection']]],
-  ['spaceconstant',['SpaceConstant',['../classWorldChunk.html#a0ef9420a9042d84101e5cf41e4dc9732',1,'WorldChunk']]],
+  ['space_5fdelimiter',['space_delimiter',['../namespaceGlobals.html#aefca3806818b35922e55c31f49bcb190',1,'Globals']]],
   ['spawnchunk',['spawnChunk',['../classWorld.html#a8d8b39ed30b8b25d17a633a27e1942c1',1,'World']]],
   ['spawncity',['spawnCity',['../classWorldChunk.html#a14d25c7d24eaaa121ac6422beea1ae9a',1,'WorldChunk']]],
   ['state',['state',['../classServerSession.html#a91ba3b265b9ad05eacfb7dfeefdc97d3',1,'ServerSession']]],

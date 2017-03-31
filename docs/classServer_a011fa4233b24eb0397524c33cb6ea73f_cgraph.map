@@ -1,8 +1,11 @@
 <map id="Server::configure" name="Server::configure">
-<area shape="rect" id="node2" href="$classConfigLoader.html#a99778c30f3d79e84995d9e9c7245b089" title="ConfigLoader::getIntOption" alt="" coords="175,5,353,32"/>
-<area shape="rect" id="node3" href="$classConfigLoader.html#a162bb553780887f9c73861c39fb19e90" title="ConfigLoader::getStringOption" alt="" coords="401,31,599,57"/>
-<area shape="rect" id="node6" href="$classConfigLoader.html#a16592ceeebe506f6a501bdc4cf76ef97" title="ConfigLoader::getVersion" alt="" coords="179,107,349,133"/>
-<area shape="rect" id="node7" href="$classConfigLoader.html#afaece3ad25b7221017affe9566e46af7" title="ConfigLoader::load" alt="" coords="199,157,329,184"/>
-<area shape="rect" id="node4" href="$classConfigLoader.html#a8d086e4fc43dbbf3ea03b25e7808d52d" title="ConfigLoader::mutateOption" alt="" coords="647,5,832,32"/>
-<area shape="rect" id="node5" href="$classConfigLoader.html#a75640e185ea0090519fce7df634cc48a" title="ConfigLoader::save" alt="" coords="672,56,807,83"/>
+<area shape="rect" id="node2" href="$classWorld.html#adf1ca48fa67ae65fcfddf24bddcaf1c6" title="World::configure" alt="" coords="201,5,318,32"/>
+<area shape="rect" id="node3" href="$classConfigLoader.html#a99778c30f3d79e84995d9e9c7245b089" title="ConfigLoader::getIntOption" alt="" coords="392,81,571,108"/>
+<area shape="rect" id="node4" href="$classConfigLoader.html#a162bb553780887f9c73861c39fb19e90" title="ConfigLoader::getStringOption" alt="" coords="619,120,816,147"/>
+<area shape="rect" id="node7" href="$classWorldChunk.html#ae67bd7d234bca44740a3418b4a00e64f" title="WorldChunk::configure" alt="" coords="182,107,337,133"/>
+<area shape="rect" id="node8" href="$classConfigLoader.html#a16592ceeebe506f6a501bdc4cf76ef97" title="ConfigLoader::getVersion" alt="" coords="175,208,344,235"/>
+<area shape="rect" id="node9" href="$classConfigLoader.html#afaece3ad25b7221017affe9566e46af7" title="ConfigLoader::load" alt="" coords="194,259,325,285"/>
+<area shape="rect" id="node10" href="$classCity.html#a404709b7000a90155400c0ea43936ac9" title="Load City Names. " alt="" coords="183,309,335,336"/>
+<area shape="rect" id="node5" href="$classConfigLoader.html#a8d086e4fc43dbbf3ea03b25e7808d52d" title="ConfigLoader::mutateOption" alt="" coords="864,95,1049,121"/>
+<area shape="rect" id="node6" href="$classConfigLoader.html#a75640e185ea0090519fce7df634cc48a" title="ConfigLoader::save" alt="" coords="889,145,1024,172"/>
 </map>
