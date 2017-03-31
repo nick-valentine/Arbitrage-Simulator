@@ -1,10 +1,10 @@
 <map id="NoiseFunc::perlin" name="NoiseFunc::perlin">
-<area shape="rect" id="node2" href="$classNoiseFunc.html#a86b87334b40c251168a191bcf14ef761" title="Get the return of this noise function modified by gridPeriod. " alt="" coords="191,5,302,32"/>
-<area shape="rect" id="node9" href="$classNoiseFunc.html#ae1ff84e5317b8a79af66e11e1f9c16d2" title="Get the return of this noise function not modified by gridPeriod. " alt="" coords="177,56,316,83"/>
-<area shape="rect" id="node3" href="$classWorldChunk.html#a0428cb7066e8cb921b37a2ff7a2ba9dc" title="WorldChunk::generateChunk" alt="" coords="364,5,555,32"/>
-<area shape="rect" id="node4" href="$classWorld.html#a333864e5d6f9cc6bb8c57753ceb4e44f" title="Prepare Chunk. " alt="" coords="603,5,748,32"/>
-<area shape="rect" id="node5" href="$classWorld.html#a8d8b39ed30b8b25d17a633a27e1942c1" title="Spawn a chunk at x,y. " alt="" coords="796,5,936,32"/>
-<area shape="rect" id="node6" href="$classWorld.html#a3d897d6953d0876aeab57d3ca951bea2" title="World::generateWorld" alt="" coords="984,5,1132,32"/>
-<area shape="rect" id="node7" href="$classGame.html#ad7a2b7ff71e3064a289680944a27a42e" title="Game::setup" alt="" coords="1180,5,1277,32"/>
-<area shape="rect" id="node8" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1325,5,1376,32"/>
+<area shape="rect" id="node2" href="$classNoiseFunc.html#a86b87334b40c251168a191bcf14ef761" title="Get the return of this noise function modified by gridPeriod. " alt="" coords="191,46,302,73"/>
+<area shape="rect" id="node9" href="$classNoiseFunc.html#ae1ff84e5317b8a79af66e11e1f9c16d2" title="Get the return of this noise function not modified by gridPeriod. " alt="" coords="177,97,316,123"/>
+<area shape="rect" id="node3" href="$classWorldChunk.html#a0428cb7066e8cb921b37a2ff7a2ba9dc" title="WorldChunk::generateChunk" alt="" coords="364,46,555,73"/>
+<area shape="rect" id="node4" href="$classWorld.html#a333864e5d6f9cc6bb8c57753ceb4e44f" title="Prepare Chunk. " alt="" coords="603,46,748,73"/>
+<area shape="rect" id="node5" href="$classWorld.html#a8d8b39ed30b8b25d17a633a27e1942c1" title="Spawn a chunk at x,y. " alt="" coords="796,46,936,73"/>
+<area shape="rect" id="node6" href="$classWorld.html#a3d897d6953d0876aeab57d3ca951bea2" title="World::generateWorld" alt="" coords="984,46,1132,73"/>
+<area shape="rect" id="node7" href="$classLocalWorldInteraction.html#abf8c3ee610ba923a2348437d0c2c6021" title="LocalWorldInteraction\l::loadWorld" alt="" coords="1196,5,1344,47"/>
+<area shape="rect" id="node8" href="$classNetworkedWorldInteraction.html#ac899a98641a9c1958154f4bde230c834" title="NetworkedWorldInteraction\l::loadWorld" alt="" coords="1180,71,1360,112"/>
 </map>

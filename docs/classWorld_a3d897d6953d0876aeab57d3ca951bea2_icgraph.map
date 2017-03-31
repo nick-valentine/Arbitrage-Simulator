@@ -1,4 +1,4 @@
 <map id="World::generateWorld" name="World::generateWorld">
-<area shape="rect" id="node2" href="$classGame.html#ad7a2b7ff71e3064a289680944a27a42e" title="Game::setup" alt="" coords="201,5,299,32"/>
-<area shape="rect" id="node3" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="347,5,397,32"/>
+<area shape="rect" id="node2" href="$classLocalWorldInteraction.html#abf8c3ee610ba923a2348437d0c2c6021" title="LocalWorldInteraction\l::loadWorld" alt="" coords="217,5,365,47"/>
+<area shape="rect" id="node3" href="$classNetworkedWorldInteraction.html#ac899a98641a9c1958154f4bde230c834" title="NetworkedWorldInteraction\l::loadWorld" alt="" coords="201,71,381,112"/>
 </map>

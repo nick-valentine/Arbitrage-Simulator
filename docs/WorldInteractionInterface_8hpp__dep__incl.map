@@ -1,0 +1,11 @@
+<map id="WorldInteractionInterface.hpp" name="WorldInteractionInterface.hpp">
+<area shape="rect" id="node2" href="$Camera_8hpp.html" title="Camera.hpp" alt="" coords="23,80,116,107"/>
+<area shape="rect" id="node3" href="$Game_8hpp.html" title="Game.hpp" alt="" coords="137,229,220,256"/>
+<area shape="rect" id="node7" href="$LocalWorldInteraction_8hpp.html" title="LocalWorldInteraction.hpp" alt="" coords="216,80,389,107"/>
+<area shape="rect" id="node8" href="$NetworkedWorldInteraction_8hpp.html" title="NetworkedWorldInteraction.hpp" alt="" coords="439,155,644,181"/>
+<area shape="rect" id="node6" href="$Camera_8cpp.html" title="Camera.cpp" alt="" coords="23,155,116,181"/>
+<area shape="rect" id="node4" href="$game_8cpp.html" title="game.cpp" alt="" coords="87,304,166,331"/>
+<area shape="rect" id="node5" href="$Game_8cpp.html" title="Game.cpp" alt="" coords="191,304,273,331"/>
+<area shape="rect" id="node10" href="$LocalWorldInteraction_8cpp.html" title="LocalWorldInteraction.cpp" alt="" coords="241,155,415,181"/>
+<area shape="rect" id="node9" href="$NetworkedWorldInteraction_8cpp.html" title="NetworkedWorldInteraction.cpp" alt="" coords="439,229,644,256"/>
+</map>

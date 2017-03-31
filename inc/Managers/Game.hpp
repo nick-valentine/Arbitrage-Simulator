@@ -4,22 +4,16 @@
 #include <iostream>
 #include <curses.h>
 #include <string>
-#include <sstream>
 #include <stdio.h>
-#include <boost/array.hpp>
-#include <boost/asio.hpp>
-#include <boost/lexical_cast.hpp>
 
-#include "Server.hpp"
-#include "ServerSession.hpp"
 #include "Camera.hpp"
 #include "ConfigLoader.hpp"
 #include "GameObjects/City.hpp"
 #include "GameObjects/Player.hpp"
-#include "GameObjects/World.hpp"
-#include "GameObjects/WorldChunk.hpp"
+#include "Services/WorldInteraction/WorldInteractionInterface.hpp"
+#include "Services/WorldInteraction/LocalWorldInteraction.hpp"
+#include "Services/WorldInteraction/NetworkedWorldInteraction.hpp"
 #include "Screen.hpp"
-#include "Networking/Connection.hpp"
 
 using boost::asio::ip::tcp;
 
@@ -31,6 +25,7 @@ class Game
 {
 public:
     Game();
+    ~Game();
     int setup();
     int run();
 private:
@@ -38,20 +33,14 @@ private:
     static const std::string defaultWorldName;
 
     void configure();
-    std::string version;
 
     Camera camera;
     Screen screen;
-    World world;
     Player player;
+    WorldInteractionInterface *worldProxy;
 
     int screenHeight;
     int screenWidth;
-
-    Connection connection;
-
-    std::string checkVersion();
-    int login();
 };
 
 #endif //MANAGER_GAME_HPP

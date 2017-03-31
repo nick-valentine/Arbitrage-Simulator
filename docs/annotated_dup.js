@@ -7,6 +7,8 @@ var annotated_dup =
     [ "ConfigLoader", "classConfigLoader.html", "classConfigLoader" ],
     [ "Connection", "classConnection.html", "classConnection" ],
     [ "Game", "classGame.html", "classGame" ],
+    [ "LocalWorldInteraction", "classLocalWorldInteraction.html", "classLocalWorldInteraction" ],
+    [ "NetworkedWorldInteraction", "classNetworkedWorldInteraction.html", "classNetworkedWorldInteraction" ],
     [ "NoiseFunc", "classNoiseFunc.html", "classNoiseFunc" ],
     [ "Player", "classPlayer.html", "classPlayer" ],
     [ "Screen", "classScreen.html", "classScreen" ],
@@ -14,5 +16,6 @@ var annotated_dup =
     [ "ServerSession", "classServerSession.html", "classServerSession" ],
     [ "Tile", "classTile.html", "classTile" ],
     [ "World", "classWorld.html", "classWorld" ],
-    [ "WorldChunk", "classWorldChunk.html", "classWorldChunk" ]
+    [ "WorldChunk", "classWorldChunk.html", "classWorldChunk" ],
+    [ "WorldInteractionInterface", "classWorldInteractionInterface.html", "classWorldInteractionInterface" ]
 ];

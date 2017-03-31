@@ -1,4 +1,4 @@
 <map id="Server" name="Server">
-<area shape="rect" id="node2" href="$classWorld.html" title="World. " alt="" coords="5,380,196,765"/>
-<area shape="rect" id="node3" href="$classNoiseFunc.html" title="Noise Function Based on Perlin Noise. " alt="" coords="29,5,173,288"/>
+<area shape="rect" id="node2" href="$classWorld.html" title="World. " alt="" coords="5,380,199,765"/>
+<area shape="rect" id="node3" href="$classNoiseFunc.html" title="Noise Function Based on Perlin Noise. " alt="" coords="30,5,174,288"/>
 </map>

@@ -22,6 +22,8 @@ makeObjFileStructure:
 	mkdir obj/Managers
 	mkdir obj/Helpers
 	mkdir obj/Networking
+	mkdir obj/Services
+	mkdir obj/Services/WorldInteraction
 
 rmObjFiles:
 	rm -rf obj/*
@@ -30,7 +32,7 @@ clean: rmObjFiles makeObjFileStructure
 
 rebuild: clean main
 
-server: server.o Managers/Server.o Managers/ServerSession.o ConfigLoader.o Screen.o Camera.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o GameObjects/Player.o ColorPallete.o WorldGen/NoiseFunc.o Helpers/String.o Networking/Connection.o 
+server: server.o Managers/Server.o Managers/ServerSession.o ConfigLoader.o Screen.o Camera.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o GameObjects/Player.o ColorPallete.o WorldGen/NoiseFunc.o Helpers/String.o Networking/Connection.o Services/WorldInteraction/LocalWorldInteraction.o
 	$(CC) \
 		obj/Camera.o \
 		obj/ColorPallete.o \
@@ -47,9 +49,10 @@ server: server.o Managers/Server.o Managers/ServerSession.o ConfigLoader.o Scree
 		obj/server.o \
 		obj/Helpers/String.o \
 		obj/Networking/Connection.o \
+		obj/Services/WorldInteraction/LocalWorldInteraction.o \
 		-o server $(LIBS)
 
-game: game.o Managers/Game.o ConfigLoader.o Camera.o Screen.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o GameObjects/Player.o ColorPallete.o WorldGen/NoiseFunc.o Helpers/String.o Networking/Connection.o
+game: game.o Managers/Game.o ConfigLoader.o Camera.o Screen.o GameObjects/City.o GameObjects/World.o GameObjects/WorldChunk.o GameObjects/Tile.o GameObjects/Player.o ColorPallete.o WorldGen/NoiseFunc.o Helpers/String.o Networking/Connection.o Services/WorldInteraction/LocalWorldInteraction.o Services/WorldInteraction/NetworkedWorldInteraction.o
 	$(CC) \
 		obj/Camera.o \
 		obj/ColorPallete.o \
@@ -65,6 +68,8 @@ game: game.o Managers/Game.o ConfigLoader.o Camera.o Screen.o GameObjects/City.o
 		obj/game.o \
 		obj/Helpers/String.o \
 		obj/Networking/Connection.o \
+		obj/Services/WorldInteraction/LocalWorldInteraction.o \
+		obj/Services/WorldInteraction/NetworkedWorldInteraction.o \
 		-o game $(LIBS) 
 
 game.o: src/game.cpp
@@ -117,3 +122,9 @@ Helpers/String.o: src/Helpers/String.cpp inc/Helpers/String.hpp
 
 Networking/Connection.o: src/Networking/Connection.cpp inc/Networking/Connection.hpp
 	$(CC) $(CFLAGS) src/Networking/Connection.cpp -o obj/Networking/Connection.o
+
+Services/WorldInteraction/LocalWorldInteraction.o: src/Services/WorldInteraction/LocalWorldInteraction.cpp inc/Services/WorldInteraction/LocalWorldInteraction.hpp inc/Services/WorldInteraction/WorldInteractionInterface.hpp
+	$(CC) $(CFLAGS) src/Services/WorldInteraction/LocalWorldInteraction.cpp -o obj/Services/WorldInteraction/LocalWorldInteraction.o
+
+Services/WorldInteraction/NetworkedWorldInteraction.o: src/Services/WorldInteraction/NetworkedWorldInteraction.cpp inc/Services/WorldInteraction/NetworkedWorldInteraction.hpp inc/Services/WorldInteraction/WorldInteractionInterface.hpp
+	$(CC) $(CFLAGS) src/Services/WorldInteraction/NetworkedWorldInteraction.cpp -o obj/Services/WorldInteraction/NetworkedWorldInteraction.o

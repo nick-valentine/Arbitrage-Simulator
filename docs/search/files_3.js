@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['noisefunc_2ecpp',['NoiseFunc.cpp',['../NoiseFunc_8cpp.html',1,'']]],
-  ['noisefunc_2ehpp',['NoiseFunc.hpp',['../NoiseFunc_8hpp.html',1,'']]]
+  ['localworldinteraction_2ecpp',['LocalWorldInteraction.cpp',['../LocalWorldInteraction_8cpp.html',1,'']]],
+  ['localworldinteraction_2ehpp',['LocalWorldInteraction.hpp',['../LocalWorldInteraction_8hpp.html',1,'']]]
 ];

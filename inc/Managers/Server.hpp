@@ -3,13 +3,13 @@
 
 #include <iostream>
 #include <string>
-#include <vector>
+#include <boost/ptr_container/ptr_vector.hpp>
 #include <sstream>
 #include <map>
 #include <chrono>
 #include <thread>
 
-#include "GameObjects/World.hpp"
+#include "Services/WorldInteraction/LocalWorldInteraction.hpp"
 #include "Managers/ServerSession.hpp"
 
 using boost::asio::ip::tcp;
@@ -35,15 +35,16 @@ private:
 
     int portNumber;
     std::string version;
+    std::string worldName;
 
     void initialize();
     void configure();
 
-    std::vector<ServerSession *> sessions;
+    boost::ptr_vector<ServerSession> sessions;
     void cleanupSessions();
     std::thread cleaner;
 
-    World world;
+    ServerSession::world_ptr world;
 };
 
 #endif //MANAGER_SERVER_HPP

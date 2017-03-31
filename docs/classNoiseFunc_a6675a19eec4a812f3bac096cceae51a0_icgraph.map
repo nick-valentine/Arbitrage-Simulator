@@ -9,6 +9,6 @@
 <area shape="rect" id="node8" href="$classWorld.html#a333864e5d6f9cc6bb8c57753ceb4e44f" title="Prepare Chunk. " alt="" coords="1288,56,1433,83"/>
 <area shape="rect" id="node9" href="$classWorld.html#a8d8b39ed30b8b25d17a633a27e1942c1" title="Spawn a chunk at x,y. " alt="" coords="1481,56,1621,83"/>
 <area shape="rect" id="node10" href="$classWorld.html#a3d897d6953d0876aeab57d3ca951bea2" title="World::generateWorld" alt="" coords="1669,56,1817,83"/>
-<area shape="rect" id="node11" href="$classGame.html#ad7a2b7ff71e3064a289680944a27a42e" title="Game::setup" alt="" coords="1865,56,1963,83"/>
-<area shape="rect" id="node12" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="2011,56,2061,83"/>
+<area shape="rect" id="node11" href="$classLocalWorldInteraction.html#abf8c3ee610ba923a2348437d0c2c6021" title="LocalWorldInteraction\l::loadWorld" alt="" coords="1881,15,2029,57"/>
+<area shape="rect" id="node12" href="$classNetworkedWorldInteraction.html#ac899a98641a9c1958154f4bde230c834" title="NetworkedWorldInteraction\l::loadWorld" alt="" coords="1865,81,2045,122"/>
 </map>
