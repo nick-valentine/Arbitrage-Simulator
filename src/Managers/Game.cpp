@@ -21,6 +21,7 @@ int Game::setup()
 
     this->camera = Camera(0, 0);
     this->screen = Screen();
+    this->screen.init();
 
     this->player = Player("Bob", 0, 0);
 
@@ -31,6 +32,18 @@ int Game::setup()
 
 int Game::run()
 {
+    refresh();
+
+    int height, width;
+    getmaxyx(stdscr, height, width);
+    Window consoleWin = Window(
+        this->screen.getHeight() + 3,
+        0,
+        height - (this->screen.getHeight() + 3),
+        0 
+    );
+    consoleWin.putstr(1, 1, "Hello, World");
+
     while(true) {
         int pos_x, pos_y;
         player.getYX(pos_y, pos_x);
@@ -40,19 +53,20 @@ int Game::run()
         this->worldProxy->movePlayerToCoordinate(pos_y, pos_x);
         this->camera.render(this->screen, *this->worldProxy, this->player);
         this->screen.render();
+        consoleWin.render();
         this->screen.clear();
-        unsigned int input = getch();
+        unsigned int input = this->screen.getCh();
         switch(input) {
-            case KEY_UP:
+            case 119:
                 this->player.move(-1,0);
                 break;
-            case KEY_DOWN:
+            case 115:
                 this->player.move(1,0);
                 break;
-            case KEY_LEFT:
+            case 97:
                 this->player.move(0,-1);
                 break;
-            case KEY_RIGHT:
+            case 100:
                 this->player.move(0,1);
                 break;
             case 27: //ESC

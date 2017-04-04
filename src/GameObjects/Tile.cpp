@@ -12,14 +12,14 @@ const int Tile::TilesWhichMayHaveCities[Tile::allowedCityCount] =
 
 const Tile::TileType Tile::Tiles[Tile::TypeCount] = 
 { 
-    {'-', 5, 30, 60},  //plains
-    {'^', 1, 50, 128}, //mountains
-    {'#', 2, 0,  40},  //water
-    {'#', 3, 20, 40},  //swamps
-    {'C', 4, 0,  0},   //Cities
-    {'n', 5, 45, 80},  //Hills
-    {'_', 0, 20, 30},  //Deserts
-    {'T', 3, 45, 75}   //Forests
+    {'-', 6, 30, 60},  //plains
+    {'^', 2, 50, 128}, //mountains
+    {'#', 3, 0,  40},  //water
+    {'#', 4, 20, 40},  //swamps
+    {'C', 5, 0,  0},   //Cities
+    {'n', 6, 45, 80},  //Hills
+    {'_', 1, 20, 30},  //Deserts
+    {'T', 4, 45, 75}   //Forests
 };
 
 ColorPallete Tile::tilePallete = ColorPallete();
@@ -86,6 +86,7 @@ Tile::Tile(std::stringstream *ss)
 void Tile::fromStringStream(std::stringstream *ss)
 {
     (*ss)>>myType>>myElevation>>hasBeenVisible;
+    Tile::init();
 }
 
 void Tile::toStringStream(std::stringstream *ss)

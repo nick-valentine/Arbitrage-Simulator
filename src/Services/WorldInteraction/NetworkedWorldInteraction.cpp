@@ -27,7 +27,6 @@ void NetworkedWorldInteraction::draw(Screen &screen, int playerY, int playerX)
     for (int i = 0; i < this->chunks.size(); ++i) {
         for (int j = 0; j < this->chunks[i].size(); ++j) {
             if (this->hasChunkLoaded(i, j)) {
-                std::cerr<<"drawing chunk "<<i<<" "<<j<<std::endl;
                 this->chunks[i][j].draw(screen, playerY, playerX);
             }
         }
@@ -82,7 +81,6 @@ bool NetworkedWorldInteraction::handShake()
 std::string NetworkedWorldInteraction::checkVersion()
 {
     std::string message = boost::lexical_cast<std::string>(ServerSession::VERSION_CHECK) + " " + this->version + "\n";
-    std::cerr<<message;
     this->connection.write(message);
     std::string response = this->connection.read();
     std::stringstream ss;
@@ -102,7 +100,6 @@ std::string NetworkedWorldInteraction::checkVersion()
 int NetworkedWorldInteraction::login()
 {
     std::string message = boost::lexical_cast<std::string>(ServerSession::LOGIN) + " Username Password\n";
-    std::cerr<<message;
     this->connection.write(message);
 }
 
@@ -111,8 +108,8 @@ int NetworkedWorldInteraction::fetchChunk(int chunkY, int chunkX)
     std::string message = 
         boost::lexical_cast<std::string>(ServerSession::REQUEST_CHUNK) + " " + 
         boost::lexical_cast<std::string>(chunkY) + " " + 
-        boost::lexical_cast<std::string>(chunkX) + "\n";
-    std::cerr<<message;
+        boost::lexical_cast<std::string>(chunkX) + "\n"
+    ;
     this->connection.write(message);
     std::string response = this->connection.read();
     std::stringstream ss;

@@ -14,6 +14,7 @@
 #include "Services/WorldInteraction/LocalWorldInteraction.hpp"
 #include "Services/WorldInteraction/NetworkedWorldInteraction.hpp"
 #include "Screen.hpp"
+#include "Window.hpp"
 
 using boost::asio::ip::tcp;
 

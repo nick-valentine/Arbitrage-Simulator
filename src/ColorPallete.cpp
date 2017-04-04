@@ -16,7 +16,7 @@ void ColorPallete::setCurrent()
 {
     if(has_colors() && can_change_color()) {
         for(unsigned int i = 0; i < top; ++i) {
-            init_pair(i, fg[i], bg[i]);
+            init_pair(i + 1, fg[i], bg[i]);
         }
     }
 }
