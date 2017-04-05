@@ -5,14 +5,14 @@
 #include <curses.h>
 #include <vector>
 
-#include "Window.hpp"
+#include "Window/Window.hpp"
 
 /**
- * Screen.
+ * GameWindow.
  * Buffer and wrapper for ncurses screen in case this is to be ported to a
  * system where ncurses is unavailable, or a gui is made.
  */
-class Screen : private Window
+class GameWindow : public Window
 {
 public:
     struct TextElement {
@@ -21,21 +21,18 @@ public:
         char c;
     };
 
-    Screen();
-    ~Screen();
+    GameWindow();
+    ~GameWindow();
 
     void init();
+    void resize(int height, int width);
 
     void put(unsigned int colorPair, unsigned int layer, char c, int y, int x);
     void put(TextElement c, int y, int x);
-    int getCh();
 
     void clear();
 
     void render();
-
-    int getHeight();
-    int getWidth();
 
 private:
     std::vector< std::vector< TextElement > >ScreenBuffer;

@@ -1,16 +1,16 @@
 #ifndef WORLD_HPP
 #define WORLD_HPP
 
-#include "ConfigLoader.hpp"
-#include "GameObjects/WorldChunk.hpp"
-#include "GameObjects/Player.hpp"
-#include "Screen.hpp"
-#include "WorldGen/NoiseFunc.hpp"
-
 #include <vector>
 #include <string>
 #include <sstream>
 #include <time.h>
+
+#include "ConfigLoader.hpp"
+#include "GameObjects/WorldChunk.hpp"
+#include "GameObjects/Player.hpp"
+#include "Window/GameWindow.hpp"
+#include "WorldGen/NoiseFunc.hpp"
 
 /**
  * World.
@@ -31,7 +31,7 @@ public:
 
     void generateWorld();
 
-    void draw(Screen &screen, int playerY, int playerX);
+    void draw(GameWindow &window, int playerY, int playerX);
 
     static int getWorldHeight();
     static int getWorldWidth();

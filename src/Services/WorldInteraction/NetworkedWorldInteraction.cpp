@@ -17,17 +17,17 @@ void NetworkedWorldInteraction::loadWorld()
     }
 }
 
-void NetworkedWorldInteraction::draw(Screen &screen)
+void NetworkedWorldInteraction::draw(GameWindow &window)
 {
-    this->draw(screen, playerY, playerX);
+    this->draw(window, playerY, playerX);
 }
 
-void NetworkedWorldInteraction::draw(Screen &screen, int playerY, int playerX)
+void NetworkedWorldInteraction::draw(GameWindow &window, int playerY, int playerX)
 {
     for (int i = 0; i < this->chunks.size(); ++i) {
         for (int j = 0; j < this->chunks[i].size(); ++j) {
             if (this->hasChunkLoaded(i, j)) {
-                this->chunks[i][j].draw(screen, playerY, playerX);
+                this->chunks[i][j].draw(window, playerY, playerX);
             }
         }
     }

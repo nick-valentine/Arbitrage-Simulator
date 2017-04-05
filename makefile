@@ -19,6 +19,7 @@ docs: all
 makeObjFileStructure:
 	mkdir obj/GameObjects
 	mkdir obj/WorldGen
+	mkdir obj/Window
 	mkdir obj/Managers
 	mkdir obj/Helpers
 	mkdir obj/Networking
@@ -32,8 +33,7 @@ clean: rmObjFiles makeObjFileStructure
 
 rebuild: clean main
 
-server: obj/server.o obj/Managers/Server.o obj/Managers/ServerSession.o obj/ConfigLoader.o obj/Screen.o obj/Camera.o obj/GameObjects/City.o obj/GameObjects/World.o obj/GameObjects/WorldChunk.o obj/GameObjects/Tile.o obj/GameObjects/Player.o obj/ColorPallete.o obj/WorldGen/NoiseFunc.o obj/Helpers/String.o obj/Networking/Connection.o obj/Services/WorldInteraction/LocalWorldInteraction.o obj/Window.o
-
+server: obj/server.o obj/Managers/Server.o obj/Managers/ServerSession.o obj/ConfigLoader.o obj/Window/GameWindow.o obj/Camera.o obj/GameObjects/City.o obj/GameObjects/World.o obj/GameObjects/WorldChunk.o obj/GameObjects/Tile.o obj/GameObjects/Player.o obj/ColorPallete.o obj/WorldGen/NoiseFunc.o obj/Helpers/String.o obj/Networking/Connection.o obj/Services/WorldInteraction/LocalWorldInteraction.o obj/Window/Window.o
 	$(CC) \
 		obj/Camera.o \
 		obj/ColorPallete.o \
@@ -45,8 +45,8 @@ server: obj/server.o obj/Managers/Server.o obj/Managers/ServerSession.o obj/Conf
 		obj/GameObjects/WorldChunk.o \
 		obj/Managers/Server.o \
 		obj/Managers/ServerSession.o \
-		obj/Screen.o \
-		obj/Window.o \
+		obj/Window/Window.o \
+		obj/Window/GameWindow.o \
 		obj/WorldGen/NoiseFunc.o \
 		obj/server.o \
 		obj/Helpers/String.o \
@@ -54,7 +54,7 @@ server: obj/server.o obj/Managers/Server.o obj/Managers/ServerSession.o obj/Conf
 		obj/Services/WorldInteraction/LocalWorldInteraction.o \
 		-o server $(LIBS)
 
-game: obj/game.o obj/Managers/Game.o obj/ConfigLoader.o obj/Camera.o obj/Screen.o obj/GameObjects/City.o obj/GameObjects/World.o obj/GameObjects/WorldChunk.o obj/GameObjects/Tile.o obj/GameObjects/Player.o obj/ColorPallete.o obj/WorldGen/NoiseFunc.o obj/Helpers/String.o obj/Networking/Connection.o obj/Services/WorldInteraction/LocalWorldInteraction.o obj/Services/WorldInteraction/NetworkedWorldInteraction.o obj/Window.o
+game: obj/game.o obj/Managers/Game.o obj/ConfigLoader.o obj/Camera.o obj/Window/GameWindow.o obj/GameObjects/City.o obj/GameObjects/World.o obj/GameObjects/WorldChunk.o obj/GameObjects/Tile.o obj/GameObjects/Player.o obj/ColorPallete.o obj/WorldGen/NoiseFunc.o obj/Helpers/String.o obj/Networking/Connection.o obj/Services/WorldInteraction/LocalWorldInteraction.o obj/Services/WorldInteraction/NetworkedWorldInteraction.o obj/Window/Window.o
 	$(CC) \
 		obj/Camera.o \
 		obj/ColorPallete.o \
@@ -65,8 +65,8 @@ game: obj/game.o obj/Managers/Game.o obj/ConfigLoader.o obj/Camera.o obj/Screen.
 		obj/GameObjects/World.o \
 		obj/GameObjects/WorldChunk.o \
 		obj/Managers/Game.o \
-		obj/Screen.o \
-		obj/Window.o \
+		obj/Window/GameWindow.o \
+		obj/Window/Window.o \
 		obj/WorldGen/NoiseFunc.o \
 		obj/game.o \
 		obj/Helpers/String.o \
@@ -96,8 +96,8 @@ obj/ConfigLoader.o: src/ConfigLoader.cpp inc/ConfigLoader.hpp
 obj/Camera.o: src/Camera.cpp inc/Camera.hpp
 	$(CC) $(CFLAGS) src/Camera.cpp -o obj/Camera.o
 
-obj/Screen.o: src/Screen.cpp inc/Screen.hpp
-	$(CC) $(CFLAGS) src/Screen.cpp -o obj/Screen.o
+obj/Window/GameWindow.o: src/Window/GameWindow.cpp inc/Window/GameWindow.hpp inc/Window/Window.hpp
+	$(CC) $(CFLAGS) src/Window/GameWindow.cpp -o obj/Window/GameWindow.o
 
 obj/ColorPallete.o: src/ColorPallete.cpp inc/ColorPallete.hpp
 	$(CC) $(CFLAGS) src/ColorPallete.cpp -o obj/ColorPallete.o
@@ -132,5 +132,5 @@ obj/Services/WorldInteraction/LocalWorldInteraction.o: src/Services/WorldInterac
 obj/Services/WorldInteraction/NetworkedWorldInteraction.o: src/Services/WorldInteraction/NetworkedWorldInteraction.cpp inc/Services/WorldInteraction/NetworkedWorldInteraction.hpp inc/Services/WorldInteraction/WorldInteractionInterface.hpp
 	$(CC) $(CFLAGS) src/Services/WorldInteraction/NetworkedWorldInteraction.cpp -o obj/Services/WorldInteraction/NetworkedWorldInteraction.o
 
-obj/Window.o: src/Window.cpp inc/Window.hpp
-	$(CC) $(CFLAGS) src/Window.cpp -o obj/Window.o
+obj/Window/Window.o: src/Window/Window.cpp inc/Window/Window.hpp
+	$(CC) $(CFLAGS) src/Window/Window.cpp -o obj/Window/Window.o

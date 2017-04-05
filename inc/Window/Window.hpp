@@ -12,16 +12,30 @@ public:
     Window();
     Window(int y, int x, int height, int width);
     ~Window();
+    void init();
 
     void putstr(int y, int x, std::string str);
     void render();
+    void resize(int height, int width);
+    void move(int y, int x);
 
     int getCh();
 
     int addSubWindow(int y, int x, int height, int width);
     Window *getSubWindow(int index);
+
+    int getY();
+    int getX();
+    int getHeight();
+    int getWidth();
 protected:
+    static const int borderWidth;
     WINDOW *win; 
+
+    int y;
+    int x;
+    int height;
+    int width;
 };
 
 #endif //WINDOW_HPP

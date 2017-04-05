@@ -10,7 +10,7 @@
 
 #include "GameObjects/AbstractGameObject.hpp"
 #include "ColorPallete.hpp"
-#include "Screen.hpp"
+#include "Window/GameWindow.hpp"
 
 /**
  * Tile.
@@ -77,14 +77,14 @@ public:
     /**
      * Draw this tile.
      *
-     * @param  Screen &screen buffer to draw the tile on to
+     * @param  GameWindow &window buffer to draw the tile on to
      * @param  int top Y coordinate to draw the tile on
      * @param  int left X coordinate to draw the tile on
      * @param  bool cull if the player has never seen this tile, do not draw
      *                      it, If the player has seen this tile, draw it in
      *                      greyscale.
      */
-    void drawAt(Screen &screen, int top, int left, bool cull);
+    void drawAt(GameWindow &window, int top, int left, bool cull);
 
     int getElevation() const;
     int getType() const;

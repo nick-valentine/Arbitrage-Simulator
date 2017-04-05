@@ -13,8 +13,8 @@
 #include "Services/WorldInteraction/WorldInteractionInterface.hpp"
 #include "Services/WorldInteraction/LocalWorldInteraction.hpp"
 #include "Services/WorldInteraction/NetworkedWorldInteraction.hpp"
-#include "Screen.hpp"
-#include "Window.hpp"
+#include "Window/Window.hpp"
+#include "Window/GameWindow.hpp"
 
 using boost::asio::ip::tcp;
 
@@ -36,7 +36,7 @@ private:
     void configure();
 
     Camera camera;
-    Screen screen;
+    GameWindow gameWindow;
     Player player;
     WorldInteractionInterface *worldProxy;
 

@@ -4,7 +4,7 @@
 #include <string>
 
 #include "GameObjects/World.hpp"
-#include "Screen.hpp"
+#include "Window/GameWindow.hpp"
 #include "Services/WorldInteraction/WorldInteractionInterface.hpp"
 
 /**
@@ -17,7 +17,7 @@ public:
     LocalWorldInteraction(std::string worldName);
 
     void loadWorld();
-    void draw(Screen &screen);
+    void draw(GameWindow &window);
     void movePlayerToCoordinate(int y, int x);
     WorldChunk getChunk(int y, int x) const;
 protected:

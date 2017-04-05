@@ -20,8 +20,8 @@ int Game::setup()
     this->configure();
 
     this->camera = Camera(0, 0);
-    this->screen = Screen();
-    this->screen.init();
+    this->gameWindow = GameWindow();
+    this->gameWindow.init();
 
     this->player = Player("Bob", 0, 0);
 
@@ -37,12 +37,15 @@ int Game::run()
     int height, width;
     getmaxyx(stdscr, height, width);
     Window consoleWin = Window(
-        this->screen.getHeight() + 3,
+        this->gameWindow.getHeight() + 2,
         0,
-        height - (this->screen.getHeight() + 3),
-        0 
+        height - (this->gameWindow.getHeight() + 2),
+        this->gameWindow.getWidth()
     );
-    consoleWin.putstr(1, 1, "Hello, World");
+    consoleWin.init();
+    consoleWin.putstr(consoleWin.getHeight() / 2, consoleWin.getWidth() / 2,
+        "This window is at " + boost::lexical_cast<std::string>(this->gameWindow.getHeight() + 2) + " and is " + boost::lexical_cast<std::string>(height - (this->gameWindow.getHeight() + 3)) + " cols tall"
+    );
 
     while(true) {
         int pos_x, pos_y;
@@ -51,11 +54,11 @@ int Game::run()
         //move camera to player
         this->camera.moveTo(pos_y, pos_x);
         this->worldProxy->movePlayerToCoordinate(pos_y, pos_x);
-        this->camera.render(this->screen, *this->worldProxy, this->player);
-        this->screen.render();
+        this->camera.render(this->gameWindow, *this->worldProxy, this->player);
+        this->gameWindow.render();
         consoleWin.render();
-        this->screen.clear();
-        unsigned int input = this->screen.getCh();
+        this->gameWindow.clear();
+        unsigned int input = this->gameWindow.getCh();
         switch(input) {
             case 119:
                 this->player.move(-1,0);
