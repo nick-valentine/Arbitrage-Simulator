@@ -15,7 +15,7 @@
 #include "GameObjects/World.hpp"
 #include "Managers/ServerSession.hpp"
 #include "Networking/Connection.hpp"
-#include "Window/GameWindow.hpp"
+#include "Window/Window.hpp"
 #include "Services/WorldInteraction/LocalWorldInteraction.hpp"
 #include "Services/WorldInteraction/WorldInteractionInterface.hpp"
 
@@ -36,8 +36,8 @@ public:
     NetworkedWorldInteraction(std::string server, std::string port);
 
     void loadWorld();
-    void draw(GameWindow &window);
-    void draw(GameWindow &window, int playerY, int playerX);
+    void draw(Window::window_ptr window);
+    void draw(Window::window_ptr window, int playerY, int playerX);
     void movePlayerToCoordinate(int y, int x);
 private:
     std::string version;

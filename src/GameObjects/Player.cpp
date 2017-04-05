@@ -43,13 +43,13 @@ void Player::getYX(int &y, int &x)
     x = this->x;
 }
 
-void Player::draw(GameWindow &window, int offsetTop, int offsetLeft)
+void Player::draw(Window::window_ptr window, int offsetTop, int offsetLeft)
 {
-    window.put(
+    window->put(
         /* color pair */ 0, 
         /* layer */ 10,
         Player::representation,
-        window.getHeight() / 2,
-        window.getWidth() / 2 
+        window->getHeight() / 2,
+        window->getWidth() / 2 
     );
 }

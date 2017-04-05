@@ -9,7 +9,7 @@
 #include "ConfigLoader.hpp"
 #include "GameObjects/WorldChunk.hpp"
 #include "GameObjects/Player.hpp"
-#include "Window/GameWindow.hpp"
+#include "Window/Window.hpp"
 #include "WorldGen/NoiseFunc.hpp"
 
 /**
@@ -31,7 +31,7 @@ public:
 
     void generateWorld();
 
-    void draw(GameWindow &window, int playerY, int playerX);
+    void draw(Window::window_ptr window, int playerY, int playerX);
 
     static int getWorldHeight();
     static int getWorldWidth();

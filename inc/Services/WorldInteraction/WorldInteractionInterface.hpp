@@ -2,7 +2,7 @@
 #define WORLD_INTERACTION_INTERFACE
 
 #include "GameObjects/World.hpp"
-#include "Window/GameWindow.hpp"
+#include "Window/Window.hpp"
 
 /**
  * Class to proxy all interactions with the world through.
@@ -14,7 +14,7 @@ class WorldInteractionInterface
 {
 public:
     virtual void loadWorld() = 0;
-    virtual void draw(GameWindow &window) = 0;
+    virtual void draw(Window::window_ptr window) = 0;
     virtual void movePlayerToCoordinate(int y, int x) = 0;
 private:
 };

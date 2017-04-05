@@ -17,7 +17,7 @@
 #include "GameObjects/City.hpp"
 #include "GameObjects/Tile.hpp"
 #include "Globals.hpp"
-#include "Window/GameWindow.hpp"
+#include "Window/Window.hpp"
 #include "WorldGen/NoiseFunc.hpp"
 
 class WorldChunk : public AbstractGameObject
@@ -46,7 +46,7 @@ public:
         NoiseFunc *elevationSkewNoise
     );
 
-    void draw(GameWindow &window, int playerY, int playerX);
+    void draw(Window::window_ptr window, int playerY, int playerX);
 
     static unsigned int getChunkWidth();
     static unsigned int getChunkHeight();

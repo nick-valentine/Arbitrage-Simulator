@@ -25,10 +25,9 @@ public:
     void setSubWindowMinHeight(int height);
 
     void render();
+    void updateScreenSize();
 private:
     const static float screenRatioForMainWindow;
-
-    void updateScreenSize();
 
     Window::window_ptr mainWindow;
     Window::window_ptr subWindow;

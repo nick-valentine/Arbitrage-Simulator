@@ -69,13 +69,14 @@ int Game::run()
         this->camera.moveTo(pos_y, pos_x);
         this->worldProxy->movePlayerToCoordinate(pos_y, pos_x);
         this->camera.render(
-            *boost::dynamic_pointer_cast<GameWindow>(this->gameWindow), 
+            this->gameWindow, 
             *this->worldProxy, 
             this->player
         );
-        this->windowLayout.render();
-        //this->gameWindow.render();
-        //this->consoleWindow.render();
+        //this->windowLayout.render();
+        this->windowLayout.updateScreenSize();
+        this->gameWindow->render();
+        this->consoleWindow->render();
         this->gameWindow->clear();
         input = this->gameWindow->getCh();
         switch(input) {

@@ -34,7 +34,7 @@ int Camera::getX() const
     return this->pos_x;
 }
 
-void Camera::render(GameWindow &window, WorldInteractionInterface &worldProxy, Player &player)
+void Camera::render(Window::window_ptr window, WorldInteractionInterface &worldProxy, Player &player)
 {
     worldProxy.draw(window);
     player.draw(window, this->pos_y, this->pos_x);

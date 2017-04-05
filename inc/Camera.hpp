@@ -6,7 +6,7 @@
 #include <vector>
 
 #include "Services/WorldInteraction/WorldInteractionInterface.hpp"
-#include "Window/GameWindow.hpp"
+#include "Window/Window.hpp"
 #include "GameObjects/Player.hpp"
 
 /**
@@ -30,7 +30,7 @@ public:
      * @param  WorldInteractionInterface  &world
      * @param  Player &player
      */
-    void render(GameWindow &window, WorldInteractionInterface &worldProxy, Player &player);
+    void render(Window::window_ptr window, WorldInteractionInterface &worldProxy, Player &player);
 private:
     unsigned int pos_y;
     unsigned int pos_x;

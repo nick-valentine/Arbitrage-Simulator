@@ -17,7 +17,7 @@ void LocalWorldInteraction::loadWorld()
     this->generateWorld();
 }
 
-void LocalWorldInteraction::draw(GameWindow &window)
+void LocalWorldInteraction::draw(Window::window_ptr window)
 {
     World::draw(window, this->playerY, this->playerX);
 }

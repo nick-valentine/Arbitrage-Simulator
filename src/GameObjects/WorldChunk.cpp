@@ -151,11 +151,11 @@ void WorldChunk::organizeTiles(std::vector<Tile> tiles)
 }
 
 
-void WorldChunk::draw(GameWindow &window, int playerY, int playerX)
+void WorldChunk::draw(Window::window_ptr window, int playerY, int playerX)
 {
     int currX, currY;
-    int halfHeight = window.getHeight() / 2;
-    int halfWidth = window.getWidth() / 2;
+    int halfHeight = window->getHeight() / 2;
+    int halfWidth = window->getWidth() / 2;
     Tile::setPallete();
     for(unsigned int i = 0; i < WorldChunk::chunk_height; ++i) {
         for(unsigned int j = 0; j < WorldChunk::chunk_width; ++j) {

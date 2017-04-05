@@ -116,10 +116,10 @@ bool Tile::convertToCity()
     return false;
 }
 
-void Tile::drawAt(GameWindow &window, int top, int left, bool cull)
+void Tile::drawAt(Window::window_ptr window, int top, int left, bool cull)
 {
     if(!cull) {
-        window.put(
+        window->put(
             Tile::Tiles[myType].colorPair,
             /* layer */ 1,
             Tile::Tiles[myType].tile,
@@ -128,7 +128,7 @@ void Tile::drawAt(GameWindow &window, int top, int left, bool cull)
         ); 
         this->hasBeenVisible = true;
     } else if(this->hasBeenVisible) {
-        window.put(
+        window->put(
             /* White on Black */ 5,
             /* layer */ 1,
             Tile::Tiles[myType].tile,
