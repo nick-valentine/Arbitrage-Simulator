@@ -10,21 +10,8 @@ GameWindow::~GameWindow()
 
 void GameWindow::init()
 {
-    getmaxyx(stdscr, this->height, this->width);
-    this->height = this->height * 0.80; //only allow this screen to take 80% of the viewport
-    this->width-=Window::borderWidth;
-
-    this->resize(height, width);
-
-    this->win = newwin(height, width, 1, 1);
-    keypad(this->win, TRUE);
-    wborder(this->win, '|', '|', '-', '-', '+', '+', '+', '+');
-    wborder(stdscr, '|', '|', '-', '-', '+', '+', '+', '+');
-    if (this->win == NULL) {
-        std::cerr<<"Could not initialize window"<<std::endl;
-        exit(1);
-    }
-    keypad(this->win, TRUE);
+    this->resize(0, 0);
+    Window::init();
 }
 
 void GameWindow::resize(int height, int width)
@@ -35,9 +22,9 @@ void GameWindow::resize(int height, int width)
     templ.c = ' ';
 
     ScreenBuffer.clear(); 
-    for(unsigned int i = 0; i < height - Window::borderWidth; ++i) {
+    for(int i = 0; i < height - Window::borderWidth; ++i) {
         ScreenBuffer.push_back(std::vector< TextElement >());
-        for(unsigned int j = 0; j < width - Window::borderWidth; ++j) {
+        for(int j = 0; j < width - Window::borderWidth; ++j) {
             ScreenBuffer[i].push_back(templ);
         }
     }

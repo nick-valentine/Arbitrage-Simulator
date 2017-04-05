@@ -5,29 +5,28 @@
 #include <curses.h>
 #include <string>
 #include <vector>
+#include <boost/shared_ptr.hpp>
 
 class Window
 {
 public:
+    typedef boost::shared_ptr<Window> window_ptr;
     Window();
     Window(int y, int x, int height, int width);
-    ~Window();
-    void init();
+    virtual ~Window();
+    virtual void init();
 
-    void putstr(int y, int x, std::string str);
-    void render();
-    void resize(int height, int width);
-    void move(int y, int x);
+    virtual void putstr(int y, int x, std::string str);
+    virtual void render();
+    virtual void resize(int height, int width);
+    virtual void move(int y, int x);
 
-    int getCh();
+    virtual int getCh();
 
-    int addSubWindow(int y, int x, int height, int width);
-    Window *getSubWindow(int index);
-
-    int getY();
-    int getX();
-    int getHeight();
-    int getWidth();
+    virtual int getY();
+    virtual int getX();
+    virtual int getHeight();
+    virtual int getWidth();
 protected:
     static const int borderWidth;
     WINDOW *win; 

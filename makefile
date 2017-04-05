@@ -25,6 +25,7 @@ makeObjFileStructure:
 	mkdir obj/Networking
 	mkdir obj/Services
 	mkdir obj/Services/WorldInteraction
+	mkdir obj/Services/WindowLayout
 
 rmObjFiles:
 	rm -rf obj/*
@@ -54,7 +55,7 @@ server: obj/server.o obj/Managers/Server.o obj/Managers/ServerSession.o obj/Conf
 		obj/Services/WorldInteraction/LocalWorldInteraction.o \
 		-o server $(LIBS)
 
-game: obj/game.o obj/Managers/Game.o obj/ConfigLoader.o obj/Camera.o obj/Window/GameWindow.o obj/GameObjects/City.o obj/GameObjects/World.o obj/GameObjects/WorldChunk.o obj/GameObjects/Tile.o obj/GameObjects/Player.o obj/ColorPallete.o obj/WorldGen/NoiseFunc.o obj/Helpers/String.o obj/Networking/Connection.o obj/Services/WorldInteraction/LocalWorldInteraction.o obj/Services/WorldInteraction/NetworkedWorldInteraction.o obj/Window/Window.o
+game: obj/game.o obj/Managers/Game.o obj/ConfigLoader.o obj/Camera.o obj/Window/GameWindow.o obj/GameObjects/City.o obj/GameObjects/World.o obj/GameObjects/WorldChunk.o obj/GameObjects/Tile.o obj/GameObjects/Player.o obj/ColorPallete.o obj/WorldGen/NoiseFunc.o obj/Helpers/String.o obj/Networking/Connection.o obj/Services/WorldInteraction/LocalWorldInteraction.o obj/Services/WorldInteraction/NetworkedWorldInteraction.o obj/Window/Window.o obj/Services/WindowLayout/GameWindowLayout.o
 	$(CC) \
 		obj/Camera.o \
 		obj/ColorPallete.o \
@@ -73,6 +74,7 @@ game: obj/game.o obj/Managers/Game.o obj/ConfigLoader.o obj/Camera.o obj/Window/
 		obj/Networking/Connection.o \
 		obj/Services/WorldInteraction/LocalWorldInteraction.o \
 		obj/Services/WorldInteraction/NetworkedWorldInteraction.o \
+		obj/Services/WindowLayout/GameWindowLayout.o \
 		-o game $(LIBS) 
 
 obj/game.o: src/game.cpp
@@ -134,3 +136,6 @@ obj/Services/WorldInteraction/NetworkedWorldInteraction.o: src/Services/WorldInt
 
 obj/Window/Window.o: src/Window/Window.cpp inc/Window/Window.hpp
 	$(CC) $(CFLAGS) src/Window/Window.cpp -o obj/Window/Window.o
+
+obj/Services/WindowLayout/GameWindowLayout.o: src/Services/WindowLayout/GameWindowLayout.cpp inc/Services/WindowLayout/GameWindowLayout.hpp inc/Window/Window.hpp
+	$(CC) $(CFLAGS) src/Services/WindowLayout/GameWindowLayout.cpp -o obj/Services/WindowLayout/GameWindowLayout.o

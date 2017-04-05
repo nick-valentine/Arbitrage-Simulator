@@ -20,8 +20,17 @@ int Game::setup()
     this->configure();
 
     this->camera = Camera(0, 0);
-    this->gameWindow = GameWindow();
-    this->gameWindow.init();
+    this->gameWindow = Window::window_ptr(new GameWindow());
+    this->gameWindow->init();
+
+    this->consoleWindow = Window::window_ptr(new Window());
+    this->consoleWindow->init();
+
+    this->windowLayout.addWindow("GameWindow", this->gameWindow);
+    this->windowLayout.setMainWindow("GameWindow");
+
+    this->windowLayout.addWindow("ConsoleWindow", this->consoleWindow);
+    this->windowLayout.setSubWindow("ConsoleWindow");
 
     this->player = Player("Bob", 0, 0);
 
@@ -35,30 +44,40 @@ int Game::run()
     refresh();
 
     int height, width;
-    getmaxyx(stdscr, height, width);
-    Window consoleWin = Window(
-        this->gameWindow.getHeight() + 2,
-        0,
-        height - (this->gameWindow.getHeight() + 2),
-        this->gameWindow.getWidth()
-    );
-    consoleWin.init();
-    consoleWin.putstr(consoleWin.getHeight() / 2, consoleWin.getWidth() / 2,
-        "This window is at " + boost::lexical_cast<std::string>(this->gameWindow.getHeight() + 2) + " and is " + boost::lexical_cast<std::string>(height - (this->gameWindow.getHeight() + 3)) + " cols tall"
+    this->consoleWindow->putstr(
+        this->consoleWindow->getHeight() / 2, 
+        this->consoleWindow->getWidth() / 2,
+        "This window is at " + 
+        boost::lexical_cast<std::string>(this->consoleWindow->getY()) + 
+        " and is " + 
+        boost::lexical_cast<std::string>(this->consoleWindow->getHeight()) + 
+        " cols tall"
     );
 
+    unsigned int input = 0;
     while(true) {
+        this->consoleWindow->putstr(
+            this->consoleWindow->getHeight() / 2, 
+            this->consoleWindow->getWidth() / 2,
+            "Your last input was " +
+            boost::lexical_cast<std::string>(input)
+        );
         int pos_x, pos_y;
         player.getYX(pos_y, pos_x);
 
         //move camera to player
         this->camera.moveTo(pos_y, pos_x);
         this->worldProxy->movePlayerToCoordinate(pos_y, pos_x);
-        this->camera.render(this->gameWindow, *this->worldProxy, this->player);
-        this->gameWindow.render();
-        consoleWin.render();
-        this->gameWindow.clear();
-        unsigned int input = this->gameWindow.getCh();
+        this->camera.render(
+            *boost::dynamic_pointer_cast<GameWindow>(this->gameWindow), 
+            *this->worldProxy, 
+            this->player
+        );
+        this->windowLayout.render();
+        //this->gameWindow.render();
+        //this->consoleWindow.render();
+        boost::dynamic_pointer_cast<GameWindow>(this->gameWindow)->clear();
+        input = this->gameWindow->getCh();
         switch(input) {
             case 119:
                 this->player.move(-1,0);

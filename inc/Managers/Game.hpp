@@ -13,6 +13,7 @@
 #include "Services/WorldInteraction/WorldInteractionInterface.hpp"
 #include "Services/WorldInteraction/LocalWorldInteraction.hpp"
 #include "Services/WorldInteraction/NetworkedWorldInteraction.hpp"
+#include "Services/WindowLayout/GameWindowLayout.hpp"
 #include "Window/Window.hpp"
 #include "Window/GameWindow.hpp"
 
@@ -36,7 +37,9 @@ private:
     void configure();
 
     Camera camera;
-    GameWindow gameWindow;
+    GameWindowLayout windowLayout;
+    Window::window_ptr gameWindow;
+    Window::window_ptr consoleWindow;
     Player player;
     WorldInteractionInterface *worldProxy;
 
