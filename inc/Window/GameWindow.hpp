@@ -30,8 +30,6 @@ public:
 
 private:
     std::vector< std::vector< Window::TextElement > >ScreenBuffer;
-    int width;
-    int height;
 };
 
 #endif //SCREEN_HPP

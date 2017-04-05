@@ -25,7 +25,7 @@ public:
     void setSubWindowMinHeight(int height);
 
     void render();
-    void updateScreenSize();
+    void updateScreenSize(bool force = false);
 private:
     const static float screenRatioForMainWindow;
 

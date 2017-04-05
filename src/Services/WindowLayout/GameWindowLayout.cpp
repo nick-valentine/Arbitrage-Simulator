@@ -34,6 +34,7 @@ void GameWindowLayout::setMainWindow(std::string name)
 {
     if (this->windows.find(name) != this->windows.end()) {
             this->mainWindow = this->windows[name];
+            this->updateScreenSize(true);
     } else {
         std::cout<<"Error, Window Layout Can Set Main Window To One That Does Not Exist"<<std::endl;
         exit(EXIT_FAILURE);
@@ -44,6 +45,7 @@ void GameWindowLayout::setSubWindow(std::string name)
 {
     if (this->windows.find(name) != this->windows.end()) {
             this->subWindow = this->windows[name];
+            this->updateScreenSize(true);
     } else {
         std::cout<<"Error, Window Layout Can Set Sub Window To One That Does Not Exist"<<std::endl;
         exit(EXIT_FAILURE);
@@ -53,27 +55,30 @@ void GameWindowLayout::setSubWindow(std::string name)
 void GameWindowLayout::setSubWindowMinHeight(int height)
 {
     this->subWindowMinHeight = height;
+    this->updateScreenSize(true);
 }
 
 void GameWindowLayout::render()
 {
     this->updateScreenSize();
+    wborder(stdscr, '|', '|', '-', '-', '+', '+', '+', '+');
     this->mainWindow->render();
     this->subWindow->render();
 }
 
-void GameWindowLayout::updateScreenSize()
+void GameWindowLayout::updateScreenSize(bool force)
 {
     int newHeight, newWidth;
     getmaxyx(stdscr, newHeight, newWidth);
     if (
+        force ||
         newHeight != this->windowHeight ||
         newWidth != this->windowWidth
     ) {
         this->windowHeight = newHeight;
         this->windowWidth = newWidth;
 
-        int windowWidths = this->windowWidth;
+        int windowWidths = this->windowWidth - 2;
         int subWindowHeight = std::max(
             int(this->windowHeight * (1.0 - GameWindowLayout::screenRatioForMainWindow)) - 1,
             int(this->subWindowMinHeight)
@@ -86,7 +91,7 @@ void GameWindowLayout::updateScreenSize()
         }
         if (this->subWindow != NULL) {
             this->subWindow->resize(subWindowHeight, windowWidths);
-            this->subWindow->move(mainWindowHeight, 0);
+            this->subWindow->move(mainWindowHeight, 1);
         }
     }
 }

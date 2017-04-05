@@ -31,7 +31,6 @@ void Window::init()
 {
     this->win = newwin(height, width, y, x);
     keypad(this->win, TRUE);
-    wborder(this->win, '|', '|', '-', '-', '+', '+', '+', '+');
 }
 
 void Window::putstr(int y, int x, std::string str)
@@ -63,6 +62,7 @@ void Window::clear()
 
 void Window::render()
 {
+    wborder(this->win, '|', '|', '-', '-', '+', '+', '+', '+');
     wrefresh(this->win);
 }
 

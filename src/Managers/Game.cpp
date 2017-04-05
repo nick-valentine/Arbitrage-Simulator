@@ -31,6 +31,7 @@ int Game::setup()
 
     this->windowLayout.addWindow("ConsoleWindow", this->consoleWindow);
     this->windowLayout.setSubWindow("ConsoleWindow");
+    this->windowLayout.render();
 
     this->player = Player("Bob", 0, 0);
 
@@ -73,10 +74,10 @@ int Game::run()
             *this->worldProxy, 
             this->player
         );
-        //this->windowLayout.render();
-        this->windowLayout.updateScreenSize();
-        this->gameWindow->render();
-        this->consoleWindow->render();
+        this->windowLayout.render();
+        //this->windowLayout.updateScreenSize();
+        //this->gameWindow->render();
+        //this->consoleWindow->render();
         this->gameWindow->clear();
         input = this->gameWindow->getCh();
         switch(input) {
