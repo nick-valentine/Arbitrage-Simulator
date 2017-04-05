@@ -16,14 +16,14 @@ void GameWindow::init()
 
 void GameWindow::resize(int height, int width)
 {
-    TextElement templ;
+    Window::TextElement templ;
     templ.colorPair = 0;
     templ.layer = 0;
     templ.c = ' ';
 
     ScreenBuffer.clear(); 
     for(int i = 0; i < height - Window::borderWidth; ++i) {
-        ScreenBuffer.push_back(std::vector< TextElement >());
+        ScreenBuffer.push_back(std::vector< Window::TextElement >());
         for(int j = 0; j < width - Window::borderWidth; ++j) {
             ScreenBuffer[i].push_back(templ);
         }
@@ -33,14 +33,14 @@ void GameWindow::resize(int height, int width)
 
 void GameWindow::put(unsigned int colorPair, unsigned int layer, char c, int y, int x)
 {
-    TextElement temp;
+    Window::TextElement temp;
     temp.colorPair = colorPair;
     temp.layer = layer;
     temp.c = c;
     this->put(temp, y, x);
 }
 
-void GameWindow::put(TextElement c, int y, int x)
+void GameWindow::put(Window::TextElement c, int y, int x)
 {
     if(x < width && x > 0 && y < height && y > 0) {
         if(c.layer > ScreenBuffer[y][x].layer) {
@@ -51,7 +51,7 @@ void GameWindow::put(TextElement c, int y, int x)
 
 void GameWindow::clear()
 {
-    TextElement templ;
+    Window::TextElement templ;
     templ.colorPair = 0;
     templ.layer = 0;
     templ.c = ' ';

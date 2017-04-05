@@ -42,6 +42,25 @@ void Window::putstr(int y, int x, std::string str)
     }
 }
 
+void Window::put(unsigned int colorPair, unsigned int layer, char c, int y, int x)
+{
+    attrset(COLOR_PAIR(colorPair));
+    wmove(this->win, y, x);
+    waddch(this->win, c);
+}
+
+void Window::put(TextElement c, int y, int x)
+{
+    attrset(COLOR_PAIR(c.colorPair));
+    wmove(this->win, y, x);
+    waddch(this->win, c.c);
+}
+
+void Window::clear()
+{
+   werase(this->win); 
+}
+
 void Window::render()
 {
     wrefresh(this->win);

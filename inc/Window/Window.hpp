@@ -10,6 +10,12 @@
 class Window
 {
 public:
+    struct TextElement {
+        unsigned int colorPair;
+        unsigned int layer;
+        char c;
+    };
+
     typedef boost::shared_ptr<Window> window_ptr;
     Window();
     Window(int y, int x, int height, int width);
@@ -17,6 +23,10 @@ public:
     virtual void init();
 
     virtual void putstr(int y, int x, std::string str);
+    virtual void put(unsigned int colorPair, unsigned int layer, char c, int y, int x);
+    virtual void put(TextElement c, int y, int x);
+    virtual void clear();
+
     virtual void render();
     virtual void resize(int height, int width);
     virtual void move(int y, int x);

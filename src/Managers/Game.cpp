@@ -76,7 +76,7 @@ int Game::run()
         this->windowLayout.render();
         //this->gameWindow.render();
         //this->consoleWindow.render();
-        boost::dynamic_pointer_cast<GameWindow>(this->gameWindow)->clear();
+        this->gameWindow->clear();
         input = this->gameWindow->getCh();
         switch(input) {
             case 119:

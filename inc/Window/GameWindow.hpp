@@ -15,12 +15,6 @@
 class GameWindow : public Window
 {
 public:
-    struct TextElement {
-        unsigned int colorPair;
-        unsigned int layer;
-        char c;
-    };
-
     GameWindow();
     ~GameWindow();
 
@@ -28,14 +22,14 @@ public:
     void resize(int height, int width);
 
     void put(unsigned int colorPair, unsigned int layer, char c, int y, int x);
-    void put(TextElement c, int y, int x);
+    void put(Window::TextElement c, int y, int x);
 
     void clear();
 
     void render();
 
 private:
-    std::vector< std::vector< TextElement > >ScreenBuffer;
+    std::vector< std::vector< Window::TextElement > >ScreenBuffer;
     int width;
     int height;
 };
