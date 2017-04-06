@@ -6,3 +6,4 @@ server_port 9797
 world_height 10
 world_name world
 world_width 10
+log_level 4

@@ -26,6 +26,11 @@ int ServerSession::init(world_ptr world, std::string version)
     this->version = version;
 }
 
+void ServerSession::setLogger(boost::shared_ptr<Logger> logger)
+{
+    this->logger = logger;
+}
+
 int ServerSession::run()
 {
     this->thread = std::thread(&ServerSession::sessionLoop, this);
@@ -56,9 +61,13 @@ void ServerSession::sessionLoop()
     this->state = HANDSHAKING;
     while (true) {
         try {
-            std::cout<<"Reading"<<std::endl;
+            if (this->logger) {
+                this->logger->debug("Reading");
+            }
             std::string message = this->conn.read();
-            std::cout<<message<<std::endl;
+            if (this->logger) {
+                this->logger->debug(message.c_str());
+            }
             std::stringstream ss;
             int request_type;
         
@@ -69,8 +78,10 @@ void ServerSession::sessionLoop()
                 response = this->requestMap[request_type](*this, message);
             }
             
-            std::cout<<"Writing"<<std::endl;
-            std::cout<<response<<std::endl;
+            if (this->logger) {
+                this->logger->debug("Writing");
+                this->logger->debug(response.c_str());
+            }
             this->conn.write(response);
 
             if (state == DISCONNECTING) {
@@ -96,13 +107,19 @@ std::string ServerSession::VersionCheckHandler(ServerSession &myself, std::strin
     std::stringstream ss;
     ss.str(msg);
     ss>>type>>version;
-    std::cout<<"Client request version check ";
+    if (myself.logger) {
+        myself.logger->debug("Client request versio check");
+    }
     if (myself.version == version) {
-        std::cout<<"version OK\n";
+        if (myself.logger) {
+            myself.logger->debug("Version OK");
+        }
         myself.state = AUTHENTICATING; // continue to next state
         return boost::lexical_cast<std::string>(ServerSession::VERSION_CHECK_OK) + Globals::network_message_delimiter;
     } else {
-        std::cout<<"version INCOMPATIBLE\n";
+        if (myself.logger) {
+            myself.logger->debug("Version INCOMPATIBLE");
+        }
         myself.state = DISCONNECTING; // flag to disconnect
         return boost::lexical_cast<std::string>(ServerSession::VERSION_INCOMPATIBLE) + 
             " " + 
@@ -128,7 +145,13 @@ std::string ServerSession::GetWorldChunkHandler(ServerSession &myself, std::stri
     std::stringstream ss;
     ss.str(msg);
     ss>>type>>chunkY>>chunkX;
-    std::cout<<"Client request chunk ("<<chunkY<<", "<<chunkX<<")"<<std::endl;
+    if (myself.logger) {
+        myself.logger->debug(
+            "Client request chunk (%d, %d)",
+            chunkY,
+            chunkX
+        );
+    }
     ss.str("");
 
     ss<<ServerSession::REQUEST_OK<<" ";

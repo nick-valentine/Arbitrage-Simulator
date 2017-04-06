@@ -14,6 +14,7 @@
 #include "Services/WorldInteraction/LocalWorldInteraction.hpp"
 #include "Services/WorldInteraction/NetworkedWorldInteraction.hpp"
 #include "Services/WindowLayout/GameWindowLayout.hpp"
+#include "Services/Logger/Logger.hpp"
 #include "Window/Window.hpp"
 #include "Window/GameWindow.hpp"
 

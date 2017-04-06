@@ -1,6 +1,7 @@
 #ifndef SERVER_SESSION_HPP
 #define SERVER_SESSION_HPP
 
+#include <stdio.h>
 #include <thread>
 #include <chrono>
 #include <mutex>
@@ -10,6 +11,7 @@
 
 #include "Globals.hpp"
 #include "Networking/Connection.hpp"
+#include "Services/Logger/Logger.hpp"
 #include "Services/WorldInteraction/LocalWorldInteraction.hpp"
 
 using boost::asio::ip::tcp;
@@ -53,6 +55,7 @@ public:
     ServerSession();
     ServerSession(Connection conn);
     int init(world_ptr world, std::string version);
+    void setLogger(boost::shared_ptr<Logger> logger);
 
     /**
      * Launch thread to manage this session.
@@ -82,6 +85,8 @@ private:
     std::thread thread;
     Connection conn;
     world_ptr world;
+
+    boost::shared_ptr<Logger> logger;
 
     void sessionLoop();
 

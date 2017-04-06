@@ -105,6 +105,7 @@ void Game::configure()
 {
     ConfigLoader::load(); 
 
+    Logger::configure();
     WorldChunk::configure();
     World::configure();
     City::load_city_names();

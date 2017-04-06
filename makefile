@@ -26,6 +26,7 @@ makeObjFileStructure:
 	mkdir obj/Services
 	mkdir obj/Services/WorldInteraction
 	mkdir obj/Services/WindowLayout
+	mkdir obj/Services/Logger
 
 rmObjFiles:
 	rm -rf obj/*
@@ -34,7 +35,7 @@ clean: rmObjFiles makeObjFileStructure
 
 rebuild: clean main
 
-server: obj/server.o obj/Managers/Server.o obj/Managers/ServerSession.o obj/ConfigLoader.o obj/Window/GameWindow.o obj/Camera.o obj/GameObjects/City.o obj/GameObjects/World.o obj/GameObjects/WorldChunk.o obj/GameObjects/Tile.o obj/GameObjects/Player.o obj/ColorPallete.o obj/WorldGen/NoiseFunc.o obj/Helpers/String.o obj/Networking/Connection.o obj/Services/WorldInteraction/LocalWorldInteraction.o obj/Window/CursesWindow.o
+server: obj/server.o obj/Managers/Server.o obj/Managers/ServerSession.o obj/ConfigLoader.o obj/Window/GameWindow.o obj/Camera.o obj/GameObjects/City.o obj/GameObjects/World.o obj/GameObjects/WorldChunk.o obj/GameObjects/Tile.o obj/GameObjects/Player.o obj/ColorPallete.o obj/WorldGen/NoiseFunc.o obj/Helpers/String.o obj/Networking/Connection.o obj/Services/WorldInteraction/LocalWorldInteraction.o obj/Window/CursesWindow.o obj/Services/Logger/Logger.o obj/Services/Logger/BufferLogger.o obj/Services/Logger/ConsoleLogger.o
 	$(CC) \
 		obj/Camera.o \
 		obj/ColorPallete.o \
@@ -53,9 +54,13 @@ server: obj/server.o obj/Managers/Server.o obj/Managers/ServerSession.o obj/Conf
 		obj/Helpers/String.o \
 		obj/Networking/Connection.o \
 		obj/Services/WorldInteraction/LocalWorldInteraction.o \
+		obj/Services/WindowLayout/GameWindowLayout.o \
+		obj/Services/Logger/Logger.o \
+		obj/Services/Logger/BufferLogger.o \
+		obj/Services/Logger/ConsoleLogger.o \
 		-o server $(LIBS)
 
-game: obj/game.o obj/Managers/Game.o obj/ConfigLoader.o obj/Camera.o obj/Window/GameWindow.o obj/GameObjects/City.o obj/GameObjects/World.o obj/GameObjects/WorldChunk.o obj/GameObjects/Tile.o obj/GameObjects/Player.o obj/ColorPallete.o obj/WorldGen/NoiseFunc.o obj/Helpers/String.o obj/Networking/Connection.o obj/Services/WorldInteraction/LocalWorldInteraction.o obj/Services/WorldInteraction/NetworkedWorldInteraction.o obj/Window/CursesWindow.o obj/Services/WindowLayout/GameWindowLayout.o
+game: obj/game.o obj/Managers/Game.o obj/ConfigLoader.o obj/Camera.o obj/Window/GameWindow.o obj/GameObjects/City.o obj/GameObjects/World.o obj/GameObjects/WorldChunk.o obj/GameObjects/Tile.o obj/GameObjects/Player.o obj/ColorPallete.o obj/WorldGen/NoiseFunc.o obj/Helpers/String.o obj/Networking/Connection.o obj/Services/WorldInteraction/LocalWorldInteraction.o obj/Services/WorldInteraction/NetworkedWorldInteraction.o obj/Window/CursesWindow.o obj/Services/WindowLayout/GameWindowLayout.o obj/Services/Logger/Logger.o obj/Services/Logger/BufferLogger.o obj/Services/Logger/ConsoleLogger.o
 	$(CC) \
 		obj/Camera.o \
 		obj/ColorPallete.o \
@@ -75,6 +80,8 @@ game: obj/game.o obj/Managers/Game.o obj/ConfigLoader.o obj/Camera.o obj/Window/
 		obj/Services/WorldInteraction/LocalWorldInteraction.o \
 		obj/Services/WorldInteraction/NetworkedWorldInteraction.o \
 		obj/Services/WindowLayout/GameWindowLayout.o \
+		obj/Services/Logger/Logger.o \
+		obj/Services/Logger/BufferLogger.o \
 		-o game $(LIBS) 
 
 obj/game.o: src/game.cpp
@@ -139,3 +146,13 @@ obj/Window/CursesWindow.o: src/Window/CursesWindow.cpp inc/Window/CursesWindow.h
 
 obj/Services/WindowLayout/GameWindowLayout.o: src/Services/WindowLayout/GameWindowLayout.cpp inc/Services/WindowLayout/GameWindowLayout.hpp inc/Window/Window.hpp
 	$(CC) $(CFLAGS) src/Services/WindowLayout/GameWindowLayout.cpp -o obj/Services/WindowLayout/GameWindowLayout.o
+
+obj/Services/Logger/Logger.o: src/Services/Logger/Logger.cpp inc/Services/Logger/Logger.hpp
+	$(CC) $(CFLAGS) src/Services/Logger/Logger.cpp -o obj/Services/Logger/Logger.o
+
+obj/Services/Logger/BufferLogger.o: src/Services/Logger/BufferLogger.cpp inc/Services/Logger/BufferLogger.hpp inc/Services/Logger/Logger.hpp
+	$(CC) $(CFLAGS) src/Services/Logger/BufferLogger.cpp -o obj/Services/Logger/BufferLogger.o
+
+obj/Services/Logger/ConsoleLogger.o: src/Services/Logger/ConsoleLogger.cpp inc/Services/Logger/ConsoleLogger.hpp inc/Services/Logger/Logger.hpp
+	$(CC) $(CFLAGS) src/Services/Logger/ConsoleLogger.cpp -o obj/Services/Logger/ConsoleLogger.o
+

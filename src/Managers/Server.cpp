@@ -36,10 +36,14 @@ int Server::run()
         if (this->sessions.size() < 32) {
             ServerSession *temp = new ServerSession(conn);
             temp->init(this->world, this->version);
+            temp->setLogger(this->logger);
             temp->run();
             this->sessions.push_back(temp);
         } else {
-            std::cerr<<this->sessions.size()<<" connections open already, connection denied"<<std::endl;
+            this->logger->warn(
+                "%d connections open already, connection denied",
+                this->sessions.size()
+            );
             conn.close();
         }
     }
@@ -48,6 +52,8 @@ int Server::run()
 
 void Server::initialize()
 {
+    this->logger = boost::shared_ptr<Logger>(new ConsoleLogger());
+
     this->cleaner = std::thread(&Server::cleanupSessions, this);
 
     this->world = ServerSession::world_ptr(
@@ -83,7 +89,10 @@ void Server::cleanupSessions()
 {
     while (true) {
         auto i = std::begin(this->sessions);
-        std::cout<<"Beginning session cleanup. "<<this->sessions.size()<<" Sessions currently exist."<<std::endl;
+        this->logger->info(
+            "Beginning session cleanup. %d sessions currently exist.",
+            this->sessions.size()
+        );
         while (i != std::end(this->sessions)) {
             if ((*i).getState() == ServerSession::DISCONNECTED) {
                 (*i).cleanup();
@@ -92,7 +101,10 @@ void Server::cleanupSessions()
                 ++i;
             }
         }
-        std::cout<<"Finished session cleanup. "<<this->sessions.size()<<" Sessions currently exist."<<std::endl;
+        this->logger->info(
+            "Finished session cleanup. %d sessions currently exist.",
+            this->sessions.size()
+        );
         std::this_thread::sleep_for(std::chrono::seconds(Server::cleanupInterval));
     }
 }
