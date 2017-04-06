@@ -6,6 +6,7 @@
 #include <vector>
 
 #include "Services/WorldInteraction/WorldInteractionInterface.hpp"
+#include "Window/Window.hpp"
 #include "GameObjects/Player.hpp"
 
 /**
@@ -25,11 +26,11 @@ public:
     /**
      * Render the world and player onto the screen
      *
-     * @param  Screen &screen
+     * @param  GameWindow &window
      * @param  WorldInteractionInterface  &world
      * @param  Player &player
      */
-    void render(Screen &screen, WorldInteractionInterface &worldProxy, Player &player);
+    void render(Window::window_ptr window, WorldInteractionInterface &worldProxy, Player &player);
 private:
     unsigned int pos_y;
     unsigned int pos_x;

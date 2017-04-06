@@ -1,14 +1,16 @@
 #ifndef MANAGER_SERVER_HPP
 #define MANAGER_SERVER_HPP
 
-#include <iostream>
 #include <string>
 #include <boost/ptr_container/ptr_vector.hpp>
+#include <boost/shared_ptr.hpp>
 #include <sstream>
 #include <map>
 #include <chrono>
 #include <thread>
 
+#include "Services/Logger/Logger.hpp"
+#include "Services/Logger/ConsoleLogger.hpp"
 #include "Services/WorldInteraction/LocalWorldInteraction.hpp"
 #include "Managers/ServerSession.hpp"
 
@@ -32,6 +34,8 @@ private:
     static const std::string configPortNumberKey;
     static const int defaultPortNumber;
     static const int cleanupInterval;
+
+    boost::shared_ptr<Logger> logger;
 
     int portNumber;
     std::string version;

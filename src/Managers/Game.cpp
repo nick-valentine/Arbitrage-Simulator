@@ -20,7 +20,18 @@ int Game::setup()
     this->configure();
 
     this->camera = Camera(0, 0);
-    this->screen = Screen();
+    this->gameWindow = Window::window_ptr(new GameWindow());
+    this->gameWindow->init();
+
+    this->consoleWindow = Window::window_ptr(new CursesWindow());
+    this->consoleWindow->init();
+
+    this->windowLayout.addWindow("GameWindow", this->gameWindow);
+    this->windowLayout.setMainWindow("GameWindow");
+
+    this->windowLayout.addWindow("ConsoleWindow", this->consoleWindow);
+    this->windowLayout.setSubWindow("ConsoleWindow");
+    this->windowLayout.render();
 
     this->player = Player("Bob", 0, 0);
 
@@ -31,28 +42,55 @@ int Game::setup()
 
 int Game::run()
 {
+    refresh();
+
+    int height, width;
+    this->consoleWindow->putstr(
+        this->consoleWindow->getHeight() / 2, 
+        this->consoleWindow->getWidth() / 2,
+        "This window is at " + 
+        boost::lexical_cast<std::string>(this->consoleWindow->getY()) + 
+        " and is " + 
+        boost::lexical_cast<std::string>(this->consoleWindow->getHeight()) + 
+        " cols tall"
+    );
+
+    unsigned int input = 0;
     while(true) {
+        this->consoleWindow->putstr(
+            this->consoleWindow->getHeight() / 2, 
+            this->consoleWindow->getWidth() / 2,
+            "Your last input was " +
+            boost::lexical_cast<std::string>(input)
+        );
         int pos_x, pos_y;
         player.getYX(pos_y, pos_x);
 
         //move camera to player
         this->camera.moveTo(pos_y, pos_x);
         this->worldProxy->movePlayerToCoordinate(pos_y, pos_x);
-        this->camera.render(this->screen, *this->worldProxy, this->player);
-        this->screen.render();
-        this->screen.clear();
-        unsigned int input = getch();
+        this->camera.render(
+            this->gameWindow, 
+            *this->worldProxy, 
+            this->player
+        );
+        this->windowLayout.render();
+        //this->windowLayout.updateScreenSize();
+        //this->gameWindow->render();
+        //this->consoleWindow->render();
+        this->gameWindow->clear();
+        input = this->gameWindow->getCh();
         switch(input) {
-            case KEY_UP:
+            case 119:
                 this->player.move(-1,0);
                 break;
-            case KEY_DOWN:
+            case 115:
                 this->player.move(1,0);
                 break;
-            case KEY_LEFT:
+            case 97:
                 this->player.move(0,-1);
                 break;
-            case KEY_RIGHT:
+            case 100:
                 this->player.move(0,1);
                 break;
             case 27: //ESC
@@ -67,6 +105,7 @@ void Game::configure()
 {
     ConfigLoader::load(); 
 
+    Logger::configure();
     WorldChunk::configure();
     World::configure();
     City::load_city_names();

@@ -4,7 +4,7 @@
 #include <string>
 #include <sstream>
 
-#include "Screen.hpp"
+#include "Window/Window.hpp"
 #include "GameObjects/AbstractGameObject.hpp"
 
 /**
@@ -27,7 +27,7 @@ public:
     void move(int y, int x);
     void getYX(int &y, int &x);
 
-    void draw(Screen &screen, int offsetTop, int offsetLeft);
+    void draw(Window::window_ptr window, int offsetTop, int offsetLeft);
 private:
     static const char representation = 'P';
 

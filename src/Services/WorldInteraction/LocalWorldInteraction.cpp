@@ -17,9 +17,9 @@ void LocalWorldInteraction::loadWorld()
     this->generateWorld();
 }
 
-void LocalWorldInteraction::draw(Screen &screen)
+void LocalWorldInteraction::draw(Window::window_ptr window)
 {
-    World::draw(screen, this->playerY, this->playerX);
+    World::draw(window, this->playerY, this->playerX);
 }
 
 void LocalWorldInteraction::movePlayerToCoordinate(int y, int x)
