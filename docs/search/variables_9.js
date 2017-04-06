@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['mainwindow',['mainWindow',['../classGameWindowLayout.html#a69c8c31e6d1ad586dcce1641f8e35b0e',1,'GameWindowLayout']]],
   ['mapmarker',['MapMarker',['../classWorldChunk.html#abdc90ec149a6094b9795c717c31de668',1,'WorldChunk']]],
   ['max_5fcities_5fper_5fchunk',['max_cities_per_chunk',['../classWorldChunk.html#aecba311a0f66a680df73bb21406119d0',1,'WorldChunk']]],
   ['maxviewdistance',['maxViewDistance',['../classWorldChunk.html#a293ce038ebb01c7e1ec4af304dfacf7d',1,'WorldChunk']]],

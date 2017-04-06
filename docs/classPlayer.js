@@ -3,7 +3,7 @@ var classPlayer =
     [ "Player", "classPlayer.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8", null ],
     [ "Player", "classPlayer.html#a43fe879af5938eaecca7b3a67adcc897", null ],
     [ "Player", "classPlayer.html#a0d509b5954ab8294c54b81b70a058926", null ],
-    [ "draw", "classPlayer.html#a1e1e3c70cc431b185c89b5e00d3b95b4", null ],
+    [ "draw", "classPlayer.html#aad62851071bf59965833224024a687c1", null ],
     [ "fromStringStream", "classPlayer.html#a01ac542999f498838c74e326ccee24c6", null ],
     [ "getYX", "classPlayer.html#a6e3e621902e7d1d718e5cd5c2004f2ef", null ],
     [ "move", "classPlayer.html#a955e68fc1da6565d43649b27a0ecabee", null ],

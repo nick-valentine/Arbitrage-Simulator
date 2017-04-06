@@ -4,7 +4,7 @@ var classWorld =
     [ "World", "classWorld.html#a8a3cbd89a9deaab59376b02540d0092a", null ],
     [ "World", "classWorld.html#a7cb840db7b54d4fa3d4474f6c8bfc291", null ],
     [ "configure", "classWorld.html#adf1ca48fa67ae65fcfddf24bddcaf1c6", null ],
-    [ "draw", "classWorld.html#a9608989365e085b1c0e34d6725e23b38", null ],
+    [ "draw", "classWorld.html#a4acde969ab5fe94f635f14a6bc944354", null ],
     [ "fromStringStream", "classWorld.html#ac4ec347800796f18abfdb120ab85ed7e", null ],
     [ "generateWorld", "classWorld.html#a3d897d6953d0876aeab57d3ca951bea2", null ],
     [ "getWorldHeight", "classWorld.html#aa0edc612bd3defdcde0593d75f20e0f3", null ],

@@ -176,6 +176,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8ed9792c3ef780b9b236a0133e7de7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd2886a4169b9dceb30444b0f3b9f350"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerSession.html#acd2886a4169b9dceb30444b0f3b9f350">init</a> (<a class="el" href="classServerSession.html#a58b641dbd3a06b729038b5e3de03ad07">world_ptr</a> <a class="el" href="classServerSession.html#a45d8bc8a439a074ee70078cab322ea1d">world</a>, std::string <a class="el" href="classServerSession.html#a319f6b069b373b321b3708946ab2d025">version</a>)</td></tr>
 <tr class="separator:acd2886a4169b9dceb30444b0f3b9f350"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b90b478f2a007fe6d7f3de6f080c2cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerSession.html#a6b90b478f2a007fe6d7f3de6f080c2cd">setLogger</a> (boost::shared_ptr&lt; <a class="el" href="classLogger.html">Logger</a> &gt; <a class="el" href="classServerSession.html#aa0f5ed1dcb0cc9048d843281a9014c7d">logger</a>)</td></tr>
+<tr class="separator:a6b90b478f2a007fe6d7f3de6f080c2cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9618739dcf123159134c03418f5d43d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerSession.html#a9618739dcf123159134c03418f5d43d5">run</a> ()</td></tr>
 <tr class="memdesc:a9618739dcf123159134c03418f5d43d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launch thread to manage this session.  <a href="#a9618739dcf123159134c03418f5d43d5">More...</a><br /></td></tr>
 <tr class="separator:a9618739dcf123159134c03418f5d43d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -219,6 +221,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a07750760357613a48c0470f662157c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45d8bc8a439a074ee70078cab322ea1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classServerSession.html#a58b641dbd3a06b729038b5e3de03ad07">world_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerSession.html#a45d8bc8a439a074ee70078cab322ea1d">world</a></td></tr>
 <tr class="separator:a45d8bc8a439a074ee70078cab322ea1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0f5ed1dcb0cc9048d843281a9014c7d"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classLogger.html">Logger</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerSession.html#aa0f5ed1dcb0cc9048d843281a9014c7d">logger</a></td></tr>
+<tr class="separator:aa0f5ed1dcb0cc9048d843281a9014c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
@@ -230,7 +234,7 @@ Static Private Attributes</h2></td></tr>
 <div class="textblock"><p><a class="el" href="classServer.html" title="Server Manager. ">Server</a> Session. </p>
 <p>Manager for server/client communication. </p>
 
-<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00021">21</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00023">23</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a58b641dbd3a06b729038b5e3de03ad07"></a>
 <div class="memitem">
@@ -242,7 +246,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00024">24</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00026">26</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
 
 </div>
 </div>
@@ -282,7 +286,7 @@ Static Private Attributes</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00031">31</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00033">33</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
 
 </div>
 </div>
@@ -310,7 +314,7 @@ Static Private Attributes</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00044">44</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00046">46</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
 
 </div>
 </div>
@@ -330,7 +334,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00010">10</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
 
-<p>References <a class="el" href="ServerSession_8hpp_source.html#l00080">state</a>, <a class="el" href="ServerSession_8hpp_source.html#l00045">UNSET</a>, and <a class="el" href="ServerSession_8hpp_source.html#l00081">version</a>.</p>
+<p>References <a class="el" href="ServerSession_8hpp_source.html#l00083">state</a>, <a class="el" href="ServerSession_8hpp_source.html#l00047">UNSET</a>, and <a class="el" href="ServerSession_8hpp_source.html#l00084">version</a>.</p>
 
 </div>
 </div>
@@ -350,7 +354,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00016">16</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
 
-<p>References <a class="el" href="ServerSession_8cpp_source.html#l00044">setConnection()</a>, <a class="el" href="ServerSession_8hpp_source.html#l00080">state</a>, <a class="el" href="ServerSession_8hpp_source.html#l00045">UNSET</a>, and <a class="el" href="ServerSession_8hpp_source.html#l00081">version</a>.</p>
+<p>References <a class="el" href="ServerSession_8cpp_source.html#l00049">setConnection()</a>, <a class="el" href="ServerSession_8hpp_source.html#l00083">state</a>, <a class="el" href="ServerSession_8hpp_source.html#l00047">UNSET</a>, and <a class="el" href="ServerSession_8hpp_source.html#l00084">version</a>.</p>
 
 <p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -382,9 +386,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Join threads and do work to end this session. </p>
 
-<p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00034">34</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00039">39</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
 
-<p>References <a class="el" href="ServerSession_8hpp_source.html#l00082">thread</a>.</p>
+<p>References <a class="el" href="ServerSession_8hpp_source.html#l00085">thread</a>.</p>
 
 </div>
 </div>
@@ -401,9 +405,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00049">49</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00054">54</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
 
-<p>References <a class="el" href="ServerSession_8hpp_source.html#l00080">state</a>.</p>
+<p>References <a class="el" href="ServerSession_8hpp_source.html#l00083">state</a>.</p>
 
 </div>
 </div>
@@ -450,9 +454,9 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::string the response </dd></dl>
 
-<p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00125">125</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00142">142</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
 
-<p>References <a class="el" href="Globals_8hpp_source.html#l00012">Globals::network_message_delimiter</a>, <a class="el" href="ServerSession_8hpp_source.html#l00033">REQUEST_OK</a>, and <a class="el" href="ServerSession_8hpp_source.html#l00084">world</a>.</p>
+<p>References <a class="el" href="ServerSession_8hpp_source.html#l00089">logger</a>, <a class="el" href="Globals_8hpp_source.html#l00012">Globals::network_message_delimiter</a>, <a class="el" href="ServerSession_8hpp_source.html#l00035">REQUEST_OK</a>, and <a class="el" href="ServerSession_8hpp_source.html#l00087">world</a>.</p>
 
 </div>
 </div>
@@ -482,7 +486,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00023">23</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
 
-<p>References <a class="el" href="ServerSession_8hpp_source.html#l00081">version</a>, and <a class="el" href="ServerSession_8hpp_source.html#l00084">world</a>.</p>
+<p>References <a class="el" href="ServerSession_8hpp_source.html#l00084">version</a>, and <a class="el" href="ServerSession_8hpp_source.html#l00087">world</a>.</p>
 
 <p>Referenced by <a class="el" href="Server_8cpp_source.html#l00025">Server::run()</a>.</p>
 
@@ -544,7 +548,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::string the response </dd></dl>
 
-<p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00115">115</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00132">132</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
 
 </div>
 </div>
@@ -563,9 +567,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Launch thread to manage this session. </p>
 
-<p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00029">29</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00034">34</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
 
-<p>References <a class="el" href="ServerSession_8cpp_source.html#l00054">sessionLoop()</a>, and <a class="el" href="ServerSession_8hpp_source.html#l00082">thread</a>.</p>
+<p>References <a class="el" href="ServerSession_8cpp_source.html#l00059">sessionLoop()</a>, and <a class="el" href="ServerSession_8hpp_source.html#l00085">thread</a>.</p>
 
 <p>Referenced by <a class="el" href="Server_8cpp_source.html#l00025">Server::run()</a>.</p>
 
@@ -620,11 +624,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00054">54</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00059">59</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
 
-<p>References <a class="el" href="Connection_8cpp_source.html#l00076">Connection::close()</a>, <a class="el" href="ServerSession_8hpp_source.html#l00083">conn</a>, <a class="el" href="ServerSession_8hpp_source.html#l00050">DISCONNECTED</a>, <a class="el" href="ServerSession_8hpp_source.html#l00049">DISCONNECTING</a>, <a class="el" href="ServerSession_8hpp_source.html#l00032">ERROR</a>, <a class="el" href="ServerSession_8hpp_source.html#l00046">HANDSHAKING</a>, <a class="el" href="Globals_8hpp_source.html#l00012">Globals::network_message_delimiter</a>, <a class="el" href="Connection_8cpp_source.html#l00039">Connection::read()</a>, <a class="el" href="ServerSession_8hpp_source.html#l00092">requestMap</a>, <a class="el" href="ServerSession_8hpp_source.html#l00080">state</a>, and <a class="el" href="Connection_8cpp_source.html#l00064">Connection::write()</a>.</p>
+<p>References <a class="el" href="Connection_8cpp_source.html#l00076">Connection::close()</a>, <a class="el" href="ServerSession_8hpp_source.html#l00086">conn</a>, <a class="el" href="ServerSession_8hpp_source.html#l00052">DISCONNECTED</a>, <a class="el" href="ServerSession_8hpp_source.html#l00051">DISCONNECTING</a>, <a class="el" href="ServerSession_8hpp_source.html#l00034">ERROR</a>, <a class="el" href="ServerSession_8hpp_source.html#l00048">HANDSHAKING</a>, <a class="el" href="ServerSession_8hpp_source.html#l00089">logger</a>, <a class="el" href="Globals_8hpp_source.html#l00012">Globals::network_message_delimiter</a>, <a class="el" href="Connection_8cpp_source.html#l00039">Connection::read()</a>, <a class="el" href="ServerSession_8hpp_source.html#l00097">requestMap</a>, <a class="el" href="ServerSession_8hpp_source.html#l00083">state</a>, and <a class="el" href="Connection_8cpp_source.html#l00064">Connection::write()</a>.</p>
 
-<p>Referenced by <a class="el" href="ServerSession_8cpp_source.html#l00029">run()</a>.</p>
+<p>Referenced by <a class="el" href="ServerSession_8cpp_source.html#l00034">run()</a>.</p>
 
 <p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -670,9 +674,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00044">44</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00049">49</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
 
-<p>References <a class="el" href="ServerSession_8hpp_source.html#l00083">conn</a>.</p>
+<p>References <a class="el" href="ServerSession_8hpp_source.html#l00086">conn</a>.</p>
 
 <p>Referenced by <a class="el" href="ServerSession_8cpp_source.html#l00016">ServerSession()</a>.</p>
 
@@ -684,6 +688,41 @@ Static Private Attributes</h2></td></tr>
 <div class="center"><img src="classServerSession_afd7e4db5986abe710dfbae832f119710_icgraph.png" border="0" usemap="#classServerSession_afd7e4db5986abe710dfbae832f119710_icgraph" alt=""/></div>
 <map name="classServerSession_afd7e4db5986abe710dfbae832f119710_icgraph" id="classServerSession_afd7e4db5986abe710dfbae832f119710_icgraph">
 <area shape="rect" id="node2" href="classServerSession.html#a8ed9792c3ef780b9b236a0133e7de7e1" title="ServerSession::ServerSession" alt="" coords="252,5,452,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6b90b478f2a007fe6d7f3de6f080c2cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ServerSession::setLogger </td>
+          <td>(</td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="classLogger.html">Logger</a> &gt;&#160;</td>
+          <td class="paramname"><em>logger</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00029">29</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
+
+<p>References <a class="el" href="ServerSession_8hpp_source.html#l00089">logger</a>.</p>
+
+<p>Referenced by <a class="el" href="Server_8cpp_source.html#l00025">Server::run()</a>.</p>
+
+<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classServerSession_a6b90b478f2a007fe6d7f3de6f080c2cd_icgraph.png" border="0" usemap="#classServerSession_a6b90b478f2a007fe6d7f3de6f080c2cd_icgraph" alt=""/></div>
+<map name="classServerSession_a6b90b478f2a007fe6d7f3de6f080c2cd_icgraph" id="classServerSession_a6b90b478f2a007fe6d7f3de6f080c2cd_icgraph">
+<area shape="rect" id="node2" href="classServer.html#a30362b937b125d27916cf595bfc4c1a7" title="Server::run" alt="" coords="225,5,312,32"/>
+<area shape="rect" id="node3" href="server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="360,5,411,32"/>
 </map>
 </div>
 </p>
@@ -733,9 +772,9 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::string the response </dd></dl>
 
-<p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00092">92</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00103">103</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
 
-<p>References <a class="el" href="ServerSession_8hpp_source.html#l00047">AUTHENTICATING</a>, <a class="el" href="ServerSession_8hpp_source.html#l00049">DISCONNECTING</a>, <a class="el" href="Globals_8hpp_source.html#l00012">Globals::network_message_delimiter</a>, <a class="el" href="ServerSession_8hpp_source.html#l00080">state</a>, <a class="el" href="ServerSession_8hpp_source.html#l00081">version</a>, <a class="el" href="ServerSession_8hpp_source.html#l00035">VERSION_CHECK_OK</a>, and <a class="el" href="ServerSession_8hpp_source.html#l00036">VERSION_INCOMPATIBLE</a>.</p>
+<p>References <a class="el" href="ServerSession_8hpp_source.html#l00049">AUTHENTICATING</a>, <a class="el" href="ServerSession_8hpp_source.html#l00051">DISCONNECTING</a>, <a class="el" href="ServerSession_8hpp_source.html#l00089">logger</a>, <a class="el" href="Globals_8hpp_source.html#l00012">Globals::network_message_delimiter</a>, <a class="el" href="ServerSession_8hpp_source.html#l00083">state</a>, <a class="el" href="ServerSession_8hpp_source.html#l00084">version</a>, <a class="el" href="ServerSession_8hpp_source.html#l00037">VERSION_CHECK_OK</a>, and <a class="el" href="ServerSession_8hpp_source.html#l00038">VERSION_INCOMPATIBLE</a>.</p>
 
 </div>
 </div>
@@ -763,15 +802,15 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool success </dd></dl>
 
-<p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00039">39</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ServerSession_8cpp_source.html#l00044">44</a> of file <a class="el" href="ServerSession_8cpp_source.html">ServerSession.cpp</a>.</p>
 
-<p>References <a class="el" href="ServerSession_8hpp_source.html#l00083">conn</a>, and <a class="el" href="Connection_8cpp_source.html#l00064">Connection::write()</a>.</p>
+<p>References <a class="el" href="ServerSession_8hpp_source.html#l00086">conn</a>, and <a class="el" href="Connection_8cpp_source.html#l00064">Connection::write()</a>.</p>
 
-<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classServerSession_a66d967ee12c83767d852b3bfa2fc94d5_cgraph.png" border="0" usemap="#classServerSession_a66d967ee12c83767d852b3bfa2fc94d5_cgraph" alt=""/></div>
 <map name="classServerSession_a66d967ee12c83767d852b3bfa2fc94d5_cgraph" id="classServerSession_a66d967ee12c83767d852b3bfa2fc94d5_cgraph">
 <area shape="rect" id="node2" href="classConnection.html#a6fff1bda7a9e0dc4997792ac29ce1af1" title="Write msg to this socket. " alt="" coords="196,5,320,32"/>
@@ -800,9 +839,33 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00083">83</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00086">86</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ServerSession_8cpp_source.html#l00054">sessionLoop()</a>, <a class="el" href="ServerSession_8cpp_source.html#l00044">setConnection()</a>, and <a class="el" href="ServerSession_8cpp_source.html#l00039">write()</a>.</p>
+<p>Referenced by <a class="el" href="ServerSession_8cpp_source.html#l00059">sessionLoop()</a>, <a class="el" href="ServerSession_8cpp_source.html#l00049">setConnection()</a>, and <a class="el" href="ServerSession_8cpp_source.html#l00044">write()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa0f5ed1dcb0cc9048d843281a9014c7d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classLogger.html">Logger</a>&gt; ServerSession::logger</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00089">89</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ServerSession_8cpp_source.html#l00142">GetWorldChunkHandler()</a>, <a class="el" href="ServerSession_8cpp_source.html#l00059">sessionLoop()</a>, <a class="el" href="ServerSession_8cpp_source.html#l00029">setLogger()</a>, and <a class="el" href="ServerSession_8cpp_source.html#l00103">VersionCheckHandler()</a>.</p>
 
 </div>
 </div>
@@ -827,9 +890,9 @@ Static Private Attributes</h2></td></tr>
 <p>Request Handlers. </p>
 <p>All handlers will take a string message and return a string response </p>
 
-<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00092">92</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00097">97</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ServerSession_8cpp_source.html#l00054">sessionLoop()</a>.</p>
+<p>Referenced by <a class="el" href="ServerSession_8cpp_source.html#l00059">sessionLoop()</a>.</p>
 
 </div>
 </div>
@@ -851,9 +914,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00080">80</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00083">83</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ServerSession_8cpp_source.html#l00049">getState()</a>, <a class="el" href="ServerSession_8cpp_source.html#l00010">ServerSession()</a>, <a class="el" href="ServerSession_8cpp_source.html#l00054">sessionLoop()</a>, and <a class="el" href="ServerSession_8cpp_source.html#l00092">VersionCheckHandler()</a>.</p>
+<p>Referenced by <a class="el" href="ServerSession_8cpp_source.html#l00054">getState()</a>, <a class="el" href="ServerSession_8cpp_source.html#l00010">ServerSession()</a>, <a class="el" href="ServerSession_8cpp_source.html#l00059">sessionLoop()</a>, and <a class="el" href="ServerSession_8cpp_source.html#l00103">VersionCheckHandler()</a>.</p>
 
 </div>
 </div>
@@ -875,9 +938,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00082">82</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00085">85</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ServerSession_8cpp_source.html#l00034">cleanup()</a>, and <a class="el" href="ServerSession_8cpp_source.html#l00029">run()</a>.</p>
+<p>Referenced by <a class="el" href="ServerSession_8cpp_source.html#l00039">cleanup()</a>, and <a class="el" href="ServerSession_8cpp_source.html#l00034">run()</a>.</p>
 
 </div>
 </div>
@@ -899,9 +962,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00081">81</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00084">84</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ServerSession_8cpp_source.html#l00023">init()</a>, <a class="el" href="ServerSession_8cpp_source.html#l00010">ServerSession()</a>, and <a class="el" href="ServerSession_8cpp_source.html#l00092">VersionCheckHandler()</a>.</p>
+<p>Referenced by <a class="el" href="ServerSession_8cpp_source.html#l00023">init()</a>, <a class="el" href="ServerSession_8cpp_source.html#l00010">ServerSession()</a>, and <a class="el" href="ServerSession_8cpp_source.html#l00103">VersionCheckHandler()</a>.</p>
 
 </div>
 </div>
@@ -923,9 +986,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00084">84</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ServerSession_8hpp_source.html#l00087">87</a> of file <a class="el" href="ServerSession_8hpp_source.html">ServerSession.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ServerSession_8cpp_source.html#l00125">GetWorldChunkHandler()</a>, and <a class="el" href="ServerSession_8cpp_source.html#l00023">init()</a>.</p>
+<p>Referenced by <a class="el" href="ServerSession_8cpp_source.html#l00142">GetWorldChunkHandler()</a>, and <a class="el" href="ServerSession_8cpp_source.html#l00023">init()</a>.</p>
 
 </div>
 </div>
@@ -939,7 +1002,7 @@ Static Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classServerSession.html">ServerSession</a></li>
-    <li class="footer">Generated on Thu Mar 30 2017 21:55:00 for Trade App by
+    <li class="footer">Generated on Wed Apr 5 2017 21:03:32 for Trade App by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

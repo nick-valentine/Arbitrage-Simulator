@@ -1,13 +1,19 @@
 <map id="Game::setup" name="Game::setup">
-<area shape="rect" id="node2" href="$classGame.html#ad2d16756f154ae7da7510b1c7bbcf6cc" title="Game::configure" alt="" coords="175,132,294,159"/>
-<area shape="rect" id="node12" href="$classWorldInteractionInterface.html#a5ea6a25f75827f5f1ff6d40c1f4d0412" title="WorldInteractionInterface\l::loadWorld" alt="" coords="151,183,319,225"/>
-<area shape="rect" id="node3" href="$classWorld.html#adf1ca48fa67ae65fcfddf24bddcaf1c6" title="World::configure" alt="" coords="389,5,507,32"/>
-<area shape="rect" id="node4" href="$classConfigLoader.html#a99778c30f3d79e84995d9e9c7245b089" title="ConfigLoader::getIntOption" alt="" coords="577,56,756,83"/>
-<area shape="rect" id="node8" href="$classWorldChunk.html#ae67bd7d234bca44740a3418b4a00e64f" title="WorldChunk::configure" alt="" coords="371,107,525,133"/>
-<area shape="rect" id="node9" href="$classConfigLoader.html#afaece3ad25b7221017affe9566e46af7" title="ConfigLoader::load" alt="" coords="383,157,513,184"/>
-<area shape="rect" id="node10" href="$classCity.html#a404709b7000a90155400c0ea43936ac9" title="Load City Names. " alt="" coords="372,208,524,235"/>
-<area shape="rect" id="node11" href="$classWorldChunk.html#a538965747758546c9097245ec9bfe930" title="WorldChunk::setMaxYX" alt="" coords="367,259,529,285"/>
-<area shape="rect" id="node5" href="$classConfigLoader.html#a162bb553780887f9c73861c39fb19e90" title="ConfigLoader::getStringOption" alt="" coords="804,56,1001,83"/>
-<area shape="rect" id="node6" href="$classConfigLoader.html#a8d086e4fc43dbbf3ea03b25e7808d52d" title="ConfigLoader::mutateOption" alt="" coords="1049,31,1235,57"/>
-<area shape="rect" id="node7" href="$classConfigLoader.html#a75640e185ea0090519fce7df634cc48a" title="ConfigLoader::save" alt="" coords="1075,81,1209,108"/>
+<area shape="rect" id="node2" href="$classGameWindowLayout.html#aa405622f347239d28bdd49e2e562b88c" title="GameWindowLayout::addWindow" alt="" coords="151,124,369,151"/>
+<area shape="rect" id="node3" href="$classGame.html#ad2d16756f154ae7da7510b1c7bbcf6cc" title="Game::configure" alt="" coords="201,175,319,201"/>
+<area shape="rect" id="node14" href="$classWorldInteractionInterface.html#a5ea6a25f75827f5f1ff6d40c1f4d0412" title="WorldInteractionInterface\l::loadWorld" alt="" coords="176,226,344,267"/>
+<area shape="rect" id="node15" href="$classGameWindowLayout.html#a490a59780f8de2c6cad6a6b72ec028a3" title="GameWindowLayout::render" alt="" coords="167,292,353,319"/>
+<area shape="rect" id="node17" href="$classGameWindowLayout.html#a04f4a23eec82c45d000e252f426a241a" title="GameWindowLayout::setMain\lWindow" alt="" coords="161,343,359,385"/>
+<area shape="rect" id="node18" href="$classGameWindowLayout.html#a53d838ca33b4bdcbbed30060f9e61a44" title="GameWindowLayout::setSub\lWindow" alt="" coords="164,409,356,450"/>
+<area shape="rect" id="node4" href="$classWorld.html#adf1ca48fa67ae65fcfddf24bddcaf1c6" title="World::configure" alt="" coords="454,5,571,32"/>
+<area shape="rect" id="node5" href="$classConfigLoader.html#a99778c30f3d79e84995d9e9c7245b089" title="ConfigLoader::getIntOption" alt="" coords="656,81,835,108"/>
+<area shape="rect" id="node9" href="$classLogger.html#a9ff4ec284aaf984a5ea07d2175e18a31" title="Logger::configure" alt="" coords="451,107,574,133"/>
+<area shape="rect" id="node10" href="$classWorldChunk.html#ae67bd7d234bca44740a3418b4a00e64f" title="WorldChunk::configure" alt="" coords="435,157,590,184"/>
+<area shape="rect" id="node11" href="$classConfigLoader.html#afaece3ad25b7221017affe9566e46af7" title="ConfigLoader::load" alt="" coords="447,208,578,235"/>
+<area shape="rect" id="node12" href="$classCity.html#a404709b7000a90155400c0ea43936ac9" title="Load City Names. " alt="" coords="437,259,589,285"/>
+<area shape="rect" id="node13" href="$classWorldChunk.html#a538965747758546c9097245ec9bfe930" title="WorldChunk::setMaxYX" alt="" coords="431,309,594,336"/>
+<area shape="rect" id="node6" href="$classConfigLoader.html#a162bb553780887f9c73861c39fb19e90" title="ConfigLoader::getStringOption" alt="" coords="883,81,1080,108"/>
+<area shape="rect" id="node7" href="$classConfigLoader.html#a8d086e4fc43dbbf3ea03b25e7808d52d" title="ConfigLoader::mutateOption" alt="" coords="1128,56,1313,83"/>
+<area shape="rect" id="node8" href="$classConfigLoader.html#a75640e185ea0090519fce7df634cc48a" title="ConfigLoader::save" alt="" coords="1153,107,1288,133"/>
+<area shape="rect" id="node16" href="$classGameWindowLayout.html#a66d9862e640242e6ef562fc59305ddfe" title="GameWindowLayout::update\lScreenSize" alt="" coords="417,361,608,402"/>
 </map>

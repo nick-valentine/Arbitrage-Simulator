@@ -1,0 +1,5 @@
+<map id="GameWindow::init" name="GameWindow::init">
+<area shape="rect" id="node2" href="$classCursesWindow.html#a95c26d2817aea2742937c8b83fbc0b27" title="CursesWindow::init" alt="" coords="188,5,324,32"/>
+<area shape="rect" id="node3" href="$classGameWindow.html#a2da6586da4a08c1ef78ccc9fa60eeeec" title="GameWindow::resize" alt="" coords="183,56,329,83"/>
+<area shape="rect" id="node4" href="$classCursesWindow.html#a4001dd4ff7f12e372fada557f2ffa2df" title="CursesWindow::resize" alt="" coords="377,56,532,83"/>
+</map>

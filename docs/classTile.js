@@ -17,7 +17,7 @@ var classTile =
     [ "Tile", "classTile.html#a1f6d3e7fcfb4fe7ee51efbf9c8b8280e", null ],
     [ "Tile", "classTile.html#a4bea5ec31700bc0c45de6897fad67f30", null ],
     [ "convertToCity", "classTile.html#ad18dc829e0b9c7e6a9c52272c902704e", null ],
-    [ "drawAt", "classTile.html#a65e6bdeb6d166848d8eac9d6b1517604", null ],
+    [ "drawAt", "classTile.html#a546d67624e0becbf4ae9eb7c964d5eeb", null ],
     [ "fromStringStream", "classTile.html#a038551c49c0b2fe8250edd0506574468", null ],
     [ "getElevation", "classTile.html#ae75c7799f63fff2f6e2932bdb89f6b9c", null ],
     [ "getType", "classTile.html#a7981f0d1f55e0e6e72ab4e77796de847", null ],

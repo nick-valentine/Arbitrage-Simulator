@@ -111,13 +111,15 @@ $(document).ready(function(){initNavTree('Server_8hpp.html','');});
 <div class="title">Server.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
 <code>#include &lt;boost/ptr_container/ptr_vector.hpp&gt;</code><br />
+<code>#include &lt;boost/shared_ptr.hpp&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
 <code>#include &lt;map&gt;</code><br />
 <code>#include &lt;chrono&gt;</code><br />
 <code>#include &lt;thread&gt;</code><br />
+<code>#include &quot;<a class="el" href="Logger_8hpp_source.html">Services/Logger/Logger.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ConsoleLogger_8hpp_source.html">Services/Logger/ConsoleLogger.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="LocalWorldInteraction_8hpp_source.html">Services/WorldInteraction/LocalWorldInteraction.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ServerSession_8hpp_source.html">Managers/ServerSession.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -127,21 +129,23 @@ $(document).ready(function(){initNavTree('Server_8hpp.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="Server_8hpp__incl.png" border="0" usemap="#Server_8hpp" alt=""/></div>
 <map name="Server_8hpp" id="Server_8hpp">
-<area shape="rect" id="node9" href="LocalWorldInteraction_8hpp.html" title="Services/WorldInteraction\l/LocalWorldInteraction.hpp" alt="" coords="998,169,1175,211"/>
-<area shape="rect" id="node30" href="ServerSession_8hpp.html" title="Managers/ServerSession.hpp" alt="" coords="562,87,755,114"/>
-<area shape="rect" id="node10" href="World_8hpp.html" title="GameObjects/World.hpp" alt="" coords="1715,348,1880,375"/>
-<area shape="rect" id="node25" href="Screen_8hpp.html" title="Screen.hpp" alt="" coords="680,579,768,606"/>
-<area shape="rect" id="node29" href="WorldInteractionInterface_8hpp.html" title="Services/WorldInteraction\l/WorldInteractionInterface.hpp" alt="" coords="992,259,1189,300"/>
-<area shape="rect" id="node11" href="ConfigLoader_8hpp.html" title="ConfigLoader.hpp" alt="" coords="2381,497,2505,524"/>
-<area shape="rect" id="node15" href="WorldChunk_8hpp.html" title="GameObjects/WorldChunk.hpp" alt="" coords="1512,423,1715,449"/>
-<area shape="rect" id="node26" href="NoiseFunc_8hpp.html" title="WorldGen/NoiseFunc.hpp" alt="" coords="2185,497,2357,524"/>
-<area shape="rect" id="node27" href="Player_8hpp.html" title="GameObjects/Player.hpp" alt="" coords="1019,497,1187,524"/>
-<area shape="rect" id="node20" href="Globals_8hpp.html" title="Globals.hpp" alt="" coords="1456,579,1547,606"/>
-<area shape="rect" id="node21" href="AbstractGameObject_8hpp.html" title="GameObjects/AbstractGame\lObject.hpp" alt="" coords="1241,572,1431,613"/>
-<area shape="rect" id="node22" href="City_8hpp.html" title="GameObjects/City.hpp" alt="" coords="1651,497,1805,524"/>
-<area shape="rect" id="node23" href="Tile_8hpp.html" title="GameObjects/Tile.hpp" alt="" coords="843,497,995,524"/>
-<area shape="rect" id="node24" href="ColorPallete_8hpp.html" title="ColorPallete.hpp" alt="" coords="945,579,1063,606"/>
-<area shape="rect" id="node34" href="Connection_8hpp.html" title="Networking/Connection.hpp" alt="" coords="430,177,613,203"/>
+<area shape="rect" id="node9" href="Logger_8hpp.html" title="Services/Logger/Logger.hpp" alt="" coords="370,177,554,203"/>
+<area shape="rect" id="node17" href="ConsoleLogger_8hpp.html" title="Services/Logger/ConsoleLogger.hpp" alt="" coords="526,87,758,114"/>
+<area shape="rect" id="node19" href="LocalWorldInteraction_8hpp.html" title="Services/WorldInteraction\l/LocalWorldInteraction.hpp" alt="" coords="1253,169,1430,211"/>
+<area shape="rect" id="node35" href="ServerSession_8hpp.html" title="Managers/ServerSession.hpp" alt="" coords="1465,87,1658,114"/>
+<area shape="rect" id="node13" href="ConfigLoader_8hpp.html" title="ConfigLoader.hpp" alt="" coords="462,497,586,524"/>
+<area shape="rect" id="node20" href="World_8hpp.html" title="GameObjects/World.hpp" alt="" coords="1147,348,1312,375"/>
+<area shape="rect" id="node31" href="Window_8hpp.html" title="Window/Window.hpp" alt="" coords="2097,579,2242,606"/>
+<area shape="rect" id="node34" href="WorldInteractionInterface_8hpp.html" title="Services/WorldInteraction\l/WorldInteractionInterface.hpp" alt="" coords="1243,259,1440,300"/>
+<area shape="rect" id="node22" href="WorldChunk_8hpp.html" title="GameObjects/WorldChunk.hpp" alt="" coords="1128,423,1331,449"/>
+<area shape="rect" id="node32" href="NoiseFunc_8hpp.html" title="WorldGen/NoiseFunc.hpp" alt="" coords="662,497,834,524"/>
+<area shape="rect" id="node33" href="Player_8hpp.html" title="GameObjects/Player.hpp" alt="" coords="910,497,1078,524"/>
+<area shape="rect" id="node26" href="Globals_8hpp.html" title="Globals.hpp" alt="" coords="1382,579,1472,606"/>
+<area shape="rect" id="node27" href="AbstractGameObject_8hpp.html" title="GameObjects/AbstractGame\lObject.hpp" alt="" coords="964,572,1154,613"/>
+<area shape="rect" id="node28" href="City_8hpp.html" title="GameObjects/City.hpp" alt="" coords="1152,497,1307,524"/>
+<area shape="rect" id="node29" href="Tile_8hpp.html" title="GameObjects/Tile.hpp" alt="" coords="1672,497,1824,524"/>
+<area shape="rect" id="node30" href="ColorPallete_8hpp.html" title="ColorPallete.hpp" alt="" coords="1750,579,1869,606"/>
+<area shape="rect" id="node38" href="Connection_8hpp.html" title="Networking/Connection.hpp" alt="" coords="1942,177,2125,203"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -170,7 +174,7 @@ Classes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_f3d7e944744f7fefd965f3d78fea5241.html">Managers</a></li><li class="navelem"><a class="el" href="Server_8hpp.html">Server.hpp</a></li>
-    <li class="footer">Generated on Thu Mar 30 2017 21:55:00 for Trade App by
+    <li class="footer">Generated on Wed Apr 5 2017 21:03:32 for Trade App by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

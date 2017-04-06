@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['versioncheckhandler',['VersionCheckHandler',['../classServerSession.html#ae938a65121023b3ebbac30e507888f0d',1,'ServerSession']]]
+  ['updatescreensize',['updateScreenSize',['../classGameWindowLayout.html#a66d9862e640242e6ef562fc59305ddfe',1,'GameWindowLayout']]]
 ];

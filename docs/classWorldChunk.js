@@ -9,7 +9,7 @@ var classWorldChunk =
     [ "WorldChunk", "classWorldChunk.html#a2b8469a78d6b97490263836ddc1bac42", null ],
     [ "configure", "classWorldChunk.html#ae67bd7d234bca44740a3418b4a00e64f", null ],
     [ "doCullTile", "classWorldChunk.html#a7c4e8d9c40c76cc35247e38b8f61d83e", null ],
-    [ "draw", "classWorldChunk.html#aab153d42421b3a7f156dc84ee8a20ba0", null ],
+    [ "draw", "classWorldChunk.html#a0ba81d96ee50000d7e0afd0704795c3b", null ],
     [ "elevationMap", "classWorldChunk.html#ae882ecfc1d6319657f76f6036931a9e0", null ],
     [ "fromStringStream", "classWorldChunk.html#a92b62d7b35d7dcfd1f63b29a2b66b385", null ],
     [ "generateChunk", "classWorldChunk.html#a0428cb7066e8cb921b37a2ff7a2ba9dc", null ],

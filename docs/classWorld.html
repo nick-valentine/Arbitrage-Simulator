@@ -159,8 +159,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1cf2da4646e9653bd1a9a79d6a14c73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d897d6953d0876aeab57d3ca951bea2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a3d897d6953d0876aeab57d3ca951bea2">generateWorld</a> ()</td></tr>
 <tr class="separator:a3d897d6953d0876aeab57d3ca951bea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9608989365e085b1c0e34d6725e23b38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a9608989365e085b1c0e34d6725e23b38">draw</a> (<a class="el" href="classScreen.html">Screen</a> &amp;screen, int playerY, int playerX)</td></tr>
-<tr class="separator:a9608989365e085b1c0e34d6725e23b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4acde969ab5fe94f635f14a6bc944354"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a4acde969ab5fe94f635f14a6bc944354">draw</a> (<a class="el" href="classWindow.html#a370ec54942433f58845f69ec8881a6d5">Window::window_ptr</a> window, int playerY, int playerX)</td></tr>
+<tr class="separator:a4acde969ab5fe94f635f14a6bc944354"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -349,7 +349,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>References <a class="el" href="ConfigLoader_8cpp_source.html#l00046">ConfigLoader::getIntOption()</a>, <a class="el" href="World_8hpp_source.html#l00043">worldHeight</a>, and <a class="el" href="World_8hpp_source.html#l00044">worldWidth</a>.</p>
 
-<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00066">Game::configure()</a>, and <a class="el" href="Server_8cpp_source.html#l00060">Server::configure()</a>.</p>
+<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00104">Game::configure()</a>, and <a class="el" href="Server_8cpp_source.html#l00066">Server::configure()</a>.</p>
 
 <p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -385,15 +385,15 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9608989365e085b1c0e34d6725e23b38"></a>
+<a class="anchor" id="a4acde969ab5fe94f635f14a6bc944354"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void World::draw </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classScreen.html">Screen</a> &amp;&#160;</td>
-          <td class="paramname"><em>screen</em>, </td>
+          <td class="paramtype"><a class="el" href="classWindow.html#a370ec54942433f58845f69ec8881a6d5">Window::window_ptr</a>&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -426,9 +426,9 @@ Static Protected Attributes</h2></td></tr>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classWorld_a9608989365e085b1c0e34d6725e23b38_icgraph.png" border="0" usemap="#classWorld_a9608989365e085b1c0e34d6725e23b38_icgraph" alt=""/></div>
-<map name="classWorld_a9608989365e085b1c0e34d6725e23b38_icgraph" id="classWorld_a9608989365e085b1c0e34d6725e23b38_icgraph">
-<area shape="rect" id="node2" href="classLocalWorldInteraction.html#a011f683c0042d378b507b5c8d0e3dbf8" title="LocalWorldInteraction\l::draw" alt="" coords="145,5,293,47"/>
+<div class="center"><img src="classWorld_a4acde969ab5fe94f635f14a6bc944354_icgraph.png" border="0" usemap="#classWorld_a4acde969ab5fe94f635f14a6bc944354_icgraph" alt=""/></div>
+<map name="classWorld_a4acde969ab5fe94f635f14a6bc944354_icgraph" id="classWorld_a4acde969ab5fe94f635f14a6bc944354_icgraph">
+<area shape="rect" id="node2" href="classLocalWorldInteraction.html#aab30bae82dc6f7438d73f5f4a5ae1583" title="LocalWorldInteraction\l::draw" alt="" coords="145,5,293,47"/>
 </map>
 </div>
 </p>
@@ -881,7 +881,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="World_8hpp_source.html#l00079">79</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="World_8cpp_source.html#l00062">draw()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00025">NetworkedWorldInteraction::draw()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00109">NetworkedWorldInteraction::fetchChunk()</a>, <a class="el" href="World_8cpp_source.html#l00029">fromStringStream()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00055">LocalWorldInteraction::getChunk()</a>, <a class="el" href="World_8cpp_source.html#l00081">spawnChunk()</a>, and <a class="el" href="World_8cpp_source.html#l00042">toStringStream()</a>.</p>
+<p>Referenced by <a class="el" href="World_8cpp_source.html#l00062">draw()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00025">NetworkedWorldInteraction::draw()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00106">NetworkedWorldInteraction::fetchChunk()</a>, <a class="el" href="World_8cpp_source.html#l00029">fromStringStream()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00055">LocalWorldInteraction::getChunk()</a>, <a class="el" href="World_8cpp_source.html#l00081">spawnChunk()</a>, and <a class="el" href="World_8cpp_source.html#l00042">toStringStream()</a>.</p>
 
 </div>
 </div>
@@ -1159,7 +1159,7 @@ Static Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classWorld.html">World</a></li>
-    <li class="footer">Generated on Thu Mar 30 2017 21:55:00 for Trade App by
+    <li class="footer">Generated on Wed Apr 5 2017 21:03:32 for Trade App by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

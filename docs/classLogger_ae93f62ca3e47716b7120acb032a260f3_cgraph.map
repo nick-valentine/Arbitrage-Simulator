@@ -1,0 +1,12 @@
+<map id="Logger::~Logger" name="Logger::~Logger">
+<area shape="rect" id="node2" href="$classLogger.html#a9ff4ec284aaf984a5ea07d2175e18a31" title="Logger::configure" alt="" coords="169,31,292,57"/>
+<area shape="rect" id="node7" href="$classLogger.html#a0dff76f9cf64e4e7acdefaad6987fc07" title="Logger::debug" alt="" coords="179,81,283,108"/>
+<area shape="rect" id="node8" href="$classLogger.html#a2cdf3e6e8ec34488d4077a249c11fa2d" title="Logger::error" alt="" coords="183,132,278,159"/>
+<area shape="rect" id="node9" href="$classLogger.html#ac625c9c6d6b843e818fbc51b94fa639a" title="Logger::info" alt="" coords="185,183,276,209"/>
+<area shape="rect" id="node10" href="$classLogger.html#a2b548c8904a3386b24b0a031ab19b29b" title="Logger::log" alt="" coords="187,233,274,260"/>
+<area shape="rect" id="node11" href="$classLogger.html#ab307fd2a26a4fc681b5e86e883d353de" title="Logger::warn" alt="" coords="182,284,279,311"/>
+<area shape="rect" id="node3" href="$classConfigLoader.html#a99778c30f3d79e84995d9e9c7245b089" title="ConfigLoader::getIntOption" alt="" coords="340,31,519,57"/>
+<area shape="rect" id="node4" href="$classConfigLoader.html#a162bb553780887f9c73861c39fb19e90" title="ConfigLoader::getStringOption" alt="" coords="567,31,764,57"/>
+<area shape="rect" id="node5" href="$classConfigLoader.html#a8d086e4fc43dbbf3ea03b25e7808d52d" title="ConfigLoader::mutateOption" alt="" coords="812,5,997,32"/>
+<area shape="rect" id="node6" href="$classConfigLoader.html#a75640e185ea0090519fce7df634cc48a" title="ConfigLoader::save" alt="" coords="837,56,972,83"/>
+</map>

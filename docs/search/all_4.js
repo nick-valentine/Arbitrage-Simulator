@@ -7,5 +7,5 @@ var searchData=
   ['elevationnoisespread',['elevationNoiseSpread',['../classWorld.html#a8a5c19085cdf2a499e6497c8bbb2aac8',1,'World']]],
   ['elevationskewnoise',['elevationSkewNoise',['../classWorld.html#ae97ed5c4852491cc91e2fbb1e165e8f1',1,'World']]],
   ['elevationskewnoisespread',['elevationSkewNoiseSpread',['../classWorld.html#ab29028a5114a84b1d2c2e28eafcc769d',1,'World']]],
-  ['error',['ERROR',['../classServerSession.html#ae34485de6117ea26f500189ae3499114afab5ceef0e493b25fa0fe717ac7c293c',1,'ServerSession']]]
+  ['error',['ERROR',['../classServerSession.html#ae34485de6117ea26f500189ae3499114afab5ceef0e493b25fa0fe717ac7c293c',1,'ServerSession::ERROR()'],['../classLogger.html#ac744681e23720966b5f430ec2060da36a3ce1bbeb15a3d8e29e4c5e75492a781b',1,'Logger::ERROR()'],['../classBufferLogger.html#a369d2ba5ea74e336ad064842cf573d89',1,'BufferLogger::error()'],['../classConsoleLogger.html#a39f299404bbb3db80b54d5463f814700',1,'ConsoleLogger::error()'],['../classLogger.html#a2cdf3e6e8ec34488d4077a249c11fa2d',1,'Logger::error()']]]
 ];

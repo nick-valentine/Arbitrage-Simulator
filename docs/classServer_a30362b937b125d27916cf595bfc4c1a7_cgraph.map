@@ -1,10 +1,11 @@
 <map id="Server::run" name="Server::run">
-<area shape="rect" id="node2" href="$classConnection.html#aa2d63964549303b4d0d4369f96f1039a" title="If a connection was already made, bind this Connection class to it. " alt="" coords="147,5,267,32"/>
-<area shape="rect" id="node3" href="$classConnection.html#aea9f9d78e2b92747d4e4575ccb97361e" title="Connection::close" alt="" coords="557,81,684,108"/>
-<area shape="rect" id="node4" href="$classConnection.html#a8c99eecd6637746b701c77b1af45301f" title="Connection::get" alt="" coords="149,107,264,133"/>
-<area shape="rect" id="node5" href="$classServerSession.html#acd2886a4169b9dceb30444b0f3b9f350" title="ServerSession::init" alt="" coords="141,157,273,184"/>
-<area shape="rect" id="node6" href="$classServerSession.html#a9618739dcf123159134c03418f5d43d5" title="Launch thread to manage this session. " alt="" coords="140,208,273,235"/>
-<area shape="rect" id="node7" href="$classServerSession.html#adc44562be2fb27c3cd5242503fe60bf9" title="ServerSession::sessionLoop" alt="" coords="321,183,509,209"/>
-<area shape="rect" id="node8" href="$classConnection.html#a849095cd9dda6388c05fe4896b380530" title="Blocking read on this socket. " alt="" coords="560,157,681,184"/>
-<area shape="rect" id="node9" href="$classConnection.html#a6fff1bda7a9e0dc4997792ac29ce1af1" title="Write msg to this socket. " alt="" coords="559,208,683,235"/>
+<area shape="rect" id="node2" href="$classConnection.html#aa2d63964549303b4d0d4369f96f1039a" title="If a connection was already made, bind this Connection class to it. " alt="" coords="166,5,286,32"/>
+<area shape="rect" id="node3" href="$classConnection.html#aea9f9d78e2b92747d4e4575ccb97361e" title="Connection::close" alt="" coords="596,81,723,108"/>
+<area shape="rect" id="node4" href="$classConnection.html#a8c99eecd6637746b701c77b1af45301f" title="Connection::get" alt="" coords="169,107,283,133"/>
+<area shape="rect" id="node5" href="$classServerSession.html#acd2886a4169b9dceb30444b0f3b9f350" title="ServerSession::init" alt="" coords="160,157,292,184"/>
+<area shape="rect" id="node6" href="$classServerSession.html#a9618739dcf123159134c03418f5d43d5" title="Launch thread to manage this session. " alt="" coords="159,208,293,235"/>
+<area shape="rect" id="node10" href="$classServerSession.html#a6b90b478f2a007fe6d7f3de6f080c2cd" title="ServerSession::setLogger" alt="" coords="140,259,312,285"/>
+<area shape="rect" id="node7" href="$classServerSession.html#adc44562be2fb27c3cd5242503fe60bf9" title="ServerSession::sessionLoop" alt="" coords="360,183,548,209"/>
+<area shape="rect" id="node8" href="$classConnection.html#a849095cd9dda6388c05fe4896b380530" title="Blocking read on this socket. " alt="" coords="599,157,720,184"/>
+<area shape="rect" id="node9" href="$classConnection.html#a6fff1bda7a9e0dc4997792ac29ce1af1" title="Write msg to this socket. " alt="" coords="597,208,721,235"/>
 </map>

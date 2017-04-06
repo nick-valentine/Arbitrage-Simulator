@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['world',['World',['../classWorld.html',1,'']]],
-  ['worldchunk',['WorldChunk',['../classWorldChunk.html',1,'']]],
-  ['worldinteractioninterface',['WorldInteractionInterface',['../classWorldInteractionInterface.html',1,'']]]
+  ['textelement',['TextElement',['../structWindow_1_1TextElement.html',1,'Window']]],
+  ['tile',['Tile',['../classTile.html',1,'']]],
+  ['tiletype',['TileType',['../structTile_1_1TileType.html',1,'Tile']]]
 ];

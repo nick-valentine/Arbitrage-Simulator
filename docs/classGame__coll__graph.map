@@ -1,7 +1,7 @@
 <map id="Game" name="Game">
-<area shape="rect" id="node2" href="$classCamera.html" title="Viewport for drawing the world and player modified by own position. " alt="" coords="5,176,95,356"/>
-<area shape="rect" id="node3" href="$classWorldInteractionInterface.html" title="Class to proxy all interactions with the world through. " alt="" coords="119,213,309,319"/>
-<area shape="rect" id="node4" href="$classScreen.html" title="Screen. " alt="" coords="333,147,439,385"/>
-<area shape="rect" id="node5" href="$classPlayer.html" title="Player. " alt="" coords="463,154,607,378"/>
-<area shape="rect" id="node6" href="$classAbstractGameObject.html" title="The Abstract Game Object. " alt="" coords="463,5,607,97"/>
+<area shape="rect" id="node2" href="$classGameWindowLayout.html" title="{GameWindowLayout\n|&#45; mainWindow\l&#45; subWindow\l&#45; windows\l&#45; windowHeight\l&#45; windowWidth\l&#45; subWindowMinHeight\l&#45; screenRatioForMainWindow\l|+ GameWindowLayout()\l+ ~GameWindowLayout()\l+ addWindow()\l+ delWindow()\l+ setMainWindow()\l+ setSubWindow()\l+ setSubWindowMinHeight()\l+ render()\l+ updateScreenSize()\l}" alt="" coords="5,147,200,429"/>
+<area shape="rect" id="node3" href="$classCamera.html" title="Viewport for drawing the world and player modified by own position. " alt="" coords="225,198,314,378"/>
+<area shape="rect" id="node4" href="$classWorldInteractionInterface.html" title="Class to proxy all interactions with the world through. " alt="" coords="339,235,528,341"/>
+<area shape="rect" id="node5" href="$classPlayer.html" title="Player. " alt="" coords="552,176,696,400"/>
+<area shape="rect" id="node6" href="$classAbstractGameObject.html" title="The Abstract Game Object. " alt="" coords="552,5,696,97"/>
 </map>

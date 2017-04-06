@@ -1,11 +1,9 @@
 var searchData=
 [
   ['save',['save',['../classConfigLoader.html#a75640e185ea0090519fce7df634cc48a',1,'ConfigLoader']]],
-  ['screen',['Screen',['../classScreen.html',1,'Screen'],['../classGame.html#adcabca50c3e48f8e1e9e5798f143a787',1,'Game::screen()'],['../classScreen.html#ae7576476fc6e6a6eaa66389fdc41fe72',1,'Screen::Screen()']]],
-  ['screen_2ecpp',['Screen.cpp',['../Screen_8cpp.html',1,'']]],
-  ['screen_2ehpp',['Screen.hpp',['../Screen_8hpp.html',1,'']]],
-  ['screenbuffer',['ScreenBuffer',['../classScreen.html#aac80a29ca2d1b94557346d85acf45595',1,'Screen']]],
+  ['screenbuffer',['ScreenBuffer',['../classGameWindow.html#a67a85976202e9e203dfc9fe8bafdeab1',1,'GameWindow']]],
   ['screenheight',['screenHeight',['../classGame.html#a329351d67993953391a6a65db536c017',1,'Game']]],
+  ['screenratioformainwindow',['screenRatioForMainWindow',['../classGameWindowLayout.html#aed7cebde79d30b68998511a3015a60e2',1,'GameWindowLayout']]],
   ['screenwidth',['screenWidth',['../classGame.html#ab1ca40d8527bb09e773bb97030b7a5cc',1,'Game']]],
   ['server',['Server',['../classServer.html',1,'Server'],['../classServer.html#ad5ec9462b520e59f7ea831e157ee5e59',1,'Server::Server()']]],
   ['server_2ecpp',['server.cpp',['../server_8cpp.html',1,'(Global Namespace)'],['../Server_8cpp.html',1,'(Global Namespace)']]],
@@ -18,11 +16,15 @@ var searchData=
   ['sessions',['sessions',['../classServer.html#ab4f438d8a4db38141914a80da3e50bb5',1,'Server']]],
   ['setconnection',['setConnection',['../classServerSession.html#afd7e4db5986abe710dfbae832f119710',1,'ServerSession']]],
   ['setcurrent',['setCurrent',['../classColorPallete.html#af03dece923247d3abd4f6ecbf344474b',1,'ColorPallete']]],
+  ['setlogger',['setLogger',['../classServerSession.html#a6b90b478f2a007fe6d7f3de6f080c2cd',1,'ServerSession']]],
+  ['setmainwindow',['setMainWindow',['../classGameWindowLayout.html#a04f4a23eec82c45d000e252f426a241a',1,'GameWindowLayout']]],
   ['setmaxyx',['setMaxYX',['../classWorldChunk.html#a538965747758546c9097245ec9bfe930',1,'WorldChunk']]],
   ['setname',['setName',['../classCity.html#a1b0da34ae1fa07bd3223e1917f5311fd',1,'City']]],
   ['setpallete',['setPallete',['../classTile.html#a13fdcd0905936c7517d98a7294f3bb49',1,'Tile']]],
   ['setposx',['setPosX',['../classCity.html#a9a4a070551f8f095c98922a6880c8364',1,'City']]],
   ['setposy',['setPosY',['../classCity.html#a1bc60d3c869b20afa63a642cadccdb85',1,'City']]],
+  ['setsubwindow',['setSubWindow',['../classGameWindowLayout.html#a53d838ca33b4bdcbbed30060f9e61a44',1,'GameWindowLayout']]],
+  ['setsubwindowminheight',['setSubWindowMinHeight',['../classGameWindowLayout.html#ae0a5517805f29236a0644acffc5cf7e4',1,'GameWindowLayout']]],
   ['setup',['setup',['../classGame.html#ad7a2b7ff71e3064a289680944a27a42e',1,'Game::setup()'],['../classServer.html#a8b1fafda0754578f16a974195d120e92',1,'Server::setup()']]],
   ['socket',['socket',['../classConnection.html#ac16e8dcf22ee47ecff605077e5cdc715',1,'Connection']]],
   ['socket_5fptr',['socket_ptr',['../classConnection.html#a46f0ce70fa5cae0398f32340c7c137a4',1,'Connection']]],
@@ -33,5 +35,7 @@ var searchData=
   ['string',['String',['../namespaceString.html',1,'']]],
   ['string_2ecpp',['String.cpp',['../String_8cpp.html',1,'']]],
   ['string_2ehpp',['String.hpp',['../String_8hpp.html',1,'']]],
+  ['subwindow',['subWindow',['../classGameWindowLayout.html#a9f1eb73e8197f5f1d021d5b420cd9472',1,'GameWindowLayout']]],
+  ['subwindowminheight',['subWindowMinHeight',['../classGameWindowLayout.html#a180a029c34fa60fa2577c53b0f0d6a8b',1,'GameWindowLayout']]],
   ['swamps',['SWAMPS',['../classTile.html#a23e11e1d5997c76090e18f7a7238aa59a17f8e1af684460fb612e8661fc8d0dde',1,'Tile']]]
 ];

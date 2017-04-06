@@ -13,6 +13,7 @@ var classServer =
     [ "configWorldNameKey", "classServer.html#a7c6fefc21053d97d4a965658a166ec8f", null ],
     [ "defaultPortNumber", "classServer.html#acf664ae32511bb3c5c974c20f1de44c9", null ],
     [ "defaultWorldName", "classServer.html#a19331a941a3c32846697bf75a27deabb", null ],
+    [ "logger", "classServer.html#aa02522dc4fc4bf2a583ce7081c114b7b", null ],
     [ "portNumber", "classServer.html#a72256f23fe1dbb301a6a19e440f5d089", null ],
     [ "sessions", "classServer.html#ab4f438d8a4db38141914a80da3e50bb5", null ],
     [ "version", "classServer.html#addd3f56d5930686641751ce58f6750d6", null ],

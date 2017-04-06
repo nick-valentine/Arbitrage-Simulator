@@ -1,0 +1,7 @@
+<map id="ConsoleLogger::print" name="ConsoleLogger::print">
+<area shape="rect" id="node2" href="$classConsoleLogger.html#accf2c514d50faca4d5d5d9b1246925a1" title="ConsoleLogger::debug" alt="" coords="196,5,348,32"/>
+<area shape="rect" id="node3" href="$classConsoleLogger.html#a39f299404bbb3db80b54d5463f814700" title="ConsoleLogger::error" alt="" coords="201,56,343,83"/>
+<area shape="rect" id="node4" href="$classConsoleLogger.html#aaf10bf516a2585b7020bdd6dff2eba95" title="ConsoleLogger::info" alt="" coords="203,107,341,133"/>
+<area shape="rect" id="node5" href="$classConsoleLogger.html#a10fa8072165bf024f0525f276ec2820f" title="ConsoleLogger::log" alt="" coords="205,157,339,184"/>
+<area shape="rect" id="node6" href="$classConsoleLogger.html#ac95c55d919e7ca8e9501e6429d216c77" title="ConsoleLogger::warn" alt="" coords="199,208,345,235"/>
+</map>

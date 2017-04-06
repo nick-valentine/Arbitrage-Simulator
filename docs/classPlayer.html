@@ -160,8 +160,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a955e68fc1da6565d43649b27a0ecabee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e3e621902e7d1d718e5cd5c2004f2ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a6e3e621902e7d1d718e5cd5c2004f2ef">getYX</a> (int &amp;<a class="el" href="classPlayer.html#a6da29d6e3783c6028c92647bbde478f5">y</a>, int &amp;<a class="el" href="classPlayer.html#ad285b3cb25e4a46ca944b9a416c1b13f">x</a>)</td></tr>
 <tr class="separator:a6e3e621902e7d1d718e5cd5c2004f2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e1e3c70cc431b185c89b5e00d3b95b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a1e1e3c70cc431b185c89b5e00d3b95b4">draw</a> (<a class="el" href="classScreen.html">Screen</a> &amp;screen, int offsetTop, int offsetLeft)</td></tr>
-<tr class="separator:a1e1e3c70cc431b185c89b5e00d3b95b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad62851071bf59965833224024a687c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#aad62851071bf59965833224024a687c1">draw</a> (<a class="el" href="classWindow.html#a370ec54942433f58845f69ec8881a6d5">Window::window_ptr</a> window, int offsetTop, int offsetLeft)</td></tr>
+<tr class="separator:aad62851071bf59965833224024a687c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -272,15 +272,15 @@ Static Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a1e1e3c70cc431b185c89b5e00d3b95b4"></a>
+<a class="anchor" id="aad62851071bf59965833224024a687c1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void Player::draw </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classScreen.html">Screen</a> &amp;&#160;</td>
-          <td class="paramname"><em>screen</em>, </td>
+          <td class="paramtype"><a class="el" href="classWindow.html#a370ec54942433f58845f69ec8881a6d5">Window::window_ptr</a>&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -304,32 +304,18 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Player_8cpp_source.html#l00046">46</a> of file <a class="el" href="Player_8cpp_source.html">Player.cpp</a>.</p>
 
-<p>References <a class="el" href="Screen_8cpp_source.html#l00083">Screen::getHeight()</a>, <a class="el" href="Screen_8cpp_source.html#l00088">Screen::getWidth()</a>, <a class="el" href="Screen_8cpp_source.html#l00023">Screen::put()</a>, and <a class="el" href="Player_8hpp_source.html#l00032">representation</a>.</p>
+<p>References <a class="el" href="Player_8hpp_source.html#l00032">representation</a>.</p>
 
 <p>Referenced by <a class="el" href="Camera_8cpp_source.html#l00037">Camera::render()</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classPlayer_a1e1e3c70cc431b185c89b5e00d3b95b4_cgraph.png" border="0" usemap="#classPlayer_a1e1e3c70cc431b185c89b5e00d3b95b4_cgraph" alt=""/></div>
-<map name="classPlayer_a1e1e3c70cc431b185c89b5e00d3b95b4_cgraph" id="classPlayer_a1e1e3c70cc431b185c89b5e00d3b95b4_cgraph">
-<area shape="rect" id="node2" href="classScreen.html#a4edca55b221da0326dc7de0ec0f4dc91" title="Screen::getHeight" alt="" coords="148,5,275,32"/>
-<area shape="rect" id="node3" href="classScreen.html#ab71b25e991771611d4acab431f92b518" title="Screen::getWidth" alt="" coords="150,56,273,83"/>
-<area shape="rect" id="node4" href="classScreen.html#aed8b600eb3f9b5978030016760d74c21" title="Screen::put" alt="" coords="167,107,256,133"/>
-</map>
-</div>
-</p>
-
-<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classPlayer_a1e1e3c70cc431b185c89b5e00d3b95b4_icgraph.png" border="0" usemap="#classPlayer_a1e1e3c70cc431b185c89b5e00d3b95b4_icgraph" alt=""/></div>
-<map name="classPlayer_a1e1e3c70cc431b185c89b5e00d3b95b4_icgraph" id="classPlayer_a1e1e3c70cc431b185c89b5e00d3b95b4_icgraph">
-<area shape="rect" id="node2" href="classCamera.html#aef1aa0a75a91a83015a29239ef730086" title="Render the world and player onto the screen. " alt="" coords="148,5,260,32"/>
+<div class="center"><img src="classPlayer_aad62851071bf59965833224024a687c1_icgraph.png" border="0" usemap="#classPlayer_aad62851071bf59965833224024a687c1_icgraph" alt=""/></div>
+<map name="classPlayer_aad62851071bf59965833224024a687c1_icgraph" id="classPlayer_aad62851071bf59965833224024a687c1_icgraph">
+<area shape="rect" id="node2" href="classCamera.html#a76ed19c192c25c8e41f4a6bb54ba87b2" title="Render the world and player onto the screen. " alt="" coords="148,5,260,32"/>
 <area shape="rect" id="node3" href="classGame.html#a99fb161fbbe87d25a8b73265a0611e58" title="Game::run" alt="" coords="308,5,391,32"/>
 <area shape="rect" id="node4" href="game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="439,5,489,32"/>
 </map>
@@ -377,11 +363,11 @@ Static Private Attributes</h2></td></tr>
 
 <p>Referenced by <a class="el" href="Player_8cpp_source.html#l00017">Player()</a>.</p>
 
-<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classPlayer_a01ac542999f498838c74e326ccee24c6_icgraph.png" border="0" usemap="#classPlayer_a01ac542999f498838c74e326ccee24c6_icgraph" alt=""/></div>
 <map name="classPlayer_a01ac542999f498838c74e326ccee24c6_icgraph" id="classPlayer_a01ac542999f498838c74e326ccee24c6_icgraph">
 <area shape="rect" id="node2" href="classPlayer.html#a0d509b5954ab8294c54b81b70a058926" title="Player::Player" alt="" coords="223,5,327,32"/>
@@ -419,13 +405,13 @@ Static Private Attributes</h2></td></tr>
 
 <p>References <a class="el" href="Player_8hpp_source.html#l00036">x</a>, and <a class="el" href="Player_8hpp_source.html#l00035">y</a>.</p>
 
-<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00032">Game::run()</a>.</p>
+<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00043">Game::run()</a>.</p>
 
-<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classPlayer_a6e3e621902e7d1d718e5cd5c2004f2ef_icgraph.png" border="0" usemap="#classPlayer_a6e3e621902e7d1d718e5cd5c2004f2ef_icgraph" alt=""/></div>
 <map name="classPlayer_a6e3e621902e7d1d718e5cd5c2004f2ef_icgraph" id="classPlayer_a6e3e621902e7d1d718e5cd5c2004f2ef_icgraph">
 <area shape="rect" id="node2" href="classGame.html#a99fb161fbbe87d25a8b73265a0611e58" title="Game::run" alt="" coords="156,5,239,32"/>
@@ -464,13 +450,13 @@ Static Private Attributes</h2></td></tr>
 
 <p>References <a class="el" href="Player_8hpp_source.html#l00036">x</a>, and <a class="el" href="Player_8hpp_source.html#l00035">y</a>.</p>
 
-<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00032">Game::run()</a>.</p>
+<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00043">Game::run()</a>.</p>
 
-<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classPlayer_a955e68fc1da6565d43649b27a0ecabee_icgraph.png" border="0" usemap="#classPlayer_a955e68fc1da6565d43649b27a0ecabee_icgraph" alt=""/></div>
 <map name="classPlayer_a955e68fc1da6565d43649b27a0ecabee_icgraph" id="classPlayer_a955e68fc1da6565d43649b27a0ecabee_icgraph">
 <area shape="rect" id="node2" href="classGame.html#a99fb161fbbe87d25a8b73265a0611e58" title="Game::run" alt="" coords="152,5,235,32"/>
@@ -627,7 +613,7 @@ Static Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classPlayer.html">Player</a></li>
-    <li class="footer">Generated on Thu Mar 30 2017 21:55:00 for Trade App by
+    <li class="footer">Generated on Wed Apr 5 2017 21:03:32 for Trade App by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

@@ -1,0 +1,25 @@
+var classCursesWindow =
+[
+    [ "window_ptr", "classCursesWindow.html#a5ebbe6b2878dadec7378f9320dd956ba", null ],
+    [ "CursesWindow", "classCursesWindow.html#a088b31a5f3558ead6997a949f092ebbf", null ],
+    [ "CursesWindow", "classCursesWindow.html#a77e3bb7a774efba5a72f297e900d9506", null ],
+    [ "~CursesWindow", "classCursesWindow.html#abd721c8e7b4cfc5da1e87123fd3b2601", null ],
+    [ "clear", "classCursesWindow.html#a1b22fdef6622870e5caa7408597c1191", null ],
+    [ "getCh", "classCursesWindow.html#a1ceeaacd546b56e0ab3ed3977550319d", null ],
+    [ "getHeight", "classCursesWindow.html#ad7e945e609ec4e036b2690b953c3580b", null ],
+    [ "getWidth", "classCursesWindow.html#a47a331cb5d0bae7df6e31e44892c8951", null ],
+    [ "getX", "classCursesWindow.html#a133a185a4bc4b436b9db14c6cb5e2146", null ],
+    [ "getY", "classCursesWindow.html#a807457df04f780cd4db4808dce4e0939", null ],
+    [ "init", "classCursesWindow.html#a95c26d2817aea2742937c8b83fbc0b27", null ],
+    [ "move", "classCursesWindow.html#a058be5cf240fc2e1ae26a7446824d664", null ],
+    [ "put", "classCursesWindow.html#acfe24bc978bab88c3349b505671ad61a", null ],
+    [ "put", "classCursesWindow.html#ac811aff97a442f23b51872ead3584a93", null ],
+    [ "putstr", "classCursesWindow.html#a737f13ca890b09545e00270a6999a4b4", null ],
+    [ "render", "classCursesWindow.html#ac06799b415fada8c68faffc6d5c8f034", null ],
+    [ "resize", "classCursesWindow.html#a4001dd4ff7f12e372fada557f2ffa2df", null ],
+    [ "height", "classCursesWindow.html#a52eb5eedd5549d68bf6890c04a192790", null ],
+    [ "width", "classCursesWindow.html#afbff6c8582833a3601b8cfc8427eed60", null ],
+    [ "win", "classCursesWindow.html#a2b9964290aebfeeb1f40366382adfb17", null ],
+    [ "x", "classCursesWindow.html#a1a8df641c7039c8885fcfecd27e0f492", null ],
+    [ "y", "classCursesWindow.html#a1e1696461ab4fc524306339250551bd8", null ]
+];

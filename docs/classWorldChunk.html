@@ -159,8 +159,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac860c00ead079d20df6e007122d4a233"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0428cb7066e8cb921b37a2ff7a2ba9dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorldChunk.html#a0428cb7066e8cb921b37a2ff7a2ba9dc">generateChunk</a> (<a class="el" href="classNoiseFunc.html">NoiseFunc</a> *tileNoise, <a class="el" href="classNoiseFunc.html">NoiseFunc</a> *elevationNoise, <a class="el" href="classNoiseFunc.html">NoiseFunc</a> *elevationSkewNoise)</td></tr>
 <tr class="separator:a0428cb7066e8cb921b37a2ff7a2ba9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab153d42421b3a7f156dc84ee8a20ba0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorldChunk.html#aab153d42421b3a7f156dc84ee8a20ba0">draw</a> (<a class="el" href="classScreen.html">Screen</a> &amp;screen, int playerY, int playerX)</td></tr>
-<tr class="separator:aab153d42421b3a7f156dc84ee8a20ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ba81d96ee50000d7e0afd0704795c3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorldChunk.html#a0ba81d96ee50000d7e0afd0704795c3b">draw</a> (<a class="el" href="classWindow.html#a370ec54942433f58845f69ec8881a6d5">Window::window_ptr</a> window, int playerY, int playerX)</td></tr>
+<tr class="separator:a0ba81d96ee50000d7e0afd0704795c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -410,7 +410,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>References <a class="el" href="WorldChunk_8hpp_source.html#l00061">chunk_height</a>, <a class="el" href="WorldChunk_8hpp_source.html#l00062">chunk_width</a>, <a class="el" href="WorldChunk_8hpp_source.html#l00060">configured</a>, <a class="el" href="ConfigLoader_8cpp_source.html#l00046">ConfigLoader::getIntOption()</a>, and <a class="el" href="WorldChunk_8hpp_source.html#l00063">max_cities_per_chunk</a>.</p>
 
-<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00066">Game::configure()</a>, <a class="el" href="Server_8cpp_source.html#l00060">Server::configure()</a>, and <a class="el" href="WorldChunk_8cpp_source.html#l00019">WorldChunk()</a>.</p>
+<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00104">Game::configure()</a>, <a class="el" href="Server_8cpp_source.html#l00066">Server::configure()</a>, and <a class="el" href="WorldChunk_8cpp_source.html#l00019">WorldChunk()</a>.</p>
 
 <p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -516,22 +516,22 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classWorldChunk_a7c4e8d9c40c76cc35247e38b8f61d83e_icgraph.png" border="0" usemap="#classWorldChunk_a7c4e8d9c40c76cc35247e38b8f61d83e_icgraph" alt=""/></div>
 <map name="classWorldChunk_a7c4e8d9c40c76cc35247e38b8f61d83e_icgraph" id="classWorldChunk_a7c4e8d9c40c76cc35247e38b8f61d83e_icgraph">
-<area shape="rect" id="node2" href="classWorldChunk.html#aab153d42421b3a7f156dc84ee8a20ba0" title="WorldChunk::draw" alt="" coords="213,5,344,32"/>
+<area shape="rect" id="node2" href="classWorldChunk.html#a0ba81d96ee50000d7e0afd0704795c3b" title="WorldChunk::draw" alt="" coords="213,5,344,32"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="aab153d42421b3a7f156dc84ee8a20ba0"></a>
+<a class="anchor" id="a0ba81d96ee50000d7e0afd0704795c3b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void WorldChunk::draw </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classScreen.html">Screen</a> &amp;&#160;</td>
-          <td class="paramname"><em>screen</em>, </td>
+          <td class="paramtype"><a class="el" href="classWindow.html#a370ec54942433f58845f69ec8881a6d5">Window::window_ptr</a>&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -555,20 +555,18 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="WorldChunk_8cpp_source.html#l00154">154</a> of file <a class="el" href="WorldChunk_8cpp_source.html">WorldChunk.cpp</a>.</p>
 
-<p>References <a class="el" href="WorldChunk_8hpp_source.html#l00061">chunk_height</a>, <a class="el" href="WorldChunk_8hpp_source.html#l00062">chunk_width</a>, <a class="el" href="WorldChunk_8cpp_source.html#l00172">doCullTile()</a>, <a class="el" href="Screen_8cpp_source.html#l00083">Screen::getHeight()</a>, <a class="el" href="Screen_8cpp_source.html#l00088">Screen::getWidth()</a>, <a class="el" href="WorldChunk_8hpp_source.html#l00087">left</a>, <a class="el" href="Tile_8cpp_source.html#l00096">Tile::setPallete()</a>, <a class="el" href="WorldChunk_8hpp_source.html#l00089">tiles</a>, and <a class="el" href="WorldChunk_8hpp_source.html#l00086">top</a>.</p>
+<p>References <a class="el" href="WorldChunk_8hpp_source.html#l00061">chunk_height</a>, <a class="el" href="WorldChunk_8hpp_source.html#l00062">chunk_width</a>, <a class="el" href="WorldChunk_8cpp_source.html#l00172">doCullTile()</a>, <a class="el" href="WorldChunk_8hpp_source.html#l00087">left</a>, <a class="el" href="Tile_8cpp_source.html#l00097">Tile::setPallete()</a>, <a class="el" href="WorldChunk_8hpp_source.html#l00089">tiles</a>, and <a class="el" href="WorldChunk_8hpp_source.html#l00086">top</a>.</p>
 
 <p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classWorldChunk_aab153d42421b3a7f156dc84ee8a20ba0_cgraph.png" border="0" usemap="#classWorldChunk_aab153d42421b3a7f156dc84ee8a20ba0_cgraph" alt=""/></div>
-<map name="classWorldChunk_aab153d42421b3a7f156dc84ee8a20ba0_cgraph" id="classWorldChunk_aab153d42421b3a7f156dc84ee8a20ba0_cgraph">
+<div class="center"><img src="classWorldChunk_a0ba81d96ee50000d7e0afd0704795c3b_cgraph.png" border="0" usemap="#classWorldChunk_a0ba81d96ee50000d7e0afd0704795c3b_cgraph" alt=""/></div>
+<map name="classWorldChunk_a0ba81d96ee50000d7e0afd0704795c3b_cgraph" id="classWorldChunk_a0ba81d96ee50000d7e0afd0704795c3b_cgraph">
 <area shape="rect" id="node2" href="classWorldChunk.html#a7c4e8d9c40c76cc35247e38b8f61d83e" title="WorldChunk::doCullTile" alt="" coords="184,5,344,32"/>
-<area shape="rect" id="node3" href="classScreen.html#a4edca55b221da0326dc7de0ec0f4dc91" title="Screen::getHeight" alt="" coords="201,56,327,83"/>
-<area shape="rect" id="node4" href="classScreen.html#ab71b25e991771611d4acab431f92b518" title="Screen::getWidth" alt="" coords="203,107,325,133"/>
-<area shape="rect" id="node5" href="classTile.html#a13fdcd0905936c7517d98a7294f3bb49" title="Set Pallete. " alt="" coords="209,157,319,184"/>
-<area shape="rect" id="node6" href="classColorPallete.html#af03dece923247d3abd4f6ecbf344474b" title="ColorPallete::setCurrent" alt="" coords="392,157,555,184"/>
+<area shape="rect" id="node3" href="classTile.html#a13fdcd0905936c7517d98a7294f3bb49" title="Set Pallete. " alt="" coords="209,56,319,83"/>
+<area shape="rect" id="node4" href="classColorPallete.html#af03dece923247d3abd4f6ecbf344474b" title="ColorPallete::setCurrent" alt="" coords="392,56,555,83"/>
 </map>
 </div>
 </p>
@@ -954,7 +952,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>References <a class="el" href="WorldChunk_8hpp_source.html#l00066">maxX</a>, and <a class="el" href="WorldChunk_8hpp_source.html#l00067">maxY</a>.</p>
 
-<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00066">Game::configure()</a>.</p>
+<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00104">Game::configure()</a>.</p>
 
 <p><div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -1416,7 +1414,7 @@ Static Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classWorldChunk.html">WorldChunk</a></li>
-    <li class="footer">Generated on Thu Mar 30 2017 21:55:00 for Trade App by
+    <li class="footer">Generated on Wed Apr 5 2017 21:03:32 for Trade App by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

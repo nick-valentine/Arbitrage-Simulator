@@ -17,7 +17,7 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
         [ "Typedefs", "functions_type.html", null ],
         [ "Enumerations", "functions_enum.html", null ],
@@ -37,7 +37,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "AbstractGameObject_8hpp.html",
-"classServer.html#ad5ec9462b520e59f7ea831e157ee5e59"
+"classGameWindowLayout.html#a72e5e052860d4da128066c5c0d6b3a78",
+"classWorldChunk.html#ae882ecfc1d6319657f76f6036931a9e0"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

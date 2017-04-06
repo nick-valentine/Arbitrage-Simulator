@@ -1,0 +1,5 @@
+<map id="WorldInteractionInterface::draw" name="WorldInteractionInterface::draw">
+<area shape="rect" id="node2" href="$classCamera.html#a76ed19c192c25c8e41f4a6bb54ba87b2" title="Render the world and player onto the screen. " alt="" coords="221,13,333,39"/>
+<area shape="rect" id="node3" href="$classGame.html#a99fb161fbbe87d25a8b73265a0611e58" title="Game::run" alt="" coords="381,13,464,39"/>
+<area shape="rect" id="node4" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="512,13,563,39"/>
+</map>

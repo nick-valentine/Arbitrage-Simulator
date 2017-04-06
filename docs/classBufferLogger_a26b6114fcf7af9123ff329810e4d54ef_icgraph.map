@@ -1,0 +1,7 @@
+<map id="BufferLogger::addToBuffer" name="BufferLogger::addToBuffer">
+<area shape="rect" id="node2" href="$classBufferLogger.html#aceea37311ba9af6cf559e07f5593030f" title="BufferLogger::debug" alt="" coords="228,5,367,32"/>
+<area shape="rect" id="node3" href="$classBufferLogger.html#a369d2ba5ea74e336ad064842cf573d89" title="BufferLogger::error" alt="" coords="232,56,363,83"/>
+<area shape="rect" id="node4" href="$classBufferLogger.html#acf2d666893839ab1c51f30cdf106c784" title="BufferLogger::info" alt="" coords="235,107,360,133"/>
+<area shape="rect" id="node5" href="$classBufferLogger.html#aea3c0433691d7e4e4ae144abfb731ef6" title="BufferLogger::log" alt="" coords="237,157,358,184"/>
+<area shape="rect" id="node6" href="$classBufferLogger.html#a4d05f0a11139572681c84998c32100e2" title="BufferLogger::warn" alt="" coords="231,208,363,235"/>
+</map>

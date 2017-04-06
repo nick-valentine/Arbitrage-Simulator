@@ -1,0 +1,4 @@
+<map id="Logger" name="Logger">
+<area shape="rect" id="node2" href="$classBufferLogger.html" title="BufferLogger. " alt="" coords="5,219,129,413"/>
+<area shape="rect" id="node3" href="$classConsoleLogger.html" title="{ConsoleLogger\n||+ ConsoleLogger()\l+ ~ConsoleLogger()\l+ debug()\l+ info()\l+ warn()\l+ error()\l+ log()\l# print()\l}" alt="" coords="153,226,291,406"/>
+</map>

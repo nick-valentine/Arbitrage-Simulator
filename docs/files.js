@@ -3,6 +3,10 @@ var files =
     [ "AbstractGameObject.hpp", "AbstractGameObject_8hpp.html", [
       [ "AbstractGameObject", "classAbstractGameObject.html", "classAbstractGameObject" ]
     ] ],
+    [ "BufferLogger.cpp", "BufferLogger_8cpp.html", null ],
+    [ "BufferLogger.hpp", "BufferLogger_8hpp.html", [
+      [ "BufferLogger", "classBufferLogger.html", "classBufferLogger" ]
+    ] ],
     [ "Camera.cpp", "Camera_8cpp.html", null ],
     [ "Camera.hpp", "Camera_8hpp.html", [
       [ "Camera", "classCamera.html", "classCamera" ]
@@ -23,15 +27,35 @@ var files =
     [ "Connection.hpp", "Connection_8hpp.html", [
       [ "Connection", "classConnection.html", "classConnection" ]
     ] ],
+    [ "ConsoleLogger.cpp", "ConsoleLogger_8cpp.html", null ],
+    [ "ConsoleLogger.hpp", "ConsoleLogger_8hpp.html", [
+      [ "ConsoleLogger", "classConsoleLogger.html", "classConsoleLogger" ]
+    ] ],
+    [ "CursesWindow.cpp", "CursesWindow_8cpp.html", null ],
+    [ "CursesWindow.hpp", "CursesWindow_8hpp.html", [
+      [ "CursesWindow", "classCursesWindow.html", "classCursesWindow" ]
+    ] ],
     [ "Game.cpp", "Game_8cpp.html", null ],
     [ "game.cpp", "game_8cpp.html", "game_8cpp" ],
     [ "Game.hpp", "Game_8hpp.html", [
       [ "Game", "classGame.html", "classGame" ]
     ] ],
+    [ "GameWindow.cpp", "GameWindow_8cpp.html", null ],
+    [ "GameWindow.hpp", "GameWindow_8hpp.html", [
+      [ "GameWindow", "classGameWindow.html", "classGameWindow" ]
+    ] ],
+    [ "GameWindowLayout.cpp", "GameWindowLayout_8cpp.html", null ],
+    [ "GameWindowLayout.hpp", "GameWindowLayout_8hpp.html", [
+      [ "GameWindowLayout", "classGameWindowLayout.html", "classGameWindowLayout" ]
+    ] ],
     [ "Globals.hpp", "Globals_8hpp.html", "Globals_8hpp" ],
     [ "LocalWorldInteraction.cpp", "LocalWorldInteraction_8cpp.html", null ],
     [ "LocalWorldInteraction.hpp", "LocalWorldInteraction_8hpp.html", [
       [ "LocalWorldInteraction", "classLocalWorldInteraction.html", "classLocalWorldInteraction" ]
+    ] ],
+    [ "Logger.cpp", "Logger_8cpp.html", null ],
+    [ "Logger.hpp", "Logger_8hpp.html", [
+      [ "Logger", "classLogger.html", "classLogger" ]
     ] ],
     [ "NetworkedWorldInteraction.cpp", "NetworkedWorldInteraction_8cpp.html", null ],
     [ "NetworkedWorldInteraction.hpp", "NetworkedWorldInteraction_8hpp.html", [
@@ -44,11 +68,6 @@ var files =
     [ "Player.cpp", "Player_8cpp.html", null ],
     [ "Player.hpp", "Player_8hpp.html", [
       [ "Player", "classPlayer.html", "classPlayer" ]
-    ] ],
-    [ "Screen.cpp", "Screen_8cpp.html", null ],
-    [ "Screen.hpp", "Screen_8hpp.html", [
-      [ "Screen", "classScreen.html", "classScreen" ],
-      [ "TextElement", "structScreen_1_1TextElement.html", "structScreen_1_1TextElement" ]
     ] ],
     [ "server.cpp", "server_8cpp.html", "server_8cpp" ],
     [ "Server.cpp", "Server_8cpp.html", null ],
@@ -65,6 +84,10 @@ var files =
     [ "Tile.hpp", "Tile_8hpp.html", [
       [ "Tile", "classTile.html", "classTile" ],
       [ "TileType", "structTile_1_1TileType.html", "structTile_1_1TileType" ]
+    ] ],
+    [ "Window.hpp", "Window_8hpp.html", [
+      [ "Window", "classWindow.html", "classWindow" ],
+      [ "TextElement", "structWindow_1_1TextElement.html", "structWindow_1_1TextElement" ]
     ] ],
     [ "World.cpp", "World_8cpp.html", null ],
     [ "World.hpp", "World_8hpp.html", [

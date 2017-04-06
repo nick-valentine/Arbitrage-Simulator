@@ -10,5 +10,6 @@ var searchData=
   ['noisefunc',['NoiseFunc',['../classNoiseFunc.html',1,'NoiseFunc'],['../classNoiseFunc.html#a1a3da776937224be2b609defeb31f19c',1,'NoiseFunc::NoiseFunc()'],['../classNoiseFunc.html#a4855969958b5ebdc250fca60df5266ad',1,'NoiseFunc::NoiseFunc(std::stringstream *ss)'],['../classNoiseFunc.html#aaf17790911553a719808724c2953afb5',1,'NoiseFunc::NoiseFunc(float gridPeriod)']]],
   ['noisefunc_2ecpp',['NoiseFunc.cpp',['../NoiseFunc_8cpp.html',1,'']]],
   ['noisefunc_2ehpp',['NoiseFunc.hpp',['../NoiseFunc_8hpp.html',1,'']]],
+  ['none',['NONE',['../classLogger.html#ac744681e23720966b5f430ec2060da36ad7501076156e6d62015220878014c30b',1,'Logger']]],
   ['num_5fcolors',['num_colors',['../classColorPallete.html#a0e60a60022ae1192032cfa501cbceaf3',1,'ColorPallete']]]
 ];
