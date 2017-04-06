@@ -5,28 +5,27 @@
 #include <curses.h>
 #include <vector>
 
-#include "Window/Window.hpp"
+#include "Window/CursesWindow.hpp"
 
 /**
  * GameWindow.
- * Buffer and wrapper for ncurses screen in case this is to be ported to a
- * system where ncurses is unavailable, or a gui is made.
+ * Buffer and Curses window for a displaying game world
  */
-class GameWindow : public Window
+class GameWindow : public CursesWindow
 {
 public:
     GameWindow();
-    ~GameWindow();
+    virtual ~GameWindow();
 
-    void init();
-    void resize(int height, int width);
+    virtual void init();
+    virtual void resize(int height, int width);
 
-    void put(unsigned int colorPair, unsigned int layer, char c, int y, int x);
-    void put(Window::TextElement c, int y, int x);
+    virtual void put(unsigned int colorPair, unsigned int layer, char c, int y, int x);
+    virtual void put(Window::TextElement c, int y, int x);
 
-    void clear();
+    virtual void clear();
 
-    void render();
+    virtual void render();
 
 private:
     std::vector< std::vector< Window::TextElement > >ScreenBuffer;

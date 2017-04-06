@@ -34,7 +34,7 @@ clean: rmObjFiles makeObjFileStructure
 
 rebuild: clean main
 
-server: obj/server.o obj/Managers/Server.o obj/Managers/ServerSession.o obj/ConfigLoader.o obj/Window/GameWindow.o obj/Camera.o obj/GameObjects/City.o obj/GameObjects/World.o obj/GameObjects/WorldChunk.o obj/GameObjects/Tile.o obj/GameObjects/Player.o obj/ColorPallete.o obj/WorldGen/NoiseFunc.o obj/Helpers/String.o obj/Networking/Connection.o obj/Services/WorldInteraction/LocalWorldInteraction.o obj/Window/Window.o
+server: obj/server.o obj/Managers/Server.o obj/Managers/ServerSession.o obj/ConfigLoader.o obj/Window/GameWindow.o obj/Camera.o obj/GameObjects/City.o obj/GameObjects/World.o obj/GameObjects/WorldChunk.o obj/GameObjects/Tile.o obj/GameObjects/Player.o obj/ColorPallete.o obj/WorldGen/NoiseFunc.o obj/Helpers/String.o obj/Networking/Connection.o obj/Services/WorldInteraction/LocalWorldInteraction.o obj/Window/CursesWindow.o
 	$(CC) \
 		obj/Camera.o \
 		obj/ColorPallete.o \
@@ -46,7 +46,7 @@ server: obj/server.o obj/Managers/Server.o obj/Managers/ServerSession.o obj/Conf
 		obj/GameObjects/WorldChunk.o \
 		obj/Managers/Server.o \
 		obj/Managers/ServerSession.o \
-		obj/Window/Window.o \
+		obj/Window/CursesWindow.o \
 		obj/Window/GameWindow.o \
 		obj/WorldGen/NoiseFunc.o \
 		obj/server.o \
@@ -55,7 +55,7 @@ server: obj/server.o obj/Managers/Server.o obj/Managers/ServerSession.o obj/Conf
 		obj/Services/WorldInteraction/LocalWorldInteraction.o \
 		-o server $(LIBS)
 
-game: obj/game.o obj/Managers/Game.o obj/ConfigLoader.o obj/Camera.o obj/Window/GameWindow.o obj/GameObjects/City.o obj/GameObjects/World.o obj/GameObjects/WorldChunk.o obj/GameObjects/Tile.o obj/GameObjects/Player.o obj/ColorPallete.o obj/WorldGen/NoiseFunc.o obj/Helpers/String.o obj/Networking/Connection.o obj/Services/WorldInteraction/LocalWorldInteraction.o obj/Services/WorldInteraction/NetworkedWorldInteraction.o obj/Window/Window.o obj/Services/WindowLayout/GameWindowLayout.o
+game: obj/game.o obj/Managers/Game.o obj/ConfigLoader.o obj/Camera.o obj/Window/GameWindow.o obj/GameObjects/City.o obj/GameObjects/World.o obj/GameObjects/WorldChunk.o obj/GameObjects/Tile.o obj/GameObjects/Player.o obj/ColorPallete.o obj/WorldGen/NoiseFunc.o obj/Helpers/String.o obj/Networking/Connection.o obj/Services/WorldInteraction/LocalWorldInteraction.o obj/Services/WorldInteraction/NetworkedWorldInteraction.o obj/Window/CursesWindow.o obj/Services/WindowLayout/GameWindowLayout.o
 	$(CC) \
 		obj/Camera.o \
 		obj/ColorPallete.o \
@@ -67,7 +67,7 @@ game: obj/game.o obj/Managers/Game.o obj/ConfigLoader.o obj/Camera.o obj/Window/
 		obj/GameObjects/WorldChunk.o \
 		obj/Managers/Game.o \
 		obj/Window/GameWindow.o \
-		obj/Window/Window.o \
+		obj/Window/CursesWindow.o \
 		obj/WorldGen/NoiseFunc.o \
 		obj/game.o \
 		obj/Helpers/String.o \
@@ -134,8 +134,8 @@ obj/Services/WorldInteraction/LocalWorldInteraction.o: src/Services/WorldInterac
 obj/Services/WorldInteraction/NetworkedWorldInteraction.o: src/Services/WorldInteraction/NetworkedWorldInteraction.cpp inc/Services/WorldInteraction/NetworkedWorldInteraction.hpp inc/Services/WorldInteraction/WorldInteractionInterface.hpp
 	$(CC) $(CFLAGS) src/Services/WorldInteraction/NetworkedWorldInteraction.cpp -o obj/Services/WorldInteraction/NetworkedWorldInteraction.o
 
-obj/Window/Window.o: src/Window/Window.cpp inc/Window/Window.hpp
-	$(CC) $(CFLAGS) src/Window/Window.cpp -o obj/Window/Window.o
+obj/Window/CursesWindow.o: src/Window/CursesWindow.cpp inc/Window/CursesWindow.hpp
+	$(CC) $(CFLAGS) src/Window/CursesWindow.cpp -o obj/Window/CursesWindow.o
 
 obj/Services/WindowLayout/GameWindowLayout.o: src/Services/WindowLayout/GameWindowLayout.cpp inc/Services/WindowLayout/GameWindowLayout.hpp inc/Window/Window.hpp
 	$(CC) $(CFLAGS) src/Services/WindowLayout/GameWindowLayout.cpp -o obj/Services/WindowLayout/GameWindowLayout.o

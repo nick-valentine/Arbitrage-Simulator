@@ -1,6 +1,6 @@
 #include "Window/GameWindow.hpp"
 
-GameWindow::GameWindow() : Window()
+GameWindow::GameWindow() : CursesWindow()
 {
 }
 
@@ -11,7 +11,7 @@ GameWindow::~GameWindow()
 void GameWindow::init()
 {
     this->resize(0, 0);
-    Window::init();
+    CursesWindow::init();
 }
 
 void GameWindow::resize(int height, int width)
@@ -22,13 +22,13 @@ void GameWindow::resize(int height, int width)
     templ.c = ' ';
 
     ScreenBuffer.clear(); 
-    for(int i = 0; i < height - Window::borderWidth; ++i) {
+    for(int i = 0; i < height; ++i) {
         ScreenBuffer.push_back(std::vector< Window::TextElement >());
-        for(int j = 0; j < width - Window::borderWidth; ++j) {
+        for(int j = 0; j < width; ++j) {
             ScreenBuffer[i].push_back(templ);
         }
     }
-    Window::resize(height, width);
+    CursesWindow::resize(height, width);
 }
 
 void GameWindow::put(unsigned int colorPair, unsigned int layer, char c, int y, int x)
@@ -68,7 +68,7 @@ void GameWindow::render()
 {
     unsigned int lastColorPair = 1;
     attrset(COLOR_PAIR(1));
-    wmove(this->win, 1, 1);
+    wmove(this->win, 0, 0);
     for(int i = 0; i < this->ScreenBuffer.size(); ++i) {
         for(int j = 0; j < this->ScreenBuffer[i].size(); ++j) {
             if(ScreenBuffer[i][j].colorPair != lastColorPair) {
@@ -77,8 +77,8 @@ void GameWindow::render()
             }
             waddch(this->win, ScreenBuffer[i][j].c);
         }
-        wmove(this->win, i, 1);
+        wmove(this->win, i, 0);
     }
-    Window::render();
+    CursesWindow::render();
 }
 

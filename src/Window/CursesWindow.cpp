@@ -1,8 +1,6 @@
-#include "Window/Window.hpp"
+#include "Window/CursesWindow.hpp"
 
-const int Window::borderWidth = 2;
-
-Window::Window()
+CursesWindow::CursesWindow()
 {
     this->win = NULL;
     this->y = 0;
@@ -11,7 +9,7 @@ Window::Window()
     this->width = 0;
 }
 
-Window::Window(int y, int x, int height, int width)
+CursesWindow::CursesWindow(int y, int x, int height, int width)
 {
     this->win = NULL;
     this->y = y;
@@ -20,20 +18,20 @@ Window::Window(int y, int x, int height, int width)
     this->width = width;
 }
 
-Window::~Window()
+CursesWindow::~CursesWindow()
 {
     if (this->win != NULL) {
         delwin(this->win);
     }
 }
 
-void Window::init()
+void CursesWindow::init()
 {
     this->win = newwin(height, width, y, x);
     keypad(this->win, TRUE);
 }
 
-void Window::putstr(int y, int x, std::string str)
+void CursesWindow::putstr(int y, int x, std::string str)
 {
     wmove(this->win, y, x);
     for (int i = 0; i < str.size(); ++i) {
@@ -41,67 +39,67 @@ void Window::putstr(int y, int x, std::string str)
     }
 }
 
-void Window::put(unsigned int colorPair, unsigned int layer, char c, int y, int x)
+void CursesWindow::put(unsigned int colorPair, unsigned int layer, char c, int y, int x)
 {
     attrset(COLOR_PAIR(colorPair));
     wmove(this->win, y, x);
     waddch(this->win, c);
 }
 
-void Window::put(TextElement c, int y, int x)
+void CursesWindow::put(TextElement c, int y, int x)
 {
     attrset(COLOR_PAIR(c.colorPair));
     wmove(this->win, y, x);
     waddch(this->win, c.c);
 }
 
-void Window::clear()
+void CursesWindow::clear()
 {
    werase(this->win); 
 }
 
-void Window::render()
+void CursesWindow::render()
 {
     wborder(this->win, '|', '|', '-', '-', '+', '+', '+', '+');
     wrefresh(this->win);
 }
 
-void Window::resize(int height, int width)
+void CursesWindow::resize(int height, int width)
 {
     this->height = height;
     this->width = width;
     wresize(this->win, height, width);
 }
 
-void Window::move(int y, int x)
+void CursesWindow::move(int y, int x)
 {
     this->y = y;
     this->x = x;
     mvwin(this->win, y, x);
 }
 
-int Window::getCh()
+int CursesWindow::getCh()
 {
     return wgetch(this->win);
 }
 
 
-int Window::getY()
+int CursesWindow::getY()
 {
     return this->y;
 }
 
-int Window::getX()
+int CursesWindow::getX()
 {
     return this->x;
 }
 
-int Window::getHeight()
+int CursesWindow::getHeight()
 {
     return this->height;
 }
 
-int Window::getWidth()
+int CursesWindow::getWidth()
 {
     return this->width;
 }

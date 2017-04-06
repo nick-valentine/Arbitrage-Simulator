@@ -23,7 +23,7 @@ int Game::setup()
     this->gameWindow = Window::window_ptr(new GameWindow());
     this->gameWindow->init();
 
-    this->consoleWindow = Window::window_ptr(new Window());
+    this->consoleWindow = Window::window_ptr(new CursesWindow());
     this->consoleWindow->init();
 
     this->windowLayout.addWindow("GameWindow", this->gameWindow);
