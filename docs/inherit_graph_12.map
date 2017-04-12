@@ -1,5 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classWindow.html" title="Window. " alt="" coords="5,5,75,32"/>
-<area shape="rect" id="node2" href="$classCursesWindow.html" title="CursesWindow. " alt="" coords="123,5,233,32"/>
-<area shape="rect" id="node3" href="$classGameWindow.html" title="GameWindow. " alt="" coords="281,5,385,32"/>
+<area shape="rect" id="node1" href="$classWindow.html" title="Window. " alt="" coords="5,31,75,57"/>
+<area shape="rect" id="node2" href="$classCursesWindow.html" title="CursesWindow. " alt="" coords="123,31,233,57"/>
+<area shape="rect" id="node3" href="$classConsoleWindow.html" title="ConsoleWindow. " alt="" coords="281,5,399,32"/>
+<area shape="rect" id="node4" href="$classGameWindow.html" title="GameWindow. " alt="" coords="288,56,392,83"/>
 </map>

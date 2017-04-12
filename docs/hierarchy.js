@@ -23,6 +23,7 @@ var hierarchy =
     [ "Tile::TileType", "structTile_1_1TileType.html", null ],
     [ "Window", "classWindow.html", [
       [ "CursesWindow", "classCursesWindow.html", [
+        [ "ConsoleWindow", "classConsoleWindow.html", null ],
         [ "GameWindow", "classGameWindow.html", null ]
       ] ]
     ] ],

@@ -1,8 +1,10 @@
 <map id="CursesWindow.hpp" name="CursesWindow.hpp">
-<area shape="rect" id="node2" href="$GameWindow_8hpp.html" title="GameWindow.hpp" alt="" coords="96,80,225,107"/>
-<area shape="rect" id="node7" href="$CursesWindow_8cpp.html" title="CursesWindow.cpp" alt="" coords="249,80,385,107"/>
-<area shape="rect" id="node3" href="$Game_8hpp.html" title="Game.hpp" alt="" coords="55,155,138,181"/>
-<area shape="rect" id="node6" href="$GameWindow_8cpp.html" title="GameWindow.cpp" alt="" coords="161,155,291,181"/>
-<area shape="rect" id="node4" href="$game_8cpp.html" title="game.cpp" alt="" coords="5,229,84,256"/>
-<area shape="rect" id="node5" href="$Game_8cpp.html" title="Game.cpp" alt="" coords="109,229,191,256"/>
+<area shape="rect" id="node2" href="$ConsoleWindow_8hpp.html" title="ConsoleWindow.hpp" alt="" coords="57,80,200,107"/>
+<area shape="rect" id="node7" href="$GameWindow_8hpp.html" title="GameWindow.hpp" alt="" coords="224,80,353,107"/>
+<area shape="rect" id="node9" href="$CursesWindow_8cpp.html" title="CursesWindow.cpp" alt="" coords="377,80,513,107"/>
+<area shape="rect" id="node3" href="$Game_8hpp.html" title="Game.hpp" alt="" coords="171,155,254,181"/>
+<area shape="rect" id="node6" href="$ConsoleWindow_8cpp.html" title="ConsoleWindow.cpp" alt="" coords="5,155,148,181"/>
+<area shape="rect" id="node4" href="$game_8cpp.html" title="game.cpp" alt="" coords="120,229,199,256"/>
+<area shape="rect" id="node5" href="$Game_8cpp.html" title="Game.cpp" alt="" coords="223,229,306,256"/>
+<area shape="rect" id="node8" href="$GameWindow_8cpp.html" title="GameWindow.cpp" alt="" coords="277,155,407,181"/>
 </map>

@@ -10,7 +10,7 @@ var searchData=
   ['localworldinteraction_2ecpp',['LocalWorldInteraction.cpp',['../LocalWorldInteraction_8cpp.html',1,'']]],
   ['localworldinteraction_2ehpp',['LocalWorldInteraction.hpp',['../LocalWorldInteraction_8hpp.html',1,'']]],
   ['log',['log',['../classBufferLogger.html#aea3c0433691d7e4e4ae144abfb731ef6',1,'BufferLogger::log()'],['../classConsoleLogger.html#a10fa8072165bf024f0525f276ec2820f',1,'ConsoleLogger::log()'],['../classLogger.html#a2b548c8904a3386b24b0a031ab19b29b',1,'Logger::log()']]],
-  ['logger',['Logger',['../classLogger.html',1,'Logger'],['../classServer.html#aa02522dc4fc4bf2a583ce7081c114b7b',1,'Server::logger()'],['../classServerSession.html#aa0f5ed1dcb0cc9048d843281a9014c7d',1,'ServerSession::logger()']]],
+  ['logger',['Logger',['../classLogger.html',1,'Logger'],['../classServer.html#aa02522dc4fc4bf2a583ce7081c114b7b',1,'Server::logger()'],['../classServerSession.html#aa0f5ed1dcb0cc9048d843281a9014c7d',1,'ServerSession::logger()'],['../classConsoleWindow.html#a9c551ec130f7a88b5908f2feb8ffe471',1,'ConsoleWindow::logger()']]],
   ['logger_2ecpp',['Logger.cpp',['../Logger_8cpp.html',1,'']]],
   ['logger_2ehpp',['Logger.hpp',['../Logger_8hpp.html',1,'']]],
   ['login',['login',['../classNetworkedWorldInteraction.html#aeb516faf06a8fe474cc389ba7f48e125',1,'NetworkedWorldInteraction::login()'],['../classServerSession.html#ae34485de6117ea26f500189ae3499114ad35d022c523eea782aa071a87ce66e55',1,'ServerSession::LOGIN()']]],

@@ -11,7 +11,7 @@ var searchData=
   ['tilenoise',['tileNoise',['../classWorld.html#abb37cf2db530a2d99c6e0828dac4826a',1,'World']]],
   ['tilenoisespread',['tileNoiseSpread',['../classWorld.html#aae60f509cea81ca112604558707bec7a',1,'World']]],
   ['tilepallete',['tilePallete',['../classTile.html#a5c19aed2eb5f085afe9cf511a59dd413',1,'Tile']]],
-  ['tiles',['tiles',['../classWorldChunk.html#a3e8d73563864a3124e23d2a80d7cf948',1,'WorldChunk::tiles()'],['../classTile.html#a9d683ccb4e37c098df56bbfed8c0cd71',1,'Tile::Tiles()']]],
+  ['tiles',['Tiles',['../classTile.html#a9d683ccb4e37c098df56bbfed8c0cd71',1,'Tile::Tiles()'],['../classWorldChunk.html#a3e8d73563864a3124e23d2a80d7cf948',1,'WorldChunk::tiles()']]],
   ['tilesreserved',['TilesReserved',['../classTile.html#a44ff0cf0c691f207100dc75d953e3cf9',1,'Tile']]],
   ['tileswhichmayhavecities',['TilesWhichMayHaveCities',['../classTile.html#a9a29f51c5e9fcc73f8417f944306e65e',1,'Tile']]],
   ['tiletype',['TileType',['../structTile_1_1TileType.html#ab3502a82a0caaeed2c6974b4fa11ddf7',1,'Tile::TileType']]],

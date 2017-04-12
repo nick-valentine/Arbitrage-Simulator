@@ -31,6 +31,10 @@ var files =
     [ "ConsoleLogger.hpp", "ConsoleLogger_8hpp.html", [
       [ "ConsoleLogger", "classConsoleLogger.html", "classConsoleLogger" ]
     ] ],
+    [ "ConsoleWindow.cpp", "ConsoleWindow_8cpp.html", null ],
+    [ "ConsoleWindow.hpp", "ConsoleWindow_8hpp.html", [
+      [ "ConsoleWindow", "classConsoleWindow.html", "classConsoleWindow" ]
+    ] ],
     [ "CursesWindow.cpp", "CursesWindow_8cpp.html", null ],
     [ "CursesWindow.hpp", "CursesWindow_8hpp.html", [
       [ "CursesWindow", "classCursesWindow.html", "classCursesWindow" ]

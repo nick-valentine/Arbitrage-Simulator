@@ -13,6 +13,7 @@ var searchData=
   ['connect',['connect',['../classConnection.html#a83fb03cd6e0b4adf5b6c794e4e05fdb4',1,'Connection']]],
   ['connection',['Connection',['../classConnection.html#a9de94289ca6259f94ef6aeba3b134a77',1,'Connection::Connection()'],['../classConnection.html#abd9a704d8c1a3a39d277a18129f77cd7',1,'Connection::Connection(std::string ip, std::string port)'],['../classConnection.html#a85402f2acb1c3caacc065bc3391747bf',1,'Connection::Connection(socket_ptr sock)']]],
   ['consolelogger',['ConsoleLogger',['../classConsoleLogger.html#a5dc25889c50a89a91bce5b1d4f3dd46a',1,'ConsoleLogger']]],
+  ['consolewindow',['ConsoleWindow',['../classConsoleWindow.html#a54bab5c04a0c06a93ffc2c88f8edb1ba',1,'ConsoleWindow']]],
   ['converttocity',['convertToCity',['../classTile.html#ad18dc829e0b9c7e6a9c52272c902704e',1,'Tile']]],
   ['curseswindow',['CursesWindow',['../classCursesWindow.html#a088b31a5f3558ead6997a949f092ebbf',1,'CursesWindow::CursesWindow()'],['../classCursesWindow.html#a77e3bb7a774efba5a72f297e900d9506',1,'CursesWindow::CursesWindow(int y, int x, int height, int width)']]]
 ];

@@ -5,7 +5,7 @@ var searchData=
   ['read',['read',['../classConnection.html#a849095cd9dda6388c05fe4896b380530',1,'Connection']]],
   ['read_5fstate',['READ_STATE',['../classWorldChunk.html#a0334bbf1ca1455571d621f40cb67f4af',1,'WorldChunk']]],
   ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
-  ['render',['render',['../classCamera.html#a76ed19c192c25c8e41f4a6bb54ba87b2',1,'Camera::render()'],['../classGameWindowLayout.html#a490a59780f8de2c6cad6a6b72ec028a3',1,'GameWindowLayout::render()'],['../classCursesWindow.html#ac06799b415fada8c68faffc6d5c8f034',1,'CursesWindow::render()'],['../classGameWindow.html#af04994743b0d4118d43e37fb7cb26368',1,'GameWindow::render()'],['../classWindow.html#a9038f8e00729b82742f6e0574f44a55d',1,'Window::render()']]],
+  ['render',['render',['../classCamera.html#a76ed19c192c25c8e41f4a6bb54ba87b2',1,'Camera::render()'],['../classGameWindowLayout.html#a490a59780f8de2c6cad6a6b72ec028a3',1,'GameWindowLayout::render()'],['../classConsoleWindow.html#aadb74409828844cbde772014fa793a6d',1,'ConsoleWindow::render()'],['../classCursesWindow.html#ac06799b415fada8c68faffc6d5c8f034',1,'CursesWindow::render()'],['../classGameWindow.html#af04994743b0d4118d43e37fb7cb26368',1,'GameWindow::render()'],['../classWindow.html#a9038f8e00729b82742f6e0574f44a55d',1,'Window::render()']]],
   ['representation',['representation',['../classPlayer.html#a0c64cdfa9162319e7f17f75554e97484',1,'Player']]],
   ['request_5fcharacter',['REQUEST_CHARACTER',['../classServerSession.html#ae34485de6117ea26f500189ae3499114aca12ab0260beab31ed6586f02af30ace',1,'ServerSession']]],
   ['request_5fchunk',['REQUEST_CHUNK',['../classServerSession.html#ae34485de6117ea26f500189ae3499114a9857b3fe0d5f1f2d10011f62c6ff89e7',1,'ServerSession']]],

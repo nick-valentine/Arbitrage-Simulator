@@ -8,6 +8,7 @@ var annotated_dup =
     [ "ConfigLoader", "classConfigLoader.html", "classConfigLoader" ],
     [ "Connection", "classConnection.html", "classConnection" ],
     [ "ConsoleLogger", "classConsoleLogger.html", "classConsoleLogger" ],
+    [ "ConsoleWindow", "classConsoleWindow.html", "classConsoleWindow" ],
     [ "CursesWindow", "classCursesWindow.html", "classCursesWindow" ],
     [ "Game", "classGame.html", "classGame" ],
     [ "GameWindow", "classGameWindow.html", "classGameWindow" ],

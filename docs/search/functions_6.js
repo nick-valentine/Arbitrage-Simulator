@@ -15,6 +15,7 @@ var searchData=
   ['getelevation',['getElevation',['../classTile.html#ae75c7799f63fff2f6e2932bdb89f6b9c',1,'Tile']]],
   ['getheight',['getHeight',['../classCursesWindow.html#ad7e945e609ec4e036b2690b953c3580b',1,'CursesWindow::getHeight()'],['../classWindow.html#a11c3d9106e68ba705ef65a191e5f2a77',1,'Window::getHeight()']]],
   ['getintoption',['getIntOption',['../classConfigLoader.html#a99778c30f3d79e84995d9e9c7245b089',1,'ConfigLoader']]],
+  ['getlogger',['getLogger',['../classConsoleWindow.html#a988ae76f45326f89557a56d4a01fde97',1,'ConsoleWindow']]],
   ['getmaxcitiesperchunk',['getMaxCitiesPerChunk',['../classWorldChunk.html#a10b6e0ad47f5b377cf790a26ae8f08b3',1,'WorldChunk']]],
   ['getmaxcolor',['getMaxColor',['../classColorPallete.html#ae1ff70efa1e86960770e4d30a51e6ba6',1,'ColorPallete']]],
   ['getname',['getName',['../classCity.html#ae52fbe125c8b023214b0f71e9641414c',1,'City']]],
