@@ -1,6 +1,7 @@
 #ifndef BUFFER_LOGGER_HPP
 #define BUFFER_LOGGER_HPP
 
+#include <cstring>
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>

@@ -5,6 +5,7 @@
 #include <curses.h>
 #include <string>
 #include <stdio.h>
+#include <boost/pointer_cast.hpp>
 
 #include "Camera.hpp"
 #include "ConfigLoader.hpp"
@@ -17,6 +18,7 @@
 #include "Services/Logger/Logger.hpp"
 #include "Window/Window.hpp"
 #include "Window/GameWindow.hpp"
+#include "Window/ConsoleWindow.hpp"
 
 using boost::asio::ip::tcp;
 

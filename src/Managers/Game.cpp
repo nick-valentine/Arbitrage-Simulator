@@ -23,7 +23,7 @@ int Game::setup()
     this->gameWindow = Window::window_ptr(new GameWindow());
     this->gameWindow->init();
 
-    this->consoleWindow = Window::window_ptr(new CursesWindow());
+    this->consoleWindow = Window::window_ptr(new ConsoleWindow());
     this->consoleWindow->init();
 
     this->windowLayout.addWindow("GameWindow", this->gameWindow);
@@ -43,26 +43,28 @@ int Game::setup()
 int Game::run()
 {
     refresh();
+    boost::dynamic_pointer_cast<ConsoleWindow>(this->consoleWindow)->getLogger()->info("Game Starting");
 
     int height, width;
-    this->consoleWindow->putstr(
-        this->consoleWindow->getHeight() / 2, 
-        this->consoleWindow->getWidth() / 2,
-        "This window is at " + 
-        boost::lexical_cast<std::string>(this->consoleWindow->getY()) + 
-        " and is " + 
-        boost::lexical_cast<std::string>(this->consoleWindow->getHeight()) + 
-        " cols tall"
-    );
+    //this->consoleWindow->putstr(
+    //    this->consoleWindow->getHeight() / 2, 
+    //    this->consoleWindow->getWidth() / 2,
+    //    "This window is at " + 
+    //    boost::lexical_cast<std::string>(this->consoleWindow->getY()) + 
+    //    " and is " + 
+    //    boost::lexical_cast<std::string>(this->consoleWindow->getHeight()) + 
+    //    " cols tall"
+    //);
 
     unsigned int input = 0;
     while(true) {
-        this->consoleWindow->putstr(
-            this->consoleWindow->getHeight() / 2, 
-            this->consoleWindow->getWidth() / 2,
-            "Your last input was " +
-            boost::lexical_cast<std::string>(input)
-        );
+        boost::dynamic_pointer_cast<ConsoleWindow>(this->consoleWindow)->getLogger()->info("Game Ticking");
+        //this->consoleWindow->putstr(
+        //    this->consoleWindow->getHeight() / 2, 
+        //    this->consoleWindow->getWidth() / 2,
+        //    "Your last input was " +
+        //    boost::lexical_cast<std::string>(input)
+        //);
         int pos_x, pos_y;
         player.getYX(pos_y, pos_x);
 

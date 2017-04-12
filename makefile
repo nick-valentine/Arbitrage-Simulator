@@ -60,7 +60,7 @@ server: obj/server.o obj/Managers/Server.o obj/Managers/ServerSession.o obj/Conf
 		obj/Services/Logger/ConsoleLogger.o \
 		-o server $(LIBS)
 
-game: obj/game.o obj/Managers/Game.o obj/ConfigLoader.o obj/Camera.o obj/Window/GameWindow.o obj/GameObjects/City.o obj/GameObjects/World.o obj/GameObjects/WorldChunk.o obj/GameObjects/Tile.o obj/GameObjects/Player.o obj/ColorPallete.o obj/WorldGen/NoiseFunc.o obj/Helpers/String.o obj/Networking/Connection.o obj/Services/WorldInteraction/LocalWorldInteraction.o obj/Services/WorldInteraction/NetworkedWorldInteraction.o obj/Window/CursesWindow.o obj/Services/WindowLayout/GameWindowLayout.o obj/Services/Logger/Logger.o obj/Services/Logger/BufferLogger.o obj/Services/Logger/ConsoleLogger.o
+game: obj/game.o obj/Managers/Game.o obj/ConfigLoader.o obj/Camera.o obj/Window/GameWindow.o obj/GameObjects/City.o obj/GameObjects/World.o obj/GameObjects/WorldChunk.o obj/GameObjects/Tile.o obj/GameObjects/Player.o obj/ColorPallete.o obj/WorldGen/NoiseFunc.o obj/Helpers/String.o obj/Networking/Connection.o obj/Services/WorldInteraction/LocalWorldInteraction.o obj/Services/WorldInteraction/NetworkedWorldInteraction.o obj/Window/CursesWindow.o obj/Services/WindowLayout/GameWindowLayout.o obj/Services/Logger/Logger.o obj/Services/Logger/BufferLogger.o obj/Services/Logger/ConsoleLogger.o obj/Window/ConsoleWindow.o
 	$(CC) \
 		obj/Camera.o \
 		obj/ColorPallete.o \
@@ -82,6 +82,7 @@ game: obj/game.o obj/Managers/Game.o obj/ConfigLoader.o obj/Camera.o obj/Window/
 		obj/Services/WindowLayout/GameWindowLayout.o \
 		obj/Services/Logger/Logger.o \
 		obj/Services/Logger/BufferLogger.o \
+		obj/Window/ConsoleWindow.o \
 		-o game $(LIBS) 
 
 obj/game.o: src/game.cpp
@@ -143,6 +144,9 @@ obj/Services/WorldInteraction/NetworkedWorldInteraction.o: src/Services/WorldInt
 
 obj/Window/CursesWindow.o: src/Window/CursesWindow.cpp inc/Window/CursesWindow.hpp
 	$(CC) $(CFLAGS) src/Window/CursesWindow.cpp -o obj/Window/CursesWindow.o
+
+obj/Window/ConsoleWindow.o: src/Window/ConsoleWindow.cpp inc/Window/ConsoleWindow.hpp
+	$(CC) $(CFLAGS) src/Window/ConsoleWindow.cpp -o obj/Window/ConsoleWindow.o
 
 obj/Services/WindowLayout/GameWindowLayout.o: src/Services/WindowLayout/GameWindowLayout.cpp inc/Services/WindowLayout/GameWindowLayout.hpp inc/Window/Window.hpp
 	$(CC) $(CFLAGS) src/Services/WindowLayout/GameWindowLayout.cpp -o obj/Services/WindowLayout/GameWindowLayout.o

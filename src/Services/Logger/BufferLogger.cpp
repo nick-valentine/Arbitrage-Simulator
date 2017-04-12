@@ -2,7 +2,7 @@
 
 BufferLogger::BufferLogger()
 {
-
+    this->buffer = std::vector<std::string>();
 }
 
 BufferLogger::~BufferLogger()
@@ -51,16 +51,16 @@ void BufferLogger::log(Logger::LogLevel level, const char *fmt, ...)
     va_end(args);
 }
 
-std::vector<std::string> BufferLogger::getBuffer()
+std::vector<std::string> BufferLogger::getBuffer() 
 {
     return this->buffer;
 }
 
 void BufferLogger::addToBuffer(Logger::LogLevel level, const char *fmt, va_list args)
 {
-    if (level >= Logger::logLevel) {
-        char buffer[256];
-        vsnprintf(buffer, 255, fmt, args);
-        this->buffer.push_back(buffer);
+    if (level <= Logger::logLevel) {
+        char b[256];
+        vsnprintf(b, 255, fmt, args);
+        this->buffer.push_back(b);
     }
 }

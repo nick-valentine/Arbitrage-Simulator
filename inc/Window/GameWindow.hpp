@@ -1,5 +1,5 @@
-#ifndef SCREEN_HPP
-#define SCREEN_HPP
+#ifndef GAME_WINDOW_HPP
+#define GAME_WINDOW_HPP
 
 #include <iostream>
 #include <curses.h>
@@ -31,4 +31,4 @@ private:
     std::vector< std::vector< Window::TextElement > >ScreenBuffer;
 };
 
-#endif //SCREEN_HPP
+#endif //GAME_WINDOW_HPP
