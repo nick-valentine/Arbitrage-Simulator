@@ -42,29 +42,15 @@ int Game::setup()
 
 int Game::run()
 {
+    Logger *logger = boost::dynamic_pointer_cast<ConsoleWindow>(this->consoleWindow)->getLogger();
     refresh();
-    boost::dynamic_pointer_cast<ConsoleWindow>(this->consoleWindow)->getLogger()->info("Game Starting");
+    logger->info("Game Starting");
 
     int height, width;
-    //this->consoleWindow->putstr(
-    //    this->consoleWindow->getHeight() / 2, 
-    //    this->consoleWindow->getWidth() / 2,
-    //    "This window is at " + 
-    //    boost::lexical_cast<std::string>(this->consoleWindow->getY()) + 
-    //    " and is " + 
-    //    boost::lexical_cast<std::string>(this->consoleWindow->getHeight()) + 
-    //    " cols tall"
-    //);
 
     unsigned int input = 0;
     while(true) {
-        boost::dynamic_pointer_cast<ConsoleWindow>(this->consoleWindow)->getLogger()->info("Game Ticking");
-        //this->consoleWindow->putstr(
-        //    this->consoleWindow->getHeight() / 2, 
-        //    this->consoleWindow->getWidth() / 2,
-        //    "Your last input was " +
-        //    boost::lexical_cast<std::string>(input)
-        //);
+        logger->info("Game Ticking");
         int pos_x, pos_y;
         player.getYX(pos_y, pos_x);
 
@@ -77,11 +63,9 @@ int Game::run()
             this->player
         );
         this->windowLayout.render();
-        //this->windowLayout.updateScreenSize();
-        //this->gameWindow->render();
-        //this->consoleWindow->render();
         this->gameWindow->clear();
         input = this->gameWindow->getCh();
+        logger->debug("%d Pressed", input);
         switch(input) {
             case 119:
                 this->player.move(-1,0);

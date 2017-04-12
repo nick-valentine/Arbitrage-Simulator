@@ -1,13 +1,21 @@
 #include "Services/Logger/BufferLogger.hpp"
 
+const int BufferLogger::defaultCapacity = 50;
+
 BufferLogger::BufferLogger()
 {
-    this->buffer = std::vector<std::string>();
+    this->buffer = std::list<std::string>();
+    this->bufferCapacity = BufferLogger::defaultCapacity;
 }
 
 BufferLogger::~BufferLogger()
 {
 
+}
+
+void BufferLogger::setBufferCapacity(int newCapacity)
+{
+    this->bufferCapacity = newCapacity;
 }
 
 void BufferLogger::debug(const char *fmt, ...)
@@ -51,9 +59,14 @@ void BufferLogger::log(Logger::LogLevel level, const char *fmt, ...)
     va_end(args);
 }
 
-std::vector<std::string> BufferLogger::getBuffer() 
+std::list<std::string> &BufferLogger::getBuffer() 
 {
     return this->buffer;
+}
+
+int BufferLogger::getBufferSize()
+{
+    return this->bufferSize;
 }
 
 void BufferLogger::addToBuffer(Logger::LogLevel level, const char *fmt, va_list args)
@@ -62,5 +75,10 @@ void BufferLogger::addToBuffer(Logger::LogLevel level, const char *fmt, va_list 
         char b[256];
         vsnprintf(b, 255, fmt, args);
         this->buffer.push_back(b);
+        this->bufferSize++;
+        while (this->bufferSize > this->bufferCapacity) {
+            this->buffer.pop_front();
+            this->bufferSize--;
+        }
     }
 }

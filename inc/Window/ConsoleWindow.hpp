@@ -2,7 +2,7 @@
 #define CONSOLE_WINDOW_HPP
 
 #include <curses.h>
-#include <vector>
+#include <list>
 #include <string>
 
 #include "Window/CursesWindow.hpp"

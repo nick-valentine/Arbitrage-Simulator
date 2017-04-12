@@ -5,7 +5,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <vector>
+#include <list>
 #include <string>
 
 #include "Services/Logger/Logger.hpp"
@@ -20,17 +20,24 @@ class BufferLogger : public Logger
 public:
     BufferLogger();
     virtual ~BufferLogger();
+
+    void setBufferCapacity(int newCapacity);
+
     virtual void debug(const char *fmt, ...);
     virtual void info(const char *fmt, ...);
     virtual void warn(const char *fmt, ...);
     virtual void error(const char *fmt, ...);
     virtual void log(Logger::LogLevel level, const char *fmt, ...);
 
-    virtual std::vector<std::string> getBuffer();
+    virtual std::list<std::string> &getBuffer();
+    int getBufferSize();
 protected:
+    const static int defaultCapacity;
     virtual void addToBuffer(Logger::LogLevel level, const char *fmt, va_list args); 
 
-    std::vector<std::string> buffer;
+    int bufferCapacity;
+    int bufferSize;
+    std::list<std::string> buffer;
 };
 
 #endif //BUFFER_LOGGER_HPP
