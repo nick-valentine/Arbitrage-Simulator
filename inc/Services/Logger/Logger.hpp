@@ -4,6 +4,8 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <algorithm>
+#include <string>
+#include <ctime>
 
 #include "ConfigLoader.hpp"
 
@@ -28,7 +30,11 @@ public:
 
     static void configure();
 protected:
+    const static std::string levelStrings[4];
     static int logLevel;
+
+    virtual std::string format_string(LogLevel level, const char *fmt, va_list args);
+    std::string get_time();
 };
 
 #endif //LOGGER_HPP

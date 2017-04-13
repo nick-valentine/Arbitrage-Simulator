@@ -61,7 +61,7 @@ void GameWindowLayout::setSubWindowMinHeight(int height)
 void GameWindowLayout::render()
 {
     this->updateScreenSize();
-    wborder(stdscr, '|', '|', '-', '-', '+', '+', '+', '+');
+    wborder(stdscr, 0, 0, 0, 0, 0, 0, 0, 0);
     this->mainWindow->render();
     this->subWindow->render();
 }

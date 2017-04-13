@@ -4,7 +4,7 @@ const int BufferLogger::defaultCapacity = 50;
 
 BufferLogger::BufferLogger()
 {
-    this->buffer = std::list<std::string>();
+    this->buffer = std::list<BufferLogger::LogEntry>();
     this->bufferCapacity = BufferLogger::defaultCapacity;
 }
 
@@ -59,7 +59,7 @@ void BufferLogger::log(Logger::LogLevel level, const char *fmt, ...)
     va_end(args);
 }
 
-std::list<std::string> &BufferLogger::getBuffer() 
+std::list<BufferLogger::LogEntry> &BufferLogger::getBuffer() 
 {
     return this->buffer;
 }
@@ -72,9 +72,12 @@ int BufferLogger::getBufferSize()
 void BufferLogger::addToBuffer(Logger::LogLevel level, const char *fmt, va_list args)
 {
     if (level <= Logger::logLevel) {
-        char b[256];
-        vsnprintf(b, 255, fmt, args);
-        this->buffer.push_back(b);
+        this->buffer.push_back(
+            LogEntry (
+                level,
+                this->format_string(level, fmt, args)
+            )
+        );
         this->bufferSize++;
         while (this->bufferSize > this->bufferCapacity) {
             this->buffer.pop_front();

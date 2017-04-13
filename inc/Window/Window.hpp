@@ -23,7 +23,7 @@ public:
     virtual ~Window() {};
     virtual void init() = 0;
 
-    virtual void putstr(int y, int x, std::string str) = 0;
+    virtual void putstr(int y, int x, std::string str, int color = 0) = 0;
     virtual void put(unsigned int colorPair, unsigned int layer, char c, int y, int x) = 0;
     virtual void put(TextElement c, int y, int x) = 0;
     virtual void clear() = 0;

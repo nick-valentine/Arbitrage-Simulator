@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <list>
 #include <string>
+#include <utility>
 
 #include "Services/Logger/Logger.hpp"
 
@@ -18,6 +19,7 @@
 class BufferLogger : public Logger
 {
 public:
+    typedef std::pair<Logger::LogLevel, std::string> LogEntry;
     BufferLogger();
     virtual ~BufferLogger();
 
@@ -29,7 +31,7 @@ public:
     virtual void error(const char *fmt, ...);
     virtual void log(Logger::LogLevel level, const char *fmt, ...);
 
-    virtual std::list<std::string> &getBuffer();
+    virtual std::list<LogEntry> &getBuffer();
     int getBufferSize();
 protected:
     const static int defaultCapacity;
@@ -37,7 +39,7 @@ protected:
 
     int bufferCapacity;
     int bufferSize;
-    std::list<std::string> buffer;
+    std::list<LogEntry> buffer;
 };
 
 #endif //BUFFER_LOGGER_HPP

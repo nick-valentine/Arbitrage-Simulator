@@ -67,7 +67,7 @@ void GameWindow::clear()
 void GameWindow::render()
 {
     unsigned int lastColorPair = 1;
-    attrset(COLOR_PAIR(1));
+    wattrset(this->win, COLOR_PAIR(1));
     wmove(this->win, 0, 0);
     for(int i = 0; i < this->ScreenBuffer.size(); ++i) {
         for(int j = 0; j < this->ScreenBuffer[i].size(); ++j) {

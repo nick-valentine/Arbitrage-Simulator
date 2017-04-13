@@ -23,7 +23,7 @@ public:
     virtual ~CursesWindow();
     virtual void init();
 
-    virtual void putstr(int y, int x, std::string str);
+    virtual void putstr(int y, int x, std::string str, int color = 0);
     virtual void put(unsigned int colorPair, unsigned int layer, char c, int y, int x);
     virtual void put(TextElement c, int y, int x);
     virtual void clear();

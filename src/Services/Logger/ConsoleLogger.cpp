@@ -54,7 +54,8 @@ void ConsoleLogger::log(Logger::LogLevel level, const char *fmt, ...)
 void ConsoleLogger::print(Logger::LogLevel level, const char *fmt, va_list args)
 {
     if (level >= Logger::logLevel) {
-        vprintf(fmt, args);
-        printf("\n");
+        printf("%s\n",
+            this->format_string(level, fmt, args).c_str()
+        );
     }
 }

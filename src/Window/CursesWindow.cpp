@@ -31,26 +31,30 @@ void CursesWindow::init()
     keypad(this->win, TRUE);
 }
 
-void CursesWindow::putstr(int y, int x, std::string str)
+void CursesWindow::putstr(int y, int x, std::string str, int color)
 {
+    wattrset(this->win, COLOR_PAIR(color));
     wmove(this->win, y, x);
     for (int i = 0; i < str.size(); ++i) {
         waddch(this->win, str[i]);
     }
+    wattrset(this->win, COLOR_PAIR(0));
 }
 
 void CursesWindow::put(unsigned int colorPair, unsigned int layer, char c, int y, int x)
 {
-    attrset(COLOR_PAIR(colorPair));
+    wattrset(this->win, COLOR_PAIR(colorPair));
     wmove(this->win, y, x);
     waddch(this->win, c);
+    wattrset(this->win, COLOR_PAIR(0));
 }
 
 void CursesWindow::put(TextElement c, int y, int x)
 {
-    attrset(COLOR_PAIR(c.colorPair));
+    wattrset(this->win, COLOR_PAIR(c.colorPair));
     wmove(this->win, y, x);
     waddch(this->win, c.c);
+    wattrset(this->win, COLOR_PAIR(0));
 }
 
 void CursesWindow::clear()
@@ -60,7 +64,7 @@ void CursesWindow::clear()
 
 void CursesWindow::render()
 {
-    wborder(this->win, '|', '|', '-', '-', '+', '+', '+', '+');
+    wborder(this->win, 0, 0, 0, 0, 0, 0, 0, 0);
     wrefresh(this->win);
 }
 
