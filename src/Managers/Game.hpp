@@ -6,6 +6,7 @@
 #include <string>
 #include <stdio.h>
 #include <boost/pointer_cast.hpp>
+#include <boost/shared_ptr.hpp>
 
 #include "Camera.hpp"
 #include "ConfigLoader.hpp"
@@ -36,6 +37,8 @@ public:
 private:
     static const std::string configWorldNameKey;
     static const std::string defaultWorldName;
+
+    boost::shared_ptr<Logger> logger;
 
     void configure();
 

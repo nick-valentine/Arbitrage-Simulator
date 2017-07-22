@@ -35,14 +35,16 @@ int Game::setup()
 
     this->player = Player("Bob", 0, 0);
 
-    this->worldProxy->loadWorld();
+    this->logger = boost::dynamic_pointer_cast<ConsoleWindow>(this->consoleWindow);
+
+    this->worldProxy->loadWorld(this->logger);
 
     return 0;
 }
 
 int Game::run()
 {
-    Logger *logger = boost::dynamic_pointer_cast<ConsoleWindow>(this->consoleWindow)->getLogger();
+    Logger *logger = this->logger->getLogger();
     refresh();
     logger->info("Game Starting");
 

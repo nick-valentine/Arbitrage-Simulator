@@ -10,7 +10,6 @@
 #include "GameObjects/WorldChunk.hpp"
 #include "GameObjects/Player.hpp"
 #include "Window/Window.hpp"
-#include "WorldGen/NoiseFunc.hpp"
 
 /**
  * World.
@@ -41,6 +40,12 @@ public:
     int chunkHeight;
     int chunkWidth;
 
+    //Y major, X inner
+    std::vector< std::vector<WorldChunk> > chunks;
+    std::string name;
+    time_t creationTimestamp;
+protected:
+
     /**
      * Initialize.
      * Setup required variables and state before object can be used.
@@ -48,7 +53,6 @@ public:
      *        have to be added to the get from and add to stringstream functions.
      */
     void init();
-
 
     /**
      * Spawn a chunk at x,y.
@@ -70,12 +74,6 @@ public:
      * @return WorldChunk
      */
     WorldChunk prepareChunk(int y, int x);
-
-    //Y major, X inner
-    std::vector< std::vector<WorldChunk> > chunks;
-    std::string name;
-    time_t creationTimestamp;
-protected:
 };
 
 #endif //WORLD_HPP

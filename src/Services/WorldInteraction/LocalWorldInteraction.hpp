@@ -7,6 +7,9 @@
 #include "Window/Window.hpp"
 #include "Services/WorldInteraction/WorldInteractionInterface.hpp"
 
+#include "Services/Logger/Logger.hpp"
+#include "WorldGen/Generator.hpp"
+
 /**
  * Manager for non-networked world interaction.
  */
@@ -16,13 +19,15 @@ public:
     LocalWorldInteraction();
     LocalWorldInteraction(std::string worldName);
 
-    void loadWorld();
+    void loadWorld(Logger *logger);
     void draw(Window::window_ptr window);
     void movePlayerToCoordinate(int y, int x);
     WorldChunk getChunk(int y, int x) const;
 protected:
     int playerX;
     int playerY;
+
+    Generator generator;
 
     /**
      * Convert the player's current global coordinates into a chunk, and

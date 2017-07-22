@@ -4,17 +4,21 @@ LocalWorldInteraction::LocalWorldInteraction() : World("")
 {
     this->playerY = 0;
     this->playerX = 0;
+    this->generator = Generator::DefaultGenerator();
 }
 
 LocalWorldInteraction::LocalWorldInteraction(std::string worldName) : World(worldName)
 {
     this->playerY = 0;
     this->playerX = 0;
+    this->generator = Generator::DefaultGenerator();
 }
 
-void LocalWorldInteraction::loadWorld()
+void LocalWorldInteraction::loadWorld(Logger *logger)
 {
     this->generateWorld();
+
+    this->generator.execute(this, logger);
 }
 
 void LocalWorldInteraction::draw(Window::window_ptr window)

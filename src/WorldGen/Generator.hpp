@@ -2,8 +2,10 @@
 #define GENERATOR_HPP
 
 #include <vector>
+#include <boost/shared_ptr.hpp>
 
 #include "GameObjects/World.hpp"
+#include "Services/Logger/Logger.hpp"
 #include "WorldGen/Pass/AbstractPass.hpp"
 
 #include "WorldGen/Pass/ElevationPass.hpp"
@@ -21,7 +23,7 @@ public:
 
     void addPass(AbstractPass *pass);
 
-    void execute(World *world);
+    void execute(World *world, boost::shared_ptr<Logger> logger);
 private:
     std::vector<AbstractPass*> passes;
 };

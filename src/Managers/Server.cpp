@@ -60,7 +60,7 @@ void Server::initialize()
         new LocalWorldInteraction(this->worldName)
     );
 
-    (*this->world).loadWorld();
+    (*this->world).loadWorld(this->logger);
 }
 
 void Server::configure()

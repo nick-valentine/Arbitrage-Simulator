@@ -48,9 +48,10 @@ void Generator::addPass(AbstractPass *pass)
     this->passes.push_back(pass);
 }
 
-void Generator::execute(World *world)
+void Generator::execute(World *world, boost::shared_prt<Logger> logger)
 {
     for (int i = 0; i < this->passes.size(); ++i) {
-        this->passes[i]->execute(world);
+        logger->info("%s", this->passes[i]->getName());
+        this->passes[i]->execute(world, logger);
     }
 }
