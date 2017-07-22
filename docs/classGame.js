@@ -10,6 +10,7 @@ var classGame =
     [ "consoleWindow", "classGame.html#acb0267ea00a6e6566a0808cb9d7472e1", null ],
     [ "defaultWorldName", "classGame.html#a3ff679bd07628b7fc5945ef700b7515f", null ],
     [ "gameWindow", "classGame.html#a269f0cd952dcea3c36c6c69682b12eeb", null ],
+    [ "logger", "classGame.html#a086ef7b511a4227ab20d913cd0671f63", null ],
     [ "player", "classGame.html#a6e48721b0532833b99fd5615a3628792", null ],
     [ "screenHeight", "classGame.html#a329351d67993953391a6a65db536c017", null ],
     [ "screenWidth", "classGame.html#ab1ca40d8527bb09e773bb97030b7a5cc", null ],

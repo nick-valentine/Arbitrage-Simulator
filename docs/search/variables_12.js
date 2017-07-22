@@ -7,6 +7,8 @@ var searchData=
   ['windows',['windows',['../classGameWindowLayout.html#a30a0ecf049796031539cacb7ee44a468',1,'GameWindowLayout']]],
   ['windowwidth',['windowWidth',['../classGameWindowLayout.html#a918c9d635c8ae8ac5cfc71b0690ed52f',1,'GameWindowLayout']]],
   ['world',['world',['../classServer.html#a1ed49aeed83b399d2e192e0c8d3c1ce1',1,'Server::world()'],['../classServerSession.html#a45d8bc8a439a074ee70078cab322ea1d',1,'ServerSession::world()']]],
+  ['worlddiff',['worldDiff',['../classCityPass.html#a99388b9a73b714560b2edfba735a00d7',1,'CityPass']]],
+  ['worldelevations',['worldElevations',['../classCityPass.html#a61397a46cc615bb2f36a567924f0d1b1',1,'CityPass']]],
   ['worldheight',['worldHeight',['../classWorld.html#a548e244676fccbc1b5ffbdfc257a02d7',1,'World']]],
   ['worldname',['worldName',['../classServer.html#af671ca48d89bc39d6f588dbf0aeb2c27',1,'Server']]],
   ['worldproxy',['worldProxy',['../classGame.html#a4470b9a25a5ab8912827d48da382f9ea',1,'Game']]],

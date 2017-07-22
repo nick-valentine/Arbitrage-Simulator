@@ -115,18 +115,22 @@ $(document).ready(function(){initNavTree('structTile_1_1TileType.html','');});
 <div class="title">Tile::TileType Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &quot;<a class="el" href="Tile_8hpp_source.html">Tile.hpp</a>&quot;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for Tile::TileType:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="structTile_1_1TileType__coll__graph.png" border="0" usemap="#Tile_1_1TileType_coll__map" alt="Collaboration graph"/></div>
+<map name="Tile_1_1TileType_coll__map" id="Tile_1_1TileType_coll__map">
+</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab3502a82a0caaeed2c6974b4fa11ddf7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTile_1_1TileType.html#ab3502a82a0caaeed2c6974b4fa11ddf7">TileType</a> (char <a class="el" href="structTile_1_1TileType.html#a22145646a563c1c4afd56889e6f16421">tile</a>, unsigned int <a class="el" href="structTile_1_1TileType.html#ad1a6d882bc16490dba466abd3feb8680">colorPair</a>, unsigned int <a class="el" href="structTile_1_1TileType.html#a9a7b1cc5858f85b7e997109bb838909c">elevationMin</a>, unsigned int <a class="el" href="structTile_1_1TileType.html#abf131e1f202bb006172a9b0fca336a93">elevationMax</a>)</td></tr>
-<tr class="separator:ab3502a82a0caaeed2c6974b4fa11ddf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a648db9344cdd6ec999c05e733dc11eb5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTile_1_1TileType.html#a648db9344cdd6ec999c05e733dc11eb5">TileType</a> (char <a class="el" href="structTile_1_1TileType.html#a22145646a563c1c4afd56889e6f16421">tile</a>, unsigned int <a class="el" href="structTile_1_1TileType.html#ad1a6d882bc16490dba466abd3feb8680">colorPair</a>, unsigned int <a class="el" href="structTile_1_1TileType.html#a9a7b1cc5858f85b7e997109bb838909c">elevationMin</a>, unsigned int <a class="el" href="structTile_1_1TileType.html#abf131e1f202bb006172a9b0fca336a93">elevationMax</a>, unsigned int <a class="el" href="structTile_1_1TileType.html#a340e95bbe4707cc991fa9208a089ed72">livability</a>)</td></tr>
+<tr class="separator:a648db9344cdd6ec999c05e733dc11eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -138,12 +142,14 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a9a7b1cc5858f85b7e997109bb838909c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf131e1f202bb006172a9b0fca336a93"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTile_1_1TileType.html#abf131e1f202bb006172a9b0fca336a93">elevationMax</a></td></tr>
 <tr class="separator:abf131e1f202bb006172a9b0fca336a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a340e95bbe4707cc991fa9208a089ed72"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTile_1_1TileType.html#a340e95bbe4707cc991fa9208a089ed72">livability</a></td></tr>
+<tr class="separator:a340e95bbe4707cc991fa9208a089ed72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="Tile_8hpp_source.html#l00100">100</a> of file <a class="el" href="Tile_8hpp_source.html">Tile.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Tile_8hpp_source.html#l00113">113</a> of file <a class="el" href="Tile_8hpp_source.html">Tile.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ab3502a82a0caaeed2c6974b4fa11ddf7"></a>
+<a class="anchor" id="a648db9344cdd6ec999c05e733dc11eb5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -172,7 +178,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>elevationMax</em>&#160;</td>
+          <td class="paramname"><em>elevationMax</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>livability</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -187,7 +199,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Tile_8hpp_source.html#l00107">107</a> of file <a class="el" href="Tile_8hpp_source.html">Tile.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Tile_8hpp_source.html#l00121">121</a> of file <a class="el" href="Tile_8hpp_source.html">Tile.hpp</a>.</p>
 
 </div>
 </div>
@@ -202,7 +214,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Tile_8hpp_source.html#l00103">103</a> of file <a class="el" href="Tile_8hpp_source.html">Tile.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Tile_8hpp_source.html#l00116">116</a> of file <a class="el" href="Tile_8hpp_source.html">Tile.hpp</a>.</p>
 
 </div>
 </div>
@@ -216,9 +228,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Tile_8hpp_source.html#l00105">105</a> of file <a class="el" href="Tile_8hpp_source.html">Tile.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Tile_8hpp_source.html#l00118">118</a> of file <a class="el" href="Tile_8hpp_source.html">Tile.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Tile_8cpp_source.html#l00043">Tile::randomSpawn()</a>.</p>
+<p>Referenced by <a class="el" href="TypePass_8cpp_source.html#l00030">TypePass::typeMap()</a>.</p>
 
 </div>
 </div>
@@ -232,9 +244,25 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Tile_8hpp_source.html#l00104">104</a> of file <a class="el" href="Tile_8hpp_source.html">Tile.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Tile_8hpp_source.html#l00117">117</a> of file <a class="el" href="Tile_8hpp_source.html">Tile.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Tile_8cpp_source.html#l00043">Tile::randomSpawn()</a>.</p>
+<p>Referenced by <a class="el" href="TypePass_8cpp_source.html#l00030">TypePass::typeMap()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a340e95bbe4707cc991fa9208a089ed72"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Tile::TileType::livability</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Tile_8hpp_source.html#l00119">119</a> of file <a class="el" href="Tile_8hpp_source.html">Tile.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Tile_8cpp_source.html#l00091">Tile::getLivability()</a>.</p>
 
 </div>
 </div>
@@ -248,7 +276,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Tile_8hpp_source.html#l00102">102</a> of file <a class="el" href="Tile_8hpp_source.html">Tile.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Tile_8hpp_source.html#l00115">115</a> of file <a class="el" href="Tile_8hpp_source.html">Tile.hpp</a>.</p>
 
 </div>
 </div>
@@ -261,7 +289,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classTile.html">Tile</a></li><li class="navelem"><a class="el" href="structTile_1_1TileType.html">TileType</a></li>
-    <li class="footer">Generated on Fri Jul 21 2017 21:14:23 for Arbitrage Simulator by
+    <li class="footer">Generated on Sat Jul 22 2017 16:59:06 for Arbitrage Simulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

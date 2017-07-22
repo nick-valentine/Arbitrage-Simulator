@@ -1,4 +1,11 @@
 <map id="WorldChunk::getChunkHeight" name="WorldChunk::getChunkHeight">
-<area shape="rect" id="node2" href="$classWorld.html#a0150607a49c2400d5c848159dd02d533" title="Initialize. " alt="" coords="249,5,331,32"/>
-<area shape="rect" id="node3" href="$classWorld.html#afa39d4e6f714a7a3691ac0c656f5e8a8" title="World::World" alt="" coords="379,5,477,32"/>
+<area shape="rect" id="node2" href="$classAbstractPass.html#aa34916295ee5dbceb036d786bea5e45a" title="AbstractPass::executeChunk" alt="" coords="249,59,443,85"/>
+<area shape="rect" id="node6" href="$classCityPass.html#a054e2e23302fe8277a99782939e93ccd" title="CityPass::init" alt="" coords="295,113,397,140"/>
+<area shape="rect" id="node9" href="$classWorld.html#a0150607a49c2400d5c848159dd02d533" title="Initialize. " alt="" coords="305,164,387,191"/>
+<area shape="rect" id="node3" href="$classAbstractPass.html#ae5b257420dcd2c47b222877ad28dfde5" title="AbstractPass::execute" alt="" coords="507,8,661,35"/>
+<area shape="rect" id="node5" href="$classAbstractPass.html#ac3ca2cc79cda1328d23f0cd4bd5b7323" title="AbstractPass::init" alt="" coords="740,56,867,83"/>
+<area shape="rect" id="node4" href="$classCityPass.html#ab20944b265515ef33cfc6b688a8aef39" title="CityPass::execute" alt="" coords="738,5,869,32"/>
+<area shape="rect" id="node7" href="$classGenerator.html#ae622e04fa7b6c52a809c3ae3ee08e1c1" title="Generator::DefaultGenerator" alt="" coords="491,113,677,140"/>
+<area shape="rect" id="node8" href="$classLocalWorldInteraction.html#a0d9657eb61d9318acf2eeb969b3c4b48" title="LocalWorldInteraction\l::LocalWorldInteraction" alt="" coords="725,107,881,149"/>
+<area shape="rect" id="node10" href="$classWorld.html#afa39d4e6f714a7a3691ac0c656f5e8a8" title="World::World" alt="" coords="535,164,633,191"/>
 </map>

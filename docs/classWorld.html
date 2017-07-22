@@ -110,9 +110,9 @@ $(document).ready(function(){initNavTree('classWorld.html','');});
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="classWorld-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">World Class Reference</div>  </div>
@@ -130,8 +130,8 @@ $(document).ready(function(){initNavTree('classWorld.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classWorld__inherit__graph.png" border="0" usemap="#World_inherit__map" alt="Inheritance graph"/></div>
 <map name="World_inherit__map" id="World_inherit__map">
-<area shape="rect" id="node2" href="classLocalWorldInteraction.html" title="Manager for non&#45;networked world interaction. " alt="" coords="10,483,201,707"/>
-<area shape="rect" id="node3" href="classNetworkedWorldInteraction.html" title="Manager for networked world interaction. " alt="" coords="5,755,205,1008"/>
+<area shape="rect" id="node2" href="classLocalWorldInteraction.html" title="Manager for non&#45;networked world interaction. " alt="" coords="10,395,201,633"/>
+<area shape="rect" id="node3" href="classNetworkedWorldInteraction.html" title="Manager for networked world interaction. " alt="" coords="5,681,205,935"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -141,7 +141,6 @@ $(document).ready(function(){initNavTree('classWorld.html','');});
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classWorld__coll__graph.png" border="0" usemap="#World_coll__map" alt="Collaboration graph"/></div>
 <map name="World_coll__map" id="World_coll__map">
-<area shape="rect" id="node2" href="classNoiseFunc.html" title="Noise Function Based on Perlin Noise. " alt="" coords="30,5,174,288"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -171,6 +170,26 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:adbfffbc8da85a130e273414dca3e4d08"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#adbfffbc8da85a130e273414dca3e4d08">getWorldWidth</a> ()</td></tr>
 <tr class="separator:adbfffbc8da85a130e273414dca3e4d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a999c2f69d4001e2ea671617748a05b03"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a999c2f69d4001e2ea671617748a05b03">chunkHeight</a></td></tr>
+<tr class="separator:a999c2f69d4001e2ea671617748a05b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153d1e50db1cbd48412f3cc6933ea3dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a153d1e50db1cbd48412f3cc6933ea3dc">chunkWidth</a></td></tr>
+<tr class="separator:a153d1e50db1cbd48412f3cc6933ea3dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff32affa449788597cd85434b8bcbd38"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="classWorldChunk.html">WorldChunk</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#aff32affa449788597cd85434b8bcbd38">chunks</a></td></tr>
+<tr class="separator:aff32affa449788597cd85434b8bcbd38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a518dd91224f21362bba2ec397ef1eb29"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a518dd91224f21362bba2ec397ef1eb29">name</a></td></tr>
+<tr class="separator:a518dd91224f21362bba2ec397ef1eb29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00dd47dfd18e1110a25f947caa726d1b"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a00dd47dfd18e1110a25f947caa726d1b">creationTimestamp</a></td></tr>
+<tr class="separator:a00dd47dfd18e1110a25f947caa726d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a548e244676fccbc1b5ffbdfc257a02d7"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a548e244676fccbc1b5ffbdfc257a02d7">worldHeight</a> = 0</td></tr>
+<tr class="separator:a548e244676fccbc1b5ffbdfc257a02d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac86e8d117a04eec7800fdbca12f3fc4c"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#ac86e8d117a04eec7800fdbca12f3fc4c">worldWidth</a> = 0</td></tr>
+<tr class="separator:ac86e8d117a04eec7800fdbca12f3fc4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a0150607a49c2400d5c848159dd02d533"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a0150607a49c2400d5c848159dd02d533">init</a> ()</td></tr>
@@ -182,44 +201,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a333864e5d6f9cc6bb8c57753ceb4e44f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWorldChunk.html">WorldChunk</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a333864e5d6f9cc6bb8c57753ceb4e44f">prepareChunk</a> (int y, int x)</td></tr>
 <tr class="memdesc:a333864e5d6f9cc6bb8c57753ceb4e44f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare Chunk.  <a href="#a333864e5d6f9cc6bb8c57753ceb4e44f">More...</a><br /></td></tr>
 <tr class="separator:a333864e5d6f9cc6bb8c57753ceb4e44f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a999c2f69d4001e2ea671617748a05b03"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a999c2f69d4001e2ea671617748a05b03">chunkHeight</a></td></tr>
-<tr class="separator:a999c2f69d4001e2ea671617748a05b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a153d1e50db1cbd48412f3cc6933ea3dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a153d1e50db1cbd48412f3cc6933ea3dc">chunkWidth</a></td></tr>
-<tr class="separator:a153d1e50db1cbd48412f3cc6933ea3dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff32affa449788597cd85434b8bcbd38"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="classWorldChunk.html">WorldChunk</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#aff32affa449788597cd85434b8bcbd38">chunks</a></td></tr>
-<tr class="separator:aff32affa449788597cd85434b8bcbd38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a518dd91224f21362bba2ec397ef1eb29"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a518dd91224f21362bba2ec397ef1eb29">name</a></td></tr>
-<tr class="separator:a518dd91224f21362bba2ec397ef1eb29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00dd47dfd18e1110a25f947caa726d1b"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a00dd47dfd18e1110a25f947caa726d1b">creationTimestamp</a></td></tr>
-<tr class="separator:a00dd47dfd18e1110a25f947caa726d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae97ed5c4852491cc91e2fbb1e165e8f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNoiseFunc.html">NoiseFunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#ae97ed5c4852491cc91e2fbb1e165e8f1">elevationSkewNoise</a></td></tr>
-<tr class="separator:ae97ed5c4852491cc91e2fbb1e165e8f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee9c57a8b08f6bfa27335ce8f9ca0e09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNoiseFunc.html">NoiseFunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#aee9c57a8b08f6bfa27335ce8f9ca0e09">elevationNoise</a></td></tr>
-<tr class="separator:aee9c57a8b08f6bfa27335ce8f9ca0e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb37cf2db530a2d99c6e0828dac4826a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNoiseFunc.html">NoiseFunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#abb37cf2db530a2d99c6e0828dac4826a">tileNoise</a></td></tr>
-<tr class="separator:abb37cf2db530a2d99c6e0828dac4826a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
-Static Protected Attributes</h2></td></tr>
-<tr class="memitem:ab29028a5114a84b1d2c2e28eafcc769d"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#ab29028a5114a84b1d2c2e28eafcc769d">elevationSkewNoiseSpread</a> = 55.0</td></tr>
-<tr class="separator:ab29028a5114a84b1d2c2e28eafcc769d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a5c19085cdf2a499e6497c8bbb2aac8"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a8a5c19085cdf2a499e6497c8bbb2aac8">elevationNoiseSpread</a> = 20.0</td></tr>
-<tr class="separator:a8a5c19085cdf2a499e6497c8bbb2aac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae60f509cea81ca112604558707bec7a"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#aae60f509cea81ca112604558707bec7a">tileNoiseSpread</a> = 6.0</td></tr>
-<tr class="separator:aae60f509cea81ca112604558707bec7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a548e244676fccbc1b5ffbdfc257a02d7"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a548e244676fccbc1b5ffbdfc257a02d7">worldHeight</a> = 0</td></tr>
-<tr class="separator:a548e244676fccbc1b5ffbdfc257a02d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac86e8d117a04eec7800fdbca12f3fc4c"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#ac86e8d117a04eec7800fdbca12f3fc4c">worldWidth</a> = 0</td></tr>
-<tr class="separator:ac86e8d117a04eec7800fdbca12f3fc4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classWorld.html" title="World. ">World</a>. </p>
 <p>Owner of all game objects. The world is composed of many world chunks that can be individually replicated. </p>
 
-<p>Definition at line <a class="el" href="World_8hpp_source.html#l00021">21</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
+<p>Definition at line <a class="el" href="World_8hpp_source.html#l00020">20</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="afa39d4e6f714a7a3691ac0c656f5e8a8"></a>
 <div class="memitem">
@@ -305,7 +292,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="World_8cpp_source.html#l00017">17</a> of file <a class="el" href="World_8cpp_source.html">World.cpp</a>.</p>
 
-<p>References <a class="el" href="World_8cpp_source.html#l00071">init()</a>, and <a class="el" href="World_8hpp_source.html#l00080">name</a>.</p>
+<p>References <a class="el" href="World_8cpp_source.html#l00071">init()</a>, and <a class="el" href="World_8hpp_source.html#l00045">name</a>.</p>
 
 <p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -347,9 +334,9 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="World_8cpp_source.html#l00023">23</a> of file <a class="el" href="World_8cpp_source.html">World.cpp</a>.</p>
 
-<p>References <a class="el" href="ConfigLoader_8cpp_source.html#l00046">ConfigLoader::getIntOption()</a>, <a class="el" href="World_8hpp_source.html#l00043">worldHeight</a>, and <a class="el" href="World_8hpp_source.html#l00044">worldWidth</a>.</p>
+<p>References <a class="el" href="ConfigLoader_8cpp_source.html#l00046">ConfigLoader::getIntOption()</a>, <a class="el" href="World_8hpp_source.html#l00038">worldHeight</a>, and <a class="el" href="World_8hpp_source.html#l00039">worldWidth</a>.</p>
 
-<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00090">Game::configure()</a>, and <a class="el" href="Server_8cpp_source.html#l00066">Server::configure()</a>.</p>
+<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00093">Game::configure()</a>, and <a class="el" href="Server_8cpp_source.html#l00066">Server::configure()</a>.</p>
 
 <p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -417,9 +404,9 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="World_8cpp_source.html#l00062">62</a> of file <a class="el" href="World_8cpp_source.html">World.cpp</a>.</p>
 
-<p>References <a class="el" href="World_8hpp_source.html#l00079">chunks</a>.</p>
+<p>References <a class="el" href="World_8hpp_source.html#l00044">chunks</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00020">LocalWorldInteraction::draw()</a>.</p>
+<p>Referenced by <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00024">LocalWorldInteraction::draw()</a>.</p>
 
 <p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -451,7 +438,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="World_8cpp_source.html#l00029">29</a> of file <a class="el" href="World_8cpp_source.html">World.cpp</a>.</p>
 
-<p>References <a class="el" href="World_8hpp_source.html#l00079">chunks</a>, <a class="el" href="World_8hpp_source.html#l00081">creationTimestamp</a>, and <a class="el" href="World_8hpp_source.html#l00080">name</a>.</p>
+<p>References <a class="el" href="World_8hpp_source.html#l00044">chunks</a>, <a class="el" href="World_8hpp_source.html#l00046">creationTimestamp</a>, and <a class="el" href="World_8hpp_source.html#l00045">name</a>.</p>
 
 <p>Referenced by <a class="el" href="World_8cpp_source.html#l00011">World()</a>.</p>
 
@@ -484,9 +471,9 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="World_8cpp_source.html#l00054">54</a> of file <a class="el" href="World_8cpp_source.html">World.cpp</a>.</p>
 
-<p>References <a class="el" href="World_8hpp_source.html#l00081">creationTimestamp</a>, <a class="el" href="World_8cpp_source.html#l00081">spawnChunk()</a>, <a class="el" href="World_8hpp_source.html#l00043">worldHeight</a>, and <a class="el" href="World_8hpp_source.html#l00044">worldWidth</a>.</p>
+<p>References <a class="el" href="World_8hpp_source.html#l00046">creationTimestamp</a>, <a class="el" href="World_8cpp_source.html#l00077">spawnChunk()</a>, <a class="el" href="World_8hpp_source.html#l00038">worldHeight</a>, and <a class="el" href="World_8hpp_source.html#l00039">worldWidth</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00015">LocalWorldInteraction::loadWorld()</a>.</p>
+<p>Referenced by <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00017">LocalWorldInteraction::loadWorld()</a>.</p>
 
 <p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -495,21 +482,9 @@ Static Protected Attributes</h2></td></tr>
 <div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classWorld_a3d897d6953d0876aeab57d3ca951bea2_cgraph.png" border="0" usemap="#classWorld_a3d897d6953d0876aeab57d3ca951bea2_cgraph" alt=""/></div>
 <map name="classWorld_a3d897d6953d0876aeab57d3ca951bea2_cgraph" id="classWorld_a3d897d6953d0876aeab57d3ca951bea2_cgraph">
-<area shape="rect" id="node2" href="classWorld.html#a8d8b39ed30b8b25d17a633a27e1942c1" title="Spawn a chunk at x,y. " alt="" coords="201,95,341,121"/>
-<area shape="rect" id="node3" href="classWorld.html#a333864e5d6f9cc6bb8c57753ceb4e44f" title="Prepare Chunk. " alt="" coords="389,95,535,121"/>
-<area shape="rect" id="node4" href="classWorldChunk.html#a0428cb7066e8cb921b37a2ff7a2ba9dc" title="WorldChunk::generateChunk" alt="" coords="583,95,773,121"/>
-<area shape="rect" id="node5" href="classTile.html#a257eb65b1bc19fc77e2964b8325e2680" title="Random Spawn. " alt="" coords="843,44,978,71"/>
-<area shape="rect" id="node9" href="classNoiseFunc.html#a86b87334b40c251168a191bcf14ef761" title="Get the return of this noise function modified by gridPeriod. " alt="" coords="855,95,966,121"/>
-<area shape="rect" id="node16" href="classWorldChunk.html#ae882ecfc1d6319657f76f6036931a9e0" title="WorldChunk::elevationMap" alt="" coords="821,145,1000,172"/>
-<area shape="rect" id="node6" href="classTile.html#a96ce55d5fcb4b12880531af2138ba6b2" title="Tile::init" alt="" coords="1278,5,1346,32"/>
-<area shape="rect" id="node8" href="classTile.html#aeeb5593bb6b75aae2edfcccbc84ab378" title="Tile::Tile" alt="" coords="1074,44,1146,71"/>
-<area shape="rect" id="node7" href="classColorPallete.html#a03f2ad8887f2628c4aa0c7b61729671b" title="ColorPallete::addColor" alt="" coords="1469,5,1622,32"/>
-<area shape="rect" id="node10" href="classNoiseFunc.html#aa87ed1ed47c8d7d2a9923c4ebe56488e" title="NoiseFunc::perlin" alt="" coords="1048,95,1172,121"/>
-<area shape="rect" id="node11" href="classNoiseFunc.html#a0398d2d39d683aeeb20f4adbdbe65252" title="NoiseFunc::dotGridGradient" alt="" coords="1220,81,1404,108"/>
-<area shape="rect" id="node15" href="classNoiseFunc.html#a59ace427bbd297980a4c767a68ebd17b" title="NoiseFunc::lerp" alt="" coords="1255,132,1369,159"/>
-<area shape="rect" id="node12" href="classNoiseFunc.html#a8605b20ed7a02c74cef4a77379725785" title="NoiseFunc::addGridGradient" alt="" coords="1452,81,1639,108"/>
-<area shape="rect" id="node13" href="classNoiseFunc.html#a6675a19eec4a812f3bac096cceae51a0" title="NoiseFunc::newRandPair" alt="" coords="1687,81,1857,108"/>
-<area shape="rect" id="node14" href="classNoiseFunc.html#a4403c8ac5fb7f4a309b14494005b5af5" title="NoiseFunc::newRand" alt="" coords="1905,81,2053,108"/>
+<area shape="rect" id="node2" href="classWorld.html#a8d8b39ed30b8b25d17a633a27e1942c1" title="Spawn a chunk at x,y. " alt="" coords="201,5,341,32"/>
+<area shape="rect" id="node3" href="classWorld.html#a333864e5d6f9cc6bb8c57753ceb4e44f" title="Prepare Chunk. " alt="" coords="389,5,535,32"/>
+<area shape="rect" id="node4" href="classWorldChunk.html#a7e1ba0dcd38f46a9c0309f1082904e87" title="WorldChunk::generateChunk" alt="" coords="583,5,773,32"/>
 </map>
 </div>
 </p>
@@ -521,7 +496,7 @@ Static Protected Attributes</h2></td></tr>
 <div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classWorld_a3d897d6953d0876aeab57d3ca951bea2_icgraph.png" border="0" usemap="#classWorld_a3d897d6953d0876aeab57d3ca951bea2_icgraph" alt=""/></div>
 <map name="classWorld_a3d897d6953d0876aeab57d3ca951bea2_icgraph" id="classWorld_a3d897d6953d0876aeab57d3ca951bea2_icgraph">
-<area shape="rect" id="node2" href="classLocalWorldInteraction.html#abf8c3ee610ba923a2348437d0c2c6021" title="LocalWorldInteraction\l::loadWorld" alt="" coords="201,5,349,47"/>
+<area shape="rect" id="node2" href="classLocalWorldInteraction.html#ab9d4afe55a419bce1f26fd61e908a149" title="LocalWorldInteraction\l::loadWorld" alt="" coords="201,5,349,47"/>
 </map>
 </div>
 </p>
@@ -549,9 +524,25 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="World_8cpp_source.html#l00110">110</a> of file <a class="el" href="World_8cpp_source.html">World.cpp</a>.</p>
+<p>Definition at line <a class="el" href="World_8cpp_source.html#l00106">106</a> of file <a class="el" href="World_8cpp_source.html">World.cpp</a>.</p>
 
-<p>References <a class="el" href="World_8hpp_source.html#l00043">worldHeight</a>.</p>
+<p>References <a class="el" href="World_8hpp_source.html#l00038">worldHeight</a>.</p>
+
+<p>Referenced by <a class="el" href="CityPass_8cpp_source.html#l00005">CityPass::init()</a>.</p>
+
+<p><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classWorld_aa0edc612bd3defdcde0593d75f20e0f3_icgraph.png" border="0" usemap="#classWorld_aa0edc612bd3defdcde0593d75f20e0f3_icgraph" alt=""/></div>
+<map name="classWorld_aa0edc612bd3defdcde0593d75f20e0f3_icgraph" id="classWorld_aa0edc612bd3defdcde0593d75f20e0f3_icgraph">
+<area shape="rect" id="node2" href="classCityPass.html#a054e2e23302fe8277a99782939e93ccd" title="CityPass::init" alt="" coords="208,13,309,39"/>
+<area shape="rect" id="node3" href="classGenerator.html#ae622e04fa7b6c52a809c3ae3ee08e1c1" title="Generator::DefaultGenerator" alt="" coords="357,13,544,39"/>
+<area shape="rect" id="node4" href="classLocalWorldInteraction.html#a0d9657eb61d9318acf2eeb969b3c4b48" title="LocalWorldInteraction\l::LocalWorldInteraction" alt="" coords="592,5,748,47"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -576,9 +567,25 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="World_8cpp_source.html#l00115">115</a> of file <a class="el" href="World_8cpp_source.html">World.cpp</a>.</p>
+<p>Definition at line <a class="el" href="World_8cpp_source.html#l00111">111</a> of file <a class="el" href="World_8cpp_source.html">World.cpp</a>.</p>
 
-<p>References <a class="el" href="World_8hpp_source.html#l00044">worldWidth</a>.</p>
+<p>References <a class="el" href="World_8hpp_source.html#l00039">worldWidth</a>.</p>
+
+<p>Referenced by <a class="el" href="CityPass_8cpp_source.html#l00005">CityPass::init()</a>.</p>
+
+<p><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classWorld_adbfffbc8da85a130e273414dca3e4d08_icgraph.png" border="0" usemap="#classWorld_adbfffbc8da85a130e273414dca3e4d08_icgraph" alt=""/></div>
+<map name="classWorld_adbfffbc8da85a130e273414dca3e4d08_icgraph" id="classWorld_adbfffbc8da85a130e273414dca3e4d08_icgraph">
+<area shape="rect" id="node2" href="classCityPass.html#a054e2e23302fe8277a99782939e93ccd" title="CityPass::init" alt="" coords="204,13,305,39"/>
+<area shape="rect" id="node3" href="classGenerator.html#ae622e04fa7b6c52a809c3ae3ee08e1c1" title="Generator::DefaultGenerator" alt="" coords="353,13,540,39"/>
+<area shape="rect" id="node4" href="classLocalWorldInteraction.html#a0d9657eb61d9318acf2eeb969b3c4b48" title="LocalWorldInteraction\l::LocalWorldInteraction" alt="" coords="588,5,744,47"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -608,15 +615,15 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="World_8cpp_source.html#l00071">71</a> of file <a class="el" href="World_8cpp_source.html">World.cpp</a>.</p>
 
-<p>References <a class="el" href="World_8hpp_source.html#l00045">chunkHeight</a>, <a class="el" href="World_8hpp_source.html#l00046">chunkWidth</a>, <a class="el" href="World_8hpp_source.html#l00084">elevationNoise</a>, <a class="el" href="World_8hpp_source.html#l00040">elevationNoiseSpread</a>, <a class="el" href="World_8hpp_source.html#l00083">elevationSkewNoise</a>, <a class="el" href="World_8hpp_source.html#l00039">elevationSkewNoiseSpread</a>, <a class="el" href="WorldChunk_8cpp_source.html#l00274">WorldChunk::getChunkHeight()</a>, <a class="el" href="WorldChunk_8cpp_source.html#l00269">WorldChunk::getChunkWidth()</a>, <a class="el" href="World_8hpp_source.html#l00085">tileNoise</a>, and <a class="el" href="World_8hpp_source.html#l00041">tileNoiseSpread</a>.</p>
+<p>References <a class="el" href="World_8hpp_source.html#l00040">chunkHeight</a>, <a class="el" href="World_8hpp_source.html#l00041">chunkWidth</a>, <a class="el" href="WorldChunk_8cpp_source.html#l00238">WorldChunk::getChunkHeight()</a>, and <a class="el" href="WorldChunk_8cpp_source.html#l00233">WorldChunk::getChunkWidth()</a>.</p>
 
 <p>Referenced by <a class="el" href="World_8cpp_source.html#l00006">World()</a>.</p>
 
-<p><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classWorld_a0150607a49c2400d5c848159dd02d533_cgraph.png" border="0" usemap="#classWorld_a0150607a49c2400d5c848159dd02d533_cgraph" alt=""/></div>
 <map name="classWorld_a0150607a49c2400d5c848159dd02d533_cgraph" id="classWorld_a0150607a49c2400d5c848159dd02d533_cgraph">
 <area shape="rect" id="node2" href="classWorldChunk.html#a69efb1c1bc62d8464cce367f29665f38" title="WorldChunk::getChunkHeight" alt="" coords="135,5,331,32"/>
@@ -625,11 +632,11 @@ Static Protected Attributes</h2></td></tr>
 </div>
 </p>
 
-<p><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classWorld_a0150607a49c2400d5c848159dd02d533_icgraph.png" border="0" usemap="#classWorld_a0150607a49c2400d5c848159dd02d533_icgraph" alt=""/></div>
 <map name="classWorld_a0150607a49c2400d5c848159dd02d533_icgraph" id="classWorld_a0150607a49c2400d5c848159dd02d533_icgraph">
 <area shape="rect" id="node2" href="classWorld.html#afa39d4e6f714a7a3691ac0c656f5e8a8" title="World::World" alt="" coords="135,5,233,32"/>
@@ -682,46 +689,34 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classWorldChunk.html">WorldChunk</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="World_8cpp_source.html#l00103">103</a> of file <a class="el" href="World_8cpp_source.html">World.cpp</a>.</p>
+<p>Definition at line <a class="el" href="World_8cpp_source.html#l00099">99</a> of file <a class="el" href="World_8cpp_source.html">World.cpp</a>.</p>
 
-<p>References <a class="el" href="World_8hpp_source.html#l00084">elevationNoise</a>, <a class="el" href="World_8hpp_source.html#l00083">elevationSkewNoise</a>, <a class="el" href="WorldChunk_8cpp_source.html#l00096">WorldChunk::generateChunk()</a>, and <a class="el" href="World_8hpp_source.html#l00085">tileNoise</a>.</p>
+<p>References <a class="el" href="WorldChunk_8cpp_source.html#l00094">WorldChunk::generateChunk()</a>.</p>
 
-<p>Referenced by <a class="el" href="World_8cpp_source.html#l00081">spawnChunk()</a>.</p>
+<p>Referenced by <a class="el" href="World_8cpp_source.html#l00077">spawnChunk()</a>.</p>
 
-<p><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classWorld_a333864e5d6f9cc6bb8c57753ceb4e44f_cgraph.png" border="0" usemap="#classWorld_a333864e5d6f9cc6bb8c57753ceb4e44f_cgraph" alt=""/></div>
 <map name="classWorld_a333864e5d6f9cc6bb8c57753ceb4e44f_cgraph" id="classWorld_a333864e5d6f9cc6bb8c57753ceb4e44f_cgraph">
-<area shape="rect" id="node2" href="classWorldChunk.html#a0428cb7066e8cb921b37a2ff7a2ba9dc" title="WorldChunk::generateChunk" alt="" coords="199,95,389,121"/>
-<area shape="rect" id="node3" href="classTile.html#a257eb65b1bc19fc77e2964b8325e2680" title="Random Spawn. " alt="" coords="459,44,594,71"/>
-<area shape="rect" id="node7" href="classNoiseFunc.html#a86b87334b40c251168a191bcf14ef761" title="Get the return of this noise function modified by gridPeriod. " alt="" coords="471,95,582,121"/>
-<area shape="rect" id="node14" href="classWorldChunk.html#ae882ecfc1d6319657f76f6036931a9e0" title="WorldChunk::elevationMap" alt="" coords="437,145,616,172"/>
-<area shape="rect" id="node4" href="classTile.html#a96ce55d5fcb4b12880531af2138ba6b2" title="Tile::init" alt="" coords="894,5,962,32"/>
-<area shape="rect" id="node6" href="classTile.html#aeeb5593bb6b75aae2edfcccbc84ab378" title="Tile::Tile" alt="" coords="690,44,762,71"/>
-<area shape="rect" id="node5" href="classColorPallete.html#a03f2ad8887f2628c4aa0c7b61729671b" title="ColorPallete::addColor" alt="" coords="1085,5,1238,32"/>
-<area shape="rect" id="node8" href="classNoiseFunc.html#aa87ed1ed47c8d7d2a9923c4ebe56488e" title="NoiseFunc::perlin" alt="" coords="664,95,788,121"/>
-<area shape="rect" id="node9" href="classNoiseFunc.html#a0398d2d39d683aeeb20f4adbdbe65252" title="NoiseFunc::dotGridGradient" alt="" coords="836,81,1020,108"/>
-<area shape="rect" id="node13" href="classNoiseFunc.html#a59ace427bbd297980a4c767a68ebd17b" title="NoiseFunc::lerp" alt="" coords="871,132,985,159"/>
-<area shape="rect" id="node10" href="classNoiseFunc.html#a8605b20ed7a02c74cef4a77379725785" title="NoiseFunc::addGridGradient" alt="" coords="1068,81,1255,108"/>
-<area shape="rect" id="node11" href="classNoiseFunc.html#a6675a19eec4a812f3bac096cceae51a0" title="NoiseFunc::newRandPair" alt="" coords="1303,81,1473,108"/>
-<area shape="rect" id="node12" href="classNoiseFunc.html#a4403c8ac5fb7f4a309b14494005b5af5" title="NoiseFunc::newRand" alt="" coords="1521,81,1669,108"/>
+<area shape="rect" id="node2" href="classWorldChunk.html#a7e1ba0dcd38f46a9c0309f1082904e87" title="WorldChunk::generateChunk" alt="" coords="199,5,389,32"/>
 </map>
 </div>
 </p>
 
-<p><div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classWorld_a333864e5d6f9cc6bb8c57753ceb4e44f_icgraph.png" border="0" usemap="#classWorld_a333864e5d6f9cc6bb8c57753ceb4e44f_icgraph" alt=""/></div>
 <map name="classWorld_a333864e5d6f9cc6bb8c57753ceb4e44f_icgraph" id="classWorld_a333864e5d6f9cc6bb8c57753ceb4e44f_icgraph">
 <area shape="rect" id="node2" href="classWorld.html#a8d8b39ed30b8b25d17a633a27e1942c1" title="Spawn a chunk at x,y. " alt="" coords="199,13,339,39"/>
 <area shape="rect" id="node3" href="classWorld.html#a3d897d6953d0876aeab57d3ca951bea2" title="World::generateWorld" alt="" coords="387,13,535,39"/>
-<area shape="rect" id="node4" href="classLocalWorldInteraction.html#abf8c3ee610ba923a2348437d0c2c6021" title="LocalWorldInteraction\l::loadWorld" alt="" coords="583,5,731,47"/>
+<area shape="rect" id="node4" href="classLocalWorldInteraction.html#ab9d4afe55a419bce1f26fd61e908a149" title="LocalWorldInteraction\l::loadWorld" alt="" coords="583,5,731,47"/>
 </map>
 </div>
 </p>
@@ -770,46 +765,34 @@ Static Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="World_8cpp_source.html#l00081">81</a> of file <a class="el" href="World_8cpp_source.html">World.cpp</a>.</p>
+<p>Definition at line <a class="el" href="World_8cpp_source.html#l00077">77</a> of file <a class="el" href="World_8cpp_source.html">World.cpp</a>.</p>
 
-<p>References <a class="el" href="World_8hpp_source.html#l00079">chunks</a>, and <a class="el" href="World_8cpp_source.html#l00103">prepareChunk()</a>.</p>
+<p>References <a class="el" href="World_8hpp_source.html#l00044">chunks</a>, and <a class="el" href="World_8cpp_source.html#l00099">prepareChunk()</a>.</p>
 
 <p>Referenced by <a class="el" href="World_8cpp_source.html#l00054">generateWorld()</a>.</p>
 
-<p><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-15-content" class="dyncontent" style="display:none;">
+<div id="dynsection-17-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classWorld_a8d8b39ed30b8b25d17a633a27e1942c1_cgraph.png" border="0" usemap="#classWorld_a8d8b39ed30b8b25d17a633a27e1942c1_cgraph" alt=""/></div>
 <map name="classWorld_a8d8b39ed30b8b25d17a633a27e1942c1_cgraph" id="classWorld_a8d8b39ed30b8b25d17a633a27e1942c1_cgraph">
-<area shape="rect" id="node2" href="classWorld.html#a333864e5d6f9cc6bb8c57753ceb4e44f" title="Prepare Chunk. " alt="" coords="193,95,339,121"/>
-<area shape="rect" id="node3" href="classWorldChunk.html#a0428cb7066e8cb921b37a2ff7a2ba9dc" title="WorldChunk::generateChunk" alt="" coords="387,95,577,121"/>
-<area shape="rect" id="node4" href="classTile.html#a257eb65b1bc19fc77e2964b8325e2680" title="Random Spawn. " alt="" coords="647,44,782,71"/>
-<area shape="rect" id="node8" href="classNoiseFunc.html#a86b87334b40c251168a191bcf14ef761" title="Get the return of this noise function modified by gridPeriod. " alt="" coords="659,95,770,121"/>
-<area shape="rect" id="node15" href="classWorldChunk.html#ae882ecfc1d6319657f76f6036931a9e0" title="WorldChunk::elevationMap" alt="" coords="625,145,804,172"/>
-<area shape="rect" id="node5" href="classTile.html#a96ce55d5fcb4b12880531af2138ba6b2" title="Tile::init" alt="" coords="1082,5,1150,32"/>
-<area shape="rect" id="node7" href="classTile.html#aeeb5593bb6b75aae2edfcccbc84ab378" title="Tile::Tile" alt="" coords="878,44,950,71"/>
-<area shape="rect" id="node6" href="classColorPallete.html#a03f2ad8887f2628c4aa0c7b61729671b" title="ColorPallete::addColor" alt="" coords="1273,5,1426,32"/>
-<area shape="rect" id="node9" href="classNoiseFunc.html#aa87ed1ed47c8d7d2a9923c4ebe56488e" title="NoiseFunc::perlin" alt="" coords="852,95,976,121"/>
-<area shape="rect" id="node10" href="classNoiseFunc.html#a0398d2d39d683aeeb20f4adbdbe65252" title="NoiseFunc::dotGridGradient" alt="" coords="1024,81,1208,108"/>
-<area shape="rect" id="node14" href="classNoiseFunc.html#a59ace427bbd297980a4c767a68ebd17b" title="NoiseFunc::lerp" alt="" coords="1059,132,1173,159"/>
-<area shape="rect" id="node11" href="classNoiseFunc.html#a8605b20ed7a02c74cef4a77379725785" title="NoiseFunc::addGridGradient" alt="" coords="1256,81,1443,108"/>
-<area shape="rect" id="node12" href="classNoiseFunc.html#a6675a19eec4a812f3bac096cceae51a0" title="NoiseFunc::newRandPair" alt="" coords="1491,81,1661,108"/>
-<area shape="rect" id="node13" href="classNoiseFunc.html#a4403c8ac5fb7f4a309b14494005b5af5" title="NoiseFunc::newRand" alt="" coords="1709,81,1857,108"/>
+<area shape="rect" id="node2" href="classWorld.html#a333864e5d6f9cc6bb8c57753ceb4e44f" title="Prepare Chunk. " alt="" coords="193,5,339,32"/>
+<area shape="rect" id="node3" href="classWorldChunk.html#a7e1ba0dcd38f46a9c0309f1082904e87" title="WorldChunk::generateChunk" alt="" coords="387,5,577,32"/>
 </map>
 </div>
 </p>
 
-<p><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-16-content" class="dyncontent" style="display:none;">
+<div id="dynsection-18-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classWorld_a8d8b39ed30b8b25d17a633a27e1942c1_icgraph.png" border="0" usemap="#classWorld_a8d8b39ed30b8b25d17a633a27e1942c1_icgraph" alt=""/></div>
 <map name="classWorld_a8d8b39ed30b8b25d17a633a27e1942c1_icgraph" id="classWorld_a8d8b39ed30b8b25d17a633a27e1942c1_icgraph">
 <area shape="rect" id="node2" href="classWorld.html#a3d897d6953d0876aeab57d3ca951bea2" title="World::generateWorld" alt="" coords="193,13,341,39"/>
-<area shape="rect" id="node3" href="classLocalWorldInteraction.html#abf8c3ee610ba923a2348437d0c2c6021" title="LocalWorldInteraction\l::loadWorld" alt="" coords="389,5,537,47"/>
+<area shape="rect" id="node3" href="classLocalWorldInteraction.html#ab9d4afe55a419bce1f26fd61e908a149" title="LocalWorldInteraction\l::loadWorld" alt="" coords="389,5,537,47"/>
 </map>
 </div>
 </p>
@@ -832,7 +815,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="World_8cpp_source.html#l00042">42</a> of file <a class="el" href="World_8cpp_source.html">World.cpp</a>.</p>
 
-<p>References <a class="el" href="World_8hpp_source.html#l00079">chunks</a>, <a class="el" href="World_8hpp_source.html#l00081">creationTimestamp</a>, and <a class="el" href="World_8hpp_source.html#l00080">name</a>.</p>
+<p>References <a class="el" href="World_8hpp_source.html#l00044">chunks</a>, <a class="el" href="World_8hpp_source.html#l00046">creationTimestamp</a>, and <a class="el" href="World_8hpp_source.html#l00045">name</a>.</p>
 
 </div>
 </div>
@@ -840,264 +823,80 @@ Static Protected Attributes</h2></td></tr>
 <a class="anchor" id="a999c2f69d4001e2ea671617748a05b03"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int World::chunkHeight</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="World_8hpp_source.html#l00045">45</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
+<p>Definition at line <a class="el" href="World_8hpp_source.html#l00040">40</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00043">LocalWorldInteraction::globalCoordinatesToChunkCoordinates()</a>, and <a class="el" href="World_8cpp_source.html#l00071">init()</a>.</p>
+<p>Referenced by <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00047">LocalWorldInteraction::globalCoordinatesToChunkCoordinates()</a>, and <a class="el" href="World_8cpp_source.html#l00071">init()</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="aff32affa449788597cd85434b8bcbd38"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt; std::vector&lt;<a class="el" href="classWorldChunk.html">WorldChunk</a>&gt; &gt; World::chunks</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="World_8hpp_source.html#l00079">79</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
+<p>Definition at line <a class="el" href="World_8hpp_source.html#l00044">44</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="World_8cpp_source.html#l00062">draw()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00025">NetworkedWorldInteraction::draw()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00106">NetworkedWorldInteraction::fetchChunk()</a>, <a class="el" href="World_8cpp_source.html#l00029">fromStringStream()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00055">LocalWorldInteraction::getChunk()</a>, <a class="el" href="World_8cpp_source.html#l00081">spawnChunk()</a>, and <a class="el" href="World_8cpp_source.html#l00042">toStringStream()</a>.</p>
+<p>Referenced by <a class="el" href="World_8cpp_source.html#l00062">draw()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00025">NetworkedWorldInteraction::draw()</a>, <a class="el" href="AbstractPass_8cpp_source.html#l00003">AbstractPass::execute()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00106">NetworkedWorldInteraction::fetchChunk()</a>, <a class="el" href="World_8cpp_source.html#l00029">fromStringStream()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00059">LocalWorldInteraction::getChunk()</a>, <a class="el" href="World_8cpp_source.html#l00077">spawnChunk()</a>, and <a class="el" href="World_8cpp_source.html#l00042">toStringStream()</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="a153d1e50db1cbd48412f3cc6933ea3dc"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int World::chunkWidth</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="World_8hpp_source.html#l00046">46</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
+<p>Definition at line <a class="el" href="World_8hpp_source.html#l00041">41</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00043">LocalWorldInteraction::globalCoordinatesToChunkCoordinates()</a>, and <a class="el" href="World_8cpp_source.html#l00071">init()</a>.</p>
+<p>Referenced by <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00047">LocalWorldInteraction::globalCoordinatesToChunkCoordinates()</a>, and <a class="el" href="World_8cpp_source.html#l00071">init()</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="a00dd47dfd18e1110a25f947caa726d1b"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">time_t World::creationTimestamp</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="World_8hpp_source.html#l00081">81</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
+<p>Definition at line <a class="el" href="World_8hpp_source.html#l00046">46</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="World_8cpp_source.html#l00029">fromStringStream()</a>, <a class="el" href="World_8cpp_source.html#l00054">generateWorld()</a>, and <a class="el" href="World_8cpp_source.html#l00042">toStringStream()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aee9c57a8b08f6bfa27335ce8f9ca0e09"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classNoiseFunc.html">NoiseFunc</a> World::elevationNoise</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="World_8hpp_source.html#l00084">84</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
-
-<p>Referenced by <a class="el" href="World_8cpp_source.html#l00071">init()</a>, and <a class="el" href="World_8cpp_source.html#l00103">prepareChunk()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a8a5c19085cdf2a499e6497c8bbb2aac8"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr float World::elevationNoiseSpread = 20.0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="World_8hpp_source.html#l00040">40</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
-
-<p>Referenced by <a class="el" href="World_8cpp_source.html#l00071">init()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae97ed5c4852491cc91e2fbb1e165e8f1"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classNoiseFunc.html">NoiseFunc</a> World::elevationSkewNoise</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="World_8hpp_source.html#l00083">83</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
-
-<p>Referenced by <a class="el" href="World_8cpp_source.html#l00071">init()</a>, and <a class="el" href="World_8cpp_source.html#l00103">prepareChunk()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab29028a5114a84b1d2c2e28eafcc769d"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr float World::elevationSkewNoiseSpread = 55.0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="World_8hpp_source.html#l00039">39</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
-
-<p>Referenced by <a class="el" href="World_8cpp_source.html#l00071">init()</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="a518dd91224f21362bba2ec397ef1eb29"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::string World::name</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="World_8hpp_source.html#l00080">80</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
+<p>Definition at line <a class="el" href="World_8hpp_source.html#l00045">45</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="World_8cpp_source.html#l00029">fromStringStream()</a>, <a class="el" href="World_8cpp_source.html#l00042">toStringStream()</a>, and <a class="el" href="World_8cpp_source.html#l00017">World()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="abb37cf2db530a2d99c6e0828dac4826a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classNoiseFunc.html">NoiseFunc</a> World::tileNoise</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="World_8hpp_source.html#l00085">85</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
-
-<p>Referenced by <a class="el" href="World_8cpp_source.html#l00071">init()</a>, and <a class="el" href="World_8cpp_source.html#l00103">prepareChunk()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aae60f509cea81ca112604558707bec7a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr float World::tileNoiseSpread = 6.0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="World_8hpp_source.html#l00041">41</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
-
-<p>Referenced by <a class="el" href="World_8cpp_source.html#l00071">init()</a>.</p>
 
 </div>
 </div>
@@ -1114,14 +913,14 @@ Static Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="World_8hpp_source.html#l00043">43</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
+<p>Definition at line <a class="el" href="World_8hpp_source.html#l00038">38</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="World_8cpp_source.html#l00023">configure()</a>, <a class="el" href="World_8cpp_source.html#l00054">generateWorld()</a>, and <a class="el" href="World_8cpp_source.html#l00110">getWorldHeight()</a>.</p>
+<p>Referenced by <a class="el" href="World_8cpp_source.html#l00023">configure()</a>, <a class="el" href="World_8cpp_source.html#l00054">generateWorld()</a>, and <a class="el" href="World_8cpp_source.html#l00106">getWorldHeight()</a>.</p>
 
 </div>
 </div>
@@ -1138,14 +937,14 @@ Static Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="World_8hpp_source.html#l00044">44</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
+<p>Definition at line <a class="el" href="World_8hpp_source.html#l00039">39</a> of file <a class="el" href="World_8hpp_source.html">World.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="World_8cpp_source.html#l00023">configure()</a>, <a class="el" href="World_8cpp_source.html#l00054">generateWorld()</a>, and <a class="el" href="World_8cpp_source.html#l00115">getWorldWidth()</a>.</p>
+<p>Referenced by <a class="el" href="World_8cpp_source.html#l00023">configure()</a>, <a class="el" href="World_8cpp_source.html#l00054">generateWorld()</a>, and <a class="el" href="World_8cpp_source.html#l00111">getWorldWidth()</a>.</p>
 
 </div>
 </div>
@@ -1159,7 +958,7 @@ Static Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classWorld.html">World</a></li>
-    <li class="footer">Generated on Fri Jul 21 2017 21:14:23 for Arbitrage Simulator by
+    <li class="footer">Generated on Sat Jul 22 2017 16:59:06 for Arbitrage Simulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

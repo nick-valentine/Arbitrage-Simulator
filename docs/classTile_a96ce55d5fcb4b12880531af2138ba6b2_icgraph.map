@@ -1,11 +1,5 @@
 <map id="Tile::init" name="Tile::init">
 <area shape="rect" id="node2" href="$classTile.html#a038551c49c0b2fe8250edd0506574468" title="From String Stream. " alt="" coords="121,5,275,32"/>
-<area shape="rect" id="node4" href="$classTile.html#a257eb65b1bc19fc77e2964b8325e2680" title="Random Spawn. " alt="" coords="323,81,457,108"/>
-<area shape="rect" id="node10" href="$classTile.html#aeeb5593bb6b75aae2edfcccbc84ab378" title="Tile::Tile" alt="" coords="162,107,234,133"/>
-<area shape="rect" id="node3" href="$classTile.html#a4bea5ec31700bc0c45de6897fad67f30" title="Tile::Tile" alt="" coords="354,5,426,32"/>
-<area shape="rect" id="node5" href="$classWorldChunk.html#a0428cb7066e8cb921b37a2ff7a2ba9dc" title="WorldChunk::generateChunk" alt="" coords="505,81,696,108"/>
-<area shape="rect" id="node6" href="$classWorld.html#a333864e5d6f9cc6bb8c57753ceb4e44f" title="Prepare Chunk. " alt="" coords="744,81,889,108"/>
-<area shape="rect" id="node7" href="$classWorld.html#a8d8b39ed30b8b25d17a633a27e1942c1" title="Spawn a chunk at x,y. " alt="" coords="937,81,1077,108"/>
-<area shape="rect" id="node8" href="$classWorld.html#a3d897d6953d0876aeab57d3ca951bea2" title="World::generateWorld" alt="" coords="1125,81,1273,108"/>
-<area shape="rect" id="node9" href="$classLocalWorldInteraction.html#abf8c3ee610ba923a2348437d0c2c6021" title="LocalWorldInteraction\l::loadWorld" alt="" coords="1321,74,1469,115"/>
+<area shape="rect" id="node4" href="$classTile.html#aeeb5593bb6b75aae2edfcccbc84ab378" title="Tile::Tile" alt="" coords="162,56,234,83"/>
+<area shape="rect" id="node3" href="$classTile.html#a4bea5ec31700bc0c45de6897fad67f30" title="Tile::Tile" alt="" coords="323,5,395,32"/>
 </map>

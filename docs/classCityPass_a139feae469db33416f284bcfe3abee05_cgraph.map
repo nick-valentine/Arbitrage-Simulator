@@ -1,0 +1,3 @@
+<map id="CityPass::convertTileToCity" name="CityPass::convertTileToCity">
+<area shape="rect" id="node2" href="$classTile.html#ad18dc829e0b9c7e6a9c52272c902704e" title="Convert this tile to a city tile if this tile may contain a city. " alt="" coords="240,5,373,32"/>
+</map>

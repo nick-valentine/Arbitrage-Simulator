@@ -128,9 +128,9 @@ $(document).ready(function(){initNavTree('classLocalWorldInteraction.html','');}
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classLocalWorldInteraction__inherit__graph.png" border="0" usemap="#LocalWorldInteraction_inherit__map" alt="Inheritance graph"/></div>
 <map name="LocalWorldInteraction_inherit__map" id="LocalWorldInteraction_inherit__map">
-<area shape="rect" id="node4" href="classNetworkedWorldInteraction.html" title="Manager for networked world interaction. " alt="" coords="108,755,308,1008"/>
-<area shape="rect" id="node2" href="classWorldInteractionInterface.html" title="Class to proxy all interactions with the world through. " alt="" coords="5,167,195,273"/>
-<area shape="rect" id="node3" href="classWorld.html" title="World. " alt="" coords="219,5,413,435"/>
+<area shape="rect" id="node4" href="classNetworkedWorldInteraction.html" title="Manager for networked world interaction. " alt="" coords="96,681,296,935"/>
+<area shape="rect" id="node2" href="classWorldInteractionInterface.html" title="Class to proxy all interactions with the world through. " alt="" coords="5,123,195,229"/>
+<area shape="rect" id="node3" href="classWorld.html" title="World. " alt="" coords="219,5,365,347"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -140,9 +140,9 @@ $(document).ready(function(){initNavTree('classLocalWorldInteraction.html','');}
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classLocalWorldInteraction__coll__graph.png" border="0" usemap="#LocalWorldInteraction_coll__map" alt="Collaboration graph"/></div>
 <map name="LocalWorldInteraction_coll__map" id="LocalWorldInteraction_coll__map">
-<area shape="rect" id="node2" href="classWorldInteractionInterface.html" title="Class to proxy all interactions with the world through. " alt="" coords="5,519,195,626"/>
-<area shape="rect" id="node3" href="classWorld.html" title="World. " alt="" coords="219,380,413,765"/>
-<area shape="rect" id="node4" href="classNoiseFunc.html" title="Noise Function Based on Perlin Noise. " alt="" coords="244,5,388,288"/>
+<area shape="rect" id="node2" href="classWorldInteractionInterface.html" title="Class to proxy all interactions with the world through. " alt="" coords="5,123,195,229"/>
+<area shape="rect" id="node3" href="classWorld.html" title="World. " alt="" coords="219,5,365,347"/>
+<area shape="rect" id="node4" href="classGenerator.html" title="{Generator\n|&#45; passes\l|+ Generator()\l+ ~Generator()\l+ Generator()\l+ operator=()\l+ addPass()\l+ execute()\l+ DefaultGenerator()\l}" alt="" coords="389,93,531,259"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -152,8 +152,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0d9657eb61d9318acf2eeb969b3c4b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fbe370d9c746ef3be4e5e0cb5378578"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalWorldInteraction.html#a4fbe370d9c746ef3be4e5e0cb5378578">LocalWorldInteraction</a> (std::string worldName)</td></tr>
 <tr class="separator:a4fbe370d9c746ef3be4e5e0cb5378578"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf8c3ee610ba923a2348437d0c2c6021"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalWorldInteraction.html#abf8c3ee610ba923a2348437d0c2c6021">loadWorld</a> ()</td></tr>
-<tr class="separator:abf8c3ee610ba923a2348437d0c2c6021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d4afe55a419bce1f26fd61e908a149"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalWorldInteraction.html#ab9d4afe55a419bce1f26fd61e908a149">loadWorld</a> (boost::shared_ptr&lt; <a class="el" href="classLogger.html">Logger</a> &gt; logger)</td></tr>
+<tr class="separator:ab9d4afe55a419bce1f26fd61e908a149"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab30bae82dc6f7438d73f5f4a5ae1583"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalWorldInteraction.html#aab30bae82dc6f7438d73f5f4a5ae1583">draw</a> (<a class="el" href="classWindow.html#a370ec54942433f58845f69ec8881a6d5">Window::window_ptr</a> window)</td></tr>
 <tr class="separator:aab30bae82dc6f7438d73f5f4a5ae1583"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2434c098080bbf322dc0af6817b44620"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalWorldInteraction.html#a2434c098080bbf322dc0af6817b44620">movePlayerToCoordinate</a> (int y, int x)</td></tr>
@@ -200,6 +200,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:aebf76983d9dc2b87c0de576527c90525"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2608809e92025cbdfa49400fa601cb6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalWorldInteraction.html#ab2608809e92025cbdfa49400fa601cb6">playerY</a></td></tr>
 <tr class="separator:ab2608809e92025cbdfa49400fa601cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dacb3e75aa5ed264f78dc7310f15f58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGenerator.html">Generator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalWorldInteraction.html#a2dacb3e75aa5ed264f78dc7310f15f58">generator</a></td></tr>
+<tr class="separator:a2dacb3e75aa5ed264f78dc7310f15f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classWorld"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classWorld')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classWorld.html">World</a></td></tr>
 <tr class="memitem:a999c2f69d4001e2ea671617748a05b03 inherit pro_attribs_classWorld"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a999c2f69d4001e2ea671617748a05b03">chunkHeight</a></td></tr>
 <tr class="separator:a999c2f69d4001e2ea671617748a05b03 inherit pro_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,12 +213,6 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a518dd91224f21362bba2ec397ef1eb29 inherit pro_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00dd47dfd18e1110a25f947caa726d1b inherit pro_attribs_classWorld"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a00dd47dfd18e1110a25f947caa726d1b">creationTimestamp</a></td></tr>
 <tr class="separator:a00dd47dfd18e1110a25f947caa726d1b inherit pro_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae97ed5c4852491cc91e2fbb1e165e8f1 inherit pro_attribs_classWorld"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNoiseFunc.html">NoiseFunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#ae97ed5c4852491cc91e2fbb1e165e8f1">elevationSkewNoise</a></td></tr>
-<tr class="separator:ae97ed5c4852491cc91e2fbb1e165e8f1 inherit pro_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee9c57a8b08f6bfa27335ce8f9ca0e09 inherit pro_attribs_classWorld"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNoiseFunc.html">NoiseFunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#aee9c57a8b08f6bfa27335ce8f9ca0e09">elevationNoise</a></td></tr>
-<tr class="separator:aee9c57a8b08f6bfa27335ce8f9ca0e09 inherit pro_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb37cf2db530a2d99c6e0828dac4826a inherit pro_attribs_classWorld"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNoiseFunc.html">NoiseFunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#abb37cf2db530a2d99c6e0828dac4826a">tileNoise</a></td></tr>
-<tr class="separator:abb37cf2db530a2d99c6e0828dac4826a inherit pro_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -228,12 +224,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:adbfffbc8da85a130e273414dca3e4d08 inherit pro_static_methods_classWorld"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#adbfffbc8da85a130e273414dca3e4d08">getWorldWidth</a> ()</td></tr>
 <tr class="separator:adbfffbc8da85a130e273414dca3e4d08 inherit pro_static_methods_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_attribs_classWorld"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classWorld')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="classWorld.html">World</a></td></tr>
-<tr class="memitem:ab29028a5114a84b1d2c2e28eafcc769d inherit pro_static_attribs_classWorld"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#ab29028a5114a84b1d2c2e28eafcc769d">elevationSkewNoiseSpread</a> = 55.0</td></tr>
-<tr class="separator:ab29028a5114a84b1d2c2e28eafcc769d inherit pro_static_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a5c19085cdf2a499e6497c8bbb2aac8 inherit pro_static_attribs_classWorld"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a8a5c19085cdf2a499e6497c8bbb2aac8">elevationNoiseSpread</a> = 20.0</td></tr>
-<tr class="separator:a8a5c19085cdf2a499e6497c8bbb2aac8 inherit pro_static_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae60f509cea81ca112604558707bec7a inherit pro_static_attribs_classWorld"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#aae60f509cea81ca112604558707bec7a">tileNoiseSpread</a> = 6.0</td></tr>
-<tr class="separator:aae60f509cea81ca112604558707bec7a inherit pro_static_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a548e244676fccbc1b5ffbdfc257a02d7 inherit pro_static_attribs_classWorld"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#a548e244676fccbc1b5ffbdfc257a02d7">worldHeight</a> = 0</td></tr>
 <tr class="separator:a548e244676fccbc1b5ffbdfc257a02d7 inherit pro_static_attribs_classWorld"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac86e8d117a04eec7800fdbca12f3fc4c inherit pro_static_attribs_classWorld"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#ac86e8d117a04eec7800fdbca12f3fc4c">worldWidth</a> = 0</td></tr>
@@ -242,7 +232,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manager for non-networked world interaction. </p>
 
-<p>Definition at line <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00013">13</a> of file <a class="el" href="LocalWorldInteraction_8hpp_source.html">LocalWorldInteraction.hpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00017">17</a> of file <a class="el" href="LocalWorldInteraction_8hpp_source.html">LocalWorldInteraction.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a0d9657eb61d9318acf2eeb969b3c4b48"></a>
 <div class="memitem">
@@ -259,7 +249,27 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00003">3</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00024">playerX</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00025">playerY</a>.</p>
+<p>References <a class="el" href="Generator_8cpp_source.html#l00031">Generator::DefaultGenerator()</a>, <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00031">generator</a>, <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00028">playerX</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00029">playerY</a>.</p>
+
+<p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classLocalWorldInteraction_a0d9657eb61d9318acf2eeb969b3c4b48_cgraph.png" border="0" usemap="#classLocalWorldInteraction_a0d9657eb61d9318acf2eeb969b3c4b48_cgraph" alt=""/></div>
+<map name="classLocalWorldInteraction_a0d9657eb61d9318acf2eeb969b3c4b48_cgraph" id="classLocalWorldInteraction_a0d9657eb61d9318acf2eeb969b3c4b48_cgraph">
+<area shape="rect" id="node2" href="classGenerator.html#ae622e04fa7b6c52a809c3ae3ee08e1c1" title="Generator::DefaultGenerator" alt="" coords="209,81,396,108"/>
+<area shape="rect" id="node3" href="classGenerator.html#ade3c9634cfb2f938c5e2b3ffafb801b2" title="Generator::addPass" alt="" coords="444,5,583,32"/>
+<area shape="rect" id="node4" href="classElevationPass.html#ac1415531c2382252216d4ccfc549e98b" title="ElevationPass::init" alt="" coords="448,56,579,83"/>
+<area shape="rect" id="node5" href="classTypePass.html#aaeae2b388d076d41d5f1a9f43e6fc6b0" title="TypePass::init" alt="" coords="460,107,567,133"/>
+<area shape="rect" id="node6" href="classCityPass.html#a054e2e23302fe8277a99782939e93ccd" title="CityPass::init" alt="" coords="463,157,564,184"/>
+<area shape="rect" id="node7" href="classWorldChunk.html#a69efb1c1bc62d8464cce367f29665f38" title="WorldChunk::getChunkHeight" alt="" coords="631,81,827,108"/>
+<area shape="rect" id="node8" href="classWorldChunk.html#af4bc6d0d18b023e5f1696afd918d03d3" title="WorldChunk::getChunkWidth" alt="" coords="633,132,825,159"/>
+<area shape="rect" id="node9" href="classWorld.html#aa0edc612bd3defdcde0593d75f20e0f3" title="World::getWorldHeight" alt="" coords="651,183,806,209"/>
+<area shape="rect" id="node10" href="classWorld.html#adbfffbc8da85a130e273414dca3e4d08" title="World::getWorldWidth" alt="" coords="653,233,804,260"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -277,9 +287,29 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00009">9</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00010">10</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00024">playerX</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00025">playerY</a>.</p>
+<p>References <a class="el" href="Generator_8cpp_source.html#l00031">Generator::DefaultGenerator()</a>, <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00031">generator</a>, <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00028">playerX</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00029">playerY</a>.</p>
+
+<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classLocalWorldInteraction_a4fbe370d9c746ef3be4e5e0cb5378578_cgraph.png" border="0" usemap="#classLocalWorldInteraction_a4fbe370d9c746ef3be4e5e0cb5378578_cgraph" alt=""/></div>
+<map name="classLocalWorldInteraction_a4fbe370d9c746ef3be4e5e0cb5378578_cgraph" id="classLocalWorldInteraction_a4fbe370d9c746ef3be4e5e0cb5378578_cgraph">
+<area shape="rect" id="node2" href="classGenerator.html#ae622e04fa7b6c52a809c3ae3ee08e1c1" title="Generator::DefaultGenerator" alt="" coords="209,81,396,108"/>
+<area shape="rect" id="node3" href="classGenerator.html#ade3c9634cfb2f938c5e2b3ffafb801b2" title="Generator::addPass" alt="" coords="444,5,583,32"/>
+<area shape="rect" id="node4" href="classElevationPass.html#ac1415531c2382252216d4ccfc549e98b" title="ElevationPass::init" alt="" coords="448,56,579,83"/>
+<area shape="rect" id="node5" href="classTypePass.html#aaeae2b388d076d41d5f1a9f43e6fc6b0" title="TypePass::init" alt="" coords="460,107,567,133"/>
+<area shape="rect" id="node6" href="classCityPass.html#a054e2e23302fe8277a99782939e93ccd" title="CityPass::init" alt="" coords="463,157,564,184"/>
+<area shape="rect" id="node7" href="classWorldChunk.html#a69efb1c1bc62d8464cce367f29665f38" title="WorldChunk::getChunkHeight" alt="" coords="631,81,827,108"/>
+<area shape="rect" id="node8" href="classWorldChunk.html#af4bc6d0d18b023e5f1696afd918d03d3" title="WorldChunk::getChunkWidth" alt="" coords="633,132,825,159"/>
+<area shape="rect" id="node9" href="classWorld.html#aa0edc612bd3defdcde0593d75f20e0f3" title="World::getWorldHeight" alt="" coords="651,183,806,209"/>
+<area shape="rect" id="node10" href="classWorld.html#adbfffbc8da85a130e273414dca3e4d08" title="World::getWorldWidth" alt="" coords="653,233,804,260"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -310,15 +340,15 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classNetworkedWorldInteraction.html#ab34d4c3bcf6b7ac6ff857b24e383ef21">NetworkedWorldInteraction</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00020">20</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00024">24</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
 
-<p>References <a class="el" href="World_8cpp_source.html#l00062">World::draw()</a>, <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00024">playerX</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00025">playerY</a>.</p>
+<p>References <a class="el" href="World_8cpp_source.html#l00062">World::draw()</a>, <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00028">playerX</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00029">playerY</a>.</p>
 
-<p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classLocalWorldInteraction_aab30bae82dc6f7438d73f5f4a5ae1583_cgraph.png" border="0" usemap="#classLocalWorldInteraction_aab30bae82dc6f7438d73f5f4a5ae1583_cgraph" alt=""/></div>
 <map name="classLocalWorldInteraction_aab30bae82dc6f7438d73f5f4a5ae1583_cgraph" id="classLocalWorldInteraction_aab30bae82dc6f7438d73f5f4a5ae1583_cgraph">
 <area shape="rect" id="node2" href="classWorld.html#a4acde969ab5fe94f635f14a6bc944354" title="World::draw" alt="" coords="201,13,293,39"/>
@@ -352,9 +382,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00055">55</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00059">59</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
 
-<p>References <a class="el" href="World_8hpp_source.html#l00079">World::chunks</a>.</p>
+<p>References <a class="el" href="World_8hpp_source.html#l00044">World::chunks</a>.</p>
 
 </div>
 </div>
@@ -427,17 +457,17 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00043">43</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00047">47</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
 
-<p>References <a class="el" href="World_8hpp_source.html#l00045">World::chunkHeight</a>, and <a class="el" href="World_8hpp_source.html#l00046">World::chunkWidth</a>.</p>
+<p>References <a class="el" href="World_8hpp_source.html#l00040">World::chunkHeight</a>, and <a class="el" href="World_8hpp_source.html#l00041">World::chunkWidth</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00032">playerCoordinatesToChunkCoordinates()</a>.</p>
+<p>Referenced by <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00036">playerCoordinatesToChunkCoordinates()</a>.</p>
 
-<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classLocalWorldInteraction_a7e533622fb19fe40f7b81b27f475a4e5_icgraph.png" border="0" usemap="#classLocalWorldInteraction_a7e533622fb19fe40f7b81b27f475a4e5_icgraph" alt=""/></div>
 <map name="classLocalWorldInteraction_a7e533622fb19fe40f7b81b27f475a4e5_icgraph" id="classLocalWorldInteraction_a7e533622fb19fe40f7b81b27f475a4e5_icgraph">
 <area shape="rect" id="node2" href="classLocalWorldInteraction.html#a0a1bfc3563f9271abc4642ea04e81f91" title="Convert the player&#39;s current global coordinates into a chunk, and coordinates in that chunk..." alt="" coords="311,5,569,47"/>
@@ -448,7 +478,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abf8c3ee610ba923a2348437d0c2c6021"></a>
+<a class="anchor" id="ab9d4afe55a419bce1f26fd61e908a149"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -458,7 +488,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void LocalWorldInteraction::loadWorld </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="classLogger.html">Logger</a> &gt;&#160;</td>
+          <td class="paramname"><em>logger</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -469,37 +500,26 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classWorldInteractionInterface.html#a5ea6a25f75827f5f1ff6d40c1f4d0412">WorldInteractionInterface</a>.</p>
+<p>Implements <a class="el" href="classWorldInteractionInterface.html#acbcb59b239479bbad5f1a5d13dbf315d">WorldInteractionInterface</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classNetworkedWorldInteraction.html#ac899a98641a9c1958154f4bde230c834">NetworkedWorldInteraction</a>.</p>
+<p>Reimplemented in <a class="el" href="classNetworkedWorldInteraction.html#af4d3bd94abaf40ca8b01675b6658cb86">NetworkedWorldInteraction</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00015">15</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00017">17</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
 
-<p>References <a class="el" href="World_8cpp_source.html#l00054">World::generateWorld()</a>.</p>
+<p>References <a class="el" href="Generator_8cpp_source.html#l00055">Generator::execute()</a>, <a class="el" href="World_8cpp_source.html#l00054">World::generateWorld()</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00031">generator</a>.</p>
 
-<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classLocalWorldInteraction_abf8c3ee610ba923a2348437d0c2c6021_cgraph.png" border="0" usemap="#classLocalWorldInteraction_abf8c3ee610ba923a2348437d0c2c6021_cgraph" alt=""/></div>
-<map name="classLocalWorldInteraction_abf8c3ee610ba923a2348437d0c2c6021_cgraph" id="classLocalWorldInteraction_abf8c3ee610ba923a2348437d0c2c6021_cgraph">
-<area shape="rect" id="node2" href="classWorld.html#a3d897d6953d0876aeab57d3ca951bea2" title="World::generateWorld" alt="" coords="201,95,349,121"/>
-<area shape="rect" id="node3" href="classWorld.html#a8d8b39ed30b8b25d17a633a27e1942c1" title="Spawn a chunk at x,y. " alt="" coords="397,95,537,121"/>
-<area shape="rect" id="node4" href="classWorld.html#a333864e5d6f9cc6bb8c57753ceb4e44f" title="Prepare Chunk. " alt="" coords="585,95,731,121"/>
-<area shape="rect" id="node5" href="classWorldChunk.html#a0428cb7066e8cb921b37a2ff7a2ba9dc" title="WorldChunk::generateChunk" alt="" coords="779,95,969,121"/>
-<area shape="rect" id="node6" href="classTile.html#a257eb65b1bc19fc77e2964b8325e2680" title="Random Spawn. " alt="" coords="1039,44,1174,71"/>
-<area shape="rect" id="node10" href="classNoiseFunc.html#a86b87334b40c251168a191bcf14ef761" title="Get the return of this noise function modified by gridPeriod. " alt="" coords="1051,95,1162,121"/>
-<area shape="rect" id="node17" href="classWorldChunk.html#ae882ecfc1d6319657f76f6036931a9e0" title="WorldChunk::elevationMap" alt="" coords="1017,145,1196,172"/>
-<area shape="rect" id="node7" href="classTile.html#a96ce55d5fcb4b12880531af2138ba6b2" title="Tile::init" alt="" coords="1474,5,1542,32"/>
-<area shape="rect" id="node9" href="classTile.html#aeeb5593bb6b75aae2edfcccbc84ab378" title="Tile::Tile" alt="" coords="1270,44,1342,71"/>
-<area shape="rect" id="node8" href="classColorPallete.html#a03f2ad8887f2628c4aa0c7b61729671b" title="ColorPallete::addColor" alt="" coords="1665,5,1818,32"/>
-<area shape="rect" id="node11" href="classNoiseFunc.html#aa87ed1ed47c8d7d2a9923c4ebe56488e" title="NoiseFunc::perlin" alt="" coords="1244,95,1368,121"/>
-<area shape="rect" id="node12" href="classNoiseFunc.html#a0398d2d39d683aeeb20f4adbdbe65252" title="NoiseFunc::dotGridGradient" alt="" coords="1416,81,1600,108"/>
-<area shape="rect" id="node16" href="classNoiseFunc.html#a59ace427bbd297980a4c767a68ebd17b" title="NoiseFunc::lerp" alt="" coords="1451,132,1565,159"/>
-<area shape="rect" id="node13" href="classNoiseFunc.html#a8605b20ed7a02c74cef4a77379725785" title="NoiseFunc::addGridGradient" alt="" coords="1648,81,1835,108"/>
-<area shape="rect" id="node14" href="classNoiseFunc.html#a6675a19eec4a812f3bac096cceae51a0" title="NoiseFunc::newRandPair" alt="" coords="1883,81,2053,108"/>
-<area shape="rect" id="node15" href="classNoiseFunc.html#a4403c8ac5fb7f4a309b14494005b5af5" title="NoiseFunc::newRand" alt="" coords="2101,81,2249,108"/>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classLocalWorldInteraction_ab9d4afe55a419bce1f26fd61e908a149_cgraph.png" border="0" usemap="#classLocalWorldInteraction_ab9d4afe55a419bce1f26fd61e908a149_cgraph" alt=""/></div>
+<map name="classLocalWorldInteraction_ab9d4afe55a419bce1f26fd61e908a149_cgraph" id="classLocalWorldInteraction_ab9d4afe55a419bce1f26fd61e908a149_cgraph">
+<area shape="rect" id="node2" href="classGenerator.html#a4f336e4fc0ba0b7f42e9fc2c37d16384" title="Generator::execute" alt="" coords="209,5,342,32"/>
+<area shape="rect" id="node3" href="classWorld.html#a3d897d6953d0876aeab57d3ca951bea2" title="World::generateWorld" alt="" coords="201,56,349,83"/>
+<area shape="rect" id="node4" href="classWorld.html#a8d8b39ed30b8b25d17a633a27e1942c1" title="Spawn a chunk at x,y. " alt="" coords="397,56,537,83"/>
+<area shape="rect" id="node5" href="classWorld.html#a333864e5d6f9cc6bb8c57753ceb4e44f" title="Prepare Chunk. " alt="" coords="585,56,731,83"/>
+<area shape="rect" id="node6" href="classWorldChunk.html#a7e1ba0dcd38f46a9c0309f1082904e87" title="WorldChunk::generateChunk" alt="" coords="779,56,969,83"/>
 </map>
 </div>
 </p>
@@ -542,9 +562,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classNetworkedWorldInteraction.html#a951bdc14887bba2797479057ab6080bd">NetworkedWorldInteraction</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00025">25</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00029">29</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00024">playerX</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00025">playerY</a>.</p>
+<p>References <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00028">playerX</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00029">playerY</a>.</p>
 
 </div>
 </div>
@@ -603,17 +623,17 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00032">32</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00036">36</a> of file <a class="el" href="LocalWorldInteraction_8cpp_source.html">LocalWorldInteraction.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00043">globalCoordinatesToChunkCoordinates()</a>, <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00024">playerX</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00025">playerY</a>.</p>
+<p>References <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00047">globalCoordinatesToChunkCoordinates()</a>, <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00028">playerX</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00029">playerY</a>.</p>
 
 <p>Referenced by <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00036">NetworkedWorldInteraction::movePlayerToCoordinate()</a>.</p>
 
-<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classLocalWorldInteraction_a0a1bfc3563f9271abc4642ea04e81f91_cgraph.png" border="0" usemap="#classLocalWorldInteraction_a0a1bfc3563f9271abc4642ea04e81f91_cgraph" alt=""/></div>
 <map name="classLocalWorldInteraction_a0a1bfc3563f9271abc4642ea04e81f91_cgraph" id="classLocalWorldInteraction_a0a1bfc3563f9271abc4642ea04e81f91_cgraph">
 <area shape="rect" id="node2" href="classLocalWorldInteraction.html#a7e533622fb19fe40f7b81b27f475a4e5" title="convert global coordinates to into a chunk, and coordinates in that chunk. " alt="" coords="312,5,569,47"/>
@@ -621,11 +641,11 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </p>
 
-<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classLocalWorldInteraction_a0a1bfc3563f9271abc4642ea04e81f91_icgraph.png" border="0" usemap="#classLocalWorldInteraction_a0a1bfc3563f9271abc4642ea04e81f91_icgraph" alt=""/></div>
 <map name="classLocalWorldInteraction_a0a1bfc3563f9271abc4642ea04e81f91_icgraph" id="classLocalWorldInteraction_a0a1bfc3563f9271abc4642ea04e81f91_icgraph">
 <area shape="rect" id="node2" href="classNetworkedWorldInteraction.html#a951bdc14887bba2797479057ab6080bd" title="NetworkedWorldInteraction\l::movePlayerToCoordinate" alt="" coords="312,5,492,47"/>
@@ -636,6 +656,30 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a2dacb3e75aa5ed264f78dc7310f15f58"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGenerator.html">Generator</a> LocalWorldInteraction::generator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00031">31</a> of file <a class="el" href="LocalWorldInteraction_8hpp_source.html">LocalWorldInteraction.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00017">loadWorld()</a>, and <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00003">LocalWorldInteraction()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aebf76983d9dc2b87c0de576527c90525"></a>
 <div class="memitem">
 <div class="memproto">
@@ -654,9 +698,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00024">24</a> of file <a class="el" href="LocalWorldInteraction_8hpp_source.html">LocalWorldInteraction.hpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00028">28</a> of file <a class="el" href="LocalWorldInteraction_8hpp_source.html">LocalWorldInteraction.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00020">draw()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00020">NetworkedWorldInteraction::draw()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00003">LocalWorldInteraction()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00025">movePlayerToCoordinate()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00036">NetworkedWorldInteraction::movePlayerToCoordinate()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00003">NetworkedWorldInteraction::NetworkedWorldInteraction()</a>, and <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00032">playerCoordinatesToChunkCoordinates()</a>.</p>
+<p>Referenced by <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00024">draw()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00020">NetworkedWorldInteraction::draw()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00003">LocalWorldInteraction()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00029">movePlayerToCoordinate()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00036">NetworkedWorldInteraction::movePlayerToCoordinate()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00003">NetworkedWorldInteraction::NetworkedWorldInteraction()</a>, and <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00036">playerCoordinatesToChunkCoordinates()</a>.</p>
 
 </div>
 </div>
@@ -678,9 +722,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00025">25</a> of file <a class="el" href="LocalWorldInteraction_8hpp_source.html">LocalWorldInteraction.hpp</a>.</p>
+<p>Definition at line <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00029">29</a> of file <a class="el" href="LocalWorldInteraction_8hpp_source.html">LocalWorldInteraction.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00020">draw()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00020">NetworkedWorldInteraction::draw()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00003">LocalWorldInteraction()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00025">movePlayerToCoordinate()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00036">NetworkedWorldInteraction::movePlayerToCoordinate()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00003">NetworkedWorldInteraction::NetworkedWorldInteraction()</a>, and <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00032">playerCoordinatesToChunkCoordinates()</a>.</p>
+<p>Referenced by <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00024">draw()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00020">NetworkedWorldInteraction::draw()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00003">LocalWorldInteraction()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00029">movePlayerToCoordinate()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00036">NetworkedWorldInteraction::movePlayerToCoordinate()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00003">NetworkedWorldInteraction::NetworkedWorldInteraction()</a>, and <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00036">playerCoordinatesToChunkCoordinates()</a>.</p>
 
 </div>
 </div>
@@ -694,7 +738,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classLocalWorldInteraction.html">LocalWorldInteraction</a></li>
-    <li class="footer">Generated on Fri Jul 21 2017 21:14:23 for Arbitrage Simulator by
+    <li class="footer">Generated on Sat Jul 22 2017 16:59:06 for Arbitrage Simulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

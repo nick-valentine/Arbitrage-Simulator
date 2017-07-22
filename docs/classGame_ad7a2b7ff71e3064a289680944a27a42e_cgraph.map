@@ -1,7 +1,7 @@
 <map id="Game::setup" name="Game::setup">
 <area shape="rect" id="node2" href="$classGameWindowLayout.html#aa405622f347239d28bdd49e2e562b88c" title="GameWindowLayout::addWindow" alt="" coords="151,124,369,151"/>
 <area shape="rect" id="node3" href="$classGame.html#ad2d16756f154ae7da7510b1c7bbcf6cc" title="Game::configure" alt="" coords="201,175,319,201"/>
-<area shape="rect" id="node14" href="$classWorldInteractionInterface.html#a5ea6a25f75827f5f1ff6d40c1f4d0412" title="WorldInteractionInterface\l::loadWorld" alt="" coords="176,226,344,267"/>
+<area shape="rect" id="node14" href="$classWorldInteractionInterface.html#acbcb59b239479bbad5f1a5d13dbf315d" title="WorldInteractionInterface\l::loadWorld" alt="" coords="176,226,344,267"/>
 <area shape="rect" id="node15" href="$classGameWindowLayout.html#a490a59780f8de2c6cad6a6b72ec028a3" title="GameWindowLayout::render" alt="" coords="167,292,353,319"/>
 <area shape="rect" id="node17" href="$classGameWindowLayout.html#a04f4a23eec82c45d000e252f426a241a" title="GameWindowLayout::setMain\lWindow" alt="" coords="161,343,359,385"/>
 <area shape="rect" id="node18" href="$classGameWindowLayout.html#a53d838ca33b4bdcbbed30060f9e61a44" title="GameWindowLayout::setSub\lWindow" alt="" coords="164,409,356,450"/>

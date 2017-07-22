@@ -1,0 +1,4 @@
+<map id="CityPass" name="CityPass">
+<area shape="rect" id="node2" href="$classAbstractPass.html" title="Abstract world pass. " alt="" coords="5,71,131,222"/>
+<area shape="rect" id="node3" href="$classNoiseFunc.html" title="Noise Function Based on Perlin Noise. " alt="" coords="155,5,299,288"/>
+</map>

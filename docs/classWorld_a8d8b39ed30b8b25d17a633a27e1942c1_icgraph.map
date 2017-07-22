@@ -1,4 +1,4 @@
 <map id="World::spawnChunk" name="World::spawnChunk">
 <area shape="rect" id="node2" href="$classWorld.html#a3d897d6953d0876aeab57d3ca951bea2" title="World::generateWorld" alt="" coords="193,13,341,39"/>
-<area shape="rect" id="node3" href="$classLocalWorldInteraction.html#abf8c3ee610ba923a2348437d0c2c6021" title="LocalWorldInteraction\l::loadWorld" alt="" coords="389,5,537,47"/>
+<area shape="rect" id="node3" href="$classLocalWorldInteraction.html#ab9d4afe55a419bce1f26fd61e908a149" title="LocalWorldInteraction\l::loadWorld" alt="" coords="389,5,537,47"/>
 </map>

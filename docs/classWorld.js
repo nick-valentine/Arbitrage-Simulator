@@ -17,13 +17,7 @@ var classWorld =
     [ "chunks", "classWorld.html#aff32affa449788597cd85434b8bcbd38", null ],
     [ "chunkWidth", "classWorld.html#a153d1e50db1cbd48412f3cc6933ea3dc", null ],
     [ "creationTimestamp", "classWorld.html#a00dd47dfd18e1110a25f947caa726d1b", null ],
-    [ "elevationNoise", "classWorld.html#aee9c57a8b08f6bfa27335ce8f9ca0e09", null ],
-    [ "elevationNoiseSpread", "classWorld.html#a8a5c19085cdf2a499e6497c8bbb2aac8", null ],
-    [ "elevationSkewNoise", "classWorld.html#ae97ed5c4852491cc91e2fbb1e165e8f1", null ],
-    [ "elevationSkewNoiseSpread", "classWorld.html#ab29028a5114a84b1d2c2e28eafcc769d", null ],
     [ "name", "classWorld.html#a518dd91224f21362bba2ec397ef1eb29", null ],
-    [ "tileNoise", "classWorld.html#abb37cf2db530a2d99c6e0828dac4826a", null ],
-    [ "tileNoiseSpread", "classWorld.html#aae60f509cea81ca112604558707bec7a", null ],
     [ "worldHeight", "classWorld.html#a548e244676fccbc1b5ffbdfc257a02d7", null ],
     [ "worldWidth", "classWorld.html#ac86e8d117a04eec7800fdbca12f3fc4c", null ]
 ];

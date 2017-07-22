@@ -1,0 +1,6 @@
+<map id="CityPass::init" name="CityPass::init">
+<area shape="rect" id="node2" href="$classWorldChunk.html#a69efb1c1bc62d8464cce367f29665f38" title="WorldChunk::getChunkHeight" alt="" coords="155,5,351,32"/>
+<area shape="rect" id="node3" href="$classWorldChunk.html#af4bc6d0d18b023e5f1696afd918d03d3" title="WorldChunk::getChunkWidth" alt="" coords="157,56,349,83"/>
+<area shape="rect" id="node4" href="$classWorld.html#aa0edc612bd3defdcde0593d75f20e0f3" title="World::getWorldHeight" alt="" coords="175,107,330,133"/>
+<area shape="rect" id="node5" href="$classWorld.html#adbfffbc8da85a130e273414dca3e4d08" title="World::getWorldWidth" alt="" coords="177,157,328,184"/>
+</map>

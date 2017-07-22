@@ -3,7 +3,7 @@
 <area shape="rect" id="node5" href="$classNetworkedWorldInteraction.html#a6721e294f1badeec39e3346d55680f77" title="NetworkedWorldInteraction\l::fetchChunk" alt="" coords="179,71,359,112"/>
 <area shape="rect" id="node7" href="$classServerSession.html#adc44562be2fb27c3cd5242503fe60bf9" title="ServerSession::sessionLoop" alt="" coords="175,137,363,163"/>
 <area shape="rect" id="node3" href="$classNetworkedWorldInteraction.html#a6e5a53fcae58f3ac994c6311a617ed9d" title="NetworkedWorldInteraction\l::handShake" alt="" coords="411,5,591,47"/>
-<area shape="rect" id="node4" href="$classNetworkedWorldInteraction.html#ac899a98641a9c1958154f4bde230c834" title="NetworkedWorldInteraction\l::loadWorld" alt="" coords="639,5,819,47"/>
+<area shape="rect" id="node4" href="$classNetworkedWorldInteraction.html#af4d3bd94abaf40ca8b01675b6658cb86" title="NetworkedWorldInteraction\l::loadWorld" alt="" coords="639,5,819,47"/>
 <area shape="rect" id="node6" href="$classNetworkedWorldInteraction.html#a951bdc14887bba2797479057ab6080bd" title="NetworkedWorldInteraction\l::movePlayerToCoordinate" alt="" coords="411,71,591,112"/>
 <area shape="rect" id="node8" href="$classServerSession.html#a9618739dcf123159134c03418f5d43d5" title="Launch thread to manage this session. " alt="" coords="434,137,567,163"/>
 <area shape="rect" id="node9" href="$classServer.html#a30362b937b125d27916cf595bfc4c1a7" title="Server::run" alt="" coords="685,137,772,163"/>

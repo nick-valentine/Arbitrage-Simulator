@@ -126,8 +126,8 @@ $(document).ready(function(){initNavTree('classWorldInteractionInterface.html','
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classWorldInteractionInterface__inherit__graph.png" border="0" usemap="#WorldInteractionInterface_inherit__map" alt="Inheritance graph"/></div>
 <map name="WorldInteractionInterface_inherit__map" id="WorldInteractionInterface_inherit__map">
-<area shape="rect" id="node2" href="classLocalWorldInteraction.html" title="Manager for non&#45;networked world interaction. " alt="" coords="5,160,196,384"/>
-<area shape="rect" id="node3" href="classNetworkedWorldInteraction.html" title="Manager for networked world interaction. " alt="" coords="67,432,267,685"/>
+<area shape="rect" id="node2" href="classLocalWorldInteraction.html" title="Manager for non&#45;networked world interaction. " alt="" coords="5,160,196,399"/>
+<area shape="rect" id="node3" href="classNetworkedWorldInteraction.html" title="Manager for networked world interaction. " alt="" coords="67,447,267,700"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -140,8 +140,8 @@ $(document).ready(function(){initNavTree('classWorldInteractionInterface.html','
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5ea6a25f75827f5f1ff6d40c1f4d0412"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorldInteractionInterface.html#a5ea6a25f75827f5f1ff6d40c1f4d0412">loadWorld</a> ()=0</td></tr>
-<tr class="separator:a5ea6a25f75827f5f1ff6d40c1f4d0412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbcb59b239479bbad5f1a5d13dbf315d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorldInteractionInterface.html#acbcb59b239479bbad5f1a5d13dbf315d">loadWorld</a> (boost::shared_ptr&lt; <a class="el" href="classLogger.html">Logger</a> &gt; logger)=0</td></tr>
+<tr class="separator:acbcb59b239479bbad5f1a5d13dbf315d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac06c2a9974ff1749af8fe71dbdfe7c98"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorldInteractionInterface.html#ac06c2a9974ff1749af8fe71dbdfe7c98">draw</a> (<a class="el" href="classWindow.html#a370ec54942433f58845f69ec8881a6d5">Window::window_ptr</a> window)=0</td></tr>
 <tr class="separator:ac06c2a9974ff1749af8fe71dbdfe7c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a275d3637a9886be9ea98cdafbdd6ae25"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorldInteractionInterface.html#a275d3637a9886be9ea98cdafbdd6ae25">movePlayerToCoordinate</a> (int y, int x)=0</td></tr>
@@ -151,7 +151,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Class to proxy all interactions with the world through. </p>
 <p>Proxy all world interactions through this class so that networked and local gameplay can use a common interface and only differ in which class they instantiate. </p>
 
-<p>Definition at line <a class="el" href="WorldInteractionInterface_8hpp_source.html#l00013">13</a> of file <a class="el" href="WorldInteractionInterface_8hpp_source.html">WorldInteractionInterface.hpp</a>.</p>
+<p>Definition at line <a class="el" href="WorldInteractionInterface_8hpp_source.html#l00017">17</a> of file <a class="el" href="WorldInteractionInterface_8hpp_source.html">WorldInteractionInterface.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ac06c2a9974ff1749af8fe71dbdfe7c98"></a>
 <div class="memitem">
@@ -195,7 +195,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5ea6a25f75827f5f1ff6d40c1f4d0412"></a>
+<a class="anchor" id="acbcb59b239479bbad5f1a5d13dbf315d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -205,7 +205,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void WorldInteractionInterface::loadWorld </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="classLogger.html">Logger</a> &gt;&#160;</td>
+          <td class="paramname"><em>logger</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -216,7 +217,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classNetworkedWorldInteraction.html#ac899a98641a9c1958154f4bde230c834">NetworkedWorldInteraction</a>, and <a class="el" href="classLocalWorldInteraction.html#abf8c3ee610ba923a2348437d0c2c6021">LocalWorldInteraction</a>.</p>
+<p>Implemented in <a class="el" href="classNetworkedWorldInteraction.html#af4d3bd94abaf40ca8b01675b6658cb86">NetworkedWorldInteraction</a>, and <a class="el" href="classLocalWorldInteraction.html#ab9d4afe55a419bce1f26fd61e908a149">LocalWorldInteraction</a>.</p>
 
 <p>Referenced by <a class="el" href="Game_8cpp_source.html#l00018">Game::setup()</a>.</p>
 
@@ -225,8 +226,8 @@ Public Member Functions</h2></td></tr>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classWorldInteractionInterface_a5ea6a25f75827f5f1ff6d40c1f4d0412_icgraph.png" border="0" usemap="#classWorldInteractionInterface_a5ea6a25f75827f5f1ff6d40c1f4d0412_icgraph" alt=""/></div>
-<map name="classWorldInteractionInterface_a5ea6a25f75827f5f1ff6d40c1f4d0412_icgraph" id="classWorldInteractionInterface_a5ea6a25f75827f5f1ff6d40c1f4d0412_icgraph">
+<div class="center"><img src="classWorldInteractionInterface_acbcb59b239479bbad5f1a5d13dbf315d_icgraph.png" border="0" usemap="#classWorldInteractionInterface_acbcb59b239479bbad5f1a5d13dbf315d_icgraph" alt=""/></div>
+<map name="classWorldInteractionInterface_acbcb59b239479bbad5f1a5d13dbf315d_icgraph" id="classWorldInteractionInterface_acbcb59b239479bbad5f1a5d13dbf315d_icgraph">
 <area shape="rect" id="node2" href="classGame.html#ad7a2b7ff71e3064a289680944a27a42e" title="Game::setup" alt="" coords="221,13,319,39"/>
 <area shape="rect" id="node3" href="game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="367,13,417,39"/>
 </map>
@@ -269,7 +270,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classNetworkedWorldInteraction.html#a951bdc14887bba2797479057ab6080bd">NetworkedWorldInteraction</a>, and <a class="el" href="classLocalWorldInteraction.html#a2434c098080bbf322dc0af6817b44620">LocalWorldInteraction</a>.</p>
 
-<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00043">Game::run()</a>.</p>
+<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00047">Game::run()</a>.</p>
 
 <p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -295,7 +296,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classWorldInteractionInterface.html">WorldInteractionInterface</a></li>
-    <li class="footer">Generated on Fri Jul 21 2017 21:14:23 for Arbitrage Simulator by
+    <li class="footer">Generated on Sat Jul 22 2017 16:59:06 for Arbitrage Simulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

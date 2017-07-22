@@ -1,16 +1,4 @@
 <map id="World::spawnChunk" name="World::spawnChunk">
-<area shape="rect" id="node2" href="$classWorld.html#a333864e5d6f9cc6bb8c57753ceb4e44f" title="Prepare Chunk. " alt="" coords="193,95,339,121"/>
-<area shape="rect" id="node3" href="$classWorldChunk.html#a0428cb7066e8cb921b37a2ff7a2ba9dc" title="WorldChunk::generateChunk" alt="" coords="387,95,577,121"/>
-<area shape="rect" id="node4" href="$classTile.html#a257eb65b1bc19fc77e2964b8325e2680" title="Random Spawn. " alt="" coords="647,44,782,71"/>
-<area shape="rect" id="node8" href="$classNoiseFunc.html#a86b87334b40c251168a191bcf14ef761" title="Get the return of this noise function modified by gridPeriod. " alt="" coords="659,95,770,121"/>
-<area shape="rect" id="node15" href="$classWorldChunk.html#ae882ecfc1d6319657f76f6036931a9e0" title="WorldChunk::elevationMap" alt="" coords="625,145,804,172"/>
-<area shape="rect" id="node5" href="$classTile.html#a96ce55d5fcb4b12880531af2138ba6b2" title="Tile::init" alt="" coords="1082,5,1150,32"/>
-<area shape="rect" id="node7" href="$classTile.html#aeeb5593bb6b75aae2edfcccbc84ab378" title="Tile::Tile" alt="" coords="878,44,950,71"/>
-<area shape="rect" id="node6" href="$classColorPallete.html#a03f2ad8887f2628c4aa0c7b61729671b" title="ColorPallete::addColor" alt="" coords="1273,5,1426,32"/>
-<area shape="rect" id="node9" href="$classNoiseFunc.html#aa87ed1ed47c8d7d2a9923c4ebe56488e" title="NoiseFunc::perlin" alt="" coords="852,95,976,121"/>
-<area shape="rect" id="node10" href="$classNoiseFunc.html#a0398d2d39d683aeeb20f4adbdbe65252" title="NoiseFunc::dotGridGradient" alt="" coords="1024,81,1208,108"/>
-<area shape="rect" id="node14" href="$classNoiseFunc.html#a59ace427bbd297980a4c767a68ebd17b" title="NoiseFunc::lerp" alt="" coords="1059,132,1173,159"/>
-<area shape="rect" id="node11" href="$classNoiseFunc.html#a8605b20ed7a02c74cef4a77379725785" title="NoiseFunc::addGridGradient" alt="" coords="1256,81,1443,108"/>
-<area shape="rect" id="node12" href="$classNoiseFunc.html#a6675a19eec4a812f3bac096cceae51a0" title="NoiseFunc::newRandPair" alt="" coords="1491,81,1661,108"/>
-<area shape="rect" id="node13" href="$classNoiseFunc.html#a4403c8ac5fb7f4a309b14494005b5af5" title="NoiseFunc::newRand" alt="" coords="1709,81,1857,108"/>
+<area shape="rect" id="node2" href="$classWorld.html#a333864e5d6f9cc6bb8c57753ceb4e44f" title="Prepare Chunk. " alt="" coords="193,5,339,32"/>
+<area shape="rect" id="node3" href="$classWorldChunk.html#a7e1ba0dcd38f46a9c0309f1082904e87" title="WorldChunk::generateChunk" alt="" coords="387,5,577,32"/>
 </map>

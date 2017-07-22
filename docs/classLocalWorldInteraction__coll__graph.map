@@ -1,5 +1,5 @@
 <map id="LocalWorldInteraction" name="LocalWorldInteraction">
-<area shape="rect" id="node2" href="$classWorldInteractionInterface.html" title="Class to proxy all interactions with the world through. " alt="" coords="5,519,195,626"/>
-<area shape="rect" id="node3" href="$classWorld.html" title="World. " alt="" coords="219,380,413,765"/>
-<area shape="rect" id="node4" href="$classNoiseFunc.html" title="Noise Function Based on Perlin Noise. " alt="" coords="244,5,388,288"/>
+<area shape="rect" id="node2" href="$classWorldInteractionInterface.html" title="Class to proxy all interactions with the world through. " alt="" coords="5,123,195,229"/>
+<area shape="rect" id="node3" href="$classWorld.html" title="World. " alt="" coords="219,5,365,347"/>
+<area shape="rect" id="node4" href="$classGenerator.html" title="{Generator\n|&#45; passes\l|+ Generator()\l+ ~Generator()\l+ Generator()\l+ operator=()\l+ addPass()\l+ execute()\l+ DefaultGenerator()\l}" alt="" coords="389,93,531,259"/>
 </map>

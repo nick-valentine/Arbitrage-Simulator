@@ -8,7 +8,7 @@ var classNetworkedWorldInteraction =
     [ "fetchChunk", "classNetworkedWorldInteraction.html#a6721e294f1badeec39e3346d55680f77", null ],
     [ "handShake", "classNetworkedWorldInteraction.html#a6e5a53fcae58f3ac994c6311a617ed9d", null ],
     [ "hasChunkLoaded", "classNetworkedWorldInteraction.html#a0d811bde458068af35bceffabcbe0ad3", null ],
-    [ "loadWorld", "classNetworkedWorldInteraction.html#ac899a98641a9c1958154f4bde230c834", null ],
+    [ "loadWorld", "classNetworkedWorldInteraction.html#af4d3bd94abaf40ca8b01675b6658cb86", null ],
     [ "login", "classNetworkedWorldInteraction.html#aeb516faf06a8fe474cc389ba7f48e125", null ],
     [ "movePlayerToCoordinate", "classNetworkedWorldInteraction.html#a951bdc14887bba2797479057ab6080bd", null ],
     [ "chunksLoaded", "classNetworkedWorldInteraction.html#aa0af811ace74f5dab3311ec8bef9742f", null ],

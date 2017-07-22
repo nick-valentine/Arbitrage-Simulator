@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['name',['name',['../classCity.html#afea8cd8800a8600fa54af37ac05bf177',1,'City::name()'],['../classPlayer.html#af9c920fabaafdeb7961a645315b521ff',1,'Player::name()'],['../classWorld.html#a518dd91224f21362bba2ec397ef1eb29',1,'World::name()']]],
+  ['name',['name',['../classCity.html#afea8cd8800a8600fa54af37ac05bf177',1,'City::name()'],['../classPlayer.html#af9c920fabaafdeb7961a645315b521ff',1,'Player::name()'],['../classWorld.html#a518dd91224f21362bba2ec397ef1eb29',1,'World::name()'],['../classCityPass.html#a5578523a3fcb4c33083e9b4ecfc22576',1,'CityPass::name()'],['../classElevationPass.html#a5804ec3453f034b65c298849bed86d40',1,'ElevationPass::name()'],['../classTypePass.html#a4c9b6cb23180a911375140e01888d38d',1,'TypePass::name()']]],
   ['network_5fmessage_5fdelimiter',['network_message_delimiter',['../namespaceGlobals.html#ab479cf9e9e67904c2371b0798cb26747',1,'Globals']]],
   ['networkedworldinteraction',['NetworkedWorldInteraction',['../classNetworkedWorldInteraction.html',1,'NetworkedWorldInteraction'],['../classNetworkedWorldInteraction.html#aeb62fc90317746434729b8e8266a2752',1,'NetworkedWorldInteraction::NetworkedWorldInteraction()']]],
   ['networkedworldinteraction_2ecpp',['NetworkedWorldInteraction.cpp',['../NetworkedWorldInteraction_8cpp.html',1,'']]],

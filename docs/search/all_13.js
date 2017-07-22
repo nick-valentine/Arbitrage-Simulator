@@ -18,6 +18,8 @@ var searchData=
   ['worldchunk',['WorldChunk',['../classWorldChunk.html',1,'WorldChunk'],['../classWorldChunk.html#a91bb3617decfca9f60c0db40e478e682',1,'WorldChunk::WorldChunk()'],['../classWorldChunk.html#a5e1a8c63a75d1c9c764a92ba39b9b931',1,'WorldChunk::WorldChunk(unsigned int top, unsigned int left)'],['../classWorldChunk.html#a2b8469a78d6b97490263836ddc1bac42',1,'WorldChunk::WorldChunk(std::stringstream *ss)']]],
   ['worldchunk_2ecpp',['WorldChunk.cpp',['../WorldChunk_8cpp.html',1,'']]],
   ['worldchunk_2ehpp',['WorldChunk.hpp',['../WorldChunk_8hpp.html',1,'']]],
+  ['worlddiff',['worldDiff',['../classCityPass.html#a99388b9a73b714560b2edfba735a00d7',1,'CityPass']]],
+  ['worldelevations',['worldElevations',['../classCityPass.html#a61397a46cc615bb2f36a567924f0d1b1',1,'CityPass']]],
   ['worldheight',['worldHeight',['../classWorld.html#a548e244676fccbc1b5ffbdfc257a02d7',1,'World']]],
   ['worldinteractioninterface',['WorldInteractionInterface',['../classWorldInteractionInterface.html',1,'']]],
   ['worldinteractioninterface_2ehpp',['WorldInteractionInterface.hpp',['../WorldInteractionInterface_8hpp.html',1,'']]],

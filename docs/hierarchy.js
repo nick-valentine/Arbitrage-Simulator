@@ -6,12 +6,18 @@ var hierarchy =
       [ "Tile", "classTile.html", null ],
       [ "WorldChunk", "classWorldChunk.html", null ]
     ] ],
+    [ "AbstractPass", "classAbstractPass.html", [
+      [ "CityPass", "classCityPass.html", null ],
+      [ "ElevationPass", "classElevationPass.html", null ],
+      [ "TypePass", "classTypePass.html", null ]
+    ] ],
     [ "Camera", "classCamera.html", null ],
     [ "ColorPallete", "classColorPallete.html", null ],
     [ "ConfigLoader", "classConfigLoader.html", null ],
     [ "Connection", "classConnection.html", null ],
     [ "Game", "classGame.html", null ],
     [ "GameWindowLayout", "classGameWindowLayout.html", null ],
+    [ "Generator", "classGenerator.html", null ],
     [ "Logger", "classLogger.html", [
       [ "BufferLogger", "classBufferLogger.html", null ],
       [ "ConsoleLogger", "classConsoleLogger.html", null ]

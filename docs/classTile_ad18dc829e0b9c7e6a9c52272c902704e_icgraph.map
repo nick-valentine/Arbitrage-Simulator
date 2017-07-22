@@ -1,0 +1,5 @@
+<map id="Tile::convertToCity" name="Tile::convertToCity">
+<area shape="rect" id="node2" href="$classCityPass.html#a139feae469db33416f284bcfe3abee05" title="CityPass::convertTileToCity" alt="" coords="187,5,373,32"/>
+<area shape="rect" id="node3" href="$classCityPass.html#a764cb6a87a116bd9b7c7a560aeffc2c9" title="CityPass::doPlace" alt="" coords="421,5,552,32"/>
+<area shape="rect" id="node4" href="$classCityPass.html#a612f86255ce1628553983bc331278e97" title="CityPass::doTile" alt="" coords="600,5,719,32"/>
+</map>

@@ -1,11 +1,5 @@
 var searchData=
 [
-  ['game_2ecpp',['Game.cpp',['../Game_8cpp.html',1,'(Global Namespace)'],['../game_8cpp.html',1,'(Global Namespace)']]],
-  ['game_2ehpp',['Game.hpp',['../Game_8hpp.html',1,'']]],
-  ['gamewindow_2ecpp',['GameWindow.cpp',['../GameWindow_8cpp.html',1,'']]],
-  ['gamewindow_2ehpp',['GameWindow.hpp',['../GameWindow_8hpp.html',1,'']]],
-  ['gamewindowlayout_2ecpp',['GameWindowLayout.cpp',['../GameWindowLayout_8cpp.html',1,'']]],
-  ['gamewindowlayout_2ehpp',['GameWindowLayout.hpp',['../GameWindowLayout_8hpp.html',1,'']]],
-  ['globals_2ehpp',['Globals.hpp',['../Globals_8hpp.html',1,'']]],
-  ['link_2etxt',['link.txt',['../game_8dir_2link_8txt.html',1,'']]]
+  ['feature_5ftests_2ec',['feature_tests.c',['../feature__tests_8c.html',1,'']]],
+  ['feature_5ftests_2ecxx',['feature_tests.cxx',['../feature__tests_8cxx.html',1,'']]]
 ];
