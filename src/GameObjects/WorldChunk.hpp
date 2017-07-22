@@ -59,7 +59,6 @@ private:
     static bool configured;
     static unsigned int chunk_height;
     static unsigned int chunk_width;
-    static int max_cities_per_chunk;
 
     //screen dimension maximums
     static int maxX;
