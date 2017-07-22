@@ -1,31 +1,20 @@
 #include "WorldGen/Pass/AbstractPass.hpp"
 
-std::vector< std::vector<WorldChunk> > AbstractPass::getChunks(World *world)
+void AbstractPass::execute(World *world)
 {
-    return world->chunks;
+    for (int i = 0; i < world->chunks.size(); ++i) {
+        for (int j = 0; j < world->chunks[i].size(); ++j) {
+            this->executeChunk(i, j, &world->chunks[i][j]);
+        }
+    }
+
 }
 
-void AbstractPass::setChunks(World *world, std::vector< std::vector<WorldChunk> > chunks)
+void AbstractPass::executeChunk(int top, int left, WorldChunk *chunk) 
 {
-    world->chunks = chunks;
-}
-
-unsigned int AbstractPass::getWorldHeight()
-{
-    return World::worldHeight;
-}
-
-unsigned int AbstractPass::getWorldWidth()
-{
-    return World::worldWidth;
-}
-
-int AbstractPass::getChunkHeight(World *world)
-{
-    return world->chunkHeight;
-}
-
-int AbstractPass::getChunkWidth(World *world)
-{
-    return world->chunkWidth;
+    for (int i = 0; i < chunk->tiles.size(); ++i) {
+        for (int j = 0; j < chunk->tiles[i].size(); ++j) {
+            this->doTile(i + top, j = left, &chunk->tiles[i][j]);
+        }
+    }
 }

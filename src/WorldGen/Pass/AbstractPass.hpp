@@ -13,17 +13,11 @@
 class AbstractPass 
 {
 public:
-    virtual void execute(World *world) = 0;
+    virtual void init(){};
+    virtual void execute(World *world);
 protected:
-    std::vector< std::vector<WorldChunk> > getChunks(World *world);
-    void setChunks(World *world, std::vector< std::vector<WorldChunk> > chunks);
-
-    unsigned int getWorldHeight();
-    unsigned int getWorldWidth();
-    int getChunkHeight(World *world);
-    int getChunkWidth(World *world);
-private:
-
+    virtual void executeChunk(int top, int left, WorldChunk *chunk);
+    virtual void doTile(int i, int j, Tile *tile) = 0;
 };
 
 #endif //ABSTRACT_PASS_HPP

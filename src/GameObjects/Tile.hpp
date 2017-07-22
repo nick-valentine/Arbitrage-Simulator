@@ -88,7 +88,8 @@ public:
 
     int getElevation() const;
     int getType() const;
-private:
+    void setType(float tileInput);
+
     static void init();
 
     static const int veryLargeMultiplyer = 1000000;

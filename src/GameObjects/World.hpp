@@ -20,7 +20,6 @@
  */
 class World
 {
-friend class AbstractPass;
 public:
     World();
     World(std::stringstream *ss);
@@ -36,7 +35,7 @@ public:
 
     static int getWorldHeight();
     static int getWorldWidth();
-protected:
+
     static constexpr float elevationSkewNoiseSpread = 55.0;
     static constexpr float elevationNoiseSpread = 20.0;
     static constexpr float tileNoiseSpread = 6.0;
@@ -84,6 +83,7 @@ protected:
     NoiseFunc elevationSkewNoise;
     NoiseFunc elevationNoise;
     NoiseFunc tileNoise;
+protected:
 };
 
 #endif //WORLD_HPP
