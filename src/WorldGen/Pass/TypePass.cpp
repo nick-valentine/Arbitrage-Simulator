@@ -9,3 +9,8 @@ void TypePass::doTile(int i, int j, Tile *tile)
 {
     tile->setType(this->typeNoise.get(i, j));
 }
+
+AbstractPass *TypePass::clone()
+{
+    return new TypePass(*this);
+}

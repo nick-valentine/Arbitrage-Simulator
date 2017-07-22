@@ -10,6 +10,8 @@ class ElevationPass : public AbstractPass
 public:
     void init();
     void doTile(int i, int j, Tile *tile);
+
+    AbstractPass *clone();
 private:
     float elevationMap(float input, float skew);
 

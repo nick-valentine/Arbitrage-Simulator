@@ -21,3 +21,8 @@ float ElevationPass::elevationMap(float input, float skew)
     x += x*skew;
     return x;
 }
+
+AbstractPass *ElevationPass::clone()
+{
+    return new ElevationPass(*this);
+}

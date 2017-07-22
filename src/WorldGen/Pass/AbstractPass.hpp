@@ -15,6 +15,8 @@ class AbstractPass
 public:
     virtual void init(){};
     virtual void execute(World *world);
+
+    virtual AbstractPass *clone() = 0;
 protected:
     virtual void executeChunk(int top, int left, WorldChunk *chunk);
     virtual void doTile(int i, int j, Tile *tile) = 0;
