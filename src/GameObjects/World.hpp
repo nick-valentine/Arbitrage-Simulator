@@ -36,10 +36,6 @@ public:
     static int getWorldHeight();
     static int getWorldWidth();
 
-    static constexpr float elevationSkewNoiseSpread = 55.0;
-    static constexpr float elevationNoiseSpread = 20.0;
-    static constexpr float tileNoiseSpread = 6.0;
-
     static unsigned int worldHeight;
     static unsigned int worldWidth;
     int chunkHeight;
@@ -79,10 +75,6 @@ public:
     std::vector< std::vector<WorldChunk> > chunks;
     std::string name;
     time_t creationTimestamp;
-    
-    NoiseFunc elevationSkewNoise;
-    NoiseFunc elevationNoise;
-    NoiseFunc tileNoise;
 protected:
 };
 
