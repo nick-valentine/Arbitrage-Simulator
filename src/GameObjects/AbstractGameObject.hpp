@@ -32,4 +32,5 @@ public:
      */
     virtual void toStringStream(std::stringstream *ss) = 0;
 };
+
 #endif //ABSTRACTGAMEOBJECT_HPP

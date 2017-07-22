@@ -2,6 +2,7 @@
 #define TYPE_PASS_HPP
 
 #include <string>
+#include <vector>
 
 #include "WorldGen/Pass/AbstractPass.hpp"
 
@@ -18,9 +19,12 @@ public:
 
     std::string getName();
 private:
+    static const int veryLargeMultiplyer = 1000000;
     const static std::string name;
 
     static constexpr float typeNoiseSpread = 20.0;
+
+    int typeMap(Tile *tile, float tileInput);
 
     NoiseFunc typeNoise;
 };

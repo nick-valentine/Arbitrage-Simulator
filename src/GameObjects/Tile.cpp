@@ -40,43 +40,6 @@ Tile::Tile(int type, int elevation)
     Tile::init();
 }
 
-void Tile::setElevation(float elevationInput)
-{
-    if(elevationInput == -1) {
-        this->myElevation = rand() % Tile::elevationMax; 
-        return;
-    } 
-    this->myElevation = abs(elevationInput * (float)Tile::elevationMax);
-}
-
-void Tile::setType(float tileInput)
-{
-    int spawn = -1;
-    std::vector<int> spawnsAllowedAtThisElevation;
-    for(int i = 0; i < Tile::allowedSpawnCount; ++i) {
-        unsigned int min = Tile::Tiles[Tile::AllowedSpawns[i]].elevationMin;
-        unsigned int max = Tile::Tiles[Tile::AllowedSpawns[i]].elevationMax;
-        if(this->myElevation >= min && this->myElevation <= max) {
-            spawnsAllowedAtThisElevation.push_back(AllowedSpawns[i]);
-        }
-    }
-    if(spawnsAllowedAtThisElevation.size() == 0) {
-        std::cout<<"ERROR: Can not spawn tile at elevation "<<this->myElevation<<std::endl;
-        exit(1);
-    }
-
-    if(tileInput == -1) {
-        spawn = spawnsAllowedAtThisElevation[rand() % spawnsAllowedAtThisElevation.size()];
-    } else {
-        float tileToSpawn = tileInput;
-        tileToSpawn *= Tile::veryLargeMultiplyer;
-        int indexToSpawn = abs((int)tileToSpawn);
-        indexToSpawn %= spawnsAllowedAtThisElevation.size();
-        spawn = spawnsAllowedAtThisElevation[indexToSpawn];
-    }
-    this->myType = spawn;
-}
-
 Tile::Tile(std::stringstream *ss)
 {
     this->fromStringStream(ss);
@@ -156,7 +119,18 @@ int Tile::getElevation() const
     return this->myElevation;
 }
 
+void Tile::setElevation(int elevationInput)
+{
+    this->myElevation = elevationInput;
+}
+
 int Tile::getType() const
 {
     return this->myType;
 }
+
+void Tile::setType(int tileInput)
+{
+    this->myType = tileInput;
+}
+

@@ -87,17 +87,19 @@ public:
     void drawAt(Window::window_ptr window, int top, int left, bool cull);
 
     int getElevation() const;
-    void setElevation(float elevationInput);
+    void setElevation(int elevationInput);
     int getType() const;
-    void setType(float tileInput);
+    void setType(int tileInput);
 
     static void init();
-private:
-    static const int veryLargeMultiplyer = 1000000;
+
     static const int elevationMax = 128;
     static const int TypeCount = 8;
     static const int allowedSpawnCount = 7;
     static const int allowedCityCount = 5;
+
+    static const int AllowedSpawns[allowedSpawnCount];
+    static const int TilesWhichMayHaveCities[allowedCityCount];
 
     struct TileType
     {
@@ -118,9 +120,6 @@ private:
         {}
     };
 
-    static const int AllowedSpawns[allowedSpawnCount];
-    static const int TilesWhichMayHaveCities[allowedCityCount];
-
     /**
      * Static array of TileType to work as a lookup map, tiles contain the
      * index of their own type to get all metadata about that type from this
@@ -128,6 +127,7 @@ private:
      */
     static const TileType Tiles[TypeCount]; 
 
+private:
     static ColorPallete tilePallete;
     static bool colorPalleteInitialized;
 

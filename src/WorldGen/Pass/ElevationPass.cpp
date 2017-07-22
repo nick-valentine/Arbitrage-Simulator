@@ -32,6 +32,6 @@ float ElevationPass::elevationMap(float input, float skew)
 {
     float x = 1.0f - pow(2.00f, -(0.75f) * (input + 0.90));
     x += x*skew;
-    return x;
+    return abs(x * (float)Tile::elevationMax);
 }
 

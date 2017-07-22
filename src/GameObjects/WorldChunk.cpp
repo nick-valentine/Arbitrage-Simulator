@@ -98,7 +98,6 @@ void WorldChunk::generateChunk()
     this->cities.clear();
     this->tiles.clear();
 
-    //@todo: base this off of a noise function rather than rand
     for(unsigned int i = 0; i < WorldChunk::chunk_height; ++i) {
         this->tiles.push_back(std::vector<Tile>());
         for( unsigned int j = 0; j < WorldChunk::chunk_width; ++j) {
@@ -109,6 +108,7 @@ void WorldChunk::generateChunk()
 //    int num_cities = rand() % WorldChunk::max_cities_per_chunk;
 
 //    //@todo: make sure no two cities spawn on or near eachother
+//    //@todo: add city spawn pass
 //    for(unsigned int i = 0; i < num_cities; ++i) {
 //        std::string cityName = 
 //            City::city_name_starts[rand() % City::city_name_starts.size()] 
