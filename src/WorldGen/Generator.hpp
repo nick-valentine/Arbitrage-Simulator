@@ -10,6 +10,7 @@
 
 #include "WorldGen/Pass/ElevationPass.hpp"
 #include "WorldGen/Pass/TypePass.hpp"
+#include "WorldGen/Pass/CityPass.hpp"
 
 class Generator
 {

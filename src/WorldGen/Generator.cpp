@@ -40,6 +40,10 @@ Generator Generator::DefaultGenerator()
     tp->init();
     gen.addPass(tp);
 
+    CityPass *cp = new CityPass();
+    cp->init();
+    gen.addPass(cp);
+
     return gen;
 }
 
