@@ -20,6 +20,7 @@
  */
 class World
 {
+friend class AbstractPass;
 public:
     World();
     World(std::stringstream *ss);
