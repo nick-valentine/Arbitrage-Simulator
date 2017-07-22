@@ -51,8 +51,7 @@ void Generator::addPass(AbstractPass *pass)
 void Generator::execute(World *world, boost::shared_ptr<Logger> logger)
 {
     for (int i = 0; i < this->passes.size(); ++i) {
-        logger->info("Executing Generator Pass");
-        logger->info(this->passes[i]->getName().c_str());
+        logger->info("Executing Generator Pass For %s", this->passes[i]->getName().c_str());
         this->passes[i]->execute(world, logger);
     }
     logger->info("Done executing compiler passes");

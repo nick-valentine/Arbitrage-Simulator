@@ -48,6 +48,9 @@ public:
     static unsigned int getChunkHeight();
     static int getMaxCitiesPerChunk();
 
+    std::vector<City> cities;
+    std::vector< std::vector<Tile> > tiles;
+private:
     static const std::string CityMarker;
     static const std::string MapMarker;
     static const int maxViewDistance = 10;
@@ -81,8 +84,6 @@ public:
 
     unsigned int top;
     unsigned int left;
-    std::vector<City> cities;
-    std::vector< std::vector<Tile> > tiles;
 };
 
 

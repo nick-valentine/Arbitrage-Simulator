@@ -87,11 +87,12 @@ public:
     void drawAt(Window::window_ptr window, int top, int left, bool cull);
 
     int getElevation() const;
+    void setElevation(float elevationInput);
     int getType() const;
     void setType(float tileInput);
 
     static void init();
-
+private:
     static const int veryLargeMultiplyer = 1000000;
     static const int elevationMax = 128;
     static const int TypeCount = 8;

@@ -10,9 +10,11 @@ void ElevationPass::init()
 
 void ElevationPass::doTile(int i, int j, Tile *tile)
 {
-    tile->myElevation = this->elevationMap(
-        elevationNoise.get(i, j),
-        elevationSkewNoise.get(i, j)
+    tile->setElevation(
+       this->elevationMap(
+            elevationNoise.get(i, j),
+            elevationSkewNoise.get(i, j)
+        )
     );
 }
 
