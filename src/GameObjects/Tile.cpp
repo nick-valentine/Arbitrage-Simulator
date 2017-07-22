@@ -12,14 +12,14 @@ const int Tile::TilesWhichMayHaveCities[Tile::allowedCityCount] =
 
 const Tile::TileType Tile::Tiles[Tile::TypeCount] = 
 { 
-    {'-', 6, 30, 60},  //plains
-    {'^', 2, 50, 128}, //mountains
-    {'#', 3, 0,  40},  //water
-    {'#', 4, 20, 40},  //swamps
-    {'C', 5, 0,  0},   //Cities
-    {'n', 6, 45, 80},  //Hills
-    {'_', 1, 20, 30},  //Deserts
-    {'T', 4, 45, 75}   //Forests
+    {'-', 6, 30, 60, 10},  //plains
+    {'^', 2, 50, 128, 5}, //mountains
+    {'#', 3, 0,  40, 10},  //water
+    {'#', 4, 20, 40, 2},  //swamps
+    {'C', 5, 0,  0, 0},   //Cities
+    {'n', 6, 45, 80, 8},  //Hills
+    {'_', 1, 20, 30, 7},  //Deserts
+    {'T', 4, 45, 75, 10}   //Forests
 };
 
 ColorPallete Tile::tilePallete = ColorPallete();
@@ -76,6 +76,21 @@ bool Tile::convertToCity()
         return true;
     }
     return false;
+}
+
+bool Tile::canConvertToCity()
+{
+    for(int i = 0; i < Tile::allowedCityCount; ++i) {
+        if(this->myType == Tile::TilesWhichMayHaveCities[i]) {
+            return true;
+        }
+    }
+    return false;
+}
+
+int Tile::getLivability()
+{
+    return Tile::Tiles[myType].livability;
 }
 
 void Tile::drawAt(Window::window_ptr window, int top, int left, bool cull)

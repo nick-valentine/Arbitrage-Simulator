@@ -56,7 +56,7 @@ void World::generateWorld()
     this->creationTimestamp = time(NULL);
 
     //spawning the bottom left chunk spawns all interim chunks.
-    this->spawnChunk(World::worldHeight, World::worldWidth);
+    this->spawnChunk(World::worldHeight - 1, World::worldWidth - 1);
 }
 
 void World::draw(Window::window_ptr window, int playerY, int playerX)

@@ -75,6 +75,15 @@ public:
     bool convertToCity();
 
     /**
+     * Check if this tile may be converted to a city
+     *
+     * @return bool If this tile can be converted to a city.
+     */
+    bool canConvertToCity();
+
+    int getLivability();
+
+    /**
      * Draw this tile.
      *
      * @param  Window::window_ptr window buffer to draw the tile on to
@@ -107,16 +116,19 @@ public:
         unsigned int colorPair;
         unsigned int elevationMin;
         unsigned int elevationMax;
+        unsigned int livability; // 0 - 10
 
         TileType(
             char tile, 
             unsigned int colorPair,
             unsigned int elevationMin,
-            unsigned int elevationMax
+            unsigned int elevationMax,
+            unsigned int livability
         ) : tile(tile), 
             colorPair(colorPair),
             elevationMin(elevationMin),
-            elevationMax(elevationMax)
+            elevationMax(elevationMax),
+            livability(livability)
         {}
     };
 

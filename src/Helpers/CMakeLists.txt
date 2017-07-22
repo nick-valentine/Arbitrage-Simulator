@@ -1,11 +1,13 @@
 set (SOURCES
     ${SOURCES}
     ${CMAKE_CURRENT_SOURCE_DIR}/String.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/Vector.cpp
     PARENT_SCOPE
 )
 set (HEADERS
     ${HEADERS}
     ${CMAKE_CURRENT_SOURCE_DIR}/String.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/Vector.hpp
     PARENT_SCOPE
 )
 
