@@ -1,8 +1,12 @@
 #ifndef WORLD_INTERACTION_INTERFACE
 #define WORLD_INTERACTION_INTERFACE
 
+#include <boost/shared_ptr.hpp>
+
 #include "GameObjects/World.hpp"
 #include "Window/Window.hpp"
+
+#include "Services/Logger/Logger.hpp"
 
 /**
  * Class to proxy all interactions with the world through.
@@ -13,7 +17,7 @@
 class WorldInteractionInterface
 {
 public:
-    virtual void loadWorld() = 0;
+    virtual void loadWorld(boost::shared_ptr<Logger> logger) = 0;
     virtual void draw(Window::window_ptr window) = 0;
     virtual void movePlayerToCoordinate(int y, int x) = 0;
 private:

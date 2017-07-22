@@ -75,6 +75,15 @@ public:
     bool convertToCity();
 
     /**
+     * Check if this tile may be converted to a city
+     *
+     * @return bool If this tile can be converted to a city.
+     */
+    bool canConvertToCity();
+
+    int getLivability();
+
+    /**
      * Draw this tile.
      *
      * @param  Window::window_ptr window buffer to draw the tile on to
@@ -87,15 +96,19 @@ public:
     void drawAt(Window::window_ptr window, int top, int left, bool cull);
 
     int getElevation() const;
+    void setElevation(int elevationInput);
     int getType() const;
-private:
+    void setType(int tileInput);
+
     static void init();
 
-    static const int veryLargeMultiplyer = 1000000;
     static const int elevationMax = 128;
     static const int TypeCount = 8;
     static const int allowedSpawnCount = 7;
     static const int allowedCityCount = 5;
+
+    static const int AllowedSpawns[allowedSpawnCount];
+    static const int TilesWhichMayHaveCities[allowedCityCount];
 
     struct TileType
     {
@@ -103,21 +116,21 @@ private:
         unsigned int colorPair;
         unsigned int elevationMin;
         unsigned int elevationMax;
+        unsigned int livability; // 0 - 10
 
         TileType(
             char tile, 
             unsigned int colorPair,
             unsigned int elevationMin,
-            unsigned int elevationMax
+            unsigned int elevationMax,
+            unsigned int livability
         ) : tile(tile), 
             colorPair(colorPair),
             elevationMin(elevationMin),
-            elevationMax(elevationMax)
+            elevationMax(elevationMax),
+            livability(livability)
         {}
     };
-
-    static const int AllowedSpawns[allowedSpawnCount];
-    static const int TilesWhichMayHaveCities[allowedCityCount];
 
     /**
      * Static array of TileType to work as a lookup map, tiles contain the
@@ -126,6 +139,7 @@ private:
      */
     static const TileType Tiles[TypeCount]; 
 
+private:
     static ColorPallete tilePallete;
     static bool colorPalleteInitialized;
 

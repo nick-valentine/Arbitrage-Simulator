@@ -10,6 +10,7 @@
 #include <boost/lexical_cast.hpp>
 #include <vector>
 #include <utility>
+#include <boost/shared_ptr.hpp>
 
 #include "ConfigLoader.hpp"
 #include "GameObjects/World.hpp"
@@ -18,6 +19,7 @@
 #include "Window/Window.hpp"
 #include "Services/WorldInteraction/LocalWorldInteraction.hpp"
 #include "Services/WorldInteraction/WorldInteractionInterface.hpp"
+#include "Services/Logger/Logger.hpp"
 
 using boost::asio::ip::tcp;
 
@@ -35,7 +37,7 @@ class NetworkedWorldInteraction : virtual public WorldInteractionInterface, priv
 public:
     NetworkedWorldInteraction(std::string server, std::string port);
 
-    void loadWorld();
+    void loadWorld(boost::shared_ptr<Logger> logger);
     void draw(Window::window_ptr window);
     void draw(Window::window_ptr window, int playerY, int playerX);
     void movePlayerToCoordinate(int y, int x);

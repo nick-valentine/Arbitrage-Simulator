@@ -11,7 +11,6 @@ std::map<std::string, void (*)(WorldChunk *self, std::stringstream *ss)> WorldCh
 bool WorldChunk::configured = false;
 unsigned int WorldChunk::chunk_height = 0;
 unsigned int WorldChunk::chunk_width = 0;
-int WorldChunk::max_cities_per_chunk = 0;
 
 int WorldChunk::maxY = 0;
 int WorldChunk::maxX = 0;
@@ -50,7 +49,6 @@ void WorldChunk::configure()
 {
     WorldChunk::chunk_height = ConfigLoader::getIntOption("chunk_height", 30);
     WorldChunk::chunk_width = ConfigLoader::getIntOption("chunk_width", 30);
-    WorldChunk::max_cities_per_chunk = ConfigLoader::getIntOption("max_cities_per_chunk", 5);
     WorldChunk::configured = true;
 }
 
@@ -93,46 +91,18 @@ void WorldChunk::toStringStream(std::stringstream *ss)
     }
 }
 
-void WorldChunk::generateChunk(
-    NoiseFunc *tileNoise, 
-    NoiseFunc *elevationNoise, 
-    NoiseFunc *elevationSkewNoise
-)
+void WorldChunk::generateChunk()
 {
     this->cities.clear();
     this->tiles.clear();
 
-    //@todo: base this off of a noise function rather than rand
     for(unsigned int i = 0; i < WorldChunk::chunk_height; ++i) {
         this->tiles.push_back(std::vector<Tile>());
         for( unsigned int j = 0; j < WorldChunk::chunk_width; ++j) {
-            this->tiles[i].push_back(Tile::randomSpawn(
-                tileNoise->get(this->top + i, this->left + j),
-                this->elevationMap(
-                    elevationNoise->get(this->top + i, this->left + j), 
-                    elevationSkewNoise->get(this->top + i, this->left + j)
-                )
-            )); 
+            this->tiles[i].push_back(Tile(0, 0)); 
         }
     }
 
-    int num_cities = rand() % WorldChunk::max_cities_per_chunk;
-
-    //@todo: make sure no two cities spawn on or near eachother
-    for(unsigned int i = 0; i < num_cities; ++i) {
-        std::string cityName = 
-            City::city_name_starts[rand() % City::city_name_starts.size()] 
-            + City::city_name_ends[rand() % City::city_name_ends.size()]
-        ;
-        this->cities.push_back(City(cityName, rand() % WorldChunk::chunk_height, rand() % WorldChunk::chunk_width));
-    }
-
-    for(unsigned int i = 0;  i < cities.size(); ++i) {
-        unsigned int x, y;
-        x = cities[i].getPosX();
-        y = cities[i].getPosY();
-       tiles[y][x].convertToCity(); 
-    }
 }
 
 void WorldChunk::spawnCity(WorldChunk *self, std::stringstream *ss)
@@ -184,6 +154,7 @@ bool WorldChunk::doCullTile(
     if(distance < WorldChunk::maxViewDistance) {
         return false;
     } else {
+    //    return true;
         return true;
     }
 }
@@ -259,13 +230,6 @@ bool WorldChunk::doCullTile(
 //    }
 //}
 
-float WorldChunk::elevationMap(float input, float skew)
-{
-    float x = 1.0f - pow(2.00f, -(0.75f) * (input + 0.90));
-    x += x*skew;
-    return x;
-}
-
 unsigned int WorldChunk::getChunkWidth()
 {
     return WorldChunk::chunk_width;
@@ -276,7 +240,3 @@ unsigned int WorldChunk::getChunkHeight()
     return WorldChunk::chunk_height;
 }
 
-int WorldChunk::getMaxCitiesPerChunk()
-{
-    return WorldChunk::max_cities_per_chunk;
-}

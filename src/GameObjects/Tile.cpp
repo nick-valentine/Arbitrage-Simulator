@@ -12,14 +12,14 @@ const int Tile::TilesWhichMayHaveCities[Tile::allowedCityCount] =
 
 const Tile::TileType Tile::Tiles[Tile::TypeCount] = 
 { 
-    {'-', 6, 30, 60},  //plains
-    {'^', 2, 50, 128}, //mountains
-    {'#', 3, 0,  40},  //water
-    {'#', 4, 20, 40},  //swamps
-    {'C', 5, 0,  0},   //Cities
-    {'n', 6, 45, 80},  //Hills
-    {'_', 1, 20, 30},  //Deserts
-    {'T', 4, 45, 75}   //Forests
+    {'-', 6, 30, 60, 10},  //plains
+    {'^', 2, 50, 128, 5}, //mountains
+    {'#', 3, 0,  40, 10},  //water
+    {'#', 4, 20, 40, 2},  //swamps
+    {'C', 5, 0,  0, 0},   //Cities
+    {'n', 6, 45, 80, 8},  //Hills
+    {'_', 1, 20, 30, 7},  //Deserts
+    {'T', 4, 45, 75, 10}   //Forests
 };
 
 ColorPallete Tile::tilePallete = ColorPallete();
@@ -38,44 +38,6 @@ Tile::Tile(int type, int elevation)
     this->myElevation = elevation;
     this->hasBeenVisible = false;
     Tile::init();
-}
-
-Tile Tile::randomSpawn(float tileInput, float elevationInput)
-{
-    Tile::init();
-    int spawn = -1;
-    int elevation = -1;
-    
-    if(elevationInput == -1) {
-        elevation = rand() % Tile::elevationMax; 
-    } else {
-        elevation = abs(elevationInput * (float)Tile::elevationMax);
-    }
-    
-    std::vector<int> spawnsAllowedAtThisElevation;
-    for(int i = 0; i < Tile::allowedSpawnCount; ++i) {
-        unsigned int min = Tile::Tiles[Tile::AllowedSpawns[i]].elevationMin;
-        unsigned int max = Tile::Tiles[Tile::AllowedSpawns[i]].elevationMax;
-        if(elevation >= min && elevation <= max) {
-            spawnsAllowedAtThisElevation.push_back(AllowedSpawns[i]);
-        }
-    }
-    if(spawnsAllowedAtThisElevation.size() == 0) {
-        std::cout<<"ERROR: Can not spawn tile at elevation "<<elevation<<std::endl;
-        exit(1);
-    }
-
-    if(tileInput == -1) {
-        spawn = spawnsAllowedAtThisElevation[rand() % spawnsAllowedAtThisElevation.size()];
-    } else {
-        float tileToSpawn = tileInput;
-        tileToSpawn *= Tile::veryLargeMultiplyer;
-        int indexToSpawn = abs((int)tileToSpawn);
-        indexToSpawn %= spawnsAllowedAtThisElevation.size();
-        spawn = spawnsAllowedAtThisElevation[indexToSpawn];
-    }
-    
-    return Tile(spawn, elevation);  
 }
 
 Tile::Tile(std::stringstream *ss)
@@ -114,6 +76,21 @@ bool Tile::convertToCity()
         return true;
     }
     return false;
+}
+
+bool Tile::canConvertToCity()
+{
+    for(int i = 0; i < Tile::allowedCityCount; ++i) {
+        if(this->myType == Tile::TilesWhichMayHaveCities[i]) {
+            return true;
+        }
+    }
+    return false;
+}
+
+int Tile::getLivability()
+{
+    return Tile::Tiles[myType].livability;
 }
 
 void Tile::drawAt(Window::window_ptr window, int top, int left, bool cull)
@@ -157,7 +134,18 @@ int Tile::getElevation() const
     return this->myElevation;
 }
 
+void Tile::setElevation(int elevationInput)
+{
+    this->myElevation = elevationInput;
+}
+
 int Tile::getType() const
 {
     return this->myType;
 }
+
+void Tile::setType(int tileInput)
+{
+    this->myType = tileInput;
+}
+

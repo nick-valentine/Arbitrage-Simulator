@@ -56,7 +56,7 @@ void World::generateWorld()
     this->creationTimestamp = time(NULL);
 
     //spawning the bottom left chunk spawns all interim chunks.
-    this->spawnChunk(World::worldHeight, World::worldWidth);
+    this->spawnChunk(World::worldHeight - 1, World::worldWidth - 1);
 }
 
 void World::draw(Window::window_ptr window, int playerY, int playerX)
@@ -70,10 +70,6 @@ void World::draw(Window::window_ptr window, int playerY, int playerX)
 
 void World::init()
 {
-    this->elevationSkewNoise = NoiseFunc(World::elevationSkewNoiseSpread);
-    this->elevationNoise = NoiseFunc(World::elevationNoiseSpread);
-    this->tileNoise = NoiseFunc(World::tileNoiseSpread);
-
     this->chunkHeight = WorldChunk::getChunkHeight();
     this->chunkWidth = WorldChunk::getChunkWidth();
 }
@@ -103,7 +99,7 @@ void World::spawnChunk(int y, int x)
 WorldChunk World::prepareChunk(int y, int x)
 {
     WorldChunk temp(y, x);
-    temp.generateChunk(&this->tileNoise, &this->elevationNoise, &this->elevationSkewNoise);
+    temp.generateChunk();
     return temp;
 }
 

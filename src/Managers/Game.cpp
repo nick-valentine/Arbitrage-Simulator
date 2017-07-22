@@ -35,22 +35,25 @@ int Game::setup()
 
     this->player = Player("Bob", 0, 0);
 
-    this->worldProxy->loadWorld();
+    this->logger = boost::shared_ptr<Logger>(
+        boost::dynamic_pointer_cast<ConsoleWindow>(this->consoleWindow)->getLogger()
+    );
+
+    this->worldProxy->loadWorld(this->logger);
 
     return 0;
 }
 
 int Game::run()
 {
-    Logger *logger = boost::dynamic_pointer_cast<ConsoleWindow>(this->consoleWindow)->getLogger();
     refresh();
-    logger->info("Game Starting");
+    this->logger->info("Game Starting");
 
     int height, width;
 
     unsigned int input = 0;
     while(true) {
-        logger->info("Game Ticking");
+        this->logger->info("Game Ticking");
         int pos_x, pos_y;
         player.getYX(pos_y, pos_x);
 

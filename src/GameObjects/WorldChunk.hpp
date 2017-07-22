@@ -40,17 +40,16 @@ public:
     void fromStringStream(std::stringstream *ss);
     void toStringStream(std::stringstream *ss);
 
-    void generateChunk(
-        NoiseFunc *tileNoise, 
-        NoiseFunc *elevationNoise, 
-        NoiseFunc *elevationSkewNoise
-    );
+    void generateChunk();
 
     void draw(Window::window_ptr window, int playerY, int playerX);
 
     static unsigned int getChunkWidth();
     static unsigned int getChunkHeight();
     static int getMaxCitiesPerChunk();
+
+    std::vector<City> cities;
+    std::vector< std::vector<Tile> > tiles;
 private:
     static const std::string CityMarker;
     static const std::string MapMarker;
@@ -60,7 +59,6 @@ private:
     static bool configured;
     static unsigned int chunk_height;
     static unsigned int chunk_width;
-    static int max_cities_per_chunk;
 
     //screen dimension maximums
     static int maxX;
@@ -81,12 +79,10 @@ private:
 
     void organizeTiles(std::vector<Tile> tiles);
 
-    float elevationMap(float input, float skew);
+//    float elevationMap(float input, float skew);
 
     unsigned int top;
     unsigned int left;
-    std::vector<City> cities;
-    std::vector< std::vector<Tile> > tiles;
 };
 
 
