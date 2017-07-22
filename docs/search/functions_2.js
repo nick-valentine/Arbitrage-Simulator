@@ -7,6 +7,7 @@ var searchData=
   ['cleanupsessions',['cleanupSessions',['../classServer.html#a0b609eb0fc5082c2cd086446ae7342d5',1,'Server']]],
   ['clear',['clear',['../classCursesWindow.html#a1b22fdef6622870e5caa7408597c1191',1,'CursesWindow::clear()'],['../classGameWindow.html#afeef7d049b4838c1c112c2be09fe1cd1',1,'GameWindow::clear()'],['../classWindow.html#ab3914a3846297c08fe8aa8cd724c8fc8',1,'Window::clear()']]],
   ['close',['close',['../classConnection.html#aea9f9d78e2b92747d4e4575ccb97361e',1,'Connection']]],
+  ['cmake_5fminimum_5frequired',['cmake_minimum_required',['../CMakeLists_8txt.html#abcfa5fba40dbff8a1457b66fe71e6a50',1,'CMakeLists.txt']]],
   ['colorpallete',['ColorPallete',['../classColorPallete.html#af7e78a4fedd5269ad24da8412fdce6bd',1,'ColorPallete']]],
   ['configloader',['ConfigLoader',['../classConfigLoader.html#a607f9ae08faeb07203f0c83deb2f1411',1,'ConfigLoader']]],
   ['configure',['configure',['../classWorld.html#adf1ca48fa67ae65fcfddf24bddcaf1c6',1,'World::configure()'],['../classWorldChunk.html#ae67bd7d234bca44740a3418b4a00e64f',1,'WorldChunk::configure()'],['../classGame.html#ad2d16756f154ae7da7510b1c7bbcf6cc',1,'Game::configure()'],['../classServer.html#a011fa4233b24eb0397524c33cb6ea73f',1,'Server::configure()'],['../classLogger.html#a9ff4ec284aaf984a5ea07d2175e18a31',1,'Logger::configure()'],['../classNetworkedWorldInteraction.html#a4dc0bf5364af285ebfe21d0f06f53c02',1,'NetworkedWorldInteraction::configure()']]],

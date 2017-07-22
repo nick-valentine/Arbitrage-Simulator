@@ -13,7 +13,7 @@ var classWindow =
     [ "move", "classWindow.html#a93d8bdf7f6bec1adfdc0ecff8d45c6d4", null ],
     [ "put", "classWindow.html#a24e218b3dbdc593f5dad66bc1fce9f35", null ],
     [ "put", "classWindow.html#abe6694c4f159a9695ff87e6ebad23c15", null ],
-    [ "putstr", "classWindow.html#a6cb74ba4c768430c81dfb11b5c0ff94a", null ],
+    [ "putstr", "classWindow.html#a4c680fe0d99ad1a1f0b463af62fb3e99", null ],
     [ "render", "classWindow.html#a9038f8e00729b82742f6e0574f44a55d", null ],
     [ "resize", "classWindow.html#a56d04c996546ee811ecacc9dc1c6a5c2", null ]
 ];

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Trade App: ConsoleLogger Class Reference</title>
+<title>Arbitrage Simulator: ConsoleLogger Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Trade App
+   <div id="projectname">Arbitrage Simulator
    </div>
    <div id="projectbrief">A simple game for trading fictional things.</div>
   </td>
@@ -124,7 +124,7 @@ $(document).ready(function(){initNavTree('classConsoleLogger.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classConsoleLogger__inherit__graph.png" border="0" usemap="#ConsoleLogger_inherit__map" alt="Inheritance graph"/></div>
 <map name="ConsoleLogger_inherit__map" id="ConsoleLogger_inherit__map">
-<area shape="rect" id="node2" href="classLogger.html" title="{Logger\n|# logLevel\l|+ ~Logger()\l+ debug()\l+ info()\l+ warn()\l+ error()\l+ log()\l+ configure()\l}" alt="" coords="27,5,121,171"/>
+<area shape="rect" id="node2" href="classLogger.html" title="{Logger\n|# levelStrings\l# logLevel\l|+ ~Logger()\l+ debug()\l+ info()\l+ warn()\l+ error()\l+ log()\l+ configure()\l# format_string()\l# get_time()\l}" alt="" coords="15,5,133,215"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -134,7 +134,7 @@ $(document).ready(function(){initNavTree('classConsoleLogger.html','');});
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classConsoleLogger__coll__graph.png" border="0" usemap="#ConsoleLogger_coll__map" alt="Collaboration graph"/></div>
 <map name="ConsoleLogger_coll__map" id="ConsoleLogger_coll__map">
-<area shape="rect" id="node2" href="classLogger.html" title="{Logger\n|# logLevel\l|+ ~Logger()\l+ debug()\l+ info()\l+ warn()\l+ error()\l+ log()\l+ configure()\l}" alt="" coords="27,5,121,171"/>
+<area shape="rect" id="node2" href="classLogger.html" title="{Logger\n|# levelStrings\l# logLevel\l|+ ~Logger()\l+ debug()\l+ info()\l+ warn()\l+ error()\l+ log()\l+ configure()\l# format_string()\l# get_time()\l}" alt="" coords="15,5,133,215"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -162,6 +162,11 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ac10de4719bfdd1352d900647b61663f7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleLogger.html#ac10de4719bfdd1352d900647b61663f7">print</a> (<a class="el" href="classLogger.html#ac744681e23720966b5f430ec2060da36">Logger::LogLevel</a> level, const char *fmt, va_list args)</td></tr>
 <tr class="separator:ac10de4719bfdd1352d900647b61663f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classLogger"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classLogger')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classLogger.html">Logger</a></td></tr>
+<tr class="memitem:a36ab56b064010383de9e1c215d430795 inherit pro_methods_classLogger"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#a36ab56b064010383de9e1c215d430795">format_string</a> (<a class="el" href="classLogger.html#ac744681e23720966b5f430ec2060da36">LogLevel</a> level, const char *fmt, va_list args)</td></tr>
+<tr class="separator:a36ab56b064010383de9e1c215d430795 inherit pro_methods_classLogger"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e3e8fd746af1d93cffa94bc4e7089a5 inherit pro_methods_classLogger"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#a6e3e8fd746af1d93cffa94bc4e7089a5">get_time</a> ()</td></tr>
+<tr class="separator:a6e3e8fd746af1d93cffa94bc4e7089a5 inherit pro_methods_classLogger"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -180,6 +185,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a9ff4ec284aaf984a5ea07d2175e18a31 inherit pub_static_methods_classLogger"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#a9ff4ec284aaf984a5ea07d2175e18a31">configure</a> ()</td></tr>
 <tr class="separator:a9ff4ec284aaf984a5ea07d2175e18a31 inherit pub_static_methods_classLogger"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_attribs_classLogger"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classLogger')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="classLogger.html">Logger</a></td></tr>
+<tr class="memitem:a5fb65952088db67f69451235b9de2615 inherit pro_static_attribs_classLogger"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#a5fb65952088db67f69451235b9de2615">levelStrings</a> [4]</td></tr>
+<tr class="separator:a5fb65952088db67f69451235b9de2615 inherit pro_static_attribs_classLogger"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55b0f1a3f0a66235d982890388481cc9 inherit pro_static_attribs_classLogger"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#a55b0f1a3f0a66235d982890388481cc9">logLevel</a> = 0</td></tr>
 <tr class="separator:a55b0f1a3f0a66235d982890388481cc9 inherit pro_static_attribs_classLogger"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -266,7 +273,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ConsoleLogger_8cpp_source.html#l00013">13</a> of file <a class="el" href="ConsoleLogger_8cpp_source.html">ConsoleLogger.cpp</a>.</p>
 
-<p>References <a class="el" href="Logger_8hpp_source.html#l00015">Logger::DEBUG</a>, and <a class="el" href="ConsoleLogger_8cpp_source.html#l00054">print()</a>.</p>
+<p>References <a class="el" href="Logger_8hpp_source.html#l00017">Logger::DEBUG</a>, and <a class="el" href="ConsoleLogger_8cpp_source.html#l00054">print()</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -276,6 +283,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="center"><img src="classConsoleLogger_accf2c514d50faca4d5d5d9b1246925a1_cgraph.png" border="0" usemap="#classConsoleLogger_accf2c514d50faca4d5d5d9b1246925a1_cgraph" alt=""/></div>
 <map name="classConsoleLogger_accf2c514d50faca4d5d5d9b1246925a1_cgraph" id="classConsoleLogger_accf2c514d50faca4d5d5d9b1246925a1_cgraph">
 <area shape="rect" id="node2" href="classConsoleLogger.html#ac10de4719bfdd1352d900647b61663f7" title="ConsoleLogger::print" alt="" coords="205,5,348,32"/>
+<area shape="rect" id="node3" href="classLogger.html#a36ab56b064010383de9e1c215d430795" title="Logger::format_string" alt="" coords="396,5,541,32"/>
+<area shape="rect" id="node4" href="classLogger.html#a6e3e8fd746af1d93cffa94bc4e7089a5" title="Logger::get_time" alt="" coords="589,5,708,32"/>
 </map>
 </div>
 </p>
@@ -318,7 +327,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ConsoleLogger_8cpp_source.html#l00037">37</a> of file <a class="el" href="ConsoleLogger_8cpp_source.html">ConsoleLogger.cpp</a>.</p>
 
-<p>References <a class="el" href="Logger_8hpp_source.html#l00018">Logger::ERROR</a>, and <a class="el" href="ConsoleLogger_8cpp_source.html#l00054">print()</a>.</p>
+<p>References <a class="el" href="Logger_8hpp_source.html#l00020">Logger::ERROR</a>, and <a class="el" href="ConsoleLogger_8cpp_source.html#l00054">print()</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -328,6 +337,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="center"><img src="classConsoleLogger_a39f299404bbb3db80b54d5463f814700_cgraph.png" border="0" usemap="#classConsoleLogger_a39f299404bbb3db80b54d5463f814700_cgraph" alt=""/></div>
 <map name="classConsoleLogger_a39f299404bbb3db80b54d5463f814700_cgraph" id="classConsoleLogger_a39f299404bbb3db80b54d5463f814700_cgraph">
 <area shape="rect" id="node2" href="classConsoleLogger.html#ac10de4719bfdd1352d900647b61663f7" title="ConsoleLogger::print" alt="" coords="196,5,339,32"/>
+<area shape="rect" id="node3" href="classLogger.html#a36ab56b064010383de9e1c215d430795" title="Logger::format_string" alt="" coords="387,5,532,32"/>
+<area shape="rect" id="node4" href="classLogger.html#a6e3e8fd746af1d93cffa94bc4e7089a5" title="Logger::get_time" alt="" coords="580,5,699,32"/>
 </map>
 </div>
 </p>
@@ -370,7 +381,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ConsoleLogger_8cpp_source.html#l00021">21</a> of file <a class="el" href="ConsoleLogger_8cpp_source.html">ConsoleLogger.cpp</a>.</p>
 
-<p>References <a class="el" href="Logger_8hpp_source.html#l00016">Logger::INFO</a>, and <a class="el" href="ConsoleLogger_8cpp_source.html#l00054">print()</a>.</p>
+<p>References <a class="el" href="Logger_8hpp_source.html#l00018">Logger::INFO</a>, and <a class="el" href="ConsoleLogger_8cpp_source.html#l00054">print()</a>.</p>
 
 <p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -380,6 +391,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="center"><img src="classConsoleLogger_aaf10bf516a2585b7020bdd6dff2eba95_cgraph.png" border="0" usemap="#classConsoleLogger_aaf10bf516a2585b7020bdd6dff2eba95_cgraph" alt=""/></div>
 <map name="classConsoleLogger_aaf10bf516a2585b7020bdd6dff2eba95_cgraph" id="classConsoleLogger_aaf10bf516a2585b7020bdd6dff2eba95_cgraph">
 <area shape="rect" id="node2" href="classConsoleLogger.html#ac10de4719bfdd1352d900647b61663f7" title="ConsoleLogger::print" alt="" coords="192,5,335,32"/>
+<area shape="rect" id="node3" href="classLogger.html#a36ab56b064010383de9e1c215d430795" title="Logger::format_string" alt="" coords="383,5,528,32"/>
+<area shape="rect" id="node4" href="classLogger.html#a6e3e8fd746af1d93cffa94bc4e7089a5" title="Logger::get_time" alt="" coords="576,5,695,32"/>
 </map>
 </div>
 </p>
@@ -438,6 +451,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="center"><img src="classConsoleLogger_a10fa8072165bf024f0525f276ec2820f_cgraph.png" border="0" usemap="#classConsoleLogger_a10fa8072165bf024f0525f276ec2820f_cgraph" alt=""/></div>
 <map name="classConsoleLogger_a10fa8072165bf024f0525f276ec2820f_cgraph" id="classConsoleLogger_a10fa8072165bf024f0525f276ec2820f_cgraph">
 <area shape="rect" id="node2" href="classConsoleLogger.html#ac10de4719bfdd1352d900647b61663f7" title="ConsoleLogger::print" alt="" coords="188,5,331,32"/>
+<area shape="rect" id="node3" href="classLogger.html#a36ab56b064010383de9e1c215d430795" title="Logger::format_string" alt="" coords="379,5,524,32"/>
+<area shape="rect" id="node4" href="classLogger.html#a6e3e8fd746af1d93cffa94bc4e7089a5" title="Logger::get_time" alt="" coords="572,5,691,32"/>
 </map>
 </div>
 </p>
@@ -484,15 +499,28 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ConsoleLogger_8cpp_source.html#l00054">54</a> of file <a class="el" href="ConsoleLogger_8cpp_source.html">ConsoleLogger.cpp</a>.</p>
 
-<p>References <a class="el" href="Logger_8hpp_source.html#l00031">Logger::logLevel</a>.</p>
+<p>References <a class="el" href="Logger_8cpp_source.html#l00021">Logger::format_string()</a>, and <a class="el" href="Logger_8hpp_source.html#l00034">Logger::logLevel</a>.</p>
 
 <p>Referenced by <a class="el" href="ConsoleLogger_8cpp_source.html#l00013">debug()</a>, <a class="el" href="ConsoleLogger_8cpp_source.html#l00037">error()</a>, <a class="el" href="ConsoleLogger_8cpp_source.html#l00021">info()</a>, <a class="el" href="ConsoleLogger_8cpp_source.html#l00046">log()</a>, and <a class="el" href="ConsoleLogger_8cpp_source.html#l00029">warn()</a>.</p>
 
 <p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classConsoleLogger_ac10de4719bfdd1352d900647b61663f7_cgraph.png" border="0" usemap="#classConsoleLogger_ac10de4719bfdd1352d900647b61663f7_cgraph" alt=""/></div>
+<map name="classConsoleLogger_ac10de4719bfdd1352d900647b61663f7_cgraph" id="classConsoleLogger_ac10de4719bfdd1352d900647b61663f7_cgraph">
+<area shape="rect" id="node2" href="classLogger.html#a36ab56b064010383de9e1c215d430795" title="Logger::format_string" alt="" coords="196,5,341,32"/>
+<area shape="rect" id="node3" href="classLogger.html#a6e3e8fd746af1d93cffa94bc4e7089a5" title="Logger::get_time" alt="" coords="389,5,508,32"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classConsoleLogger_ac10de4719bfdd1352d900647b61663f7_icgraph.png" border="0" usemap="#classConsoleLogger_ac10de4719bfdd1352d900647b61663f7_icgraph" alt=""/></div>
 <map name="classConsoleLogger_ac10de4719bfdd1352d900647b61663f7_icgraph" id="classConsoleLogger_ac10de4719bfdd1352d900647b61663f7_icgraph">
 <area shape="rect" id="node2" href="classConsoleLogger.html#accf2c514d50faca4d5d5d9b1246925a1" title="ConsoleLogger::debug" alt="" coords="196,5,348,32"/>
@@ -542,16 +570,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ConsoleLogger_8cpp_source.html#l00029">29</a> of file <a class="el" href="ConsoleLogger_8cpp_source.html">ConsoleLogger.cpp</a>.</p>
 
-<p>References <a class="el" href="ConsoleLogger_8cpp_source.html#l00054">print()</a>, and <a class="el" href="Logger_8hpp_source.html#l00017">Logger::WARN</a>.</p>
+<p>References <a class="el" href="ConsoleLogger_8cpp_source.html#l00054">print()</a>, and <a class="el" href="Logger_8hpp_source.html#l00019">Logger::WARN</a>.</p>
 
-<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classConsoleLogger_ac95c55d919e7ca8e9501e6429d216c77_cgraph.png" border="0" usemap="#classConsoleLogger_ac95c55d919e7ca8e9501e6429d216c77_cgraph" alt=""/></div>
 <map name="classConsoleLogger_ac95c55d919e7ca8e9501e6429d216c77_cgraph" id="classConsoleLogger_ac95c55d919e7ca8e9501e6429d216c77_cgraph">
 <area shape="rect" id="node2" href="classConsoleLogger.html#ac10de4719bfdd1352d900647b61663f7" title="ConsoleLogger::print" alt="" coords="199,5,341,32"/>
+<area shape="rect" id="node3" href="classLogger.html#a36ab56b064010383de9e1c215d430795" title="Logger::format_string" alt="" coords="389,5,535,32"/>
+<area shape="rect" id="node4" href="classLogger.html#a6e3e8fd746af1d93cffa94bc4e7089a5" title="Logger::get_time" alt="" coords="583,5,701,32"/>
 </map>
 </div>
 </p>
@@ -568,7 +598,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classConsoleLogger.html">ConsoleLogger</a></li>
-    <li class="footer">Generated on Tue Apr 11 2017 20:40:04 for Trade App by
+    <li class="footer">Generated on Fri Jul 21 2017 21:14:23 for Arbitrage Simulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

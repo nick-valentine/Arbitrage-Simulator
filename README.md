@@ -18,4 +18,4 @@ ncurses
 
 Documentation
 -------------
-https://nick-valentine.github.io/TradeApp/index.html
+https://nick-valentine.github.io/Arbitrage-Simulator/index.html

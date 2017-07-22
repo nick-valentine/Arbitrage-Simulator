@@ -11,7 +11,7 @@ var searchData=
   ['windowlayout',['windowLayout',['../classGame.html#a33a082c88690c670941ee53af5098988',1,'Game']]],
   ['windows',['windows',['../classGameWindowLayout.html#a30a0ecf049796031539cacb7ee44a468',1,'GameWindowLayout']]],
   ['windowwidth',['windowWidth',['../classGameWindowLayout.html#a918c9d635c8ae8ac5cfc71b0690ed52f',1,'GameWindowLayout']]],
-  ['world',['World',['../classWorld.html',1,'World'],['../classWorld.html#afa39d4e6f714a7a3691ac0c656f5e8a8',1,'World::World()'],['../classWorld.html#a8a3cbd89a9deaab59376b02540d0092a',1,'World::World(std::stringstream *ss)'],['../classWorld.html#a7cb840db7b54d4fa3d4474f6c8bfc291',1,'World::World(std::string name)'],['../classServer.html#a1ed49aeed83b399d2e192e0c8d3c1ce1',1,'Server::world()'],['../classServerSession.html#a45d8bc8a439a074ee70078cab322ea1d',1,'ServerSession::world()']]],
+  ['world',['World',['../classWorld.html',1,'World'],['../classServer.html#a1ed49aeed83b399d2e192e0c8d3c1ce1',1,'Server::world()'],['../classServerSession.html#a45d8bc8a439a074ee70078cab322ea1d',1,'ServerSession::world()'],['../classWorld.html#afa39d4e6f714a7a3691ac0c656f5e8a8',1,'World::World()'],['../classWorld.html#a8a3cbd89a9deaab59376b02540d0092a',1,'World::World(std::stringstream *ss)'],['../classWorld.html#a7cb840db7b54d4fa3d4474f6c8bfc291',1,'World::World(std::string name)']]],
   ['world_2ecpp',['World.cpp',['../World_8cpp.html',1,'']]],
   ['world_2ehpp',['World.hpp',['../World_8hpp.html',1,'']]],
   ['world_5fptr',['world_ptr',['../classServerSession.html#a58b641dbd3a06b729038b5e3de03ad07',1,'ServerSession']]],

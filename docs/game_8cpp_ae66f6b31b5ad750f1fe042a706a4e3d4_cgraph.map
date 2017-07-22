@@ -1,29 +1,31 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$game_8cpp.html#af620af65350c4af61494473541021019" title="finish" alt="" coords="126,123,179,149"/>
-<area shape="rect" id="node3" href="$classGame.html#a99fb161fbbe87d25a8b73265a0611e58" title="Game::run" alt="" coords="111,173,194,200"/>
-<area shape="rect" id="node13" href="$classGame.html#ad7a2b7ff71e3064a289680944a27a42e" title="Game::setup" alt="" coords="104,399,201,425"/>
-<area shape="rect" id="node4" href="$classPlayer.html#a6e3e621902e7d1d718e5cd5c2004f2ef" title="Player::getYX" alt="" coords="307,5,410,32"/>
-<area shape="rect" id="node5" href="$classCamera.html#af05f81e8e5ba8851826242acbb824086" title="Camera::moveTo" alt="" coords="297,56,420,83"/>
-<area shape="rect" id="node6" href="$classWorldInteractionInterface.html#a275d3637a9886be9ea98cdafbdd6ae25" title="WorldInteractionInterface\l::movePlayerToCoordinate" alt="" coords="270,107,447,149"/>
-<area shape="rect" id="node7" href="$classCamera.html#a76ed19c192c25c8e41f4a6bb54ba87b2" title="Render the world and player onto the screen. " alt="" coords="303,173,415,200"/>
-<area shape="rect" id="node10" href="$classGameWindowLayout.html#a490a59780f8de2c6cad6a6b72ec028a3" title="GameWindowLayout::render" alt="" coords="265,275,452,301"/>
-<area shape="rect" id="node12" href="$classPlayer.html#a955e68fc1da6565d43649b27a0ecabee" title="Player::move" alt="" coords="309,224,408,251"/>
-<area shape="rect" id="node8" href="$classWorldInteractionInterface.html#ac06c2a9974ff1749af8fe71dbdfe7c98" title="WorldInteractionInterface\l::draw" alt="" coords="527,137,695,178"/>
-<area shape="rect" id="node9" href="$classPlayer.html#aad62851071bf59965833224024a687c1" title="Player::draw" alt="" coords="564,203,659,229"/>
-<area shape="rect" id="node11" href="$classGameWindowLayout.html#a66d9862e640242e6ef562fc59305ddfe" title="GameWindowLayout::update\lScreenSize" alt="" coords="516,279,707,321"/>
-<area shape="rect" id="node14" href="$classGame.html#ad2d16756f154ae7da7510b1c7bbcf6cc" title="Game::configure" alt="" coords="299,457,418,484"/>
-<area shape="rect" id="node25" href="$classGameWindowLayout.html#aa405622f347239d28bdd49e2e562b88c" title="GameWindowLayout::addWindow" alt="" coords="249,508,468,535"/>
-<area shape="rect" id="node26" href="$classGameWindowLayout.html#a04f4a23eec82c45d000e252f426a241a" title="GameWindowLayout::setMain\lWindow" alt="" coords="260,326,457,367"/>
-<area shape="rect" id="node27" href="$classGameWindowLayout.html#a53d838ca33b4bdcbbed30060f9e61a44" title="GameWindowLayout::setSub\lWindow" alt="" coords="263,391,455,433"/>
-<area shape="rect" id="node28" href="$classWorldInteractionInterface.html#a5ea6a25f75827f5f1ff6d40c1f4d0412" title="WorldInteractionInterface\l::loadWorld" alt="" coords="275,559,443,601"/>
-<area shape="rect" id="node15" href="$classConfigLoader.html#afaece3ad25b7221017affe9566e46af7" title="ConfigLoader::load" alt="" coords="546,345,677,372"/>
-<area shape="rect" id="node16" href="$classLogger.html#a9ff4ec284aaf984a5ea07d2175e18a31" title="Logger::configure" alt="" coords="550,447,673,473"/>
-<area shape="rect" id="node17" href="$classConfigLoader.html#a99778c30f3d79e84995d9e9c7245b089" title="ConfigLoader::getIntOption" alt="" coords="755,472,933,499"/>
-<area shape="rect" id="node21" href="$classWorldChunk.html#ae67bd7d234bca44740a3418b4a00e64f" title="WorldChunk::configure" alt="" coords="534,497,689,524"/>
-<area shape="rect" id="node22" href="$classWorld.html#adf1ca48fa67ae65fcfddf24bddcaf1c6" title="World::configure" alt="" coords="553,548,670,575"/>
-<area shape="rect" id="node23" href="$classCity.html#a404709b7000a90155400c0ea43936ac9" title="Load City Names. " alt="" coords="535,599,687,625"/>
-<area shape="rect" id="node24" href="$classWorldChunk.html#a538965747758546c9097245ec9bfe930" title="WorldChunk::setMaxYX" alt="" coords="530,649,693,676"/>
-<area shape="rect" id="node18" href="$classConfigLoader.html#a162bb553780887f9c73861c39fb19e90" title="ConfigLoader::getStringOption" alt="" coords="981,472,1179,499"/>
-<area shape="rect" id="node19" href="$classConfigLoader.html#a8d086e4fc43dbbf3ea03b25e7808d52d" title="ConfigLoader::mutateOption" alt="" coords="1227,447,1412,473"/>
-<area shape="rect" id="node20" href="$classConfigLoader.html#a75640e185ea0090519fce7df634cc48a" title="ConfigLoader::save" alt="" coords="1252,497,1387,524"/>
+<area shape="rect" id="node2" href="$game_8cpp.html#af620af65350c4af61494473541021019" title="finish" alt="" coords="126,173,179,200"/>
+<area shape="rect" id="node3" href="$classGame.html#a99fb161fbbe87d25a8b73265a0611e58" title="Game::run" alt="" coords="111,224,194,251"/>
+<area shape="rect" id="node15" href="$classGame.html#ad7a2b7ff71e3064a289680944a27a42e" title="Game::setup" alt="" coords="104,500,201,527"/>
+<area shape="rect" id="node4" href="$classLogger.html#ac625c9c6d6b843e818fbc51b94fa639a" title="Logger::info" alt="" coords="313,325,404,352"/>
+<area shape="rect" id="node5" href="$classPlayer.html#a6e3e621902e7d1d718e5cd5c2004f2ef" title="Player::getYX" alt="" coords="307,5,410,32"/>
+<area shape="rect" id="node6" href="$classCamera.html#af05f81e8e5ba8851826242acbb824086" title="Camera::moveTo" alt="" coords="297,56,420,83"/>
+<area shape="rect" id="node7" href="$classWorldInteractionInterface.html#a275d3637a9886be9ea98cdafbdd6ae25" title="WorldInteractionInterface\l::movePlayerToCoordinate" alt="" coords="270,107,447,149"/>
+<area shape="rect" id="node8" href="$classCamera.html#a76ed19c192c25c8e41f4a6bb54ba87b2" title="Render the world and player onto the screen. " alt="" coords="303,173,415,200"/>
+<area shape="rect" id="node11" href="$classGameWindowLayout.html#a490a59780f8de2c6cad6a6b72ec028a3" title="GameWindowLayout::render" alt="" coords="265,376,452,403"/>
+<area shape="rect" id="node13" href="$classLogger.html#a0dff76f9cf64e4e7acdefaad6987fc07" title="Logger::debug" alt="" coords="307,224,411,251"/>
+<area shape="rect" id="node14" href="$classPlayer.html#a955e68fc1da6565d43649b27a0ecabee" title="Player::move" alt="" coords="309,275,408,301"/>
+<area shape="rect" id="node9" href="$classWorldInteractionInterface.html#ac06c2a9974ff1749af8fe71dbdfe7c98" title="WorldInteractionInterface\l::draw" alt="" coords="527,137,695,178"/>
+<area shape="rect" id="node10" href="$classPlayer.html#aad62851071bf59965833224024a687c1" title="Player::draw" alt="" coords="564,203,659,229"/>
+<area shape="rect" id="node12" href="$classGameWindowLayout.html#a66d9862e640242e6ef562fc59305ddfe" title="GameWindowLayout::update\lScreenSize" alt="" coords="516,381,707,422"/>
+<area shape="rect" id="node16" href="$classGame.html#ad2d16756f154ae7da7510b1c7bbcf6cc" title="Game::configure" alt="" coords="299,559,418,585"/>
+<area shape="rect" id="node27" href="$classGameWindowLayout.html#aa405622f347239d28bdd49e2e562b88c" title="GameWindowLayout::addWindow" alt="" coords="249,676,468,703"/>
+<area shape="rect" id="node28" href="$classGameWindowLayout.html#a04f4a23eec82c45d000e252f426a241a" title="GameWindowLayout::setMain\lWindow" alt="" coords="260,427,457,469"/>
+<area shape="rect" id="node29" href="$classGameWindowLayout.html#a53d838ca33b4bdcbbed30060f9e61a44" title="GameWindowLayout::setSub\lWindow" alt="" coords="263,493,455,534"/>
+<area shape="rect" id="node30" href="$classWorldInteractionInterface.html#a5ea6a25f75827f5f1ff6d40c1f4d0412" title="WorldInteractionInterface\l::loadWorld" alt="" coords="275,610,443,651"/>
+<area shape="rect" id="node17" href="$classConfigLoader.html#afaece3ad25b7221017affe9566e46af7" title="ConfigLoader::load" alt="" coords="546,548,677,575"/>
+<area shape="rect" id="node18" href="$classLogger.html#a9ff4ec284aaf984a5ea07d2175e18a31" title="Logger::configure" alt="" coords="550,599,673,625"/>
+<area shape="rect" id="node19" href="$classConfigLoader.html#a99778c30f3d79e84995d9e9c7245b089" title="ConfigLoader::getIntOption" alt="" coords="755,675,933,701"/>
+<area shape="rect" id="node23" href="$classWorldChunk.html#ae67bd7d234bca44740a3418b4a00e64f" title="WorldChunk::configure" alt="" coords="534,700,689,727"/>
+<area shape="rect" id="node24" href="$classWorld.html#adf1ca48fa67ae65fcfddf24bddcaf1c6" title="World::configure" alt="" coords="553,751,670,777"/>
+<area shape="rect" id="node25" href="$classCity.html#a404709b7000a90155400c0ea43936ac9" title="Load City Names. " alt="" coords="535,447,687,473"/>
+<area shape="rect" id="node26" href="$classWorldChunk.html#a538965747758546c9097245ec9bfe930" title="WorldChunk::setMaxYX" alt="" coords="530,497,693,524"/>
+<area shape="rect" id="node20" href="$classConfigLoader.html#a162bb553780887f9c73861c39fb19e90" title="ConfigLoader::getStringOption" alt="" coords="981,675,1179,701"/>
+<area shape="rect" id="node21" href="$classConfigLoader.html#a8d086e4fc43dbbf3ea03b25e7808d52d" title="ConfigLoader::mutateOption" alt="" coords="1227,649,1412,676"/>
+<area shape="rect" id="node22" href="$classConfigLoader.html#a75640e185ea0090519fce7df634cc48a" title="ConfigLoader::save" alt="" coords="1252,700,1387,727"/>
 </map>

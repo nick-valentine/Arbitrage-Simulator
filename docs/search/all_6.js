@@ -12,8 +12,10 @@ var searchData=
   ['generatechunk',['generateChunk',['../classWorldChunk.html#a0428cb7066e8cb921b37a2ff7a2ba9dc',1,'WorldChunk']]],
   ['generateworld',['generateWorld',['../classWorld.html#a3d897d6953d0876aeab57d3ca951bea2',1,'World']]],
   ['get',['get',['../classConnection.html#a8c99eecd6637746b701c77b1af45301f',1,'Connection::get()'],['../classNoiseFunc.html#a86b87334b40c251168a191bcf14ef761',1,'NoiseFunc::get()']]],
+  ['get_5ftime',['get_time',['../classLogger.html#a6e3e8fd746af1d93cffa94bc4e7089a5',1,'Logger']]],
   ['getalloptions',['getAllOptions',['../classConfigLoader.html#ac3ee7c01edaa63458b7ac5002b5d1630',1,'ConfigLoader']]],
-  ['getbuffer',['getBuffer',['../classBufferLogger.html#a4b816140f15b9b9716d29b529928e1c0',1,'BufferLogger']]],
+  ['getbuffer',['getBuffer',['../classBufferLogger.html#a3edc8aeeae73f886da26cf2c9d2954c0',1,'BufferLogger']]],
+  ['getbuffersize',['getBufferSize',['../classBufferLogger.html#a8666ad4c21f3ab78529834c9ef8d6201',1,'BufferLogger']]],
   ['getch',['getCh',['../classCursesWindow.html#a1ceeaacd546b56e0ab3ed3977550319d',1,'CursesWindow::getCh()'],['../classWindow.html#ac30f8f7140619a63828f1bf9eb0d24b9',1,'Window::getCh()']]],
   ['getchunk',['getChunk',['../classLocalWorldInteraction.html#a2b4ebf8d835fcb0aa30a98183e6647a3',1,'LocalWorldInteraction']]],
   ['getchunkheight',['getChunkHeight',['../classWorldChunk.html#a69efb1c1bc62d8464cce367f29665f38',1,'WorldChunk']]],
@@ -43,5 +45,6 @@ var searchData=
   ['globals',['Globals',['../namespaceGlobals.html',1,'']]],
   ['globals_2ehpp',['Globals.hpp',['../Globals_8hpp.html',1,'']]],
   ['grid',['Grid',['../classNoiseFunc.html#aa0808b10c7810b1d2aed67b3a89ffa44',1,'NoiseFunc']]],
-  ['gridperiod',['gridPeriod',['../classNoiseFunc.html#a2636399981351d1a85b674932758345d',1,'NoiseFunc']]]
+  ['gridperiod',['gridPeriod',['../classNoiseFunc.html#a2636399981351d1a85b674932758345d',1,'NoiseFunc']]],
+  ['link_2etxt',['link.txt',['../game_8dir_2link_8txt.html',1,'']]]
 ];

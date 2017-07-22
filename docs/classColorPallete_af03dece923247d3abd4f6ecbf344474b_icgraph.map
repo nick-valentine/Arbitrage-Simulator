@@ -1,4 +1,5 @@
 <map id="ColorPallete::setCurrent" name="ColorPallete::setCurrent">
-<area shape="rect" id="node2" href="$classTile.html#a13fdcd0905936c7517d98a7294f3bb49" title="Set Pallete. " alt="" coords="216,5,325,32"/>
-<area shape="rect" id="node3" href="$classWorldChunk.html#a0ba81d96ee50000d7e0afd0704795c3b" title="WorldChunk::draw" alt="" coords="373,5,504,32"/>
+<area shape="rect" id="node2" href="$classConsoleWindow.html#a7ea3524ef254fa4a89e1d722d974c75e" title="ConsoleWindow::setPallete" alt="" coords="216,5,399,32"/>
+<area shape="rect" id="node3" href="$classTile.html#a13fdcd0905936c7517d98a7294f3bb49" title="Set Pallete. " alt="" coords="253,56,362,83"/>
+<area shape="rect" id="node4" href="$classWorldChunk.html#a0ba81d96ee50000d7e0afd0704795c3b" title="WorldChunk::draw" alt="" coords="447,56,577,83"/>
 </map>

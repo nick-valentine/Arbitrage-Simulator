@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Trade App: BufferLogger Class Reference</title>
+<title>Arbitrage Simulator: BufferLogger Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Trade App
+   <div id="projectname">Arbitrage Simulator
    </div>
    <div id="projectbrief">A simple game for trading fictional things.</div>
   </td>
@@ -108,9 +108,11 @@ $(document).ready(function(){initNavTree('classBufferLogger.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="classBufferLogger-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">BufferLogger Class Reference</div>  </div>
@@ -128,7 +130,7 @@ $(document).ready(function(){initNavTree('classBufferLogger.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classBufferLogger__inherit__graph.png" border="0" usemap="#BufferLogger_inherit__map" alt="Inheritance graph"/></div>
 <map name="BufferLogger_inherit__map" id="BufferLogger_inherit__map">
-<area shape="rect" id="node2" href="classLogger.html" title="{Logger\n|# logLevel\l|+ ~Logger()\l+ debug()\l+ info()\l+ warn()\l+ error()\l+ log()\l+ configure()\l}" alt="" coords="20,5,115,171"/>
+<area shape="rect" id="node2" href="classLogger.html" title="{Logger\n|# levelStrings\l# logLevel\l|+ ~Logger()\l+ debug()\l+ info()\l+ warn()\l+ error()\l+ log()\l+ configure()\l# format_string()\l# get_time()\l}" alt="" coords="20,5,137,215"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -138,44 +140,14 @@ $(document).ready(function(){initNavTree('classBufferLogger.html','');});
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classBufferLogger__coll__graph.png" border="0" usemap="#BufferLogger_coll__map" alt="Collaboration graph"/></div>
 <map name="BufferLogger_coll__map" id="BufferLogger_coll__map">
-<area shape="rect" id="node2" href="classLogger.html" title="{Logger\n|# logLevel\l|+ ~Logger()\l+ debug()\l+ info()\l+ warn()\l+ error()\l+ log()\l+ configure()\l}" alt="" coords="20,5,115,171"/>
+<area shape="rect" id="node2" href="classLogger.html" title="{Logger\n|# levelStrings\l# logLevel\l|+ ~Logger()\l+ debug()\l+ info()\l+ warn()\l+ error()\l+ log()\l+ configure()\l# format_string()\l# get_time()\l}" alt="" coords="20,5,137,215"/>
 </map>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a51d2eac8dd7dd244beb54f2157f37cf6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#a51d2eac8dd7dd244beb54f2157f37cf6">BufferLogger</a> ()</td></tr>
-<tr class="separator:a51d2eac8dd7dd244beb54f2157f37cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac722ba3c2824b0df9f1069db254edc81"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#ac722ba3c2824b0df9f1069db254edc81">~BufferLogger</a> ()</td></tr>
-<tr class="separator:ac722ba3c2824b0df9f1069db254edc81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aceea37311ba9af6cf559e07f5593030f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#aceea37311ba9af6cf559e07f5593030f">debug</a> (const char *fmt,...)</td></tr>
-<tr class="separator:aceea37311ba9af6cf559e07f5593030f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf2d666893839ab1c51f30cdf106c784"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#acf2d666893839ab1c51f30cdf106c784">info</a> (const char *fmt,...)</td></tr>
-<tr class="separator:acf2d666893839ab1c51f30cdf106c784"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d05f0a11139572681c84998c32100e2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#a4d05f0a11139572681c84998c32100e2">warn</a> (const char *fmt,...)</td></tr>
-<tr class="separator:a4d05f0a11139572681c84998c32100e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a369d2ba5ea74e336ad064842cf573d89"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#a369d2ba5ea74e336ad064842cf573d89">error</a> (const char *fmt,...)</td></tr>
-<tr class="separator:a369d2ba5ea74e336ad064842cf573d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea3c0433691d7e4e4ae144abfb731ef6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#aea3c0433691d7e4e4ae144abfb731ef6">log</a> (<a class="el" href="classLogger.html#ac744681e23720966b5f430ec2060da36">Logger::LogLevel</a> level, const char *fmt,...)</td></tr>
-<tr class="separator:aea3c0433691d7e4e4ae144abfb731ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b816140f15b9b9716d29b529928e1c0"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#a4b816140f15b9b9716d29b529928e1c0">getBuffer</a> ()</td></tr>
-<tr class="separator:a4b816140f15b9b9716d29b529928e1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classLogger"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classLogger')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classLogger.html">Logger</a></td></tr>
-<tr class="memitem:ae93f62ca3e47716b7120acb032a260f3 inherit pub_methods_classLogger"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#ae93f62ca3e47716b7120acb032a260f3">~Logger</a> ()</td></tr>
-<tr class="separator:ae93f62ca3e47716b7120acb032a260f3 inherit pub_methods_classLogger"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a26b6114fcf7af9123ff329810e4d54ef"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#a26b6114fcf7af9123ff329810e4d54ef">addToBuffer</a> (<a class="el" href="classLogger.html#ac744681e23720966b5f430ec2060da36">Logger::LogLevel</a> level, const char *fmt, va_list args)</td></tr>
-<tr class="separator:a26b6114fcf7af9123ff329810e4d54ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a266375a3973471e03546486e014e4d50"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#a266375a3973471e03546486e014e4d50">buffer</a></td></tr>
-<tr class="separator:a266375a3973471e03546486e014e4d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:acd403b2724b2ae806cde9401106d5a22"><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; <a class="el" href="classLogger.html#ac744681e23720966b5f430ec2060da36">Logger::LogLevel</a>, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#acd403b2724b2ae806cde9401106d5a22">LogEntry</a></td></tr>
+<tr class="separator:acd403b2724b2ae806cde9401106d5a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classLogger"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classLogger')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classLogger.html">Logger</a></td></tr>
 <tr class="memitem:ac744681e23720966b5f430ec2060da36 inherit pub_types_classLogger"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#ac744681e23720966b5f430ec2060da36">LogLevel</a> { <br />
 &#160;&#160;<a class="el" href="classLogger.html#ac744681e23720966b5f430ec2060da36ad7501076156e6d62015220878014c30b">NONE</a> = 0, 
@@ -187,19 +159,89 @@ Additional Inherited Members</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:ac744681e23720966b5f430ec2060da36 inherit pub_types_classLogger"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a51d2eac8dd7dd244beb54f2157f37cf6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#a51d2eac8dd7dd244beb54f2157f37cf6">BufferLogger</a> ()</td></tr>
+<tr class="separator:a51d2eac8dd7dd244beb54f2157f37cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac722ba3c2824b0df9f1069db254edc81"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#ac722ba3c2824b0df9f1069db254edc81">~BufferLogger</a> ()</td></tr>
+<tr class="separator:ac722ba3c2824b0df9f1069db254edc81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf325c9ba3e69f80952ddf492eeef79e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#acf325c9ba3e69f80952ddf492eeef79e">setBufferCapacity</a> (int newCapacity)</td></tr>
+<tr class="separator:acf325c9ba3e69f80952ddf492eeef79e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceea37311ba9af6cf559e07f5593030f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#aceea37311ba9af6cf559e07f5593030f">debug</a> (const char *fmt,...)</td></tr>
+<tr class="separator:aceea37311ba9af6cf559e07f5593030f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf2d666893839ab1c51f30cdf106c784"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#acf2d666893839ab1c51f30cdf106c784">info</a> (const char *fmt,...)</td></tr>
+<tr class="separator:acf2d666893839ab1c51f30cdf106c784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d05f0a11139572681c84998c32100e2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#a4d05f0a11139572681c84998c32100e2">warn</a> (const char *fmt,...)</td></tr>
+<tr class="separator:a4d05f0a11139572681c84998c32100e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a369d2ba5ea74e336ad064842cf573d89"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#a369d2ba5ea74e336ad064842cf573d89">error</a> (const char *fmt,...)</td></tr>
+<tr class="separator:a369d2ba5ea74e336ad064842cf573d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea3c0433691d7e4e4ae144abfb731ef6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#aea3c0433691d7e4e4ae144abfb731ef6">log</a> (<a class="el" href="classLogger.html#ac744681e23720966b5f430ec2060da36">Logger::LogLevel</a> level, const char *fmt,...)</td></tr>
+<tr class="separator:aea3c0433691d7e4e4ae144abfb731ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3edc8aeeae73f886da26cf2c9d2954c0"><td class="memItemLeft" align="right" valign="top">virtual std::list&lt; <a class="el" href="classBufferLogger.html#acd403b2724b2ae806cde9401106d5a22">LogEntry</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#a3edc8aeeae73f886da26cf2c9d2954c0">getBuffer</a> ()</td></tr>
+<tr class="separator:a3edc8aeeae73f886da26cf2c9d2954c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8666ad4c21f3ab78529834c9ef8d6201"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#a8666ad4c21f3ab78529834c9ef8d6201">getBufferSize</a> ()</td></tr>
+<tr class="separator:a8666ad4c21f3ab78529834c9ef8d6201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classLogger"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classLogger')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classLogger.html">Logger</a></td></tr>
+<tr class="memitem:ae93f62ca3e47716b7120acb032a260f3 inherit pub_methods_classLogger"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#ae93f62ca3e47716b7120acb032a260f3">~Logger</a> ()</td></tr>
+<tr class="separator:ae93f62ca3e47716b7120acb032a260f3 inherit pub_methods_classLogger"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a26b6114fcf7af9123ff329810e4d54ef"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#a26b6114fcf7af9123ff329810e4d54ef">addToBuffer</a> (<a class="el" href="classLogger.html#ac744681e23720966b5f430ec2060da36">Logger::LogLevel</a> level, const char *fmt, va_list args)</td></tr>
+<tr class="separator:a26b6114fcf7af9123ff329810e4d54ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classLogger"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classLogger')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classLogger.html">Logger</a></td></tr>
+<tr class="memitem:a36ab56b064010383de9e1c215d430795 inherit pro_methods_classLogger"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#a36ab56b064010383de9e1c215d430795">format_string</a> (<a class="el" href="classLogger.html#ac744681e23720966b5f430ec2060da36">LogLevel</a> level, const char *fmt, va_list args)</td></tr>
+<tr class="separator:a36ab56b064010383de9e1c215d430795 inherit pro_methods_classLogger"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e3e8fd746af1d93cffa94bc4e7089a5 inherit pro_methods_classLogger"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#a6e3e8fd746af1d93cffa94bc4e7089a5">get_time</a> ()</td></tr>
+<tr class="separator:a6e3e8fd746af1d93cffa94bc4e7089a5 inherit pro_methods_classLogger"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:aa25cc66c89653194c9ac6baec3573427"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#aa25cc66c89653194c9ac6baec3573427">bufferCapacity</a></td></tr>
+<tr class="separator:aa25cc66c89653194c9ac6baec3573427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9e94678a3f11685829aa912157423cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#ad9e94678a3f11685829aa912157423cc">bufferSize</a></td></tr>
+<tr class="separator:ad9e94678a3f11685829aa912157423cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ce730f78818e3373a219a33fe69d947"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="classBufferLogger.html#acd403b2724b2ae806cde9401106d5a22">LogEntry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#a4ce730f78818e3373a219a33fe69d947">buffer</a></td></tr>
+<tr class="separator:a4ce730f78818e3373a219a33fe69d947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:a8c029a108391dfe5faa6429f28e11736"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferLogger.html#a8c029a108391dfe5faa6429f28e11736">defaultCapacity</a> = 50</td></tr>
+<tr class="separator:a8c029a108391dfe5faa6429f28e11736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_attribs_classLogger"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classLogger')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="classLogger.html">Logger</a></td></tr>
+<tr class="memitem:a5fb65952088db67f69451235b9de2615 inherit pro_static_attribs_classLogger"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#a5fb65952088db67f69451235b9de2615">levelStrings</a> [4]</td></tr>
+<tr class="separator:a5fb65952088db67f69451235b9de2615 inherit pro_static_attribs_classLogger"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55b0f1a3f0a66235d982890388481cc9 inherit pro_static_attribs_classLogger"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#a55b0f1a3f0a66235d982890388481cc9">logLevel</a> = 0</td></tr>
+<tr class="separator:a55b0f1a3f0a66235d982890388481cc9 inherit pro_static_attribs_classLogger"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_methods_classLogger"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classLogger')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classLogger.html">Logger</a></td></tr>
 <tr class="memitem:a9ff4ec284aaf984a5ea07d2175e18a31 inherit pub_static_methods_classLogger"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#a9ff4ec284aaf984a5ea07d2175e18a31">configure</a> ()</td></tr>
 <tr class="separator:a9ff4ec284aaf984a5ea07d2175e18a31 inherit pub_static_methods_classLogger"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_static_attribs_classLogger"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classLogger')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="classLogger.html">Logger</a></td></tr>
-<tr class="memitem:a55b0f1a3f0a66235d982890388481cc9 inherit pro_static_attribs_classLogger"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#a55b0f1a3f0a66235d982890388481cc9">logLevel</a> = 0</td></tr>
-<tr class="separator:a55b0f1a3f0a66235d982890388481cc9 inherit pro_static_attribs_classLogger"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classBufferLogger.html" title="BufferLogger. ">BufferLogger</a>. </p>
 <p>Log direcly to a vector of strings. Utility class for things like a console window. </p>
 
-<p>Definition at line <a class="el" href="BufferLogger_8hpp_source.html#l00018">18</a> of file <a class="el" href="BufferLogger_8hpp_source.html">BufferLogger.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p>Definition at line <a class="el" href="BufferLogger_8hpp_source.html#l00019">19</a> of file <a class="el" href="BufferLogger_8hpp_source.html">BufferLogger.hpp</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="acd403b2724b2ae806cde9401106d5a22"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::pair&lt;<a class="el" href="classLogger.html#ac744681e23720966b5f430ec2060da36">Logger::LogLevel</a>, std::string&gt; <a class="el" href="classBufferLogger.html#acd403b2724b2ae806cde9401106d5a22">BufferLogger::LogEntry</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="BufferLogger_8hpp_source.html#l00022">22</a> of file <a class="el" href="BufferLogger_8hpp_source.html">BufferLogger.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a51d2eac8dd7dd244beb54f2157f37cf6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -213,9 +255,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="BufferLogger_8cpp_source.html#l00003">3</a> of file <a class="el" href="BufferLogger_8cpp_source.html">BufferLogger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLogger_8cpp_source.html#l00005">5</a> of file <a class="el" href="BufferLogger_8cpp_source.html">BufferLogger.cpp</a>.</p>
 
-<p>References <a class="el" href="BufferLogger_8hpp_source.html#l00033">buffer</a>.</p>
+<p>References <a class="el" href="BufferLogger_8hpp_source.html#l00042">buffer</a>, <a class="el" href="BufferLogger_8hpp_source.html#l00040">bufferCapacity</a>, and <a class="el" href="BufferLogger_8hpp_source.html#l00037">defaultCapacity</a>.</p>
 
 </div>
 </div>
@@ -240,7 +282,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="BufferLogger_8cpp_source.html#l00008">8</a> of file <a class="el" href="BufferLogger_8cpp_source.html">BufferLogger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLogger_8cpp_source.html#l00011">11</a> of file <a class="el" href="BufferLogger_8cpp_source.html">BufferLogger.cpp</a>.</p>
 
 </div>
 </div>
@@ -283,17 +325,30 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="BufferLogger_8cpp_source.html#l00059">59</a> of file <a class="el" href="BufferLogger_8cpp_source.html">BufferLogger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLogger_8cpp_source.html#l00072">72</a> of file <a class="el" href="BufferLogger_8cpp_source.html">BufferLogger.cpp</a>.</p>
 
-<p>References <a class="el" href="BufferLogger_8hpp_source.html#l00033">buffer</a>, and <a class="el" href="Logger_8hpp_source.html#l00031">Logger::logLevel</a>.</p>
+<p>References <a class="el" href="BufferLogger_8hpp_source.html#l00042">buffer</a>, <a class="el" href="BufferLogger_8hpp_source.html#l00040">bufferCapacity</a>, <a class="el" href="BufferLogger_8hpp_source.html#l00041">bufferSize</a>, <a class="el" href="Logger_8cpp_source.html#l00021">Logger::format_string()</a>, and <a class="el" href="Logger_8hpp_source.html#l00034">Logger::logLevel</a>.</p>
 
-<p>Referenced by <a class="el" href="BufferLogger_8cpp_source.html#l00013">debug()</a>, <a class="el" href="BufferLogger_8cpp_source.html#l00037">error()</a>, <a class="el" href="BufferLogger_8cpp_source.html#l00021">info()</a>, <a class="el" href="BufferLogger_8cpp_source.html#l00046">log()</a>, and <a class="el" href="BufferLogger_8cpp_source.html#l00029">warn()</a>.</p>
+<p>Referenced by <a class="el" href="BufferLogger_8cpp_source.html#l00021">debug()</a>, <a class="el" href="BufferLogger_8cpp_source.html#l00045">error()</a>, <a class="el" href="BufferLogger_8cpp_source.html#l00029">info()</a>, <a class="el" href="BufferLogger_8cpp_source.html#l00054">log()</a>, and <a class="el" href="BufferLogger_8cpp_source.html#l00037">warn()</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classBufferLogger_a26b6114fcf7af9123ff329810e4d54ef_cgraph.png" border="0" usemap="#classBufferLogger_a26b6114fcf7af9123ff329810e4d54ef_cgraph" alt=""/></div>
+<map name="classBufferLogger_a26b6114fcf7af9123ff329810e4d54ef_cgraph" id="classBufferLogger_a26b6114fcf7af9123ff329810e4d54ef_cgraph">
+<area shape="rect" id="node2" href="classLogger.html#a36ab56b064010383de9e1c215d430795" title="Logger::format_string" alt="" coords="228,5,373,32"/>
+<area shape="rect" id="node3" href="classLogger.html#a6e3e8fd746af1d93cffa94bc4e7089a5" title="Logger::get_time" alt="" coords="421,5,540,32"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classBufferLogger_a26b6114fcf7af9123ff329810e4d54ef_icgraph.png" border="0" usemap="#classBufferLogger_a26b6114fcf7af9123ff329810e4d54ef_icgraph" alt=""/></div>
 <map name="classBufferLogger_a26b6114fcf7af9123ff329810e4d54ef_icgraph" id="classBufferLogger_a26b6114fcf7af9123ff329810e4d54ef_icgraph">
 <area shape="rect" id="node2" href="classBufferLogger.html#aceea37311ba9af6cf559e07f5593030f" title="BufferLogger::debug" alt="" coords="228,5,367,32"/>
@@ -341,18 +396,20 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classLogger.html#a0dff76f9cf64e4e7acdefaad6987fc07">Logger</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLogger_8cpp_source.html#l00013">13</a> of file <a class="el" href="BufferLogger_8cpp_source.html">BufferLogger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLogger_8cpp_source.html#l00021">21</a> of file <a class="el" href="BufferLogger_8cpp_source.html">BufferLogger.cpp</a>.</p>
 
-<p>References <a class="el" href="BufferLogger_8cpp_source.html#l00059">addToBuffer()</a>, and <a class="el" href="Logger_8hpp_source.html#l00015">Logger::DEBUG</a>.</p>
+<p>References <a class="el" href="BufferLogger_8cpp_source.html#l00072">addToBuffer()</a>, and <a class="el" href="Logger_8hpp_source.html#l00017">Logger::DEBUG</a>.</p>
 
-<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classBufferLogger_aceea37311ba9af6cf559e07f5593030f_cgraph.png" border="0" usemap="#classBufferLogger_aceea37311ba9af6cf559e07f5593030f_cgraph" alt=""/></div>
 <map name="classBufferLogger_aceea37311ba9af6cf559e07f5593030f_cgraph" id="classBufferLogger_aceea37311ba9af6cf559e07f5593030f_cgraph">
 <area shape="rect" id="node2" href="classBufferLogger.html#a26b6114fcf7af9123ff329810e4d54ef" title="BufferLogger::addToBuffer" alt="" coords="192,5,367,32"/>
+<area shape="rect" id="node3" href="classLogger.html#a36ab56b064010383de9e1c215d430795" title="Logger::format_string" alt="" coords="415,5,560,32"/>
+<area shape="rect" id="node4" href="classLogger.html#a6e3e8fd746af1d93cffa94bc4e7089a5" title="Logger::get_time" alt="" coords="608,5,727,32"/>
 </map>
 </div>
 </p>
@@ -393,25 +450,27 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classLogger.html#a2cdf3e6e8ec34488d4077a249c11fa2d">Logger</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLogger_8cpp_source.html#l00037">37</a> of file <a class="el" href="BufferLogger_8cpp_source.html">BufferLogger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLogger_8cpp_source.html#l00045">45</a> of file <a class="el" href="BufferLogger_8cpp_source.html">BufferLogger.cpp</a>.</p>
 
-<p>References <a class="el" href="BufferLogger_8cpp_source.html#l00059">addToBuffer()</a>, and <a class="el" href="Logger_8hpp_source.html#l00018">Logger::ERROR</a>.</p>
+<p>References <a class="el" href="BufferLogger_8cpp_source.html#l00072">addToBuffer()</a>, and <a class="el" href="Logger_8hpp_source.html#l00020">Logger::ERROR</a>.</p>
 
-<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classBufferLogger_a369d2ba5ea74e336ad064842cf573d89_cgraph.png" border="0" usemap="#classBufferLogger_a369d2ba5ea74e336ad064842cf573d89_cgraph" alt=""/></div>
 <map name="classBufferLogger_a369d2ba5ea74e336ad064842cf573d89_cgraph" id="classBufferLogger_a369d2ba5ea74e336ad064842cf573d89_cgraph">
 <area shape="rect" id="node2" href="classBufferLogger.html#a26b6114fcf7af9123ff329810e4d54ef" title="BufferLogger::addToBuffer" alt="" coords="184,5,359,32"/>
+<area shape="rect" id="node3" href="classLogger.html#a36ab56b064010383de9e1c215d430795" title="Logger::format_string" alt="" coords="407,5,552,32"/>
+<area shape="rect" id="node4" href="classLogger.html#a6e3e8fd746af1d93cffa94bc4e7089a5" title="Logger::get_time" alt="" coords="600,5,719,32"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a4b816140f15b9b9716d29b529928e1c0"></a>
+<a class="anchor" id="a3edc8aeeae73f886da26cf2c9d2954c0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -419,7 +478,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; std::string &gt; BufferLogger::getBuffer </td>
+          <td class="memname">std::list&lt; <a class="el" href="classBufferLogger.html#acd403b2724b2ae806cde9401106d5a22">BufferLogger::LogEntry</a> &gt; &amp; BufferLogger::getBuffer </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -432,20 +491,53 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="BufferLogger_8cpp_source.html#l00054">54</a> of file <a class="el" href="BufferLogger_8cpp_source.html">BufferLogger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLogger_8cpp_source.html#l00062">62</a> of file <a class="el" href="BufferLogger_8cpp_source.html">BufferLogger.cpp</a>.</p>
 
-<p>References <a class="el" href="BufferLogger_8hpp_source.html#l00033">buffer</a>.</p>
+<p>References <a class="el" href="BufferLogger_8hpp_source.html#l00042">buffer</a>.</p>
 
-<p>Referenced by <a class="el" href="ConsoleWindow_8cpp_source.html#l00013">ConsoleWindow::render()</a>.</p>
+<p>Referenced by <a class="el" href="ConsoleWindow_8cpp_source.html#l00017">ConsoleWindow::render()</a>.</p>
 
-<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classBufferLogger_a4b816140f15b9b9716d29b529928e1c0_icgraph.png" border="0" usemap="#classBufferLogger_a4b816140f15b9b9716d29b529928e1c0_icgraph" alt=""/></div>
-<map name="classBufferLogger_a4b816140f15b9b9716d29b529928e1c0_icgraph" id="classBufferLogger_a4b816140f15b9b9716d29b529928e1c0_icgraph">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classBufferLogger_a3edc8aeeae73f886da26cf2c9d2954c0_icgraph.png" border="0" usemap="#classBufferLogger_a3edc8aeeae73f886da26cf2c9d2954c0_icgraph" alt=""/></div>
+<map name="classBufferLogger_a3edc8aeeae73f886da26cf2c9d2954c0_icgraph" id="classBufferLogger_a3edc8aeeae73f886da26cf2c9d2954c0_icgraph">
 <area shape="rect" id="node2" href="classConsoleWindow.html#aadb74409828844cbde772014fa793a6d" title="ConsoleWindow::render" alt="" coords="211,5,372,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8666ad4c21f3ab78529834c9ef8d6201"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BufferLogger::getBufferSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="BufferLogger_8cpp_source.html#l00067">67</a> of file <a class="el" href="BufferLogger_8cpp_source.html">BufferLogger.cpp</a>.</p>
+
+<p>References <a class="el" href="BufferLogger_8hpp_source.html#l00041">bufferSize</a>.</p>
+
+<p>Referenced by <a class="el" href="ConsoleWindow_8cpp_source.html#l00017">ConsoleWindow::render()</a>.</p>
+
+<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classBufferLogger_a8666ad4c21f3ab78529834c9ef8d6201_icgraph.png" border="0" usemap="#classBufferLogger_a8666ad4c21f3ab78529834c9ef8d6201_icgraph" alt=""/></div>
+<map name="classBufferLogger_a8666ad4c21f3ab78529834c9ef8d6201_icgraph" id="classBufferLogger_a8666ad4c21f3ab78529834c9ef8d6201_icgraph">
+<area shape="rect" id="node2" href="classConsoleWindow.html#aadb74409828844cbde772014fa793a6d" title="ConsoleWindow::render" alt="" coords="236,5,397,32"/>
 </map>
 </div>
 </p>
@@ -486,18 +578,20 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classLogger.html#ac625c9c6d6b843e818fbc51b94fa639a">Logger</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLogger_8cpp_source.html#l00021">21</a> of file <a class="el" href="BufferLogger_8cpp_source.html">BufferLogger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLogger_8cpp_source.html#l00029">29</a> of file <a class="el" href="BufferLogger_8cpp_source.html">BufferLogger.cpp</a>.</p>
 
-<p>References <a class="el" href="BufferLogger_8cpp_source.html#l00059">addToBuffer()</a>, and <a class="el" href="Logger_8hpp_source.html#l00016">Logger::INFO</a>.</p>
+<p>References <a class="el" href="BufferLogger_8cpp_source.html#l00072">addToBuffer()</a>, and <a class="el" href="Logger_8hpp_source.html#l00018">Logger::INFO</a>.</p>
 
-<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classBufferLogger_acf2d666893839ab1c51f30cdf106c784_cgraph.png" border="0" usemap="#classBufferLogger_acf2d666893839ab1c51f30cdf106c784_cgraph" alt=""/></div>
 <map name="classBufferLogger_acf2d666893839ab1c51f30cdf106c784_cgraph" id="classBufferLogger_acf2d666893839ab1c51f30cdf106c784_cgraph">
 <area shape="rect" id="node2" href="classBufferLogger.html#a26b6114fcf7af9123ff329810e4d54ef" title="BufferLogger::addToBuffer" alt="" coords="179,5,353,32"/>
+<area shape="rect" id="node3" href="classLogger.html#a36ab56b064010383de9e1c215d430795" title="Logger::format_string" alt="" coords="401,5,547,32"/>
+<area shape="rect" id="node4" href="classLogger.html#a6e3e8fd746af1d93cffa94bc4e7089a5" title="Logger::get_time" alt="" coords="595,5,713,32"/>
 </map>
 </div>
 </p>
@@ -544,18 +638,54 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classLogger.html#a2b548c8904a3386b24b0a031ab19b29b">Logger</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLogger_8cpp_source.html#l00046">46</a> of file <a class="el" href="BufferLogger_8cpp_source.html">BufferLogger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLogger_8cpp_source.html#l00054">54</a> of file <a class="el" href="BufferLogger_8cpp_source.html">BufferLogger.cpp</a>.</p>
 
-<p>References <a class="el" href="BufferLogger_8cpp_source.html#l00059">addToBuffer()</a>.</p>
+<p>References <a class="el" href="BufferLogger_8cpp_source.html#l00072">addToBuffer()</a>.</p>
 
-<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classBufferLogger_aea3c0433691d7e4e4ae144abfb731ef6_cgraph.png" border="0" usemap="#classBufferLogger_aea3c0433691d7e4e4ae144abfb731ef6_cgraph" alt=""/></div>
 <map name="classBufferLogger_aea3c0433691d7e4e4ae144abfb731ef6_cgraph" id="classBufferLogger_aea3c0433691d7e4e4ae144abfb731ef6_cgraph">
 <area shape="rect" id="node2" href="classBufferLogger.html#a26b6114fcf7af9123ff329810e4d54ef" title="BufferLogger::addToBuffer" alt="" coords="175,5,349,32"/>
+<area shape="rect" id="node3" href="classLogger.html#a36ab56b064010383de9e1c215d430795" title="Logger::format_string" alt="" coords="397,5,543,32"/>
+<area shape="rect" id="node4" href="classLogger.html#a6e3e8fd746af1d93cffa94bc4e7089a5" title="Logger::get_time" alt="" coords="591,5,709,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="acf325c9ba3e69f80952ddf492eeef79e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BufferLogger::setBufferCapacity </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>newCapacity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="BufferLogger_8cpp_source.html#l00016">16</a> of file <a class="el" href="BufferLogger_8cpp_source.html">BufferLogger.cpp</a>.</p>
+
+<p>References <a class="el" href="BufferLogger_8hpp_source.html#l00040">bufferCapacity</a>.</p>
+
+<p>Referenced by <a class="el" href="ConsoleWindow_8cpp_source.html#l00006">ConsoleWindow::ConsoleWindow()</a>.</p>
+
+<p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classBufferLogger_acf325c9ba3e69f80952ddf492eeef79e_icgraph.png" border="0" usemap="#classBufferLogger_acf325c9ba3e69f80952ddf492eeef79e_icgraph" alt=""/></div>
+<map name="classBufferLogger_acf325c9ba3e69f80952ddf492eeef79e_icgraph" id="classBufferLogger_acf325c9ba3e69f80952ddf492eeef79e_icgraph">
+<area shape="rect" id="node2" href="classConsoleWindow.html#a54bab5c04a0c06a93ffc2c88f8edb1ba" title="ConsoleWindow::ConsoleWindow" alt="" coords="263,5,483,32"/>
 </map>
 </div>
 </p>
@@ -596,18 +726,20 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classLogger.html#ab307fd2a26a4fc681b5e86e883d353de">Logger</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLogger_8cpp_source.html#l00029">29</a> of file <a class="el" href="BufferLogger_8cpp_source.html">BufferLogger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLogger_8cpp_source.html#l00037">37</a> of file <a class="el" href="BufferLogger_8cpp_source.html">BufferLogger.cpp</a>.</p>
 
-<p>References <a class="el" href="BufferLogger_8cpp_source.html#l00059">addToBuffer()</a>, and <a class="el" href="Logger_8hpp_source.html#l00017">Logger::WARN</a>.</p>
+<p>References <a class="el" href="BufferLogger_8cpp_source.html#l00072">addToBuffer()</a>, and <a class="el" href="Logger_8hpp_source.html#l00019">Logger::WARN</a>.</p>
 
-<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classBufferLogger_a4d05f0a11139572681c84998c32100e2_cgraph.png" border="0" usemap="#classBufferLogger_a4d05f0a11139572681c84998c32100e2_cgraph" alt=""/></div>
 <map name="classBufferLogger_a4d05f0a11139572681c84998c32100e2_cgraph" id="classBufferLogger_a4d05f0a11139572681c84998c32100e2_cgraph">
 <area shape="rect" id="node2" href="classBufferLogger.html#a26b6114fcf7af9123ff329810e4d54ef" title="BufferLogger::addToBuffer" alt="" coords="185,5,360,32"/>
+<area shape="rect" id="node3" href="classLogger.html#a36ab56b064010383de9e1c215d430795" title="Logger::format_string" alt="" coords="408,5,553,32"/>
+<area shape="rect" id="node4" href="classLogger.html#a6e3e8fd746af1d93cffa94bc4e7089a5" title="Logger::get_time" alt="" coords="601,5,720,32"/>
 </map>
 </div>
 </p>
@@ -615,7 +747,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a266375a3973471e03546486e014e4d50"></a>
+<a class="anchor" id="a4ce730f78818e3373a219a33fe69d947"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -623,7 +755,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::string&gt; BufferLogger::buffer</td>
+          <td class="memname">std::list&lt;<a class="el" href="classBufferLogger.html#acd403b2724b2ae806cde9401106d5a22">LogEntry</a>&gt; BufferLogger::buffer</td>
         </tr>
       </table>
   </td>
@@ -633,9 +765,81 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="BufferLogger_8hpp_source.html#l00033">33</a> of file <a class="el" href="BufferLogger_8hpp_source.html">BufferLogger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLogger_8hpp_source.html#l00042">42</a> of file <a class="el" href="BufferLogger_8hpp_source.html">BufferLogger.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="BufferLogger_8cpp_source.html#l00059">addToBuffer()</a>, <a class="el" href="BufferLogger_8cpp_source.html#l00003">BufferLogger()</a>, and <a class="el" href="BufferLogger_8cpp_source.html#l00054">getBuffer()</a>.</p>
+<p>Referenced by <a class="el" href="BufferLogger_8cpp_source.html#l00072">addToBuffer()</a>, <a class="el" href="BufferLogger_8cpp_source.html#l00005">BufferLogger()</a>, and <a class="el" href="BufferLogger_8cpp_source.html#l00062">getBuffer()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa25cc66c89653194c9ac6baec3573427"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BufferLogger::bufferCapacity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="BufferLogger_8hpp_source.html#l00040">40</a> of file <a class="el" href="BufferLogger_8hpp_source.html">BufferLogger.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="BufferLogger_8cpp_source.html#l00072">addToBuffer()</a>, <a class="el" href="BufferLogger_8cpp_source.html#l00005">BufferLogger()</a>, and <a class="el" href="BufferLogger_8cpp_source.html#l00016">setBufferCapacity()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad9e94678a3f11685829aa912157423cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BufferLogger::bufferSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="BufferLogger_8hpp_source.html#l00041">41</a> of file <a class="el" href="BufferLogger_8hpp_source.html">BufferLogger.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="BufferLogger_8cpp_source.html#l00072">addToBuffer()</a>, and <a class="el" href="BufferLogger_8cpp_source.html#l00067">getBufferSize()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8c029a108391dfe5faa6429f28e11736"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int BufferLogger::defaultCapacity = 50</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="BufferLogger_8hpp_source.html#l00037">37</a> of file <a class="el" href="BufferLogger_8hpp_source.html">BufferLogger.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="BufferLogger_8cpp_source.html#l00005">BufferLogger()</a>.</p>
 
 </div>
 </div>
@@ -649,7 +853,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classBufferLogger.html">BufferLogger</a></li>
-    <li class="footer">Generated on Tue Apr 11 2017 20:40:04 for Trade App by
+    <li class="footer">Generated on Fri Jul 21 2017 21:14:23 for Arbitrage Simulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

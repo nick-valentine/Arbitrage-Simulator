@@ -1,3 +1,5 @@
 <map id="Logger::debug" name="Logger::debug">
-<area shape="rect" id="node2" href="$classLogger.html#ae93f62ca3e47716b7120acb032a260f3" title="Logger::~Logger" alt="" coords="157,5,273,32"/>
+<area shape="rect" id="node2" href="$classGame.html#a99fb161fbbe87d25a8b73265a0611e58" title="Game::run" alt="" coords="174,5,257,32"/>
+<area shape="rect" id="node4" href="$classLogger.html#ae93f62ca3e47716b7120acb032a260f3" title="Logger::~Logger" alt="" coords="157,56,273,83"/>
+<area shape="rect" id="node3" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="321,5,372,32"/>
 </map>

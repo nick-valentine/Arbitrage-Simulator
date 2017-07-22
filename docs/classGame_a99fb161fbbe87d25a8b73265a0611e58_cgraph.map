@@ -1,11 +1,13 @@
 <map id="Game::run" name="Game::run">
-<area shape="rect" id="node2" href="$classPlayer.html#a6e3e621902e7d1d718e5cd5c2004f2ef" title="Player::getYX" alt="" coords="178,5,281,32"/>
-<area shape="rect" id="node3" href="$classPlayer.html#a955e68fc1da6565d43649b27a0ecabee" title="Player::move" alt="" coords="180,56,279,83"/>
-<area shape="rect" id="node4" href="$classWorldInteractionInterface.html#a275d3637a9886be9ea98cdafbdd6ae25" title="WorldInteractionInterface\l::movePlayerToCoordinate" alt="" coords="141,107,318,149"/>
-<area shape="rect" id="node5" href="$classCamera.html#af05f81e8e5ba8851826242acbb824086" title="Camera::moveTo" alt="" coords="168,173,291,200"/>
-<area shape="rect" id="node6" href="$classGameWindowLayout.html#a490a59780f8de2c6cad6a6b72ec028a3" title="GameWindowLayout::render" alt="" coords="136,224,323,251"/>
-<area shape="rect" id="node8" href="$classCamera.html#a76ed19c192c25c8e41f4a6bb54ba87b2" title="Render the world and player onto the screen. " alt="" coords="173,281,285,308"/>
-<area shape="rect" id="node7" href="$classGameWindowLayout.html#a66d9862e640242e6ef562fc59305ddfe" title="GameWindowLayout::update\lScreenSize" alt="" coords="371,209,561,250"/>
-<area shape="rect" id="node9" href="$classWorldInteractionInterface.html#ac06c2a9974ff1749af8fe71dbdfe7c98" title="WorldInteractionInterface\l::draw" alt="" coords="382,274,550,315"/>
-<area shape="rect" id="node10" href="$classPlayer.html#aad62851071bf59965833224024a687c1" title="Player::draw" alt="" coords="419,340,513,367"/>
+<area shape="rect" id="node2" href="$classLogger.html#a0dff76f9cf64e4e7acdefaad6987fc07" title="Logger::debug" alt="" coords="177,5,281,32"/>
+<area shape="rect" id="node3" href="$classPlayer.html#a6e3e621902e7d1d718e5cd5c2004f2ef" title="Player::getYX" alt="" coords="178,56,281,83"/>
+<area shape="rect" id="node4" href="$classLogger.html#ac625c9c6d6b843e818fbc51b94fa639a" title="Logger::info" alt="" coords="184,107,275,133"/>
+<area shape="rect" id="node5" href="$classPlayer.html#a955e68fc1da6565d43649b27a0ecabee" title="Player::move" alt="" coords="180,157,279,184"/>
+<area shape="rect" id="node6" href="$classWorldInteractionInterface.html#a275d3637a9886be9ea98cdafbdd6ae25" title="WorldInteractionInterface\l::movePlayerToCoordinate" alt="" coords="141,209,318,250"/>
+<area shape="rect" id="node7" href="$classCamera.html#af05f81e8e5ba8851826242acbb824086" title="Camera::moveTo" alt="" coords="168,275,291,301"/>
+<area shape="rect" id="node8" href="$classGameWindowLayout.html#a490a59780f8de2c6cad6a6b72ec028a3" title="GameWindowLayout::render" alt="" coords="136,325,323,352"/>
+<area shape="rect" id="node10" href="$classCamera.html#a76ed19c192c25c8e41f4a6bb54ba87b2" title="Render the world and player onto the screen. " alt="" coords="173,383,285,409"/>
+<area shape="rect" id="node9" href="$classGameWindowLayout.html#a66d9862e640242e6ef562fc59305ddfe" title="GameWindowLayout::update\lScreenSize" alt="" coords="371,310,561,351"/>
+<area shape="rect" id="node11" href="$classWorldInteractionInterface.html#ac06c2a9974ff1749af8fe71dbdfe7c98" title="WorldInteractionInterface\l::draw" alt="" coords="382,375,550,417"/>
+<area shape="rect" id="node12" href="$classPlayer.html#aad62851071bf59965833224024a687c1" title="Player::draw" alt="" coords="419,441,513,468"/>
 </map>

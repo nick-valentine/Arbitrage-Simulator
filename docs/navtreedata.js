@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "Trade App", "index.html", [
+  [ "Arbitrage Simulator", "index.html", [
     [ "Trade App", "md_README.html", null ],
     [ "Todo List", "todo.html", null ],
     [ "Namespaces", null, [
@@ -28,7 +28,9 @@ var NAVTREE =
       [ "File List", "files.html", "files" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ]
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
+        [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
@@ -37,8 +39,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "AbstractGameObject_8hpp.html",
-"classGameWindow.html#afeef7d049b4838c1c112c2be09fe1cd1",
-"classWorldChunk.html#a9080148ff5a7f4b91dd914b23e573f38"
+"classCursesWindow.html#a47a331cb5d0bae7df6e31e44892c8951",
+"classWorld.html#a518dd91224f21362bba2ec397ef1eb29"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

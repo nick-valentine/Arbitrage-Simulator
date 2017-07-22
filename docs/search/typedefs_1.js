@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['socket_5fptr',['socket_ptr',['../classConnection.html#a46f0ce70fa5cae0398f32340c7c137a4',1,'Connection']]]
+  ['logentry',['LogEntry',['../classBufferLogger.html#acd403b2724b2ae806cde9401106d5a22',1,'BufferLogger']]]
 ];

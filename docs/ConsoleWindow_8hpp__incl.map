@@ -1,7 +1,8 @@
 <map id="ConsoleWindow.hpp" name="ConsoleWindow.hpp">
-<area shape="rect" id="node5" href="$CursesWindow_8hpp.html" title="Window/CursesWindow.hpp" alt="" coords="183,155,369,181"/>
-<area shape="rect" id="node9" href="$BufferLogger_8hpp.html" title="Services/Logger/BufferLogger.hpp" alt="" coords="644,80,863,107"/>
-<area shape="rect" id="node8" href="$Window_8hpp.html" title="Window/Window.hpp" alt="" coords="203,229,349,256"/>
-<area shape="rect" id="node14" href="$Logger_8hpp.html" title="Services/Logger/Logger.hpp" alt="" coords="816,155,1000,181"/>
-<area shape="rect" id="node16" href="$ConfigLoader_8hpp.html" title="ConfigLoader.hpp" alt="" coords="939,229,1063,256"/>
+<area shape="rect" id="node5" href="$ColorPallete_8hpp.html" title="ColorPallete.hpp" alt="" coords="177,80,295,107"/>
+<area shape="rect" id="node6" href="$CursesWindow_8hpp.html" title="Window/CursesWindow.hpp" alt="" coords="183,155,369,181"/>
+<area shape="rect" id="node11" href="$BufferLogger_8hpp.html" title="Services/Logger/BufferLogger.hpp" alt="" coords="667,80,885,107"/>
+<area shape="rect" id="node10" href="$Window_8hpp.html" title="Window/Window.hpp" alt="" coords="203,229,349,256"/>
+<area shape="rect" id="node17" href="$Logger_8hpp.html" title="Services/Logger/Logger.hpp" alt="" coords="684,155,868,181"/>
+<area shape="rect" id="node20" href="$ConfigLoader_8hpp.html" title="ConfigLoader.hpp" alt="" coords="805,229,929,256"/>
 </map>

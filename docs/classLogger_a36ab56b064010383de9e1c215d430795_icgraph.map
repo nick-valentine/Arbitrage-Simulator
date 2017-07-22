@@ -1,0 +1,14 @@
+<map id="Logger::format_string" name="Logger::format_string">
+<area shape="rect" id="node2" href="$classBufferLogger.html#a26b6114fcf7af9123ff329810e4d54ef" title="BufferLogger::addToBuffer" alt="" coords="199,132,373,159"/>
+<area shape="rect" id="node8" href="$classConsoleLogger.html#ac10de4719bfdd1352d900647b61663f7" title="ConsoleLogger::print" alt="" coords="215,335,357,361"/>
+<area shape="rect" id="node3" href="$classBufferLogger.html#aceea37311ba9af6cf559e07f5593030f" title="BufferLogger::debug" alt="" coords="428,5,567,32"/>
+<area shape="rect" id="node4" href="$classBufferLogger.html#a369d2ba5ea74e336ad064842cf573d89" title="BufferLogger::error" alt="" coords="432,56,563,83"/>
+<area shape="rect" id="node5" href="$classBufferLogger.html#acf2d666893839ab1c51f30cdf106c784" title="BufferLogger::info" alt="" coords="435,107,560,133"/>
+<area shape="rect" id="node6" href="$classBufferLogger.html#aea3c0433691d7e4e4ae144abfb731ef6" title="BufferLogger::log" alt="" coords="437,157,558,184"/>
+<area shape="rect" id="node7" href="$classBufferLogger.html#a4d05f0a11139572681c84998c32100e2" title="BufferLogger::warn" alt="" coords="431,208,563,235"/>
+<area shape="rect" id="node9" href="$classConsoleLogger.html#accf2c514d50faca4d5d5d9b1246925a1" title="ConsoleLogger::debug" alt="" coords="421,259,573,285"/>
+<area shape="rect" id="node10" href="$classConsoleLogger.html#a39f299404bbb3db80b54d5463f814700" title="ConsoleLogger::error" alt="" coords="426,309,569,336"/>
+<area shape="rect" id="node11" href="$classConsoleLogger.html#aaf10bf516a2585b7020bdd6dff2eba95" title="ConsoleLogger::info" alt="" coords="428,360,567,387"/>
+<area shape="rect" id="node12" href="$classConsoleLogger.html#a10fa8072165bf024f0525f276ec2820f" title="ConsoleLogger::log" alt="" coords="430,411,565,437"/>
+<area shape="rect" id="node13" href="$classConsoleLogger.html#ac95c55d919e7ca8e9501e6429d216c77" title="ConsoleLogger::warn" alt="" coords="425,461,570,488"/>
+</map>

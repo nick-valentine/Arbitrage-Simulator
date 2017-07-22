@@ -1,6 +1,7 @@
 var searchData=
 [
   ['trade_20app',['Trade App',['../md_README.html',1,'']]],
+  ['targetdirectories_2etxt',['TargetDirectories.txt',['../TargetDirectories_8txt.html',1,'']]],
   ['test_2etxt',['test.txt',['../test_8txt.html',1,'']]],
   ['textelement',['TextElement',['../structWindow_1_1TextElement.html',1,'Window']]],
   ['thread',['thread',['../classServerSession.html#aba7ba3719385abf86d91e6595866d4f2',1,'ServerSession']]],

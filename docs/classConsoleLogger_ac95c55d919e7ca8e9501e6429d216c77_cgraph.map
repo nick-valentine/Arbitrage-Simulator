@@ -1,3 +1,5 @@
 <map id="ConsoleLogger::warn" name="ConsoleLogger::warn">
 <area shape="rect" id="node2" href="$classConsoleLogger.html#ac10de4719bfdd1352d900647b61663f7" title="ConsoleLogger::print" alt="" coords="199,5,341,32"/>
+<area shape="rect" id="node3" href="$classLogger.html#a36ab56b064010383de9e1c215d430795" title="Logger::format_string" alt="" coords="389,5,535,32"/>
+<area shape="rect" id="node4" href="$classLogger.html#a6e3e8fd746af1d93cffa94bc4e7089a5" title="Logger::get_time" alt="" coords="583,5,701,32"/>
 </map>

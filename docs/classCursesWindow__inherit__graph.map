@@ -1,5 +1,5 @@
 <map id="CursesWindow" name="CursesWindow">
-<area shape="rect" id="node3" href="$classConsoleWindow.html" title="ConsoleWindow. " alt="" coords="5,681,151,803"/>
-<area shape="rect" id="node4" href="$classGameWindow.html" title="GameWindow. " alt="" coords="175,652,307,832"/>
-<area shape="rect" id="node2" href="$classWindow.html" title="Window. " alt="" coords="110,5,209,273"/>
+<area shape="rect" id="node3" href="$classConsoleWindow.html" title="ConsoleWindow. " alt="" coords="5,652,159,832"/>
+<area shape="rect" id="node4" href="$classGameWindow.html" title="GameWindow. " alt="" coords="183,652,315,832"/>
+<area shape="rect" id="node2" href="$classWindow.html" title="Window. " alt="" coords="115,5,214,273"/>
 </map>

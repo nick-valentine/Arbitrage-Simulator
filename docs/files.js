@@ -15,6 +15,8 @@ var files =
     [ "City.hpp", "City_8hpp.html", [
       [ "City", "classCity.html", "classCity" ]
     ] ],
+    [ "CMakeCCompilerId.c", "CMakeCCompilerId_8c.html", "CMakeCCompilerId_8c" ],
+    [ "CMakeCXXCompilerId.cpp", "CMakeCXXCompilerId_8cpp.html", "CMakeCXXCompilerId_8cpp" ],
     [ "ColorPallete.cpp", "ColorPallete_8cpp.html", null ],
     [ "ColorPallete.hpp", "ColorPallete_8hpp.html", [
       [ "ColorPallete", "classColorPallete.html", "classColorPallete" ]
@@ -39,6 +41,8 @@ var files =
     [ "CursesWindow.hpp", "CursesWindow_8hpp.html", [
       [ "CursesWindow", "classCursesWindow.html", "classCursesWindow" ]
     ] ],
+    [ "feature_tests.c", "feature__tests_8c.html", "feature__tests_8c" ],
+    [ "feature_tests.cxx", "feature__tests_8cxx.html", "feature__tests_8cxx" ],
     [ "Game.cpp", "Game_8cpp.html", null ],
     [ "game.cpp", "game_8cpp.html", "game_8cpp" ],
     [ "Game.hpp", "Game_8hpp.html", [

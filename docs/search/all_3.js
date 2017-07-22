@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['debug',['debug',['../classBufferLogger.html#aceea37311ba9af6cf559e07f5593030f',1,'BufferLogger::debug()'],['../classConsoleLogger.html#accf2c514d50faca4d5d5d9b1246925a1',1,'ConsoleLogger::debug()'],['../classLogger.html#a0dff76f9cf64e4e7acdefaad6987fc07',1,'Logger::debug(const char *fmt,...)=0'],['../classLogger.html#ac744681e23720966b5f430ec2060da36abdc8d840ac4b73e1bd3212184af8f85e',1,'Logger::DEBUG()']]],
+  ['date_5ftime',['date_time',['../CMakeCache_8txt.html#a2ebe356a2a4f9bab3a6c50f65ccc86d5',1,'CMakeCache.txt']]],
+  ['debug',['DEBUG',['../classLogger.html#ac744681e23720966b5f430ec2060da36abdc8d840ac4b73e1bd3212184af8f85e',1,'Logger::DEBUG()'],['../classBufferLogger.html#aceea37311ba9af6cf559e07f5593030f',1,'BufferLogger::debug()'],['../classConsoleLogger.html#accf2c514d50faca4d5d5d9b1246925a1',1,'ConsoleLogger::debug()'],['../classLogger.html#a0dff76f9cf64e4e7acdefaad6987fc07',1,'Logger::debug()']]],
+  ['dec',['DEC',['../CMakeCCompilerId_8c.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC():&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC():&#160;CMakeCXXCompilerId.cpp']]],
+  ['defaultcapacity',['defaultCapacity',['../classBufferLogger.html#a8c029a108391dfe5faa6429f28e11736',1,'BufferLogger']]],
   ['defaultportnumber',['defaultPortNumber',['../classServer.html#acf664ae32511bb3c5c974c20f1de44c9',1,'Server']]],
   ['defaultworldname',['defaultWorldName',['../classGame.html#a3ff679bd07628b7fc5945ef700b7515f',1,'Game::defaultWorldName()'],['../classServer.html#a19331a941a3c32846697bf75a27deabb',1,'Server::defaultWorldName()']]],
   ['delwindow',['delWindow',['../classGameWindowLayout.html#a5b6b384d768760c0954c463a465086f1',1,'GameWindowLayout']]],

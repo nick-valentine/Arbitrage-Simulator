@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Trade App: ConsoleWindow Class Reference</title>
+<title>Arbitrage Simulator: ConsoleWindow Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Trade App
+   <div id="projectname">Arbitrage Simulator
    </div>
    <div id="projectbrief">A simple game for trading fictional things.</div>
   </td>
@@ -109,7 +109,10 @@ $(document).ready(function(){initNavTree('classConsoleWindow.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classConsoleWindow-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ConsoleWindow Class Reference</div>  </div>
@@ -127,8 +130,8 @@ $(document).ready(function(){initNavTree('classConsoleWindow.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classConsoleWindow__inherit__graph.png" border="0" usemap="#ConsoleWindow_inherit__map" alt="Inheritance graph"/></div>
 <map name="ConsoleWindow_inherit__map" id="ConsoleWindow_inherit__map">
-<area shape="rect" id="node2" href="classCursesWindow.html" title="CursesWindow. " alt="" coords="9,321,147,604"/>
-<area shape="rect" id="node3" href="classWindow.html" title="Window. " alt="" coords="29,5,127,273"/>
+<area shape="rect" id="node2" href="classCursesWindow.html" title="CursesWindow. " alt="" coords="13,321,151,604"/>
+<area shape="rect" id="node3" href="classWindow.html" title="Window. " alt="" coords="33,5,131,273"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -140,8 +143,9 @@ $(document).ready(function(){initNavTree('classConsoleWindow.html','');});
 <map name="ConsoleWindow_coll__map" id="ConsoleWindow_coll__map">
 <area shape="rect" id="node2" href="classCursesWindow.html" title="CursesWindow. " alt="" coords="5,323,144,605"/>
 <area shape="rect" id="node3" href="classWindow.html" title="Window. " alt="" coords="25,5,124,273"/>
-<area shape="rect" id="node4" href="classBufferLogger.html" title="BufferLogger. " alt="" coords="169,367,293,561"/>
-<area shape="rect" id="node5" href="classLogger.html" title="{Logger\n|# logLevel\l|+ ~Logger()\l+ debug()\l+ info()\l+ warn()\l+ error()\l+ log()\l+ configure()\l}" alt="" coords="183,57,278,222"/>
+<area shape="rect" id="node4" href="classBufferLogger.html" title="BufferLogger. " alt="" coords="168,330,315,598"/>
+<area shape="rect" id="node5" href="classLogger.html" title="{Logger\n|# levelStrings\l# logLevel\l|+ ~Logger()\l+ debug()\l+ info()\l+ warn()\l+ error()\l+ log()\l+ configure()\l# format_string()\l# get_time()\l}" alt="" coords="183,35,300,244"/>
+<area shape="rect" id="node6" href="classColorPallete.html" title="CollorPallete. " alt="" coords="339,381,455,547"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -164,8 +168,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abd721c8e7b4cfc5da1e87123fd3b2601 inherit pub_methods_classCursesWindow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95c26d2817aea2742937c8b83fbc0b27 inherit pub_methods_classCursesWindow"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCursesWindow.html#a95c26d2817aea2742937c8b83fbc0b27">init</a> ()</td></tr>
 <tr class="separator:a95c26d2817aea2742937c8b83fbc0b27 inherit pub_methods_classCursesWindow"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a737f13ca890b09545e00270a6999a4b4 inherit pub_methods_classCursesWindow"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCursesWindow.html#a737f13ca890b09545e00270a6999a4b4">putstr</a> (int <a class="el" href="classCursesWindow.html#a1e1696461ab4fc524306339250551bd8">y</a>, int <a class="el" href="classCursesWindow.html#a1a8df641c7039c8885fcfecd27e0f492">x</a>, std::string str)</td></tr>
-<tr class="separator:a737f13ca890b09545e00270a6999a4b4 inherit pub_methods_classCursesWindow"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d7afaf145fd706a3a0856ec4be932f1 inherit pub_methods_classCursesWindow"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCursesWindow.html#a7d7afaf145fd706a3a0856ec4be932f1">putstr</a> (int <a class="el" href="classCursesWindow.html#a1e1696461ab4fc524306339250551bd8">y</a>, int <a class="el" href="classCursesWindow.html#a1a8df641c7039c8885fcfecd27e0f492">x</a>, std::string str, int color=0)</td></tr>
+<tr class="separator:a7d7afaf145fd706a3a0856ec4be932f1 inherit pub_methods_classCursesWindow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfe24bc978bab88c3349b505671ad61a inherit pub_methods_classCursesWindow"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCursesWindow.html#acfe24bc978bab88c3349b505671ad61a">put</a> (unsigned int colorPair, unsigned int layer, char c, int <a class="el" href="classCursesWindow.html#a1e1696461ab4fc524306339250551bd8">y</a>, int <a class="el" href="classCursesWindow.html#a1a8df641c7039c8885fcfecd27e0f492">x</a>)</td></tr>
 <tr class="separator:acfe24bc978bab88c3349b505671ad61a inherit pub_methods_classCursesWindow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac811aff97a442f23b51872ead3584a93 inherit pub_methods_classCursesWindow"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCursesWindow.html#ac811aff97a442f23b51872ead3584a93">put</a> (<a class="el" href="structWindow_1_1TextElement.html">TextElement</a> c, int <a class="el" href="classCursesWindow.html#a1e1696461ab4fc524306339250551bd8">y</a>, int <a class="el" href="classCursesWindow.html#a1a8df641c7039c8885fcfecd27e0f492">x</a>)</td></tr>
@@ -190,10 +194,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a62b4a97b3c2e492f1d9a46092011e2d9 inherit pub_methods_classWindow"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a62b4a97b3c2e492f1d9a46092011e2d9">~Window</a> ()</td></tr>
 <tr class="separator:a62b4a97b3c2e492f1d9a46092011e2d9 inherit pub_methods_classWindow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a7ea3524ef254fa4a89e1d722d974c75e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleWindow.html#a7ea3524ef254fa4a89e1d722d974c75e">setPallete</a> ()</td></tr>
+<tr class="separator:a7ea3524ef254fa4a89e1d722d974c75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a3bd084ed8989e85735d4336d66611c7d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleWindow.html#a3bd084ed8989e85735d4336d66611c7d">initColorPallete</a> ()</td></tr>
+<tr class="separator:a3bd084ed8989e85735d4336d66611c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a9c551ec130f7a88b5908f2feb8ffe471"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBufferLogger.html">BufferLogger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleWindow.html#a9c551ec130f7a88b5908f2feb8ffe471">logger</a></td></tr>
 <tr class="separator:a9c551ec130f7a88b5908f2feb8ffe471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a6327308b284c2b1caebc36219fd2450b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classColorPallete.html">ColorPallete</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleWindow.html#a6327308b284c2b1caebc36219fd2450b">consolePallete</a> = <a class="el" href="classColorPallete.html">ColorPallete</a>()</td></tr>
+<tr class="separator:a6327308b284c2b1caebc36219fd2450b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae13e55979ecf7f62e1cf538833b9423d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleWindow.html#ae13e55979ecf7f62e1cf538833b9423d">colorPalleteInitialized</a> = false</td></tr>
+<tr class="separator:ae13e55979ecf7f62e1cf538833b9423d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -219,7 +240,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p><a class="el" href="classConsoleWindow.html" title="ConsoleWindow. ">ConsoleWindow</a>. </p>
 <p>Buffer and Curses window for a displaying in game log </p>
 
-<p>Definition at line <a class="el" href="ConsoleWindow_8hpp_source.html#l00015">15</a> of file <a class="el" href="ConsoleWindow_8hpp_source.html">ConsoleWindow.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ConsoleWindow_8hpp_source.html#l00016">16</a> of file <a class="el" href="ConsoleWindow_8hpp_source.html">ConsoleWindow.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a54bab5c04a0c06a93ffc2c88f8edb1ba"></a>
 <div class="memitem">
@@ -234,7 +255,23 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ConsoleWindow_8cpp_source.html#l00003">3</a> of file <a class="el" href="ConsoleWindow_8cpp_source.html">ConsoleWindow.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConsoleWindow_8cpp_source.html#l00006">6</a> of file <a class="el" href="ConsoleWindow_8cpp_source.html">ConsoleWindow.cpp</a>.</p>
+
+<p>References <a class="el" href="ConsoleWindow_8cpp_source.html#l00047">initColorPallete()</a>, <a class="el" href="ConsoleWindow_8hpp_source.html#l00030">logger</a>, and <a class="el" href="BufferLogger_8cpp_source.html#l00016">BufferLogger::setBufferCapacity()</a>.</p>
+
+<p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classConsoleWindow_a54bab5c04a0c06a93ffc2c88f8edb1ba_cgraph.png" border="0" usemap="#classConsoleWindow_a54bab5c04a0c06a93ffc2c88f8edb1ba_cgraph" alt=""/></div>
+<map name="classConsoleWindow_a54bab5c04a0c06a93ffc2c88f8edb1ba_cgraph" id="classConsoleWindow_a54bab5c04a0c06a93ffc2c88f8edb1ba_cgraph">
+<area shape="rect" id="node2" href="classConsoleWindow.html#a3bd084ed8989e85735d4336d66611c7d" title="ConsoleWindow::initColor\lPallete" alt="" coords="291,5,465,47"/>
+<area shape="rect" id="node4" href="classBufferLogger.html#acf325c9ba3e69f80952ddf492eeef79e" title="BufferLogger::setBufferCapacity" alt="" coords="273,71,483,98"/>
+<area shape="rect" id="node3" href="classColorPallete.html#a03f2ad8887f2628c4aa0c7b61729671b" title="ColorPallete::addColor" alt="" coords="531,13,684,39"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -259,7 +296,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ConsoleWindow_8cpp_source.html#l00008">8</a> of file <a class="el" href="ConsoleWindow_8cpp_source.html">ConsoleWindow.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConsoleWindow_8cpp_source.html#l00012">12</a> of file <a class="el" href="ConsoleWindow_8cpp_source.html">ConsoleWindow.cpp</a>.</p>
 
 </div>
 </div>
@@ -277,9 +314,62 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ConsoleWindow_8cpp_source.html#l00032">32</a> of file <a class="el" href="ConsoleWindow_8cpp_source.html">ConsoleWindow.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConsoleWindow_8cpp_source.html#l00037">37</a> of file <a class="el" href="ConsoleWindow_8cpp_source.html">ConsoleWindow.cpp</a>.</p>
 
-<p>References <a class="el" href="ConsoleWindow_8hpp_source.html#l00025">logger</a>.</p>
+<p>References <a class="el" href="ConsoleWindow_8hpp_source.html#l00030">logger</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3bd084ed8989e85735d4336d66611c7d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConsoleWindow::initColorPallete </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ConsoleWindow_8cpp_source.html#l00047">47</a> of file <a class="el" href="ConsoleWindow_8cpp_source.html">ConsoleWindow.cpp</a>.</p>
+
+<p>References <a class="el" href="ColorPallete_8cpp_source.html#l00008">ColorPallete::addColor()</a>, and <a class="el" href="ConsoleWindow_8hpp_source.html#l00032">colorPalleteInitialized</a>.</p>
+
+<p>Referenced by <a class="el" href="ConsoleWindow_8cpp_source.html#l00006">ConsoleWindow()</a>.</p>
+
+<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classConsoleWindow_a3bd084ed8989e85735d4336d66611c7d_cgraph.png" border="0" usemap="#classConsoleWindow_a3bd084ed8989e85735d4336d66611c7d_cgraph" alt=""/></div>
+<map name="classConsoleWindow_a3bd084ed8989e85735d4336d66611c7d_cgraph" id="classConsoleWindow_a3bd084ed8989e85735d4336d66611c7d_cgraph">
+<area shape="rect" id="node2" href="classColorPallete.html#a03f2ad8887f2628c4aa0c7b61729671b" title="ColorPallete::addColor" alt="" coords="227,13,380,39"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classConsoleWindow_a3bd084ed8989e85735d4336d66611c7d_icgraph.png" border="0" usemap="#classConsoleWindow_a3bd084ed8989e85735d4336d66611c7d_icgraph" alt=""/></div>
+<map name="classConsoleWindow_a3bd084ed8989e85735d4336d66611c7d_icgraph" id="classConsoleWindow_a3bd084ed8989e85735d4336d66611c7d_icgraph">
+<area shape="rect" id="node2" href="classConsoleWindow.html#a54bab5c04a0c06a93ffc2c88f8edb1ba" title="ConsoleWindow::ConsoleWindow" alt="" coords="227,13,447,39"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -306,23 +396,63 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classCursesWindow.html#ac06799b415fada8c68faffc6d5c8f034">CursesWindow</a>.</p>
 
-<p>Definition at line <a class="el" href="ConsoleWindow_8cpp_source.html#l00013">13</a> of file <a class="el" href="ConsoleWindow_8cpp_source.html">ConsoleWindow.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConsoleWindow_8cpp_source.html#l00017">17</a> of file <a class="el" href="ConsoleWindow_8cpp_source.html">ConsoleWindow.cpp</a>.</p>
 
-<p>References <a class="el" href="CursesWindow_8cpp_source.html#l00056">CursesWindow::clear()</a>, <a class="el" href="BufferLogger_8cpp_source.html#l00054">BufferLogger::getBuffer()</a>, <a class="el" href="CursesWindow_8cpp_source.html#l00097">CursesWindow::getHeight()</a>, <a class="el" href="CursesWindow_8cpp_source.html#l00102">CursesWindow::getWidth()</a>, <a class="el" href="CursesWindow_8hpp_source.html#l00046">CursesWindow::height</a>, <a class="el" href="ConsoleWindow_8hpp_source.html#l00025">logger</a>, <a class="el" href="CursesWindow_8cpp_source.html#l00034">CursesWindow::putstr()</a>, <a class="el" href="CursesWindow_8cpp_source.html#l00061">CursesWindow::render()</a>, and <a class="el" href="CursesWindow_8hpp_source.html#l00047">CursesWindow::width</a>.</p>
+<p>References <a class="el" href="CursesWindow_8cpp_source.html#l00060">CursesWindow::clear()</a>, <a class="el" href="BufferLogger_8cpp_source.html#l00062">BufferLogger::getBuffer()</a>, <a class="el" href="BufferLogger_8cpp_source.html#l00067">BufferLogger::getBufferSize()</a>, <a class="el" href="CursesWindow_8cpp_source.html#l00101">CursesWindow::getHeight()</a>, <a class="el" href="CursesWindow_8cpp_source.html#l00106">CursesWindow::getWidth()</a>, <a class="el" href="CursesWindow_8hpp_source.html#l00046">CursesWindow::height</a>, <a class="el" href="ConsoleWindow_8hpp_source.html#l00030">logger</a>, <a class="el" href="CursesWindow_8cpp_source.html#l00034">CursesWindow::putstr()</a>, <a class="el" href="CursesWindow_8cpp_source.html#l00065">CursesWindow::render()</a>, and <a class="el" href="CursesWindow_8hpp_source.html#l00047">CursesWindow::width</a>.</p>
 
-<p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classConsoleWindow_aadb74409828844cbde772014fa793a6d_cgraph.png" border="0" usemap="#classConsoleWindow_aadb74409828844cbde772014fa793a6d_cgraph" alt=""/></div>
 <map name="classConsoleWindow_aadb74409828844cbde772014fa793a6d_cgraph" id="classConsoleWindow_aadb74409828844cbde772014fa793a6d_cgraph">
-<area shape="rect" id="node2" href="classCursesWindow.html#a1b22fdef6622870e5caa7408597c1191" title="CursesWindow::clear" alt="" coords="229,5,375,32"/>
-<area shape="rect" id="node3" href="classBufferLogger.html#a4b816140f15b9b9716d29b529928e1c0" title="BufferLogger::getBuffer" alt="" coords="223,56,381,83"/>
-<area shape="rect" id="node4" href="classCursesWindow.html#ad7e945e609ec4e036b2690b953c3580b" title="CursesWindow::getHeight" alt="" coords="215,107,389,133"/>
-<area shape="rect" id="node5" href="classCursesWindow.html#a47a331cb5d0bae7df6e31e44892c8951" title="CursesWindow::getWidth" alt="" coords="217,157,387,184"/>
-<area shape="rect" id="node6" href="classCursesWindow.html#a737f13ca890b09545e00270a6999a4b4" title="CursesWindow::putstr" alt="" coords="226,208,378,235"/>
-<area shape="rect" id="node7" href="classCursesWindow.html#ac06799b415fada8c68faffc6d5c8f034" title="CursesWindow::render" alt="" coords="225,259,379,285"/>
+<area shape="rect" id="node2" href="classCursesWindow.html#a1b22fdef6622870e5caa7408597c1191" title="CursesWindow::clear" alt="" coords="233,5,379,32"/>
+<area shape="rect" id="node3" href="classBufferLogger.html#a3edc8aeeae73f886da26cf2c9d2954c0" title="BufferLogger::getBuffer" alt="" coords="227,56,385,83"/>
+<area shape="rect" id="node4" href="classBufferLogger.html#a8666ad4c21f3ab78529834c9ef8d6201" title="BufferLogger::getBufferSize" alt="" coords="215,107,397,133"/>
+<area shape="rect" id="node5" href="classCursesWindow.html#ad7e945e609ec4e036b2690b953c3580b" title="CursesWindow::getHeight" alt="" coords="219,157,393,184"/>
+<area shape="rect" id="node6" href="classCursesWindow.html#a47a331cb5d0bae7df6e31e44892c8951" title="CursesWindow::getWidth" alt="" coords="221,208,391,235"/>
+<area shape="rect" id="node7" href="classCursesWindow.html#a7d7afaf145fd706a3a0856ec4be932f1" title="CursesWindow::putstr" alt="" coords="230,259,382,285"/>
+<area shape="rect" id="node8" href="classCursesWindow.html#ac06799b415fada8c68faffc6d5c8f034" title="CursesWindow::render" alt="" coords="229,309,383,336"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7ea3524ef254fa4a89e1d722d974c75e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConsoleWindow::setPallete </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ConsoleWindow_8cpp_source.html#l00042">42</a> of file <a class="el" href="ConsoleWindow_8cpp_source.html">ConsoleWindow.cpp</a>.</p>
+
+<p>References <a class="el" href="ColorPallete_8cpp_source.html#l00015">ColorPallete::setCurrent()</a>.</p>
+
+<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classConsoleWindow_a7ea3524ef254fa4a89e1d722d974c75e_cgraph.png" border="0" usemap="#classConsoleWindow_a7ea3524ef254fa4a89e1d722d974c75e_cgraph" alt=""/></div>
+<map name="classConsoleWindow_a7ea3524ef254fa4a89e1d722d974c75e_cgraph" id="classConsoleWindow_a7ea3524ef254fa4a89e1d722d974c75e_cgraph">
+<area shape="rect" id="node2" href="classColorPallete.html#af03dece923247d3abd4f6ecbf344474b" title="ColorPallete::setCurrent" alt="" coords="236,5,399,32"/>
 </map>
 </div>
 </p>
@@ -330,6 +460,52 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ae13e55979ecf7f62e1cf538833b9423d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConsoleWindow::colorPalleteInitialized = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ConsoleWindow_8hpp_source.html#l00032">32</a> of file <a class="el" href="ConsoleWindow_8hpp_source.html">ConsoleWindow.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ConsoleWindow_8cpp_source.html#l00047">initColorPallete()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6327308b284c2b1caebc36219fd2450b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classColorPallete.html">ColorPallete</a> ConsoleWindow::consolePallete = <a class="el" href="classColorPallete.html">ColorPallete</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ConsoleWindow_8hpp_source.html#l00031">31</a> of file <a class="el" href="ConsoleWindow_8hpp_source.html">ConsoleWindow.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a9c551ec130f7a88b5908f2feb8ffe471"></a>
 <div class="memitem">
 <div class="memproto">
@@ -348,9 +524,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ConsoleWindow_8hpp_source.html#l00025">25</a> of file <a class="el" href="ConsoleWindow_8hpp_source.html">ConsoleWindow.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ConsoleWindow_8hpp_source.html#l00030">30</a> of file <a class="el" href="ConsoleWindow_8hpp_source.html">ConsoleWindow.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ConsoleWindow_8cpp_source.html#l00032">getLogger()</a>, and <a class="el" href="ConsoleWindow_8cpp_source.html#l00013">render()</a>.</p>
+<p>Referenced by <a class="el" href="ConsoleWindow_8cpp_source.html#l00006">ConsoleWindow()</a>, <a class="el" href="ConsoleWindow_8cpp_source.html#l00037">getLogger()</a>, and <a class="el" href="ConsoleWindow_8cpp_source.html#l00017">render()</a>.</p>
 
 </div>
 </div>
@@ -364,7 +540,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classConsoleWindow.html">ConsoleWindow</a></li>
-    <li class="footer">Generated on Tue Apr 11 2017 20:40:04 for Trade App by
+    <li class="footer">Generated on Fri Jul 21 2017 21:14:23 for Arbitrage Simulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

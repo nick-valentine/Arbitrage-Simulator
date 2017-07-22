@@ -1,8 +1,8 @@
 <map id="BufferLogger.hpp" name="BufferLogger.hpp">
-<area shape="rect" id="node2" href="$ConsoleWindow_8hpp.html" title="ConsoleWindow.hpp" alt="" coords="93,80,236,107"/>
-<area shape="rect" id="node7" href="$BufferLogger_8cpp.html" title="BufferLogger.cpp" alt="" coords="260,80,381,107"/>
-<area shape="rect" id="node3" href="$Game_8hpp.html" title="Game.hpp" alt="" coords="55,155,138,181"/>
-<area shape="rect" id="node6" href="$ConsoleWindow_8cpp.html" title="ConsoleWindow.cpp" alt="" coords="161,155,304,181"/>
-<area shape="rect" id="node4" href="$game_8cpp.html" title="game.cpp" alt="" coords="5,229,84,256"/>
-<area shape="rect" id="node5" href="$Game_8cpp.html" title="Game.cpp" alt="" coords="109,229,191,256"/>
+<area shape="rect" id="node2" href="$BufferLogger_8cpp.html" title="BufferLogger.cpp" alt="" coords="5,80,127,107"/>
+<area shape="rect" id="node3" href="$ConsoleWindow_8hpp.html" title="ConsoleWindow.hpp" alt="" coords="151,80,293,107"/>
+<area shape="rect" id="node4" href="$Game_8hpp.html" title="Game.hpp" alt="" coords="113,155,195,181"/>
+<area shape="rect" id="node7" href="$ConsoleWindow_8cpp.html" title="ConsoleWindow.cpp" alt="" coords="219,155,361,181"/>
+<area shape="rect" id="node5" href="$game_8cpp.html" title="game.cpp" alt="" coords="63,229,141,256"/>
+<area shape="rect" id="node6" href="$Game_8cpp.html" title="Game.cpp" alt="" coords="166,229,249,256"/>
 </map>

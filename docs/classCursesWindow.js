@@ -14,7 +14,7 @@ var classCursesWindow =
     [ "move", "classCursesWindow.html#a058be5cf240fc2e1ae26a7446824d664", null ],
     [ "put", "classCursesWindow.html#acfe24bc978bab88c3349b505671ad61a", null ],
     [ "put", "classCursesWindow.html#ac811aff97a442f23b51872ead3584a93", null ],
-    [ "putstr", "classCursesWindow.html#a737f13ca890b09545e00270a6999a4b4", null ],
+    [ "putstr", "classCursesWindow.html#a7d7afaf145fd706a3a0856ec4be932f1", null ],
     [ "render", "classCursesWindow.html#ac06799b415fada8c68faffc6d5c8f034", null ],
     [ "resize", "classCursesWindow.html#a4001dd4ff7f12e372fada557f2ffa2df", null ],
     [ "height", "classCursesWindow.html#a52eb5eedd5549d68bf6890c04a192790", null ],
