@@ -1,0 +1,19 @@
+set (SOURCES
+    ${SOURCES}
+    ${CMAKE_CURRENT_SOURCE_DIR}/Player.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/Tile.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/World.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/WorldChunk.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/City.cpp
+    PARENT_SCOPE
+)
+set (HEADERS
+    ${HEADERS}
+    ${CMAKE_CURRENT_SOURCE_DIR}/Player.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/Tile.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/World.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/WorldChunk.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/City.hpp
+    PARENT_SCOPE
+)
+
