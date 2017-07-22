@@ -1,6 +1,6 @@
 #include "WorldGen/Pass/AbstractPass.hpp"
 
-void AbstractPass::execute(World *world, boost::shared_prt<Logger> logger)
+void AbstractPass::execute(World *world, boost::shared_ptr<Logger> logger)
 {
     for (int i = 0; i < world->chunks.size(); ++i) {
         for (int j = 0; j < world->chunks[i].size(); ++j) {

@@ -15,7 +15,7 @@ Generator::~Generator()
 Generator::Generator(const Generator &other)
 {
     this->passes = std::vector<AbstractPass*>();
-    for (int i = 0; i < this->passes.size(); ++i) {
+    for (int i = 0; i < other.passes.size(); ++i) {
         this->passes.push_back(other.passes[i]->clone());
     }
 }
@@ -23,7 +23,7 @@ Generator::Generator(const Generator &other)
 Generator *Generator::operator=(const Generator &other)
 {
     this->passes = std::vector<AbstractPass*>();
-    for (int i = 0; i < this->passes.size(); ++i) {
+    for (int i = 0; i < other.passes.size(); ++i) {
         this->passes.push_back(other.passes[i]->clone());
     }
 }
@@ -48,10 +48,12 @@ void Generator::addPass(AbstractPass *pass)
     this->passes.push_back(pass);
 }
 
-void Generator::execute(World *world, boost::shared_prt<Logger> logger)
+void Generator::execute(World *world, boost::shared_ptr<Logger> logger)
 {
     for (int i = 0; i < this->passes.size(); ++i) {
-        logger->info("%s", this->passes[i]->getName());
+        logger->info("Executing Generator Pass");
+        logger->info(this->passes[i]->getName().c_str());
         this->passes[i]->execute(world, logger);
     }
+    logger->info("Done executing compiler passes");
 }

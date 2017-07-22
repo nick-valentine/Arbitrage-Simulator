@@ -2,6 +2,7 @@
 #define LOCAL_WORLD_INTERACTION
 
 #include <string>
+#include <boost/shared_ptr.hpp>
 
 #include "GameObjects/World.hpp"
 #include "Window/Window.hpp"
@@ -19,7 +20,7 @@ public:
     LocalWorldInteraction();
     LocalWorldInteraction(std::string worldName);
 
-    void loadWorld(Logger *logger);
+    void loadWorld(boost::shared_ptr<Logger> logger);
     void draw(Window::window_ptr window);
     void movePlayerToCoordinate(int y, int x);
     WorldChunk getChunk(int y, int x) const;

@@ -9,7 +9,7 @@ NetworkedWorldInteraction::NetworkedWorldInteraction(std::string server, std::st
     this->chunksLoaded = std::vector< std::pair<int, int> >();
 }
 
-void NetworkedWorldInteraction::loadWorld(Logger *logger)
+void NetworkedWorldInteraction::loadWorld(boost::shared_ptr<Logger> logger)
 {
     if (!this->handShake()) {
         std::cerr<<"Could not connect to server";
