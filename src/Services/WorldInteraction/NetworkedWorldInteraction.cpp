@@ -40,8 +40,15 @@ void NetworkedWorldInteraction::movePlayerToCoordinate(int y, int x)
 
     int chunkX, chunkY, localX, localY;
     this->playerCoordinatesToChunkCoordinates(chunkY, chunkX, localY, localX);
-    if (!this->hasChunkLoaded(chunkY, chunkX)) {
-        this->fetchChunk(chunkY, chunkX);
+    for (int i = chunkY-1; i <= chunkY+1; ++i) {
+        for (int j = chunkX-1; j <= chunkX+1; ++j) {
+            if (
+                this->chunkInWorld(i,j) &&
+                !this->hasChunkLoaded(i, j)
+            ) {
+                this->fetchChunk(i, j);
+            }
+        }
     }
 }
 

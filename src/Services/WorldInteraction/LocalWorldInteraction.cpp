@@ -56,6 +56,17 @@ void LocalWorldInteraction::globalCoordinatesToChunkCoordinates(
     outX = inX % this->chunkWidth;
 }
 
+bool LocalWorldInteraction::chunkInWorld(int chunkY, int chunkX)
+{
+    if (
+        chunkY > 0 && chunkY < World::getWorldHeight() &&
+        chunkX > 0 && chunkX < World::getWorldWidth()
+    ) {
+        return true;
+    }
+    return false;
+}
+
 WorldChunk LocalWorldInteraction::getChunk(int y, int x) const
 {
     if (y < this->chunks.size() && x < this->chunks[y].size()) {

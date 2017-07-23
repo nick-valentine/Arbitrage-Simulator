@@ -23,6 +23,8 @@ public:
     void loadWorld(boost::shared_ptr<Logger> logger);
     void draw(Window::window_ptr window);
     void movePlayerToCoordinate(int y, int x);
+
+    bool chunkInWorld(int chunkY, int chunkX);
     WorldChunk getChunk(int y, int x) const;
 protected:
     int playerX;
@@ -59,6 +61,7 @@ protected:
         int &chunkY, int &chunkX, 
         int &outY, int &outX
     );
+
 };
 
 #endif //LOCAL_WORLD_INTERACTION

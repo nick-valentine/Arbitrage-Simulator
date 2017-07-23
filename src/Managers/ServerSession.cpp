@@ -156,7 +156,12 @@ std::string ServerSession::GetWorldChunkHandler(ServerSession &myself, std::stri
 
     ss<<ServerSession::REQUEST_OK<<" ";
     
-    (*myself.world).getChunk(chunkY, chunkX).toStringStream(&ss);
+    if ((*myself.world).chunkInWorld(chunkY, chunkX)) {
+        (*myself.world).getChunk(chunkY, chunkX).toStringStream(&ss);
+    } else {
+        ss<<boost::lexical_cast<std::string>(ServerSession::ERROR);
+        myself.logger->debug("Invalid chunk requested");
+    }
     ss<<Globals::network_message_delimiter;
 
     return ss.str();
