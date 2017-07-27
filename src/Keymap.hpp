@@ -7,11 +7,13 @@
 #include <vector>
 #include <fstream>
 #include <sstream>
+#include <iostream>
 
 #include "Input.hpp"
 
 class Keymap {
 public:
+    Keymap();
     void init();
 
     Input convert(int rawInput);

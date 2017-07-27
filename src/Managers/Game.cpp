@@ -3,6 +3,8 @@
 const std::string Game::configWorldNameKey = "world_name";
 const std::string Game::defaultWorldName = "world";
 
+Keymap Game::keymap = Keymap();
+
 Game::Game()
 {
     this->worldProxy = NULL;
@@ -33,11 +35,13 @@ int Game::setup()
     this->windowLayout.setSubWindow("ConsoleWindow");
     this->windowLayout.render();
 
-    this->player = Player("Bob", 0, 0);
+    this->player = Player("Bob", 200, 200);
 
     this->logger = boost::shared_ptr<Logger>(
         boost::dynamic_pointer_cast<ConsoleWindow>(this->consoleWindow)->getLogger()
     );
+
+    Game::keymap.init();
 
     this->worldProxy->loadWorld(this->logger);
 
@@ -51,7 +55,7 @@ int Game::run()
 
     int height, width;
 
-    unsigned int input = 0;
+    Input input = Input::IGNORED;
     while(true) {
         this->logger->info("Game Ticking");
         int pos_x, pos_y;
@@ -67,24 +71,25 @@ int Game::run()
         );
         this->windowLayout.render();
         this->gameWindow->clear();
-        input = this->gameWindow->getCh();
+        int rawInput = this->gameWindow->getCh();
+        logger->debug("%d Pressed", rawInput);
+        input = Game::keymap.convert(rawInput);
         logger->debug("%d Pressed", input);
         switch(input) {
-            case 119:
+            case Input::UP:
                 this->player.move(-1,0);
                 break;
-            case 115:
+            case Input::DOWN:
                 this->player.move(1,0);
                 break;
-            case 97:
+            case Input::LEFT:
                 this->player.move(0,-1);
                 break;
-            case 100:
+            case Input::RIGHT:
                 this->player.move(0,1);
                 break;
-            case 27: //ESC
+            case Input::ESCAPE:
                 return 0;
-                break;
         };
     }
     return 0;

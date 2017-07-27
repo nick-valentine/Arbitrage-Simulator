@@ -10,6 +10,8 @@
 
 #include "Camera.hpp"
 #include "ConfigLoader.hpp"
+#include "Input.hpp"
+#include "Keymap.hpp"
 #include "GameObjects/City.hpp"
 #include "GameObjects/Player.hpp"
 #include "Services/WorldInteraction/WorldInteractionInterface.hpp"
@@ -37,6 +39,7 @@ public:
 private:
     static const std::string configWorldNameKey;
     static const std::string defaultWorldName;
+    static Keymap keymap;
 
     boost::shared_ptr<Logger> logger;
 

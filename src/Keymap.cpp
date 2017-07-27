@@ -2,6 +2,11 @@
 
 const std::string Keymap::mapFile = "GameData/keymap.txt";
 
+Keymap::Keymap()
+{
+    this->inputMap = std::map<int, Input>();
+}
+
 void Keymap::init()
 {
     std::vector< std::pair<std::string, std::string> > m;
@@ -43,6 +48,7 @@ void Keymap::createMap(std::vector< std::pair<std::string, std::string> > mappin
     for (unsigned int i = 0; i < mappings.size(); ++i) {
         if (mappings[i].first.size() == 1) {
             inputMap[mappings[i].first[0]] = InputMapping::toInput(mappings[i].second);
+            std::cerr<<mappings[i].first[0]<<" "<<mappings[i].second<<std::endl;
         }
     }
 }

@@ -8,7 +8,7 @@
 #include <time.h>
 
 #include "Managers/Game.hpp"
-
+ 
 static void finish(int sig);
 
 int main()
