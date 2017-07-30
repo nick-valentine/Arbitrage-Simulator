@@ -1,3 +1,4 @@
+add_subdirectory (Components)
 add_subdirectory (GameObjects)
 add_subdirectory (Helpers)
 add_subdirectory (Managers)

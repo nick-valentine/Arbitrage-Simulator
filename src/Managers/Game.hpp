@@ -12,6 +12,7 @@
 #include "ConfigLoader.hpp"
 #include "Input.hpp"
 #include "Keymap.hpp"
+#include "Components/Menu.hpp"
 #include "GameObjects/City.hpp"
 #include "GameObjects/Player.hpp"
 #include "Services/WorldInteraction/WorldInteractionInterface.hpp"
@@ -40,6 +41,13 @@ private:
     static const std::string configWorldNameKey;
     static const std::string defaultWorldName;
     static Keymap keymap;
+
+    enum State {
+        PLAYING = 0,
+        MENU
+    };
+
+    State state;
 
     boost::shared_ptr<Logger> logger;
 
