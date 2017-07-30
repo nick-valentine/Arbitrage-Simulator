@@ -27,8 +27,8 @@ City::City(std::stringstream *ss)
 void City::fromStringStream(std::stringstream *ss)
 {
     std::string pos_x_str, pos_y_str;
-    std::getline((*ss), this->name, Globals::file_delimeter);
-    std::getline((*ss), pos_x_str, Globals::file_delimeter);
+    std::getline((*ss), this->name, Globals::file_delimiter);
+    std::getline((*ss), pos_x_str, Globals::file_delimiter);
     std::getline((*ss), pos_y_str, Globals::object_delimiter);
 
     std::stringstream temp_ss;
@@ -44,8 +44,8 @@ void City::fromStringStream(std::stringstream *ss)
 
 void City::toStringStream(std::stringstream *ss)
 {
-    (*ss)<<this->name<<Globals::file_delimeter
-        <<this->pos_x<<Globals::file_delimeter
+    (*ss)<<this->name<<Globals::file_delimiter
+        <<this->pos_x<<Globals::file_delimiter
         <<this->pos_y<<Globals::object_delimiter;
 }
 

@@ -20,6 +20,7 @@ public:
     virtual void init();
     virtual void resize(int height, int width);
 
+    virtual void putstr(int y, int x, std::string str, int color);
     virtual void put(unsigned int colorPair, unsigned int layer, char c, int y, int x);
     virtual void put(Window::TextElement c, int y, int x);
 

@@ -31,6 +31,13 @@ void GameWindow::resize(int height, int width)
     CursesWindow::resize(height, width);
 }
 
+void GameWindow::putstr(int y, int x, std::string str, int color)
+{
+    for (int i = 0; i < str.size(); ++i) {
+        this->put(color, 999, str[i], y, x + i);
+    }
+}
+
 void GameWindow::put(unsigned int colorPair, unsigned int layer, char c, int y, int x)
 {
     Window::TextElement temp;

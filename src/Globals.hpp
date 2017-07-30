@@ -7,7 +7,7 @@
 namespace Globals
 {
     static const char space_delimiter = ' ';
-    static const char file_delimeter = ',';
+    static const char file_delimiter = ',';
     static const char object_delimiter = '\t';
     static const char network_message_delimiter = '\n';
 };

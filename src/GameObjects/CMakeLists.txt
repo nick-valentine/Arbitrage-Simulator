@@ -5,6 +5,7 @@ set (SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/World.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/WorldChunk.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/City.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/Item.cpp
     PARENT_SCOPE
 )
 set (HEADERS
@@ -14,6 +15,7 @@ set (HEADERS
     ${CMAKE_CURRENT_SOURCE_DIR}/World.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/WorldChunk.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/City.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/Item.hpp
     PARENT_SCOPE
 )
 
