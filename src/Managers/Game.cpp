@@ -42,7 +42,7 @@ int Game::setup()
 
     this->worldProxy->loadWorld(this->logger);
 
-    this->stateStack.push(new Playing());
+    this->stateStack.push(new GameState::Playing());
     this->stateStack.top()->init();
     this->stateStack.top()->setLogger(this->logger);
 
@@ -54,23 +54,11 @@ int Game::run()
     refresh();
     this->logger->info("Game Starting");
 
-    int height, width;
-
     Input input = Input::IGNORED;
-
-    std::vector<std::string> options;
-    options.push_back("Yes");
-    options.push_back("No");
-    options.push_back("Maybe");
-    options.push_back("Idk");
-    Menu menu = Menu(options, 15, 15, 20, 20);
 
     while(true) {
         this->logger->info("Game Ticking");
 
- //       if (this->state == MENU) {
- //           menu.render(this->gameWindow);
- //       }
         this->stateStack.top()->render(
             this->worldProxy,
             this->gameWindow
@@ -93,37 +81,31 @@ int Game::run()
             input
         );
 
-//        if (this->state == MENU) {
-//            int result = menu.update(input);
-//            switch (result) {
-//                case -1:
-//                    break;
-//                case -2:
-//                    logger->debug("Back pressed");
-//                    this->state = PLAYING;
-//                    break;
-//                default:
-//                    logger->debug("%d Selected", result);
-//                    this->state = PLAYING;
-//                    break;
-//            };
-//        }
-
         if (this->stateStack.top()->shouldClose()) {
-            State * oldState = this->stateStack.top();
+            this->logger->info("saving reference to old state");
+            GameState::State * oldState = this->stateStack.top();
+            this->logger->info("popping state off stack");
             this->stateStack.pop();
-            this->stateStack.top()->recvUp(oldState->passDown());
-            delete oldState;
             if (this->stateStack.size() == 0) {
+                this->logger->info("closing down program");
                 return 0;
             }
+            this->logger->info("transferring message");
+            this->stateStack.top()->recvUp(oldState->passDown());
+            this->logger->info("deleting old state");
+            delete oldState;
         } else if (this->stateStack.top()->nextState() != NULL) {
-            this->stateStack.top()->nextState()->recvDown(
+            this->logger->info("New state being set");
+            GameState::State *oldState = this->stateStack.top();
+            oldState->nextState()->recvDown(
                 this->stateStack.top()->passUp()
             );
+            oldState->nextState()->setLogger(this->logger);
+            this->logger->info("Pushing the new state");
             this->stateStack.push(
-                this->stateStack.top()->nextState()
+                oldState->nextState()
             );
+            oldState->clearNextState();
         }
     }
     return 0;

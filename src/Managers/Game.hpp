@@ -13,7 +13,6 @@
 #include "ConfigLoader.hpp"
 #include "Input.hpp"
 #include "Keymap.hpp"
-#include "Components/Menu.hpp"
 #include "Managers/GameState/State.hpp"
 #include "Managers/GameState/Playing.hpp"
 #include "Services/WorldInteraction/WorldInteractionInterface.hpp"
@@ -52,7 +51,7 @@ private:
     Window::window_ptr consoleWindow;
     WorldInteractionInterface *worldProxy;
 
-    std::stack<State *> stateStack;
+    std::stack<GameState::State *> stateStack;
 
     int screenHeight;
     int screenWidth;

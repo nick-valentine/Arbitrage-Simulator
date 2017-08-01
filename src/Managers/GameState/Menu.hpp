@@ -1,27 +1,31 @@
-#ifndef GAMESTATE_PLAYING_HPP
-#define GAMESTATE_PLAYING_HPP
+#ifndef GAMESTATE_MENU_HPP
+#define GAMESTATE_MENU_HPP
 
-#include "Camera.hpp"
-#include "GameObjects/Player.hpp"
+#include <string>
+#include <vector>
+
 #include "Managers/GameState/State.hpp"
-#include "Managers/GameState/Menu.hpp"
+#include "Components/Menu.hpp"
 
 namespace GameState
 {
-    class Playing : public State
+    class Menu : public State
     {
     public:
+        Menu();
+        ~Menu();
         void init();
+        void addOption(std::string option);
         void update(WorldInteractionInterface *worldProxy, Input input);
         void render(WorldInteractionInterface *worldProxy, Window::window_ptr window);
         State *nextState();
         void clearNextState();
         bool shouldClose();
     private:
-        Player player;
-        Camera camera;
-        GameState::State *newState;
+        std::vector<std::string> options;
+        bool menuShouldClose;
+        Component::Menu menu;
     };
 }
 
-#endif //GAMESTATE_PLAYING_HPP
+#endif //GAMESTATE_MENU_HPP

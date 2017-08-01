@@ -1,13 +1,13 @@
 #include "Managers/GameState/Playing.hpp"
 
-void Playing::init()
+void GameState::Playing::init()
 {
     this->player = Player("Bob", 200, 200);
     this->logger = Logger::LoggerPtr(new NullLogger());
     this->camera = Camera(0, 0);
 }
 
-void Playing::update(WorldInteractionInterface *worldProxy, Input input)
+void GameState::Playing::update(WorldInteractionInterface *worldProxy, Input input)
 {
     switch(input) {
         case Input::UP:
@@ -23,12 +23,18 @@ void Playing::update(WorldInteractionInterface *worldProxy, Input input)
             this->player.move(0,1);
             break;
         case Input::BACK:
-//            this->state = MENU;
+            GameState::Menu *menuState = new GameState::Menu;
+            menuState->addOption("yes");
+            menuState->addOption("no");
+            menuState->addOption("maybe");
+            menuState->addOption("sometimes");
+            menuState->init();
+            this->newState = menuState;
             break;
     };
 }
 
-void Playing::render(WorldInteractionInterface *worldProxy, Window::window_ptr window)
+void GameState::Playing::render(WorldInteractionInterface *worldProxy, Window::window_ptr window)
 {
     int pos_x, pos_y;
     player.getYX(pos_y, pos_x);
@@ -43,12 +49,17 @@ void Playing::render(WorldInteractionInterface *worldProxy, Window::window_ptr w
     );
 }
 
-State *Playing::nextState()
+GameState::State *GameState::Playing::nextState()
 {
-
+    return this->newState;
 }
 
-bool Playing::shouldClose()
+void GameState::Playing::clearNextState()
 {
+    this->newState = NULL;
+}
 
+bool GameState::Playing::shouldClose()
+{
+    return false;
 }
