@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <string>
 #include <ctime>
+#include <boost/shared_ptr.hpp>
 
 #include "ConfigLoader.hpp"
 
@@ -20,6 +21,7 @@ public:
         ERROR = 4
     };
 
+    typedef boost::shared_ptr<Logger> LoggerPtr;
 
     virtual ~Logger(){};
     virtual void debug(const char *fmt, ...) = 0;

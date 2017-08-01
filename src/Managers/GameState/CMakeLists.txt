@@ -1,0 +1,12 @@
+set (SOURCES
+    ${SOURCES}
+    ${CMAKE_CURRENT_SOURCE_DIR}/Playing.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/State.cpp
+    PARENT_SCOPE
+)
+set (HEADERS
+    ${HEADERS}
+    ${CMAKE_CURRENT_SOURCE_DIR}/State.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/Playing.hpp
+    PARENT_SCOPE
+)

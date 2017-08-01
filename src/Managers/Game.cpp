@@ -21,9 +21,6 @@ int Game::setup()
 {
     this->configure();
 
-    this->state = MENU;
-
-    this->camera = Camera(0, 0);
     this->gameWindow = Window::window_ptr(new GameWindow());
     this->gameWindow->init();
 
@@ -37,8 +34,6 @@ int Game::setup()
     this->windowLayout.setSubWindow("ConsoleWindow");
     this->windowLayout.render();
 
-    this->player = Player("Bob", 200, 200);
-
     this->logger = boost::shared_ptr<Logger>(
         boost::dynamic_pointer_cast<ConsoleWindow>(this->consoleWindow)->getLogger()
     );
@@ -46,6 +41,10 @@ int Game::setup()
     Game::keymap.init();
 
     this->worldProxy->loadWorld(this->logger);
+
+    this->stateStack.push(new Playing());
+    this->stateStack.top()->init();
+    this->stateStack.top()->setLogger(this->logger);
 
     return 0;
 }
@@ -58,32 +57,28 @@ int Game::run()
     int height, width;
 
     Input input = Input::IGNORED;
+
     std::vector<std::string> options;
     options.push_back("Yes");
     options.push_back("No");
     options.push_back("Maybe");
     options.push_back("Idk");
     Menu menu = Menu(options, 15, 15, 20, 20);
+
     while(true) {
         this->logger->info("Game Ticking");
-        int pos_x, pos_y;
-        player.getYX(pos_y, pos_x);
 
-        //move camera to player
-        this->camera.moveTo(pos_y, pos_x);
-        this->worldProxy->movePlayerToCoordinate(pos_y, pos_x);
-        this->camera.render(
-            this->gameWindow, 
-            *this->worldProxy, 
-            this->player
+ //       if (this->state == MENU) {
+ //           menu.render(this->gameWindow);
+ //       }
+        this->stateStack.top()->render(
+            this->worldProxy,
+            this->gameWindow
         );
-
-        if (this->state == MENU) {
-            menu.render(this->gameWindow);
-        }
 
         this->windowLayout.render();
         this->gameWindow->clear();
+
         int rawInput = this->gameWindow->getCh();
         logger->debug("%d Pressed", rawInput);
         input = Game::keymap.convert(rawInput);
@@ -93,38 +88,42 @@ int Game::run()
             return 0;
         }
 
-        if (this->state == MENU) {
-            int result = menu.update(input);
-            switch (result) {
-                case -1:
-                    break;
-                case -2:
-                    logger->debug("Back pressed");
-                    this->state = PLAYING;
-                    break;
-                default:
-                    logger->debug("%d Selected", result);
-                    this->state = PLAYING;
-                    break;
-            };
-        } else if(this->state == PLAYING) {
-            switch(input) {
-                case Input::UP:
-                    this->player.move(-1,0);
-                    break;
-                case Input::DOWN:
-                    this->player.move(1,0);
-                    break;
-                case Input::LEFT:
-                    this->player.move(0,-1);
-                    break;
-                case Input::RIGHT:
-                    this->player.move(0,1);
-                    break;
-                case Input::BACK:
-                    this->state = MENU;
-                    break;
-            };
+        this->stateStack.top()->update(
+            this->worldProxy,
+            input
+        );
+
+//        if (this->state == MENU) {
+//            int result = menu.update(input);
+//            switch (result) {
+//                case -1:
+//                    break;
+//                case -2:
+//                    logger->debug("Back pressed");
+//                    this->state = PLAYING;
+//                    break;
+//                default:
+//                    logger->debug("%d Selected", result);
+//                    this->state = PLAYING;
+//                    break;
+//            };
+//        }
+
+        if (this->stateStack.top()->shouldClose()) {
+            State * oldState = this->stateStack.top();
+            this->stateStack.pop();
+            this->stateStack.top()->recvUp(oldState->passDown());
+            delete oldState;
+            if (this->stateStack.size() == 0) {
+                return 0;
+            }
+        } else if (this->stateStack.top()->nextState() != NULL) {
+            this->stateStack.top()->nextState()->recvDown(
+                this->stateStack.top()->passUp()
+            );
+            this->stateStack.push(
+                this->stateStack.top()->nextState()
+            );
         }
     }
     return 0;
