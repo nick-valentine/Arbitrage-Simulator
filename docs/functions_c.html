@@ -98,6 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_g.html#index_g"><span>g</span></a></li>
       <li><a href="functions_h.html#index_h"><span>h</span></a></li>
       <li><a href="functions_i.html#index_i"><span>i</span></a></li>
+      <li><a href="functions_k.html#index_k"><span>k</span></a></li>
       <li><a href="functions_l.html#index_l"><span>l</span></a></li>
       <li><a href="functions_m.html#index_m"><span>m</span></a></li>
       <li><a href="functions_n.html#index_n"><span>n</span></a></li>
@@ -163,10 +164,10 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 : <a class="el" href="classCityPass.html#a907b9358076a4cfee4f1edcf633f4bfb">CityPass</a>
 </li>
 <li>Camera()
-: <a class="el" href="classCamera.html#af30efa9cdf7ca6c4137b1e906e1537e9">Camera</a>
+: <a class="el" href="classCamera.html#a01f94c3543f56ede7af49dc778f19331">Camera</a>
 </li>
 <li>camera
-: <a class="el" href="classGame.html#ae4d989a819d4bf47d01fd3f07713c771">Game</a>
+: <a class="el" href="classGameState_1_1Playing.html#a6c95f534b2a7ccb9aaea15894542e8da">GameState::Playing</a>
 </li>
 <li>canConvertToCity()
 : <a class="el" href="classTile.html#ac013dd5284c40ecf541a52d3214fccfc">Tile</a>
@@ -182,6 +183,9 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 </li>
 <li>chunkHeight
 : <a class="el" href="classWorld.html#a999c2f69d4001e2ea671617748a05b03">World</a>
+</li>
+<li>chunkInWorld()
+: <a class="el" href="classLocalWorldInteraction.html#a143bfcabc47162c393f82a5377b52ee9">LocalWorldInteraction</a>
 </li>
 <li>chunks
 : <a class="el" href="classWorld.html#aff32affa449788597cd85434b8bcbd38">World</a>
@@ -248,6 +252,11 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 , <a class="el" href="classGameWindow.html#afeef7d049b4838c1c112c2be09fe1cd1">GameWindow</a>
 , <a class="el" href="classWindow.html#ab3914a3846297c08fe8aa8cd724c8fc8">Window</a>
 </li>
+<li>clearNextState()
+: <a class="el" href="classGameState_1_1Menu.html#abd7f0121e8dcf9c70bdff5c9baeb1813">GameState::Menu</a>
+, <a class="el" href="classGameState_1_1Playing.html#ae5db57de1fca89b2332071df67035048">GameState::Playing</a>
+, <a class="el" href="classGameState_1_1State.html#a1a3f329347371170190149aab663c3d7">GameState::State</a>
+</li>
 <li>clone()
 : <a class="el" href="classAbstractPass.html#ae1c9979c6dc6bdd67ccc3451baa1acfb">AbstractPass</a>
 , <a class="el" href="classCityPass.html#a823360df56aac7935e786c89253ae284">CityPass</a>
@@ -305,7 +314,7 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 : <a class="el" href="classConnection.html#a1445f1ca4d7fd2155a7de480340b370a">Connection</a>
 </li>
 <li>Connection()
-: <a class="el" href="classConnection.html#a85402f2acb1c3caacc065bc3391747bf">Connection</a>
+: <a class="el" href="classConnection.html#a9de94289ca6259f94ef6aeba3b134a77">Connection</a>
 </li>
 <li>connection
 : <a class="el" href="classNetworkedWorldInteraction.html#aa241b42b48b72fde6426ddb834f0e78b">NetworkedWorldInteraction</a>
@@ -322,11 +331,17 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 <li>consoleWindow
 : <a class="el" href="classGame.html#acb0267ea00a6e6566a0808cb9d7472e1">Game</a>
 </li>
+<li>convert()
+: <a class="el" href="classKeymap.html#ae5ab511e8235d5dbfbcb54aafb65da05">Keymap</a>
+</li>
 <li>convertTileToCity()
 : <a class="el" href="classCityPass.html#a139feae469db33416f284bcfe3abee05">CityPass</a>
 </li>
 <li>convertToCity()
 : <a class="el" href="classTile.html#ad18dc829e0b9c7e6a9c52272c902704e">Tile</a>
+</li>
+<li>createMap()
+: <a class="el" href="classKeymap.html#aa84004b9048e9946b4fd146391ae64f3">Keymap</a>
 </li>
 <li>creationTimestamp
 : <a class="el" href="classWorld.html#a00dd47dfd18e1110a25f947caa726d1b">World</a>
@@ -335,7 +350,7 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 : <a class="el" href="classWorldChunk.html#a30c820ce5e5190b084f598148472d8c4">WorldChunk</a>
 </li>
 <li>CursesWindow()
-: <a class="el" href="classCursesWindow.html#a77e3bb7a774efba5a72f297e900d9506">CursesWindow</a>
+: <a class="el" href="classCursesWindow.html#a088b31a5f3558ead6997a949f092ebbf">CursesWindow</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -343,7 +358,7 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Jul 22 2017 16:59:06 for Arbitrage Simulator by
+    <li class="footer">Generated on Mon Jul 31 2017 19:39:30 for Arbitrage Simulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

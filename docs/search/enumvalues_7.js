@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['info',['INFO',['../classLogger.html#ac744681e23720966b5f430ec2060da36a61a9b6fc1e9babc448984b8a34ca2ed2',1,'Logger']]]
+  ['handshaking',['HANDSHAKING',['../classServerSession.html#a2be6b76c788abd809e08904b3e50037facd39ec46c6a847de83467461ee3be637',1,'ServerSession']]],
+  ['hills',['HILLS',['../classTile.html#a23e11e1d5997c76090e18f7a7238aa59a8cbad353ea81472f029412f4498bdc13',1,'Tile']]]
 ];

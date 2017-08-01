@@ -129,6 +129,7 @@ $(document).ready(function(){initNavTree('classLogger.html','');});
 <map name="Logger_inherit__map" id="Logger_inherit__map">
 <area shape="rect" id="node2" href="classBufferLogger.html" title="BufferLogger. " alt="" coords="5,263,152,531"/>
 <area shape="rect" id="node3" href="classConsoleLogger.html" title="{ConsoleLogger\n||+ ConsoleLogger()\l+ ~ConsoleLogger()\l+ debug()\l+ info()\l+ warn()\l+ error()\l+ log()\l# print()\l}" alt="" coords="177,307,314,487"/>
+<area shape="rect" id="node4" href="classNullLogger.html" title="{NullLogger\n||+ debug()\l+ info()\l+ warn()\l+ error()\l+ log()\l}" alt="" coords="338,329,422,465"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -151,6 +152,8 @@ Public Types</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:ac744681e23720966b5f430ec2060da36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a553760eed76d57bdc7d483bbfed58bee"><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="classLogger.html">Logger</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#a553760eed76d57bdc7d483bbfed58bee">LoggerPtr</a></td></tr>
+<tr class="separator:a553760eed76d57bdc7d483bbfed58bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -188,8 +191,23 @@ Static Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="Logger_8hpp_source.html#l00012">12</a> of file <a class="el" href="Logger_8hpp_source.html">Logger.hpp</a>.</p>
-</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<p>Definition at line <a class="el" href="Logger_8hpp_source.html#l00013">13</a> of file <a class="el" href="Logger_8hpp_source.html">Logger.hpp</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a553760eed76d57bdc7d483bbfed58bee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::shared_ptr&lt;<a class="el" href="classLogger.html">Logger</a>&gt; <a class="el" href="classLogger.html#a553760eed76d57bdc7d483bbfed58bee">Logger::LoggerPtr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Logger_8hpp_source.html#l00024">24</a> of file <a class="el" href="Logger_8hpp_source.html">Logger.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="ac744681e23720966b5f430ec2060da36"></a>
 <div class="memitem">
 <div class="memproto">
@@ -212,7 +230,7 @@ Static Protected Attributes</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="Logger_8hpp_source.html#l00015">15</a> of file <a class="el" href="Logger_8hpp_source.html">Logger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Logger_8hpp_source.html#l00016">16</a> of file <a class="el" href="Logger_8hpp_source.html">Logger.hpp</a>.</p>
 
 </div>
 </div>
@@ -238,7 +256,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Logger_8hpp_source.html#l00024">24</a> of file <a class="el" href="Logger_8hpp_source.html">Logger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Logger_8hpp_source.html#l00026">26</a> of file <a class="el" href="Logger_8hpp_source.html">Logger.hpp</a>.</p>
 
 <p>References <a class="el" href="Logger_8cpp_source.html#l00012">configure()</a>, <a class="el" href="classLogger.html#a0dff76f9cf64e4e7acdefaad6987fc07">debug()</a>, <a class="el" href="classLogger.html#a2cdf3e6e8ec34488d4077a249c11fa2d">error()</a>, <a class="el" href="classLogger.html#ac625c9c6d6b843e818fbc51b94fa639a">info()</a>, <a class="el" href="classLogger.html#a2b548c8904a3386b24b0a031ab19b29b">log()</a>, and <a class="el" href="classLogger.html#ab307fd2a26a4fc681b5e86e883d353de">warn()</a>.</p>
 
@@ -289,9 +307,9 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Logger_8cpp_source.html#l00012">12</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
 
-<p>References <a class="el" href="ConfigLoader_8cpp_source.html#l00046">ConfigLoader::getIntOption()</a>, <a class="el" href="Logger_8hpp_source.html#l00034">logLevel</a>, and <a class="el" href="Logger_8hpp_source.html#l00019">WARN</a>.</p>
+<p>References <a class="el" href="ConfigLoader_8cpp_source.html#l00046">ConfigLoader::getIntOption()</a>, <a class="el" href="Logger_8hpp_source.html#l00036">logLevel</a>, and <a class="el" href="Logger_8hpp_source.html#l00020">WARN</a>.</p>
 
-<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00093">Game::configure()</a>, and <a class="el" href="Logger_8hpp_source.html#l00024">~Logger()</a>.</p>
+<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00114">Game::configure()</a>, and <a class="el" href="Logger_8hpp_source.html#l00026">~Logger()</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -357,9 +375,9 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classBufferLogger.html#aceea37311ba9af6cf559e07f5593030f">BufferLogger</a>, and <a class="el" href="classConsoleLogger.html#accf2c514d50faca4d5d5d9b1246925a1">ConsoleLogger</a>.</p>
+<p>Implemented in <a class="el" href="classBufferLogger.html#aceea37311ba9af6cf559e07f5593030f">BufferLogger</a>, <a class="el" href="classConsoleLogger.html#accf2c514d50faca4d5d5d9b1246925a1">ConsoleLogger</a>, and <a class="el" href="classNullLogger.html#a86c2b94da688bc55e358bde366274c1c">NullLogger</a>.</p>
 
-<p>Referenced by <a class="el" href="Logger_8hpp_source.html#l00024">~Logger()</a>.</p>
+<p>Referenced by <a class="el" href="Logger_8hpp_source.html#l00026">~Logger()</a>.</p>
 
 <p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -407,9 +425,9 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classBufferLogger.html#a369d2ba5ea74e336ad064842cf573d89">BufferLogger</a>, and <a class="el" href="classConsoleLogger.html#a39f299404bbb3db80b54d5463f814700">ConsoleLogger</a>.</p>
+<p>Implemented in <a class="el" href="classBufferLogger.html#a369d2ba5ea74e336ad064842cf573d89">BufferLogger</a>, <a class="el" href="classConsoleLogger.html#a39f299404bbb3db80b54d5463f814700">ConsoleLogger</a>, and <a class="el" href="classNullLogger.html#acf58e5d2bdee280b6dfa51685618b881">NullLogger</a>.</p>
 
-<p>Referenced by <a class="el" href="Logger_8hpp_source.html#l00024">~Logger()</a>.</p>
+<p>Referenced by <a class="el" href="Logger_8hpp_source.html#l00026">~Logger()</a>.</p>
 
 <p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -465,7 +483,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Logger_8cpp_source.html#l00021">21</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
 
-<p>References <a class="el" href="Logger_8cpp_source.html#l00036">get_time()</a>, and <a class="el" href="Logger_8hpp_source.html#l00033">levelStrings</a>.</p>
+<p>References <a class="el" href="Logger_8cpp_source.html#l00036">get_time()</a>, and <a class="el" href="Logger_8hpp_source.html#l00035">levelStrings</a>.</p>
 
 <p>Referenced by <a class="el" href="BufferLogger_8cpp_source.html#l00072">BufferLogger::addToBuffer()</a>, and <a class="el" href="ConsoleLogger_8cpp_source.html#l00054">ConsoleLogger::print()</a>.</p>
 
@@ -589,9 +607,9 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classBufferLogger.html#acf2d666893839ab1c51f30cdf106c784">BufferLogger</a>, and <a class="el" href="classConsoleLogger.html#aaf10bf516a2585b7020bdd6dff2eba95">ConsoleLogger</a>.</p>
+<p>Implemented in <a class="el" href="classBufferLogger.html#acf2d666893839ab1c51f30cdf106c784">BufferLogger</a>, <a class="el" href="classConsoleLogger.html#aaf10bf516a2585b7020bdd6dff2eba95">ConsoleLogger</a>, and <a class="el" href="classNullLogger.html#a8dfa9ab4adcd4b2f4cf6bdb28afc3cea">NullLogger</a>.</p>
 
-<p>Referenced by <a class="el" href="Logger_8hpp_source.html#l00024">~Logger()</a>.</p>
+<p>Referenced by <a class="el" href="Logger_8hpp_source.html#l00026">~Logger()</a>.</p>
 
 <p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -645,9 +663,9 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classBufferLogger.html#aea3c0433691d7e4e4ae144abfb731ef6">BufferLogger</a>, and <a class="el" href="classConsoleLogger.html#a10fa8072165bf024f0525f276ec2820f">ConsoleLogger</a>.</p>
+<p>Implemented in <a class="el" href="classBufferLogger.html#aea3c0433691d7e4e4ae144abfb731ef6">BufferLogger</a>, <a class="el" href="classConsoleLogger.html#a10fa8072165bf024f0525f276ec2820f">ConsoleLogger</a>, and <a class="el" href="classNullLogger.html#a44a4b562bdaf9495e4a74de660bef954">NullLogger</a>.</p>
 
-<p>Referenced by <a class="el" href="Logger_8hpp_source.html#l00024">~Logger()</a>.</p>
+<p>Referenced by <a class="el" href="Logger_8hpp_source.html#l00026">~Logger()</a>.</p>
 
 <p><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -695,9 +713,9 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classBufferLogger.html#a4d05f0a11139572681c84998c32100e2">BufferLogger</a>, and <a class="el" href="classConsoleLogger.html#ac95c55d919e7ca8e9501e6429d216c77">ConsoleLogger</a>.</p>
+<p>Implemented in <a class="el" href="classBufferLogger.html#a4d05f0a11139572681c84998c32100e2">BufferLogger</a>, <a class="el" href="classConsoleLogger.html#ac95c55d919e7ca8e9501e6429d216c77">ConsoleLogger</a>, and <a class="el" href="classNullLogger.html#a7c20b85a4a6bf2ca6140fc7f070da4d0">NullLogger</a>.</p>
 
-<p>Referenced by <a class="el" href="Logger_8hpp_source.html#l00024">~Logger()</a>.</p>
+<p>Referenced by <a class="el" href="Logger_8hpp_source.html#l00026">~Logger()</a>.</p>
 
 <p><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -732,7 +750,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">    <span class="stringliteral">&quot;DEBUG&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;INFO&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;WARNING&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;ERROR&quot;</span> </div><div class="line">}</div></div><!-- fragment -->
-<p>Definition at line <a class="el" href="Logger_8hpp_source.html#l00033">33</a> of file <a class="el" href="Logger_8hpp_source.html">Logger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Logger_8hpp_source.html#l00035">35</a> of file <a class="el" href="Logger_8hpp_source.html">Logger.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="Logger_8cpp_source.html#l00021">format_string()</a>.</p>
 
@@ -756,7 +774,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Logger_8hpp_source.html#l00034">34</a> of file <a class="el" href="Logger_8hpp_source.html">Logger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Logger_8hpp_source.html#l00036">36</a> of file <a class="el" href="Logger_8hpp_source.html">Logger.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="BufferLogger_8cpp_source.html#l00072">BufferLogger::addToBuffer()</a>, <a class="el" href="Logger_8cpp_source.html#l00012">configure()</a>, and <a class="el" href="ConsoleLogger_8cpp_source.html#l00054">ConsoleLogger::print()</a>.</p>
 
@@ -772,7 +790,7 @@ Static Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classLogger.html">Logger</a></li>
-    <li class="footer">Generated on Sat Jul 22 2017 16:59:06 for Arbitrage Simulator by
+    <li class="footer">Generated on Mon Jul 31 2017 19:39:30 for Arbitrage Simulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

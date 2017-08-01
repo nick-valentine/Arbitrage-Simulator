@@ -1,7 +1,7 @@
 var searchData=
 [
   ['c',['c',['../structWindow_1_1TextElement.html#adff2a25bb634e0b7e30165834b84e382',1,'Window::TextElement']]],
-  ['camera',['camera',['../classGame.html#ae4d989a819d4bf47d01fd3f07713c771',1,'Game']]],
+  ['camera',['camera',['../classGameState_1_1Playing.html#a6c95f534b2a7ccb9aaea15894542e8da',1,'GameState::Playing']]],
   ['chrono',['chrono',['../CMakeCache_8txt.html#a6f419557366733e54a089e429137f734',1,'CMakeCache.txt']]],
   ['chunk_5fheight',['chunk_height',['../classWorldChunk.html#a8ebb4af08cc32514f71ed3dcabcf104b',1,'WorldChunk']]],
   ['chunk_5fwidth',['chunk_width',['../classWorldChunk.html#a519a688a93e13be1ade4a6038b60c8c3',1,'WorldChunk']]],

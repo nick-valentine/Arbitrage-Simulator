@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['warn',['WARN',['../classLogger.html#ac744681e23720966b5f430ec2060da36a0e11f461815c2881cd2c3c334a0d3979',1,'Logger']]],
-  ['water',['WATER',['../classTile.html#a23e11e1d5997c76090e18f7a7238aa59a68b00d4c19b860d95d54a36c58141ad5',1,'Tile']]]
+  ['version_5fcheck',['VERSION_CHECK',['../classServerSession.html#ae34485de6117ea26f500189ae3499114acb59aa30f18692eb9fe807d566a95e46',1,'ServerSession']]],
+  ['version_5fcheck_5fok',['VERSION_CHECK_OK',['../classServerSession.html#ae34485de6117ea26f500189ae3499114a88025d56c898c2b1a5bca6627c1abda2',1,'ServerSession']]],
+  ['version_5fincompatible',['VERSION_INCOMPATIBLE',['../classServerSession.html#ae34485de6117ea26f500189ae3499114accf3af22c15011cd01670152ab9a984e',1,'ServerSession']]]
 ];

@@ -112,6 +112,7 @@ $(document).ready(function(){initNavTree('Game_8hpp.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;stack&gt;</code><br />
 <code>#include &lt;curses.h&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
@@ -119,8 +120,10 @@ $(document).ready(function(){initNavTree('Game_8hpp.html','');});
 <code>#include &lt;boost/shared_ptr.hpp&gt;</code><br />
 <code>#include &quot;<a class="el" href="Camera_8hpp_source.html">Camera.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ConfigLoader_8hpp_source.html">ConfigLoader.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="City_8hpp_source.html">GameObjects/City.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Player_8hpp_source.html">GameObjects/Player.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Input_8hpp_source.html">Input.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Keymap_8hpp_source.html">Keymap.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="State_8hpp_source.html">Managers/GameState/State.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Playing_8hpp_source.html">Managers/GameState/Playing.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="WorldInteractionInterface_8hpp_source.html">Services/WorldInteraction/WorldInteractionInterface.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="LocalWorldInteraction_8hpp_source.html">Services/WorldInteraction/LocalWorldInteraction.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="NetworkedWorldInteraction_8hpp_source.html">Services/WorldInteraction/NetworkedWorldInteraction.hpp</a>&quot;</code><br />
@@ -136,35 +139,42 @@ $(document).ready(function(){initNavTree('Game_8hpp.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="Game_8hpp__incl.png" border="0" usemap="#Game_8hpp" alt=""/></div>
 <map name="Game_8hpp" id="Game_8hpp">
-<area shape="rect" id="node8" href="Camera_8hpp.html" title="Camera.hpp" alt="" coords="1157,408,1251,435"/>
-<area shape="rect" id="node11" href="WorldInteractionInterface_8hpp.html" title="Services/WorldInteraction\l/WorldInteractionInterface.hpp" alt="" coords="2457,483,2655,524"/>
-<area shape="rect" id="node15" href="ConfigLoader_8hpp.html" title="ConfigLoader.hpp" alt="" coords="2161,736,2285,763"/>
-<area shape="rect" id="node24" href="City_8hpp.html" title="GameObjects/City.hpp" alt="" coords="3976,736,4131,763"/>
-<area shape="rect" id="node27" href="Window_8hpp.html" title="Window/Window.hpp" alt="" coords="1749,818,1894,845"/>
-<area shape="rect" id="node29" href="Player_8hpp.html" title="GameObjects/Player.hpp" alt="" coords="3733,736,3901,763"/>
-<area shape="rect" id="node30" href="Logger_8hpp.html" title="Services/Logger/Logger.hpp" alt="" coords="2583,572,2767,599"/>
-<area shape="rect" id="node33" href="LocalWorldInteraction_8hpp.html" title="Services/WorldInteraction\l/LocalWorldInteraction.hpp" alt="" coords="3043,244,3221,285"/>
-<area shape="rect" id="node40" href="NetworkedWorldInteraction_8hpp.html" title="Services/WorldInteraction\l/NetworkedWorldInteraction.hpp" alt="" coords="3027,80,3237,121"/>
-<area shape="rect" id="node49" href="GameWindowLayout_8hpp.html" title="Services/WindowLayout\l/GameWindowLayout.hpp" alt="" coords="1430,647,1602,688"/>
-<area shape="rect" id="node50" href="GameWindow_8hpp.html" title="Window/GameWindow.hpp" alt="" coords="219,654,399,681"/>
-<area shape="rect" id="node52" href="ConsoleWindow_8hpp.html" title="Window/ConsoleWindow.hpp" alt="" coords="651,408,845,435"/>
-<area shape="rect" id="node12" href="World_8hpp.html" title="GameObjects/World.hpp" alt="" coords="3581,572,3747,599"/>
-<area shape="rect" id="node19" href="WorldChunk_8hpp.html" title="GameObjects/WorldChunk.hpp" alt="" coords="3152,654,3355,681"/>
-<area shape="rect" id="node22" href="Globals_8hpp.html" title="Globals.hpp" alt="" coords="4147,818,4237,845"/>
-<area shape="rect" id="node23" href="AbstractGameObject_8hpp.html" title="GameObjects/AbstractGame\lObject.hpp" alt="" coords="3729,811,3919,852"/>
-<area shape="rect" id="node25" href="Tile_8hpp.html" title="GameObjects/Tile.hpp" alt="" coords="3013,736,3165,763"/>
-<area shape="rect" id="node28" href="NoiseFunc_8hpp.html" title="WorldGen/NoiseFunc.hpp" alt="" coords="2563,736,2735,763"/>
-<area shape="rect" id="node26" href="ColorPallete_8hpp.html" title="ColorPallete.hpp" alt="" coords="651,818,770,845"/>
-<area shape="rect" id="node34" href="Generator_8hpp.html" title="WorldGen/Generator.hpp" alt="" coords="3049,333,3215,360"/>
-<area shape="rect" id="node35" href="AbstractPass_8hpp.html" title="WorldGen/Pass/AbstractPass.hpp" alt="" coords="3185,490,3407,517"/>
-<area shape="rect" id="node36" href="ElevationPass_8hpp.html" title="WorldGen/Pass/ElevationPass.hpp" alt="" coords="2933,408,3160,435"/>
-<area shape="rect" id="node37" href="TypePass_8hpp.html" title="WorldGen/Pass/TypePass.hpp" alt="" coords="3303,408,3505,435"/>
-<area shape="rect" id="node38" href="CityPass_8hpp.html" title="WorldGen/Pass/CityPass.hpp" alt="" coords="2103,408,2300,435"/>
-<area shape="rect" id="node39" href="Vector_8hpp.html" title="Helpers/Vector.hpp" alt="" coords="998,818,1133,845"/>
-<area shape="rect" id="node44" href="ServerSession_8hpp.html" title="Managers/ServerSession.hpp" alt="" coords="4134,169,4327,196"/>
-<area shape="rect" id="node48" href="Connection_8hpp.html" title="Networking/Connection.hpp" alt="" coords="3899,251,4082,278"/>
-<area shape="rect" id="node51" href="CursesWindow_8hpp.html" title="Window/CursesWindow.hpp" alt="" coords="459,736,645,763"/>
-<area shape="rect" id="node54" href="BufferLogger_8hpp.html" title="Services/Logger/BufferLogger.hpp" alt="" coords="1505,490,1724,517"/>
+<area shape="rect" id="node9" href="Camera_8hpp.html" title="Camera.hpp" alt="" coords="3143,430,3236,457"/>
+<area shape="rect" id="node12" href="WorldInteractionInterface_8hpp.html" title="Services/WorldInteraction\l/WorldInteractionInterface.hpp" alt="" coords="2795,512,2992,553"/>
+<area shape="rect" id="node16" href="ConfigLoader_8hpp.html" title="ConfigLoader.hpp" alt="" coords="871,758,995,785"/>
+<area shape="rect" id="node28" href="Window_8hpp.html" title="Window/Window.hpp" alt="" coords="3447,847,3593,874"/>
+<area shape="rect" id="node31" href="Logger_8hpp.html" title="Services/Logger/Logger.hpp" alt="" coords="2201,601,2385,628"/>
+<area shape="rect" id="node34" href="Input_8hpp.html" title="Input.hpp" alt="" coords="651,847,727,874"/>
+<area shape="rect" id="node35" href="Keymap_8hpp.html" title="Keymap.hpp" alt="" coords="753,758,847,785"/>
+<area shape="rect" id="node36" href="State_8hpp.html" title="Managers/GameState\l/State.hpp" alt="" coords="523,423,672,464"/>
+<area shape="rect" id="node38" href="Playing_8hpp.html" title="Managers/GameState\l/Playing.hpp" alt="" coords="1092,244,1241,285"/>
+<area shape="rect" id="node41" href="LocalWorldInteraction_8hpp.html" title="Services/WorldInteraction\l/LocalWorldInteraction.hpp" alt="" coords="2478,244,2655,285"/>
+<area shape="rect" id="node48" href="NetworkedWorldInteraction_8hpp.html" title="Services/WorldInteraction\l/NetworkedWorldInteraction.hpp" alt="" coords="3109,80,3318,121"/>
+<area shape="rect" id="node57" href="GameWindowLayout_8hpp.html" title="Services/WindowLayout\l/GameWindowLayout.hpp" alt="" coords="2922,751,3094,792"/>
+<area shape="rect" id="node58" href="GameWindow_8hpp.html" title="Window/GameWindow.hpp" alt="" coords="4359,676,4539,703"/>
+<area shape="rect" id="node60" href="ConsoleWindow_8hpp.html" title="Window/ConsoleWindow.hpp" alt="" coords="4562,430,4755,457"/>
+<area shape="rect" id="node30" href="Player_8hpp.html" title="GameObjects/Player.hpp" alt="" coords="1657,758,1825,785"/>
+<area shape="rect" id="node13" href="World_8hpp.html" title="GameObjects/World.hpp" alt="" coords="1640,601,1805,628"/>
+<area shape="rect" id="node20" href="WorldChunk_8hpp.html" title="GameObjects/WorldChunk.hpp" alt="" coords="2001,676,2204,703"/>
+<area shape="rect" id="node23" href="Globals_8hpp.html" title="Globals.hpp" alt="" coords="2305,847,2396,874"/>
+<area shape="rect" id="node24" href="AbstractGameObject_8hpp.html" title="GameObjects/AbstractGame\lObject.hpp" alt="" coords="1989,840,2179,881"/>
+<area shape="rect" id="node25" href="City_8hpp.html" title="GameObjects/City.hpp" alt="" coords="2089,758,2244,785"/>
+<area shape="rect" id="node26" href="Tile_8hpp.html" title="GameObjects/Tile.hpp" alt="" coords="3169,758,3321,785"/>
+<area shape="rect" id="node29" href="NoiseFunc_8hpp.html" title="WorldGen/NoiseFunc.hpp" alt="" coords="2573,758,2745,785"/>
+<area shape="rect" id="node27" href="ColorPallete_8hpp.html" title="ColorPallete.hpp" alt="" coords="4487,847,4606,874"/>
+<area shape="rect" id="node37" href="NullLogger_8hpp.html" title="Services/Logger/NullLogger.hpp" alt="" coords="494,519,701,546"/>
+<area shape="rect" id="node39" href="Managers_2GameState_2Menu_8hpp.html" title="Managers/GameState\l/Menu.hpp" alt="" coords="985,333,1135,375"/>
+<area shape="rect" id="node40" href="Components_2Menu_8hpp.html" title="Components/Menu.hpp" alt="" coords="1172,758,1329,785"/>
+<area shape="rect" id="node42" href="Generator_8hpp.html" title="WorldGen/Generator.hpp" alt="" coords="2299,341,2466,367"/>
+<area shape="rect" id="node43" href="AbstractPass_8hpp.html" title="WorldGen/Pass/AbstractPass.hpp" alt="" coords="2042,519,2265,546"/>
+<area shape="rect" id="node44" href="ElevationPass_8hpp.html" title="WorldGen/Pass/ElevationPass.hpp" alt="" coords="1912,430,2139,457"/>
+<area shape="rect" id="node45" href="TypePass_8hpp.html" title="WorldGen/Pass/TypePass.hpp" alt="" coords="2213,430,2416,457"/>
+<area shape="rect" id="node46" href="CityPass_8hpp.html" title="WorldGen/Pass/CityPass.hpp" alt="" coords="2541,430,2739,457"/>
+<area shape="rect" id="node47" href="Vector_8hpp.html" title="Helpers/Vector.hpp" alt="" coords="3821,847,3955,874"/>
+<area shape="rect" id="node52" href="ServerSession_8hpp.html" title="Managers/ServerSession.hpp" alt="" coords="3319,169,3513,196"/>
+<area shape="rect" id="node56" href="Connection_8hpp.html" title="Networking/Connection.hpp" alt="" coords="3793,251,3975,278"/>
+<area shape="rect" id="node59" href="CursesWindow_8hpp.html" title="Window/CursesWindow.hpp" alt="" coords="4409,758,4596,785"/>
+<area shape="rect" id="node62" href="BufferLogger_8hpp.html" title="Services/Logger/BufferLogger.hpp" alt="" coords="3320,519,3539,546"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -193,7 +203,7 @@ Classes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d71c2fe00ed3b147a8f961a1bf80b6a4.html">Managers</a></li><li class="navelem"><a class="el" href="Game_8hpp.html">Game.hpp</a></li>
-    <li class="footer">Generated on Sat Jul 22 2017 16:59:06 for Arbitrage Simulator by
+    <li class="footer">Generated on Mon Jul 31 2017 19:39:30 for Arbitrage Simulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

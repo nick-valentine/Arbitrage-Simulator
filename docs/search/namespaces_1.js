@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['string',['String',['../namespaceString.html',1,'']]]
+  ['gamestate',['GameState',['../namespaceGameState.html',1,'']]],
+  ['globals',['Globals',['../namespaceGlobals.html',1,'']]]
 ];

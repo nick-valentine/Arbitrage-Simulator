@@ -129,7 +129,7 @@ $(document).ready(function(){initNavTree('classNetworkedWorldInteraction.html','
 <div class="center"><img src="classNetworkedWorldInteraction__inherit__graph.png" border="0" usemap="#NetworkedWorldInteraction_inherit__map" alt="Inheritance graph"/></div>
 <map name="NetworkedWorldInteraction_inherit__map" id="NetworkedWorldInteraction_inherit__map">
 <area shape="rect" id="node2" href="classWorldInteractionInterface.html" title="Class to proxy all interactions with the world through. " alt="" coords="5,123,195,229"/>
-<area shape="rect" id="node3" href="classLocalWorldInteraction.html" title="Manager for non&#45;networked world interaction. " alt="" coords="138,395,329,633"/>
+<area shape="rect" id="node3" href="classLocalWorldInteraction.html" title="Manager for non&#45;networked world interaction. " alt="" coords="138,395,329,648"/>
 <area shape="rect" id="node4" href="classWorld.html" title="World. " alt="" coords="219,5,365,347"/>
 </map>
 </div>
@@ -141,10 +141,10 @@ $(document).ready(function(){initNavTree('classNetworkedWorldInteraction.html','
 <div class="center"><img src="classNetworkedWorldInteraction__coll__graph.png" border="0" usemap="#NetworkedWorldInteraction_coll__map" alt="Collaboration graph"/></div>
 <map name="NetworkedWorldInteraction_coll__map" id="NetworkedWorldInteraction_coll__map">
 <area shape="rect" id="node2" href="classWorldInteractionInterface.html" title="Class to proxy all interactions with the world through. " alt="" coords="5,123,195,229"/>
-<area shape="rect" id="node3" href="classLocalWorldInteraction.html" title="Manager for non&#45;networked world interaction. " alt="" coords="173,409,363,633"/>
+<area shape="rect" id="node3" href="classLocalWorldInteraction.html" title="Manager for non&#45;networked world interaction. " alt="" coords="173,409,363,648"/>
 <area shape="rect" id="node4" href="classWorld.html" title="World. " alt="" coords="219,5,365,347"/>
 <area shape="rect" id="node5" href="classGenerator.html" title="{Generator\n|&#45; passes\l|+ Generator()\l+ ~Generator()\l+ Generator()\l+ operator=()\l+ addPass()\l+ execute()\l+ DefaultGenerator()\l}" alt="" coords="389,93,531,259"/>
-<area shape="rect" id="node6" href="classConnection.html" title="Connection. " alt="" coords="388,409,503,633"/>
+<area shape="rect" id="node6" href="classConnection.html" title="Connection. " alt="" coords="388,417,503,641"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -180,6 +180,8 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a0d9657eb61d9318acf2eeb969b3c4b48 inherit pub_methods_classLocalWorldInteraction"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fbe370d9c746ef3be4e5e0cb5378578 inherit pub_methods_classLocalWorldInteraction"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalWorldInteraction.html#a4fbe370d9c746ef3be4e5e0cb5378578">LocalWorldInteraction</a> (std::string worldName)</td></tr>
 <tr class="separator:a4fbe370d9c746ef3be4e5e0cb5378578 inherit pub_methods_classLocalWorldInteraction"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a143bfcabc47162c393f82a5377b52ee9 inherit pub_methods_classLocalWorldInteraction"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalWorldInteraction.html#a143bfcabc47162c393f82a5377b52ee9">chunkInWorld</a> (int chunkY, int chunkX)</td></tr>
+<tr class="separator:a143bfcabc47162c393f82a5377b52ee9 inherit pub_methods_classLocalWorldInteraction"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b4ebf8d835fcb0aa30a98183e6647a3 inherit pub_methods_classLocalWorldInteraction"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWorldChunk.html">WorldChunk</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalWorldInteraction.html#a2b4ebf8d835fcb0aa30a98183e6647a3">getChunk</a> (int y, int x) const </td></tr>
 <tr class="separator:a2b4ebf8d835fcb0aa30a98183e6647a3 inherit pub_methods_classLocalWorldInteraction"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a1bfc3563f9271abc4642ea04e81f91 inherit pub_methods_classLocalWorldInteraction"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocalWorldInteraction.html#a0a1bfc3563f9271abc4642ea04e81f91">playerCoordinatesToChunkCoordinates</a> (int &amp;chunkY, int &amp;chunkX, int &amp;Y, int &amp;X)</td></tr>
@@ -237,7 +239,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00003">3</a> of file <a class="el" href="NetworkedWorldInteraction_8cpp_source.html">NetworkedWorldInteraction.cpp</a>.</p>
 
-<p>References <a class="el" href="NetworkedWorldInteraction_8hpp_source.html#l00046">chunksLoaded</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00048">configure()</a>, <a class="el" href="Connection_8cpp_source.html#l00019">Connection::connect()</a>, <a class="el" href="NetworkedWorldInteraction_8hpp_source.html#l00052">connection</a>, <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00028">LocalWorldInteraction::playerX</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00029">LocalWorldInteraction::playerY</a>.</p>
+<p>References <a class="el" href="NetworkedWorldInteraction_8hpp_source.html#l00046">chunksLoaded</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00055">configure()</a>, <a class="el" href="Connection_8cpp_source.html#l00019">Connection::connect()</a>, <a class="el" href="NetworkedWorldInteraction_8hpp_source.html#l00052">connection</a>, <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00030">LocalWorldInteraction::playerX</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00031">LocalWorldInteraction::playerY</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -278,11 +280,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00081">81</a> of file <a class="el" href="NetworkedWorldInteraction_8cpp_source.html">NetworkedWorldInteraction.cpp</a>.</p>
+<p>Definition at line <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00088">88</a> of file <a class="el" href="NetworkedWorldInteraction_8cpp_source.html">NetworkedWorldInteraction.cpp</a>.</p>
 
 <p>References <a class="el" href="NetworkedWorldInteraction_8hpp_source.html#l00052">connection</a>, <a class="el" href="Connection_8cpp_source.html#l00039">Connection::read()</a>, <a class="el" href="NetworkedWorldInteraction_8hpp_source.html#l00045">version</a>, <a class="el" href="ServerSession_8hpp_source.html#l00036">ServerSession::VERSION_CHECK</a>, <a class="el" href="ServerSession_8hpp_source.html#l00037">ServerSession::VERSION_CHECK_OK</a>, <a class="el" href="ServerSession_8hpp_source.html#l00038">ServerSession::VERSION_INCOMPATIBLE</a>, and <a class="el" href="Connection_8cpp_source.html#l00064">Connection::write()</a>.</p>
 
-<p>Referenced by <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00064">handShake()</a>.</p>
+<p>Referenced by <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00071">handShake()</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -333,7 +335,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00048">48</a> of file <a class="el" href="NetworkedWorldInteraction_8cpp_source.html">NetworkedWorldInteraction.cpp</a>.</p>
+<p>Definition at line <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00055">55</a> of file <a class="el" href="NetworkedWorldInteraction_8cpp_source.html">NetworkedWorldInteraction.cpp</a>.</p>
 
 <p>References <a class="el" href="ConfigLoader_8cpp_source.html#l00041">ConfigLoader::getVersion()</a>, <a class="el" href="ConfigLoader_8cpp_source.html#l00013">ConfigLoader::load()</a>, and <a class="el" href="NetworkedWorldInteraction_8hpp_source.html#l00045">version</a>.</p>
 
@@ -392,7 +394,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00020">20</a> of file <a class="el" href="NetworkedWorldInteraction_8cpp_source.html">NetworkedWorldInteraction.cpp</a>.</p>
 
-<p>References <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00028">LocalWorldInteraction::playerX</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00029">LocalWorldInteraction::playerY</a>.</p>
+<p>References <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00030">LocalWorldInteraction::playerX</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00031">LocalWorldInteraction::playerY</a>.</p>
 
 </div>
 </div>
@@ -428,7 +430,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00025">25</a> of file <a class="el" href="NetworkedWorldInteraction_8cpp_source.html">NetworkedWorldInteraction.cpp</a>.</p>
 
-<p>References <a class="el" href="World_8hpp_source.html#l00044">World::chunks</a>, and <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00054">hasChunkLoaded()</a>.</p>
+<p>References <a class="el" href="World_8hpp_source.html#l00044">World::chunks</a>, and <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00061">hasChunkLoaded()</a>.</p>
 
 <p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -476,7 +478,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00106">106</a> of file <a class="el" href="NetworkedWorldInteraction_8cpp_source.html">NetworkedWorldInteraction.cpp</a>.</p>
+<p>Definition at line <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00113">113</a> of file <a class="el" href="NetworkedWorldInteraction_8cpp_source.html">NetworkedWorldInteraction.cpp</a>.</p>
 
 <p>References <a class="el" href="World_8hpp_source.html#l00044">World::chunks</a>, <a class="el" href="NetworkedWorldInteraction_8hpp_source.html#l00046">chunksLoaded</a>, <a class="el" href="NetworkedWorldInteraction_8hpp_source.html#l00052">connection</a>, <a class="el" href="Connection_8cpp_source.html#l00039">Connection::read()</a>, <a class="el" href="ServerSession_8hpp_source.html#l00042">ServerSession::REQUEST_CHUNK</a>, <a class="el" href="ServerSession_8hpp_source.html#l00035">ServerSession::REQUEST_OK</a>, and <a class="el" href="Connection_8cpp_source.html#l00064">Connection::write()</a>.</p>
 
@@ -530,9 +532,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00064">64</a> of file <a class="el" href="NetworkedWorldInteraction_8cpp_source.html">NetworkedWorldInteraction.cpp</a>.</p>
+<p>Definition at line <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00071">71</a> of file <a class="el" href="NetworkedWorldInteraction_8cpp_source.html">NetworkedWorldInteraction.cpp</a>.</p>
 
-<p>References <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00081">checkVersion()</a>, and <a class="el" href="NetworkedWorldInteraction_8hpp_source.html#l00045">version</a>.</p>
+<p>References <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00088">checkVersion()</a>, and <a class="el" href="NetworkedWorldInteraction_8hpp_source.html#l00045">version</a>.</p>
 
 <p>Referenced by <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00012">loadWorld()</a>.</p>
 
@@ -596,7 +598,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00054">54</a> of file <a class="el" href="NetworkedWorldInteraction_8cpp_source.html">NetworkedWorldInteraction.cpp</a>.</p>
+<p>Definition at line <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00061">61</a> of file <a class="el" href="NetworkedWorldInteraction_8cpp_source.html">NetworkedWorldInteraction.cpp</a>.</p>
 
 <p>References <a class="el" href="NetworkedWorldInteraction_8hpp_source.html#l00046">chunksLoaded</a>.</p>
 
@@ -643,7 +645,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00012">12</a> of file <a class="el" href="NetworkedWorldInteraction_8cpp_source.html">NetworkedWorldInteraction.cpp</a>.</p>
 
-<p>References <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00064">handShake()</a>.</p>
+<p>References <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00071">handShake()</a>.</p>
 
 <p><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -683,7 +685,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00100">100</a> of file <a class="el" href="NetworkedWorldInteraction_8cpp_source.html">NetworkedWorldInteraction.cpp</a>.</p>
+<p>Definition at line <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00107">107</a> of file <a class="el" href="NetworkedWorldInteraction_8cpp_source.html">NetworkedWorldInteraction.cpp</a>.</p>
 
 <p>References <a class="el" href="NetworkedWorldInteraction_8hpp_source.html#l00052">connection</a>, <a class="el" href="ServerSession_8hpp_source.html#l00039">ServerSession::LOGIN</a>, and <a class="el" href="Connection_8cpp_source.html#l00064">Connection::write()</a>.</p>
 
@@ -737,7 +739,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00036">36</a> of file <a class="el" href="NetworkedWorldInteraction_8cpp_source.html">NetworkedWorldInteraction.cpp</a>.</p>
 
-<p>References <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00106">fetchChunk()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00054">hasChunkLoaded()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00036">LocalWorldInteraction::playerCoordinatesToChunkCoordinates()</a>, <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00028">LocalWorldInteraction::playerX</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00029">LocalWorldInteraction::playerY</a>.</p>
+<p>References <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00059">LocalWorldInteraction::chunkInWorld()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00113">fetchChunk()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00061">hasChunkLoaded()</a>, <a class="el" href="LocalWorldInteraction_8cpp_source.html#l00036">LocalWorldInteraction::playerCoordinatesToChunkCoordinates()</a>, <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00030">LocalWorldInteraction::playerX</a>, and <a class="el" href="LocalWorldInteraction_8hpp_source.html#l00031">LocalWorldInteraction::playerY</a>.</p>
 
 <p><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -746,12 +748,15 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-15-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classNetworkedWorldInteraction_a951bdc14887bba2797479057ab6080bd_cgraph.png" border="0" usemap="#classNetworkedWorldInteraction_a951bdc14887bba2797479057ab6080bd_cgraph" alt=""/></div>
 <map name="classNetworkedWorldInteraction_a951bdc14887bba2797479057ab6080bd_cgraph" id="classNetworkedWorldInteraction_a951bdc14887bba2797479057ab6080bd_cgraph">
-<area shape="rect" id="node2" href="classNetworkedWorldInteraction.html#a6721e294f1badeec39e3346d55680f77" title="NetworkedWorldInteraction\l::fetchChunk" alt="" coords="273,23,453,65"/>
-<area shape="rect" id="node5" href="classNetworkedWorldInteraction.html#a0d811bde458068af35bceffabcbe0ad3" title="NetworkedWorldInteraction\l::hasChunkLoaded" alt="" coords="273,89,453,130"/>
-<area shape="rect" id="node6" href="classLocalWorldInteraction.html#a0a1bfc3563f9271abc4642ea04e81f91" title="Convert the player&#39;s current global coordinates into a chunk, and coordinates in that chunk..." alt="" coords="233,154,492,195"/>
-<area shape="rect" id="node3" href="classConnection.html#a849095cd9dda6388c05fe4896b380530" title="Blocking read on this socket. " alt="" coords="608,5,729,32"/>
-<area shape="rect" id="node4" href="classConnection.html#a6fff1bda7a9e0dc4997792ac29ce1af1" title="Write msg to this socket. " alt="" coords="607,56,731,83"/>
-<area shape="rect" id="node7" href="classLocalWorldInteraction.html#a7e533622fb19fe40f7b81b27f475a4e5" title="convert global coordinates to into a chunk, and coordinates in that chunk. " alt="" coords="540,154,797,195"/>
+<area shape="rect" id="node2" href="classLocalWorldInteraction.html#a143bfcabc47162c393f82a5377b52ee9" title="LocalWorldInteraction\l::chunkInWorld" alt="" coords="289,45,437,86"/>
+<area shape="rect" id="node5" href="classNetworkedWorldInteraction.html#a6721e294f1badeec39e3346d55680f77" title="NetworkedWorldInteraction\l::fetchChunk" alt="" coords="273,110,453,151"/>
+<area shape="rect" id="node8" href="classNetworkedWorldInteraction.html#a0d811bde458068af35bceffabcbe0ad3" title="NetworkedWorldInteraction\l::hasChunkLoaded" alt="" coords="273,175,453,217"/>
+<area shape="rect" id="node9" href="classLocalWorldInteraction.html#a0a1bfc3563f9271abc4642ea04e81f91" title="Convert the player&#39;s current global coordinates into a chunk, and coordinates in that chunk..." alt="" coords="233,241,492,282"/>
+<area shape="rect" id="node3" href="classWorld.html#aa0edc612bd3defdcde0593d75f20e0f3" title="World::getWorldHeight" alt="" coords="591,5,746,32"/>
+<area shape="rect" id="node4" href="classWorld.html#adbfffbc8da85a130e273414dca3e4d08" title="World::getWorldWidth" alt="" coords="593,56,744,83"/>
+<area shape="rect" id="node6" href="classConnection.html#a849095cd9dda6388c05fe4896b380530" title="Blocking read on this socket. " alt="" coords="608,113,729,140"/>
+<area shape="rect" id="node7" href="classConnection.html#a6fff1bda7a9e0dc4997792ac29ce1af1" title="Write msg to this socket. " alt="" coords="607,164,731,191"/>
+<area shape="rect" id="node10" href="classLocalWorldInteraction.html#a7e533622fb19fe40f7b81b27f475a4e5" title="convert global coordinates to into a chunk, and coordinates in that chunk. " alt="" coords="540,241,797,282"/>
 </map>
 </div>
 </p>
@@ -779,7 +784,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="NetworkedWorldInteraction_8hpp_source.html#l00046">46</a> of file <a class="el" href="NetworkedWorldInteraction_8hpp_source.html">NetworkedWorldInteraction.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00106">fetchChunk()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00054">hasChunkLoaded()</a>, and <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00003">NetworkedWorldInteraction()</a>.</p>
+<p>Referenced by <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00113">fetchChunk()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00061">hasChunkLoaded()</a>, and <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00003">NetworkedWorldInteraction()</a>.</p>
 
 </div>
 </div>
@@ -803,7 +808,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="NetworkedWorldInteraction_8hpp_source.html#l00052">52</a> of file <a class="el" href="NetworkedWorldInteraction_8hpp_source.html">NetworkedWorldInteraction.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00081">checkVersion()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00106">fetchChunk()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00100">login()</a>, and <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00003">NetworkedWorldInteraction()</a>.</p>
+<p>Referenced by <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00088">checkVersion()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00113">fetchChunk()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00107">login()</a>, and <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00003">NetworkedWorldInteraction()</a>.</p>
 
 </div>
 </div>
@@ -827,7 +832,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="NetworkedWorldInteraction_8hpp_source.html#l00045">45</a> of file <a class="el" href="NetworkedWorldInteraction_8hpp_source.html">NetworkedWorldInteraction.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00081">checkVersion()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00048">configure()</a>, and <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00064">handShake()</a>.</p>
+<p>Referenced by <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00088">checkVersion()</a>, <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00055">configure()</a>, and <a class="el" href="NetworkedWorldInteraction_8cpp_source.html#l00071">handShake()</a>.</p>
 
 </div>
 </div>
@@ -841,7 +846,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classNetworkedWorldInteraction.html">NetworkedWorldInteraction</a></li>
-    <li class="footer">Generated on Sat Jul 22 2017 16:59:06 for Arbitrage Simulator by
+    <li class="footer">Generated on Mon Jul 31 2017 19:39:30 for Arbitrage Simulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

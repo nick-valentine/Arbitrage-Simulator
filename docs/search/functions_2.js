@@ -5,10 +5,12 @@ var searchData=
   ['camera',['Camera',['../classCamera.html#a01f94c3543f56ede7af49dc778f19331',1,'Camera::Camera()'],['../classCamera.html#af30efa9cdf7ca6c4137b1e906e1537e9',1,'Camera::Camera(unsigned int y, unsigned int x)']]],
   ['canconverttocity',['canConvertToCity',['../classTile.html#ac013dd5284c40ecf541a52d3214fccfc',1,'Tile']]],
   ['checkversion',['checkVersion',['../classNetworkedWorldInteraction.html#ab832ce455f976b6ad4496a94082979d5',1,'NetworkedWorldInteraction']]],
+  ['chunkinworld',['chunkInWorld',['../classLocalWorldInteraction.html#a143bfcabc47162c393f82a5377b52ee9',1,'LocalWorldInteraction']]],
   ['city',['City',['../classCity.html#a1b1f549430f0a7ecd0ec7b1605415193',1,'City::City()'],['../classCity.html#ab9e123e275fe206ddc6ce96bc04b03dc',1,'City::City(std::stringstream *ss)'],['../classCity.html#a40f4d35bf7316f35cfe095bd8d74222c',1,'City::City(std::string name, int pos_x, int pos_y)']]],
   ['cleanup',['cleanup',['../classServerSession.html#a3729554c6c39678e2928f85b1ce73085',1,'ServerSession']]],
   ['cleanupsessions',['cleanupSessions',['../classServer.html#a0b609eb0fc5082c2cd086446ae7342d5',1,'Server']]],
   ['clear',['clear',['../classCursesWindow.html#a1b22fdef6622870e5caa7408597c1191',1,'CursesWindow::clear()'],['../classGameWindow.html#afeef7d049b4838c1c112c2be09fe1cd1',1,'GameWindow::clear()'],['../classWindow.html#ab3914a3846297c08fe8aa8cd724c8fc8',1,'Window::clear()']]],
+  ['clearnextstate',['clearNextState',['../classGameState_1_1Menu.html#abd7f0121e8dcf9c70bdff5c9baeb1813',1,'GameState::Menu::clearNextState()'],['../classGameState_1_1Playing.html#ae5db57de1fca89b2332071df67035048',1,'GameState::Playing::clearNextState()'],['../classGameState_1_1State.html#a1a3f329347371170190149aab663c3d7',1,'GameState::State::clearNextState()']]],
   ['clone',['clone',['../classAbstractPass.html#ae1c9979c6dc6bdd67ccc3451baa1acfb',1,'AbstractPass::clone()'],['../classCityPass.html#a823360df56aac7935e786c89253ae284',1,'CityPass::clone()'],['../classElevationPass.html#aeb671d4d3a35d7f7e88a1175cf926c5a',1,'ElevationPass::clone()'],['../classTypePass.html#a931eeb49440cbe3385a7dc9674f0bb0b',1,'TypePass::clone()']]],
   ['close',['close',['../classConnection.html#aea9f9d78e2b92747d4e4575ccb97361e',1,'Connection']]],
   ['cmake_5fminimum_5frequired',['cmake_minimum_required',['../CMakeLists_8txt.html#abcfa5fba40dbff8a1457b66fe71e6a50',1,'CMakeLists.txt']]],
@@ -19,7 +21,9 @@ var searchData=
   ['connection',['Connection',['../classConnection.html#a9de94289ca6259f94ef6aeba3b134a77',1,'Connection::Connection()'],['../classConnection.html#abd9a704d8c1a3a39d277a18129f77cd7',1,'Connection::Connection(std::string ip, std::string port)'],['../classConnection.html#a85402f2acb1c3caacc065bc3391747bf',1,'Connection::Connection(socket_ptr sock)']]],
   ['consolelogger',['ConsoleLogger',['../classConsoleLogger.html#a5dc25889c50a89a91bce5b1d4f3dd46a',1,'ConsoleLogger']]],
   ['consolewindow',['ConsoleWindow',['../classConsoleWindow.html#a54bab5c04a0c06a93ffc2c88f8edb1ba',1,'ConsoleWindow']]],
+  ['convert',['convert',['../classKeymap.html#ae5ab511e8235d5dbfbcb54aafb65da05',1,'Keymap']]],
   ['converttiletocity',['convertTileToCity',['../classCityPass.html#a139feae469db33416f284bcfe3abee05',1,'CityPass']]],
   ['converttocity',['convertToCity',['../classTile.html#ad18dc829e0b9c7e6a9c52272c902704e',1,'Tile']]],
+  ['createmap',['createMap',['../classKeymap.html#aa84004b9048e9946b4fd146391ae64f3',1,'Keymap']]],
   ['curseswindow',['CursesWindow',['../classCursesWindow.html#a088b31a5f3558ead6997a949f092ebbf',1,'CursesWindow::CursesWindow()'],['../classCursesWindow.html#a77e3bb7a774efba5a72f297e900d9506',1,'CursesWindow::CursesWindow(int y, int x, int height, int width)']]]
 ];

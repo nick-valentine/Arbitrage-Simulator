@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['globals',['Globals',['../namespaceGlobals.html',1,'']]]
+  ['component',['Component',['../namespaceComponent.html',1,'']]]
 ];

@@ -23,5 +23,7 @@ var searchData=
   ['consolewindow_2ecpp',['ConsoleWindow.cpp',['../ConsoleWindow_8cpp.html',1,'']]],
   ['consolewindow_2ehpp',['ConsoleWindow.hpp',['../ConsoleWindow_8hpp.html',1,'']]],
   ['curseswindow_2ecpp',['CursesWindow.cpp',['../CursesWindow_8cpp.html',1,'']]],
-  ['curseswindow_2ehpp',['CursesWindow.hpp',['../CursesWindow_8hpp.html',1,'']]]
+  ['curseswindow_2ehpp',['CursesWindow.hpp',['../CursesWindow_8hpp.html',1,'']]],
+  ['menu_2ecpp',['Menu.cpp',['../Components_2Menu_8cpp.html',1,'']]],
+  ['menu_2ehpp',['Menu.hpp',['../Components_2Menu_8hpp.html',1,'']]]
 ];

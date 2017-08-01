@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['object',['object',['../classWorldChunk.html#a0334bbf1ca1455571d621f40cb67f4afa70fcc3a31b0d281267a10e5fcc9dc638',1,'WorldChunk']]]
+  ['none',['NONE',['../classLogger.html#ac744681e23720966b5f430ec2060da36ad7501076156e6d62015220878014c30b',1,'Logger']]]
 ];

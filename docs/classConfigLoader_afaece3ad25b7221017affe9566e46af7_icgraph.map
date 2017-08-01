@@ -1,10 +1,10 @@
 <map id="ConfigLoader::load" name="ConfigLoader::load">
-<area shape="rect" id="node2" href="$classGame.html#ad2d16756f154ae7da7510b1c7bbcf6cc" title="Game::configure" alt="" coords="215,5,333,32"/>
-<area shape="rect" id="node5" href="$classServer.html#a011fa4233b24eb0397524c33cb6ea73f" title="Server::configure" alt="" coords="213,56,335,83"/>
+<area shape="rect" id="node2" href="$classServer.html#a011fa4233b24eb0397524c33cb6ea73f" title="Server::configure" alt="" coords="213,5,335,32"/>
+<area shape="rect" id="node5" href="$classGame.html#ad2d16756f154ae7da7510b1c7bbcf6cc" title="Game::configure" alt="" coords="215,56,333,83"/>
 <area shape="rect" id="node8" href="$classNetworkedWorldInteraction.html#a4dc0bf5364af285ebfe21d0f06f53c02" title="NetworkedWorldInteraction\l::configure" alt="" coords="184,107,364,149"/>
-<area shape="rect" id="node3" href="$classGame.html#ad7a2b7ff71e3064a289680944a27a42e" title="Game::setup" alt="" coords="457,5,555,32"/>
-<area shape="rect" id="node4" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="648,5,699,32"/>
-<area shape="rect" id="node6" href="$classServer.html#a8b1fafda0754578f16a974195d120e92" title="Server::setup" alt="" coords="456,56,556,83"/>
-<area shape="rect" id="node7" href="$server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="648,56,699,83"/>
+<area shape="rect" id="node3" href="$classServer.html#a8b1fafda0754578f16a974195d120e92" title="Server::setup" alt="" coords="456,5,556,32"/>
+<area shape="rect" id="node4" href="$server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="648,5,699,32"/>
+<area shape="rect" id="node6" href="$classGame.html#ad7a2b7ff71e3064a289680944a27a42e" title="Game::setup" alt="" coords="457,56,555,83"/>
+<area shape="rect" id="node7" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="648,56,699,83"/>
 <area shape="rect" id="node9" href="$classNetworkedWorldInteraction.html#aeb62fc90317746434729b8e8266a2752" title="NetworkedWorldInteraction\l::NetworkedWorldInteraction" alt="" coords="412,107,600,149"/>
 </map>

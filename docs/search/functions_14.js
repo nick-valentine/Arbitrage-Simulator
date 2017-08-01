@@ -1,14 +1,7 @@
 var searchData=
 [
-  ['_7ebufferlogger',['~BufferLogger',['../classBufferLogger.html#ac722ba3c2824b0df9f1069db254edc81',1,'BufferLogger']]],
-  ['_7econsolelogger',['~ConsoleLogger',['../classConsoleLogger.html#a242e88aa9495249d5a7fbdfc4f8886ee',1,'ConsoleLogger']]],
-  ['_7econsolewindow',['~ConsoleWindow',['../classConsoleWindow.html#a4f2134b648ac194f31c5a18aecd3f7b3',1,'ConsoleWindow']]],
-  ['_7ecurseswindow',['~CursesWindow',['../classCursesWindow.html#abd721c8e7b4cfc5da1e87123fd3b2601',1,'CursesWindow']]],
-  ['_7egame',['~Game',['../classGame.html#ae3d112ca6e0e55150d2fdbc704474530',1,'Game']]],
-  ['_7egamewindow',['~GameWindow',['../classGameWindow.html#a55b071c0390e45c064a160c1e6baaa08',1,'GameWindow']]],
-  ['_7egamewindowlayout',['~GameWindowLayout',['../classGameWindowLayout.html#ad505cb0a5b19b94e57d0e40e113c9494',1,'GameWindowLayout']]],
-  ['_7egenerator',['~Generator',['../classGenerator.html#acc85fbe22690003267ba899bacf777d1',1,'Generator']]],
-  ['_7elogger',['~Logger',['../classLogger.html#ae93f62ca3e47716b7120acb032a260f3',1,'Logger']]],
-  ['_7eserver',['~Server',['../classServer.html#a4b3aa2579cb1c8cd1d069582c14d0fa6',1,'Server']]],
-  ['_7ewindow',['~Window',['../classWindow.html#a62b4a97b3c2e492f1d9a46092011e2d9',1,'Window']]]
+  ['warn',['warn',['../classBufferLogger.html#a4d05f0a11139572681c84998c32100e2',1,'BufferLogger::warn()'],['../classConsoleLogger.html#ac95c55d919e7ca8e9501e6429d216c77',1,'ConsoleLogger::warn()'],['../classLogger.html#ab307fd2a26a4fc681b5e86e883d353de',1,'Logger::warn()'],['../classNullLogger.html#a7c20b85a4a6bf2ca6140fc7f070da4d0',1,'NullLogger::warn()']]],
+  ['world',['World',['../classWorld.html#afa39d4e6f714a7a3691ac0c656f5e8a8',1,'World::World()'],['../classWorld.html#a8a3cbd89a9deaab59376b02540d0092a',1,'World::World(std::stringstream *ss)'],['../classWorld.html#a7cb840db7b54d4fa3d4474f6c8bfc291',1,'World::World(std::string name)']]],
+  ['worldchunk',['WorldChunk',['../classWorldChunk.html#a91bb3617decfca9f60c0db40e478e682',1,'WorldChunk::WorldChunk()'],['../classWorldChunk.html#a5e1a8c63a75d1c9c764a92ba39b9b931',1,'WorldChunk::WorldChunk(unsigned int top, unsigned int left)'],['../classWorldChunk.html#a2b8469a78d6b97490263836ddc1bac42',1,'WorldChunk::WorldChunk(std::stringstream *ss)']]],
+  ['write',['write',['../classServerSession.html#a66d967ee12c83767d852b3bfa2fc94d5',1,'ServerSession::write()'],['../classConnection.html#a6fff1bda7a9e0dc4997792ac29ce1af1',1,'Connection::write()']]]
 ];

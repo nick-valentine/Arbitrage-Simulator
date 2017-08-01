@@ -1,19 +1,19 @@
 <map id="Generator.hpp" name="Generator.hpp">
-<area shape="rect" id="node4" href="$World_8hpp.html" title="GameObjects/World.hpp" alt="" coords="1313,229,1479,256"/>
-<area shape="rect" id="node26" href="$Logger_8hpp.html" title="Services/Logger/Logger.hpp" alt="" coords="1899,229,2083,256"/>
-<area shape="rect" id="node30" href="$AbstractPass_8hpp.html" title="WorldGen/Pass/AbstractPass.hpp" alt="" coords="1605,155,1827,181"/>
-<area shape="rect" id="node31" href="$ElevationPass_8hpp.html" title="WorldGen/Pass/ElevationPass.hpp" alt="" coords="1727,80,1953,107"/>
-<area shape="rect" id="node32" href="$TypePass_8hpp.html" title="WorldGen/Pass/TypePass.hpp" alt="" coords="2028,80,2231,107"/>
-<area shape="rect" id="node33" href="$CityPass_8hpp.html" title="WorldGen/Pass/CityPass.hpp" alt="" coords="2320,80,2517,107"/>
-<area shape="rect" id="node8" href="$ConfigLoader_8hpp.html" title="ConfigLoader.hpp" alt="" coords="1885,379,2009,405"/>
-<area shape="rect" id="node12" href="$WorldChunk_8hpp.html" title="GameObjects/WorldChunk.hpp" alt="" coords="1503,304,1705,331"/>
-<area shape="rect" id="node23" href="$Window_8hpp.html" title="Window/Window.hpp" alt="" coords="1214,461,1359,487"/>
-<area shape="rect" id="node25" href="$Player_8hpp.html" title="GameObjects/Player.hpp" alt="" coords="772,379,940,405"/>
-<area shape="rect" id="node18" href="$Globals_8hpp.html" title="Globals.hpp" alt="" coords="1435,461,1525,487"/>
-<area shape="rect" id="node19" href="$AbstractGameObject_8hpp.html" title="GameObjects/AbstractGame\lObject.hpp" alt="" coords="897,453,1087,495"/>
-<area shape="rect" id="node20" href="$City_8hpp.html" title="GameObjects/City.hpp" alt="" coords="1523,379,1677,405"/>
-<area shape="rect" id="node21" href="$Tile_8hpp.html" title="GameObjects/Tile.hpp" alt="" coords="1103,379,1255,405"/>
-<area shape="rect" id="node24" href="$NoiseFunc_8hpp.html" title="WorldGen/NoiseFunc.hpp" alt="" coords="2234,379,2406,405"/>
-<area shape="rect" id="node22" href="$ColorPallete_8hpp.html" title="ColorPallete.hpp" alt="" coords="651,461,770,487"/>
-<area shape="rect" id="node34" href="$Vector_8hpp.html" title="Helpers/Vector.hpp" alt="" coords="2587,461,2722,487"/>
+<area shape="rect" id="node4" href="$World_8hpp.html" title="GameObjects/World.hpp" alt="" coords="952,229,1117,256"/>
+<area shape="rect" id="node26" href="$Logger_8hpp.html" title="Services/Logger/Logger.hpp" alt="" coords="1659,229,1843,256"/>
+<area shape="rect" id="node30" href="$AbstractPass_8hpp.html" title="WorldGen/Pass/AbstractPass.hpp" alt="" coords="1477,155,1699,181"/>
+<area shape="rect" id="node31" href="$ElevationPass_8hpp.html" title="WorldGen/Pass/ElevationPass.hpp" alt="" coords="1327,80,1553,107"/>
+<area shape="rect" id="node32" href="$TypePass_8hpp.html" title="WorldGen/Pass/TypePass.hpp" alt="" coords="1773,80,1976,107"/>
+<area shape="rect" id="node33" href="$CityPass_8hpp.html" title="WorldGen/Pass/CityPass.hpp" alt="" coords="2064,80,2261,107"/>
+<area shape="rect" id="node8" href="$ConfigLoader_8hpp.html" title="ConfigLoader.hpp" alt="" coords="1073,379,1197,405"/>
+<area shape="rect" id="node12" href="$WorldChunk_8hpp.html" title="GameObjects/WorldChunk.hpp" alt="" coords="1347,304,1549,331"/>
+<area shape="rect" id="node23" href="$Window_8hpp.html" title="Window/Window.hpp" alt="" coords="2062,461,2207,487"/>
+<area shape="rect" id="node25" href="$Player_8hpp.html" title="GameObjects/Player.hpp" alt="" coords="193,379,361,405"/>
+<area shape="rect" id="node18" href="$Globals_8hpp.html" title="Globals.hpp" alt="" coords="461,461,552,487"/>
+<area shape="rect" id="node19" href="$AbstractGameObject_8hpp.html" title="GameObjects/AbstractGame\lObject.hpp" alt="" coords="246,453,437,495"/>
+<area shape="rect" id="node20" href="$City_8hpp.html" title="GameObjects/City.hpp" alt="" coords="588,379,743,405"/>
+<area shape="rect" id="node21" href="$Tile_8hpp.html" title="GameObjects/Tile.hpp" alt="" coords="1272,379,1424,405"/>
+<area shape="rect" id="node24" href="$NoiseFunc_8hpp.html" title="WorldGen/NoiseFunc.hpp" alt="" coords="1689,379,1861,405"/>
+<area shape="rect" id="node22" href="$ColorPallete_8hpp.html" title="ColorPallete.hpp" alt="" coords="1377,461,1495,487"/>
+<area shape="rect" id="node34" href="$Vector_8hpp.html" title="Helpers/Vector.hpp" alt="" coords="2435,461,2570,487"/>
 </map>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['player',['Player',['../classPlayer.html',1,'']]]
+  ['localworldinteraction',['LocalWorldInteraction',['../classLocalWorldInteraction.html',1,'']]],
+  ['logger',['Logger',['../classLogger.html',1,'']]]
 ];

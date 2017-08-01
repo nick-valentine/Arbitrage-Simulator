@@ -1,0 +1,4 @@
+<map id="GameState::State" name="GameState::State">
+<area shape="rect" id="node2" href="$classGameState_1_1Menu.html" title="{GameState::Menu\n|&#45; options\l&#45; menuShouldClose\l&#45; menu\l|+ Menu()\l+ ~Menu()\l+ init()\l+ addOption()\l+ update()\l+ render()\l+ nextState()\l+ clearNextState()\l+ shouldClose()\l}" alt="" coords="5,336,141,560"/>
+<area shape="rect" id="node3" href="$classGameState_1_1Playing.html" title="{GameState::Playing\n|&#45; player\l&#45; camera\l&#45; newState\l|+ init()\l+ update()\l+ render()\l+ nextState()\l+ clearNextState()\l+ shouldClose()\l}" alt="" coords="165,358,304,538"/>
+</map>

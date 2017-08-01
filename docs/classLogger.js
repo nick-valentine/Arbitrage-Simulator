@@ -1,5 +1,6 @@
 var classLogger =
 [
+    [ "LoggerPtr", "classLogger.html#a553760eed76d57bdc7d483bbfed58bee", null ],
     [ "LogLevel", "classLogger.html#ac744681e23720966b5f430ec2060da36", [
       [ "NONE", "classLogger.html#ac744681e23720966b5f430ec2060da36ad7501076156e6d62015220878014c30b", null ],
       [ "DEBUG", "classLogger.html#ac744681e23720966b5f430ec2060da36abdc8d840ac4b73e1bd3212184af8f85e", null ],

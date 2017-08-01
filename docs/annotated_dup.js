@@ -1,5 +1,7 @@
 var annotated_dup =
 [
+    [ "Component", "namespaceComponent.html", "namespaceComponent" ],
+    [ "GameState", "namespaceGameState.html", "namespaceGameState" ],
     [ "AbstractGameObject", "classAbstractGameObject.html", "classAbstractGameObject" ],
     [ "AbstractPass", "classAbstractPass.html", "classAbstractPass" ],
     [ "BufferLogger", "classBufferLogger.html", "classBufferLogger" ],
@@ -17,10 +19,13 @@ var annotated_dup =
     [ "GameWindow", "classGameWindow.html", "classGameWindow" ],
     [ "GameWindowLayout", "classGameWindowLayout.html", "classGameWindowLayout" ],
     [ "Generator", "classGenerator.html", "classGenerator" ],
+    [ "Item", "classItem.html", "classItem" ],
+    [ "Keymap", "classKeymap.html", "classKeymap" ],
     [ "LocalWorldInteraction", "classLocalWorldInteraction.html", "classLocalWorldInteraction" ],
     [ "Logger", "classLogger.html", "classLogger" ],
     [ "NetworkedWorldInteraction", "classNetworkedWorldInteraction.html", "classNetworkedWorldInteraction" ],
     [ "NoiseFunc", "classNoiseFunc.html", "classNoiseFunc" ],
+    [ "NullLogger", "classNullLogger.html", "classNullLogger" ],
     [ "Player", "classPlayer.html", "classPlayer" ],
     [ "Server", "classServer.html", "classServer" ],
     [ "ServerSession", "classServerSession.html", "classServerSession" ],

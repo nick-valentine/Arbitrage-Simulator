@@ -153,6 +153,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad152ee628155938362ffd02983dd19ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2da6586da4a08c1ef78ccc9fa60eeeec"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameWindow.html#a2da6586da4a08c1ef78ccc9fa60eeeec">resize</a> (int <a class="el" href="classCursesWindow.html#a52eb5eedd5549d68bf6890c04a192790">height</a>, int <a class="el" href="classCursesWindow.html#afbff6c8582833a3601b8cfc8427eed60">width</a>)</td></tr>
 <tr class="separator:a2da6586da4a08c1ef78ccc9fa60eeeec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c5efaab9416e8f35c2fe2175cfe932e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameWindow.html#a0c5efaab9416e8f35c2fe2175cfe932e">putstr</a> (int <a class="el" href="classCursesWindow.html#a1e1696461ab4fc524306339250551bd8">y</a>, int <a class="el" href="classCursesWindow.html#a1a8df641c7039c8885fcfecd27e0f492">x</a>, std::string str, int color)</td></tr>
+<tr class="separator:a0c5efaab9416e8f35c2fe2175cfe932e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a704892b3a2a9fe18b6a07a4b69c2f473"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameWindow.html#a704892b3a2a9fe18b6a07a4b69c2f473">put</a> (unsigned int colorPair, unsigned int layer, char c, int <a class="el" href="classCursesWindow.html#a1e1696461ab4fc524306339250551bd8">y</a>, int <a class="el" href="classCursesWindow.html#a1a8df641c7039c8885fcfecd27e0f492">x</a>)</td></tr>
 <tr class="separator:a704892b3a2a9fe18b6a07a4b69c2f473"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8813f29538243a65d4c414c14157a89"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameWindow.html#ad8813f29538243a65d4c414c14157a89">put</a> (<a class="el" href="structWindow_1_1TextElement.html">Window::TextElement</a> c, int <a class="el" href="classCursesWindow.html#a1e1696461ab4fc524306339250551bd8">y</a>, int <a class="el" href="classCursesWindow.html#a1a8df641c7039c8885fcfecd27e0f492">x</a>)</td></tr>
@@ -168,8 +170,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a77e3bb7a774efba5a72f297e900d9506 inherit pub_methods_classCursesWindow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd721c8e7b4cfc5da1e87123fd3b2601 inherit pub_methods_classCursesWindow"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCursesWindow.html#abd721c8e7b4cfc5da1e87123fd3b2601">~CursesWindow</a> ()</td></tr>
 <tr class="separator:abd721c8e7b4cfc5da1e87123fd3b2601 inherit pub_methods_classCursesWindow"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d7afaf145fd706a3a0856ec4be932f1 inherit pub_methods_classCursesWindow"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCursesWindow.html#a7d7afaf145fd706a3a0856ec4be932f1">putstr</a> (int <a class="el" href="classCursesWindow.html#a1e1696461ab4fc524306339250551bd8">y</a>, int <a class="el" href="classCursesWindow.html#a1a8df641c7039c8885fcfecd27e0f492">x</a>, std::string str, int color=0)</td></tr>
-<tr class="separator:a7d7afaf145fd706a3a0856ec4be932f1 inherit pub_methods_classCursesWindow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a058be5cf240fc2e1ae26a7446824d664 inherit pub_methods_classCursesWindow"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCursesWindow.html#a058be5cf240fc2e1ae26a7446824d664">move</a> (int <a class="el" href="classCursesWindow.html#a1e1696461ab4fc524306339250551bd8">y</a>, int <a class="el" href="classCursesWindow.html#a1a8df641c7039c8885fcfecd27e0f492">x</a>)</td></tr>
 <tr class="separator:a058be5cf240fc2e1ae26a7446824d664 inherit pub_methods_classCursesWindow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ceeaacd546b56e0ab3ed3977550319d inherit pub_methods_classCursesWindow"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCursesWindow.html#a1ceeaacd546b56e0ab3ed3977550319d">getCh</a> ()</td></tr>
@@ -283,9 +283,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classCursesWindow.html#a1b22fdef6622870e5caa7408597c1191">CursesWindow</a>.</p>
 
-<p>Definition at line <a class="el" href="GameWindow_8cpp_source.html#l00052">52</a> of file <a class="el" href="GameWindow_8cpp_source.html">GameWindow.cpp</a>.</p>
+<p>Definition at line <a class="el" href="GameWindow_8cpp_source.html#l00059">59</a> of file <a class="el" href="GameWindow_8cpp_source.html">GameWindow.cpp</a>.</p>
 
-<p>References <a class="el" href="Window_8hpp_source.html#l00019">Window::TextElement::c</a>, <a class="el" href="Window_8hpp_source.html#l00017">Window::TextElement::colorPair</a>, <a class="el" href="Window_8hpp_source.html#l00018">Window::TextElement::layer</a>, and <a class="el" href="GameWindow_8hpp_source.html#l00031">ScreenBuffer</a>.</p>
+<p>References <a class="el" href="Window_8hpp_source.html#l00019">Window::TextElement::c</a>, <a class="el" href="Window_8hpp_source.html#l00017">Window::TextElement::colorPair</a>, <a class="el" href="Window_8hpp_source.html#l00018">Window::TextElement::layer</a>, and <a class="el" href="GameWindow_8hpp_source.html#l00032">ScreenBuffer</a>.</p>
 
 </div>
 </div>
@@ -384,9 +384,23 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classCursesWindow.html#acfe24bc978bab88c3349b505671ad61a">CursesWindow</a>.</p>
 
-<p>Definition at line <a class="el" href="GameWindow_8cpp_source.html#l00034">34</a> of file <a class="el" href="GameWindow_8cpp_source.html">GameWindow.cpp</a>.</p>
+<p>Definition at line <a class="el" href="GameWindow_8cpp_source.html#l00041">41</a> of file <a class="el" href="GameWindow_8cpp_source.html">GameWindow.cpp</a>.</p>
 
 <p>References <a class="el" href="Window_8hpp_source.html#l00019">Window::TextElement::c</a>, <a class="el" href="Window_8hpp_source.html#l00017">Window::TextElement::colorPair</a>, and <a class="el" href="Window_8hpp_source.html#l00018">Window::TextElement::layer</a>.</p>
+
+<p>Referenced by <a class="el" href="GameWindow_8cpp_source.html#l00034">putstr()</a>.</p>
+
+<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classGameWindow_a704892b3a2a9fe18b6a07a4b69c2f473_icgraph.png" border="0" usemap="#classGameWindow_a704892b3a2a9fe18b6a07a4b69c2f473_icgraph" alt=""/></div>
+<map name="classGameWindow_a704892b3a2a9fe18b6a07a4b69c2f473_icgraph" id="classGameWindow_a704892b3a2a9fe18b6a07a4b69c2f473_icgraph">
+<area shape="rect" id="node2" href="classGameWindow.html#a0c5efaab9416e8f35c2fe2175cfe932e" title="GameWindow::putstr" alt="" coords="184,5,329,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -430,9 +444,73 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classCursesWindow.html#ac811aff97a442f23b51872ead3584a93">CursesWindow</a>.</p>
 
-<p>Definition at line <a class="el" href="GameWindow_8cpp_source.html#l00043">43</a> of file <a class="el" href="GameWindow_8cpp_source.html">GameWindow.cpp</a>.</p>
+<p>Definition at line <a class="el" href="GameWindow_8cpp_source.html#l00050">50</a> of file <a class="el" href="GameWindow_8cpp_source.html">GameWindow.cpp</a>.</p>
 
-<p>References <a class="el" href="Window_8hpp_source.html#l00018">Window::TextElement::layer</a>, <a class="el" href="GameWindow_8hpp_source.html#l00031">ScreenBuffer</a>, <a class="el" href="CursesWindow_8hpp_source.html#l00045">CursesWindow::x</a>, and <a class="el" href="CursesWindow_8hpp_source.html#l00044">CursesWindow::y</a>.</p>
+<p>References <a class="el" href="Window_8hpp_source.html#l00018">Window::TextElement::layer</a>, <a class="el" href="GameWindow_8hpp_source.html#l00032">ScreenBuffer</a>, <a class="el" href="CursesWindow_8hpp_source.html#l00045">CursesWindow::x</a>, and <a class="el" href="CursesWindow_8hpp_source.html#l00044">CursesWindow::y</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0c5efaab9416e8f35c2fe2175cfe932e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameWindow::putstr </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classCursesWindow.html#a7d7afaf145fd706a3a0856ec4be932f1">CursesWindow</a>.</p>
+
+<p>Definition at line <a class="el" href="GameWindow_8cpp_source.html#l00034">34</a> of file <a class="el" href="GameWindow_8cpp_source.html">GameWindow.cpp</a>.</p>
+
+<p>References <a class="el" href="GameWindow_8cpp_source.html#l00041">put()</a>.</p>
+
+<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classGameWindow_a0c5efaab9416e8f35c2fe2175cfe932e_cgraph.png" border="0" usemap="#classGameWindow_a0c5efaab9416e8f35c2fe2175cfe932e_cgraph" alt=""/></div>
+<map name="classGameWindow_a0c5efaab9416e8f35c2fe2175cfe932e_cgraph" id="classGameWindow_a0c5efaab9416e8f35c2fe2175cfe932e_cgraph">
+<area shape="rect" id="node2" href="classGameWindow.html#a704892b3a2a9fe18b6a07a4b69c2f473" title="GameWindow::put" alt="" coords="199,5,329,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -459,15 +537,15 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classCursesWindow.html#ac06799b415fada8c68faffc6d5c8f034">CursesWindow</a>.</p>
 
-<p>Definition at line <a class="el" href="GameWindow_8cpp_source.html#l00067">67</a> of file <a class="el" href="GameWindow_8cpp_source.html">GameWindow.cpp</a>.</p>
+<p>Definition at line <a class="el" href="GameWindow_8cpp_source.html#l00074">74</a> of file <a class="el" href="GameWindow_8cpp_source.html">GameWindow.cpp</a>.</p>
 
-<p>References <a class="el" href="CursesWindow_8cpp_source.html#l00065">CursesWindow::render()</a>, <a class="el" href="GameWindow_8hpp_source.html#l00031">ScreenBuffer</a>, and <a class="el" href="CursesWindow_8hpp_source.html#l00042">CursesWindow::win</a>.</p>
+<p>References <a class="el" href="CursesWindow_8cpp_source.html#l00065">CursesWindow::render()</a>, <a class="el" href="GameWindow_8hpp_source.html#l00032">ScreenBuffer</a>, and <a class="el" href="CursesWindow_8hpp_source.html#l00042">CursesWindow::win</a>.</p>
 
-<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classGameWindow_af04994743b0d4118d43e37fb7cb26368_cgraph.png" border="0" usemap="#classGameWindow_af04994743b0d4118d43e37fb7cb26368_cgraph" alt=""/></div>
 <map name="classGameWindow_af04994743b0d4118d43e37fb7cb26368_cgraph" id="classGameWindow_af04994743b0d4118d43e37fb7cb26368_cgraph">
 <area shape="rect" id="node2" href="classCursesWindow.html#ac06799b415fada8c68faffc6d5c8f034" title="CursesWindow::render" alt="" coords="201,5,356,32"/>
@@ -513,15 +591,15 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="GameWindow_8cpp_source.html#l00017">17</a> of file <a class="el" href="GameWindow_8cpp_source.html">GameWindow.cpp</a>.</p>
 
-<p>References <a class="el" href="Window_8hpp_source.html#l00019">Window::TextElement::c</a>, <a class="el" href="Window_8hpp_source.html#l00017">Window::TextElement::colorPair</a>, <a class="el" href="CursesWindow_8hpp_source.html#l00046">CursesWindow::height</a>, <a class="el" href="Window_8hpp_source.html#l00018">Window::TextElement::layer</a>, <a class="el" href="CursesWindow_8cpp_source.html#l00071">CursesWindow::resize()</a>, <a class="el" href="GameWindow_8hpp_source.html#l00031">ScreenBuffer</a>, and <a class="el" href="CursesWindow_8hpp_source.html#l00047">CursesWindow::width</a>.</p>
+<p>References <a class="el" href="Window_8hpp_source.html#l00019">Window::TextElement::c</a>, <a class="el" href="Window_8hpp_source.html#l00017">Window::TextElement::colorPair</a>, <a class="el" href="CursesWindow_8hpp_source.html#l00046">CursesWindow::height</a>, <a class="el" href="Window_8hpp_source.html#l00018">Window::TextElement::layer</a>, <a class="el" href="CursesWindow_8cpp_source.html#l00071">CursesWindow::resize()</a>, <a class="el" href="GameWindow_8hpp_source.html#l00032">ScreenBuffer</a>, and <a class="el" href="CursesWindow_8hpp_source.html#l00047">CursesWindow::width</a>.</p>
 
 <p>Referenced by <a class="el" href="GameWindow_8cpp_source.html#l00011">init()</a>.</p>
 
-<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classGameWindow_a2da6586da4a08c1ef78ccc9fa60eeeec_cgraph.png" border="0" usemap="#classGameWindow_a2da6586da4a08c1ef78ccc9fa60eeeec_cgraph" alt=""/></div>
 <map name="classGameWindow_a2da6586da4a08c1ef78ccc9fa60eeeec_cgraph" id="classGameWindow_a2da6586da4a08c1ef78ccc9fa60eeeec_cgraph">
 <area shape="rect" id="node2" href="classCursesWindow.html#a4001dd4ff7f12e372fada557f2ffa2df" title="CursesWindow::resize" alt="" coords="200,5,355,32"/>
@@ -529,11 +607,11 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </p>
 
-<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classGameWindow_a2da6586da4a08c1ef78ccc9fa60eeeec_icgraph.png" border="0" usemap="#classGameWindow_a2da6586da4a08c1ef78ccc9fa60eeeec_icgraph" alt=""/></div>
 <map name="classGameWindow_a2da6586da4a08c1ef78ccc9fa60eeeec_icgraph" id="classGameWindow_a2da6586da4a08c1ef78ccc9fa60eeeec_icgraph">
 <area shape="rect" id="node2" href="classGameWindow.html#ad152ee628155938362ffd02983dd19ae" title="GameWindow::init" alt="" coords="200,5,329,32"/>
@@ -562,9 +640,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="GameWindow_8hpp_source.html#l00031">31</a> of file <a class="el" href="GameWindow_8hpp_source.html">GameWindow.hpp</a>.</p>
+<p>Definition at line <a class="el" href="GameWindow_8hpp_source.html#l00032">32</a> of file <a class="el" href="GameWindow_8hpp_source.html">GameWindow.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="GameWindow_8cpp_source.html#l00052">clear()</a>, <a class="el" href="GameWindow_8cpp_source.html#l00043">put()</a>, <a class="el" href="GameWindow_8cpp_source.html#l00067">render()</a>, and <a class="el" href="GameWindow_8cpp_source.html#l00017">resize()</a>.</p>
+<p>Referenced by <a class="el" href="GameWindow_8cpp_source.html#l00059">clear()</a>, <a class="el" href="GameWindow_8cpp_source.html#l00050">put()</a>, <a class="el" href="GameWindow_8cpp_source.html#l00074">render()</a>, and <a class="el" href="GameWindow_8cpp_source.html#l00017">resize()</a>.</p>
 
 </div>
 </div>
@@ -578,7 +656,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classGameWindow.html">GameWindow</a></li>
-    <li class="footer">Generated on Sat Jul 22 2017 16:59:06 for Arbitrage Simulator by
+    <li class="footer">Generated on Mon Jul 31 2017 19:39:30 for Arbitrage Simulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

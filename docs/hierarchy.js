@@ -2,6 +2,7 @@ var hierarchy =
 [
     [ "AbstractGameObject", "classAbstractGameObject.html", [
       [ "City", "classCity.html", null ],
+      [ "Item", "classItem.html", null ],
       [ "Player", "classPlayer.html", null ],
       [ "Tile", "classTile.html", null ],
       [ "WorldChunk", "classWorldChunk.html", null ]
@@ -18,13 +19,20 @@ var hierarchy =
     [ "Game", "classGame.html", null ],
     [ "GameWindowLayout", "classGameWindowLayout.html", null ],
     [ "Generator", "classGenerator.html", null ],
+    [ "Keymap", "classKeymap.html", null ],
     [ "Logger", "classLogger.html", [
       [ "BufferLogger", "classBufferLogger.html", null ],
-      [ "ConsoleLogger", "classConsoleLogger.html", null ]
+      [ "ConsoleLogger", "classConsoleLogger.html", null ],
+      [ "NullLogger", "classNullLogger.html", null ]
     ] ],
+    [ "Component::Menu", "classComponent_1_1Menu.html", null ],
     [ "NoiseFunc", "classNoiseFunc.html", null ],
     [ "Server", "classServer.html", null ],
     [ "ServerSession", "classServerSession.html", null ],
+    [ "GameState::State", "classGameState_1_1State.html", [
+      [ "GameState::Menu", "classGameState_1_1Menu.html", null ],
+      [ "GameState::Playing", "classGameState_1_1Playing.html", null ]
+    ] ],
     [ "Window::TextElement", "structWindow_1_1TextElement.html", null ],
     [ "Tile::TileType", "structTile_1_1TileType.html", null ],
     [ "Window", "classWindow.html", [

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loglevel',['LogLevel',['../classLogger.html#ac744681e23720966b5f430ec2060da36',1,'Logger']]]
+  ['input',['Input',['../Input_8hpp.html#a080a822f0093973313bd644e517a5090',1,'Input.hpp']]]
 ];

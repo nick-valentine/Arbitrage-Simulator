@@ -1,0 +1,6 @@
+<map id="InputMapping::toInput" name="InputMapping::toInput">
+<area shape="rect" id="node2" href="$classKeymap.html#aa84004b9048e9946b4fd146391ae64f3" title="Keymap::createMap" alt="" coords="201,5,340,32"/>
+<area shape="rect" id="node3" href="$classKeymap.html#a25828636e4d8d24594e28657f90afb79" title="Keymap::init" alt="" coords="388,5,483,32"/>
+<area shape="rect" id="node4" href="$classGame.html#ad7a2b7ff71e3064a289680944a27a42e" title="Game::setup" alt="" coords="531,5,628,32"/>
+<area shape="rect" id="node5" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="676,5,727,32"/>
+</map>

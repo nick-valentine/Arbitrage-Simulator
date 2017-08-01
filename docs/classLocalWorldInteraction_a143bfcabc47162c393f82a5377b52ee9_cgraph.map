@@ -1,0 +1,4 @@
+<map id="LocalWorldInteraction::chunkInWorld" name="LocalWorldInteraction::chunkInWorld">
+<area shape="rect" id="node2" href="$classWorld.html#aa0edc612bd3defdcde0593d75f20e0f3" title="World::getWorldHeight" alt="" coords="201,5,356,32"/>
+<area shape="rect" id="node3" href="$classWorld.html#adbfffbc8da85a130e273414dca3e4d08" title="World::getWorldWidth" alt="" coords="203,56,354,83"/>
+</map>

@@ -1,11 +1,10 @@
 <map id="Game::run" name="Game::run">
-<area shape="rect" id="node2" href="$classPlayer.html#a6e3e621902e7d1d718e5cd5c2004f2ef" title="Player::getYX" alt="" coords="178,5,281,32"/>
-<area shape="rect" id="node3" href="$classPlayer.html#a955e68fc1da6565d43649b27a0ecabee" title="Player::move" alt="" coords="180,56,279,83"/>
-<area shape="rect" id="node4" href="$classWorldInteractionInterface.html#a275d3637a9886be9ea98cdafbdd6ae25" title="WorldInteractionInterface\l::movePlayerToCoordinate" alt="" coords="141,107,318,149"/>
-<area shape="rect" id="node5" href="$classCamera.html#af05f81e8e5ba8851826242acbb824086" title="Camera::moveTo" alt="" coords="168,173,291,200"/>
-<area shape="rect" id="node6" href="$classGameWindowLayout.html#a490a59780f8de2c6cad6a6b72ec028a3" title="GameWindowLayout::render" alt="" coords="136,224,323,251"/>
-<area shape="rect" id="node8" href="$classCamera.html#a76ed19c192c25c8e41f4a6bb54ba87b2" title="Render the world and player onto the screen. " alt="" coords="173,281,285,308"/>
-<area shape="rect" id="node7" href="$classGameWindowLayout.html#a66d9862e640242e6ef562fc59305ddfe" title="GameWindowLayout::update\lScreenSize" alt="" coords="371,209,561,250"/>
-<area shape="rect" id="node9" href="$classWorldInteractionInterface.html#ac06c2a9974ff1749af8fe71dbdfe7c98" title="WorldInteractionInterface\l::draw" alt="" coords="382,274,550,315"/>
-<area shape="rect" id="node10" href="$classPlayer.html#aad62851071bf59965833224024a687c1" title="Player::draw" alt="" coords="419,340,513,367"/>
+<area shape="rect" id="node2" href="$classGameState_1_1State.html#a1a3f329347371170190149aab663c3d7" title="GameState::State::clearNext\lState" alt="" coords="139,5,330,47"/>
+<area shape="rect" id="node3" href="$classKeymap.html#ae5ab511e8235d5dbfbcb54aafb65da05" title="Keymap::convert" alt="" coords="174,71,295,98"/>
+<area shape="rect" id="node4" href="$classGameState_1_1State.html#afb0e50e51155c6cc1b713a29f75c78b6" title="GameState::State::nextState" alt="" coords="139,122,330,149"/>
+<area shape="rect" id="node5" href="$classGameState_1_1State.html#aee53a5e7f1985aa541fc50a3095f0f12" title="GameState::State::passDown" alt="" coords="136,173,333,199"/>
+<area shape="rect" id="node6" href="$classGameState_1_1State.html#aef63d8287c6f47d20dc7a822ee1caeb2" title="GameState::State::recvDown" alt="" coords="137,223,332,250"/>
+<area shape="rect" id="node7" href="$classGameWindowLayout.html#a490a59780f8de2c6cad6a6b72ec028a3" title="GameWindowLayout::render" alt="" coords="141,274,328,301"/>
+<area shape="rect" id="node9" href="$classGameState_1_1State.html#ad70390405ac9d68ba95adfe84bb1bcd6" title="GameState::State::setLogger" alt="" coords="139,325,331,351"/>
+<area shape="rect" id="node8" href="$classGameWindowLayout.html#a66d9862e640242e6ef562fc59305ddfe" title="GameWindowLayout::update\lScreenSize" alt="" coords="381,267,572,308"/>
 </map>
