@@ -1,6 +1,6 @@
 #include "Components/Menu.hpp"
 
-Menu::Menu()
+Component::Menu::Menu()
 {
     this->options = std::vector<std::string>();
     this->top = 0;
@@ -10,7 +10,7 @@ Menu::Menu()
     this->selected = 0;
 }
 
-Menu::Menu(std::vector<std::string> options, int top, int left, int height, int width)
+Component::Menu::Menu(std::vector<std::string> options, int top, int left, int height, int width)
 {
     this->options = options;
     this->top = top;
@@ -20,7 +20,7 @@ Menu::Menu(std::vector<std::string> options, int top, int left, int height, int 
     this->selected = 0;
 }
 
-void Menu::render(Window::window_ptr window)
+void Component::Menu::render(Window::window_ptr window)
 {
     this->drawBorder(window);
 
@@ -32,7 +32,7 @@ void Menu::render(Window::window_ptr window)
 
 }
 
-int Menu::update(Input input)
+int Component::Menu::update(Input input)
 {
     switch (input) {
         case Input::UP:
@@ -48,7 +48,7 @@ int Menu::update(Input input)
     };
 }
 
-void Menu::drawBorder(Window::window_ptr window)
+void Component::Menu::drawBorder(Window::window_ptr window)
 {
     this->drawBar(window, this->top, this->left, this->width);
     this->drawBar(window, this->top + this->height, this->left, this->width);
@@ -56,14 +56,14 @@ void Menu::drawBorder(Window::window_ptr window)
     this->drawPipe(window, this->top, this->left + this->width, this->height);
 }
 
-void Menu::drawBar(Window::window_ptr window, int y, int x, int width)
+void Component::Menu::drawBar(Window::window_ptr window, int y, int x, int width)
 {
     for (int i = 0; i < width; ++i) {
         window->put(0, 999, '-', y, i + x);
     }
 }
 
-void Menu::drawPipe(Window::window_ptr window, int y, int x, int height)
+void Component::Menu::drawPipe(Window::window_ptr window, int y, int x, int height)
 {
     for (int i = 0; i < height; ++i) {
         window->put(0, 999, '|', i + y, x);

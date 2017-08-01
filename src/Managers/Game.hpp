@@ -2,6 +2,7 @@
 #define MANAGER_GAME_HPP
 
 #include <iostream>
+#include <stack>
 #include <curses.h>
 #include <string>
 #include <stdio.h>
@@ -12,9 +13,8 @@
 #include "ConfigLoader.hpp"
 #include "Input.hpp"
 #include "Keymap.hpp"
-#include "Components/Menu.hpp"
-#include "GameObjects/City.hpp"
-#include "GameObjects/Player.hpp"
+#include "Managers/GameState/State.hpp"
+#include "Managers/GameState/Playing.hpp"
 #include "Services/WorldInteraction/WorldInteractionInterface.hpp"
 #include "Services/WorldInteraction/LocalWorldInteraction.hpp"
 #include "Services/WorldInteraction/NetworkedWorldInteraction.hpp"
@@ -42,23 +42,16 @@ private:
     static const std::string defaultWorldName;
     static Keymap keymap;
 
-    enum State {
-        PLAYING = 0,
-        MENU
-    };
-
-    State state;
-
     boost::shared_ptr<Logger> logger;
 
     void configure();
 
-    Camera camera;
     GameWindowLayout windowLayout;
     Window::window_ptr gameWindow;
     Window::window_ptr consoleWindow;
-    Player player;
     WorldInteractionInterface *worldProxy;
+
+    std::stack<GameState::State *> stateStack;
 
     int screenHeight;
     int screenWidth;
