@@ -1,0 +1,21 @@
+1,wood,brown and heavy,5,1
+2,acanthite,an ore of silver (dev: Ag2S),3,3
+3,barite,an ore of barium (dev: BaSO4),3,3
+4,beryl,an ore with many uses (dev: Be3Al2(SiO3)6),3,3
+5,bornite,a copper ore (dev: Cu5FeS4),3,3
+6,chalcocite,a copper ore (dev: Cu2S),3,3
+25,hemitetartemorion,its like a penny,0,1
+26,tetartemorion,a common coin,0,2
+27,trihemitetartemorion,a common coin,0,3
+28,hemiobol,a common coin,0,4
+29,tritartemorion,a common coin,0,6
+30,obol,a common coin,0,8
+31,diobol,a common coin,0,16
+32,triobol,a common coin,0,24
+33,tetrobol,a common coin,0,32
+34,drachma,a common coin,0,48
+35,didrachm,a common coin,0,96
+36,tetradrachm,a common coin,0,192
+37,dekadrachm,a common coin,0,960
+
+

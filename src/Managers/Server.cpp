@@ -56,6 +56,8 @@ void Server::initialize()
 
     this->cleaner = std::thread(&Server::cleanupSessions, this);
 
+    ItemMap::init(this->logger);
+
     this->world = ServerSession::world_ptr(
         new LocalWorldInteraction(this->worldName)
     );
