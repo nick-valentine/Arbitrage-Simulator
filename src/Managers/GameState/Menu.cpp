@@ -42,6 +42,19 @@ void GameState::Menu::update(WorldInteractionInterface *worldProxy, Input input)
 
 void GameState::Menu::render(WorldInteractionInterface *worldProxy, Window::window_ptr window)
 {
+    this->logger->debug("window height: %i", window->getHeight());
+    this->logger->debug("window width: %i", window->getWidth());
+    int borderHeight = window->getHeight() * 0.1;
+    int borderWidth = window->getWidth() * 0.1;
+    this->logger->debug("inner height: %i", window->getHeight() - borderHeight);
+    this->logger->debug("inner width : %i", window->getWidth() - borderWidth);
+    this->logger->debug("Boder Height: %i, Border Width: %i", borderHeight, borderWidth);
+    this->menu.setDims(
+        borderHeight, 
+        borderWidth,
+        window->getHeight() - (2 * borderHeight),
+        window->getWidth() - (2 * borderWidth)
+    );
     this->menu.render(window);
 }
 

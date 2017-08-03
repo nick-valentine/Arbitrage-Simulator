@@ -48,6 +48,14 @@ int Component::Menu::update(Input input)
     };
 }
 
+void Component::Menu::setDims(int top, int left, int height, int width)
+{
+    this->top = top;
+    this->left = left;
+    this->height = height;
+    this->width = width;
+}
+
 void Component::Menu::drawBorder(Window::window_ptr window)
 {
     this->drawBar(window, this->top, this->left, this->width);

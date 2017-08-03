@@ -32,6 +32,7 @@ int Game::setup()
 
     this->windowLayout.addWindow("ConsoleWindow", this->consoleWindow);
     this->windowLayout.setSubWindow("ConsoleWindow");
+    this->windowLayout.setSubWindowMinHeight(20);
     this->windowLayout.render();
 
     this->logger = boost::shared_ptr<Logger>(

@@ -15,9 +15,10 @@ namespace Component
     public:
         Menu();
         Menu(std::vector<std::string> options, int top, int left, int height = 0, int width = 0);
-
+        
         void render(Window::window_ptr window);
         int update(Input input);
+        void setDims(int top, int left, int height, int width);
     private:
         void drawBorder(Window::window_ptr);
         void drawBar(Window::window_ptr window, int y, int x, int width);
