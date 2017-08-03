@@ -3,6 +3,7 @@
 
 #include "Camera.hpp"
 #include "GameObjects/Player.hpp"
+#include "GameObjects/Tile.hpp"
 #include "Managers/GameState/State.hpp"
 #include "Managers/GameState/Menu.hpp"
 

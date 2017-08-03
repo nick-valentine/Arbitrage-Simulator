@@ -32,6 +32,12 @@ void LocalWorldInteraction::movePlayerToCoordinate(int y, int x)
     this->playerX = x;
 }
 
+Tile LocalWorldInteraction::getTileUnderPlayer()
+{
+    int chunkY, chunkX, localY, localX;
+    this->playerCoordinatesToChunkCoordinates(chunkY, chunkX, localY, localX);
+    return this->chunks[chunkY][chunkX].tiles[localY][localX];
+}
 
 void LocalWorldInteraction::playerCoordinatesToChunkCoordinates(
     int &chunkY, int &chunkX,

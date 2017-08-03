@@ -5,6 +5,7 @@
 #include <boost/shared_ptr.hpp>
 
 #include "GameObjects/World.hpp"
+#include "GameObjects/Tile.hpp"
 #include "Window/Window.hpp"
 #include "Services/WorldInteraction/WorldInteractionInterface.hpp"
 
@@ -23,6 +24,8 @@ public:
     void loadWorld(boost::shared_ptr<Logger> logger);
     void draw(Window::window_ptr window);
     void movePlayerToCoordinate(int y, int x);
+
+    Tile getTileUnderPlayer();
 
     bool chunkInWorld(int chunkY, int chunkX);
     WorldChunk getChunk(int y, int x) const;
