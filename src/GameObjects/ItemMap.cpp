@@ -38,3 +38,13 @@ Item ItemMap::get(int id)
 {
     return ItemMap::collection[id];
 }
+
+std::vector<int> ItemMap::validIds()
+{
+    std::vector<int> ids;
+    auto it = ItemMap::collection.begin();
+    for (; it != ItemMap::collection.end(); it++) {
+        ids.push_back(it->first);
+    }
+    return ids;
+}

@@ -14,6 +14,7 @@ class ItemMap
 public:
     static void init(Logger::LoggerPtr logger);
     static Item get(int id);
+    static std::vector<int> validIds();
 private:
     const static std::string filename;
     

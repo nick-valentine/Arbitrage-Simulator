@@ -8,6 +8,7 @@
 #include <algorithm>
 
 #include "WorldGen/Pass/AbstractPass.hpp"
+#include "GameObjects/ItemMap.hpp"
 
 #include "Helpers/Vector.hpp"
 

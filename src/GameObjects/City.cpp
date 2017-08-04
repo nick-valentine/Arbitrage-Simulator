@@ -10,6 +10,15 @@ City::City()
     this->name = "";
     this->pos_x = 0;
     this->pos_y = 0;
+    this->inv = Inventory();
+}
+
+City::City(const City &other)
+{
+    this->name = other.name;
+    this->pos_x = other.pos_x;
+    this->pos_y = other.pos_y;
+    this->inv = other.inv;
 }
 
 City::City(std::string name, int pos_x, int pos_y)
@@ -17,10 +26,15 @@ City::City(std::string name, int pos_x, int pos_y)
     this->name = name;
     this->pos_x = pos_x;
     this->pos_y = pos_y;
+    this->inv = Inventory();
 }
 
 City::City(std::stringstream *ss)
 {
+    this->name = "";
+    this->pos_x = 0;
+    this->pos_y = 0;
+    this->inv = Inventory();
     this->fromStringStream(ss);
 }
 

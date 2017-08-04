@@ -4,6 +4,7 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <iostream>
 
 #include "Globals.hpp"
 #include "GameObjects/AbstractGameObject.hpp"
@@ -20,6 +21,7 @@ public:
     };
 
     Inventory();
+    Inventory(const Inventory &other);
     Inventory(std::stringstream *ss);
 
     void fromStringStream(std::stringstream *ss);

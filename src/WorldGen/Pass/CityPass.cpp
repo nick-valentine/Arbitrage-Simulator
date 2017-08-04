@@ -122,13 +122,25 @@ void CityPass::convertTileToCity(int i, int j, Tile *tile, WorldChunk *chunk)
 
     //convert tile
     tile->convertToCity();
-    chunk->cities.push_back(
-        City(
-            City::city_name_starts[rand() % City::city_name_starts.size()] + 
-            City::city_name_ends[rand() % City::city_name_ends.size()],
-            j % WorldChunk::getChunkWidth(),
-            i % WorldChunk::getChunkHeight()
-        )
+    City city(
+        City::city_name_starts[rand() % City::city_name_starts.size()] + 
+        City::city_name_ends[rand() % City::city_name_ends.size()],
+        j % WorldChunk::getChunkWidth(),
+        i % WorldChunk::getChunkHeight()
     );
+
+    // @todo: refactor inventory pass into it's own pass
+    std::vector<int> ids = ItemMap::validIds();
+    int itemsToGive = rand() % 20;
+    for (int i = 0; i < itemsToGive; ++i) {
+        city.addToInventory(
+            ItemMap::get(
+                ids[rand() % ids.size()]
+            ).getId(),
+            rand() % 15
+        );
+    }
+
+    chunk->cities.push_back(city);
 }
 

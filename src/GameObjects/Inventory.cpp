@@ -5,13 +5,23 @@ Inventory::Inventory()
     this->inv = std::vector<Record>();
 }
 
+Inventory::Inventory(const Inventory &other)
+{
+    this->inv = std::vector<Record>();
+    for (int i = 0; i < other.inv.size(); ++i) {
+        this->inv.push_back(other.inv[i]);
+    }
+}
+
 Inventory::Inventory(std::stringstream *ss)
 {
+    this->inv = std::vector<Record>();
     this->fromStringStream(ss);
 }
 
 void Inventory::fromStringStream(std::stringstream *ss)
 {
+    this->inv = std::vector<Record>();
     std::string line;
     std::getline((*ss), line, Globals::object_delimiter);
     std::stringstream lineSS;
@@ -50,6 +60,7 @@ void Inventory::add(int itemId, int count)
     int i = this->find(itemId);
     if (i == -1) {
         this->inv.push_back(Record(count, itemId));
+        return;
     }
     this->inv[i].count += count;
 }
@@ -76,7 +87,7 @@ std::vector<Inventory::Record> Inventory::getInv()
 int Inventory::find(int itemId)
 {
     for (int i = 0; i < this->inv.size(); ++i) {
-        if (this->inv[i].itemId == i) {
+        if (this->inv[i].itemId == itemId) {
             return i;
         }
     }
