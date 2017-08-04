@@ -3,7 +3,7 @@ project (Arbitrage-Simulator)
 
 include_directories ("${PROJECT_SOURCE_DIR}/inc")
 
-SET (GCC_COMPILE_FLAGS "-std=c++11 -ggdb -I${PROJECT_SOURCE_DIR}/src")
+SET (GCC_COMPILE_FLAGS "-std=c++11 -g -ggdb -I${PROJECT_SOURCE_DIR}/src")
 SET (GCC_LINK_FLAGS    "-lncurses -lboost_system -lboost_thread -lpthread")
 
 SET (CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${GCC_COMPILE_FLAGS}" )

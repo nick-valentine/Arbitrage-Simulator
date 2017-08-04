@@ -13,6 +13,7 @@
 #include "ConfigLoader.hpp"
 #include "Input.hpp"
 #include "Keymap.hpp"
+#include "GameObjects/ItemMap.hpp"
 #include "Managers/GameState/State.hpp"
 #include "Managers/GameState/Playing.hpp"
 #include "Services/WorldInteraction/WorldInteractionInterface.hpp"

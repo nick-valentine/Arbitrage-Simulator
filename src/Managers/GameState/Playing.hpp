@@ -1,11 +1,17 @@
 #ifndef GAMESTATE_PLAYING_HPP
 #define GAMESTATE_PLAYING_HPP
 
+#include <sstream>
+#include <string>
+
 #include "Camera.hpp"
+#include "GameObjects/City.hpp"
+#include "GameObjects/Inventory.hpp"
+#include "GameObjects/ItemMap.hpp"
 #include "GameObjects/Player.hpp"
 #include "GameObjects/Tile.hpp"
-#include "Managers/GameState/State.hpp"
 #include "Managers/GameState/Menu.hpp"
+#include "Managers/GameState/State.hpp"
 
 namespace GameState
 {
@@ -19,6 +25,12 @@ namespace GameState
         void clearNextState();
         bool shouldClose();
     private:
+        void getCityInventory(City *city);
+        void populateMenu(GameState::Menu *menu, std::vector<std::string> options);
+
+        std::vector<Inventory::Record> cityInventory;
+        std::vector<std::string> cityInventoryOptions;
+
         Player player;
         Camera camera;
         GameState::State *newState;
