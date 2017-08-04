@@ -24,7 +24,7 @@ public:
     virtual std::string getName() = 0;
 protected:
     virtual void executeChunk(int top, int left, WorldChunk *chunk);
-    virtual void doTile(int i, int j, Tile *tile) = 0;
+    virtual void doTile(int i, int j, Tile *tile, WorldChunk *chunk) = 0;
 };
 
 #endif //ABSTRACT_PASS_HPP

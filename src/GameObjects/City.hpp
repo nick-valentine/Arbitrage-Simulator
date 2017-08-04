@@ -8,6 +8,7 @@
 
 #include "Globals.hpp"
 #include "GameObjects/AbstractGameObject.hpp"
+#include "GameObjects/Inventory.hpp"
 
 /**
  * City Game Object.
@@ -33,6 +34,9 @@ public:
     void setPosY(int y);
     int getPosY() const;
 
+    void addToInventory(int itemId, int count);
+    Inventory getInventory();
+
     /**
      * Load City Names.
      * City names will exist within a file at city_name_file_path. Load this
@@ -51,6 +55,8 @@ private:
     std::string name;
     int pos_x;
     int pos_y;
+
+    Inventory inv;
 };
 
 #endif //CITY_HPP

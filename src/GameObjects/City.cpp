@@ -30,6 +30,7 @@ void City::fromStringStream(std::stringstream *ss)
     std::getline((*ss), this->name, Globals::file_delimiter);
     std::getline((*ss), pos_x_str, Globals::file_delimiter);
     std::getline((*ss), pos_y_str, Globals::object_delimiter);
+    this->inv.fromStringStream(ss);
 
     std::stringstream temp_ss;
     temp_ss.str(pos_x_str);
@@ -47,6 +48,7 @@ void City::toStringStream(std::stringstream *ss)
     (*ss)<<this->name<<Globals::file_delimiter
         <<this->pos_x<<Globals::file_delimiter
         <<this->pos_y<<Globals::object_delimiter;
+    this->inv.toStringStream(ss);
 }
 
 void City::setName(std::string name)
@@ -77,6 +79,16 @@ void City::setPosY(int y)
 int City::getPosY() const
 {
     return this->pos_y;
+}
+
+void City::addToInventory(int itemId, int count)
+{
+    this->inv.add(itemId, count);
+}
+
+Inventory City::getInventory()
+{
+    return this->inv;
 }
 
 void City::load_city_names()

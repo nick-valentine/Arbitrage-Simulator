@@ -5,6 +5,7 @@
 #include <boost/shared_ptr.hpp>
 
 #include "GameObjects/World.hpp"
+#include "GameObjects/City.hpp"
 #include "GameObjects/Tile.hpp"
 #include "Window/Window.hpp"
 #include "Services/WorldInteraction/WorldInteractionInterface.hpp"
@@ -26,6 +27,8 @@ public:
     void movePlayerToCoordinate(int y, int x);
 
     Tile getTileUnderPlayer();
+
+    City getCity(int y, int x);
 
     bool chunkInWorld(int chunkY, int chunkX);
     WorldChunk getChunk(int y, int x) const;

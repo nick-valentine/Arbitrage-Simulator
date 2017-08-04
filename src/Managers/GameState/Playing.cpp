@@ -37,8 +37,10 @@ void GameState::Playing::update(WorldInteractionInterface *worldProxy, Input inp
     worldProxy->movePlayerToCoordinate(pos_y, pos_x);
     Tile tile = worldProxy->getTileUnderPlayer();
     this->logger->info("Player stepped on tile at height: %i", tile.getElevation());
+    this->logger->info("Player is on tile: %i, %i", pos_x, pos_y);
     if (tile.getType() == Tile::CITIES) {
-        this->logger->info("This tile is a city");
+        City city = worldProxy->getCity(pos_y, pos_x);
+        this->logger->info("This tile is a city: %s", city.getName().c_str());
     }
 }
 

@@ -58,14 +58,15 @@ void WorldChunk::fromStringStream(std::stringstream *ss)
     std::vector<Tile> tilesToSpawn;
     std::string nextObject;
     (*ss)>>top>>left;
-    while( ss->good() &&
-         tilesToSpawn.size() < WorldChunk::chunk_height * WorldChunk::chunk_width 
+    while ( 
+        ss->good() &&
+        tilesToSpawn.size() < WorldChunk::chunk_height * WorldChunk::chunk_width 
     ) {
         if(readState == object) {
             (*ss)>>nextObject;
-            if( this->factoryMap.find(nextObject) != this->factoryMap.end() ) {
+            if (this->factoryMap.find(nextObject) != this->factoryMap.end()) {
                 this->factoryMap[nextObject](this, ss);
-            } else if( nextObject == WorldChunk::MapMarker ) {
+            } else if (nextObject == WorldChunk::MapMarker) {
                 readState = map;
             }
         } else if(readState == map) {
@@ -77,7 +78,7 @@ void WorldChunk::fromStringStream(std::stringstream *ss)
 
 void WorldChunk::toStringStream(std::stringstream *ss)
 {
-    (*ss)<<top<<Globals::space_delimiter<<left<<Globals::space_delimiter; 
+    (*ss)<<top<<Globals::space_delimiter<<left<<Globals::object_delimiter; 
     for(unsigned int i = 0; i < this->cities.size(); ++i) {
         (*ss)<<WorldChunk::CityMarker<<Globals::space_delimiter;
         this->cities[i].toStringStream(ss);
@@ -107,7 +108,11 @@ void WorldChunk::generateChunk()
 
 void WorldChunk::spawnCity(WorldChunk *self, std::stringstream *ss)
 {
-    self->cities.push_back(City(ss));
+    std::string c;
+    std::getline((*ss), c, Globals::object_delimiter);
+    std::stringstream tss;
+    tss.str(c);
+    self->cities.push_back(City(&tss));
 }
 
 void WorldChunk::organizeTiles(std::vector<Tile> tiles)
@@ -137,6 +142,16 @@ void WorldChunk::draw(Window::window_ptr window, int playerY, int playerX)
             );
         }
     }    
+}
+
+City WorldChunk::getCity(int y, int x)
+{
+    for (int i = 0; i < this->cities.size(); ++i) {
+        if (this->cities[i].getPosX() == x && this->cities[i].getPosY() == y) {
+            return this->cities[i];
+        }
+    }
+    return City();
 }
 
 bool WorldChunk::doCullTile(

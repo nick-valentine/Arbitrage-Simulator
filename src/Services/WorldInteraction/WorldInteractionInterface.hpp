@@ -22,6 +22,7 @@ public:
     virtual void draw(Window::window_ptr window) = 0;
     virtual void movePlayerToCoordinate(int y, int x) = 0;
     virtual Tile getTileUnderPlayer() = 0;
+    virtual City getCity(int y, int x) = 0;
 private:
 };
 
