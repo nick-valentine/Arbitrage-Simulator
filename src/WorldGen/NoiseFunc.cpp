@@ -2,6 +2,7 @@
 
 NoiseFunc::NoiseFunc()
 {
+    srand( time( NULL) );
     Grid = std::vector< std::vector< std::pair< float, float > > >();
     Grid.push_back(std::vector< std::pair< float, float > >());
     Grid[0].push_back(this->newRandPair());

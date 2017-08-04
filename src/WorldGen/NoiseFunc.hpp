@@ -5,6 +5,7 @@
 #include <vector>
 #include <utility>
 #include <sstream>
+#include <time.h>
 
 /**
  * Noise Function Based on Perlin Noise.
