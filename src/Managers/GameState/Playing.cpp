@@ -7,14 +7,14 @@ void GameState::Playing::init()
     this->camera = Camera(0, 0);
 }
 
-void GameState::Playing::update(WorldInteractionInterface *worldProxy, Input input)
+void GameState::Playing::update(WorldInteractionInterface *worldProxy, Context *ctx)
 {
 
     if (this->recvMsgUp != 0) {
         this->logger->info("Recieved message %i", this->recvMsgUp);
     }
 
-    switch(input) {
+    switch(ctx->input) {
         case Input::UP:
             this->player.move(-1,0);
             break;

@@ -20,7 +20,7 @@ namespace GameState
     {
     public:
         void init();
-        void update(WorldInteractionInterface *worldProxy, Input input);
+        void update(WorldInteractionInterface *worldProxy, Context *ctx);
         void render(WorldInteractionInterface *worldProxy, Window::window_ptr window);
         State *nextState();
         void clearNextState();

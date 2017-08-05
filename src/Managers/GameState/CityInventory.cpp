@@ -12,7 +12,7 @@ GameState::CityInventory::~CityInventory()
 
 void GameState::CityInventory::init()
 {
-    this->inventory = Component::Menu(this->options, 10, 10, 20, 20);
+    this->inventory = Component::Menu("", this->options, 10, 10, 20, 20);
     this->inventoryShouldClose = false;
     this->getCityInventory(&this->city);
     this->populateMenu(&this->inventory, this->cityInventoryOptions);
@@ -25,9 +25,9 @@ void GameState::CityInventory::setCity(City city)
     this->populateMenu(&this->inventory, this->cityInventoryOptions);
 }
 
-void GameState::CityInventory::update(WorldInteractionInterface *worldProxy, Input input)
+void GameState::CityInventory::update(WorldInteractionInterface *worldProxy, Context *ctx)
 {
-    int result = this->inventory.update(input);
+    int result = this->inventory.update(ctx);
     switch (result) {
         case -1:
             break;
@@ -76,13 +76,23 @@ void GameState::CityInventory::getCityInventory(City *city)
 {
     this->cityInventory = city->getInventory().getInv();
     this->cityInventoryOptions = std::vector<std::string>();
+    int longestName = 0;
+    for (int i = 0; i < this->cityInventory.size(); ++i) {
+        std::string name = ItemMap::get(this->cityInventory[i].itemId).getName();
+        if (name.size() > longestName) {
+            longestName = name.size();
+        }
+    }
     for (int i = 0; i < this->cityInventory.size(); ++i) {
         std::stringstream ss;
-        this->logger->info("%i", this->cityInventory[i].itemId);
         Item item = ItemMap::get(this->cityInventory[i].itemId);
-        ss<<item.getName()<<"\t"<<item.getDescription()<<
-            "\t"<<item.getBaseWorth()<<"\t"<<item.getWeight()<<
-            "\tx"<<this->cityInventory[i].count;
+        std::string pad;
+        pad.resize((longestName + 2) - item.getName().size(), ' ');
+        ss<<this->cityInventory[i].count<<"\t"<<
+            item.getBaseWorth()<<"\t"<<
+            item.getWeight()<<"\t"<<
+            item.getName()<<pad<<
+            item.getDescription();
         this->cityInventoryOptions.push_back(ss.str());
 
     }
@@ -90,5 +100,6 @@ void GameState::CityInventory::getCityInventory(City *city)
 
 void GameState::CityInventory::populateMenu(Component::Menu *menu, std::vector<std::string> options)
 {
-    this->inventory = Component::Menu(options, 10, 10, 20, 20);
+    std::string head = "cnt\tcost\twgt\tname\t\t\tdesc";
+    this->inventory = Component::Menu(head, options, 10, 10, 20, 20);
 }

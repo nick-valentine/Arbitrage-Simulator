@@ -114,7 +114,6 @@ void WorldChunk::spawnCity(WorldChunk *self, std::stringstream *ss)
     std::getline((*ss), inv, Globals::object_delimiter);
     std::stringstream tss;
     tss.str(c + Globals::object_delimiter + inv);
-    std::cerr<<c<<Globals::object_delimiter<<inv<<std::endl;
     self->cities.push_back(City(&tss));
 }
 
