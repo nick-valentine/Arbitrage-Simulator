@@ -1,11 +1,13 @@
 set (SOURCES
     ${SOURCES}
     ${CMAKE_CURRENT_SOURCE_DIR}/Menu.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/TextInput.cpp
     PARENT_SCOPE
 )
 set (HEADERS
     ${HEADERS}
     ${CMAKE_CURRENT_SOURCE_DIR}/Menu.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/TextInput.hpp
     PARENT_SCOPE
 )
 
