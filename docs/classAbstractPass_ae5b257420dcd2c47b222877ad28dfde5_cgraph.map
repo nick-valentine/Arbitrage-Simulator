@@ -1,6 +1,6 @@
 <map id="AbstractPass::execute" name="AbstractPass::execute">
 <area shape="rect" id="node2" href="$classAbstractPass.html#aa34916295ee5dbceb036d786bea5e45a" title="AbstractPass::executeChunk" alt="" coords="208,56,401,83"/>
-<area shape="rect" id="node3" href="$classAbstractPass.html#a7699bb3f9d75acb441203575de128ab4" title="AbstractPass::doTile" alt="" coords="475,5,619,32"/>
+<area shape="rect" id="node3" href="$classAbstractPass.html#abd8cfd3f8bc7205e82d40706c4d0a665" title="AbstractPass::doTile" alt="" coords="475,5,619,32"/>
 <area shape="rect" id="node4" href="$classWorldChunk.html#a69efb1c1bc62d8464cce367f29665f38" title="WorldChunk::getChunkHeight" alt="" coords="449,56,645,83"/>
 <area shape="rect" id="node5" href="$classWorldChunk.html#af4bc6d0d18b023e5f1696afd918d03d3" title="WorldChunk::getChunkWidth" alt="" coords="451,107,643,133"/>
 </map>

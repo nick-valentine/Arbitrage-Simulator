@@ -1,0 +1,7 @@
+<map id="NetworkedWorldInteraction::getCity" name="NetworkedWorldInteraction::getCity">
+<area shape="rect" id="node2" href="$classNetworkedWorldInteraction.html#a6721e294f1badeec39e3346d55680f77" title="NetworkedWorldInteraction\l::fetchChunk" alt="" coords="272,23,452,65"/>
+<area shape="rect" id="node5" href="$classLocalWorldInteraction.html#a7e533622fb19fe40f7b81b27f475a4e5" title="convert global coordinates to into a chunk, and coordinates in that chunk. " alt="" coords="233,89,491,130"/>
+<area shape="rect" id="node6" href="$classNetworkedWorldInteraction.html#a0d811bde458068af35bceffabcbe0ad3" title="NetworkedWorldInteraction\l::hasChunkLoaded" alt="" coords="272,154,452,195"/>
+<area shape="rect" id="node3" href="$classConnection.html#a849095cd9dda6388c05fe4896b380530" title="Blocking read on this socket. " alt="" coords="540,5,661,32"/>
+<area shape="rect" id="node4" href="$classConnection.html#a6fff1bda7a9e0dc4997792ac29ce1af1" title="Write msg to this socket. " alt="" coords="539,56,663,83"/>
+</map>

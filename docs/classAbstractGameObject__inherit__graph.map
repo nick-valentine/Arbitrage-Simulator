@@ -1,7 +1,8 @@
 <map id="AbstractGameObject" name="AbstractGameObject">
-<area shape="rect" id="node2" href="$classCity.html" title="City Game Object. " alt="" coords="5,226,152,538"/>
-<area shape="rect" id="node3" href="$classItem.html" title="Item. " alt="" coords="176,263,320,501"/>
-<area shape="rect" id="node4" href="$classPlayer.html" title="Player. " alt="" coords="344,270,488,494"/>
-<area shape="rect" id="node5" href="$classTile.html" title="Tile. " alt="" coords="512,153,701,611"/>
-<area shape="rect" id="node6" href="$classWorldChunk.html" title="{WorldChunk\n|+ cities\l+ tiles\l&#45; top\l&#45; left\l&#45; CityMarker\l&#45; MapMarker\l&#45; maxViewDistance\l&#45; cullingEnabled\l&#45; configured\l&#45; chunk_height\l&#45; chunk_width\l&#45; maxX\l&#45; maxY\l&#45; factoryMap\l|+ WorldChunk()\l+ WorldChunk()\l+ WorldChunk()\l+ fromStringStream()\l+ toStringStream()\l+ generateChunk()\l+ draw()\l+ configure()\l+ setMaxYX()\l+ getChunkWidth()\l+ getChunkHeight()\l+ getMaxCitiesPerChunk()\l&#45; doCullTile()\l&#45; organizeTiles()\l&#45; spawnCity()\l}" alt="" coords="726,145,903,619"/>
+<area shape="rect" id="node2" href="$classCity.html" title="City Game Object. " alt="" coords="5,204,152,575"/>
+<area shape="rect" id="node3" href="$classInventory.html" title="{Inventory\n|&#45; inv\l|+ Inventory()\l+ Inventory()\l+ Inventory()\l+ fromStringStream()\l+ toStringStream()\l+ add()\l+ add()\l+ get()\l+ getInv()\l&#45; find()\l}" alt="" coords="176,285,320,494"/>
+<area shape="rect" id="node4" href="$classItem.html" title="Item. " alt="" coords="344,255,488,523"/>
+<area shape="rect" id="node5" href="$classPlayer.html" title="Player. " alt="" coords="512,277,656,501"/>
+<area shape="rect" id="node6" href="$classTile.html" title="Tile. " alt="" coords="680,160,869,619"/>
+<area shape="rect" id="node7" href="$classWorldChunk.html" title="{WorldChunk\n|+ cities\l+ tiles\l&#45; top\l&#45; left\l&#45; CityMarker\l&#45; MapMarker\l&#45; maxViewDistance\l&#45; cullingEnabled\l&#45; configured\l&#45; chunk_height\l&#45; chunk_width\l&#45; maxX\l&#45; maxY\l&#45; factoryMap\l|+ WorldChunk()\l+ WorldChunk()\l+ WorldChunk()\l+ fromStringStream()\l+ toStringStream()\l+ generateChunk()\l+ draw()\l+ getCity()\l+ configure()\l+ setMaxYX()\l+ getChunkWidth()\l+ getChunkHeight()\l+ getMaxCitiesPerChunk()\l&#45; doCullTile()\l&#45; organizeTiles()\l&#45; spawnCity()\l}" alt="" coords="894,145,1071,633"/>
 </map>

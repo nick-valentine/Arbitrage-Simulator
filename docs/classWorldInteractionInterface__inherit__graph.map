@@ -1,4 +1,4 @@
 <map id="WorldInteractionInterface" name="WorldInteractionInterface">
-<area shape="rect" id="node2" href="$classLocalWorldInteraction.html" title="Manager for non&#45;networked world interaction. " alt="" coords="5,160,196,413"/>
-<area shape="rect" id="node3" href="$classNetworkedWorldInteraction.html" title="Manager for networked world interaction. " alt="" coords="67,461,267,715"/>
+<area shape="rect" id="node2" href="$classLocalWorldInteraction.html" title="Manager for non&#45;networked world interaction. " alt="" coords="5,189,196,472"/>
+<area shape="rect" id="node3" href="$classNetworkedWorldInteraction.html" title="Manager for networked world interaction. " alt="" coords="67,520,267,788"/>
 </map>

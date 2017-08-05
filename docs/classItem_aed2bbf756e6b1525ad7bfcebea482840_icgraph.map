@@ -1,0 +1,9 @@
+<map id="Item::getId" name="Item::getId">
+<area shape="rect" id="node2" href="$classInventory.html#a45d938a779504bf5a039bb6a503eead8" title="Inventory::add" alt="" coords="139,5,244,32"/>
+<area shape="rect" id="node3" href="$classItemMap.html#a7cfa3029ce5bd60a5e18ad60928db939" title="ItemMap::init" alt="" coords="142,56,241,83"/>
+<area shape="rect" id="node4" href="$classGame.html#ad7a2b7ff71e3064a289680944a27a42e" title="Game::setup" alt="" coords="301,31,398,57"/>
+<area shape="rect" id="node6" href="$classServer.html#a0f7d094516801f6c918059628b715098" title="Server::initialize" alt="" coords="292,81,407,108"/>
+<area shape="rect" id="node5" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="479,31,530,57"/>
+<area shape="rect" id="node7" href="$classServer.html#a8b1fafda0754578f16a974195d120e92" title="Server::setup" alt="" coords="455,81,555,108"/>
+<area shape="rect" id="node8" href="$server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="603,81,653,108"/>
+</map>

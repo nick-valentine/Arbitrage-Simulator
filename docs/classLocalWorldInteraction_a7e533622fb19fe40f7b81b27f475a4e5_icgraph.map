@@ -1,4 +1,7 @@
 <map id="LocalWorldInteraction::globalCoordinatesToChunkCoordinates" name="LocalWorldInteraction::globalCoordinatesToChunkCoordinates">
-<area shape="rect" id="node2" href="$classLocalWorldInteraction.html#a0a1bfc3563f9271abc4642ea04e81f91" title="Convert the player&#39;s current global coordinates into a chunk, and coordinates in that chunk..." alt="" coords="311,5,569,47"/>
-<area shape="rect" id="node3" href="$classNetworkedWorldInteraction.html#a951bdc14887bba2797479057ab6080bd" title="NetworkedWorldInteraction\l::movePlayerToCoordinate" alt="" coords="617,5,797,47"/>
+<area shape="rect" id="node2" href="$classLocalWorldInteraction.html#a626d5ff5e76e4f4db76fb5a86d7a6474" title="LocalWorldInteraction\l::getCity" alt="" coords="366,5,514,47"/>
+<area shape="rect" id="node3" href="$classNetworkedWorldInteraction.html#ae1807b6efa450cb40942c1f844bd8abd" title="NetworkedWorldInteraction\l::getCity" alt="" coords="350,71,530,112"/>
+<area shape="rect" id="node4" href="$classLocalWorldInteraction.html#a0a1bfc3563f9271abc4642ea04e81f91" title="Convert the player&#39;s current global coordinates into a chunk, and coordinates in that chunk..." alt="" coords="311,136,569,177"/>
+<area shape="rect" id="node5" href="$classLocalWorldInteraction.html#acfd654c407a530a8f90d6abb6755fd30" title="LocalWorldInteraction\l::getTileUnderPlayer" alt="" coords="633,103,781,144"/>
+<area shape="rect" id="node6" href="$classNetworkedWorldInteraction.html#a951bdc14887bba2797479057ab6080bd" title="NetworkedWorldInteraction\l::movePlayerToCoordinate" alt="" coords="617,168,797,209"/>
 </map>

@@ -140,7 +140,8 @@ $(document).ready(function(){initNavTree('classCity.html','');});
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classCity__coll__graph.png" border="0" usemap="#City_coll__map" alt="Collaboration graph"/></div>
 <map name="City_coll__map" id="City_coll__map">
-<area shape="rect" id="node2" href="classAbstractGameObject.html" title="The Abstract Game Object. " alt="" coords="7,5,151,97"/>
+<area shape="rect" id="node2" href="classAbstractGameObject.html" title="The Abstract Game Object. " alt="" coords="20,5,164,97"/>
+<area shape="rect" id="node3" href="classInventory.html" title="{Inventory\n|&#45; inv\l|+ Inventory()\l+ Inventory()\l+ Inventory()\l+ fromStringStream()\l+ toStringStream()\l+ add()\l+ add()\l+ get()\l+ getInv()\l&#45; find()\l}" alt="" coords="95,147,239,356"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -148,6 +149,8 @@ $(document).ready(function(){initNavTree('classCity.html','');});
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1b1f549430f0a7ecd0ec7b1605415193"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCity.html#a1b1f549430f0a7ecd0ec7b1605415193">City</a> ()</td></tr>
 <tr class="separator:a1b1f549430f0a7ecd0ec7b1605415193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95abe7fe34636c633e9afa6b0888cbc5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCity.html#a95abe7fe34636c633e9afa6b0888cbc5">City</a> (const <a class="el" href="classCity.html">City</a> &amp;other)</td></tr>
+<tr class="separator:a95abe7fe34636c633e9afa6b0888cbc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9e123e275fe206ddc6ce96bc04b03dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCity.html#ab9e123e275fe206ddc6ce96bc04b03dc">City</a> (std::stringstream *ss)</td></tr>
 <tr class="separator:ab9e123e275fe206ddc6ce96bc04b03dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40f4d35bf7316f35cfe095bd8d74222c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCity.html#a40f4d35bf7316f35cfe095bd8d74222c">City</a> (std::string <a class="el" href="classCity.html#afea8cd8800a8600fa54af37ac05bf177">name</a>, int <a class="el" href="classCity.html#af8484dc169817ebf4db1b38b4311bccd">pos_x</a>, int <a class="el" href="classCity.html#af8849ee732771b89a86b06944e0d2ae6">pos_y</a>)</td></tr>
@@ -170,6 +173,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1bc60d3c869b20afa63a642cadccdb85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63c2bcda2430ecca0ddb4f63b0ab2d31"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCity.html#a63c2bcda2430ecca0ddb4f63b0ab2d31">getPosY</a> () const </td></tr>
 <tr class="separator:a63c2bcda2430ecca0ddb4f63b0ab2d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a919c58aece88f892370c14b763c45b7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCity.html#a919c58aece88f892370c14b763c45b7e">addToInventory</a> (int itemId, int count)</td></tr>
+<tr class="separator:a919c58aece88f892370c14b763c45b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f8c232abbad377713c718180e766884"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classInventory.html">Inventory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCity.html#a3f8c232abbad377713c718180e766884">getInventory</a> ()</td></tr>
+<tr class="separator:a3f8c232abbad377713c718180e766884"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -192,6 +199,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:af8484dc169817ebf4db1b38b4311bccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8849ee732771b89a86b06944e0d2ae6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCity.html#af8849ee732771b89a86b06944e0d2ae6">pos_y</a></td></tr>
 <tr class="separator:af8849ee732771b89a86b06944e0d2ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad63d4a61ef95fab2799ee7ca900a89da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classInventory.html">Inventory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCity.html#ad63d4a61ef95fab2799ee7ca900a89da">inv</a></td></tr>
+<tr class="separator:ad63d4a61ef95fab2799ee7ca900a89da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
@@ -203,7 +212,7 @@ Static Private Attributes</h2></td></tr>
 <div class="textblock"><p><a class="el" href="classCity.html" title="City Game Object. ">City</a> <a class="el" href="classGame.html" title="Manager for Game State. ">Game</a> Object. </p>
 <p>The city game object is for managing trading hubs. Each city exists at a point in the world and owns and maintains the information necessary to facilitate a local economy. </p>
 
-<p>Definition at line <a class="el" href="City_8hpp_source.html#l00018">18</a> of file <a class="el" href="City_8hpp_source.html">City.hpp</a>.</p>
+<p>Definition at line <a class="el" href="City_8hpp_source.html#l00019">19</a> of file <a class="el" href="City_8hpp_source.html">City.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a1b1f549430f0a7ecd0ec7b1605415193"></a>
 <div class="memitem">
@@ -220,7 +229,27 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="City_8cpp_source.html#l00008">8</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
 
-<p>References <a class="el" href="City_8hpp_source.html#l00051">name</a>, <a class="el" href="City_8hpp_source.html#l00052">pos_x</a>, and <a class="el" href="City_8hpp_source.html#l00053">pos_y</a>.</p>
+<p>References <a class="el" href="City_8hpp_source.html#l00060">inv</a>, <a class="el" href="City_8hpp_source.html#l00056">name</a>, <a class="el" href="City_8hpp_source.html#l00057">pos_x</a>, and <a class="el" href="City_8hpp_source.html#l00058">pos_y</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a95abe7fe34636c633e9afa6b0888cbc5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">City::City </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCity.html">City</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="City_8cpp_source.html#l00016">16</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
+
+<p>References <a class="el" href="City_8hpp_source.html#l00060">inv</a>, <a class="el" href="City_8hpp_source.html#l00056">name</a>, <a class="el" href="City_8hpp_source.html#l00057">pos_x</a>, and <a class="el" href="City_8hpp_source.html#l00058">pos_y</a>.</p>
 
 </div>
 </div>
@@ -238,9 +267,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="City_8cpp_source.html#l00022">22</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
+<p>Definition at line <a class="el" href="City_8cpp_source.html#l00032">32</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
 
-<p>References <a class="el" href="City_8cpp_source.html#l00027">fromStringStream()</a>.</p>
+<p>References <a class="el" href="City_8cpp_source.html#l00041">fromStringStream()</a>, <a class="el" href="City_8hpp_source.html#l00060">inv</a>, <a class="el" href="City_8hpp_source.html#l00056">name</a>, <a class="el" href="City_8hpp_source.html#l00057">pos_x</a>, and <a class="el" href="City_8hpp_source.html#l00058">pos_y</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -250,6 +279,7 @@ Static Private Attributes</h2></td></tr>
 <div class="center"><img src="classCity_ab9e123e275fe206ddc6ce96bc04b03dc_cgraph.png" border="0" usemap="#classCity_ab9e123e275fe206ddc6ce96bc04b03dc_cgraph" alt=""/></div>
 <map name="classCity_ab9e123e275fe206ddc6ce96bc04b03dc_cgraph" id="classCity_ab9e123e275fe206ddc6ce96bc04b03dc_cgraph">
 <area shape="rect" id="node2" href="classCity.html#a97ef34d0f65029b3b9827c267441fc04" title="From String Stream. " alt="" coords="132,5,288,32"/>
+<area shape="rect" id="node3" href="classInventory.html#a036b8f3b77aae4fe2af98190482e0dff" title="From String Stream. " alt="" coords="336,5,523,32"/>
 </map>
 </div>
 </p>
@@ -286,13 +316,72 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="City_8cpp_source.html#l00015">15</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
+<p>Definition at line <a class="el" href="City_8cpp_source.html#l00024">24</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
 
-<p>References <a class="el" href="City_8hpp_source.html#l00051">name</a>, <a class="el" href="City_8hpp_source.html#l00052">pos_x</a>, and <a class="el" href="City_8hpp_source.html#l00053">pos_y</a>.</p>
+<p>References <a class="el" href="City_8hpp_source.html#l00060">inv</a>, <a class="el" href="City_8hpp_source.html#l00056">name</a>, <a class="el" href="City_8hpp_source.html#l00057">pos_x</a>, and <a class="el" href="City_8hpp_source.html#l00058">pos_y</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a919c58aece88f892370c14b763c45b7e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void City::addToInventory </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>itemId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="City_8cpp_source.html#l00098">98</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
+
+<p>References <a class="el" href="Inventory_8cpp_source.html#l00058">Inventory::add()</a>, and <a class="el" href="City_8hpp_source.html#l00060">inv</a>.</p>
+
+<p>Referenced by <a class="el" href="CityPass_8cpp_source.html#l00108">CityPass::convertTileToCity()</a>.</p>
+
+<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classCity_a919c58aece88f892370c14b763c45b7e_cgraph.png" border="0" usemap="#classCity_a919c58aece88f892370c14b763c45b7e_cgraph" alt=""/></div>
+<map name="classCity_a919c58aece88f892370c14b763c45b7e_cgraph" id="classCity_a919c58aece88f892370c14b763c45b7e_cgraph">
+<area shape="rect" id="node2" href="classInventory.html#ac4c9348ee84f478f42fe7633971322a5" title="Inventory::add" alt="" coords="197,5,303,32"/>
+<area shape="rect" id="node3" href="classInventory.html#abdf89bbff1906b9c63b0b1b8be510d28" title="Inventory::find" alt="" coords="351,5,456,32"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classCity_a919c58aece88f892370c14b763c45b7e_icgraph.png" border="0" usemap="#classCity_a919c58aece88f892370c14b763c45b7e_icgraph" alt=""/></div>
+<map name="classCity_a919c58aece88f892370c14b763c45b7e_icgraph" id="classCity_a919c58aece88f892370c14b763c45b7e_icgraph">
+<area shape="rect" id="node2" href="classCityPass.html#a20418a52a561895af705badb79b5b2c2" title="CityPass::convertTileToCity" alt="" coords="197,5,384,32"/>
+<area shape="rect" id="node3" href="classCityPass.html#a96d4834a3670c491b68f2d751df54a2a" title="CityPass::doPlace" alt="" coords="432,5,563,32"/>
+<area shape="rect" id="node4" href="classCityPass.html#ab2b3219a792d6cc048118396c15cf112" title="CityPass::doTile" alt="" coords="611,5,729,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a97ef34d0f65029b3b9827c267441fc04"></a>
 <div class="memitem">
 <div class="memproto">
@@ -326,20 +415,68 @@ Static Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classAbstractGameObject.html#a482f1b8691feca092a435975a3834595">AbstractGameObject</a>.</p>
 
-<p>Definition at line <a class="el" href="City_8cpp_source.html#l00027">27</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
+<p>Definition at line <a class="el" href="City_8cpp_source.html#l00041">41</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
 
-<p>References <a class="el" href="Globals_8hpp_source.html#l00010">Globals::file_delimiter</a>, <a class="el" href="City_8hpp_source.html#l00051">name</a>, <a class="el" href="Globals_8hpp_source.html#l00011">Globals::object_delimiter</a>, <a class="el" href="City_8hpp_source.html#l00052">pos_x</a>, and <a class="el" href="City_8hpp_source.html#l00053">pos_y</a>.</p>
+<p>References <a class="el" href="Globals_8hpp_source.html#l00010">Globals::file_delimiter</a>, <a class="el" href="Inventory_8cpp_source.html#l00022">Inventory::fromStringStream()</a>, <a class="el" href="City_8hpp_source.html#l00060">inv</a>, <a class="el" href="City_8hpp_source.html#l00056">name</a>, <a class="el" href="Globals_8hpp_source.html#l00011">Globals::object_delimiter</a>, <a class="el" href="City_8hpp_source.html#l00057">pos_x</a>, and <a class="el" href="City_8hpp_source.html#l00058">pos_y</a>.</p>
 
-<p>Referenced by <a class="el" href="City_8cpp_source.html#l00022">City()</a>.</p>
+<p>Referenced by <a class="el" href="City_8cpp_source.html#l00032">City()</a>.</p>
 
-<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classCity_a97ef34d0f65029b3b9827c267441fc04_cgraph.png" border="0" usemap="#classCity_a97ef34d0f65029b3b9827c267441fc04_cgraph" alt=""/></div>
+<map name="classCity_a97ef34d0f65029b3b9827c267441fc04_cgraph" id="classCity_a97ef34d0f65029b3b9827c267441fc04_cgraph">
+<area shape="rect" id="node2" href="classInventory.html#a036b8f3b77aae4fe2af98190482e0dff" title="From String Stream. " alt="" coords="209,5,396,32"/>
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classCity_a97ef34d0f65029b3b9827c267441fc04_icgraph.png" border="0" usemap="#classCity_a97ef34d0f65029b3b9827c267441fc04_icgraph" alt=""/></div>
 <map name="classCity_a97ef34d0f65029b3b9827c267441fc04_icgraph" id="classCity_a97ef34d0f65029b3b9827c267441fc04_icgraph">
 <area shape="rect" id="node2" href="classCity.html#ab9e123e275fe206ddc6ce96bc04b03dc" title="City::City" alt="" coords="209,5,288,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3f8c232abbad377713c718180e766884"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classInventory.html">Inventory</a> City::getInventory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="City_8cpp_source.html#l00103">103</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
+
+<p>References <a class="el" href="City_8hpp_source.html#l00060">inv</a>.</p>
+
+<p>Referenced by <a class="el" href="CityInventory_8cpp_source.html#l00075">GameState::CityInventory::getCityInventory()</a>.</p>
+
+<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classCity_a3f8c232abbad377713c718180e766884_icgraph.png" border="0" usemap="#classCity_a3f8c232abbad377713c718180e766884_icgraph" alt=""/></div>
+<map name="classCity_a3f8c232abbad377713c718180e766884_icgraph" id="classCity_a3f8c232abbad377713c718180e766884_icgraph">
+<area shape="rect" id="node2" href="classGameState_1_1CityInventory.html#abe917b11f3c0f28be02c26a7d8190fbf" title="GameState::CityInventory\l::getCityInventory" alt="" coords="180,39,355,80"/>
+<area shape="rect" id="node3" href="classGameState_1_1CityInventory.html#aaa09cb78503168573a9d7a0b59e04930" title="GameState::CityInventory\l::init" alt="" coords="403,5,577,47"/>
+<area shape="rect" id="node5" href="classGameState_1_1CityInventory.html#a655626facb6336d2101338ffc3c0c902" title="GameState::CityInventory\l::setCity" alt="" coords="403,71,577,112"/>
+<area shape="rect" id="node4" href="classGameState_1_1Playing.html#acfa69a62e6493f653a166ca615337423" title="GameState::Playing\l::update" alt="" coords="625,39,764,80"/>
 </map>
 </div>
 </p>
@@ -359,9 +496,23 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="City_8cpp_source.html#l00057">57</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
+<p>Definition at line <a class="el" href="City_8cpp_source.html#l00073">73</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
 
-<p>References <a class="el" href="City_8hpp_source.html#l00051">name</a>.</p>
+<p>References <a class="el" href="City_8hpp_source.html#l00056">name</a>.</p>
+
+<p>Referenced by <a class="el" href="Playing_8cpp_source.html#l00010">GameState::Playing::update()</a>.</p>
+
+<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classCity_ae52fbe125c8b023214b0f71e9641414c_icgraph.png" border="0" usemap="#classCity_ae52fbe125c8b023214b0f71e9641414c_icgraph" alt=""/></div>
+<map name="classCity_ae52fbe125c8b023214b0f71e9641414c_icgraph" id="classCity_ae52fbe125c8b023214b0f71e9641414c_icgraph">
+<area shape="rect" id="node2" href="classGameState_1_1Playing.html#acfa69a62e6493f653a166ca615337423" title="GameState::Playing\l::update" alt="" coords="160,5,299,47"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -378,9 +529,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="City_8cpp_source.html#l00067">67</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
+<p>Definition at line <a class="el" href="City_8cpp_source.html#l00083">83</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
 
-<p>References <a class="el" href="City_8hpp_source.html#l00052">pos_x</a>.</p>
+<p>References <a class="el" href="City_8hpp_source.html#l00057">pos_x</a>.</p>
 
 </div>
 </div>
@@ -397,9 +548,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="City_8cpp_source.html#l00077">77</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
+<p>Definition at line <a class="el" href="City_8cpp_source.html#l00093">93</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
 
-<p>References <a class="el" href="City_8hpp_source.html#l00053">pos_y</a>.</p>
+<p>References <a class="el" href="City_8hpp_source.html#l00058">pos_y</a>.</p>
 
 </div>
 </div>
@@ -427,17 +578,17 @@ Static Private Attributes</h2></td></tr>
 <p>Load <a class="el" href="classCity.html" title="City Game Object. ">City</a> Names. </p>
 <p><a class="el" href="classCity.html" title="City Game Object. ">City</a> names will exist within a file at city_name_file_path. Load this from the disk so that users can generate their own set of possible names. </p>
 
-<p>Definition at line <a class="el" href="City_8cpp_source.html#l00082">82</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
+<p>Definition at line <a class="el" href="City_8cpp_source.html#l00108">108</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
 
-<p>References <a class="el" href="City_8hpp_source.html#l00044">city_name_ends</a>, <a class="el" href="City_8hpp_source.html#l00046">city_name_file_path</a>, <a class="el" href="City_8hpp_source.html#l00043">city_name_starts</a>, and <a class="el" href="City_8hpp_source.html#l00051">name</a>.</p>
+<p>References <a class="el" href="City_8hpp_source.html#l00049">city_name_ends</a>, <a class="el" href="City_8hpp_source.html#l00051">city_name_file_path</a>, <a class="el" href="City_8hpp_source.html#l00048">city_name_starts</a>, and <a class="el" href="City_8hpp_source.html#l00056">name</a>.</p>
 
-<p>Referenced by <a class="el" href="Server_8cpp_source.html#l00066">Server::configure()</a>, and <a class="el" href="Game_8cpp_source.html#l00114">Game::configure()</a>.</p>
+<p>Referenced by <a class="el" href="Server_8cpp_source.html#l00068">Server::configure()</a>, and <a class="el" href="Game_8cpp_source.html#l00123">Game::configure()</a>.</p>
 
-<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classCity_a404709b7000a90155400c0ea43936ac9_icgraph.png" border="0" usemap="#classCity_a404709b7000a90155400c0ea43936ac9_icgraph" alt=""/></div>
 <map name="classCity_a404709b7000a90155400c0ea43936ac9_icgraph" id="classCity_a404709b7000a90155400c0ea43936ac9_icgraph">
 <area shape="rect" id="node2" href="classServer.html#a011fa4233b24eb0397524c33cb6ea73f" title="Server::configure" alt="" coords="205,5,327,32"/>
@@ -466,9 +617,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="City_8cpp_source.html#l00052">52</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
+<p>Definition at line <a class="el" href="City_8cpp_source.html#l00068">68</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
 
-<p>References <a class="el" href="City_8hpp_source.html#l00051">name</a>.</p>
+<p>References <a class="el" href="City_8hpp_source.html#l00056">name</a>.</p>
 
 </div>
 </div>
@@ -486,9 +637,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="City_8cpp_source.html#l00062">62</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
+<p>Definition at line <a class="el" href="City_8cpp_source.html#l00078">78</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
 
-<p>References <a class="el" href="City_8hpp_source.html#l00052">pos_x</a>.</p>
+<p>References <a class="el" href="City_8hpp_source.html#l00057">pos_x</a>.</p>
 
 </div>
 </div>
@@ -506,9 +657,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="City_8cpp_source.html#l00072">72</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
+<p>Definition at line <a class="el" href="City_8cpp_source.html#l00088">88</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
 
-<p>References <a class="el" href="City_8hpp_source.html#l00053">pos_y</a>.</p>
+<p>References <a class="el" href="City_8hpp_source.html#l00058">pos_y</a>.</p>
 
 </div>
 </div>
@@ -545,9 +696,21 @@ Static Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classAbstractGameObject.html#ab9145168c5c5820b432381793333198c">AbstractGameObject</a>.</p>
 
-<p>Definition at line <a class="el" href="City_8cpp_source.html#l00045">45</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
+<p>Definition at line <a class="el" href="City_8cpp_source.html#l00060">60</a> of file <a class="el" href="City_8cpp_source.html">City.cpp</a>.</p>
 
-<p>References <a class="el" href="Globals_8hpp_source.html#l00010">Globals::file_delimiter</a>, <a class="el" href="City_8hpp_source.html#l00051">name</a>, <a class="el" href="Globals_8hpp_source.html#l00011">Globals::object_delimiter</a>, <a class="el" href="City_8hpp_source.html#l00052">pos_x</a>, and <a class="el" href="City_8hpp_source.html#l00053">pos_y</a>.</p>
+<p>References <a class="el" href="Globals_8hpp_source.html#l00010">Globals::file_delimiter</a>, <a class="el" href="City_8hpp_source.html#l00060">inv</a>, <a class="el" href="City_8hpp_source.html#l00056">name</a>, <a class="el" href="Globals_8hpp_source.html#l00011">Globals::object_delimiter</a>, <a class="el" href="City_8hpp_source.html#l00057">pos_x</a>, <a class="el" href="City_8hpp_source.html#l00058">pos_y</a>, and <a class="el" href="Inventory_8cpp_source.html#l00049">Inventory::toStringStream()</a>.</p>
+
+<p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classCity_a9a610101b201c5c206c1f929c60b92ad_cgraph.png" border="0" usemap="#classCity_a9a610101b201c5c206c1f929c60b92ad_cgraph" alt=""/></div>
+<map name="classCity_a9a610101b201c5c206c1f929c60b92ad_cgraph" id="classCity_a9a610101b201c5c206c1f929c60b92ad_cgraph">
+<area shape="rect" id="node2" href="classInventory.html#a55aca0120134bec405dd58cc511afc9b" title="To String Stream. " alt="" coords="195,5,365,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -570,9 +733,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="City_8hpp_source.html#l00044">44</a> of file <a class="el" href="City_8hpp_source.html">City.hpp</a>.</p>
+<p>Definition at line <a class="el" href="City_8hpp_source.html#l00049">49</a> of file <a class="el" href="City_8hpp_source.html">City.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="City_8cpp_source.html#l00082">load_city_names()</a>.</p>
+<p>Referenced by <a class="el" href="CityPass_8cpp_source.html#l00108">CityPass::convertTileToCity()</a>, and <a class="el" href="City_8cpp_source.html#l00108">load_city_names()</a>.</p>
 
 </div>
 </div>
@@ -596,9 +759,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>std::string city_name_file_path the place on disk to find a file full of city name starts and ends. </p>
 
-<p>Definition at line <a class="el" href="City_8hpp_source.html#l00046">46</a> of file <a class="el" href="City_8hpp_source.html">City.hpp</a>.</p>
+<p>Definition at line <a class="el" href="City_8hpp_source.html#l00051">51</a> of file <a class="el" href="City_8hpp_source.html">City.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="City_8cpp_source.html#l00082">load_city_names()</a>.</p>
+<p>Referenced by <a class="el" href="City_8cpp_source.html#l00108">load_city_names()</a>.</p>
 
 </div>
 </div>
@@ -620,9 +783,33 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="City_8hpp_source.html#l00043">43</a> of file <a class="el" href="City_8hpp_source.html">City.hpp</a>.</p>
+<p>Definition at line <a class="el" href="City_8hpp_source.html#l00048">48</a> of file <a class="el" href="City_8hpp_source.html">City.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="City_8cpp_source.html#l00082">load_city_names()</a>.</p>
+<p>Referenced by <a class="el" href="CityPass_8cpp_source.html#l00108">CityPass::convertTileToCity()</a>, and <a class="el" href="City_8cpp_source.html#l00108">load_city_names()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad63d4a61ef95fab2799ee7ca900a89da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classInventory.html">Inventory</a> City::inv</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="City_8hpp_source.html#l00060">60</a> of file <a class="el" href="City_8hpp_source.html">City.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="City_8cpp_source.html#l00098">addToInventory()</a>, <a class="el" href="City_8cpp_source.html#l00008">City()</a>, <a class="el" href="City_8cpp_source.html#l00041">fromStringStream()</a>, <a class="el" href="City_8cpp_source.html#l00103">getInventory()</a>, and <a class="el" href="City_8cpp_source.html#l00060">toStringStream()</a>.</p>
 
 </div>
 </div>
@@ -644,9 +831,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="City_8hpp_source.html#l00051">51</a> of file <a class="el" href="City_8hpp_source.html">City.hpp</a>.</p>
+<p>Definition at line <a class="el" href="City_8hpp_source.html#l00056">56</a> of file <a class="el" href="City_8hpp_source.html">City.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="City_8cpp_source.html#l00008">City()</a>, <a class="el" href="City_8cpp_source.html#l00027">fromStringStream()</a>, <a class="el" href="City_8cpp_source.html#l00057">getName()</a>, <a class="el" href="City_8cpp_source.html#l00082">load_city_names()</a>, <a class="el" href="City_8cpp_source.html#l00052">setName()</a>, and <a class="el" href="City_8cpp_source.html#l00045">toStringStream()</a>.</p>
+<p>Referenced by <a class="el" href="City_8cpp_source.html#l00008">City()</a>, <a class="el" href="City_8cpp_source.html#l00041">fromStringStream()</a>, <a class="el" href="City_8cpp_source.html#l00073">getName()</a>, <a class="el" href="City_8cpp_source.html#l00108">load_city_names()</a>, <a class="el" href="City_8cpp_source.html#l00068">setName()</a>, and <a class="el" href="City_8cpp_source.html#l00060">toStringStream()</a>.</p>
 
 </div>
 </div>
@@ -668,9 +855,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="City_8hpp_source.html#l00052">52</a> of file <a class="el" href="City_8hpp_source.html">City.hpp</a>.</p>
+<p>Definition at line <a class="el" href="City_8hpp_source.html#l00057">57</a> of file <a class="el" href="City_8hpp_source.html">City.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="City_8cpp_source.html#l00008">City()</a>, <a class="el" href="City_8cpp_source.html#l00027">fromStringStream()</a>, <a class="el" href="City_8cpp_source.html#l00067">getPosX()</a>, <a class="el" href="City_8cpp_source.html#l00062">setPosX()</a>, and <a class="el" href="City_8cpp_source.html#l00045">toStringStream()</a>.</p>
+<p>Referenced by <a class="el" href="City_8cpp_source.html#l00008">City()</a>, <a class="el" href="City_8cpp_source.html#l00041">fromStringStream()</a>, <a class="el" href="City_8cpp_source.html#l00083">getPosX()</a>, <a class="el" href="City_8cpp_source.html#l00078">setPosX()</a>, and <a class="el" href="City_8cpp_source.html#l00060">toStringStream()</a>.</p>
 
 </div>
 </div>
@@ -692,9 +879,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="City_8hpp_source.html#l00053">53</a> of file <a class="el" href="City_8hpp_source.html">City.hpp</a>.</p>
+<p>Definition at line <a class="el" href="City_8hpp_source.html#l00058">58</a> of file <a class="el" href="City_8hpp_source.html">City.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="City_8cpp_source.html#l00008">City()</a>, <a class="el" href="City_8cpp_source.html#l00027">fromStringStream()</a>, <a class="el" href="City_8cpp_source.html#l00077">getPosY()</a>, <a class="el" href="City_8cpp_source.html#l00072">setPosY()</a>, and <a class="el" href="City_8cpp_source.html#l00045">toStringStream()</a>.</p>
+<p>Referenced by <a class="el" href="City_8cpp_source.html#l00008">City()</a>, <a class="el" href="City_8cpp_source.html#l00041">fromStringStream()</a>, <a class="el" href="City_8cpp_source.html#l00093">getPosY()</a>, <a class="el" href="City_8cpp_source.html#l00088">setPosY()</a>, and <a class="el" href="City_8cpp_source.html#l00060">toStringStream()</a>.</p>
 
 </div>
 </div>
@@ -708,7 +895,7 @@ Static Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classCity.html">City</a></li>
-    <li class="footer">Generated on Mon Jul 31 2017 19:39:30 for Arbitrage Simulator by
+    <li class="footer">Generated on Sat Aug 5 2017 07:37:21 for Arbitrage Simulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

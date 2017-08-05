@@ -10,7 +10,7 @@ var classGameState_1_1State =
     [ "render", "classGameState_1_1State.html#a5c079ce73c4cd223d2a95a22d12e779b", null ],
     [ "setLogger", "classGameState_1_1State.html#ad70390405ac9d68ba95adfe84bb1bcd6", null ],
     [ "shouldClose", "classGameState_1_1State.html#a40430c01ab0a1f3ac211b0d2a94944c8", null ],
-    [ "update", "classGameState_1_1State.html#a042ad38c7cea287d22b4b3a3a270d435", null ],
+    [ "update", "classGameState_1_1State.html#a1a2c719eec07f506958ab186008e10c2", null ],
     [ "logger", "classGameState_1_1State.html#a82088ded7e073da004c602b97d9bd699", null ],
     [ "msgDown", "classGameState_1_1State.html#accfd7b8990c19ebc02eb16d01c16c74b", null ],
     [ "msgUp", "classGameState_1_1State.html#a230b2399d46ae8e5ab48d0ca93c5b27a", null ],

@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classServerSession.html" title="Server Session. " alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node1" href="$classLogger.html" title="Logger" alt="" coords="5,56,67,83"/>
+<area shape="rect" id="node2" href="$classBufferLogger.html" title="BufferLogger. " alt="" coords="121,5,217,32"/>
+<area shape="rect" id="node3" href="$classConsoleLogger.html" title="ConsoleLogger" alt="" coords="115,56,224,83"/>
+<area shape="rect" id="node4" href="$classNullLogger.html" title="NullLogger" alt="" coords="127,107,211,133"/>
 </map>

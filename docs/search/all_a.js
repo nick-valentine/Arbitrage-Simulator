@@ -19,7 +19,7 @@ var searchData=
   ['logger_2ecpp',['Logger.cpp',['../Logger_8cpp.html',1,'']]],
   ['logger_2ehpp',['Logger.hpp',['../Logger_8hpp.html',1,'']]],
   ['loggerptr',['LoggerPtr',['../classLogger.html#a553760eed76d57bdc7d483bbfed58bee',1,'Logger']]],
-  ['login',['login',['../classNetworkedWorldInteraction.html#aeb516faf06a8fe474cc389ba7f48e125',1,'NetworkedWorldInteraction::login()'],['../classServerSession.html#ae34485de6117ea26f500189ae3499114ad35d022c523eea782aa071a87ce66e55',1,'ServerSession::LOGIN()']]],
+  ['login',['LOGIN',['../classServerSession.html#ae34485de6117ea26f500189ae3499114ad35d022c523eea782aa071a87ce66e55',1,'ServerSession::LOGIN()'],['../classNetworkedWorldInteraction.html#aeb516faf06a8fe474cc389ba7f48e125',1,'NetworkedWorldInteraction::login()']]],
   ['loginhandler',['LoginHandler',['../classServerSession.html#a706e60aef6bac44a83589911c454c7fd',1,'ServerSession']]],
   ['loglevel',['logLevel',['../classLogger.html#a55b0f1a3f0a66235d982890388481cc9',1,'Logger::logLevel()'],['../classLogger.html#ac744681e23720966b5f430ec2060da36',1,'Logger::LogLevel()']]]
 ];

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['_7ebufferlogger',['~BufferLogger',['../classBufferLogger.html#ac722ba3c2824b0df9f1069db254edc81',1,'BufferLogger']]],
+  ['_7ecityinventory',['~CityInventory',['../classGameState_1_1CityInventory.html#ab44173e8bc43385ab7b15e7f59508916',1,'GameState::CityInventory']]],
   ['_7econsolelogger',['~ConsoleLogger',['../classConsoleLogger.html#a242e88aa9495249d5a7fbdfc4f8886ee',1,'ConsoleLogger']]],
   ['_7econsolewindow',['~ConsoleWindow',['../classConsoleWindow.html#a4f2134b648ac194f31c5a18aecd3f7b3',1,'ConsoleWindow']]],
   ['_7ecurseswindow',['~CursesWindow',['../classCursesWindow.html#abd721c8e7b4cfc5da1e87123fd3b2601',1,'CursesWindow']]],

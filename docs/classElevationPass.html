@@ -145,8 +145,8 @@ $(document).ready(function(){initNavTree('classElevationPass.html','');});
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac1415531c2382252216d4ccfc549e98b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevationPass.html#ac1415531c2382252216d4ccfc549e98b">init</a> ()</td></tr>
 <tr class="separator:ac1415531c2382252216d4ccfc549e98b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1731875616bd5b4cb19ebc5901585eb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevationPass.html#a1731875616bd5b4cb19ebc5901585eb0">doTile</a> (int i, int j, <a class="el" href="classTile.html">Tile</a> *tile)</td></tr>
-<tr class="separator:a1731875616bd5b4cb19ebc5901585eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3185338ad9b02a29bf0c078ebbd61c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevationPass.html#ac3185338ad9b02a29bf0c078ebbd61c0">doTile</a> (int i, int j, <a class="el" href="classTile.html">Tile</a> *tile, <a class="el" href="classWorldChunk.html">WorldChunk</a> *chunk)</td></tr>
+<tr class="separator:ac3185338ad9b02a29bf0c078ebbd61c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb671d4d3a35d7f7e88a1175cf926c5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAbstractPass.html">AbstractPass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevationPass.html#aeb671d4d3a35d7f7e88a1175cf926c5a">clone</a> ()</td></tr>
 <tr class="separator:aeb671d4d3a35d7f7e88a1175cf926c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33d8e9bd50bb27f650947656dd0c9ce8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevationPass.html#a33d8e9bd50bb27f650947656dd0c9ce8">getName</a> ()</td></tr>
@@ -213,7 +213,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1731875616bd5b4cb19ebc5901585eb0"></a>
+<a class="anchor" id="ac3185338ad9b02a29bf0c078ebbd61c0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -236,7 +236,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classTile.html">Tile</a> *&#160;</td>
-          <td class="paramname"><em>tile</em>&#160;</td>
+          <td class="paramname"><em>tile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classWorldChunk.html">WorldChunk</a> *&#160;</td>
+          <td class="paramname"><em>chunk</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -251,19 +257,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classAbstractPass.html#a7699bb3f9d75acb441203575de128ab4">AbstractPass</a>.</p>
+<p>Implements <a class="el" href="classAbstractPass.html#abd8cfd3f8bc7205e82d40706c4d0a665">AbstractPass</a>.</p>
 
 <p>Definition at line <a class="el" href="ElevationPass_8cpp_source.html#l00011">11</a> of file <a class="el" href="ElevationPass_8cpp_source.html">ElevationPass.cpp</a>.</p>
 
-<p>References <a class="el" href="ElevationPass_8cpp_source.html#l00031">elevationMap()</a>, <a class="el" href="ElevationPass_8hpp_source.html#l00029">elevationNoise</a>, <a class="el" href="ElevationPass_8hpp_source.html#l00028">elevationSkewNoise</a>, <a class="el" href="NoiseFunc_8cpp_source.html#l00059">NoiseFunc::get()</a>, and <a class="el" href="Tile_8cpp_source.html#l00137">Tile::setElevation()</a>.</p>
+<p>References <a class="el" href="ElevationPass_8cpp_source.html#l00031">elevationMap()</a>, <a class="el" href="ElevationPass_8hpp_source.html#l00029">elevationNoise</a>, <a class="el" href="ElevationPass_8hpp_source.html#l00028">elevationSkewNoise</a>, <a class="el" href="NoiseFunc_8cpp_source.html#l00060">NoiseFunc::get()</a>, and <a class="el" href="Tile_8cpp_source.html#l00137">Tile::setElevation()</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classElevationPass_a1731875616bd5b4cb19ebc5901585eb0_cgraph.png" border="0" usemap="#classElevationPass_a1731875616bd5b4cb19ebc5901585eb0_cgraph" alt=""/></div>
-<map name="classElevationPass_a1731875616bd5b4cb19ebc5901585eb0_cgraph" id="classElevationPass_a1731875616bd5b4cb19ebc5901585eb0_cgraph">
+<div class="center"><img src="classElevationPass_ac3185338ad9b02a29bf0c078ebbd61c0_cgraph.png" border="0" usemap="#classElevationPass_ac3185338ad9b02a29bf0c078ebbd61c0_cgraph" alt=""/></div>
+<map name="classElevationPass_ac3185338ad9b02a29bf0c078ebbd61c0_cgraph" id="classElevationPass_ac3185338ad9b02a29bf0c078ebbd61c0_cgraph">
 <area shape="rect" id="node2" href="classElevationPass.html#a0c16cffb101141f07f47c8f438f09c76" title="ElevationPass::elevationMap" alt="" coords="203,5,393,32"/>
 <area shape="rect" id="node3" href="classNoiseFunc.html#a86b87334b40c251168a191bcf14ef761" title="Get the return of this noise function modified by gridPeriod. " alt="" coords="243,56,353,83"/>
 <area shape="rect" id="node10" href="classTile.html#a71370c81780bff1baea5b088696089c8" title="Tile::setElevation" alt="" coords="237,107,359,133"/>
@@ -324,7 +330,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classElevationPass_a0c16cffb101141f07f47c8f438f09c76_icgraph.png" border="0" usemap="#classElevationPass_a0c16cffb101141f07f47c8f438f09c76_icgraph" alt=""/></div>
 <map name="classElevationPass_a0c16cffb101141f07f47c8f438f09c76_icgraph" id="classElevationPass_a0c16cffb101141f07f47c8f438f09c76_icgraph">
-<area shape="rect" id="node2" href="classElevationPass.html#a1731875616bd5b4cb19ebc5901585eb0" title="ElevationPass::doTile" alt="" coords="244,5,393,32"/>
+<area shape="rect" id="node2" href="classElevationPass.html#ac3185338ad9b02a29bf0c078ebbd61c0" title="ElevationPass::doTile" alt="" coords="244,5,393,32"/>
 </map>
 </div>
 </p>
@@ -535,7 +541,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classElevationPass.html">ElevationPass</a></li>
-    <li class="footer">Generated on Mon Jul 31 2017 19:39:30 for Arbitrage Simulator by
+    <li class="footer">Generated on Sat Aug 5 2017 07:37:21 for Arbitrage Simulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

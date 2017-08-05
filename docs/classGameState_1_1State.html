@@ -124,8 +124,9 @@ $(document).ready(function(){initNavTree('classGameState_1_1State.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classGameState_1_1State__inherit__graph.png" border="0" usemap="#GameState_1_1State_inherit__map" alt="Inheritance graph"/></div>
 <map name="GameState_1_1State_inherit__map" id="GameState_1_1State_inherit__map">
-<area shape="rect" id="node2" href="classGameState_1_1Menu.html" title="{GameState::Menu\n|&#45; options\l&#45; menuShouldClose\l&#45; menu\l|+ Menu()\l+ ~Menu()\l+ init()\l+ addOption()\l+ update()\l+ render()\l+ nextState()\l+ clearNextState()\l+ shouldClose()\l}" alt="" coords="5,336,141,560"/>
-<area shape="rect" id="node3" href="classGameState_1_1Playing.html" title="{GameState::Playing\n|&#45; player\l&#45; camera\l&#45; newState\l|+ init()\l+ update()\l+ render()\l+ nextState()\l+ clearNextState()\l+ shouldClose()\l}" alt="" coords="165,358,304,538"/>
+<area shape="rect" id="node2" href="classGameState_1_1CityInventory.html" title="{GameState::CityInventory\n|&#45; city\l&#45; options\l&#45; cityInventory\l&#45; cityInventoryOptions\l&#45; inventoryShouldClose\l&#45; inventory\l|+ CityInventory()\l+ ~CityInventory()\l+ init()\l+ setCity()\l+ update()\l+ render()\l+ nextState()\l+ clearNextState()\l+ shouldClose()\l&#45; getCityInventory()\l&#45; populateMenu()\l}" alt="" coords="5,336,180,633"/>
+<area shape="rect" id="node3" href="classGameState_1_1Menu.html" title="{GameState::Menu\n|&#45; head\l&#45; options\l&#45; menuShouldClose\l&#45; menu\l|+ Menu()\l+ ~Menu()\l+ init()\l+ setHead()\l+ addOption()\l+ update()\l+ render()\l+ nextState()\l+ clearNextState()\l+ shouldClose()\l}" alt="" coords="205,358,341,611"/>
+<area shape="rect" id="node4" href="classGameState_1_1Playing.html" title="{GameState::Playing\n|&#45; player\l&#45; camera\l&#45; newState\l|+ init()\l+ update()\l+ render()\l+ nextState()\l+ clearNextState()\l+ shouldClose()\l}" alt="" coords="365,395,503,575"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -134,8 +135,6 @@ $(document).ready(function(){initNavTree('classGameState_1_1State.html','');});
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classGameState_1_1State__coll__graph.png" border="0" usemap="#GameState_1_1State_coll__map" alt="Collaboration graph"/></div>
-<map name="GameState_1_1State_coll__map" id="GameState_1_1State_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -144,8 +143,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab0417423e9a08ac7561edba7a5ddeb8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad70390405ac9d68ba95adfe84bb1bcd6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameState_1_1State.html#ad70390405ac9d68ba95adfe84bb1bcd6">setLogger</a> (<a class="el" href="classLogger.html#a553760eed76d57bdc7d483bbfed58bee">Logger::LoggerPtr</a> <a class="el" href="classGameState_1_1State.html#a82088ded7e073da004c602b97d9bd699">logger</a>)</td></tr>
 <tr class="separator:ad70390405ac9d68ba95adfe84bb1bcd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a042ad38c7cea287d22b4b3a3a270d435"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameState_1_1State.html#a042ad38c7cea287d22b4b3a3a270d435">update</a> (<a class="el" href="classWorldInteractionInterface.html">WorldInteractionInterface</a> *worldProxy, <a class="el" href="Input_8hpp.html#a080a822f0093973313bd644e517a5090">Input</a> input)=0</td></tr>
-<tr class="separator:a042ad38c7cea287d22b4b3a3a270d435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a2c719eec07f506958ab186008e10c2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameState_1_1State.html#a1a2c719eec07f506958ab186008e10c2">update</a> (<a class="el" href="classWorldInteractionInterface.html">WorldInteractionInterface</a> *worldProxy, <a class="el" href="structContext.html">Context</a> *ctx)=0</td></tr>
+<tr class="separator:a1a2c719eec07f506958ab186008e10c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c079ce73c4cd223d2a95a22d12e779b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameState_1_1State.html#a5c079ce73c4cd223d2a95a22d12e779b">render</a> (<a class="el" href="classWorldInteractionInterface.html">WorldInteractionInterface</a> *worldProxy, <a class="el" href="classWindow.html#a370ec54942433f58845f69ec8881a6d5">Window::window_ptr</a> window)=0</td></tr>
 <tr class="separator:a5c079ce73c4cd223d2a95a22d12e779b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb0e50e51155c6cc1b713a29f75c78b6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classGameState_1_1State.html">State</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameState_1_1State.html#afb0e50e51155c6cc1b713a29f75c78b6">nextState</a> ()=0</td></tr>
@@ -201,9 +200,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classGameState_1_1Menu.html#abd7f0121e8dcf9c70bdff5c9baeb1813">GameState::Menu</a>, and <a class="el" href="classGameState_1_1Playing.html#ae5db57de1fca89b2332071df67035048">GameState::Playing</a>.</p>
+<p>Implemented in <a class="el" href="classGameState_1_1Playing.html#ae5db57de1fca89b2332071df67035048">GameState::Playing</a>, <a class="el" href="classGameState_1_1CityInventory.html#a8c1ee56bfee48d36585d9c706724e56d">GameState::CityInventory</a>, and <a class="el" href="classGameState_1_1Menu.html#abd7f0121e8dcf9c70bdff5c9baeb1813">GameState::Menu</a>.</p>
 
-<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00052">Game::run()</a>.</p>
+<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00058">Game::run()</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -241,7 +240,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classGameState_1_1Menu.html#a38de35fa94bd5c20ca9daaf6351044de">GameState::Menu</a>, and <a class="el" href="classGameState_1_1Playing.html#a7a059066e858535a2118ae26b34b4db7">GameState::Playing</a>.</p>
+<p>Implemented in <a class="el" href="classGameState_1_1Playing.html#a7a059066e858535a2118ae26b34b4db7">GameState::Playing</a>, <a class="el" href="classGameState_1_1CityInventory.html#aaa09cb78503168573a9d7a0b59e04930">GameState::CityInventory</a>, and <a class="el" href="classGameState_1_1Menu.html#a38de35fa94bd5c20ca9daaf6351044de">GameState::Menu</a>.</p>
 
 </div>
 </div>
@@ -266,9 +265,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classGameState_1_1Menu.html#a638f49a0c4548e874ee5212bde4baff4">GameState::Menu</a>, and <a class="el" href="classGameState_1_1Playing.html#a3863da5326069af2f7a959843ace484c">GameState::Playing</a>.</p>
+<p>Implemented in <a class="el" href="classGameState_1_1Playing.html#a3863da5326069af2f7a959843ace484c">GameState::Playing</a>, <a class="el" href="classGameState_1_1CityInventory.html#aa5eb371b6bd57824c0bd9a7874df81a7">GameState::CityInventory</a>, and <a class="el" href="classGameState_1_1Menu.html#a638f49a0c4548e874ee5212bde4baff4">GameState::Menu</a>.</p>
 
-<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00052">Game::run()</a>.</p>
+<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00058">Game::run()</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -310,7 +309,7 @@ Protected Attributes</h2></td></tr>
 
 <p>References <a class="el" href="State_8hpp_source.html#l00027">msgDown</a>.</p>
 
-<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00052">Game::run()</a>.</p>
+<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00058">Game::run()</a>.</p>
 
 <p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -380,7 +379,7 @@ Protected Attributes</h2></td></tr>
 
 <p>References <a class="el" href="State_8hpp_source.html#l00029">recvMsgDown</a>.</p>
 
-<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00052">Game::run()</a>.</p>
+<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00058">Game::run()</a>.</p>
 
 <p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -457,7 +456,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classGameState_1_1Menu.html#a99b72f1e7d4da66441380c1e8a2a85ee">GameState::Menu</a>, and <a class="el" href="classGameState_1_1Playing.html#ad2fba65919fb69836c2f86b0579ca1c3">GameState::Playing</a>.</p>
+<p>Implemented in <a class="el" href="classGameState_1_1Playing.html#ad2fba65919fb69836c2f86b0579ca1c3">GameState::Playing</a>, <a class="el" href="classGameState_1_1CityInventory.html#a10a4f5c0671c5258c7297890dbed85e6">GameState::CityInventory</a>, and <a class="el" href="classGameState_1_1Menu.html#a99b72f1e7d4da66441380c1e8a2a85ee">GameState::Menu</a>.</p>
 
 </div>
 </div>
@@ -487,7 +486,7 @@ Protected Attributes</h2></td></tr>
 
 <p>References <a class="el" href="State_8hpp_source.html#l00026">logger</a>.</p>
 
-<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00052">Game::run()</a>.</p>
+<p>Referenced by <a class="el" href="Game_8cpp_source.html#l00058">Game::run()</a>.</p>
 
 <p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -525,11 +524,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classGameState_1_1Menu.html#ac874daeedf8a2e1c28c43a397955b626">GameState::Menu</a>, and <a class="el" href="classGameState_1_1Playing.html#a226619358c4d8e72fd953e703c25dc96">GameState::Playing</a>.</p>
+<p>Implemented in <a class="el" href="classGameState_1_1Playing.html#a226619358c4d8e72fd953e703c25dc96">GameState::Playing</a>, <a class="el" href="classGameState_1_1CityInventory.html#a7e6316d854cee74d5933591be5e27e3d">GameState::CityInventory</a>, and <a class="el" href="classGameState_1_1Menu.html#ac874daeedf8a2e1c28c43a397955b626">GameState::Menu</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a042ad38c7cea287d22b4b3a3a270d435"></a>
+<a class="anchor" id="a1a2c719eec07f506958ab186008e10c2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -545,8 +544,8 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="Input_8hpp.html#a080a822f0093973313bd644e517a5090">Input</a>&#160;</td>
-          <td class="paramname"><em>input</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="structContext.html">Context</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -561,7 +560,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classGameState_1_1Menu.html#a644ebf4a560847bfa1daed05d1b12df4">GameState::Menu</a>, and <a class="el" href="classGameState_1_1Playing.html#ae4f7f3b48f069537b912fd5862f61bc1">GameState::Playing</a>.</p>
+<p>Implemented in <a class="el" href="classGameState_1_1Playing.html#acfa69a62e6493f653a166ca615337423">GameState::Playing</a>, <a class="el" href="classGameState_1_1CityInventory.html#a4e4d7654c50e563ff7080dad0d4ff8d3">GameState::CityInventory</a>, and <a class="el" href="classGameState_1_1Menu.html#a292c58b2cb2c070214d788c4f2c80517">GameState::Menu</a>.</p>
 
 </div>
 </div>
@@ -586,7 +585,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="State_8hpp_source.html#l00026">26</a> of file <a class="el" href="State_8hpp_source.html">State.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Playing_8cpp_source.html#l00003">GameState::Playing::init()</a>, <a class="el" href="Managers_2GameState_2Menu_8cpp_source.html#l00003">GameState::Menu::Menu()</a>, <a class="el" href="State_8cpp_source.html#l00003">setLogger()</a>, and <a class="el" href="Managers_2GameState_2Menu_8cpp_source.html#l00024">GameState::Menu::update()</a>.</p>
+<p>Referenced by <a class="el" href="CityInventory_8cpp_source.html#l00003">GameState::CityInventory::CityInventory()</a>, <a class="el" href="Playing_8cpp_source.html#l00003">GameState::Playing::init()</a>, <a class="el" href="Managers_2GameState_2Menu_8cpp_source.html#l00003">GameState::Menu::Menu()</a>, <a class="el" href="State_8cpp_source.html#l00003">setLogger()</a>, <a class="el" href="Managers_2GameState_2Menu_8cpp_source.html#l00032">GameState::Menu::update()</a>, <a class="el" href="CityInventory_8cpp_source.html#l00028">GameState::CityInventory::update()</a>, and <a class="el" href="Playing_8cpp_source.html#l00010">GameState::Playing::update()</a>.</p>
 
 </div>
 </div>
@@ -610,7 +609,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="State_8hpp_source.html#l00027">27</a> of file <a class="el" href="State_8hpp_source.html">State.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="State_8cpp_source.html#l00008">passDown()</a>, and <a class="el" href="Managers_2GameState_2Menu_8cpp_source.html#l00024">GameState::Menu::update()</a>.</p>
+<p>Referenced by <a class="el" href="State_8cpp_source.html#l00008">passDown()</a>, <a class="el" href="CityInventory_8cpp_source.html#l00028">GameState::CityInventory::update()</a>, and <a class="el" href="Managers_2GameState_2Menu_8cpp_source.html#l00032">GameState::Menu::update()</a>.</p>
 
 </div>
 </div>
@@ -682,7 +681,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="State_8hpp_source.html#l00030">30</a> of file <a class="el" href="State_8hpp_source.html">State.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="State_8cpp_source.html#l00020">recvUp()</a>.</p>
+<p>Referenced by <a class="el" href="State_8cpp_source.html#l00020">recvUp()</a>, and <a class="el" href="Playing_8cpp_source.html#l00010">GameState::Playing::update()</a>.</p>
 
 </div>
 </div>
@@ -696,7 +695,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceGameState.html">GameState</a></li><li class="navelem"><a class="el" href="classGameState_1_1State.html">State</a></li>
-    <li class="footer">Generated on Mon Jul 31 2017 19:39:30 for Arbitrage Simulator by
+    <li class="footer">Generated on Sat Aug 5 2017 07:37:21 for Arbitrage Simulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

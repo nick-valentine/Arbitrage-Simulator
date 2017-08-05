@@ -145,8 +145,8 @@ $(document).ready(function(){initNavTree('classTypePass.html','');});
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aaeae2b388d076d41d5f1a9f43e6fc6b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTypePass.html#aaeae2b388d076d41d5f1a9f43e6fc6b0">init</a> ()</td></tr>
 <tr class="separator:aaeae2b388d076d41d5f1a9f43e6fc6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95b62ee2db0734569820e6857c46d79d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTypePass.html#a95b62ee2db0734569820e6857c46d79d">doTile</a> (int i, int j, <a class="el" href="classTile.html">Tile</a> *tile)</td></tr>
-<tr class="separator:a95b62ee2db0734569820e6857c46d79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb3dd1e14109c176a8d4b77f9aded1d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTypePass.html#acb3dd1e14109c176a8d4b77f9aded1d9">doTile</a> (int i, int j, <a class="el" href="classTile.html">Tile</a> *tile, <a class="el" href="classWorldChunk.html">WorldChunk</a> *chunk)</td></tr>
+<tr class="separator:acb3dd1e14109c176a8d4b77f9aded1d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a931eeb49440cbe3385a7dc9674f0bb0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAbstractPass.html">AbstractPass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTypePass.html#a931eeb49440cbe3385a7dc9674f0bb0b">clone</a> ()</td></tr>
 <tr class="separator:a931eeb49440cbe3385a7dc9674f0bb0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad531e7bd23893fc512dd4ff70aadc5e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTypePass.html#aad531e7bd23893fc512dd4ff70aadc5e">getName</a> ()</td></tr>
@@ -211,7 +211,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a95b62ee2db0734569820e6857c46d79d"></a>
+<a class="anchor" id="acb3dd1e14109c176a8d4b77f9aded1d9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -234,7 +234,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classTile.html">Tile</a> *&#160;</td>
-          <td class="paramname"><em>tile</em>&#160;</td>
+          <td class="paramname"><em>tile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classWorldChunk.html">WorldChunk</a> *&#160;</td>
+          <td class="paramname"><em>chunk</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -249,19 +255,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classAbstractPass.html#a7699bb3f9d75acb441203575de128ab4">AbstractPass</a>.</p>
+<p>Implements <a class="el" href="classAbstractPass.html#abd8cfd3f8bc7205e82d40706c4d0a665">AbstractPass</a>.</p>
 
 <p>Definition at line <a class="el" href="TypePass_8cpp_source.html#l00010">10</a> of file <a class="el" href="TypePass_8cpp_source.html">TypePass.cpp</a>.</p>
 
-<p>References <a class="el" href="NoiseFunc_8cpp_source.html#l00059">NoiseFunc::get()</a>, <a class="el" href="Tile_8cpp_source.html#l00147">Tile::setType()</a>, <a class="el" href="TypePass_8cpp_source.html#l00030">typeMap()</a>, and <a class="el" href="TypePass_8hpp_source.html#l00029">typeNoise</a>.</p>
+<p>References <a class="el" href="NoiseFunc_8cpp_source.html#l00060">NoiseFunc::get()</a>, <a class="el" href="Tile_8cpp_source.html#l00147">Tile::setType()</a>, <a class="el" href="TypePass_8cpp_source.html#l00030">typeMap()</a>, and <a class="el" href="TypePass_8hpp_source.html#l00029">typeNoise</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classTypePass_a95b62ee2db0734569820e6857c46d79d_cgraph.png" border="0" usemap="#classTypePass_a95b62ee2db0734569820e6857c46d79d_cgraph" alt=""/></div>
-<map name="classTypePass_a95b62ee2db0734569820e6857c46d79d_cgraph" id="classTypePass_a95b62ee2db0734569820e6857c46d79d_cgraph">
+<div class="center"><img src="classTypePass_acb3dd1e14109c176a8d4b77f9aded1d9_cgraph.png" border="0" usemap="#classTypePass_acb3dd1e14109c176a8d4b77f9aded1d9_cgraph" alt=""/></div>
+<map name="classTypePass_acb3dd1e14109c176a8d4b77f9aded1d9_cgraph" id="classTypePass_acb3dd1e14109c176a8d4b77f9aded1d9_cgraph">
 <area shape="rect" id="node2" href="classNoiseFunc.html#a86b87334b40c251168a191bcf14ef761" title="Get the return of this noise function modified by gridPeriod. " alt="" coords="191,31,302,57"/>
 <area shape="rect" id="node9" href="classTile.html#ade2bc2028caf242dc5ba7e170b2fa170" title="Tile::setType" alt="" coords="197,81,296,108"/>
 <area shape="rect" id="node10" href="classTypePass.html#ac8681c305e872211453a4dba91c0f05d" title="TypePass::typeMap" alt="" coords="177,132,316,159"/>
@@ -408,7 +414,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classTypePass_ac8681c305e872211453a4dba91c0f05d_icgraph.png" border="0" usemap="#classTypePass_ac8681c305e872211453a4dba91c0f05d_icgraph" alt=""/></div>
 <map name="classTypePass_ac8681c305e872211453a4dba91c0f05d_icgraph" id="classTypePass_ac8681c305e872211453a4dba91c0f05d_icgraph">
-<area shape="rect" id="node2" href="classTypePass.html#a95b62ee2db0734569820e6857c46d79d" title="TypePass::doTile" alt="" coords="192,5,316,32"/>
+<area shape="rect" id="node2" href="classTypePass.html#acb3dd1e14109c176a8d4b77f9aded1d9" title="TypePass::doTile" alt="" coords="192,5,316,32"/>
 </map>
 </div>
 </p>
@@ -522,7 +528,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classTypePass.html">TypePass</a></li>
-    <li class="footer">Generated on Mon Jul 31 2017 19:39:30 for Arbitrage Simulator by
+    <li class="footer">Generated on Sat Aug 5 2017 07:37:21 for Arbitrage Simulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

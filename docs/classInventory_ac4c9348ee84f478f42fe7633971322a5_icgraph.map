@@ -1,0 +1,8 @@
+<map id="Inventory::add" name="Inventory::add">
+<area shape="rect" id="node2" href="$classInventory.html#a45d938a779504bf5a039bb6a503eead8" title="Inventory::add" alt="" coords="178,5,283,32"/>
+<area shape="rect" id="node3" href="$classCity.html#a919c58aece88f892370c14b763c45b7e" title="City::addToInventory" alt="" coords="159,56,303,83"/>
+<area shape="rect" id="node7" href="$structInventory_1_1Record.html#a716b7b9f28c957353983a6c84daf5e90" title="Inventory::Record::\lRecord" alt="" coords="163,107,298,149"/>
+<area shape="rect" id="node4" href="$classCityPass.html#a20418a52a561895af705badb79b5b2c2" title="CityPass::convertTileToCity" alt="" coords="351,56,537,83"/>
+<area shape="rect" id="node5" href="$classCityPass.html#a96d4834a3670c491b68f2d751df54a2a" title="CityPass::doPlace" alt="" coords="585,56,716,83"/>
+<area shape="rect" id="node6" href="$classCityPass.html#ab2b3219a792d6cc048118396c15cf112" title="CityPass::doTile" alt="" coords="764,56,883,83"/>
+</map>

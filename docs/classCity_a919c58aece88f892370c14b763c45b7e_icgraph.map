@@ -1,0 +1,5 @@
+<map id="City::addToInventory" name="City::addToInventory">
+<area shape="rect" id="node2" href="$classCityPass.html#a20418a52a561895af705badb79b5b2c2" title="CityPass::convertTileToCity" alt="" coords="197,5,384,32"/>
+<area shape="rect" id="node3" href="$classCityPass.html#a96d4834a3670c491b68f2d751df54a2a" title="CityPass::doPlace" alt="" coords="432,5,563,32"/>
+<area shape="rect" id="node4" href="$classCityPass.html#ab2b3219a792d6cc048118396c15cf112" title="CityPass::doTile" alt="" coords="611,5,729,32"/>
+</map>

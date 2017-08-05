@@ -1,6 +1,7 @@
 <map id="Tile::getElevation" name="Tile::getElevation">
 <area shape="rect" id="node2" href="$classCityPass.html#ace0b7a55bcb14ec268bb1167271902e5" title="CityPass::doGather" alt="" coords="177,5,314,32"/>
 <area shape="rect" id="node4" href="$classTypePass.html#ac8681c305e872211453a4dba91c0f05d" title="TypePass::typeMap" alt="" coords="176,56,315,83"/>
-<area shape="rect" id="node3" href="$classCityPass.html#a612f86255ce1628553983bc331278e97" title="CityPass::doTile" alt="" coords="365,5,484,32"/>
-<area shape="rect" id="node5" href="$classTypePass.html#a95b62ee2db0734569820e6857c46d79d" title="TypePass::doTile" alt="" coords="363,56,487,83"/>
+<area shape="rect" id="node6" href="$classGameState_1_1Playing.html#acfa69a62e6493f653a166ca615337423" title="GameState::Playing\l::update" alt="" coords="176,107,315,149"/>
+<area shape="rect" id="node3" href="$classCityPass.html#ab2b3219a792d6cc048118396c15cf112" title="CityPass::doTile" alt="" coords="365,5,484,32"/>
+<area shape="rect" id="node5" href="$classTypePass.html#acb3dd1e14109c176a8d4b77f9aded1d9" title="TypePass::doTile" alt="" coords="363,56,487,83"/>
 </map>

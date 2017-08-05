@@ -1,11 +1,13 @@
 <map id="Game::setup" name="Game::setup">
 <area shape="rect" id="node2" href="$classGameWindowLayout.html#aa405622f347239d28bdd49e2e562b88c" title="GameWindowLayout::addWindow" alt="" coords="151,157,369,184"/>
 <area shape="rect" id="node3" href="$classGame.html#ad2d16756f154ae7da7510b1c7bbcf6cc" title="Game::configure" alt="" coords="201,208,319,235"/>
-<area shape="rect" id="node14" href="$classKeymap.html#a25828636e4d8d24594e28657f90afb79" title="Keymap::init" alt="" coords="213,327,307,353"/>
-<area shape="rect" id="node18" href="$classWorldInteractionInterface.html#acbcb59b239479bbad5f1a5d13dbf315d" title="WorldInteractionInterface\l::loadWorld" alt="" coords="176,378,344,419"/>
-<area shape="rect" id="node19" href="$classGameWindowLayout.html#a490a59780f8de2c6cad6a6b72ec028a3" title="GameWindowLayout::render" alt="" coords="167,444,353,471"/>
-<area shape="rect" id="node21" href="$classGameWindowLayout.html#a04f4a23eec82c45d000e252f426a241a" title="GameWindowLayout::setMain\lWindow" alt="" coords="161,495,359,537"/>
-<area shape="rect" id="node22" href="$classGameWindowLayout.html#a53d838ca33b4bdcbbed30060f9e61a44" title="GameWindowLayout::setSub\lWindow" alt="" coords="164,561,356,602"/>
+<area shape="rect" id="node14" href="$classItemMap.html#a7cfa3029ce5bd60a5e18ad60928db939" title="ItemMap::init" alt="" coords="211,461,309,488"/>
+<area shape="rect" id="node20" href="$classKeymap.html#a25828636e4d8d24594e28657f90afb79" title="Keymap::init" alt="" coords="213,512,307,539"/>
+<area shape="rect" id="node24" href="$classWorldInteractionInterface.html#acbcb59b239479bbad5f1a5d13dbf315d" title="WorldInteractionInterface\l::loadWorld" alt="" coords="176,563,344,605"/>
+<area shape="rect" id="node25" href="$classGameWindowLayout.html#a490a59780f8de2c6cad6a6b72ec028a3" title="GameWindowLayout::render" alt="" coords="167,629,353,656"/>
+<area shape="rect" id="node27" href="$classGameWindowLayout.html#a04f4a23eec82c45d000e252f426a241a" title="GameWindowLayout::setMain\lWindow" alt="" coords="161,681,359,722"/>
+<area shape="rect" id="node28" href="$classGameWindowLayout.html#a53d838ca33b4bdcbbed30060f9e61a44" title="GameWindowLayout::setSub\lWindow" alt="" coords="164,746,356,787"/>
+<area shape="rect" id="node29" href="$classGameWindowLayout.html#ae0a5517805f29236a0644acffc5cf7e4" title="GameWindowLayout::setSub\lWindowMinHeight" alt="" coords="164,811,356,853"/>
 <area shape="rect" id="node4" href="$classWorld.html#adf1ca48fa67ae65fcfddf24bddcaf1c6" title="World::configure" alt="" coords="454,5,571,32"/>
 <area shape="rect" id="node5" href="$classConfigLoader.html#a99778c30f3d79e84995d9e9c7245b089" title="ConfigLoader::getIntOption" alt="" coords="656,81,835,108"/>
 <area shape="rect" id="node9" href="$classWorldChunk.html#ae67bd7d234bca44740a3418b4a00e64f" title="WorldChunk::configure" alt="" coords="435,107,590,133"/>
@@ -16,8 +18,13 @@
 <area shape="rect" id="node6" href="$classConfigLoader.html#a162bb553780887f9c73861c39fb19e90" title="ConfigLoader::getStringOption" alt="" coords="883,81,1080,108"/>
 <area shape="rect" id="node7" href="$classConfigLoader.html#a8d086e4fc43dbbf3ea03b25e7808d52d" title="ConfigLoader::mutateOption" alt="" coords="1128,56,1313,83"/>
 <area shape="rect" id="node8" href="$classConfigLoader.html#a75640e185ea0090519fce7df634cc48a" title="ConfigLoader::save" alt="" coords="1153,107,1288,133"/>
-<area shape="rect" id="node15" href="$classKeymap.html#a4ed97537120cb92353df3c79151f7980" title="Keymap::loadFile" alt="" coords="451,360,574,387"/>
-<area shape="rect" id="node16" href="$classKeymap.html#aa84004b9048e9946b4fd146391ae64f3" title="Keymap::createMap" alt="" coords="443,411,582,437"/>
-<area shape="rect" id="node17" href="$namespaceInputMapping.html#af5c30f6753fc9c37c08aa68910a8581f" title="InputMapping::toInput" alt="" coords="671,411,819,437"/>
-<area shape="rect" id="node20" href="$classGameWindowLayout.html#a66d9862e640242e6ef562fc59305ddfe" title="GameWindowLayout::update\lScreenSize" alt="" coords="417,495,608,537"/>
+<area shape="rect" id="node15" href="$classItem.html#aed2bbf756e6b1525ad7bfcebea482840" title="Item::getId" alt="" coords="470,360,555,387"/>
+<area shape="rect" id="node16" href="$classItem.html#a4ff297b946505e7956eae16006cada04" title="Item::getName" alt="" coords="458,411,567,437"/>
+<area shape="rect" id="node17" href="$classItem.html#a07252cb772520c0493840f330db1307b" title="Item::getDescription" alt="" coords="443,461,583,488"/>
+<area shape="rect" id="node18" href="$classItem.html#a56817af92c3db19016949b3277c83dca" title="Item::getWeight" alt="" coords="455,512,570,539"/>
+<area shape="rect" id="node19" href="$classItem.html#aa96f80b9fc4c5639513a15566d3eddee" title="Item::getBaseWorth" alt="" coords="443,563,582,589"/>
+<area shape="rect" id="node21" href="$classKeymap.html#a4ed97537120cb92353df3c79151f7980" title="Keymap::loadFile" alt="" coords="451,613,574,640"/>
+<area shape="rect" id="node22" href="$classKeymap.html#aa84004b9048e9946b4fd146391ae64f3" title="Keymap::createMap" alt="" coords="443,664,582,691"/>
+<area shape="rect" id="node23" href="$namespaceInputMapping.html#af5c30f6753fc9c37c08aa68910a8581f" title="InputMapping::toInput" alt="" coords="671,664,819,691"/>
+<area shape="rect" id="node26" href="$classGameWindowLayout.html#a66d9862e640242e6ef562fc59305ddfe" title="GameWindowLayout::update\lScreenSize" alt="" coords="417,731,608,773"/>
 </map>

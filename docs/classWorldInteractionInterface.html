@@ -126,8 +126,8 @@ $(document).ready(function(){initNavTree('classWorldInteractionInterface.html','
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classWorldInteractionInterface__inherit__graph.png" border="0" usemap="#WorldInteractionInterface_inherit__map" alt="Inheritance graph"/></div>
 <map name="WorldInteractionInterface_inherit__map" id="WorldInteractionInterface_inherit__map">
-<area shape="rect" id="node2" href="classLocalWorldInteraction.html" title="Manager for non&#45;networked world interaction. " alt="" coords="5,160,196,413"/>
-<area shape="rect" id="node3" href="classNetworkedWorldInteraction.html" title="Manager for networked world interaction. " alt="" coords="67,461,267,715"/>
+<area shape="rect" id="node2" href="classLocalWorldInteraction.html" title="Manager for non&#45;networked world interaction. " alt="" coords="5,189,196,472"/>
+<area shape="rect" id="node3" href="classNetworkedWorldInteraction.html" title="Manager for networked world interaction. " alt="" coords="67,520,267,788"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -136,6 +136,8 @@ $(document).ready(function(){initNavTree('classWorldInteractionInterface.html','
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classWorldInteractionInterface__coll__graph.png" border="0" usemap="#WorldInteractionInterface_coll__map" alt="Collaboration graph"/></div>
+<map name="WorldInteractionInterface_coll__map" id="WorldInteractionInterface_coll__map">
+</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -146,12 +148,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac06c2a9974ff1749af8fe71dbdfe7c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a275d3637a9886be9ea98cdafbdd6ae25"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorldInteractionInterface.html#a275d3637a9886be9ea98cdafbdd6ae25">movePlayerToCoordinate</a> (int y, int x)=0</td></tr>
 <tr class="separator:a275d3637a9886be9ea98cdafbdd6ae25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4d0b5eab2f09887c429a56b18498f25"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTile.html">Tile</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorldInteractionInterface.html#ae4d0b5eab2f09887c429a56b18498f25">getTileUnderPlayer</a> ()=0</td></tr>
+<tr class="separator:ae4d0b5eab2f09887c429a56b18498f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9283078741200a5bebda4ea9d39241f7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classCity.html">City</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorldInteractionInterface.html#a9283078741200a5bebda4ea9d39241f7">getCity</a> (int y, int x)=0</td></tr>
+<tr class="separator:a9283078741200a5bebda4ea9d39241f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class to proxy all interactions with the world through. </p>
 <p>Proxy all world interactions through this class so that networked and local gameplay can use a common interface and only differ in which class they instantiate. </p>
 
-<p>Definition at line <a class="el" href="WorldInteractionInterface_8hpp_source.html#l00017">17</a> of file <a class="el" href="WorldInteractionInterface_8hpp_source.html">WorldInteractionInterface.hpp</a>.</p>
+<p>Definition at line <a class="el" href="WorldInteractionInterface_8hpp_source.html#l00018">18</a> of file <a class="el" href="WorldInteractionInterface_8hpp_source.html">WorldInteractionInterface.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ac06c2a9974ff1749af8fe71dbdfe7c98"></a>
 <div class="memitem">
@@ -194,6 +200,95 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a9283078741200a5bebda4ea9d39241f7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classCity.html">City</a> WorldInteractionInterface::getCity </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classNetworkedWorldInteraction.html#ae1807b6efa450cb40942c1f844bd8abd">NetworkedWorldInteraction</a>, and <a class="el" href="classLocalWorldInteraction.html#a626d5ff5e76e4f4db76fb5a86d7a6474">LocalWorldInteraction</a>.</p>
+
+<p>Referenced by <a class="el" href="Playing_8cpp_source.html#l00010">GameState::Playing::update()</a>.</p>
+
+<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classWorldInteractionInterface_a9283078741200a5bebda4ea9d39241f7_icgraph.png" border="0" usemap="#classWorldInteractionInterface_a9283078741200a5bebda4ea9d39241f7_icgraph" alt=""/></div>
+<map name="classWorldInteractionInterface_a9283078741200a5bebda4ea9d39241f7_icgraph" id="classWorldInteractionInterface_a9283078741200a5bebda4ea9d39241f7_icgraph">
+<area shape="rect" id="node2" href="classGameState_1_1Playing.html#acfa69a62e6493f653a166ca615337423" title="GameState::Playing\l::update" alt="" coords="221,5,360,47"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae4d0b5eab2f09887c429a56b18498f25"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classTile.html">Tile</a> WorldInteractionInterface::getTileUnderPlayer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classLocalWorldInteraction.html#acfd654c407a530a8f90d6abb6755fd30">LocalWorldInteraction</a>.</p>
+
+<p>Referenced by <a class="el" href="Playing_8cpp_source.html#l00010">GameState::Playing::update()</a>.</p>
+
+<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classWorldInteractionInterface_ae4d0b5eab2f09887c429a56b18498f25_icgraph.png" border="0" usemap="#classWorldInteractionInterface_ae4d0b5eab2f09887c429a56b18498f25_icgraph" alt=""/></div>
+<map name="classWorldInteractionInterface_ae4d0b5eab2f09887c429a56b18498f25_icgraph" id="classWorldInteractionInterface_ae4d0b5eab2f09887c429a56b18498f25_icgraph">
+<area shape="rect" id="node2" href="classGameState_1_1Playing.html#acfa69a62e6493f653a166ca615337423" title="GameState::Playing\l::update" alt="" coords="221,5,360,47"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="acbcb59b239479bbad5f1a5d13dbf315d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -220,11 +315,11 @@ Public Member Functions</h2></td></tr>
 
 <p>Referenced by <a class="el" href="Game_8cpp_source.html#l00020">Game::setup()</a>.</p>
 
-<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classWorldInteractionInterface_acbcb59b239479bbad5f1a5d13dbf315d_icgraph.png" border="0" usemap="#classWorldInteractionInterface_acbcb59b239479bbad5f1a5d13dbf315d_icgraph" alt=""/></div>
 <map name="classWorldInteractionInterface_acbcb59b239479bbad5f1a5d13dbf315d_icgraph" id="classWorldInteractionInterface_acbcb59b239479bbad5f1a5d13dbf315d_icgraph">
 <area shape="rect" id="node2" href="classGame.html#ad7a2b7ff71e3064a289680944a27a42e" title="Game::setup" alt="" coords="221,13,319,39"/>
@@ -269,16 +364,17 @@ Public Member Functions</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classNetworkedWorldInteraction.html#a951bdc14887bba2797479057ab6080bd">NetworkedWorldInteraction</a>, and <a class="el" href="classLocalWorldInteraction.html#a2434c098080bbf322dc0af6817b44620">LocalWorldInteraction</a>.</p>
 
-<p>Referenced by <a class="el" href="Playing_8cpp_source.html#l00037">GameState::Playing::render()</a>.</p>
+<p>Referenced by <a class="el" href="Playing_8cpp_source.html#l00056">GameState::Playing::render()</a>, and <a class="el" href="Playing_8cpp_source.html#l00010">GameState::Playing::update()</a>.</p>
 
-<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classWorldInteractionInterface_a275d3637a9886be9ea98cdafbdd6ae25_icgraph.png" border="0" usemap="#classWorldInteractionInterface_a275d3637a9886be9ea98cdafbdd6ae25_icgraph" alt=""/></div>
 <map name="classWorldInteractionInterface_a275d3637a9886be9ea98cdafbdd6ae25_icgraph" id="classWorldInteractionInterface_a275d3637a9886be9ea98cdafbdd6ae25_icgraph">
 <area shape="rect" id="node2" href="classGameState_1_1Playing.html#ad2fba65919fb69836c2f86b0579ca1c3" title="GameState::Playing\l::render" alt="" coords="231,5,369,47"/>
+<area shape="rect" id="node3" href="classGameState_1_1Playing.html#acfa69a62e6493f653a166ca615337423" title="GameState::Playing\l::update" alt="" coords="231,71,369,112"/>
 </map>
 </div>
 </p>
@@ -294,7 +390,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classWorldInteractionInterface.html">WorldInteractionInterface</a></li>
-    <li class="footer">Generated on Mon Jul 31 2017 19:39:30 for Arbitrage Simulator by
+    <li class="footer">Generated on Sat Aug 5 2017 07:37:21 for Arbitrage Simulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

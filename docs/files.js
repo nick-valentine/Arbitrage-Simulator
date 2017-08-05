@@ -19,12 +19,14 @@ var files =
     [ "City.hpp", "City_8hpp.html", [
       [ "City", "classCity.html", "classCity" ]
     ] ],
+    [ "CityInventory.cpp", "CityInventory_8cpp.html", null ],
+    [ "CityInventory.hpp", "CityInventory_8hpp.html", [
+      [ "CityInventory", "classGameState_1_1CityInventory.html", "classGameState_1_1CityInventory" ]
+    ] ],
     [ "CityPass.cpp", "CityPass_8cpp.html", null ],
     [ "CityPass.hpp", "CityPass_8hpp.html", [
       [ "CityPass", "classCityPass.html", "classCityPass" ]
     ] ],
-    [ "CMakeCCompilerId.c", "CMakeCCompilerId_8c.html", "CMakeCCompilerId_8c" ],
-    [ "CMakeCXXCompilerId.cpp", "CMakeCXXCompilerId_8cpp.html", "CMakeCXXCompilerId_8cpp" ],
     [ "ColorPallete.cpp", "ColorPallete_8cpp.html", null ],
     [ "ColorPallete.hpp", "ColorPallete_8hpp.html", [
       [ "ColorPallete", "classColorPallete.html", "classColorPallete" ]
@@ -45,6 +47,9 @@ var files =
     [ "ConsoleWindow.hpp", "ConsoleWindow_8hpp.html", [
       [ "ConsoleWindow", "classConsoleWindow.html", "classConsoleWindow" ]
     ] ],
+    [ "Context.hpp", "Context_8hpp.html", [
+      [ "Context", "structContext.html", "structContext" ]
+    ] ],
     [ "CursesWindow.cpp", "CursesWindow_8cpp.html", null ],
     [ "CursesWindow.hpp", "CursesWindow_8hpp.html", [
       [ "CursesWindow", "classCursesWindow.html", "classCursesWindow" ]
@@ -53,8 +58,6 @@ var files =
     [ "ElevationPass.hpp", "ElevationPass_8hpp.html", [
       [ "ElevationPass", "classElevationPass.html", "classElevationPass" ]
     ] ],
-    [ "feature_tests.c", "feature__tests_8c.html", "feature__tests_8c" ],
-    [ "feature_tests.cxx", "feature__tests_8cxx.html", "feature__tests_8cxx" ],
     [ "Game.cpp", "Game_8cpp.html", null ],
     [ "game.cpp", "game_8cpp.html", "game_8cpp" ],
     [ "Game.hpp", "Game_8hpp.html", [
@@ -75,9 +78,18 @@ var files =
     [ "Globals.hpp", "Globals_8hpp.html", "Globals_8hpp" ],
     [ "Input.cpp", "Input_8cpp.html", null ],
     [ "Input.hpp", "Input_8hpp.html", "Input_8hpp" ],
+    [ "Inventory.cpp", "Inventory_8cpp.html", null ],
+    [ "Inventory.hpp", "Inventory_8hpp.html", [
+      [ "Inventory", "classInventory.html", "classInventory" ],
+      [ "Record", "structInventory_1_1Record.html", "structInventory_1_1Record" ]
+    ] ],
     [ "Item.cpp", "Item_8cpp.html", null ],
     [ "Item.hpp", "Item_8hpp.html", [
       [ "Item", "classItem.html", "classItem" ]
+    ] ],
+    [ "ItemMap.cpp", "ItemMap_8cpp.html", null ],
+    [ "ItemMap.hpp", "ItemMap_8hpp.html", [
+      [ "ItemMap", "classItemMap.html", "classItemMap" ]
     ] ],
     [ "Keymap.cpp", "Keymap_8cpp.html", null ],
     [ "Keymap.hpp", "Keymap_8hpp.html", [

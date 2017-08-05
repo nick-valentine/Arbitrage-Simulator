@@ -155,8 +155,8 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:aa34916295ee5dbceb036d786bea5e45a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractPass.html#aa34916295ee5dbceb036d786bea5e45a">executeChunk</a> (int top, int left, <a class="el" href="classWorldChunk.html">WorldChunk</a> *chunk)</td></tr>
 <tr class="separator:aa34916295ee5dbceb036d786bea5e45a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7699bb3f9d75acb441203575de128ab4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractPass.html#a7699bb3f9d75acb441203575de128ab4">doTile</a> (int i, int j, <a class="el" href="classTile.html">Tile</a> *tile)=0</td></tr>
-<tr class="separator:a7699bb3f9d75acb441203575de128ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd8cfd3f8bc7205e82d40706c4d0a665"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractPass.html#abd8cfd3f8bc7205e82d40706c4d0a665">doTile</a> (int i, int j, <a class="el" href="classTile.html">Tile</a> *tile, <a class="el" href="classWorldChunk.html">WorldChunk</a> *chunk)=0</td></tr>
+<tr class="separator:abd8cfd3f8bc7205e82d40706c4d0a665"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract world pass. </p>
@@ -203,7 +203,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7699bb3f9d75acb441203575de128ab4"></a>
+<a class="anchor" id="abd8cfd3f8bc7205e82d40706c4d0a665"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -226,7 +226,13 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classTile.html">Tile</a> *&#160;</td>
-          <td class="paramname"><em>tile</em>&#160;</td>
+          <td class="paramname"><em>tile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classWorldChunk.html">WorldChunk</a> *&#160;</td>
+          <td class="paramname"><em>chunk</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -241,7 +247,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classCityPass.html#a612f86255ce1628553983bc331278e97">CityPass</a>, <a class="el" href="classTypePass.html#a95b62ee2db0734569820e6857c46d79d">TypePass</a>, and <a class="el" href="classElevationPass.html#a1731875616bd5b4cb19ebc5901585eb0">ElevationPass</a>.</p>
+<p>Implemented in <a class="el" href="classCityPass.html#ab2b3219a792d6cc048118396c15cf112">CityPass</a>, <a class="el" href="classTypePass.html#acb3dd1e14109c176a8d4b77f9aded1d9">TypePass</a>, and <a class="el" href="classElevationPass.html#ac3185338ad9b02a29bf0c078ebbd61c0">ElevationPass</a>.</p>
 
 <p>Referenced by <a class="el" href="AbstractPass_8cpp_source.html#l00013">executeChunk()</a>, and <a class="el" href="AbstractPass_8hpp_source.html#l00020">init()</a>.</p>
 
@@ -250,8 +256,8 @@ Protected Member Functions</h2></td></tr>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classAbstractPass_a7699bb3f9d75acb441203575de128ab4_icgraph.png" border="0" usemap="#classAbstractPass_a7699bb3f9d75acb441203575de128ab4_icgraph" alt=""/></div>
-<map name="classAbstractPass_a7699bb3f9d75acb441203575de128ab4_icgraph" id="classAbstractPass_a7699bb3f9d75acb441203575de128ab4_icgraph">
+<div class="center"><img src="classAbstractPass_abd8cfd3f8bc7205e82d40706c4d0a665_icgraph.png" border="0" usemap="#classAbstractPass_abd8cfd3f8bc7205e82d40706c4d0a665_icgraph" alt=""/></div>
+<map name="classAbstractPass_abd8cfd3f8bc7205e82d40706c4d0a665_icgraph" id="classAbstractPass_abd8cfd3f8bc7205e82d40706c4d0a665_icgraph">
 <area shape="rect" id="node2" href="classAbstractPass.html#aa34916295ee5dbceb036d786bea5e45a" title="AbstractPass::executeChunk" alt="" coords="197,56,391,83"/>
 <area shape="rect" id="node4" href="classAbstractPass.html#ac3ca2cc79cda1328d23f0cd4bd5b7323" title="AbstractPass::init" alt="" coords="643,56,770,83"/>
 <area shape="rect" id="node3" href="classAbstractPass.html#ae5b257420dcd2c47b222877ad28dfde5" title="AbstractPass::execute" alt="" coords="439,5,593,32"/>
@@ -310,7 +316,7 @@ Protected Member Functions</h2></td></tr>
 <div class="center"><img src="classAbstractPass_ae5b257420dcd2c47b222877ad28dfde5_cgraph.png" border="0" usemap="#classAbstractPass_ae5b257420dcd2c47b222877ad28dfde5_cgraph" alt=""/></div>
 <map name="classAbstractPass_ae5b257420dcd2c47b222877ad28dfde5_cgraph" id="classAbstractPass_ae5b257420dcd2c47b222877ad28dfde5_cgraph">
 <area shape="rect" id="node2" href="classAbstractPass.html#aa34916295ee5dbceb036d786bea5e45a" title="AbstractPass::executeChunk" alt="" coords="208,56,401,83"/>
-<area shape="rect" id="node3" href="classAbstractPass.html#a7699bb3f9d75acb441203575de128ab4" title="AbstractPass::doTile" alt="" coords="475,5,619,32"/>
+<area shape="rect" id="node3" href="classAbstractPass.html#abd8cfd3f8bc7205e82d40706c4d0a665" title="AbstractPass::doTile" alt="" coords="475,5,619,32"/>
 <area shape="rect" id="node4" href="classWorldChunk.html#a69efb1c1bc62d8464cce367f29665f38" title="WorldChunk::getChunkHeight" alt="" coords="449,56,645,83"/>
 <area shape="rect" id="node5" href="classWorldChunk.html#af4bc6d0d18b023e5f1696afd918d03d3" title="WorldChunk::getChunkWidth" alt="" coords="451,107,643,133"/>
 </map>
@@ -372,7 +378,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="AbstractPass_8cpp_source.html#l00013">13</a> of file <a class="el" href="AbstractPass_8cpp_source.html">AbstractPass.cpp</a>.</p>
 
-<p>References <a class="el" href="classAbstractPass.html#a7699bb3f9d75acb441203575de128ab4">doTile()</a>, <a class="el" href="WorldChunk_8cpp_source.html#l00238">WorldChunk::getChunkHeight()</a>, <a class="el" href="WorldChunk_8cpp_source.html#l00233">WorldChunk::getChunkWidth()</a>, and <a class="el" href="WorldChunk_8hpp_source.html#l00052">WorldChunk::tiles</a>.</p>
+<p>References <a class="el" href="classAbstractPass.html#abd8cfd3f8bc7205e82d40706c4d0a665">doTile()</a>, <a class="el" href="WorldChunk_8cpp_source.html#l00255">WorldChunk::getChunkHeight()</a>, <a class="el" href="WorldChunk_8cpp_source.html#l00250">WorldChunk::getChunkWidth()</a>, and <a class="el" href="WorldChunk_8hpp_source.html#l00054">WorldChunk::tiles</a>.</p>
 
 <p>Referenced by <a class="el" href="AbstractPass_8cpp_source.html#l00003">execute()</a>, and <a class="el" href="AbstractPass_8hpp_source.html#l00020">init()</a>.</p>
 
@@ -383,7 +389,7 @@ Protected Member Functions</h2></td></tr>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classAbstractPass_aa34916295ee5dbceb036d786bea5e45a_cgraph.png" border="0" usemap="#classAbstractPass_aa34916295ee5dbceb036d786bea5e45a_cgraph" alt=""/></div>
 <map name="classAbstractPass_aa34916295ee5dbceb036d786bea5e45a_cgraph" id="classAbstractPass_aa34916295ee5dbceb036d786bea5e45a_cgraph">
-<area shape="rect" id="node2" href="classAbstractPass.html#a7699bb3f9d75acb441203575de128ab4" title="AbstractPass::doTile" alt="" coords="273,5,417,32"/>
+<area shape="rect" id="node2" href="classAbstractPass.html#abd8cfd3f8bc7205e82d40706c4d0a665" title="AbstractPass::doTile" alt="" coords="273,5,417,32"/>
 <area shape="rect" id="node3" href="classWorldChunk.html#a69efb1c1bc62d8464cce367f29665f38" title="WorldChunk::getChunkHeight" alt="" coords="247,56,443,83"/>
 <area shape="rect" id="node4" href="classWorldChunk.html#af4bc6d0d18b023e5f1696afd918d03d3" title="WorldChunk::getChunkWidth" alt="" coords="249,107,441,133"/>
 </map>
@@ -470,7 +476,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="AbstractPass_8hpp_source.html#l00020">20</a> of file <a class="el" href="AbstractPass_8hpp_source.html">AbstractPass.hpp</a>.</p>
 
-<p>References <a class="el" href="classAbstractPass.html#ae1c9979c6dc6bdd67ccc3451baa1acfb">clone()</a>, <a class="el" href="classAbstractPass.html#a7699bb3f9d75acb441203575de128ab4">doTile()</a>, <a class="el" href="AbstractPass_8cpp_source.html#l00003">execute()</a>, <a class="el" href="AbstractPass_8cpp_source.html#l00013">executeChunk()</a>, and <a class="el" href="classAbstractPass.html#ae049940fb006f37247223b960383b788">getName()</a>.</p>
+<p>References <a class="el" href="classAbstractPass.html#ae1c9979c6dc6bdd67ccc3451baa1acfb">clone()</a>, <a class="el" href="classAbstractPass.html#abd8cfd3f8bc7205e82d40706c4d0a665">doTile()</a>, <a class="el" href="AbstractPass_8cpp_source.html#l00003">execute()</a>, <a class="el" href="AbstractPass_8cpp_source.html#l00013">executeChunk()</a>, and <a class="el" href="classAbstractPass.html#ae049940fb006f37247223b960383b788">getName()</a>.</p>
 
 <p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -480,7 +486,7 @@ Protected Member Functions</h2></td></tr>
 <div class="center"><img src="classAbstractPass_ac3ca2cc79cda1328d23f0cd4bd5b7323_cgraph.png" border="0" usemap="#classAbstractPass_ac3ca2cc79cda1328d23f0cd4bd5b7323_cgraph" alt=""/></div>
 <map name="classAbstractPass_ac3ca2cc79cda1328d23f0cd4bd5b7323_cgraph" id="classAbstractPass_ac3ca2cc79cda1328d23f0cd4bd5b7323_cgraph">
 <area shape="rect" id="node2" href="classAbstractPass.html#ae1c9979c6dc6bdd67ccc3451baa1acfb" title="AbstractPass::clone" alt="" coords="191,5,331,32"/>
-<area shape="rect" id="node3" href="classAbstractPass.html#a7699bb3f9d75acb441203575de128ab4" title="AbstractPass::doTile" alt="" coords="658,56,802,83"/>
+<area shape="rect" id="node3" href="classAbstractPass.html#abd8cfd3f8bc7205e82d40706c4d0a665" title="AbstractPass::doTile" alt="" coords="658,56,802,83"/>
 <area shape="rect" id="node4" href="classAbstractPass.html#ae5b257420dcd2c47b222877ad28dfde5" title="AbstractPass::execute" alt="" coords="184,107,339,133"/>
 <area shape="rect" id="node5" href="classAbstractPass.html#aa34916295ee5dbceb036d786bea5e45a" title="AbstractPass::executeChunk" alt="" coords="391,107,584,133"/>
 <area shape="rect" id="node8" href="classAbstractPass.html#ae049940fb006f37247223b960383b788" title="AbstractPass::getName" alt="" coords="180,208,343,235"/>
@@ -502,7 +508,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classAbstractPass.html">AbstractPass</a></li>
-    <li class="footer">Generated on Mon Jul 31 2017 19:39:30 for Arbitrage Simulator by
+    <li class="footer">Generated on Sat Aug 5 2017 07:37:21 for Arbitrage Simulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

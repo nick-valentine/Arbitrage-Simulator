@@ -1,5 +1,5 @@
 <map id="LocalWorldInteraction" name="LocalWorldInteraction">
-<area shape="rect" id="node4" href="$classNetworkedWorldInteraction.html" title="Manager for networked world interaction. " alt="" coords="96,696,296,949"/>
-<area shape="rect" id="node2" href="$classWorldInteractionInterface.html" title="Class to proxy all interactions with the world through. " alt="" coords="5,123,195,229"/>
+<area shape="rect" id="node4" href="$classNetworkedWorldInteraction.html" title="Manager for networked world interaction. " alt="" coords="96,725,296,993"/>
+<area shape="rect" id="node2" href="$classWorldInteractionInterface.html" title="Class to proxy all interactions with the world through. " alt="" coords="5,108,195,244"/>
 <area shape="rect" id="node3" href="$classWorld.html" title="World. " alt="" coords="219,5,365,347"/>
 </map>

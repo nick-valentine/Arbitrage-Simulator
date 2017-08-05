@@ -1,0 +1,7 @@
+<map id="ItemMap::init" name="ItemMap::init">
+<area shape="rect" id="node2" href="$classItem.html#aa96f80b9fc4c5639513a15566d3eddee" title="Item::getBaseWorth" alt="" coords="153,5,291,32"/>
+<area shape="rect" id="node3" href="$classItem.html#a07252cb772520c0493840f330db1307b" title="Item::getDescription" alt="" coords="152,56,292,83"/>
+<area shape="rect" id="node4" href="$classItem.html#aed2bbf756e6b1525ad7bfcebea482840" title="Item::getId" alt="" coords="179,107,265,133"/>
+<area shape="rect" id="node5" href="$classItem.html#a4ff297b946505e7956eae16006cada04" title="Item::getName" alt="" coords="167,157,277,184"/>
+<area shape="rect" id="node6" href="$classItem.html#a56817af92c3db19016949b3277c83dca" title="Item::getWeight" alt="" coords="165,208,279,235"/>
+</map>

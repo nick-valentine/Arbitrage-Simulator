@@ -7,8 +7,10 @@ var classGameState_1_1Menu =
     [ "init", "classGameState_1_1Menu.html#a38de35fa94bd5c20ca9daaf6351044de", null ],
     [ "nextState", "classGameState_1_1Menu.html#a638f49a0c4548e874ee5212bde4baff4", null ],
     [ "render", "classGameState_1_1Menu.html#a99b72f1e7d4da66441380c1e8a2a85ee", null ],
+    [ "setHead", "classGameState_1_1Menu.html#a713085ec9658c55237f5bff699dfbc4c", null ],
     [ "shouldClose", "classGameState_1_1Menu.html#ac874daeedf8a2e1c28c43a397955b626", null ],
-    [ "update", "classGameState_1_1Menu.html#a644ebf4a560847bfa1daed05d1b12df4", null ],
+    [ "update", "classGameState_1_1Menu.html#a292c58b2cb2c070214d788c4f2c80517", null ],
+    [ "head", "classGameState_1_1Menu.html#a6829a81d045197a0a4a5e6eba9a3e349", null ],
     [ "menu", "classGameState_1_1Menu.html#a64a5a5b31dba67961e603fcd072ea669", null ],
     [ "menuShouldClose", "classGameState_1_1Menu.html#af52e3e767850991ca04e8d4edab89b48", null ],
     [ "options", "classGameState_1_1Menu.html#abd08ee825a4af3f95ee0f8544fc5ecae", null ]

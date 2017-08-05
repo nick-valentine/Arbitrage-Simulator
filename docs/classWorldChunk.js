@@ -14,6 +14,7 @@ var classWorldChunk =
     [ "generateChunk", "classWorldChunk.html#a7e1ba0dcd38f46a9c0309f1082904e87", null ],
     [ "getChunkHeight", "classWorldChunk.html#a69efb1c1bc62d8464cce367f29665f38", null ],
     [ "getChunkWidth", "classWorldChunk.html#af4bc6d0d18b023e5f1696afd918d03d3", null ],
+    [ "getCity", "classWorldChunk.html#a8aa9e80ff66d2c4eb506803d6c465ab4", null ],
     [ "getMaxCitiesPerChunk", "classWorldChunk.html#a92231664908bdeff97efbd650d7953fa", null ],
     [ "organizeTiles", "classWorldChunk.html#a6ddf1f8efcfefc4a58e34a38adeed656", null ],
     [ "setMaxYX", "classWorldChunk.html#a538965747758546c9097245ec9bfe930", null ],

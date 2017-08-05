@@ -31,8 +31,7 @@ var NAVTREE =
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
-        [ "Enumerator", "globals_eval.html", null ],
-        [ "Macros", "globals_defs.html", null ]
+        [ "Enumerator", "globals_eval.html", null ]
       ] ]
     ] ]
   ] ]
@@ -41,9 +40,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "AbstractGameObject_8hpp.html",
-"classCity.html#a9a610101b201c5c206c1f929c60b92ad",
-"classKeymap.html#a25828636e4d8d24594e28657f90afb79",
-"classWorldChunk.html#a6ddf1f8efcfefc4a58e34a38adeed656"
+"classCityPass.html#a20418a52a561895af705badb79b5b2c2",
+"classInventory.html#a55aca0120134bec405dd58cc511afc9b",
+"classWorld.html#a00dd47dfd18e1110a25f947caa726d1b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

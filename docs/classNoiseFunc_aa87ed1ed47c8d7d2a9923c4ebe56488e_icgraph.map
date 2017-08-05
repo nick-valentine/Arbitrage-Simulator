@@ -1,8 +1,8 @@
 <map id="NoiseFunc::perlin" name="NoiseFunc::perlin">
 <area shape="rect" id="node2" href="$classNoiseFunc.html#a86b87334b40c251168a191bcf14ef761" title="Get the return of this noise function modified by gridPeriod. " alt="" coords="191,56,302,83"/>
 <area shape="rect" id="node7" href="$classNoiseFunc.html#ae1ff84e5317b8a79af66e11e1f9c16d2" title="Get the return of this noise function not modified by gridPeriod. " alt="" coords="177,107,316,133"/>
-<area shape="rect" id="node3" href="$classCityPass.html#a764cb6a87a116bd9b7c7a560aeffc2c9" title="CityPass::doPlace" alt="" coords="373,5,504,32"/>
-<area shape="rect" id="node5" href="$classElevationPass.html#a1731875616bd5b4cb19ebc5901585eb0" title="ElevationPass::doTile" alt="" coords="364,56,513,83"/>
-<area shape="rect" id="node6" href="$classTypePass.html#a95b62ee2db0734569820e6857c46d79d" title="TypePass::doTile" alt="" coords="377,107,501,133"/>
-<area shape="rect" id="node4" href="$classCityPass.html#a612f86255ce1628553983bc331278e97" title="CityPass::doTile" alt="" coords="561,5,680,32"/>
+<area shape="rect" id="node3" href="$classCityPass.html#a96d4834a3670c491b68f2d751df54a2a" title="CityPass::doPlace" alt="" coords="373,5,504,32"/>
+<area shape="rect" id="node5" href="$classElevationPass.html#ac3185338ad9b02a29bf0c078ebbd61c0" title="ElevationPass::doTile" alt="" coords="364,56,513,83"/>
+<area shape="rect" id="node6" href="$classTypePass.html#acb3dd1e14109c176a8d4b77f9aded1d9" title="TypePass::doTile" alt="" coords="377,107,501,133"/>
+<area shape="rect" id="node4" href="$classCityPass.html#ab2b3219a792d6cc048118396c15cf112" title="CityPass::doTile" alt="" coords="561,5,680,32"/>
 </map>

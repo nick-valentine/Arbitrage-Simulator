@@ -1,3 +1,9 @@
 <map id="Server::initialize" name="Server::initialize">
-<area shape="rect" id="node2" href="$classServer.html#a0b609eb0fc5082c2cd086446ae7342d5" title="Server::cleanupSessions" alt="" coords="168,5,335,32"/>
+<area shape="rect" id="node2" href="$classServer.html#a0b609eb0fc5082c2cd086446ae7342d5" title="Server::cleanupSessions" alt="" coords="168,56,335,83"/>
+<area shape="rect" id="node3" href="$classItemMap.html#a7cfa3029ce5bd60a5e18ad60928db939" title="ItemMap::init" alt="" coords="202,107,301,133"/>
+<area shape="rect" id="node4" href="$classItem.html#aa96f80b9fc4c5639513a15566d3eddee" title="Item::getBaseWorth" alt="" coords="383,5,522,32"/>
+<area shape="rect" id="node5" href="$classItem.html#a07252cb772520c0493840f330db1307b" title="Item::getDescription" alt="" coords="383,56,523,83"/>
+<area shape="rect" id="node6" href="$classItem.html#aed2bbf756e6b1525ad7bfcebea482840" title="Item::getId" alt="" coords="410,107,495,133"/>
+<area shape="rect" id="node7" href="$classItem.html#a4ff297b946505e7956eae16006cada04" title="Item::getName" alt="" coords="398,157,507,184"/>
+<area shape="rect" id="node8" href="$classItem.html#a56817af92c3db19016949b3277c83dca" title="Item::getWeight" alt="" coords="395,208,510,235"/>
 </map>

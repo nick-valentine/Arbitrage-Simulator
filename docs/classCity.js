@@ -1,9 +1,12 @@
 var classCity =
 [
     [ "City", "classCity.html#a1b1f549430f0a7ecd0ec7b1605415193", null ],
+    [ "City", "classCity.html#a95abe7fe34636c633e9afa6b0888cbc5", null ],
     [ "City", "classCity.html#ab9e123e275fe206ddc6ce96bc04b03dc", null ],
     [ "City", "classCity.html#a40f4d35bf7316f35cfe095bd8d74222c", null ],
+    [ "addToInventory", "classCity.html#a919c58aece88f892370c14b763c45b7e", null ],
     [ "fromStringStream", "classCity.html#a97ef34d0f65029b3b9827c267441fc04", null ],
+    [ "getInventory", "classCity.html#a3f8c232abbad377713c718180e766884", null ],
     [ "getName", "classCity.html#ae52fbe125c8b023214b0f71e9641414c", null ],
     [ "getPosX", "classCity.html#a94ad8c13a80d2423529a5896fce7b816", null ],
     [ "getPosY", "classCity.html#a63c2bcda2430ecca0ddb4f63b0ab2d31", null ],
@@ -15,6 +18,7 @@ var classCity =
     [ "city_name_ends", "classCity.html#af946e7f0475dd36c527f1d4a8183b3d2", null ],
     [ "city_name_file_path", "classCity.html#a872db974eb5da66acfe770e83a84cb8d", null ],
     [ "city_name_starts", "classCity.html#a58bcfc38b8ac80b1cb9941ba32ab1af0", null ],
+    [ "inv", "classCity.html#ad63d4a61ef95fab2799ee7ca900a89da", null ],
     [ "name", "classCity.html#afea8cd8800a8600fa54af37ac05bf177", null ],
     [ "pos_x", "classCity.html#af8484dc169817ebf4db1b38b4311bccd", null ],
     [ "pos_y", "classCity.html#af8849ee732771b89a86b06944e0d2ae6", null ]

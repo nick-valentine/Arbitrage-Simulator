@@ -1,3 +1,4 @@
 <map id="LocalWorldInteraction::playerCoordinatesToChunkCoordinates" name="LocalWorldInteraction::playerCoordinatesToChunkCoordinates">
-<area shape="rect" id="node2" href="$classNetworkedWorldInteraction.html#a951bdc14887bba2797479057ab6080bd" title="NetworkedWorldInteraction\l::movePlayerToCoordinate" alt="" coords="312,5,492,47"/>
+<area shape="rect" id="node2" href="$classLocalWorldInteraction.html#acfd654c407a530a8f90d6abb6755fd30" title="LocalWorldInteraction\l::getTileUnderPlayer" alt="" coords="328,5,476,47"/>
+<area shape="rect" id="node3" href="$classNetworkedWorldInteraction.html#a951bdc14887bba2797479057ab6080bd" title="NetworkedWorldInteraction\l::movePlayerToCoordinate" alt="" coords="312,71,492,112"/>
 </map>

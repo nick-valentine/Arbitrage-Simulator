@@ -1,7 +1,7 @@
 <map id="NetworkedWorldInteraction" name="NetworkedWorldInteraction">
-<area shape="rect" id="node2" href="$classWorldInteractionInterface.html" title="Class to proxy all interactions with the world through. " alt="" coords="5,123,195,229"/>
-<area shape="rect" id="node3" href="$classLocalWorldInteraction.html" title="Manager for non&#45;networked world interaction. " alt="" coords="173,409,363,648"/>
+<area shape="rect" id="node2" href="$classWorldInteractionInterface.html" title="Class to proxy all interactions with the world through. " alt="" coords="5,108,195,244"/>
+<area shape="rect" id="node3" href="$classLocalWorldInteraction.html" title="Manager for non&#45;networked world interaction. " alt="" coords="173,409,363,677"/>
 <area shape="rect" id="node4" href="$classWorld.html" title="World. " alt="" coords="219,5,365,347"/>
 <area shape="rect" id="node5" href="$classGenerator.html" title="{Generator\n|&#45; passes\l|+ Generator()\l+ ~Generator()\l+ Generator()\l+ operator=()\l+ addPass()\l+ execute()\l+ DefaultGenerator()\l}" alt="" coords="389,93,531,259"/>
-<area shape="rect" id="node6" href="$classConnection.html" title="Connection. " alt="" coords="388,417,503,641"/>
+<area shape="rect" id="node6" href="$classConnection.html" title="Connection. " alt="" coords="388,431,503,655"/>
 </map>

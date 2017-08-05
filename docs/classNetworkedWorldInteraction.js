@@ -6,6 +6,7 @@ var classNetworkedWorldInteraction =
     [ "draw", "classNetworkedWorldInteraction.html#ab34d4c3bcf6b7ac6ff857b24e383ef21", null ],
     [ "draw", "classNetworkedWorldInteraction.html#ae42d778a19b47a2e4b490a2bd5e5cfa5", null ],
     [ "fetchChunk", "classNetworkedWorldInteraction.html#a6721e294f1badeec39e3346d55680f77", null ],
+    [ "getCity", "classNetworkedWorldInteraction.html#ae1807b6efa450cb40942c1f844bd8abd", null ],
     [ "handShake", "classNetworkedWorldInteraction.html#a6e5a53fcae58f3ac994c6311a617ed9d", null ],
     [ "hasChunkLoaded", "classNetworkedWorldInteraction.html#a0d811bde458068af35bceffabcbe0ad3", null ],
     [ "loadWorld", "classNetworkedWorldInteraction.html#af4d3bd94abaf40ca8b01675b6658cb86", null ],

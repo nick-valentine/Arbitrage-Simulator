@@ -1,15 +1,18 @@
 <map id="Camera.hpp" name="Camera.hpp">
-<area shape="rect" id="node5" href="$WorldInteractionInterface_8hpp.html" title="Services/WorldInteraction\l/WorldInteractionInterface.hpp" alt="" coords="2183,80,2380,121"/>
-<area shape="rect" id="node24" href="$Window_8hpp.html" title="Window/Window.hpp" alt="" coords="1959,401,2105,427"/>
-<area shape="rect" id="node26" href="$Player_8hpp.html" title="GameObjects/Player.hpp" alt="" coords="1436,319,1604,345"/>
-<area shape="rect" id="node7" href="$World_8hpp.html" title="GameObjects/World.hpp" alt="" coords="1633,169,1799,196"/>
-<area shape="rect" id="node27" href="$Logger_8hpp.html" title="Services/Logger/Logger.hpp" alt="" coords="2281,244,2465,271"/>
-<area shape="rect" id="node11" href="$ConfigLoader_8hpp.html" title="ConfigLoader.hpp" alt="" coords="1679,319,1803,345"/>
-<area shape="rect" id="node15" href="$WorldChunk_8hpp.html" title="GameObjects/WorldChunk.hpp" alt="" coords="1177,244,1380,271"/>
-<area shape="rect" id="node19" href="$Globals_8hpp.html" title="Globals.hpp" alt="" coords="1328,401,1419,427"/>
-<area shape="rect" id="node20" href="$AbstractGameObject_8hpp.html" title="GameObjects/AbstractGame\lObject.hpp" alt="" coords="910,393,1101,435"/>
-<area shape="rect" id="node21" href="$City_8hpp.html" title="GameObjects/City.hpp" alt="" coords="1068,319,1223,345"/>
-<area shape="rect" id="node22" href="$Tile_8hpp.html" title="GameObjects/Tile.hpp" alt="" coords="771,319,923,345"/>
-<area shape="rect" id="node25" href="$NoiseFunc_8hpp.html" title="WorldGen/NoiseFunc.hpp" alt="" coords="293,319,465,345"/>
-<area shape="rect" id="node23" href="$ColorPallete_8hpp.html" title="ColorPallete.hpp" alt="" coords="435,401,554,427"/>
+<area shape="rect" id="node5" href="$WorldInteractionInterface_8hpp.html" title="Services/WorldInteraction\l/WorldInteractionInterface.hpp" alt="" coords="1697,80,1895,121"/>
+<area shape="rect" id="node31" href="$Window_8hpp.html" title="Window/Window.hpp" alt="" coords="2589,393,2734,420"/>
+<area shape="rect" id="node33" href="$Player_8hpp.html" title="GameObjects/Player.hpp" alt="" coords="2855,319,3023,345"/>
+<area shape="rect" id="node7" href="$World_8hpp.html" title="GameObjects/World.hpp" alt="" coords="1315,169,1480,196"/>
+<area shape="rect" id="node25" href="$Logger_8hpp.html" title="Services/Logger/Logger.hpp" alt="" coords="531,543,715,569"/>
+<area shape="rect" id="node29" href="$Tile_8hpp.html" title="GameObjects/Tile.hpp" alt="" coords="2261,319,2413,345"/>
+<area shape="rect" id="node11" href="$ConfigLoader_8hpp.html" title="ConfigLoader.hpp" alt="" coords="243,625,367,651"/>
+<area shape="rect" id="node15" href="$WorldChunk_8hpp.html" title="GameObjects/WorldChunk.hpp" alt="" coords="1296,244,1499,271"/>
+<area shape="rect" id="node19" href="$Globals_8hpp.html" title="Globals.hpp" alt="" coords="1461,625,1552,651"/>
+<area shape="rect" id="node20" href="$AbstractGameObject_8hpp.html" title="GameObjects/AbstractGame\lObject.hpp" alt="" coords="1862,617,2053,659"/>
+<area shape="rect" id="node21" href="$City_8hpp.html" title="GameObjects/City.hpp" alt="" coords="1500,319,1655,345"/>
+<area shape="rect" id="node32" href="$NoiseFunc_8hpp.html" title="WorldGen/NoiseFunc.hpp" alt="" coords="906,319,1078,345"/>
+<area shape="rect" id="node22" href="$Inventory_8hpp.html" title="GameObjects/Inventory.hpp" alt="" coords="1525,393,1710,420"/>
+<area shape="rect" id="node23" href="$Item_8hpp.html" title="GameObjects/Item.hpp" alt="" coords="1528,543,1685,569"/>
+<area shape="rect" id="node24" href="$ItemMap_8hpp.html" title="GameObjects/ItemMap.hpp" alt="" coords="1114,468,1297,495"/>
+<area shape="rect" id="node30" href="$ColorPallete_8hpp.html" title="ColorPallete.hpp" alt="" coords="2343,393,2462,420"/>
 </map>
