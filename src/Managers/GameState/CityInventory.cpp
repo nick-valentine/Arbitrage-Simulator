@@ -25,7 +25,7 @@ void GameState::CityInventory::setCity(City city)
     this->populateMenu(&this->inventory, this->cityInventoryOptions);
 }
 
-void GameState::CityInventory::update(WorldInteractionInterface *worldProxy, Context *ctx)
+void GameState::CityInventory::update(WorldInteractionInterface ** worldProxy, Context *ctx)
 {
     int result = this->inventory.update(ctx);
     switch (result) {

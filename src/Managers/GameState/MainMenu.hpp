@@ -1,24 +1,22 @@
-#ifndef GAMESTATE_PLAYING_HPP
-#define GAMESTATE_PLAYING_HPP
+#ifndef GAMESTATE_MAIN_MENU
+#define GAMESTATE_MAIN_MENU
 
-#include <sstream>
-#include <string>
-
-#include "Camera.hpp"
-#include "GameObjects/City.hpp"
-#include "GameObjects/Inventory.hpp"
-#include "GameObjects/ItemMap.hpp"
-#include "GameObjects/Player.hpp"
+#include "Components/Menu.hpp"
 #include "GameObjects/Tile.hpp"
-#include "Managers/GameState/Menu.hpp"
-#include "Managers/GameState/CityInventory.hpp"
+#include "Managers/Game.hpp"
+#include "Managers/GameState/Playing.hpp"
 #include "Managers/GameState/State.hpp"
+
+#include "Services/WorldInteraction/LocalWorldInteraction.hpp"
+#include "Services/WorldInteraction/NetworkedWorldInteraction.hpp"
 
 namespace GameState
 {
-    class Playing : public State
+    class MainMenu : public State
     {
     public:
+        MainMenu();
+        ~MainMenu();
         void init();
         void update(WorldInteractionInterface ** worldProxy, Context *ctx);
         void render(WorldInteractionInterface *worldProxy, Window::window_ptr window);
@@ -27,10 +25,10 @@ namespace GameState
         bool shouldClose();
     private:
         bool close;
-        Player player;
-        Camera camera;
         GameState::State *newState;
+
+        Component::Menu menu;
     };
 }
 
-#endif //GAMESTATE_PLAYING_HPP
+#endif //GAMESTATE_MAIN_MENU

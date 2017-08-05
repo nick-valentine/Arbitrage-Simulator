@@ -58,6 +58,7 @@ void Tile::toStringStream(std::stringstream *ss)
 
 void Tile::setPallete()
 {
+    Tile::init();
     Tile::tilePallete.setCurrent();    
 }
 

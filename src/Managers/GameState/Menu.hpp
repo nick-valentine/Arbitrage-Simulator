@@ -17,7 +17,7 @@ namespace GameState
         void init();
         void setHead(std::string head);
         void addOption(std::string option);
-        void update(WorldInteractionInterface *worldProxy, Context *ctx);
+        void update(WorldInteractionInterface ** worldProxy, Context *ctx);
         void render(WorldInteractionInterface *worldProxy, Window::window_ptr window);
         State *nextState();
         void clearNextState();

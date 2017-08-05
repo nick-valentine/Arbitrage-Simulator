@@ -5,9 +5,11 @@ void GameState::Playing::init()
     this->player = Player("Bob", 200, 200);
     this->logger = Logger::LoggerPtr(new NullLogger());
     this->camera = Camera(0, 0);
+    this->close  = false;
+    this->newState = NULL;
 }
 
-void GameState::Playing::update(WorldInteractionInterface *worldProxy, Context *ctx)
+void GameState::Playing::update(WorldInteractionInterface ** worldProxy, Context *ctx)
 {
 
     if (this->recvMsgUp != 0) {
@@ -27,27 +29,20 @@ void GameState::Playing::update(WorldInteractionInterface *worldProxy, Context *
         case Input::RIGHT:
             this->player.move(0,1);
             break;
-        case Input::BACK:
-            GameState::Menu *menuState = new GameState::Menu;
-            menuState->addOption("yes");
-            menuState->addOption("no");
-            menuState->addOption("maybe");
-            menuState->addOption("sometimes");
-            menuState->init();
-            this->newState = menuState;
+        case Input::ESCAPE:
+            this->close = true;
             break;
     };
     int pos_y, pos_x;
     this->player.getYX(pos_y, pos_x);
-    worldProxy->movePlayerToCoordinate(pos_y, pos_x);
-    Tile tile = worldProxy->getTileUnderPlayer();
+    (*worldProxy)->movePlayerToCoordinate(pos_y, pos_x);
+    Tile tile = (*worldProxy)->getTileUnderPlayer();
     this->logger->info("Player stepped on tile at height: %i", tile.getElevation());
     this->logger->info("Player is on tile: %i, %i", pos_x, pos_y);
     if (tile.getType() == Tile::CITIES) {
-        City city = worldProxy->getCity(pos_y, pos_x);
+        City city = (*worldProxy)->getCity(pos_y, pos_x);
         GameState::CityInventory *cityInventoryScreen = new GameState::CityInventory;
         cityInventoryScreen->setCity(city);
-        cityInventoryScreen->init();
         this->newState = cityInventoryScreen;
         this->logger->info("This tile is a city: %s", city.getName().c_str());
     }
@@ -80,6 +75,6 @@ void GameState::Playing::clearNextState()
 
 bool GameState::Playing::shouldClose()
 {
-    return false;
+    return this->close;
 }
 
