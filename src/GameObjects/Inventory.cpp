@@ -49,8 +49,8 @@ void Inventory::fromStringStream(std::stringstream *ss)
 void Inventory::toStringStream(std::stringstream *ss)
 {
     for (int i = 0; i < this->inv.size(); ++i) {
-        (*ss)<<this->inv[i].count<<Globals::file_delimiter;
         (*ss)<<this->inv[i].itemId<<Globals::file_delimiter;
+        (*ss)<<this->inv[i].count<<Globals::file_delimiter;
     }
     (*ss)<<Globals::object_delimiter;
 }
