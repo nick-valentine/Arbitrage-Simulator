@@ -1,7 +1,0 @@
-<map id="ItemMap::init" name="ItemMap::init">
-<area shape="rect" id="node2" href="$classServer.html#a0f7d094516801f6c918059628b715098" title="Server::initialize" alt="" coords="152,5,267,32"/>
-<area shape="rect" id="node5" href="$classGame.html#ad7a2b7ff71e3064a289680944a27a42e" title="Game::setup" alt="" coords="161,56,258,83"/>
-<area shape="rect" id="node3" href="$classServer.html#a8b1fafda0754578f16a974195d120e92" title="Server::setup" alt="" coords="315,5,415,32"/>
-<area shape="rect" id="node4" href="$server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="463,5,513,32"/>
-<area shape="rect" id="node6" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="339,56,390,83"/>
-</map>

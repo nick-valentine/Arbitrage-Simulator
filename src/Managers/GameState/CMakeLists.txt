@@ -4,6 +4,8 @@ set (SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/Playing.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Menu.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/CityInventory.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/MainMenu.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/ServerHistory.cpp
     PARENT_SCOPE
 )
 set (HEADERS
@@ -11,6 +13,7 @@ set (HEADERS
     ${CMAKE_CURRENT_SOURCE_DIR}/State.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Playing.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Menu.hpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/CityInventory.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/MainMenu.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/ServerHistory.hpp
     PARENT_SCOPE
 )

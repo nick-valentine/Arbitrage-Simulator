@@ -1,8 +1,0 @@
-<map id="GameState::Playing::render" name="GameState::Playing::render">
-<area shape="rect" id="node2" href="$classPlayer.html#a6e3e621902e7d1d718e5cd5c2004f2ef" title="Player::getYX" alt="" coords="229,5,332,32"/>
-<area shape="rect" id="node3" href="$classWorldInteractionInterface.html#a275d3637a9886be9ea98cdafbdd6ae25" title="WorldInteractionInterface\l::movePlayerToCoordinate" alt="" coords="192,57,369,98"/>
-<area shape="rect" id="node4" href="$classCamera.html#af05f81e8e5ba8851826242acbb824086" title="Camera::moveTo" alt="" coords="219,123,342,149"/>
-<area shape="rect" id="node5" href="$classCamera.html#a76ed19c192c25c8e41f4a6bb54ba87b2" title="Render the world and player onto the screen. " alt="" coords="225,173,337,200"/>
-<area shape="rect" id="node6" href="$classWorldInteractionInterface.html#ac06c2a9974ff1749af8fe71dbdfe7c98" title="WorldInteractionInterface\l::draw" alt="" coords="417,137,585,178"/>
-<area shape="rect" id="node7" href="$classPlayer.html#aad62851071bf59965833224024a687c1" title="Player::draw" alt="" coords="454,203,549,229"/>
-</map>

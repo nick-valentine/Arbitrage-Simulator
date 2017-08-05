@@ -1,9 +1,0 @@
-<map id="WorldChunk::WorldChunk" name="WorldChunk::WorldChunk">
-<area shape="rect" id="node2" href="$classWorldChunk.html#ae67bd7d234bca44740a3418b4a00e64f" title="WorldChunk::configure" alt="" coords="253,31,407,57"/>
-<area shape="rect" id="node7" href="$classWorldChunk.html#a92b62d7b35d7dcfd1f63b29a2b66b385" title="The stringstream structure expected into this is ObjectName objectData1, objectData2, ... " alt="" coords="228,81,432,108"/>
-<area shape="rect" id="node3" href="$classConfigLoader.html#a99778c30f3d79e84995d9e9c7245b089" title="ConfigLoader::getIntOption" alt="" coords="480,31,659,57"/>
-<area shape="rect" id="node4" href="$classConfigLoader.html#a162bb553780887f9c73861c39fb19e90" title="ConfigLoader::getStringOption" alt="" coords="707,31,904,57"/>
-<area shape="rect" id="node5" href="$classConfigLoader.html#a8d086e4fc43dbbf3ea03b25e7808d52d" title="ConfigLoader::mutateOption" alt="" coords="952,5,1137,32"/>
-<area shape="rect" id="node6" href="$classConfigLoader.html#a75640e185ea0090519fce7df634cc48a" title="ConfigLoader::save" alt="" coords="977,56,1112,83"/>
-<area shape="rect" id="node8" href="$classWorldChunk.html#a6ddf1f8efcfefc4a58e34a38adeed656" title="WorldChunk::organizeTiles" alt="" coords="480,81,659,108"/>
-</map>

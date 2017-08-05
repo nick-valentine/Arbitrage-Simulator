@@ -1,4 +1,0 @@
-<map id="LocalWorldInteraction::getTileUnderPlayer" name="LocalWorldInteraction::getTileUnderPlayer">
-<area shape="rect" id="node2" href="$classLocalWorldInteraction.html#a0a1bfc3563f9271abc4642ea04e81f91" title="Convert the player&#39;s current global coordinates into a chunk, and coordinates in that chunk..." alt="" coords="201,5,460,47"/>
-<area shape="rect" id="node3" href="$classLocalWorldInteraction.html#a7e533622fb19fe40f7b81b27f475a4e5" title="convert global coordinates to into a chunk, and coordinates in that chunk. " alt="" coords="508,5,765,47"/>
-</map>

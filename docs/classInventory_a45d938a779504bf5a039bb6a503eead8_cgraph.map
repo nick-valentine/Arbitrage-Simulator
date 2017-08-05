@@ -1,5 +1,0 @@
-<map id="Inventory::add" name="Inventory::add">
-<area shape="rect" id="node2" href="$classInventory.html#ac4c9348ee84f478f42fe7633971322a5" title="Inventory::add" alt="" coords="159,5,264,32"/>
-<area shape="rect" id="node4" href="$classItem.html#aed2bbf756e6b1525ad7bfcebea482840" title="Item::getId" alt="" coords="169,56,254,83"/>
-<area shape="rect" id="node3" href="$classInventory.html#abdf89bbff1906b9c63b0b1b8be510d28" title="Inventory::find" alt="" coords="312,5,417,32"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="AbstractPass::init" name="AbstractPass::init">
-<area shape="rect" id="node2" href="$classAbstractPass.html#ae1c9979c6dc6bdd67ccc3451baa1acfb" title="AbstractPass::clone" alt="" coords="191,5,331,32"/>
-<area shape="rect" id="node3" href="$classAbstractPass.html#abd8cfd3f8bc7205e82d40706c4d0a665" title="AbstractPass::doTile" alt="" coords="658,56,802,83"/>
-<area shape="rect" id="node4" href="$classAbstractPass.html#ae5b257420dcd2c47b222877ad28dfde5" title="AbstractPass::execute" alt="" coords="184,107,339,133"/>
-<area shape="rect" id="node5" href="$classAbstractPass.html#aa34916295ee5dbceb036d786bea5e45a" title="AbstractPass::executeChunk" alt="" coords="391,107,584,133"/>
-<area shape="rect" id="node8" href="$classAbstractPass.html#ae049940fb006f37247223b960383b788" title="AbstractPass::getName" alt="" coords="180,208,343,235"/>
-<area shape="rect" id="node6" href="$classWorldChunk.html#a69efb1c1bc62d8464cce367f29665f38" title="WorldChunk::getChunkHeight" alt="" coords="632,107,828,133"/>
-<area shape="rect" id="node7" href="$classWorldChunk.html#af4bc6d0d18b023e5f1696afd918d03d3" title="WorldChunk::getChunkWidth" alt="" coords="634,157,826,184"/>
-</map>

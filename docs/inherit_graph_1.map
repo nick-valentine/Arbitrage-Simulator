@@ -1,6 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classAbstractPass.html" title="Abstract world pass. " alt="" coords="5,56,107,83"/>
-<area shape="rect" id="node2" href="$classCityPass.html" title="CityPass" alt="" coords="170,5,246,32"/>
-<area shape="rect" id="node3" href="$classElevationPass.html" title="ElevationPass" alt="" coords="155,56,261,83"/>
-<area shape="rect" id="node4" href="$classTypePass.html" title="TypePass" alt="" coords="167,107,249,133"/>
-</map>

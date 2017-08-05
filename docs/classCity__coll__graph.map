@@ -1,4 +1,0 @@
-<map id="City" name="City">
-<area shape="rect" id="node2" href="$classAbstractGameObject.html" title="The Abstract Game Object. " alt="" coords="20,5,164,97"/>
-<area shape="rect" id="node3" href="$classInventory.html" title="{Inventory\n|&#45; inv\l|+ Inventory()\l+ Inventory()\l+ Inventory()\l+ fromStringStream()\l+ toStringStream()\l+ add()\l+ add()\l+ get()\l+ getInv()\l&#45; find()\l}" alt="" coords="95,147,239,356"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="GameState::State" name="GameState::State">
-<area shape="rect" id="node2" href="$classGameState_1_1CityInventory.html" title="{GameState::CityInventory\n|&#45; city\l&#45; options\l&#45; cityInventory\l&#45; cityInventoryOptions\l&#45; inventoryShouldClose\l&#45; inventory\l|+ CityInventory()\l+ ~CityInventory()\l+ init()\l+ setCity()\l+ update()\l+ render()\l+ nextState()\l+ clearNextState()\l+ shouldClose()\l&#45; getCityInventory()\l&#45; populateMenu()\l}" alt="" coords="5,336,180,633"/>
-<area shape="rect" id="node3" href="$classGameState_1_1Menu.html" title="{GameState::Menu\n|&#45; head\l&#45; options\l&#45; menuShouldClose\l&#45; menu\l|+ Menu()\l+ ~Menu()\l+ init()\l+ setHead()\l+ addOption()\l+ update()\l+ render()\l+ nextState()\l+ clearNextState()\l+ shouldClose()\l}" alt="" coords="205,358,341,611"/>
-<area shape="rect" id="node4" href="$classGameState_1_1Playing.html" title="{GameState::Playing\n|&#45; player\l&#45; camera\l&#45; newState\l|+ init()\l+ update()\l+ render()\l+ nextState()\l+ clearNextState()\l+ shouldClose()\l}" alt="" coords="365,395,503,575"/>
-</map>

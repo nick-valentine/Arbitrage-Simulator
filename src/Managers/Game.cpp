@@ -41,9 +41,7 @@ int Game::setup()
 
     Game::keymap.init();
 
-    this->worldProxy->loadWorld(this->logger);
-
-    this->stateStack.push(new GameState::Playing());
+    this->stateStack.push(new GameState::MainMenu());
     this->stateStack.top()->init();
     this->stateStack.top()->setLogger(this->logger);
 
@@ -76,44 +74,30 @@ int Game::run()
         int rawInput = this->gameWindow->getCh();
         input = Game::keymap.convert(rawInput);
 
-        // @todo: debugging convenience, remove later
-        if (input == Input::ESCAPE) {
-            return 0;
-        }
-
         Context ctx;
         ctx.input = input;
         ctx.rawInput = rawInput;
 
         this->stateStack.top()->update(
-            this->worldProxy,
+            &this->worldProxy,
             &ctx
         );
 
         if (this->stateStack.top()->shouldClose()) {
-            this->logger->info("saving reference to old state");
             GameState::State * oldState = this->stateStack.top();
-            this->logger->info("popping state off stack");
             this->stateStack.pop();
             if (this->stateStack.size() == 0) {
-                this->logger->info("closing down program");
                 return 0;
             }
-            this->logger->info("transferring message");
             this->stateStack.top()->recvUp(oldState->passDown());
-            this->logger->info("deleting old state");
             delete oldState;
         } else if (this->stateStack.top()->nextState() != NULL) {
-            this->logger->info("New state being set");
+            GameState::State *newState = this->stateStack.top()->nextState();
             GameState::State *oldState = this->stateStack.top();
-            oldState->nextState()->recvDown(
-                this->stateStack.top()->passUp()
-            );
-            oldState->nextState()->setLogger(this->logger);
-            this->logger->info("Pushing the new state");
-            this->stateStack.push(
-                oldState->nextState()
-            );
+            newState->init();
+            newState->recvDown(oldState->passUp());
+            newState->setLogger(this->logger);
+            this->stateStack.push(newState);
             oldState->clearNextState();
         }
     }
@@ -128,18 +112,6 @@ void Game::configure()
     WorldChunk::configure();
     World::configure();
     City::load_city_names();
-
-    //this->worldProxy = new LocalWorldInteraction(
-    //    ConfigLoader::getStringOption(
-    //        Game::configWorldNameKey,
-    //        Game::defaultWorldName
-    //    )
-    //);
-    
-    this->worldProxy = new NetworkedWorldInteraction(
-        "localhost",
-        "9797"
-    );
 
     unsigned int chunkHeight = ConfigLoader::getIntOption("chunk_height");
     unsigned int chunkWidth  = ConfigLoader::getIntOption("chunk_width");

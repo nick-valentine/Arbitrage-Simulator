@@ -29,7 +29,7 @@ void GameState::Menu::addOption(std::string option)
     this->options.push_back(option);
 }
 
-void GameState::Menu::update(WorldInteractionInterface *worldProxy, Context *ctx)
+void GameState::Menu::update(WorldInteractionInterface ** worldProxy, Context *ctx)
 {
     int result = this->menu.update(ctx);
     switch (result) {

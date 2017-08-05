@@ -13,7 +13,7 @@ namespace GameState
     public:
         virtual void init() = 0;
         virtual void setLogger(Logger::LoggerPtr logger);
-        virtual void update(WorldInteractionInterface *worldProxy, Context *ctx) = 0;
+        virtual void update(WorldInteractionInterface ** worldProxy, Context *ctx) = 0;
         virtual void render(WorldInteractionInterface *worldProxy, Window::window_ptr window) = 0;
         virtual State *nextState() = 0;
         virtual void clearNextState() = 0;

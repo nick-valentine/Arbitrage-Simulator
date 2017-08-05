@@ -1,9 +1,0 @@
-<map id="ConsoleWindow::render" name="ConsoleWindow::render">
-<area shape="rect" id="node2" href="$classCursesWindow.html#a1b22fdef6622870e5caa7408597c1191" title="CursesWindow::clear" alt="" coords="233,5,379,32"/>
-<area shape="rect" id="node3" href="$classBufferLogger.html#a3edc8aeeae73f886da26cf2c9d2954c0" title="BufferLogger::getBuffer" alt="" coords="227,56,385,83"/>
-<area shape="rect" id="node4" href="$classBufferLogger.html#a8666ad4c21f3ab78529834c9ef8d6201" title="BufferLogger::getBufferSize" alt="" coords="215,107,397,133"/>
-<area shape="rect" id="node5" href="$classCursesWindow.html#ad7e945e609ec4e036b2690b953c3580b" title="CursesWindow::getHeight" alt="" coords="219,157,393,184"/>
-<area shape="rect" id="node6" href="$classCursesWindow.html#a47a331cb5d0bae7df6e31e44892c8951" title="CursesWindow::getWidth" alt="" coords="221,208,391,235"/>
-<area shape="rect" id="node7" href="$classCursesWindow.html#a7d7afaf145fd706a3a0856ec4be932f1" title="CursesWindow::putstr" alt="" coords="230,259,382,285"/>
-<area shape="rect" id="node8" href="$classCursesWindow.html#ac06799b415fada8c68faffc6d5c8f034" title="CursesWindow::render" alt="" coords="229,309,383,336"/>
-</map>

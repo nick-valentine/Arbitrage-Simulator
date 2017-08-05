@@ -17,7 +17,7 @@ namespace GameState
         ~CityInventory();
         void init();
         void setCity(City city);
-        void update(WorldInteractionInterface *worldProxy, Context *ctx);
+        void update(WorldInteractionInterface ** worldProxy, Context *ctx);
         void render(WorldInteractionInterface *worldProxy, Window::window_ptr window);
         State *nextState();
         void clearNextState();

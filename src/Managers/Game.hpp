@@ -15,7 +15,7 @@
 #include "GameObjects/ItemMap.hpp"
 
 #include "Managers/GameState/State.hpp"
-#include "Managers/GameState/Playing.hpp"
+#include "Managers/GameState/MainMenu.hpp"
 
 #include "Services/WorldInteraction/WorldInteractionInterface.hpp"
 #include "Services/WorldInteraction/LocalWorldInteraction.hpp"
@@ -41,9 +41,10 @@ public:
     ~Game();
     int setup();
     int run();
-private:
+
     static const std::string configWorldNameKey;
     static const std::string defaultWorldName;
+private:
     static Keymap keymap;
 
     boost::shared_ptr<Logger> logger;

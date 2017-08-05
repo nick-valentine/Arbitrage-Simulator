@@ -1,6 +1,0 @@
-<map id="Logger::configure" name="Logger::configure">
-<area shape="rect" id="node2" href="$classConfigLoader.html#a99778c30f3d79e84995d9e9c7245b089" title="ConfigLoader::getIntOption" alt="" coords="176,31,355,57"/>
-<area shape="rect" id="node3" href="$classConfigLoader.html#a162bb553780887f9c73861c39fb19e90" title="ConfigLoader::getStringOption" alt="" coords="403,31,600,57"/>
-<area shape="rect" id="node4" href="$classConfigLoader.html#a8d086e4fc43dbbf3ea03b25e7808d52d" title="ConfigLoader::mutateOption" alt="" coords="648,5,833,32"/>
-<area shape="rect" id="node5" href="$classConfigLoader.html#a75640e185ea0090519fce7df634cc48a" title="ConfigLoader::save" alt="" coords="673,56,808,83"/>
-</map>

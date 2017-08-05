@@ -1,4 +1,0 @@
-<map id="Player::draw" name="Player::draw">
-<area shape="rect" id="node2" href="$classCamera.html#a76ed19c192c25c8e41f4a6bb54ba87b2" title="Render the world and player onto the screen. " alt="" coords="148,13,260,39"/>
-<area shape="rect" id="node3" href="$classGameState_1_1Playing.html#ad2fba65919fb69836c2f86b0579ca1c3" title="GameState::Playing\l::render" alt="" coords="308,5,447,47"/>
-</map>

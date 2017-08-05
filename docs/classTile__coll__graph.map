@@ -1,5 +1,0 @@
-<map id="Tile" name="Tile">
-<area shape="rect" id="node2" href="$classAbstractGameObject.html" title="The Abstract Game Object. " alt="" coords="5,42,149,134"/>
-<area shape="rect" id="node3" href="$structTile_1_1TileType.html" title="{Tile::TileType\n|+ tile\l+ colorPair\l+ elevationMin\l+ elevationMax\l+ livability\l|+ TileType()\l}" alt="" coords="174,20,285,156"/>
-<area shape="rect" id="node4" href="$classColorPallete.html" title="CollorPallete. " alt="" coords="309,5,425,171"/>
-</map>

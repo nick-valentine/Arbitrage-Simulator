@@ -1,7 +1,0 @@
-<map id="Camera::render" name="Camera::render">
-<area shape="rect" id="node2" href="$classWorldInteractionInterface.html#a5e16c72d8dbfc2929d1b27507690e813" title="WorldInteractionInterface\l::draw" alt="" coords="165,5,333,47"/>
-<area shape="rect" id="node3" href="$classPlayer.html#a1e1e3c70cc431b185c89b5e00d3b95b4" title="Player::draw" alt="" coords="202,71,297,98"/>
-<area shape="rect" id="node4" href="$classScreen.html#aed8b600eb3f9b5978030016760d74c21" title="Screen::put" alt="" coords="400,21,489,47"/>
-<area shape="rect" id="node5" href="$classScreen.html#a4edca55b221da0326dc7de0ec0f4dc91" title="Screen::getHeight" alt="" coords="381,71,508,98"/>
-<area shape="rect" id="node6" href="$classScreen.html#ab71b25e991771611d4acab431f92b518" title="Screen::getWidth" alt="" coords="383,122,506,149"/>
-</map>
