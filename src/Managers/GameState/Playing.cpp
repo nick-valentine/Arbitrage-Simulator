@@ -45,9 +45,8 @@ void GameState::Playing::update(WorldInteractionInterface *worldProxy, Input inp
     this->logger->info("Player is on tile: %i, %i", pos_x, pos_y);
     if (tile.getType() == Tile::CITIES) {
         City city = worldProxy->getCity(pos_y, pos_x);
-        this->getCityInventory(&city);
-        GameState::Menu *cityInventoryScreen = new GameState::Menu;
-        this->populateMenu(cityInventoryScreen, this->cityInventoryOptions);
+        GameState::CityInventory *cityInventoryScreen = new GameState::CityInventory;
+        cityInventoryScreen->setCity(city);
         cityInventoryScreen->init();
         this->newState = cityInventoryScreen;
         this->logger->info("This tile is a city: %s", city.getName().c_str());
@@ -84,25 +83,3 @@ bool GameState::Playing::shouldClose()
     return false;
 }
 
-void GameState::Playing::getCityInventory(City *city)
-{
-    this->cityInventory = city->getInventory().getInv();
-    this->cityInventoryOptions = std::vector<std::string>();
-    for (int i = 0; i < this->cityInventory.size(); ++i) {
-        std::stringstream ss;
-        this->logger->info("%i", this->cityInventory[i].itemId);
-        Item item = ItemMap::get(this->cityInventory[i].itemId);
-        ss<<item.getName()<<"\t"<<item.getDescription()<<
-            "\t"<<item.getBaseWorth()<<"\t"<<item.getWeight()<<
-            "\tx"<<this->cityInventory[i].count;
-        this->cityInventoryOptions.push_back(ss.str());
-
-    }
-}
-
-void GameState::Playing::populateMenu(GameState::Menu *menu, std::vector<std::string> options)
-{
-    for (int i = 0; i < options.size(); ++i) {
-        menu->addOption(options[i]);
-    }
-}
