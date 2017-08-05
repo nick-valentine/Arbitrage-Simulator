@@ -4,6 +4,7 @@
 #include <boost/shared_ptr.hpp>
 
 #include "GameObjects/World.hpp"
+#include "GameObjects/Tile.hpp"
 #include "Window/Window.hpp"
 
 #include "Services/Logger/Logger.hpp"
@@ -20,6 +21,8 @@ public:
     virtual void loadWorld(boost::shared_ptr<Logger> logger) = 0;
     virtual void draw(Window::window_ptr window) = 0;
     virtual void movePlayerToCoordinate(int y, int x) = 0;
+    virtual Tile getTileUnderPlayer() = 0;
+    virtual City getCity(int y, int x) = 0;
 private:
 };
 

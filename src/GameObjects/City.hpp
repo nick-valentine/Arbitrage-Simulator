@@ -8,6 +8,7 @@
 
 #include "Globals.hpp"
 #include "GameObjects/AbstractGameObject.hpp"
+#include "GameObjects/Inventory.hpp"
 
 /**
  * City Game Object.
@@ -19,6 +20,7 @@ class City : public AbstractGameObject
 {
 public:
     City();
+    City(const City &other);
     City(std::stringstream *ss);
     City(std::string name, int pos_x, int pos_y);
     void fromStringStream(std::stringstream *ss);
@@ -32,6 +34,9 @@ public:
 
     void setPosY(int y);
     int getPosY() const;
+
+    void addToInventory(int itemId, int count);
+    Inventory getInventory();
 
     /**
      * Load City Names.
@@ -51,6 +56,8 @@ private:
     std::string name;
     int pos_x;
     int pos_y;
+
+    Inventory inv;
 };
 
 #endif //CITY_HPP

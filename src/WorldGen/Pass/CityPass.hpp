@@ -8,6 +8,7 @@
 #include <algorithm>
 
 #include "WorldGen/Pass/AbstractPass.hpp"
+#include "GameObjects/ItemMap.hpp"
 
 #include "Helpers/Vector.hpp"
 
@@ -20,7 +21,7 @@ public:
     void init();
 
     void execute(World *world, boost::shared_ptr<Logger> logger);
-    void doTile(int i, int j, Tile *tile);
+    void doTile(int i, int j, Tile *tile, WorldChunk *chunk);
 
     AbstractPass *clone();
 
@@ -44,12 +45,12 @@ private:
     PassState state;
 
     void doGather(int i, int j, Tile *tile);
-    void doPlace(int i, int j, Tile *tile);
+    void doPlace(int i, int j, Tile *tile, WorldChunk *chunk);
 
     void calcDifferentials();
     void calcAvgLivability();
 
-    void convertTileToCity(int i, int j, Tile *tile);
+    void convertTileToCity(int i, int j, Tile *tile, WorldChunk *chunk);
 
     std::vector< std::vector<int> > worldElevations;
     std::vector< std::vector<float> > worldDiff;

@@ -32,6 +32,7 @@ int Game::setup()
 
     this->windowLayout.addWindow("ConsoleWindow", this->consoleWindow);
     this->windowLayout.setSubWindow("ConsoleWindow");
+    this->windowLayout.setSubWindowMinHeight(20);
     this->windowLayout.render();
 
     this->logger = boost::shared_ptr<Logger>(
@@ -45,6 +46,11 @@ int Game::setup()
     this->stateStack.push(new GameState::Playing());
     this->stateStack.top()->init();
     this->stateStack.top()->setLogger(this->logger);
+
+    // @todo: fetch this specific data from the server if ther is one, and
+    // generalize much of this and the server's common code into  a
+    // boostrappign class
+    ItemMap::init(this->logger);
 
     return 0;
 }
@@ -68,17 +74,20 @@ int Game::run()
         this->gameWindow->clear();
 
         int rawInput = this->gameWindow->getCh();
-        logger->debug("%d Pressed", rawInput);
         input = Game::keymap.convert(rawInput);
-        logger->debug("%d Pressed", input);
 
+        // @todo: debugging convenience, remove later
         if (input == Input::ESCAPE) {
             return 0;
         }
 
+        Context ctx;
+        ctx.input = input;
+        ctx.rawInput = rawInput;
+
         this->stateStack.top()->update(
             this->worldProxy,
-            input
+            &ctx
         );
 
         if (this->stateStack.top()->shouldClose()) {
@@ -131,11 +140,6 @@ void Game::configure()
         "localhost",
         "9797"
     );
-
-    std::cout<<"chunk_height: "<<ConfigLoader::getIntOption("chunk_height")<<'\n';
-    std::cout<<"chunk_width: "<<ConfigLoader::getIntOption("chunk_width")<<'\n';
-    std::cout<<"max_cities_per_chunk: "<<ConfigLoader::getIntOption("max_cities_per_chunk")<<'\n';
-    std::cout<<std::endl;
 
     unsigned int chunkHeight = ConfigLoader::getIntOption("chunk_height");
     unsigned int chunkWidth  = ConfigLoader::getIntOption("chunk_width");

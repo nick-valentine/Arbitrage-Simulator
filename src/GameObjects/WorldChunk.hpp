@@ -44,6 +44,8 @@ public:
 
     void draw(Window::window_ptr window, int playerY, int playerX);
 
+    City getCity(int y, int x);
+
     static unsigned int getChunkWidth();
     static unsigned int getChunkHeight();
     static int getMaxCitiesPerChunk();

@@ -41,6 +41,8 @@ public:
     void draw(Window::window_ptr window);
     void draw(Window::window_ptr window, int playerY, int playerX);
     void movePlayerToCoordinate(int y, int x);
+
+    City getCity(int y, int x);
 private:
     std::string version;
     std::vector< std::pair<int, int> > chunksLoaded;

@@ -13,7 +13,7 @@ class TypePass : public AbstractPass
 {
 public:
     void init();
-    void doTile(int i, int j, Tile *tile);
+    void doTile(int i, int j, Tile *tile, WorldChunk *chunk);
 
     AbstractPass *clone();
 

@@ -7,6 +7,7 @@
 
 #include "Window/Window.hpp"
 #include "Input.hpp"
+#include "Context.hpp"
 
 namespace Component
 {
@@ -14,15 +15,17 @@ namespace Component
     {
     public:
         Menu();
-        Menu(std::vector<std::string> options, int top, int left, int height = 0, int width = 0);
-
+        Menu(std::string head, std::vector<std::string> options, int top, int left, int height, int width);
+        
         void render(Window::window_ptr window);
-        int update(Input input);
+        int update(Context *ctx);
+        void setDims(int top, int left, int height, int width);
     private:
         void drawBorder(Window::window_ptr);
         void drawBar(Window::window_ptr window, int y, int x, int width);
         void drawPipe(Window::window_ptr window, int y, int x, int height);
 
+        std::string head;
         std::vector<std::string> options;
         int top;
         int left;

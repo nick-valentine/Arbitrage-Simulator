@@ -3,6 +3,7 @@ set (SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/State.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Playing.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Menu.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/CityInventory.cpp
     PARENT_SCOPE
 )
 set (HEADERS
@@ -10,5 +11,6 @@ set (HEADERS
     ${CMAKE_CURRENT_SOURCE_DIR}/State.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Playing.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Menu.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/CityInventory.hpp
     PARENT_SCOPE
 )

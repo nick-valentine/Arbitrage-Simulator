@@ -52,6 +52,20 @@ void NetworkedWorldInteraction::movePlayerToCoordinate(int y, int x)
     }
 }
 
+City NetworkedWorldInteraction::getCity(int y, int x)
+{
+    int chunkY, chunkX, localY, localX;
+    this->globalCoordinatesToChunkCoordinates(
+        y, x,
+        chunkY, chunkX,
+        localY, localX
+    );
+    if (!this->hasChunkLoaded(chunkY, chunkX)) {
+        this->fetchChunk(chunkY, chunkX);
+    }
+    return this->chunks[chunkY][chunkX].getCity(localY, localX);
+}
+
 void NetworkedWorldInteraction::configure()
 {
     ConfigLoader::load(); 

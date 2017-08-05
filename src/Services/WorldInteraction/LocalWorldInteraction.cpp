@@ -32,6 +32,23 @@ void LocalWorldInteraction::movePlayerToCoordinate(int y, int x)
     this->playerX = x;
 }
 
+Tile LocalWorldInteraction::getTileUnderPlayer()
+{
+    int chunkY, chunkX, localY, localX;
+    this->playerCoordinatesToChunkCoordinates(chunkY, chunkX, localY, localX);
+    return this->chunks[chunkY][chunkX].tiles[localY][localX];
+}
+
+City LocalWorldInteraction::getCity(int y, int x)
+{
+    int chunkY, chunkX, localY, localX;
+    this->globalCoordinatesToChunkCoordinates(
+        y, x,
+        chunkY, chunkX,
+        localY, localX
+    );
+    return this->chunks[chunkY][chunkX].getCity(localY, localX);
+}
 
 void LocalWorldInteraction::playerCoordinatesToChunkCoordinates(
     int &chunkY, int &chunkX,

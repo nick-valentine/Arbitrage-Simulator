@@ -10,8 +10,9 @@ Component::Menu::Menu()
     this->selected = 0;
 }
 
-Component::Menu::Menu(std::vector<std::string> options, int top, int left, int height, int width)
+Component::Menu::Menu(std::string head, std::vector<std::string> options, int top, int left, int height, int width)
 {
+    this->head = head;
     this->options = options;
     this->top = top;
     this->left = left;
@@ -22,19 +23,19 @@ Component::Menu::Menu(std::vector<std::string> options, int top, int left, int h
 
 void Component::Menu::render(Window::window_ptr window)
 {
-    this->drawBorder(window);
-
     int maxHeight = std::min(this->height, int(this->options.size()));
+    window->putstr(this->top + 1, this->left + 1, this->head, 0);
     for (int i = 0; i < maxHeight; ++i) {
         int color = this->selected == i ? 1 : 0;
-        window->putstr(this->top + i + 1, this->left + 1, this->options[i], color);
+        window->putstr(this->top + i + 2, this->left + 1, this->options[i], color);
     }
+    this->drawBorder(window);
 
 }
 
-int Component::Menu::update(Input input)
+int Component::Menu::update(Context *ctx)
 {
-    switch (input) {
+    switch (ctx->input) {
         case Input::UP:
             this->selected = std::max(this->selected - 1, 0);
             return -1;
@@ -46,6 +47,14 @@ int Component::Menu::update(Input input)
         case Input::BACK:
             return -2;
     };
+}
+
+void Component::Menu::setDims(int top, int left, int height, int width)
+{
+    this->top = top;
+    this->left = left;
+    this->height = height;
+    this->width = width;
 }
 
 void Component::Menu::drawBorder(Window::window_ptr window)

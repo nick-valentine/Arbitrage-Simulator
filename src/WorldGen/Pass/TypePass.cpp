@@ -7,7 +7,7 @@ void TypePass::init()
     this->typeNoise = NoiseFunc(TypePass::typeNoiseSpread);
 }
 
-void TypePass::doTile(int i, int j, Tile *tile)
+void TypePass::doTile(int i, int j, Tile *tile, WorldChunk *chunk)
 {
     tile->setType(
         this->typeMap(

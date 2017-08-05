@@ -7,9 +7,14 @@ void GameState::Playing::init()
     this->camera = Camera(0, 0);
 }
 
-void GameState::Playing::update(WorldInteractionInterface *worldProxy, Input input)
+void GameState::Playing::update(WorldInteractionInterface *worldProxy, Context *ctx)
 {
-    switch(input) {
+
+    if (this->recvMsgUp != 0) {
+        this->logger->info("Recieved message %i", this->recvMsgUp);
+    }
+
+    switch(ctx->input) {
         case Input::UP:
             this->player.move(-1,0);
             break;
@@ -32,6 +37,20 @@ void GameState::Playing::update(WorldInteractionInterface *worldProxy, Input inp
             this->newState = menuState;
             break;
     };
+    int pos_y, pos_x;
+    this->player.getYX(pos_y, pos_x);
+    worldProxy->movePlayerToCoordinate(pos_y, pos_x);
+    Tile tile = worldProxy->getTileUnderPlayer();
+    this->logger->info("Player stepped on tile at height: %i", tile.getElevation());
+    this->logger->info("Player is on tile: %i, %i", pos_x, pos_y);
+    if (tile.getType() == Tile::CITIES) {
+        City city = worldProxy->getCity(pos_y, pos_x);
+        GameState::CityInventory *cityInventoryScreen = new GameState::CityInventory;
+        cityInventoryScreen->setCity(city);
+        cityInventoryScreen->init();
+        this->newState = cityInventoryScreen;
+        this->logger->info("This tile is a city: %s", city.getName().c_str());
+    }
 }
 
 void GameState::Playing::render(WorldInteractionInterface *worldProxy, Window::window_ptr window)
@@ -63,3 +82,4 @@ bool GameState::Playing::shouldClose()
 {
     return false;
 }
+

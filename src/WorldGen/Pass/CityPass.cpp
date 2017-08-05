@@ -34,14 +34,14 @@ void CityPass::execute(World *world, boost::shared_ptr<Logger> logger)
     AbstractPass::execute(world, logger);
 }
 
-void CityPass::doTile(int i, int j, Tile *tile)
+void CityPass::doTile(int i, int j, Tile *tile, WorldChunk *chunk)
 {
     switch (state) {
         case Gather:
             this->doGather(i, j, tile);
             break;
         case CityPlace:
-            this->doPlace(i, j, tile);
+            this->doPlace(i, j, tile, chunk);
             break;
     };
 }
@@ -63,16 +63,15 @@ void CityPass::doGather(int i, int j, Tile *tile)
     this->livabilityMask[i][j] = tile->getLivability();
 }
 
-void CityPass::doPlace(int i, int j, Tile *tile)
+void CityPass::doPlace(int i, int j, Tile *tile, WorldChunk *chunk)
 {
-    //std::cout<<this->worldDiff[i][j]<<" "<<this->citySpawnableMask[i][j]<<" "<<this->avgLivabilityMask[i][j]<<"\n";
     if (
         this->worldDiff[i][j] < CityPass::maxElevationDiff &&
         this->citySpawnableMask[i][j] == true &&
         this->avgLivabilityMask[i][j] > CityPass::minLivibility &&
         this->cityConversionNoise.get(i, j) > CityPass::cityConversionRatio
     ) {
-        this->convertTileToCity(i, j, tile);
+        this->convertTileToCity(i, j, tile, chunk);
     }
 }
 
@@ -106,7 +105,7 @@ void CityPass::calcAvgLivability()
     }
 }
 
-void CityPass::convertTileToCity(int i, int j, Tile *tile)
+void CityPass::convertTileToCity(int i, int j, Tile *tile, WorldChunk *chunk)
 {
     //stop any cities from spawning nearby
     int startHeight = std::max(0, i - CityPass::citySpawnRadiusMask);
@@ -123,5 +122,25 @@ void CityPass::convertTileToCity(int i, int j, Tile *tile)
 
     //convert tile
     tile->convertToCity();
+    City city(
+        City::city_name_starts[rand() % City::city_name_starts.size()] + 
+        City::city_name_ends[rand() % City::city_name_ends.size()],
+        j % WorldChunk::getChunkWidth(),
+        i % WorldChunk::getChunkHeight()
+    );
+
+    // @todo: refactor inventory pass into it's own pass
+    std::vector<int> ids = ItemMap::validIds();
+    int itemsToGive = rand() % 20;
+    for (int i = 0; i < itemsToGive; ++i) {
+        city.addToInventory(
+            ItemMap::get(
+                ids[rand() % ids.size()]
+            ).getId(),
+            rand() % 15
+        );
+    }
+
+    chunk->cities.push_back(city);
 }
 

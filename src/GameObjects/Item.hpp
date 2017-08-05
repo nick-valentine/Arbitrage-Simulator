@@ -19,7 +19,7 @@ class Item : public AbstractGameObject
 {
 public:
     Item();
-    Item(int id, std::string name, std::string description, int weight);
+    Item(int id, std::string name, std::string description, int weight, float baseWorth);
     Item(std::stringstream *ss);
 
     void fromStringStream(std::stringstream *ss);
@@ -29,11 +29,13 @@ public:
     std::string getName();
     std::string getDescription();
     int getWeight();
+    float getBaseWorth();
 private:
     int id;
     std::string name;
     std::string description;
     int weight;
+    float baseWorth;
 };
 
 #endif //ITEM_HPP

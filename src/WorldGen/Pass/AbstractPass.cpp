@@ -17,7 +17,8 @@ void AbstractPass::executeChunk(int top, int left, WorldChunk *chunk)
             this->doTile(
                 i + (top * WorldChunk::getChunkHeight()), 
                 j + (left * WorldChunk::getChunkWidth()), 
-                &chunk->tiles[i][j]
+                &chunk->tiles[i][j],
+                chunk
             );
         }
     }

@@ -8,7 +8,7 @@ void ElevationPass::init()
     this->elevationNoise = NoiseFunc(ElevationPass::elevationNoiseSpread);
 }
 
-void ElevationPass::doTile(int i, int j, Tile *tile)
+void ElevationPass::doTile(int i, int j, Tile *tile, WorldChunk *chunk)
 {
     tile->setElevation(
        this->elevationMap(

@@ -9,17 +9,21 @@
 #include <boost/pointer_cast.hpp>
 #include <boost/shared_ptr.hpp>
 
-#include "Camera.hpp"
 #include "ConfigLoader.hpp"
 #include "Input.hpp"
 #include "Keymap.hpp"
+#include "GameObjects/ItemMap.hpp"
+
 #include "Managers/GameState/State.hpp"
 #include "Managers/GameState/Playing.hpp"
+
 #include "Services/WorldInteraction/WorldInteractionInterface.hpp"
 #include "Services/WorldInteraction/LocalWorldInteraction.hpp"
 #include "Services/WorldInteraction/NetworkedWorldInteraction.hpp"
-#include "Services/WindowLayout/GameWindowLayout.hpp"
+
 #include "Services/Logger/Logger.hpp"
+
+#include "Services/WindowLayout/GameWindowLayout.hpp"
 #include "Window/Window.hpp"
 #include "Window/GameWindow.hpp"
 #include "Window/ConsoleWindow.hpp"

@@ -24,6 +24,7 @@ set (HEADERS
     ${CMAKE_CURRENT_SOURCE_DIR}/ColorPallete.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/ConfigLoader.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Globals.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/Context.hpp
     PARENT_SCOPE
 )
 

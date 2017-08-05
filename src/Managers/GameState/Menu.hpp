@@ -15,13 +15,15 @@ namespace GameState
         Menu();
         ~Menu();
         void init();
+        void setHead(std::string head);
         void addOption(std::string option);
-        void update(WorldInteractionInterface *worldProxy, Input input);
+        void update(WorldInteractionInterface *worldProxy, Context *ctx);
         void render(WorldInteractionInterface *worldProxy, Window::window_ptr window);
         State *nextState();
         void clearNextState();
         bool shouldClose();
     private:
+        std::string head;
         std::vector<std::string> options;
         bool menuShouldClose;
         Component::Menu menu;
