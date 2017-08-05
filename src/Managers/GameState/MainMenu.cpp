@@ -48,15 +48,7 @@ void GameState::MainMenu::update(WorldInteractionInterface ** worldProxy, Contex
             this->newState = new GameState::Playing;
             break;
         case 1:
-            if ((*worldProxy) != NULL) {
-                delete (*worldProxy);
-            }
-            (*worldProxy) = new NetworkedWorldInteraction(
-                "localhost",
-                "9797"
-            );
-            (*worldProxy)->loadWorld(this->logger);
-            this->newState = new GameState::Playing;
+            this->newState = new GameState::ServerHistory;
             break;
         case 2:
             this->close = true;

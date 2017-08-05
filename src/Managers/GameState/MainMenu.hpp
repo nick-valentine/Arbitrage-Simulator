@@ -5,10 +5,10 @@
 #include "GameObjects/Tile.hpp"
 #include "Managers/Game.hpp"
 #include "Managers/GameState/Playing.hpp"
+#include "Managers/GameState/ServerHistory.hpp"
 #include "Managers/GameState/State.hpp"
 
 #include "Services/WorldInteraction/LocalWorldInteraction.hpp"
-#include "Services/WorldInteraction/NetworkedWorldInteraction.hpp"
 
 namespace GameState
 {
