@@ -1,7 +1,0 @@
-<map id="GameState::CityInventory::render" name="GameState::CityInventory::render">
-<area shape="rect" id="node2" href="$classComponent_1_1Menu.html#a9b885a399f66fb196f6615ec52d3f056" title="Component::Menu::render" alt="" coords="235,31,408,57"/>
-<area shape="rect" id="node6" href="$classComponent_1_1Menu.html#aae64d749e5a564058c0cfcd97fd716f2" title="Component::Menu::setDims" alt="" coords="228,81,415,108"/>
-<area shape="rect" id="node3" href="$classComponent_1_1Menu.html#aa1d682f64f95d069f6cca696e3ac740f" title="Component::Menu::drawBorder" alt="" coords="463,31,665,57"/>
-<area shape="rect" id="node4" href="$classComponent_1_1Menu.html#a3c1e4af3b53943de1b6c6477fc651fa7" title="Component::Menu::drawBar" alt="" coords="716,5,901,32"/>
-<area shape="rect" id="node5" href="$classComponent_1_1Menu.html#af9396e39ca52f575977c7fca7ecfc3a5" title="Component::Menu::drawPipe" alt="" coords="713,56,904,83"/>
-</map>

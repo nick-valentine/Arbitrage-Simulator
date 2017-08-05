@@ -1,9 +1,0 @@
-<map id="City.hpp" name="City.hpp">
-<area shape="rect" id="node6" href="$Globals_8hpp.html" title="Globals.hpp" alt="" coords="311,311,402,338"/>
-<area shape="rect" id="node7" href="$AbstractGameObject_8hpp.html" title="GameObjects/AbstractGame\lObject.hpp" alt="" coords="45,304,236,345"/>
-<area shape="rect" id="node8" href="$Inventory_8hpp.html" title="GameObjects/Inventory.hpp" alt="" coords="352,80,537,107"/>
-<area shape="rect" id="node10" href="$Item_8hpp.html" title="GameObjects/Item.hpp" alt="" coords="361,229,518,256"/>
-<area shape="rect" id="node11" href="$ItemMap_8hpp.html" title="GameObjects/ItemMap.hpp" alt="" coords="593,155,776,181"/>
-<area shape="rect" id="node13" href="$Logger_8hpp.html" title="Services/Logger/Logger.hpp" alt="" coords="821,229,1005,256"/>
-<area shape="rect" id="node19" href="$ConfigLoader_8hpp.html" title="ConfigLoader.hpp" alt="" coords="1321,311,1445,338"/>
-</map>

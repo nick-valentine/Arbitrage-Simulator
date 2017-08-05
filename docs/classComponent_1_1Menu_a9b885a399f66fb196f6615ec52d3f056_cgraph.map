@@ -1,5 +1,0 @@
-<map id="Component::Menu::render" name="Component::Menu::render">
-<area shape="rect" id="node2" href="$classComponent_1_1Menu.html#aa1d682f64f95d069f6cca696e3ac740f" title="Component::Menu::drawBorder" alt="" coords="227,31,429,57"/>
-<area shape="rect" id="node3" href="$classComponent_1_1Menu.html#a3c1e4af3b53943de1b6c6477fc651fa7" title="Component::Menu::drawBar" alt="" coords="480,5,665,32"/>
-<area shape="rect" id="node4" href="$classComponent_1_1Menu.html#af9396e39ca52f575977c7fca7ecfc3a5" title="Component::Menu::drawPipe" alt="" coords="477,56,668,83"/>
-</map>

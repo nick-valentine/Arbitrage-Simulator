@@ -1,7 +1,0 @@
-<map id="World::getWorldHeight" name="World::getWorldHeight">
-<area shape="rect" id="node2" href="$classLocalWorldInteraction.html#a143bfcabc47162c393f82a5377b52ee9" title="LocalWorldInteraction\l::chunkInWorld" alt="" coords="208,5,356,47"/>
-<area shape="rect" id="node4" href="$classCityPass.html#a054e2e23302fe8277a99782939e93ccd" title="CityPass::init" alt="" coords="231,71,333,98"/>
-<area shape="rect" id="node3" href="$classNetworkedWorldInteraction.html#a951bdc14887bba2797479057ab6080bd" title="NetworkedWorldInteraction\l::movePlayerToCoordinate" alt="" coords="407,5,587,47"/>
-<area shape="rect" id="node5" href="$classGenerator.html#ae622e04fa7b6c52a809c3ae3ee08e1c1" title="Generator::DefaultGenerator" alt="" coords="404,71,591,98"/>
-<area shape="rect" id="node6" href="$classLocalWorldInteraction.html#a0d9657eb61d9318acf2eeb969b3c4b48" title="LocalWorldInteraction\l::LocalWorldInteraction" alt="" coords="639,64,795,105"/>
-</map>

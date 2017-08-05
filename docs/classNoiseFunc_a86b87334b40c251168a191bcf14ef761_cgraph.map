@@ -1,8 +1,0 @@
-<map id="NoiseFunc::get" name="NoiseFunc::get">
-<area shape="rect" id="node2" href="$classNoiseFunc.html#aa87ed1ed47c8d7d2a9923c4ebe56488e" title="NoiseFunc::perlin" alt="" coords="164,31,288,57"/>
-<area shape="rect" id="node3" href="$classNoiseFunc.html#a0398d2d39d683aeeb20f4adbdbe65252" title="NoiseFunc::dotGridGradient" alt="" coords="336,5,520,32"/>
-<area shape="rect" id="node7" href="$classNoiseFunc.html#a59ace427bbd297980a4c767a68ebd17b" title="NoiseFunc::lerp" alt="" coords="371,56,485,83"/>
-<area shape="rect" id="node4" href="$classNoiseFunc.html#a8605b20ed7a02c74cef4a77379725785" title="NoiseFunc::addGridGradient" alt="" coords="568,5,755,32"/>
-<area shape="rect" id="node5" href="$classNoiseFunc.html#a6675a19eec4a812f3bac096cceae51a0" title="NoiseFunc::newRandPair" alt="" coords="803,5,973,32"/>
-<area shape="rect" id="node6" href="$classNoiseFunc.html#a4403c8ac5fb7f4a309b14494005b5af5" title="NoiseFunc::newRand" alt="" coords="1021,5,1169,32"/>
-</map>

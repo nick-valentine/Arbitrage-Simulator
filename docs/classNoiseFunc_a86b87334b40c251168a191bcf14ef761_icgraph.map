@@ -1,6 +1,0 @@
-<map id="NoiseFunc::get" name="NoiseFunc::get">
-<area shape="rect" id="node2" href="$classCityPass.html#a96d4834a3670c491b68f2d751df54a2a" title="CityPass::doPlace" alt="" coords="173,5,304,32"/>
-<area shape="rect" id="node4" href="$classElevationPass.html#ac3185338ad9b02a29bf0c078ebbd61c0" title="ElevationPass::doTile" alt="" coords="164,56,313,83"/>
-<area shape="rect" id="node5" href="$classTypePass.html#acb3dd1e14109c176a8d4b77f9aded1d9" title="TypePass::doTile" alt="" coords="177,107,301,133"/>
-<area shape="rect" id="node3" href="$classCityPass.html#ab2b3219a792d6cc048118396c15cf112" title="CityPass::doTile" alt="" coords="361,5,480,32"/>
-</map>

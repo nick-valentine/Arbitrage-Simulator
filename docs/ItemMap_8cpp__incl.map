@@ -1,8 +1,0 @@
-<map id="ItemMap.cpp" name="ItemMap.cpp">
-<area shape="rect" id="node2" href="$ItemMap_8hpp.html" title="GameObjects/ItemMap.hpp" alt="" coords="524,80,706,107"/>
-<area shape="rect" id="node7" href="$Logger_8hpp.html" title="Services/Logger/Logger.hpp" alt="" coords="362,155,546,181"/>
-<area shape="rect" id="node16" href="$Item_8hpp.html" title="GameObjects/Item.hpp" alt="" coords="866,155,1023,181"/>
-<area shape="rect" id="node13" href="$ConfigLoader_8hpp.html" title="ConfigLoader.hpp" alt="" coords="472,237,596,263"/>
-<area shape="rect" id="node17" href="$Globals_8hpp.html" title="Globals.hpp" alt="" coords="1183,237,1274,263"/>
-<area shape="rect" id="node18" href="$AbstractGameObject_8hpp.html" title="GameObjects/AbstractGame\lObject.hpp" alt="" coords="968,229,1158,271"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="ConsoleWindow" name="ConsoleWindow">
-<area shape="rect" id="node2" href="$classCursesWindow.html" title="CursesWindow. " alt="" coords="5,323,144,605"/>
-<area shape="rect" id="node3" href="$classWindow.html" title="Window. " alt="" coords="25,5,124,273"/>
-<area shape="rect" id="node4" href="$classBufferLogger.html" title="BufferLogger. " alt="" coords="168,330,315,598"/>
-<area shape="rect" id="node5" href="$classLogger.html" title="{Logger\n|# levelStrings\l# logLevel\l|+ ~Logger()\l+ debug()\l+ info()\l+ warn()\l+ error()\l+ log()\l+ configure()\l# format_string()\l# get_time()\l}" alt="" coords="183,35,300,244"/>
-<area shape="rect" id="node6" href="$classColorPallete.html" title="CollorPallete. " alt="" coords="339,381,455,547"/>
-</map>

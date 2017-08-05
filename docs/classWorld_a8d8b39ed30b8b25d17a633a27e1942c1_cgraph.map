@@ -1,4 +1,0 @@
-<map id="World::spawnChunk" name="World::spawnChunk">
-<area shape="rect" id="node2" href="$classWorld.html#a333864e5d6f9cc6bb8c57753ceb4e44f" title="Prepare Chunk. " alt="" coords="193,5,339,32"/>
-<area shape="rect" id="node3" href="$classWorldChunk.html#a7e1ba0dcd38f46a9c0309f1082904e87" title="WorldChunk::generateChunk" alt="" coords="387,5,577,32"/>
-</map>

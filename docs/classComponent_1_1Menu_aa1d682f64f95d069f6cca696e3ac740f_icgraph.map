@@ -1,5 +1,0 @@
-<map id="Component::Menu::drawBorder" name="Component::Menu::drawBorder">
-<area shape="rect" id="node2" href="$classComponent_1_1Menu.html#a9b885a399f66fb196f6615ec52d3f056" title="Component::Menu::render" alt="" coords="256,42,429,69"/>
-<area shape="rect" id="node3" href="$classGameState_1_1CityInventory.html#a10a4f5c0671c5258c7297890dbed85e6" title="GameState::CityInventory\l::render" alt="" coords="477,5,652,47"/>
-<area shape="rect" id="node4" href="$classGameState_1_1Menu.html#a99b72f1e7d4da66441380c1e8a2a85ee" title="GameState::Menu::render" alt="" coords="479,71,651,98"/>
-</map>

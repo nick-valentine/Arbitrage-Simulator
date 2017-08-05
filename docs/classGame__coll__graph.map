@@ -1,5 +1,0 @@
-<map id="Game" name="Game">
-<area shape="rect" id="node2" href="$classGameWindowLayout.html" title="{GameWindowLayout\n|&#45; mainWindow\l&#45; subWindow\l&#45; windows\l&#45; windowHeight\l&#45; windowWidth\l&#45; subWindowMinHeight\l&#45; screenRatioForMainWindow\l|+ GameWindowLayout()\l+ ~GameWindowLayout()\l+ addWindow()\l+ delWindow()\l+ setMainWindow()\l+ setSubWindow()\l+ setSubWindowMinHeight()\l+ render()\l+ updateScreenSize()\l}" alt="" coords="5,5,200,288"/>
-<area shape="rect" id="node3" href="$classWorldInteractionInterface.html" title="Class to proxy all interactions with the world through. " alt="" coords="224,79,413,215"/>
-<area shape="rect" id="node4" href="$classKeymap.html" title="{Keymap\n|&#45; inputMap\l&#45; mapFile\l|+ Keymap()\l+ init()\l+ convert()\l&#45; loadFile()\l&#45; createMap()\l}" alt="" coords="437,71,536,222"/>
-</map>

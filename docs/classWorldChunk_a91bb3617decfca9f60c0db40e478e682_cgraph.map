@@ -1,7 +1,0 @@
-<map id="WorldChunk::WorldChunk" name="WorldChunk::WorldChunk">
-<area shape="rect" id="node2" href="$classWorldChunk.html#ae67bd7d234bca44740a3418b4a00e64f" title="WorldChunk::configure" alt="" coords="228,31,383,57"/>
-<area shape="rect" id="node3" href="$classConfigLoader.html#a99778c30f3d79e84995d9e9c7245b089" title="ConfigLoader::getIntOption" alt="" coords="431,31,609,57"/>
-<area shape="rect" id="node4" href="$classConfigLoader.html#a162bb553780887f9c73861c39fb19e90" title="ConfigLoader::getStringOption" alt="" coords="657,31,855,57"/>
-<area shape="rect" id="node5" href="$classConfigLoader.html#a8d086e4fc43dbbf3ea03b25e7808d52d" title="ConfigLoader::mutateOption" alt="" coords="903,5,1088,32"/>
-<area shape="rect" id="node6" href="$classConfigLoader.html#a75640e185ea0090519fce7df634cc48a" title="ConfigLoader::save" alt="" coords="928,56,1063,83"/>
-</map>

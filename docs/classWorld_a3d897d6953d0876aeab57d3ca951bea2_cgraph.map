@@ -1,5 +1,0 @@
-<map id="World::generateWorld" name="World::generateWorld">
-<area shape="rect" id="node2" href="$classWorld.html#a8d8b39ed30b8b25d17a633a27e1942c1" title="Spawn a chunk at x,y. " alt="" coords="201,5,341,32"/>
-<area shape="rect" id="node3" href="$classWorld.html#a333864e5d6f9cc6bb8c57753ceb4e44f" title="Prepare Chunk. " alt="" coords="389,5,535,32"/>
-<area shape="rect" id="node4" href="$classWorldChunk.html#a7e1ba0dcd38f46a9c0309f1082904e87" title="WorldChunk::generateChunk" alt="" coords="583,5,773,32"/>
-</map>

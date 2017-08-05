@@ -1,6 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classGameState_1_1State.html" title="GameState::State" alt="" coords="5,56,132,83"/>
-<area shape="rect" id="node2" href="$classGameState_1_1CityInventory.html" title="GameState::CityInventory" alt="" coords="180,5,355,32"/>
-<area shape="rect" id="node3" href="$classGameState_1_1Menu.html" title="GameState::Menu" alt="" coords="203,56,331,83"/>
-<area shape="rect" id="node4" href="$classGameState_1_1Playing.html" title="GameState::Playing" alt="" coords="198,107,337,133"/>
-</map>

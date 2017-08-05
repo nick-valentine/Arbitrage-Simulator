@@ -1,5 +1,0 @@
-<map id="CityPass::doGather" name="CityPass::doGather">
-<area shape="rect" id="node2" href="$classTile.html#ac013dd5284c40ecf541a52d3214fccfc" title="Check if this tile may be converted to a city. " alt="" coords="191,5,348,32"/>
-<area shape="rect" id="node3" href="$classTile.html#ae75c7799f63fff2f6e2932bdb89f6b9c" title="Tile::getElevation" alt="" coords="208,56,331,83"/>
-<area shape="rect" id="node4" href="$classTile.html#aabadd9837d118fa1b286b7dfa2e0a558" title="Tile::getLivability" alt="" coords="209,107,329,133"/>
-</map>

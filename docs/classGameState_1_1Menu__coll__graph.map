@@ -1,4 +1,0 @@
-<map id="GameState::Menu" name="GameState::Menu">
-<area shape="rect" id="node2" href="$classGameState_1_1State.html" title="{GameState::State\n|# logger\l# msgDown\l# msgUp\l# recvMsgDown\l# recvMsgUp\l|+ init()\l+ setLogger()\l+ update()\l+ render()\l+ nextState()\l+ clearNextState()\l+ shouldClose()\l+ passDown()\l+ passUp()\l+ recvDown()\l+ recvUp()\l}" alt="" coords="5,5,135,288"/>
-<area shape="rect" id="node3" href="$classComponent_1_1Menu.html" title="{Component::Menu\n|&#45; head\l&#45; options\l&#45; top\l&#45; left\l&#45; height\l&#45; width\l&#45; selected\l|+ Menu()\l+ Menu()\l+ render()\l+ update()\l+ setDims()\l&#45; drawBorder()\l&#45; drawBar()\l&#45; drawPipe()\l}" alt="" coords="159,13,288,281"/>
-</map>

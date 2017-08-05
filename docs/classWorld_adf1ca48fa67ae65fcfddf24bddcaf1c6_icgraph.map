@@ -1,8 +1,0 @@
-<map id="World::configure" name="World::configure">
-<area shape="rect" id="node2" href="$classServer.html#a011fa4233b24eb0397524c33cb6ea73f" title="Server::configure" alt="" coords="171,5,292,32"/>
-<area shape="rect" id="node5" href="$classGame.html#ad2d16756f154ae7da7510b1c7bbcf6cc" title="Game::configure" alt="" coords="172,56,291,83"/>
-<area shape="rect" id="node3" href="$classServer.html#a8b1fafda0754578f16a974195d120e92" title="Server::setup" alt="" coords="340,5,440,32"/>
-<area shape="rect" id="node4" href="$server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="488,5,539,32"/>
-<area shape="rect" id="node6" href="$classGame.html#ad7a2b7ff71e3064a289680944a27a42e" title="Game::setup" alt="" coords="341,56,439,83"/>
-<area shape="rect" id="node7" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="488,56,539,83"/>
-</map>

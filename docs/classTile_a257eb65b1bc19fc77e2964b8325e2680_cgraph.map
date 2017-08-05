@@ -1,5 +1,0 @@
-<map id="Tile::randomSpawn" name="Tile::randomSpawn">
-<area shape="rect" id="node2" href="$classTile.html#a96ce55d5fcb4b12880531af2138ba6b2" title="Tile::init" alt="" coords="308,5,376,32"/>
-<area shape="rect" id="node4" href="$classTile.html#aeeb5593bb6b75aae2edfcccbc84ab378" title="Tile::Tile" alt="" coords="188,31,260,57"/>
-<area shape="rect" id="node3" href="$classColorPallete.html#a03f2ad8887f2628c4aa0c7b61729671b" title="ColorPallete::addColor" alt="" coords="424,5,577,32"/>
-</map>

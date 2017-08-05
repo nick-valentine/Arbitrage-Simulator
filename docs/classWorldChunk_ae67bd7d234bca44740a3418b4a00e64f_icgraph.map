@@ -1,9 +1,0 @@
-<map id="WorldChunk::configure" name="WorldChunk::configure">
-<area shape="rect" id="node2" href="$classServer.html#a011fa4233b24eb0397524c33cb6ea73f" title="Server::configure" alt="" coords="235,5,356,32"/>
-<area shape="rect" id="node5" href="$classGame.html#ad2d16756f154ae7da7510b1c7bbcf6cc" title="Game::configure" alt="" coords="236,56,355,83"/>
-<area shape="rect" id="node8" href="$classWorldChunk.html#a91bb3617decfca9f60c0db40e478e682" title="WorldChunk::WorldChunk" alt="" coords="208,107,383,133"/>
-<area shape="rect" id="node3" href="$classServer.html#a8b1fafda0754578f16a974195d120e92" title="Server::setup" alt="" coords="431,5,531,32"/>
-<area shape="rect" id="node4" href="$server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="579,5,629,32"/>
-<area shape="rect" id="node6" href="$classGame.html#ad7a2b7ff71e3064a289680944a27a42e" title="Game::setup" alt="" coords="432,56,529,83"/>
-<area shape="rect" id="node7" href="$game_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="579,56,629,83"/>
-</map>

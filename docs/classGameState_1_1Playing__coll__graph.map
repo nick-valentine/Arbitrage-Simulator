@@ -1,6 +1,0 @@
-<map id="GameState::Playing" name="GameState::Playing">
-<area shape="rect" id="node2" href="$classGameState_1_1State.html" title="{GameState::State\n|# logger\l# msgDown\l# msgUp\l# recvMsgDown\l# recvMsgUp\l|+ init()\l+ setLogger()\l+ update()\l+ render()\l+ nextState()\l+ clearNextState()\l+ shouldClose()\l+ passDown()\l+ passUp()\l+ recvDown()\l+ recvUp()\l}" alt="" coords="5,147,135,429"/>
-<area shape="rect" id="node3" href="$classCamera.html" title="Viewport for drawing the world and player modified by own position. " alt="" coords="161,198,251,378"/>
-<area shape="rect" id="node4" href="$classPlayer.html" title="Player. " alt="" coords="275,176,419,400"/>
-<area shape="rect" id="node5" href="$classAbstractGameObject.html" title="The Abstract Game Object. " alt="" coords="275,5,419,97"/>
-</map>
