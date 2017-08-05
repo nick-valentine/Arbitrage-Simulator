@@ -1,6 +1,5 @@
-Trade App
+Arbitrage-Simulator
 =========
-(The name is open for discussion)
 
 What is it?
 -----------
