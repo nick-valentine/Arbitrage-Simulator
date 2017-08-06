@@ -26,6 +26,7 @@ public:
 
     void move(int y, int x);
     void getYX(int &y, int &x);
+    std::string getName();
 
     void draw(Window::window_ptr window, int offsetTop, int offsetLeft);
 private:

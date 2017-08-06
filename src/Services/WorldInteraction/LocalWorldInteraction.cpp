@@ -2,15 +2,11 @@
 
 LocalWorldInteraction::LocalWorldInteraction() : World("")
 {
-    this->playerY = 0;
-    this->playerX = 0;
     this->generator = Generator::DefaultGenerator();
 }
 
 LocalWorldInteraction::LocalWorldInteraction(std::string worldName) : World(worldName)
 {
-    this->playerY = 0;
-    this->playerX = 0;
     this->generator = Generator::DefaultGenerator();
 }
 
@@ -30,21 +26,23 @@ void LocalWorldInteraction::cleanup()
 
 }
 
-void LocalWorldInteraction::draw(Window::window_ptr window)
+void LocalWorldInteraction::draw(Window::window_ptr window, int offsetTop, int offsetLeft)
 {
-    World::draw(window, this->playerY, this->playerX);
+    World::draw(window, offsetTop, offsetLeft);
+    for (int i = 0; i < this->players.size(); ++i) {
+        this->players[i].draw(window, offsetTop, offsetLeft);
+    }
 }
 
-void LocalWorldInteraction::movePlayerToCoordinate(int y, int x)
+void LocalWorldInteraction::movePlayer(int index, int y, int x)
 {
-    this->playerY = y;
-    this->playerX = x;
+    this->players[index].move(y, x);
 }
 
-Tile LocalWorldInteraction::getTileUnderPlayer()
+Tile LocalWorldInteraction::getTileUnderPlayer(int index)
 {
     int chunkY, chunkX, localY, localX;
-    this->playerCoordinatesToChunkCoordinates(chunkY, chunkX, localY, localX);
+    this->playerCoordinatesToChunkCoordinates(index, chunkY, chunkX, localY, localX);
     return this->chunks[chunkY][chunkX].tiles[localY][localX];
 }
 
@@ -60,11 +58,14 @@ City LocalWorldInteraction::getCity(int y, int x)
 }
 
 void LocalWorldInteraction::playerCoordinatesToChunkCoordinates(
+    int index,
     int &chunkY, int &chunkX,
     int &Y, int &X
 ) {
+    int playerY, playerX;
+    this->players[index].getYX(playerY, playerX);
     this->globalCoordinatesToChunkCoordinates(
-        this->playerY, this->playerX,
+        playerY, playerX,
         chunkY, chunkX,
         Y, X
     );
@@ -101,6 +102,25 @@ WorldChunk LocalWorldInteraction::getChunk(int y, int x) const
     return WorldChunk();
 }
 
+int LocalWorldInteraction::getPlayer(std::string name)
+{
+    for (int i = 0; i < this->players.size(); ++i) {
+        if (this->players[i].getName() == name) {
+            return i;
+        }
+    }
+    this->players.push_back(Player(name, 200, 200));
+    return this->players.size() - 1;
+}
+
+Player LocalWorldInteraction::playerInfo(int index)
+{
+    if (index != -1) {
+        return this->players[index];
+    }
+    return Player();
+}
+
 int LocalWorldInteraction::getChunkHeight()
 {
     return this->chunkHeight;
@@ -119,4 +139,20 @@ int LocalWorldInteraction::getWorldHeight()
 int LocalWorldInteraction::getWorldWidth()
 {
     return World::worldWidth;
+}
+
+void LocalWorldInteraction::playersToStringstream(std::stringstream *ss)
+{
+    for (int i = 0; i < this->players.size(); ++i) {
+        this->players[i].toStringStream(ss);
+    }
+}
+
+void LocalWorldInteraction::playersFromStringstream(std::stringstream *ss)
+{
+    this->players.clear();
+    while ((*ss).good()) {
+        Player player(ss);
+        this->players.push_back(player);
+    }
 }

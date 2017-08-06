@@ -8,6 +8,9 @@ std::map<int, std::string (*)(ServerSession &myself, std::string msg)> ServerSes
         {ServerSession::REQUEST_WORLD_DIMS, GetWorldDimensionsHandler},
         {ServerSession::QUIT, QuitHandler},
         {ServerSession::REQUEST_CHUNK, GetWorldChunkHandler},
+        {ServerSession::REQUEST_PLAYER, GetPlayerHandler},
+        {ServerSession::REQUEST_ALL_PLAYERS, GetAllPlayersHandler},
+        {ServerSession::PLAYER_MOVE, PlayerMovedHandler},
     }; 
 
 ServerSession::ServerSession()
@@ -198,5 +201,40 @@ std::string ServerSession::GetWorldChunkHandler(ServerSession &myself, std::stri
     ss<<Globals::network_message_delimiter;
 
     return ss.str();
-    
+}
+
+std::string ServerSession::GetPlayerHandler(ServerSession &myself, std::string msg)
+{
+    std::stringstream ss;
+    ss.str(msg);
+    int type;
+    std::string name;
+    ss>>type>>name;
+    int index = myself.world->getPlayer(name);
+    ss<<index<<Globals::network_message_delimiter;
+    return ss.str();
+}
+
+std::string ServerSession::GetAllPlayersHandler(ServerSession &myself, std::string msg)
+{
+    std::stringstream ss;
+    myself.world->playersToStringstream(&ss);
+    return ss.str() + Globals::network_message_delimiter;
+}
+
+std::string ServerSession::PlayerMovedHandler(ServerSession &myself, std::string msg)
+{
+    std::stringstream ss;
+    ss.str(msg);
+    int type, posY, posX;
+    ss>>type>>posY>>posX;
+    if (myself.logger) {
+        myself.logger->debug(
+            "Player moved to (%d, %d)",
+            posY,
+            posX
+        );
+    }
+    ss<<ServerSession::REQUEST_OK<<Globals::network_message_delimiter;
+    return ss.str();
 }

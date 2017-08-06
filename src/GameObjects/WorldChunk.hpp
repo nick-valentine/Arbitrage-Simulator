@@ -42,12 +42,14 @@ public:
 
     void generateChunk();
 
-    void draw(Window::window_ptr window, int playerY, int playerX);
+    void draw(Window::window_ptr window, int offsetTop, int offsetLeft);
 
     City getCity(int y, int x);
 
     static unsigned int getChunkWidth();
     static unsigned int getChunkHeight();
+    static unsigned int setChunkWidth (unsigned int w);
+    static unsigned int setChunkHeight(unsigned int h);
     static int getMaxCitiesPerChunk();
 
     std::vector<City> cities;

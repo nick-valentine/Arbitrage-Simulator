@@ -28,9 +28,8 @@ public:
      *
      * @param  GameWindow &window
      * @param  WorldInteractionInterface  &world
-     * @param  Player &player
      */
-    void render(Window::window_ptr window, WorldInteractionInterface &worldProxy, Player &player);
+    void render(Window::window_ptr window, WorldInteractionInterface &worldProxy);
 private:
     unsigned int pos_y;
     unsigned int pos_x;

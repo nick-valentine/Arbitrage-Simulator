@@ -38,9 +38,9 @@ public:
 
     bool loadWorld(boost::shared_ptr<Logger> logger);
     void cleanup();
-    void draw(Window::window_ptr window);
-    void draw(Window::window_ptr window, int playerY, int playerX);
-    void movePlayerToCoordinate(int y, int x);
+    void movePlayer(int index, int y, int x);
+    int getPlayer(std::string name);
+    void getAllPlayers();
 
     City getCity(int y, int x);
 private:

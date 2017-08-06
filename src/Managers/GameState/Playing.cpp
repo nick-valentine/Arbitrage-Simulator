@@ -2,7 +2,7 @@
 
 void GameState::Playing::init()
 {
-    this->player = Player("Bob", 200, 200);
+    this->player = -1;
     this->logger = Logger::LoggerPtr(new NullLogger());
     this->camera = Camera(0, 0);
     this->close  = false;
@@ -11,6 +11,9 @@ void GameState::Playing::init()
 
 void GameState::Playing::update(WorldInteractionInterface ** worldProxy, Context *ctx)
 {
+    if (this->player == -1) {
+        this->player = (*worldProxy)->getPlayer("Bob");
+    }
 
     if (this->recvMsgUp != 0) {
         this->logger->info("Recieved message %i", this->recvMsgUp);
@@ -19,16 +22,16 @@ void GameState::Playing::update(WorldInteractionInterface ** worldProxy, Context
 
     switch(ctx->input) {
         case Input::UP:
-            this->player.move(-1,0);
+            (*worldProxy)->movePlayer(this->player, -1, 0);
             break;
         case Input::DOWN:
-            this->player.move(1,0);
+            (*worldProxy)->movePlayer(this->player, 1, 0);
             break;
         case Input::LEFT:
-            this->player.move(0,-1);
+            (*worldProxy)->movePlayer(this->player, 0, -1);
             break;
         case Input::RIGHT:
-            this->player.move(0,1);
+            (*worldProxy)->movePlayer(this->player, 0, 1);
             break;
         case Input::ESCAPE:
             (*worldProxy)->cleanup();
@@ -37,12 +40,11 @@ void GameState::Playing::update(WorldInteractionInterface ** worldProxy, Context
             this->close = true;
             return;
     };
-    int pos_y, pos_x;
-    this->player.getYX(pos_y, pos_x);
-    (*worldProxy)->movePlayerToCoordinate(pos_y, pos_x);
-    Tile tile = (*worldProxy)->getTileUnderPlayer();
+    Tile tile = (*worldProxy)->getTileUnderPlayer(this->player);
     this->logger->info("Player stepped on tile at height: %i", tile.getElevation());
-    this->logger->info("Player is on tile: %i, %i", pos_x, pos_y);
+    int pos_y, pos_x;
+    (*worldProxy)->playerInfo(this->player).getYX(pos_y, pos_x);
+    this->logger->info("Player stepped on tile: %i, %i", pos_y, pos_x);
     if (tile.getType() == Tile::CITIES) {
         City city = (*worldProxy)->getCity(pos_y, pos_x);
         GameState::CityInventory *cityInventoryScreen = new GameState::CityInventory;
@@ -55,15 +57,14 @@ void GameState::Playing::update(WorldInteractionInterface ** worldProxy, Context
 void GameState::Playing::render(WorldInteractionInterface *worldProxy, Window::window_ptr window)
 {
     int pos_x, pos_y;
-    player.getYX(pos_y, pos_x);
+    worldProxy->playerInfo(this->player).getYX(pos_y, pos_x);
 
     //move camera to player
     this->camera.moveTo(pos_y, pos_x);
-    worldProxy->movePlayerToCoordinate(pos_y, pos_x);
+    this->logger->info("Camera was moved to: %i, %i", pos_y - (window->getHeight()/2), pos_x - (window->getWidth()/2));
     this->camera.render(
         window, 
-        *worldProxy, 
-        this->player
+        *worldProxy
     );
 }
 

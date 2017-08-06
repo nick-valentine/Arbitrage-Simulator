@@ -44,6 +44,9 @@ public:
         REQUEST_CHUNK = 120,
         REQUEST_CITY = 130,
         REQUEST_ITEM_MAP = 140,
+        REQUEST_PLAYER = 150,
+        REQUEST_ALL_PLAYERS = 160,
+        PLAYER_MOVE = 170
     };
 
     enum SESSION_STATE {
@@ -162,6 +165,37 @@ private:
      */
     static std::string GetWorldChunkHandler(ServerSession &myself, std::string msg);
 
+
+    /**
+     * Request Handler: Get Player
+     * Gets a player with given name if one exists, otherwise provides a new player
+     *
+     * @param  ServerSession &myself
+     * @param  std::string msg the message the client sent
+     * @return std::string the response
+     */
+    static std::string GetPlayerHandler(ServerSession &myself, std::string msg);
+
+    /**
+     * Request Handler: Get All Player
+     * Get all players connected to this server
+     *
+     * @param  ServerSession &myself
+     * @param  std::string msg the message the client sent
+     * @return std::string the response
+     */
+    static std::string GetAllPlayersHandler(ServerSession &myself, std::string msg);
+
+    /**
+     * Request Handler: Player has moved
+     * Recieves new location of the player in order to replicate it to all
+     * other clients
+     *
+     * @param  ServerSession &myself
+     * @param  std::string msg the message the client sent
+     * @return std::string the response
+     */
+    static std::string PlayerMovedHandler(ServerSession &myself, std::string msg);
 };
 
 #endif //SERVER_SESSION_HPP

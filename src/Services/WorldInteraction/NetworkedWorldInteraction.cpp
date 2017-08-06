@@ -7,8 +7,6 @@ NetworkedWorldInteraction::NetworkedWorldInteraction(std::string server, std::st
         this->connected = false;
     }
     this->configure();
-    this->playerY = 0;
-    this->playerX = 0;
     this->chunksLoaded = std::vector< std::pair<int, int> >();
 }
 
@@ -23,6 +21,7 @@ bool NetworkedWorldInteraction::loadWorld(boost::shared_ptr<Logger> logger)
         return false;
     }
     this->getMetadata();
+    this->getAllPlayers();
 
     return true;
 }
@@ -33,29 +32,25 @@ void NetworkedWorldInteraction::cleanup()
     this->quit();
 }
 
-void NetworkedWorldInteraction::draw(Window::window_ptr window)
+void NetworkedWorldInteraction::movePlayer(int index, int y, int x)
 {
-    this->draw(window, playerY, playerX);
-}
+    LocalWorldInteraction::movePlayer(index, y, x);
 
-void NetworkedWorldInteraction::draw(Window::window_ptr window, int playerY, int playerX)
-{
-    for (int i = 0; i < this->chunks.size(); ++i) {
-        for (int j = 0; j < this->chunks[i].size(); ++j) {
-            if (this->hasChunkLoaded(i, j)) {
-                this->chunks[i][j].draw(window, playerY, playerX);
-            }
-        }
+    std::string msg = boost::lexical_cast<std::string>(ServerSession::PLAYER_MOVE) + " " +
+        boost::lexical_cast<std::string>(y) + " " +
+        boost::lexical_cast<std::string>(x) + "\n";
+    this->connection.write(msg);
+    msg = this->connection.read();
+    std::stringstream ss;
+    ss.str(msg);
+    int response;
+    ss>>response;
+    if (response != ServerSession::REQUEST_OK) {
+        this->logger->warn("Server did not acknowlege your movement");
     }
-}
-
-void NetworkedWorldInteraction::movePlayerToCoordinate(int y, int x)
-{
-    this->playerY = y;
-    this->playerX = x;
 
     int chunkX, chunkY, localX, localY;
-    this->playerCoordinatesToChunkCoordinates(chunkY, chunkX, localY, localX);
+    this->playerCoordinatesToChunkCoordinates(index, chunkY, chunkX, localY, localX);
     for (int i = chunkY-1; i <= chunkY+1; ++i) {
         for (int j = chunkX-1; j <= chunkX+1; ++j) {
             if (
@@ -66,6 +61,30 @@ void NetworkedWorldInteraction::movePlayerToCoordinate(int y, int x)
             }
         }
     }
+}
+
+int NetworkedWorldInteraction::getPlayer(std::string name)
+{
+    std::string msg = boost::lexical_cast<std::string>(ServerSession::REQUEST_PLAYER) + " " + 
+        name + "\n";
+    this->connection.write(msg);
+    msg = this->connection.read();
+    std::stringstream ss;
+    int player;
+    ss.str(msg);
+    ss>>player;
+    this->logger->info("Player fetched: %i", player);
+    return player;
+}
+
+void NetworkedWorldInteraction::getAllPlayers()
+{
+    std::string msg = boost::lexical_cast<std::string>(ServerSession::REQUEST_ALL_PLAYERS) + "\n";
+    this->connection.write(msg);
+    msg = this->connection.read();
+    std::stringstream ss;
+    ss.str(msg);
+    this->playersFromStringstream(&ss);
 }
 
 City NetworkedWorldInteraction::getCity(int y, int x)
@@ -135,6 +154,8 @@ void NetworkedWorldInteraction::getMetadata()
         >>this->chunkWidth
         >>this->chunkHeight
     ;
+    WorldChunk::setChunkWidth(this->chunkWidth);
+    WorldChunk::setChunkHeight(this->chunkHeight);
 }
 
 std::string NetworkedWorldInteraction::checkVersion()
