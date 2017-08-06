@@ -86,6 +86,7 @@ public:
 
     SESSION_STATE getState();
 private:
+    const static int tickrate;
     SESSION_STATE state;
     std::string version;
     std::thread thread;
@@ -96,6 +97,7 @@ private:
     boost::shared_ptr<Logger> logger;
 
     void sessionLoop();
+    void readHandle();
 
     /** 
      * Request Handlers.

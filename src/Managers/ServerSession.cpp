@@ -1,5 +1,7 @@
 #include "Managers/ServerSession.hpp"
 
+const int ServerSession::tickrate = 8;
+
 std::map<int, std::string (*)(ServerSession &myself, std::string msg)> ServerSession::requestMap = 
     {
         {ServerSession::VERSION_CHECK, VersionCheckHandler},
@@ -70,36 +72,10 @@ void ServerSession::sessionLoop()
     this->state = HANDSHAKING;
     while (true) {
         try {
-            if (this->logger) {
-                this->logger->debug("Reading");
+            if (this->conn.poll()) {
+                this->readHandle();
             }
-            std::string message = this->conn.read();
-            if (this->logger) {
-                this->logger->debug(message.c_str());
-            }
-            std::stringstream ss;
-            int request_type;
-        
-            ss.str(message);
-            ss>>request_type;
-            std::string response = boost::lexical_cast<std::string>(ERROR) + " invalid message" + Globals::network_message_delimiter;
-            if (this->requestMap.find(request_type) != this->requestMap.end()) {
-                response = this->requestMap[request_type](*this, message);
-            }
-            
-            if (this->logger) {
-                this->logger->debug("Writing");
-                this->logger->debug(response.c_str());
-            }
-            this->conn.write(response);
-
-            if (state == DISCONNECTING) {
-                this->conn.close();
-                this->notify("session_close", this->id);
-                this->state = DISCONNECTED;
-                return;
-            }
-        
+            std::this_thread::sleep_for(std::chrono::milliseconds(ServerSession::tickrate));
         } catch(std::exception& e) {
             std::cerr<<e.what()<<std::endl;
             this->conn.close();
@@ -109,6 +85,39 @@ void ServerSession::sessionLoop()
         }
     }
 
+}
+
+void ServerSession::readHandle()
+{
+    if (this->logger) {
+        this->logger->debug("Reading");
+    }
+    std::string message = this->conn.read();
+    if (this->logger) {
+        this->logger->debug(message.c_str());
+    }
+    std::stringstream ss;
+    int request_type;
+
+    ss.str(message);
+    ss>>request_type;
+    std::string response = boost::lexical_cast<std::string>(ERROR) + " invalid message" + Globals::network_message_delimiter;
+    if (this->requestMap.find(request_type) != this->requestMap.end()) {
+        response = this->requestMap[request_type](*this, message);
+    }
+    
+    if (this->logger) {
+        this->logger->debug("Writing");
+        this->logger->debug(response.c_str());
+    }
+    this->conn.write(response);
+
+    if (state == DISCONNECTING) {
+        this->conn.close();
+        this->notify("session_close", this->id);
+        this->state = DISCONNECTED;
+        return;
+    }
 }
 
 std::string ServerSession::VersionCheckHandler(ServerSession &myself, std::string msg)

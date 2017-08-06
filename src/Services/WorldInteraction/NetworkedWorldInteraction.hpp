@@ -39,6 +39,8 @@ public:
     bool loadWorld(boost::shared_ptr<Logger> logger);
     void cleanup();
     void movePlayer(int index, int y, int x);
+    Tile getTileUnderPlayer(int index);
+    Tile getTile(int chunkY, int chunkX, int localY, int localX);
     int getPlayer(std::string name);
     void getAllPlayers();
 

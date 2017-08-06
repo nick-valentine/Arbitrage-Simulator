@@ -43,6 +43,11 @@ Tile LocalWorldInteraction::getTileUnderPlayer(int index)
 {
     int chunkY, chunkX, localY, localX;
     this->playerCoordinatesToChunkCoordinates(index, chunkY, chunkX, localY, localX);
+    return this->getTile(chunkY, chunkX, localY, localX);
+}
+
+Tile LocalWorldInteraction::getTile(int chunkY, int chunkX, int localY, int localX)
+{
     return this->chunks[chunkY][chunkX].tiles[localY][localX];
 }
 

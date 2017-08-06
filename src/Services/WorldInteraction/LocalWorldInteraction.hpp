@@ -30,6 +30,7 @@ public:
     void movePlayer(int index, int y, int x);
 
     Tile getTileUnderPlayer(int index);
+    Tile getTile(int chunkY, int chunkX, int localY, int localX);
 
     City getCity(int y, int x);
 

@@ -66,6 +66,18 @@ std::string Connection::read()
     }
 }
 
+bool Connection::poll()
+{
+    try {
+        boost::asio::socket_base::bytes_readable command(true);
+        this->socket->io_control(command);
+        std::size_t bytes_readable = command.get(); 
+        return bytes_readable != 0;
+    } catch (boost::system::system_error& e) {
+        return false;
+    }
+}
+
 bool Connection::write(std::string msg)
 {
     if (this->connected) {

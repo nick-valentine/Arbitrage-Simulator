@@ -63,6 +63,24 @@ void NetworkedWorldInteraction::movePlayer(int index, int y, int x)
     }
 }
 
+Tile NetworkedWorldInteraction::getTileUnderPlayer(int index)
+{
+    int chunkY, chunkX, localY, localX;
+    this->playerCoordinatesToChunkCoordinates(index, chunkY, chunkX, localY, localX);
+    return this->getTile(chunkY, chunkX, localY, localX);
+}
+
+Tile NetworkedWorldInteraction::getTile(int chunkY, int chunkX, int localY, int localX)
+{
+    if (
+        this->chunkInWorld(chunkY,chunkX) &&
+        !this->hasChunkLoaded(chunkY, chunkX)
+    ) {
+        this->fetchChunk(chunkY, chunkX);
+    }
+    LocalWorldInteraction::getTile(chunkY, chunkX, localY, localX);
+}
+
 int NetworkedWorldInteraction::getPlayer(std::string name)
 {
     std::string msg = boost::lexical_cast<std::string>(ServerSession::REQUEST_PLAYER) + " " + 

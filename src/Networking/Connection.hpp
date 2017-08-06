@@ -39,6 +39,13 @@ public:
     std::string read();
 
     /**
+     * Poll to see if data is ready to be read
+     *
+     * @return bool
+     */
+    bool poll();
+
+    /**
      * Write msg to this socket.
      *
      * @param  std::string msg
