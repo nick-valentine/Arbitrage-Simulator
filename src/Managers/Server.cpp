@@ -12,6 +12,12 @@ Server::Server()
 
 Server::~Server()
 {
+    for (int i = 0; i < this->sessions.size(); ++i) {
+        if (this->sessions[i] != NULL) {
+            delete this->sessions[i];
+            this->sessions[i] = NULL;
+        }
+    }
 }
 
 int Server::setup()
@@ -34,8 +40,9 @@ int Server::run()
         acceptor.accept(*conn.get());
         if (this->sessions.size() < 32) {
             ServerSession *temp = new ServerSession(conn);
-            temp->init(this->world, this->version, this->sessions.size());
-            this->logger->info("Client: %i connected", this->sessions.size());
+            int spot = this->firstFreeSpot();
+            temp->init(this->world, this->version, spot);
+            this->logger->info("Client: %i connected", spot);
             temp->setLogger(this->logger);
             temp->run();
             temp->addListener("session_close", this);
@@ -87,13 +94,27 @@ void Server::configure()
 
 }
 
+int Server::firstFreeSpot()
+{
+    for (int i = 0; i < this->sessions.size(); ++i) {
+        if (this->sessions[i] == NULL) {
+            return i;
+        }
+    }
+    this->sessions.push_back(NULL);
+    return this->sessions.size() - 1;
+}
+
 void Server::act(int i)
 {
-    auto it = std::begin(this->sessions);
-    it += i; 
-    if ((*it).getState() == ServerSession::DISCONNECTED) {
-        (*it).cleanup();
-        this->sessions.erase(it);
+    for (int i = 0; i < this->sessions.size(); ++i) {
+        if (this->sessions[i] != NULL) {
+            if (this->sessions[i]->getState() == ServerSession::DISCONNECTED) {
+                this->sessions[i]->cleanup();
+                delete this->sessions[i];
+                this->sessions[i] = NULL;
+            }
+        }
     }
     this->logger->info("Client: %i disconnected", i);
 }

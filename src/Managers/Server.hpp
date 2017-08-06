@@ -2,12 +2,12 @@
 #define MANAGER_SERVER_HPP
 
 #include <string>
-#include <boost/ptr_container/ptr_vector.hpp>
 #include <boost/shared_ptr.hpp>
 #include <sstream>
 #include <map>
 #include <chrono>
 #include <thread>
+#include <vector>
 
 #include "EventNotifier.hpp"
 #include "Services/Logger/Logger.hpp"
@@ -45,9 +45,11 @@ private:
     void initialize();
     void configure();
 
+    int firstFreeSpot();
+
     void act(int i);
 
-    boost::ptr_vector<ServerSession> sessions;
+    std::vector<ServerSession*> sessions;
 
     ServerSession::world_ptr world;
 };
