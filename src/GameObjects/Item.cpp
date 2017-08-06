@@ -54,7 +54,8 @@ void Item::toStringStream(std::stringstream *ss)
     (*ss)<<this->id<<Globals::file_delimiter;
     (*ss)<<this->name<<Globals::file_delimiter;
     (*ss)<<this->description<<Globals::file_delimiter;
-    (*ss)<<this->weight<<Globals::object_delimiter;
+    (*ss)<<this->weight<<Globals::file_delimiter;
+    (*ss)<<this->baseWorth<<Globals::object_delimiter;
 }
 
 int Item::getId()

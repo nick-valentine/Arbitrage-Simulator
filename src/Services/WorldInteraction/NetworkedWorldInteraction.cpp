@@ -22,6 +22,8 @@ bool NetworkedWorldInteraction::loadWorld(boost::shared_ptr<Logger> logger)
         logger->warn("Could not connect to server");
         return false;
     }
+    this->getMetadata();
+
     return true;
 }
 
@@ -111,6 +113,28 @@ bool NetworkedWorldInteraction::handShake()
         return false;
     }
     return true;
+}
+
+void NetworkedWorldInteraction::getMetadata()
+{
+    std::string message = boost::lexical_cast<std::string>(ServerSession::REQUEST_ITEM_MAP) + "\n";
+    this->connection.write(message);
+    std::string response = this->connection.read();
+    std::stringstream ss;
+    ss.str(response);
+    ItemMap::fromStringStream(&ss);
+
+    message = boost::lexical_cast<std::string>(ServerSession::REQUEST_WORLD_DIMS) + "\n";
+    this->connection.write(message);
+    response = this->connection.read();
+    ss.str(std::string());
+    int worldX, worldY, chunkX, chunkY;
+    ss.str(response);
+    ss>>World::worldWidth
+        >>World::worldHeight
+        >>this->chunkWidth
+        >>this->chunkHeight
+    ;
 }
 
 std::string NetworkedWorldInteraction::checkVersion()

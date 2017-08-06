@@ -13,7 +13,6 @@
 #include "Services/Logger/Logger.hpp"
 #include "Services/Logger/ConsoleLogger.hpp"
 #include "Services/WorldInteraction/LocalWorldInteraction.hpp"
-#include "GameObjects/ItemMap.hpp"
 #include "Managers/ServerSession.hpp"
 
 using boost::asio::ip::tcp;

@@ -40,9 +40,10 @@ public:
         VERSION_INCOMPATIBLE = 13,
         LOGIN = 20,
         REQUEST_CHARACTER = 100,
-        REQUEST_WORLD = 110,
+        REQUEST_WORLD_DIMS = 110,
         REQUEST_CHUNK = 120,
         REQUEST_CITY = 130,
+        REQUEST_ITEM_MAP = 140,
     };
 
     enum SESSION_STATE {
@@ -110,6 +111,16 @@ private:
     static std::string VersionCheckHandler(ServerSession &myself, std::string msg);
 
     /**
+     * Request Handler: GetWorldDimenstions
+     * Sends the server's world size and world chunk size
+     *
+     * @param  ServerSession &myself
+     * @param  std::string msg the message the client sent
+     * @return std::string the response
+     */
+    static std::string GetWorldDimensionsHandler(ServerSession &myself, std::string msg);
+
+    /**
      * Request Handler: Login Handler
      * Check for existing user with same username and password, if match then
      * this session may use that users character. Otherwise, deny access.
@@ -119,6 +130,16 @@ private:
      * @return std::string the response
      */
     static std::string LoginHandler(ServerSession &myself, std::string msg);
+
+    /**
+     * Request Handler: Get ItemMap
+     * Get the server's item map, so that all clients will match
+     *
+     * @param  ServerSession &myself
+     * @param  std::string msg the message the client sent
+     * @return std::string the response
+     */
+    static std::string GetItemMapHandler(ServerSession &myself, std::string msg);
 
     /**
      * Request Handler: Quit Handler

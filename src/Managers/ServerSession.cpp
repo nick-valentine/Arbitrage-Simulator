@@ -4,6 +4,8 @@ std::map<int, std::string (*)(ServerSession &myself, std::string msg)> ServerSes
     {
         {ServerSession::VERSION_CHECK, VersionCheckHandler},
         {ServerSession::LOGIN, LoginHandler},
+        {ServerSession::REQUEST_ITEM_MAP, GetItemMapHandler},
+        {ServerSession::REQUEST_WORLD_DIMS, GetWorldDimensionsHandler},
         {ServerSession::QUIT, QuitHandler},
         {ServerSession::REQUEST_CHUNK, GetWorldChunkHandler},
     }; 
@@ -135,6 +137,18 @@ std::string ServerSession::VersionCheckHandler(ServerSession &myself, std::strin
     }
 }
 
+std::string ServerSession::GetWorldDimensionsHandler(ServerSession &myself, std::string msg)
+{
+    unsigned int worldX = myself.world->getWorldWidth();
+    unsigned int worldY = myself.world->getWorldHeight();
+    int chunkX = myself.world->getChunkWidth();
+    int chunkY = myself.world->getChunkHeight();
+    return boost::lexical_cast<std::string>(worldX) + " " +
+        boost::lexical_cast<std::string>(worldY) + " " +
+        boost::lexical_cast<std::string>(chunkX) + " " +
+        boost::lexical_cast<std::string>(chunkY) + "\n";
+}
+
 std::string ServerSession::LoginHandler(ServerSession &myself, std::string msg)
 {
     int type;
@@ -143,6 +157,13 @@ std::string ServerSession::LoginHandler(ServerSession &myself, std::string msg)
     ss.str(msg);
     ss>>type>>username>>password;
     return "Welcome, " + username;
+}
+
+std::string ServerSession::GetItemMapHandler(ServerSession &myself, std::string msg)
+{
+    std::stringstream ss;
+    ItemMap::toStringStream(&ss);
+    return ss.str() + "\n";
 }
 
 std::string ServerSession::QuitHandler(ServerSession &myself, std::string msg)

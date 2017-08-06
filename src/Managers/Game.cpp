@@ -45,11 +45,6 @@ int Game::setup()
     this->stateStack.top()->init();
     this->stateStack.top()->setLogger(this->logger);
 
-    // @todo: fetch this specific data from the server if ther is one, and
-    // generalize much of this and the server's common code into  a
-    // boostrappign class
-    ItemMap::init(this->logger);
-
     return 0;
 }
 

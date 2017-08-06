@@ -16,6 +16,8 @@ LocalWorldInteraction::LocalWorldInteraction(std::string worldName) : World(worl
 
 bool LocalWorldInteraction::loadWorld(boost::shared_ptr<Logger> logger)
 {
+    ItemMap::init(logger);
+
     this->generateWorld();
 
     this->generator.execute(this, logger);
@@ -97,4 +99,24 @@ WorldChunk LocalWorldInteraction::getChunk(int y, int x) const
         return this->chunks[y][x];
     }
     return WorldChunk();
+}
+
+int LocalWorldInteraction::getChunkHeight()
+{
+    return this->chunkHeight;
+}
+
+int LocalWorldInteraction::getChunkWidth()
+{
+    return this->chunkWidth;
+}
+
+int LocalWorldInteraction::getWorldHeight()
+{
+    return World::worldHeight;
+}
+
+int LocalWorldInteraction::getWorldWidth()
+{
+    return World::worldWidth;
 }

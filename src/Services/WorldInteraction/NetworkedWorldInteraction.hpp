@@ -14,6 +14,7 @@
 
 #include "ConfigLoader.hpp"
 #include "GameObjects/World.hpp"
+#include "GameObjects/ItemMap.hpp"
 #include "Managers/ServerSession.hpp"
 #include "Networking/Connection.hpp"
 #include "Window/Window.hpp"
@@ -27,8 +28,6 @@ using boost::asio::ip::tcp;
  * Manager for networked world interaction.
  *
  * @TODO: implement more graceful error handling
- * @TODO: fetch world & worldChunk sizes from server
- * @TODO: fetch worldChunks from server
  * @TODO: send player movement notices to server
  * @TODO: fetch city objects from server
  */
@@ -57,6 +56,7 @@ private:
     Logger::LoggerPtr logger;
 
     bool handShake();
+    void getMetadata();
 
     std::string checkVersion();
     int login();

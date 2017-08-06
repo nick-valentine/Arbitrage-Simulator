@@ -62,8 +62,6 @@ void Server::initialize()
 {
     this->logger = boost::shared_ptr<Logger>(new ConsoleLogger());
 
-    ItemMap::init(this->logger);
-
     this->world = ServerSession::world_ptr(
         new LocalWorldInteraction(this->worldName)
     );

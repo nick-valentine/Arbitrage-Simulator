@@ -34,6 +34,27 @@ void ItemMap::init(Logger::LoggerPtr logger)
     logger->info("Done loading items");
 }
 
+void ItemMap::fromStringStream(std::stringstream *ss)
+{
+    while ((*ss).good()) {
+        std::string buff;
+        std::getline((*ss), buff, Globals::object_delimiter);
+        std::stringstream tmpSS;
+        tmpSS.str(buff);
+        Item item(&tmpSS);
+        if (ItemMap::collection.find(item.getId()) == ItemMap::collection.end()) {
+            ItemMap::collection[item.getId()] = item;
+        }
+    }
+}
+
+void ItemMap::toStringStream(std::stringstream *ss)
+{
+    for (int i = 0; i < ItemMap::collection.size(); ++i) {
+        ItemMap::collection[i].toStringStream(ss);
+    }
+}
+
 Item ItemMap::get(int id)
 {
     return ItemMap::collection[id];

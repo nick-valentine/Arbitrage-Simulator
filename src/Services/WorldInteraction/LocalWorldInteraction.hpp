@@ -7,6 +7,7 @@
 #include "GameObjects/World.hpp"
 #include "GameObjects/City.hpp"
 #include "GameObjects/Tile.hpp"
+#include "GameObjects/ItemMap.hpp"
 #include "Window/Window.hpp"
 #include "Services/WorldInteraction/WorldInteractionInterface.hpp"
 
@@ -33,6 +34,11 @@ public:
 
     bool chunkInWorld(int chunkY, int chunkX);
     WorldChunk getChunk(int y, int x) const;
+
+    int getChunkHeight();
+    int getChunkWidth();
+    int getWorldHeight();
+    int getWorldWidth();
 protected:
     int playerX;
     int playerY;
