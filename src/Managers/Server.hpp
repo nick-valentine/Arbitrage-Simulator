@@ -9,6 +9,7 @@
 #include <chrono>
 #include <thread>
 
+#include "EventNotifier.hpp"
 #include "Services/Logger/Logger.hpp"
 #include "Services/Logger/ConsoleLogger.hpp"
 #include "Services/WorldInteraction/LocalWorldInteraction.hpp"
@@ -21,7 +22,7 @@ using boost::asio::ip::tcp;
  * Server Manager.
  * Dispatcher and manager for all server sessions. Owns and maintains world state.
  */
-class Server
+class Server : public Listener
 {
 public:
     Server();
@@ -34,7 +35,6 @@ private:
     static const std::string defaultWorldName;
     static const std::string configPortNumberKey;
     static const int defaultPortNumber;
-    static const int cleanupInterval;
 
     boost::shared_ptr<Logger> logger;
 
@@ -45,9 +45,9 @@ private:
     void initialize();
     void configure();
 
+    void act(int i);
+
     boost::ptr_vector<ServerSession> sessions;
-    void cleanupSessions();
-    std::thread cleaner;
 
     ServerSession::world_ptr world;
 };

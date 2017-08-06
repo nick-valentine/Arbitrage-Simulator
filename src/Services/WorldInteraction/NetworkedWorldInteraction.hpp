@@ -37,7 +37,8 @@ class NetworkedWorldInteraction : virtual public WorldInteractionInterface, priv
 public:
     NetworkedWorldInteraction(std::string server, std::string port);
 
-    void loadWorld(boost::shared_ptr<Logger> logger);
+    bool loadWorld(boost::shared_ptr<Logger> logger);
+    void cleanup();
     void draw(Window::window_ptr window);
     void draw(Window::window_ptr window, int playerY, int playerX);
     void movePlayerToCoordinate(int y, int x);
@@ -52,11 +53,14 @@ private:
     bool hasChunkLoaded(int y, int x);
 
     Connection connection;
+    bool connected;
+    Logger::LoggerPtr logger;
 
     bool handShake();
 
     std::string checkVersion();
     int login();
+    void quit();
     int fetchChunk(int chunkY, int chunkX);
 };
 

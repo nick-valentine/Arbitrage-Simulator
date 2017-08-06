@@ -14,6 +14,7 @@ void GameState::Playing::update(WorldInteractionInterface ** worldProxy, Context
 
     if (this->recvMsgUp != 0) {
         this->logger->info("Recieved message %i", this->recvMsgUp);
+        this->recvMsgUp = 0;
     }
 
     switch(ctx->input) {
@@ -30,8 +31,11 @@ void GameState::Playing::update(WorldInteractionInterface ** worldProxy, Context
             this->player.move(0,1);
             break;
         case Input::ESCAPE:
+            (*worldProxy)->cleanup();
+            delete (*worldProxy);
+            (*worldProxy) = NULL;
             this->close = true;
-            break;
+            return;
     };
     int pos_y, pos_x;
     this->player.getYX(pos_y, pos_x);

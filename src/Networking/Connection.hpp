@@ -22,7 +22,7 @@ public:
     Connection(std::string ip, std::string port);
     Connection(socket_ptr sock);
     
-    void connect(std::string ip, std::string port);
+    bool connect(std::string ip, std::string port);
 
     /**
      * If a connection was already made, bind this Connection class to it.

@@ -61,8 +61,6 @@ int Game::run()
     Input input = Input::IGNORED;
 
     while(true) {
-        this->logger->info("Game Ticking");
-
         this->stateStack.top()->render(
             this->worldProxy,
             this->gameWindow

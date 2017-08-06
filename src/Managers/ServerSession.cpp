@@ -4,6 +4,7 @@ std::map<int, std::string (*)(ServerSession &myself, std::string msg)> ServerSes
     {
         {ServerSession::VERSION_CHECK, VersionCheckHandler},
         {ServerSession::LOGIN, LoginHandler},
+        {ServerSession::QUIT, QuitHandler},
         {ServerSession::REQUEST_CHUNK, GetWorldChunkHandler},
     }; 
 
@@ -11,6 +12,7 @@ ServerSession::ServerSession()
 {
     this->state = UNSET;
     this->version = "";
+    this->id = -1;
 }
 
 ServerSession::ServerSession(Connection conn)
@@ -18,12 +20,14 @@ ServerSession::ServerSession(Connection conn)
     this->state = UNSET;
     this->version = "";
     this->setConnection(conn);
+    this->id = -1;
 }
 
-int ServerSession::init(world_ptr world, std::string version)
+int ServerSession::init(world_ptr world, std::string version, int id)
 {
     this->world = world;
     this->version = version;
+    this->id = id;
 }
 
 void ServerSession::setLogger(boost::shared_ptr<Logger> logger)
@@ -86,6 +90,7 @@ void ServerSession::sessionLoop()
 
             if (state == DISCONNECTING) {
                 this->conn.close();
+                this->notify("session_close", this->id);
                 this->state = DISCONNECTED;
                 return;
             }
@@ -93,6 +98,7 @@ void ServerSession::sessionLoop()
         } catch(std::exception& e) {
             std::cerr<<e.what()<<std::endl;
             this->conn.close();
+            this->notify("session_close", this->id);
             this->state = DISCONNECTED;
             return;
         }
@@ -108,7 +114,7 @@ std::string ServerSession::VersionCheckHandler(ServerSession &myself, std::strin
     ss.str(msg);
     ss>>type>>version;
     if (myself.logger) {
-        myself.logger->debug("Client request versio check");
+        myself.logger->debug("Client request version check");
     }
     if (myself.version == version) {
         if (myself.logger) {
@@ -137,6 +143,12 @@ std::string ServerSession::LoginHandler(ServerSession &myself, std::string msg)
     ss.str(msg);
     ss>>type>>username>>password;
     return "Welcome, " + username;
+}
+
+std::string ServerSession::QuitHandler(ServerSession &myself, std::string msg)
+{
+    myself.state = DISCONNECTING;
+    return "Goodbye\n";
 }
 
 std::string ServerSession::GetWorldChunkHandler(ServerSession &myself, std::string msg)

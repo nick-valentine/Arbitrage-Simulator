@@ -10,6 +10,7 @@
 #include <boost/shared_ptr.hpp>
 
 #include "Globals.hpp"
+#include "EventNotifier.hpp"
 #include "Networking/Connection.hpp"
 #include "Services/Logger/Logger.hpp"
 #include "Services/WorldInteraction/LocalWorldInteraction.hpp"
@@ -20,7 +21,7 @@ using boost::asio::ip::tcp;
  * Server Session.
  * Manager for server/client communication.
  */
-class ServerSession
+class ServerSession : public Notifier
 {
 public:
     typedef boost::shared_ptr<LocalWorldInteraction> world_ptr;
@@ -32,7 +33,8 @@ public:
      */
     enum REQUST_TYPE {
         ERROR = 0,
-        REQUEST_OK = 1,
+        QUIT = 1,
+        REQUEST_OK = 2,
         VERSION_CHECK = 10,
         VERSION_CHECK_OK = 12,
         VERSION_INCOMPATIBLE = 13,
@@ -54,7 +56,7 @@ public:
 
     ServerSession();
     ServerSession(Connection conn);
-    int init(world_ptr world, std::string version);
+    int init(world_ptr world, std::string version, int id);
     void setLogger(boost::shared_ptr<Logger> logger);
 
     /**
@@ -83,6 +85,7 @@ private:
     SESSION_STATE state;
     std::string version;
     std::thread thread;
+    int id;
     Connection conn;
     world_ptr world;
 
@@ -116,6 +119,16 @@ private:
      * @return std::string the response
      */
     static std::string LoginHandler(ServerSession &myself, std::string msg);
+
+    /**
+     * Request Handler: Quit Handler
+     * Disconnects from the client
+     *
+     * @param  ServerSession &myself
+     * @param  std::string msg the message the client sent
+     * @return std::string the response
+     */
+    static std::string QuitHandler(ServerSession &myself, std::string msg);
 
     /**
      * Request Handler: Get World Chunk.

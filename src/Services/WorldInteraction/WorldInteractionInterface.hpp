@@ -18,7 +18,8 @@
 class WorldInteractionInterface
 {
 public:
-    virtual void loadWorld(boost::shared_ptr<Logger> logger) = 0;
+    virtual bool loadWorld(boost::shared_ptr<Logger> logger) = 0;
+    virtual void cleanup() = 0;
     virtual void draw(Window::window_ptr window) = 0;
     virtual void movePlayerToCoordinate(int y, int x) = 0;
     virtual Tile getTileUnderPlayer() = 0;

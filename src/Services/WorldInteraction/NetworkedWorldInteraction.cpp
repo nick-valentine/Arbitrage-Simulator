@@ -2,19 +2,33 @@
 
 NetworkedWorldInteraction::NetworkedWorldInteraction(std::string server, std::string port) : LocalWorldInteraction("NetworkedWorld")
 {
-    this->connection.connect(server, port);
+    this->connected = true;
+    if (!this->connection.connect(server, port)) {
+        this->connected = false;
+    }
     this->configure();
     this->playerY = 0;
     this->playerX = 0;
     this->chunksLoaded = std::vector< std::pair<int, int> >();
 }
 
-void NetworkedWorldInteraction::loadWorld(boost::shared_ptr<Logger> logger)
+bool NetworkedWorldInteraction::loadWorld(boost::shared_ptr<Logger> logger)
 {
-    if (!this->handShake()) {
-        std::cerr<<"Could not connect to server";
-        exit(1);
+    this->logger = logger;
+    if (!this->connected) {
+        return false;
     }
+    if (!this->handShake()) {
+        logger->warn("Could not connect to server");
+        return false;
+    }
+    return true;
+}
+
+void NetworkedWorldInteraction::cleanup()
+{
+    this->logger->info("Quitting");
+    this->quit();
 }
 
 void NetworkedWorldInteraction::draw(Window::window_ptr window)
@@ -122,6 +136,17 @@ int NetworkedWorldInteraction::login()
 {
     std::string message = boost::lexical_cast<std::string>(ServerSession::LOGIN) + " Username Password\n";
     this->connection.write(message);
+    return 1;
+}
+
+void NetworkedWorldInteraction::quit()
+{
+    try {
+        std::string message = boost::lexical_cast<std::string>(ServerSession::QUIT) + "\n";
+        this->connection.write(message);
+        std::string response = this->connection.read();
+    } catch (boost::system::system_error& e) {
+    }
 }
 
 int NetworkedWorldInteraction::fetchChunk(int chunkY, int chunkX)

@@ -168,7 +168,11 @@ void GameState::ServerHistory::updateConnectionMenu(WorldInteractionInterface **
                 this->hostname(this->history[this->selectedHistory]),
                 this->port(this->history[this->selectedHistory])
             );
-            (*worldProxy)->loadWorld(this->logger);
+            if (!(*worldProxy)->loadWorld(this->logger)) {
+                this->logger->warn("Could not connect to server");
+                this->myState = InMenu;
+                return;
+            }
             this->newState = new GameState::Playing;
             this->logger->debug("%d Selected", result);
             break;

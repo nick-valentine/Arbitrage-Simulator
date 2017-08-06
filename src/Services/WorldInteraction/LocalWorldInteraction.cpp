@@ -14,11 +14,18 @@ LocalWorldInteraction::LocalWorldInteraction(std::string worldName) : World(worl
     this->generator = Generator::DefaultGenerator();
 }
 
-void LocalWorldInteraction::loadWorld(boost::shared_ptr<Logger> logger)
+bool LocalWorldInteraction::loadWorld(boost::shared_ptr<Logger> logger)
 {
     this->generateWorld();
 
     this->generator.execute(this, logger);
+
+    return true;
+}
+
+void LocalWorldInteraction::cleanup()
+{
+
 }
 
 void LocalWorldInteraction::draw(Window::window_ptr window)

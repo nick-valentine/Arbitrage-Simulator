@@ -22,7 +22,8 @@ public:
     LocalWorldInteraction();
     LocalWorldInteraction(std::string worldName);
 
-    void loadWorld(boost::shared_ptr<Logger> logger);
+    bool loadWorld(boost::shared_ptr<Logger> logger);
+    void cleanup();
     void draw(Window::window_ptr window);
     void movePlayerToCoordinate(int y, int x);
 

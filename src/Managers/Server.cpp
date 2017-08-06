@@ -5,7 +5,6 @@ const std::string Server::defaultWorldName = "world";
 
 const std::string Server::configPortNumberKey = "server_port";
 const int Server::defaultPortNumber = 9797;
-const int Server::cleanupInterval = 10; //seconds
 
 Server::Server()
 {
@@ -35,9 +34,11 @@ int Server::run()
         acceptor.accept(*conn.get());
         if (this->sessions.size() < 32) {
             ServerSession *temp = new ServerSession(conn);
-            temp->init(this->world, this->version);
+            temp->init(this->world, this->version, this->sessions.size());
+            this->logger->info("Client: %i connected", this->sessions.size());
             temp->setLogger(this->logger);
             temp->run();
+            temp->addListener("session_close", this);
             this->sessions.push_back(temp);
         } else {
             this->logger->warn(
@@ -54,8 +55,6 @@ void Server::initialize()
 {
     this->logger = boost::shared_ptr<Logger>(new ConsoleLogger());
 
-    this->cleaner = std::thread(&Server::cleanupSessions, this);
-
     ItemMap::init(this->logger);
 
     this->world = ServerSession::world_ptr(
@@ -63,6 +62,7 @@ void Server::initialize()
     );
 
     (*this->world).loadWorld(this->logger);
+
 }
 
 void Server::configure()
@@ -87,26 +87,14 @@ void Server::configure()
 
 }
 
-void Server::cleanupSessions()
+void Server::act(int i)
 {
-    while (true) {
-        auto i = std::begin(this->sessions);
-        this->logger->info(
-            "Beginning session cleanup. %d sessions currently exist.",
-            this->sessions.size()
-        );
-        while (i != std::end(this->sessions)) {
-            if ((*i).getState() == ServerSession::DISCONNECTED) {
-                (*i).cleanup();
-                i = this->sessions.erase(i);
-            } else {
-                ++i;
-            }
-        }
-        this->logger->info(
-            "Finished session cleanup. %d sessions currently exist.",
-            this->sessions.size()
-        );
-        std::this_thread::sleep_for(std::chrono::seconds(Server::cleanupInterval));
+    auto it = std::begin(this->sessions);
+    it += i; 
+    if ((*it).getState() == ServerSession::DISCONNECTED) {
+        (*it).cleanup();
+        this->sessions.erase(it);
     }
+    this->logger->info("Client: %i disconnected", i);
 }
+

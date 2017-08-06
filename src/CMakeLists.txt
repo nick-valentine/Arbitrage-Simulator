@@ -14,6 +14,7 @@ set (SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/Input.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/ColorPallete.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/ConfigLoader.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/EventNotifier.cpp
     PARENT_SCOPE
 )
 set (HEADERS
@@ -25,6 +26,7 @@ set (HEADERS
     ${CMAKE_CURRENT_SOURCE_DIR}/ConfigLoader.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Globals.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Context.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/EventNotifier.hpp
     PARENT_SCOPE
 )
 
