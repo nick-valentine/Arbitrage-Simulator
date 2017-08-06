@@ -132,8 +132,8 @@ void WorldChunk::draw(Window::window_ptr window, int offsetTop, int offsetLeft)
 {
     int currX, currY;
     Tile::setPallete();
-    for(unsigned int i = 0; i < WorldChunk::chunk_height; ++i) {
-        for(unsigned int j = 0; j < WorldChunk::chunk_width; ++j) {
+    for(unsigned int i = 0; i < this->tiles.size(); ++i) {
+        for(unsigned int j = 0; j < this->tiles[i].size(); ++j) {
             this->tiles[i][j].drawAt(
                 window, 
                 (top + i - offsetTop),
