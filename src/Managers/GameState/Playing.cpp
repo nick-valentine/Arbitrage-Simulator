@@ -12,7 +12,12 @@ void GameState::Playing::init()
 void GameState::Playing::update(WorldInteractionInterface ** worldProxy, Context *ctx)
 {
     if (this->player == -1) {
-        this->player = (*worldProxy)->getPlayer("Bob");
+        std::string name;
+        srand( time( NULL) );
+        for (int i = 0; i < 5; ++i) {
+            name += char((rand() % 26) + 97);
+        }
+        this->player = (*worldProxy)->getPlayer(name);
     }
 
     if (this->recvMsgUp != 0) {

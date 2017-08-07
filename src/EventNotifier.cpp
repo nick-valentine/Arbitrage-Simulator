@@ -8,12 +8,12 @@ void Notifier::addListener(std::string name, Listener *l)
     this->listeners[name].push_back(l);
 }
 
-void Notifier::notify(std::string name, int value)
+void Notifier::notify(std::string name, std::string value)
 {
     auto it = this->listeners.find(name);
     if (it != this->listeners.end()) {
         for (unsigned int i = 0; i < (*it).second.size(); ++i) {
-            (*it).second[i]->act(value);
+            (*it).second[i]->act(name, value);
         }
     }
 }

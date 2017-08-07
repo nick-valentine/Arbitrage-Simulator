@@ -46,7 +46,9 @@ private:
 
     int firstFreeSpot();
 
-    void act(int i);
+    void act(std::string name, std::string value);
+    void cleanSessions();
+    void broadcastPlayerLocation(std::string value);
 
     std::vector<ServerSession*> sessions;
 

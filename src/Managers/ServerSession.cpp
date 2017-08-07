@@ -6,6 +6,7 @@ std::map<int, std::string (*)(ServerSession &myself, std::string msg)> ServerSes
     {
         {ServerSession::VERSION_CHECK, VersionCheckHandler},
         {ServerSession::LOGIN, LoginHandler},
+        {ServerSession::UPDATE, UpdateCheckHandler},
         {ServerSession::REQUEST_ITEM_MAP, GetItemMapHandler},
         {ServerSession::REQUEST_WORLD_DIMS, GetWorldDimensionsHandler},
         {ServerSession::QUIT, QuitHandler},
@@ -17,6 +18,7 @@ std::map<int, std::string (*)(ServerSession &myself, std::string msg)> ServerSes
 
 ServerSession::ServerSession()
 {
+    this->updates = std::queue<std::string>();
     this->state = UNSET;
     this->version = "";
     this->id = -1;
@@ -24,6 +26,7 @@ ServerSession::ServerSession()
 
 ServerSession::ServerSession(Connection conn)
 {
+    this->updates = std::queue<std::string>();
     this->state = UNSET;
     this->version = "";
     this->setConnection(conn);
@@ -32,6 +35,7 @@ ServerSession::ServerSession(Connection conn)
 
 int ServerSession::init(world_ptr world, std::string version, int id)
 {
+    this->updates = std::queue<std::string>();
     this->world = world;
     this->version = version;
     this->id = id;
@@ -54,7 +58,7 @@ int ServerSession::cleanup()
 
 bool ServerSession::write(std::string msg)
 {
-    return this->conn.write(msg);
+    this->updates.push(msg);
 }
 
 void ServerSession::setConnection(Connection conn)
@@ -79,7 +83,10 @@ void ServerSession::sessionLoop()
         } catch(std::exception& e) {
             std::cerr<<e.what()<<std::endl;
             this->conn.close();
-            this->notify("session_close", this->id);
+            this->notify(
+                "session_close", 
+                boost::lexical_cast<std::string>(this->id)
+            );
             this->state = DISCONNECTED;
             return;
         }
@@ -114,7 +121,10 @@ void ServerSession::readHandle()
 
     if (state == DISCONNECTING) {
         this->conn.close();
-        this->notify("session_close", this->id);
+        this->notify(
+            "session_close", 
+            boost::lexical_cast<std::string>(this->id)
+        );
         this->state = DISCONNECTED;
         return;
     }
@@ -147,6 +157,13 @@ std::string ServerSession::VersionCheckHandler(ServerSession &myself, std::strin
             Globals::network_message_delimiter
         ;
     }
+}
+
+std::string ServerSession::UpdateCheckHandler(ServerSession &myself, std::string msg)
+{
+    std::string val = myself.updates.front();
+    myself.updates.pop();
+    return val;
 }
 
 std::string ServerSession::GetWorldDimensionsHandler(ServerSession &myself, std::string msg)
@@ -239,12 +256,14 @@ std::string ServerSession::PlayerMovedHandler(ServerSession &myself, std::string
     ss>>type>>index>>posY>>posX;
     if (myself.logger) {
         myself.logger->debug(
-            "Player %d moved to (%d, %d)",
+            "Player %d moved (%d, %d)",
             index,
             posY,
             posX
         );
     }
+    myself.notify("player_moved", boost::lexical_cast<std::string>(myself.id) + " " + msg);
+    myself.world->movePlayer(index, posY, posX);
     ss<<ServerSession::REQUEST_OK<<Globals::network_message_delimiter;
     return ss.str();
 }

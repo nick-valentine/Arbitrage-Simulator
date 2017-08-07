@@ -46,8 +46,7 @@ public:
     Tile getTile(int chunkY, int chunkX, int localY, int localX);
     int getPlayer(std::string name);
     void getAllPlayers();
-
-    int run();
+    void getUpdates();
 
     City getCity(int y, int x);
 private:
@@ -58,8 +57,8 @@ private:
 
     void silentMovePlayer(int index, int y, int x);
 
-    void sessionLoop();
     void readHandler();
+
     /** 
      * Request Handlers.
      * All handlers will take a string message and return a string response
@@ -82,8 +81,6 @@ private:
     Connection connection;
     bool connected;
     Logger::LoggerPtr logger;
-
-    std::thread thread;
 
     bool handShake();
     void getMetadata();

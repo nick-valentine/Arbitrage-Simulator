@@ -55,6 +55,8 @@ void NetworkedWorldInteraction::movePlayer(int index, int y, int x)
         this->logger->warn("Server did not acknowlege your movement");
     }
 
+    this->getUpdates();
+
     int chunkX, chunkY, localX, localY;
     this->playerCoordinatesToChunkCoordinates(index, chunkY, chunkX, localY, localX);
     for (int i = chunkY-1; i <= chunkY+1; ++i) {
@@ -111,9 +113,12 @@ void NetworkedWorldInteraction::getAllPlayers()
     this->playersFromStringstream(&ss);
 }
 
-int NetworkedWorldInteraction::run()
+void NetworkedWorldInteraction::getUpdates()
 {
-    this->thread = std::thread(&NetworkedWorldInteraction::sessionLoop, this);
+    std::string msg = boost::lexical_cast<std::string>(ServerSession::UPDATE) + "\n";
+    this->connection.write(msg);
+    msg = this->connection.read();
+    this->logger->info("%s", msg.c_str());
 }
 
 City NetworkedWorldInteraction::getCity(int y, int x)
@@ -138,39 +143,22 @@ void NetworkedWorldInteraction::configure()
 
 void NetworkedWorldInteraction::silentMovePlayer(int index, int y, int x)
 {
-    this->players[index].setYX(y, x);
-}
-
-void NetworkedWorldInteraction::sessionLoop()
-{
-    while (true) {
-        try {
-            if (this->connection.poll()) {
-                this->readHandler();
-            }
-            std::this_thread::sleep_for(std::chrono::milliseconds(ServerSession::tickrate));
-        } catch(std::exception& e) {
-            std::cerr<<e.what()<<std::endl;
-            this->connection.close();
-            return;
-        }
-    }
+    this->logger->info("Player %d moved to %d, %d", index, y, x);
+    this->players[index].move(y, x);
 }
 
 void NetworkedWorldInteraction::readHandler()
 {
     std::string message = this->connection.read();
+    this->logger->info("%s", message.c_str());
     std::stringstream ss;
     int request_type;
 
     ss.str(message);
     ss>>request_type;
-    std::string response = boost::lexical_cast<std::string>(ServerSession::ERROR) + " invalid message" + Globals::network_message_delimiter;
     if (this->requestMap.find(request_type) != this->requestMap.end()) {
-        response = this->requestMap[request_type](*this, message);
+        this->requestMap[request_type](*this, message);
     }
-    
-    this->connection.write(response);
 }
 
 bool NetworkedWorldInteraction::hasChunkLoaded(int y, int x)
@@ -296,6 +284,7 @@ int NetworkedWorldInteraction::fetchChunk(int chunkY, int chunkX)
                 chunkX + 1
             )
         );
+        std::cerr<<ss.str()<<std::endl;
         this->chunks[chunkY][chunkX].fromStringStream(&ss);
         this->chunksLoaded.push_back(std::pair<int, int>(chunkY, chunkX));
     }

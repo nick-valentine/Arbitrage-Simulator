@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <thread>
+#include <queue>
 #include <chrono>
 #include <mutex>
 #include <string>
@@ -35,6 +36,7 @@ public:
         ERROR = 0,
         QUIT = 1,
         REQUEST_OK = 2,
+        UPDATE = 3,
         VERSION_CHECK = 10,
         VERSION_CHECK_OK = 12,
         VERSION_INCOMPATIBLE = 13,
@@ -95,6 +97,8 @@ private:
     Connection conn;
     world_ptr world;
 
+    std::queue<std::string> updates;
+
     boost::shared_ptr<Logger> logger;
 
     void sessionLoop();
@@ -115,6 +119,16 @@ private:
      * @return std::string the response
      */
     static std::string VersionCheckHandler(ServerSession &myself, std::string msg);
+
+    /**
+     * Request Handler: Update Checker
+     * Handle a request for all updates that have happened
+     *
+     * @param  ServerSession &myself
+     * @param  std::string msg the message the client sent
+     * @return std::string the response
+     */
+    static std::string UpdateCheckHandler(ServerSession &myself, std::string msg);
 
     /**
      * Request Handler: GetWorldDimenstions
