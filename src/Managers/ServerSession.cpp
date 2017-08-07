@@ -235,11 +235,12 @@ std::string ServerSession::PlayerMovedHandler(ServerSession &myself, std::string
 {
     std::stringstream ss;
     ss.str(msg);
-    int type, posY, posX;
-    ss>>type>>posY>>posX;
+    int type, index, posY, posX;
+    ss>>type>>index>>posY>>posX;
     if (myself.logger) {
         myself.logger->debug(
-            "Player moved to (%d, %d)",
+            "Player %d moved to (%d, %d)",
+            index,
             posY,
             posX
         );

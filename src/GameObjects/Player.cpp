@@ -43,6 +43,12 @@ void Player::getYX(int &y, int &x)
     x = this->x;
 }
 
+void Player::setYX(int y, int x)
+{
+    this->y = y;
+    this->x = x;
+}
+
 std::string Player::getName()
 {
     return this->name;

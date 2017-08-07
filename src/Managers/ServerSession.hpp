@@ -85,8 +85,9 @@ public:
     void setConnection(Connection conn);
 
     SESSION_STATE getState();
-private:
+
     const static int tickrate;
+private:
     SESSION_STATE state;
     std::string version;
     std::thread thread;

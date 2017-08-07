@@ -1,6 +1,9 @@
 #ifndef NETWORKED_WORLD_INTERACTION
 #define NETWORKED_WORLD_INTERACTION
 
+#include <thread>
+#include <chrono>
+#include <mutex>
 #include <algorithm>
 #include <string>
 #include <iostream>
@@ -44,6 +47,8 @@ public:
     int getPlayer(std::string name);
     void getAllPlayers();
 
+    int run();
+
     City getCity(int y, int x);
 private:
     std::string version;
@@ -51,11 +56,34 @@ private:
 
     void configure();
 
+    void silentMovePlayer(int index, int y, int x);
+
+    void sessionLoop();
+    void readHandler();
+    /** 
+     * Request Handlers.
+     * All handlers will take a string message and return a string response
+     * @todo: look into chain of responsibility for these instead
+     */
+    static std::map<int, std::string (*)(NetworkedWorldInteraction &myself, std::string msg)> requestMap; 
+
+    /**
+     * Request Handler: Version Check.
+     * Handle a request to check the compatibility of this server and a client.
+     *
+     * @param  ServerSession &myself
+     * @param  std::string msg the message the client sent
+     * @return std::string the response
+     */
+    static std::string PlayerMovedHandler(NetworkedWorldInteraction &myself, std::string msg);
+
     bool hasChunkLoaded(int y, int x);
 
     Connection connection;
     bool connected;
     Logger::LoggerPtr logger;
+
+    std::thread thread;
 
     bool handShake();
     void getMetadata();
