@@ -57,7 +57,7 @@ private:
 
     void silentMovePlayer(int index, int y, int x);
 
-    void readHandler();
+    void updateHandler(std::string update);
 
     /** 
      * Request Handlers.

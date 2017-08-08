@@ -76,10 +76,7 @@ void ServerSession::sessionLoop()
     this->state = HANDSHAKING;
     while (true) {
         try {
-            if (this->conn.poll()) {
-                this->readHandle();
-            }
-            std::this_thread::sleep_for(std::chrono::milliseconds(ServerSession::tickrate));
+            this->readHandle();
         } catch(std::exception& e) {
             std::cerr<<e.what()<<std::endl;
             this->conn.close();

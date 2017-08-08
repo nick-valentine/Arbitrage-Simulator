@@ -5,6 +5,19 @@ Connection::Connection()
     this->connected = false;
 }
 
+Connection::Connection(Connection &other)
+{
+    this->socket = other.socket;
+    this->connected = other.connected;
+}
+
+Connection &Connection::operator=(Connection &other)
+{
+    this->socket = other.socket;
+    this->connected = other.connected;
+    return *this;
+}
+
 Connection::Connection(std::string ip, std::string port)
 {
     this->connect(ip, port);
@@ -87,7 +100,25 @@ bool Connection::write(std::string msg)
             boost::asio::buffer(msg), 
             ignored_error
         );
+        if (ignored_error) {
+            return false;
+        }
+        return true;
     }
+    return false;
+}
+
+std::string Connection::writeRead(std::string msg)
+{
+    std::string r = "";
+    {
+        std::lock_guard<std::mutex> lock(this->writeReadGuard);
+        if (!this->write(msg)) {
+            return r;
+        }
+        r = this->read();
+    }
+    return r;
 }
 
 void Connection::close()

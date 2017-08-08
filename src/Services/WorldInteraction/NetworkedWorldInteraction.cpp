@@ -45,8 +45,7 @@ void NetworkedWorldInteraction::movePlayer(int index, int y, int x)
         boost::lexical_cast<std::string>(index) + " " +
         boost::lexical_cast<std::string>(y) + " " +
         boost::lexical_cast<std::string>(x) + "\n";
-    this->connection.write(msg);
-    msg = this->connection.read();
+    msg = this->connection.writeRead(msg);
     std::stringstream ss;
     ss.str(msg);
     int response;
@@ -80,21 +79,20 @@ Tile NetworkedWorldInteraction::getTileUnderPlayer(int index)
 
 Tile NetworkedWorldInteraction::getTile(int chunkY, int chunkX, int localY, int localX)
 {
-    if (
-        this->chunkInWorld(chunkY,chunkX) &&
-        !this->hasChunkLoaded(chunkY, chunkX)
-    ) {
-        this->fetchChunk(chunkY, chunkX);
+    if (this->chunkInWorld(chunkY,chunkX)) {
+        if (!this->hasChunkLoaded(chunkY, chunkX)) {
+            this->fetchChunk(chunkY, chunkX);
+        }
+        return LocalWorldInteraction::getTile(chunkY, chunkX, localY, localX);
     }
-    LocalWorldInteraction::getTile(chunkY, chunkX, localY, localX);
+    return Tile();
 }
 
 int NetworkedWorldInteraction::getPlayer(std::string name)
 {
     std::string msg = boost::lexical_cast<std::string>(ServerSession::REQUEST_PLAYER) + " " + 
         name + "\n";
-    this->connection.write(msg);
-    msg = this->connection.read();
+    msg = this->connection.writeRead(msg);
     std::stringstream ss;
     int player;
     ss.str(msg);
@@ -106,8 +104,7 @@ int NetworkedWorldInteraction::getPlayer(std::string name)
 void NetworkedWorldInteraction::getAllPlayers()
 {
     std::string msg = boost::lexical_cast<std::string>(ServerSession::REQUEST_ALL_PLAYERS) + "\n";
-    this->connection.write(msg);
-    msg = this->connection.read();
+    msg = this->connection.writeRead(msg);
     std::stringstream ss;
     ss.str(msg);
     this->playersFromStringstream(&ss);
@@ -116,8 +113,7 @@ void NetworkedWorldInteraction::getAllPlayers()
 void NetworkedWorldInteraction::getUpdates()
 {
     std::string msg = boost::lexical_cast<std::string>(ServerSession::UPDATE) + "\n";
-    this->connection.write(msg);
-    msg = this->connection.read();
+    msg = this->connection.writeRead(msg);
     this->logger->info("%s", msg.c_str());
 }
 
@@ -147,17 +143,16 @@ void NetworkedWorldInteraction::silentMovePlayer(int index, int y, int x)
     this->players[index].move(y, x);
 }
 
-void NetworkedWorldInteraction::readHandler()
+void NetworkedWorldInteraction::updateHandler(std::string update)
 {
-    std::string message = this->connection.read();
-    this->logger->info("%s", message.c_str());
+    this->logger->info("%s", update.c_str());
     std::stringstream ss;
     int request_type;
 
-    ss.str(message);
+    ss.str(update);
     ss>>request_type;
     if (this->requestMap.find(request_type) != this->requestMap.end()) {
-        this->requestMap[request_type](*this, message);
+        this->requestMap[request_type](*this, update);
     }
 }
 
@@ -188,9 +183,9 @@ bool NetworkedWorldInteraction::handShake()
         //Version OK, good to continue
         return true;
     } else {
-        std::cerr<<"Your version does not match the servers.\nYou are running " +
-            this->version +
-            ".\n The server is running " +
+        std::cerr<<"Your version does not match the servers.\nYou are running "<<
+            this->version<<
+            ".\n The server is running "<<
             sVersion
         ;
         return false;
@@ -201,15 +196,13 @@ bool NetworkedWorldInteraction::handShake()
 void NetworkedWorldInteraction::getMetadata()
 {
     std::string message = boost::lexical_cast<std::string>(ServerSession::REQUEST_ITEM_MAP) + "\n";
-    this->connection.write(message);
-    std::string response = this->connection.read();
+    std::string response = this->connection.writeRead(message);
     std::stringstream ss;
     ss.str(response);
     ItemMap::fromStringStream(&ss);
 
     message = boost::lexical_cast<std::string>(ServerSession::REQUEST_WORLD_DIMS) + "\n";
-    this->connection.write(message);
-    response = this->connection.read();
+    response = this->connection.writeRead(message);
     ss.str(std::string());
     int worldX, worldY, chunkX, chunkY;
     ss.str(response);
@@ -225,8 +218,8 @@ void NetworkedWorldInteraction::getMetadata()
 std::string NetworkedWorldInteraction::checkVersion()
 {
     std::string message = boost::lexical_cast<std::string>(ServerSession::VERSION_CHECK) + " " + this->version + "\n";
-    this->connection.write(message);
-    std::string response = this->connection.read();
+    this->logger->info("%s", message.c_str());
+    std::string response = this->connection.writeRead(message);
     std::stringstream ss;
 
     ss.str(response);
@@ -252,8 +245,7 @@ void NetworkedWorldInteraction::quit()
 {
     try {
         std::string message = boost::lexical_cast<std::string>(ServerSession::QUIT) + "\n";
-        this->connection.write(message);
-        std::string response = this->connection.read();
+        std::string response = this->connection.writeRead(message);
     } catch (boost::system::system_error& e) {
     }
 }
@@ -265,8 +257,7 @@ int NetworkedWorldInteraction::fetchChunk(int chunkY, int chunkX)
         boost::lexical_cast<std::string>(chunkY) + " " + 
         boost::lexical_cast<std::string>(chunkX) + "\n"
     ;
-    this->connection.write(message);
-    std::string response = this->connection.read();
+    std::string response = this->connection.writeRead(message);
     std::stringstream ss;
     ss.str(response);
     int responseType;
