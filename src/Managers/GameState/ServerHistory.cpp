@@ -163,6 +163,7 @@ void GameState::ServerHistory::updateConnectionMenu(WorldInteractionInterface **
         case 0:
             if ((*worldProxy) != NULL) {
                 delete (*worldProxy);
+                (*worldProxy) = NULL;
             }
             (*worldProxy) = new NetworkedWorldInteraction(
                 this->hostname(this->history[this->selectedHistory]),

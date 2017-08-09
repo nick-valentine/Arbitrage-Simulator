@@ -1,9 +1,5 @@
 #include "Services/WorldInteraction/NetworkedWorldInteraction.hpp"
 
-std::map<int, std::string (*)(NetworkedWorldInteraction &myself, std::string msg)> NetworkedWorldInteraction::requestMap = 
-    {
-        {ServerSession::PLAYER_MOVE, PlayerMovedHandler},
-    }; 
 
 NetworkedWorldInteraction::NetworkedWorldInteraction(std::string server, std::string port) : LocalWorldInteraction("NetworkedWorld")
 {
@@ -17,6 +13,9 @@ NetworkedWorldInteraction::NetworkedWorldInteraction(std::string server, std::st
 
 bool NetworkedWorldInteraction::loadWorld(boost::shared_ptr<Logger> logger)
 {
+    this->requestMap = std::map<int, void (*)(NetworkedWorldInteraction &myself, std::string msg)>();
+    this->requestMap[ServerSession::PLAYER_MOVE] = NetworkedWorldInteraction::PlayerMovedHandler;
+
     this->logger = logger;
     if (!this->connected) {
         return false;
@@ -28,11 +27,14 @@ bool NetworkedWorldInteraction::loadWorld(boost::shared_ptr<Logger> logger)
     this->getMetadata();
     this->getAllPlayers();
 
+    this->updateFetcher = std::thread(&NetworkedWorldInteraction::updateLoop, this);
+
     return true;
 }
 
 void NetworkedWorldInteraction::cleanup()
 {
+    this->updateFetcher.join();
     this->logger->info("Quitting");
     this->quit();
 }
@@ -54,7 +56,6 @@ void NetworkedWorldInteraction::movePlayer(int index, int y, int x)
         this->logger->warn("Server did not acknowlege your movement");
     }
 
-    this->getUpdates();
 
     int chunkX, chunkY, localX, localY;
     this->playerCoordinatesToChunkCoordinates(index, chunkY, chunkX, localY, localX);
@@ -110,11 +111,14 @@ void NetworkedWorldInteraction::getAllPlayers()
     this->playersFromStringstream(&ss);
 }
 
-void NetworkedWorldInteraction::getUpdates()
+std::string NetworkedWorldInteraction::getUpdates()
 {
     std::string msg = boost::lexical_cast<std::string>(ServerSession::UPDATE) + "\n";
     msg = this->connection.writeRead(msg);
-    this->logger->info("%s", msg.c_str());
+    if (msg[0] != '\n') {
+        this->logger->info("%s", msg.c_str());
+    }
+    return msg;
 }
 
 City NetworkedWorldInteraction::getCity(int y, int x)
@@ -143,14 +147,23 @@ void NetworkedWorldInteraction::silentMovePlayer(int index, int y, int x)
     this->players[index].move(y, x);
 }
 
+void NetworkedWorldInteraction::updateLoop()
+{
+    while (true) {
+        std::string msg = this->getUpdates();
+        this->updateHandler(msg);
+        std::this_thread::sleep_for(std::chrono::milliseconds(ServerSession::tickrate));
+    }
+}
+
 void NetworkedWorldInteraction::updateHandler(std::string update)
 {
     this->logger->info("%s", update.c_str());
     std::stringstream ss;
-    int request_type;
+    int requestor, request_type;
 
     ss.str(update);
-    ss>>request_type;
+    ss>>requestor>>request_type;
     if (this->requestMap.find(request_type) != this->requestMap.end()) {
         this->requestMap[request_type](*this, update);
     }
@@ -166,12 +179,13 @@ bool NetworkedWorldInteraction::hasChunkLoaded(int y, int x)
     return false;
 }
 
-std::string NetworkedWorldInteraction::PlayerMovedHandler(NetworkedWorldInteraction &myself, std::string msg)
+void NetworkedWorldInteraction::PlayerMovedHandler(NetworkedWorldInteraction &myself, std::string msg)
 {
-    int type, who, y, x;
+    myself.logger->info("Executing player moved handler");
+    int sender, type, who, y, x;
     std::stringstream ss;
     ss.str(msg);
-    ss>>type>>who>>y>>x;
+    ss>>sender>>type>>who>>y>>x;
 
     myself.silentMovePlayer(who, y, x);
 }
@@ -275,7 +289,6 @@ int NetworkedWorldInteraction::fetchChunk(int chunkY, int chunkX)
                 chunkX + 1
             )
         );
-        std::cerr<<ss.str()<<std::endl;
         this->chunks[chunkY][chunkX].fromStringStream(&ss);
         this->chunksLoaded.push_back(std::pair<int, int>(chunkY, chunkX));
     }

@@ -93,6 +93,7 @@ void ServerSession::sessionLoop()
 
 void ServerSession::readHandle()
 {
+    std::lock_guard<std::mutex> lock(this->writeLock);
     if (this->logger) {
         this->logger->debug("Reading");
     }
@@ -158,9 +159,12 @@ std::string ServerSession::VersionCheckHandler(ServerSession &myself, std::strin
 
 std::string ServerSession::UpdateCheckHandler(ServerSession &myself, std::string msg)
 {
-    std::string val = myself.updates.front();
-    myself.updates.pop();
-    return val;
+    if (myself.updates.size() > 0) {
+        std::string val = myself.updates.front();
+        myself.updates.pop();
+        return val;
+    }
+    return "\n";
 }
 
 std::string ServerSession::GetWorldDimensionsHandler(ServerSession &myself, std::string msg)

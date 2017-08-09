@@ -46,7 +46,7 @@ public:
     Tile getTile(int chunkY, int chunkX, int localY, int localX);
     int getPlayer(std::string name);
     void getAllPlayers();
-    void getUpdates();
+    std::string getUpdates();
 
     City getCity(int y, int x);
 private:
@@ -57,6 +57,7 @@ private:
 
     void silentMovePlayer(int index, int y, int x);
 
+    void updateLoop();
     void updateHandler(std::string update);
 
     /** 
@@ -64,7 +65,7 @@ private:
      * All handlers will take a string message and return a string response
      * @todo: look into chain of responsibility for these instead
      */
-    static std::map<int, std::string (*)(NetworkedWorldInteraction &myself, std::string msg)> requestMap; 
+    std::map<int, void (*)(NetworkedWorldInteraction &myself, std::string msg)> requestMap; 
 
     /**
      * Request Handler: Version Check.
@@ -74,13 +75,15 @@ private:
      * @param  std::string msg the message the client sent
      * @return std::string the response
      */
-    static std::string PlayerMovedHandler(NetworkedWorldInteraction &myself, std::string msg);
+    static void PlayerMovedHandler(NetworkedWorldInteraction &myself, std::string msg);
 
     bool hasChunkLoaded(int y, int x);
 
     Connection connection;
     bool connected;
     Logger::LoggerPtr logger;
+
+    std::thread updateFetcher;
 
     bool handShake();
     void getMetadata();

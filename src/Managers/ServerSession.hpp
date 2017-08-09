@@ -65,6 +65,8 @@ public:
     int init(world_ptr world, std::string version, int id);
     void setLogger(boost::shared_ptr<Logger> logger);
 
+    std::mutex writeLock;
+
     /**
      * Launch thread to manage this session.
      */

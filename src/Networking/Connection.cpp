@@ -56,6 +56,7 @@ void Connection::bind(socket_ptr sock)
 
 std::string Connection::read()
 {
+    std::lock_guard<std::mutex> lock(this->readGuard);
     if (this->connected) {
         boost::system::error_code error;
         boost::asio::streambuf sb;
@@ -93,6 +94,7 @@ bool Connection::poll()
 
 bool Connection::write(std::string msg)
 {
+    std::lock_guard<std::mutex> lock(this->writeGuard);
     if (this->connected) {
         boost::system::error_code ignored_error;
         boost::asio::write(

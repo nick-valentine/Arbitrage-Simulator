@@ -20,6 +20,7 @@ using boost::asio::ip::tcp;
 class Connection
 {
 public:
+    typedef boost::shared_ptr<Connection> ConnectionPtr;
     typedef boost::shared_ptr<tcp::socket> socket_ptr;
     Connection();
     Connection(Connection &other);
@@ -75,6 +76,8 @@ private:
     bool connected;
     socket_ptr socket;
     std::mutex writeReadGuard;
+    std::mutex writeGuard;
+    std::mutex readGuard;
 };
 
 #endif //CONNECTION_HPP
