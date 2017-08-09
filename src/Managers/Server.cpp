@@ -47,7 +47,7 @@ int Server::run()
             temp->run();
             temp->addListener("session_close", this);
             temp->addListener("player_moved", this);
-            this->sessions.push_back(temp);
+            this->sessions[spot] = temp;
         } else {
             this->logger->warn(
                 "%d connections open already, connection denied",
@@ -137,7 +137,7 @@ void Server::broadcastPlayerLocation(std::string value)
     ss>>id;
     for (int i = 0; i < this->sessions.size(); ++i) {
         if (this->sessions[i] != NULL && i != id) {
-            this->logger->info("Broadcasting: %s", value.c_str());
+            this->logger->info("Broadcasting: %s about %d to %d", value.c_str(), id, i);
             this->sessions[i]->write(ss.str());
         }
     }

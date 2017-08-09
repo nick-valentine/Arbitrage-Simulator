@@ -94,13 +94,8 @@ void ServerSession::sessionLoop()
 void ServerSession::readHandle()
 {
     std::lock_guard<std::mutex> lock(this->writeLock);
-    if (this->logger) {
-        this->logger->debug("Reading");
-    }
     std::string message = this->conn.read();
-    if (this->logger) {
-        this->logger->debug(message.c_str());
-    }
+
     std::stringstream ss;
     int request_type;
 
@@ -111,10 +106,6 @@ void ServerSession::readHandle()
         response = this->requestMap[request_type](*this, message);
     }
     
-    if (this->logger) {
-        this->logger->debug("Writing");
-        this->logger->debug(response.c_str());
-    }
     this->conn.write(response);
 
     if (state == DISCONNECTING) {
@@ -263,6 +254,7 @@ std::string ServerSession::PlayerMovedHandler(ServerSession &myself, std::string
             posX
         );
     }
+    myself.logger->info("moving player of client: %d", myself.id);
     myself.notify("player_moved", boost::lexical_cast<std::string>(myself.id) + " " + msg);
     myself.world->movePlayer(index, posY, posX);
     ss<<ServerSession::REQUEST_OK<<Globals::network_message_delimiter;
