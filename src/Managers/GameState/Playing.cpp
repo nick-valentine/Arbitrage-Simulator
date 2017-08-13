@@ -50,13 +50,15 @@ void GameState::Playing::update(WorldInteractionInterface ** worldProxy, Context
     int pos_y, pos_x;
     (*worldProxy)->playerInfo(this->player).getYX(pos_y, pos_x);
     this->logger->info("Player stepped on tile: %i, %i", pos_y, pos_x);
-    if (tile.getType() == Tile::CITIES) {
+    if (tile.getType() == Tile::CITIES && lastTile.getType() != Tile::CITIES) {
         City city = (*worldProxy)->getCity(pos_y, pos_x);
         GameState::CityInventory *cityInventoryScreen = new GameState::CityInventory;
         cityInventoryScreen->setCity(city);
         this->newState = cityInventoryScreen;
         this->logger->info("This tile is a city: %s", city.getName().c_str());
     }
+
+    this->lastTile = tile;
 }
 
 void GameState::Playing::render(WorldInteractionInterface *worldProxy, Window::window_ptr window)

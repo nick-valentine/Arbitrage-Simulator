@@ -29,6 +29,7 @@ namespace GameState
         int player;
         Camera camera;
         GameState::State *newState;
+        Tile lastTile;
     };
 }
 
