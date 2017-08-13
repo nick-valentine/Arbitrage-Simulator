@@ -46,16 +46,14 @@ void GameState::Playing::update(WorldInteractionInterface ** worldProxy, Context
             return;
     };
     Tile tile = (*worldProxy)->getTileUnderPlayer(this->player);
-    this->logger->info("Player stepped on tile at height: %i", tile.getElevation());
     int pos_y, pos_x;
     (*worldProxy)->playerInfo(this->player).getYX(pos_y, pos_x);
-    this->logger->info("Player stepped on tile: %i, %i", pos_y, pos_x);
     if (tile.getType() == Tile::CITIES && lastTile.getType() != Tile::CITIES) {
         City city = (*worldProxy)->getCity(pos_y, pos_x);
         GameState::CityInventory *cityInventoryScreen = new GameState::CityInventory;
         cityInventoryScreen->setCity(city);
+        cityInventoryScreen->setPlayer(this->player, (*worldProxy)->playerInfo(this->player));
         this->newState = cityInventoryScreen;
-        this->logger->info("This tile is a city: %s", city.getName().c_str());
     }
 
     this->lastTile = tile;
@@ -68,7 +66,6 @@ void GameState::Playing::render(WorldInteractionInterface *worldProxy, Window::w
 
     //move camera to player
     this->camera.moveTo(pos_y, pos_x);
-    this->logger->info("Camera was moved to: %i, %i", pos_y - (window->getHeight()/2), pos_x - (window->getWidth()/2));
     this->camera.render(
         window, 
         *worldProxy

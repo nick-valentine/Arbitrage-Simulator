@@ -95,14 +95,9 @@ int City::getPosY() const
     return this->pos_y;
 }
 
-void City::addToInventory(int itemId, int count)
+Inventory *City::getInventory()
 {
-    this->inv.add(itemId, count);
-}
-
-Inventory City::getInventory()
-{
-    return this->inv;
+    return &this->inv;
 }
 
 void City::load_city_names()

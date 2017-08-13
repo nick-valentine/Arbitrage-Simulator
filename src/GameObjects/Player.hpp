@@ -6,6 +6,7 @@
 
 #include "Window/Window.hpp"
 #include "GameObjects/AbstractGameObject.hpp"
+#include "GameObjects/Inventory.hpp"
 
 /**
  * Player.
@@ -29,6 +30,8 @@ public:
     void setYX(int y, int x);
     std::string getName();
 
+    Inventory *getInventory();
+
     void draw(Window::window_ptr window, int offsetTop, int offsetLeft);
 private:
     static const char representation = 'P';
@@ -36,6 +39,7 @@ private:
     std::string name;
     int y;
     int x;
+    Inventory inv;
 };
 
 #endif //PLAYER_HPP

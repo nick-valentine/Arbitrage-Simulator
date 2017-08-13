@@ -17,6 +17,7 @@ namespace GameState
         ~CityInventory();
         void init();
         void setCity(City city);
+        void setPlayer(int index, Player player);
         void update(WorldInteractionInterface ** worldProxy, Context *ctx);
         void render(WorldInteractionInterface *worldProxy, Window::window_ptr window);
         State *nextState();
@@ -24,15 +25,17 @@ namespace GameState
         bool shouldClose();
     private:
         City city;
-        std::vector<std::string> options;
-        std::vector<Inventory::Record> cityInventory;
+        int playerIndex;
+        Player player;
         std::vector<std::string> cityInventoryOptions;
+        std::vector<std::string> playerInventoryOptions;
 
-        void getCityInventory(City *city);
+        std::vector<std::string> getInventory(std::vector<Inventory::Record> inv);
         void populateMenu(Component::Menu *menu, std::vector<std::string> options);
 
         bool inventoryShouldClose;
-        Component::Menu inventory;
+        Component::Menu cityInv;
+        Component::Menu playerInv;
     };
 }
 

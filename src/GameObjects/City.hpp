@@ -35,8 +35,7 @@ public:
     void setPosY(int y);
     int getPosY() const;
 
-    void addToInventory(int itemId, int count);
-    Inventory getInventory();
+    Inventory *getInventory();
 
     /**
      * Load City Names.

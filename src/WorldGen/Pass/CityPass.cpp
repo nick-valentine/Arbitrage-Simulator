@@ -133,7 +133,7 @@ void CityPass::convertTileToCity(int i, int j, Tile *tile, WorldChunk *chunk)
     std::vector<int> ids = ItemMap::validIds();
     int itemsToGive = rand() % 20;
     for (int i = 0; i < itemsToGive; ++i) {
-        city.addToInventory(
+        city.getInventory()->add(
             ItemMap::get(
                 ids[rand() % ids.size()]
             ).getId(),

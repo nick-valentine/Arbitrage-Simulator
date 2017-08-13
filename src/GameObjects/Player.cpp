@@ -22,6 +22,7 @@ Player::Player(std::stringstream *ss)
 void Player::fromStringStream(std::stringstream *ss)
 {
     (*ss)>>this->name>>this->y>>this->x;
+    this->inv.fromStringStream(ss);
 }
 
 void Player::toStringStream(std::stringstream *ss)
@@ -29,6 +30,7 @@ void Player::toStringStream(std::stringstream *ss)
     (*ss)<<this->name<<" ";
     (*ss)<<this->y<<" ";
     (*ss)<<this->x<<" ";
+    this->inv.toStringStream(ss);
 }
 
 void Player::move(int y, int x)
@@ -52,6 +54,11 @@ void Player::setYX(int y, int x)
 std::string Player::getName()
 {
     return this->name;
+}
+
+Inventory *Player::getInventory()
+{
+    return &this->inv;
 }
 
 void Player::draw(Window::window_ptr window, int offsetTop, int offsetLeft)
