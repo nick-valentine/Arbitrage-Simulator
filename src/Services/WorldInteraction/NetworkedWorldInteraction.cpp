@@ -15,6 +15,7 @@ bool NetworkedWorldInteraction::loadWorld(boost::shared_ptr<Logger> logger)
 {
     this->requestMap = std::map<int, void (*)(NetworkedWorldInteraction &myself, std::string msg)>();
     this->requestMap[ServerSession::PLAYER_MOVE] = NetworkedWorldInteraction::PlayerMovedHandler;
+    this->requestMap[ServerSession::PLAYER_INVALIDATE] = NetworkedWorldInteraction::PlayerInvalidatedHandler;
 
     this->logger = logger;
     if (!this->connected) {

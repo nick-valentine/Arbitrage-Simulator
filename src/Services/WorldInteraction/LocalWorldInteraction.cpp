@@ -118,6 +118,11 @@ int LocalWorldInteraction::getPlayer(std::string name)
     return this->players.size() - 1;
 }
 
+int LocalWorldInteraction::getPlayerCount()
+{
+    return this->players.size();
+}
+
 Player LocalWorldInteraction::playerInfo(int index)
 {
     if (index != -1) {

@@ -47,8 +47,8 @@ int Server::run()
             temp->run();
             temp->addListener("session_close", this);
             temp->addListener("player_moved", this);
+            temp->addListener("invalidate_players", this);
             this->sessions[spot] = temp;
-            this->broadcastInvalidatePlayers();
         } else {
             this->logger->warn(
                 "%d connections open already, connection denied",
@@ -113,6 +113,9 @@ void Server::act(std::string name, std::string value)
     } else if(name == "player_moved") {
         this->logger->info("Player moved: %s", value.c_str());
         this->broadcastPlayerLocation(value);
+    } else if(name == "invalidate_players") {
+        this->logger->info("Players invalidated: %s", value.c_str());
+        this->broadcastInvalidatePlayers();
     }
 }
 
@@ -148,7 +151,7 @@ void Server::broadcastPlayerLocation(std::string value)
 void Server::broadcastInvalidatePlayers()
 {
     this->logger->info("Broadcasting: players invalidated");
-    std::string msg = boost::lexical_cast<std::string>(ServerSession::PLAYER_INVALIDATE) + "\n";
+    std::string msg = "0 " + boost::lexical_cast<std::string>(ServerSession::PLAYER_INVALIDATE) + "\n";
     for (int i = 0; i < this->sessions.size(); ++i) {
         if (this->sessions[i] != NULL) {
             this->sessions[i]->write(msg);

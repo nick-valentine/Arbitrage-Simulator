@@ -37,6 +37,7 @@ public:
     bool chunkInWorld(int chunkY, int chunkX);
     WorldChunk getChunk(int y, int x) const;
     int getPlayer(std::string name);
+    int getPlayerCount();
     Player playerInfo(int index);
 
     int getChunkHeight();

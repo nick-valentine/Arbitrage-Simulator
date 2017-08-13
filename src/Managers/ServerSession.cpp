@@ -228,7 +228,12 @@ std::string ServerSession::GetPlayerHandler(ServerSession &myself, std::string m
     int type;
     std::string name;
     ss>>type>>name;
+    int playersSize = myself.world->getPlayerCount();
     int index = myself.world->getPlayer(name);
+    if (index == playersSize) {
+        myself.notify("invalidate_players", "player_added");
+    }
+    myself.logger->info("Player fetched: %s, index %i", msg.c_str(), index);
     ss<<index<<Globals::network_message_delimiter;
     return ss.str();
 }
@@ -237,6 +242,7 @@ std::string ServerSession::GetAllPlayersHandler(ServerSession &myself, std::stri
 {
     std::stringstream ss;
     myself.world->playersToStringstream(&ss);
+    myself.logger->info("Fetchet all players: %s", ss.str().c_str());
     return ss.str() + Globals::network_message_delimiter;
 }
 
