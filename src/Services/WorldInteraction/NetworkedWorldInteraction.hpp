@@ -1,6 +1,9 @@
 #ifndef NETWORKED_WORLD_INTERACTION
 #define NETWORKED_WORLD_INTERACTION
 
+#include <thread>
+#include <chrono>
+#include <mutex>
 #include <algorithm>
 #include <string>
 #include <iostream>
@@ -38,9 +41,12 @@ public:
 
     bool loadWorld(boost::shared_ptr<Logger> logger);
     void cleanup();
-    void draw(Window::window_ptr window);
-    void draw(Window::window_ptr window, int playerY, int playerX);
-    void movePlayerToCoordinate(int y, int x);
+    void movePlayer(int index, int y, int x);
+    Tile getTileUnderPlayer(int index);
+    Tile getTile(int chunkY, int chunkX, int localY, int localX);
+    int getPlayer(std::string name);
+    void getAllPlayers();
+    std::string getUpdates();
 
     City getCity(int y, int x);
 private:
@@ -49,11 +55,45 @@ private:
 
     void configure();
 
+    void silentMovePlayer(int index, int y, int x);
+
+    void updateLoop();
+    void updateHandler(std::string update);
+
+    /** 
+     * Request Handlers.
+     * All handlers will take a string message and return a string response
+     * @todo: look into chain of responsibility for these instead
+     */
+    std::map<int, void (*)(NetworkedWorldInteraction &myself, std::string msg)> requestMap; 
+
+    /**
+     * Request Handler: Player Moved
+     * Handle a request notifying of player movement
+     *
+     * @param  ServerSession &myself
+     * @param  std::string msg the message the client sent
+     * @return std::string the response
+     */
+    static void PlayerMovedHandler(NetworkedWorldInteraction &myself, std::string msg);
+
+    /**
+     * Request Handler: Player Invalidated
+     * Some player joined or left, refetch all players
+     *
+     * @param  ServerSession &myself
+     * @param  std::string msg the message the client sent
+     * @return std::string the response
+     */
+    static void PlayerInvalidatedHandler(NetworkedWorldInteraction &myself, std::string msg);
+
     bool hasChunkLoaded(int y, int x);
 
     Connection connection;
     bool connected;
     Logger::LoggerPtr logger;
+
+    std::thread updateFetcher;
 
     bool handShake();
     void getMetadata();

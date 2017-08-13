@@ -59,11 +59,11 @@ void World::generateWorld()
     this->spawnChunk(World::worldHeight - 1, World::worldWidth - 1);
 }
 
-void World::draw(Window::window_ptr window, int playerY, int playerX)
+void World::draw(Window::window_ptr window, int offsetTop, int offsetLeft)
 {
     for(int i = 0; i < this->chunks.size(); ++i) {
         for(int j = 0; j < this->chunks[i].size(); ++j) {
-            this->chunks[i][j].draw(window, playerY, playerX);
+            this->chunks[i][j].draw(window, offsetTop, offsetLeft);
         }
     }
 }

@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <thread>
+#include <queue>
 #include <chrono>
 #include <mutex>
 #include <string>
@@ -35,6 +36,7 @@ public:
         ERROR = 0,
         QUIT = 1,
         REQUEST_OK = 2,
+        UPDATE = 3,
         VERSION_CHECK = 10,
         VERSION_CHECK_OK = 12,
         VERSION_INCOMPATIBLE = 13,
@@ -44,6 +46,10 @@ public:
         REQUEST_CHUNK = 120,
         REQUEST_CITY = 130,
         REQUEST_ITEM_MAP = 140,
+        REQUEST_PLAYER = 150,
+        REQUEST_ALL_PLAYERS = 160,
+        PLAYER_MOVE = 170,
+        PLAYER_INVALIDATE = 180
     };
 
     enum SESSION_STATE {
@@ -59,6 +65,8 @@ public:
     ServerSession(Connection conn);
     int init(world_ptr world, std::string version, int id);
     void setLogger(boost::shared_ptr<Logger> logger);
+
+    std::mutex writeLock;
 
     /**
      * Launch thread to manage this session.
@@ -82,6 +90,8 @@ public:
     void setConnection(Connection conn);
 
     SESSION_STATE getState();
+
+    const static int tickrate;
 private:
     SESSION_STATE state;
     std::string version;
@@ -90,9 +100,12 @@ private:
     Connection conn;
     world_ptr world;
 
+    std::queue<std::string> updates;
+
     boost::shared_ptr<Logger> logger;
 
     void sessionLoop();
+    void readHandle();
 
     /** 
      * Request Handlers.
@@ -109,6 +122,16 @@ private:
      * @return std::string the response
      */
     static std::string VersionCheckHandler(ServerSession &myself, std::string msg);
+
+    /**
+     * Request Handler: Update Checker
+     * Handle a request for all updates that have happened
+     *
+     * @param  ServerSession &myself
+     * @param  std::string msg the message the client sent
+     * @return std::string the response
+     */
+    static std::string UpdateCheckHandler(ServerSession &myself, std::string msg);
 
     /**
      * Request Handler: GetWorldDimenstions
@@ -162,6 +185,37 @@ private:
      */
     static std::string GetWorldChunkHandler(ServerSession &myself, std::string msg);
 
+
+    /**
+     * Request Handler: Get Player
+     * Gets a player with given name if one exists, otherwise provides a new player
+     *
+     * @param  ServerSession &myself
+     * @param  std::string msg the message the client sent
+     * @return std::string the response
+     */
+    static std::string GetPlayerHandler(ServerSession &myself, std::string msg);
+
+    /**
+     * Request Handler: Get All Player
+     * Get all players connected to this server
+     *
+     * @param  ServerSession &myself
+     * @param  std::string msg the message the client sent
+     * @return std::string the response
+     */
+    static std::string GetAllPlayersHandler(ServerSession &myself, std::string msg);
+
+    /**
+     * Request Handler: Player has moved
+     * Recieves new location of the player in order to replicate it to all
+     * other clients
+     *
+     * @param  ServerSession &myself
+     * @param  std::string msg the message the client sent
+     * @return std::string the response
+     */
+    static std::string PlayerMovedHandler(ServerSession &myself, std::string msg);
 };
 
 #endif //SERVER_SESSION_HPP

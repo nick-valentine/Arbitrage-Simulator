@@ -1,17 +1,24 @@
 #include "Managers/ServerSession.hpp"
 
+const int ServerSession::tickrate = 8;
+
 std::map<int, std::string (*)(ServerSession &myself, std::string msg)> ServerSession::requestMap = 
     {
         {ServerSession::VERSION_CHECK, VersionCheckHandler},
         {ServerSession::LOGIN, LoginHandler},
+        {ServerSession::UPDATE, UpdateCheckHandler},
         {ServerSession::REQUEST_ITEM_MAP, GetItemMapHandler},
         {ServerSession::REQUEST_WORLD_DIMS, GetWorldDimensionsHandler},
         {ServerSession::QUIT, QuitHandler},
         {ServerSession::REQUEST_CHUNK, GetWorldChunkHandler},
+        {ServerSession::REQUEST_PLAYER, GetPlayerHandler},
+        {ServerSession::REQUEST_ALL_PLAYERS, GetAllPlayersHandler},
+        {ServerSession::PLAYER_MOVE, PlayerMovedHandler},
     }; 
 
 ServerSession::ServerSession()
 {
+    this->updates = std::queue<std::string>();
     this->state = UNSET;
     this->version = "";
     this->id = -1;
@@ -19,6 +26,7 @@ ServerSession::ServerSession()
 
 ServerSession::ServerSession(Connection conn)
 {
+    this->updates = std::queue<std::string>();
     this->state = UNSET;
     this->version = "";
     this->setConnection(conn);
@@ -27,6 +35,7 @@ ServerSession::ServerSession(Connection conn)
 
 int ServerSession::init(world_ptr world, std::string version, int id)
 {
+    this->updates = std::queue<std::string>();
     this->world = world;
     this->version = version;
     this->id = id;
@@ -49,7 +58,7 @@ int ServerSession::cleanup()
 
 bool ServerSession::write(std::string msg)
 {
-    return this->conn.write(msg);
+    this->updates.push(msg);
 }
 
 void ServerSession::setConnection(Connection conn)
@@ -67,45 +76,47 @@ void ServerSession::sessionLoop()
     this->state = HANDSHAKING;
     while (true) {
         try {
-            if (this->logger) {
-                this->logger->debug("Reading");
-            }
-            std::string message = this->conn.read();
-            if (this->logger) {
-                this->logger->debug(message.c_str());
-            }
-            std::stringstream ss;
-            int request_type;
-        
-            ss.str(message);
-            ss>>request_type;
-            std::string response = boost::lexical_cast<std::string>(ERROR) + " invalid message" + Globals::network_message_delimiter;
-            if (this->requestMap.find(request_type) != this->requestMap.end()) {
-                response = this->requestMap[request_type](*this, message);
-            }
-            
-            if (this->logger) {
-                this->logger->debug("Writing");
-                this->logger->debug(response.c_str());
-            }
-            this->conn.write(response);
-
-            if (state == DISCONNECTING) {
-                this->conn.close();
-                this->notify("session_close", this->id);
-                this->state = DISCONNECTED;
-                return;
-            }
-        
+            this->readHandle();
         } catch(std::exception& e) {
             std::cerr<<e.what()<<std::endl;
             this->conn.close();
-            this->notify("session_close", this->id);
+            this->notify(
+                "session_close", 
+                boost::lexical_cast<std::string>(this->id)
+            );
             this->state = DISCONNECTED;
             return;
         }
     }
 
+}
+
+void ServerSession::readHandle()
+{
+    std::lock_guard<std::mutex> lock(this->writeLock);
+    std::string message = this->conn.read();
+
+    std::stringstream ss;
+    int request_type;
+
+    ss.str(message);
+    ss>>request_type;
+    std::string response = boost::lexical_cast<std::string>(ERROR) + " invalid message" + Globals::network_message_delimiter;
+    if (this->requestMap.find(request_type) != this->requestMap.end()) {
+        response = this->requestMap[request_type](*this, message);
+    }
+    
+    this->conn.write(response);
+
+    if (state == DISCONNECTING) {
+        this->conn.close();
+        this->notify(
+            "session_close", 
+            boost::lexical_cast<std::string>(this->id)
+        );
+        this->state = DISCONNECTED;
+        return;
+    }
 }
 
 std::string ServerSession::VersionCheckHandler(ServerSession &myself, std::string msg)
@@ -135,6 +146,16 @@ std::string ServerSession::VersionCheckHandler(ServerSession &myself, std::strin
             Globals::network_message_delimiter
         ;
     }
+}
+
+std::string ServerSession::UpdateCheckHandler(ServerSession &myself, std::string msg)
+{
+    if (myself.updates.size() > 0) {
+        std::string val = myself.updates.front();
+        myself.updates.pop();
+        return val;
+    }
+    return "\n";
 }
 
 std::string ServerSession::GetWorldDimensionsHandler(ServerSession &myself, std::string msg)
@@ -198,5 +219,50 @@ std::string ServerSession::GetWorldChunkHandler(ServerSession &myself, std::stri
     ss<<Globals::network_message_delimiter;
 
     return ss.str();
-    
+}
+
+std::string ServerSession::GetPlayerHandler(ServerSession &myself, std::string msg)
+{
+    std::stringstream ss;
+    ss.str(msg);
+    int type;
+    std::string name;
+    ss>>type>>name;
+    int playersSize = myself.world->getPlayerCount();
+    int index = myself.world->getPlayer(name);
+    if (index == playersSize) {
+        myself.notify("invalidate_players", "player_added");
+    }
+    myself.logger->info("Player fetched: %s, index %i", msg.c_str(), index);
+    ss<<index<<Globals::network_message_delimiter;
+    return ss.str();
+}
+
+std::string ServerSession::GetAllPlayersHandler(ServerSession &myself, std::string msg)
+{
+    std::stringstream ss;
+    myself.world->playersToStringstream(&ss);
+    myself.logger->info("Fetchet all players: %s", ss.str().c_str());
+    return ss.str() + Globals::network_message_delimiter;
+}
+
+std::string ServerSession::PlayerMovedHandler(ServerSession &myself, std::string msg)
+{
+    std::stringstream ss;
+    ss.str(msg);
+    int type, index, posY, posX;
+    ss>>type>>index>>posY>>posX;
+    if (myself.logger) {
+        myself.logger->debug(
+            "Player %d moved (%d, %d)",
+            index,
+            posY,
+            posX
+        );
+    }
+    myself.logger->info("moving player of client: %d", myself.id);
+    myself.notify("player_moved", boost::lexical_cast<std::string>(myself.id) + " " + msg);
+    myself.world->movePlayer(index, posY, posX);
+    ss<<ServerSession::REQUEST_OK<<Globals::network_message_delimiter;
+    return ss.str();
 }

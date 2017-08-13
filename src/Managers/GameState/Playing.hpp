@@ -8,7 +8,6 @@
 #include "GameObjects/City.hpp"
 #include "GameObjects/Inventory.hpp"
 #include "GameObjects/ItemMap.hpp"
-#include "GameObjects/Player.hpp"
 #include "GameObjects/Tile.hpp"
 #include "Managers/GameState/Menu.hpp"
 #include "Managers/GameState/CityInventory.hpp"
@@ -27,9 +26,10 @@ namespace GameState
         bool shouldClose();
     private:
         bool close;
-        Player player;
+        int player;
         Camera camera;
         GameState::State *newState;
+        Tile lastTile;
     };
 }
 

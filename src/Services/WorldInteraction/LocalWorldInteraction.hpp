@@ -8,6 +8,7 @@
 #include "GameObjects/City.hpp"
 #include "GameObjects/Tile.hpp"
 #include "GameObjects/ItemMap.hpp"
+#include "GameObjects/Player.hpp"
 #include "Window/Window.hpp"
 #include "Services/WorldInteraction/WorldInteractionInterface.hpp"
 
@@ -25,23 +26,28 @@ public:
 
     bool loadWorld(boost::shared_ptr<Logger> logger);
     void cleanup();
-    void draw(Window::window_ptr window);
-    void movePlayerToCoordinate(int y, int x);
+    void draw(Window::window_ptr window, int offsetTop, int offsetLeft);
+    void movePlayer(int index, int y, int x);
 
-    Tile getTileUnderPlayer();
+    Tile getTileUnderPlayer(int index);
+    Tile getTile(int chunkY, int chunkX, int localY, int localX);
 
     City getCity(int y, int x);
 
     bool chunkInWorld(int chunkY, int chunkX);
     WorldChunk getChunk(int y, int x) const;
+    int getPlayer(std::string name);
+    int getPlayerCount();
+    Player playerInfo(int index);
 
     int getChunkHeight();
     int getChunkWidth();
     int getWorldHeight();
     int getWorldWidth();
+    void playersToStringstream(std::stringstream *ss);
+    void playersFromStringstream(std::stringstream *ss);
 protected:
-    int playerX;
-    int playerY;
+    std::vector<Player> players;
 
     Generator generator;
 
@@ -55,6 +61,7 @@ protected:
      * @param  int &X
      */
     void playerCoordinatesToChunkCoordinates(
+        int index,
         int &chunkY, int &chunkX, 
         int &Y, int &X
     );

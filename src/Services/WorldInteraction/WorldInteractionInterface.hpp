@@ -20,10 +20,12 @@ class WorldInteractionInterface
 public:
     virtual bool loadWorld(boost::shared_ptr<Logger> logger) = 0;
     virtual void cleanup() = 0;
-    virtual void draw(Window::window_ptr window) = 0;
-    virtual void movePlayerToCoordinate(int y, int x) = 0;
-    virtual Tile getTileUnderPlayer() = 0;
+    virtual void draw(Window::window_ptr window, int offsetTop, int offsetLeft) = 0;
+    virtual void movePlayer(int index, int y, int x) = 0;
+    virtual Tile getTileUnderPlayer(int index) = 0;
     virtual City getCity(int y, int x) = 0;
+    virtual int getPlayer(std::string name) = 0;
+    virtual Player playerInfo(int index) = 0;
 private:
 };
 

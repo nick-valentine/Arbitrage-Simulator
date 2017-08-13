@@ -1,6 +1,7 @@
 #ifndef WORLD_HPP
 #define WORLD_HPP
 
+#include <mutex>
 #include <vector>
 #include <string>
 #include <sstream>
@@ -15,7 +16,8 @@
  * World.
  * Owner of all game objects.
  * The world is composed of many world chunks that can be individually
- * replicated.
+ * replicated. Should be treated as a buffer transfer object, or a source of
+ * truth only, applicatinlogic shuld not go here.
  */
 class World
 {
@@ -44,7 +46,8 @@ public:
     std::vector< std::vector<WorldChunk> > chunks;
     std::string name;
     time_t creationTimestamp;
-protected:
+
+    std::mutex worldProtect;
 
     /**
      * Initialize.

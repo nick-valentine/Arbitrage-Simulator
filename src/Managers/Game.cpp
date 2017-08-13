@@ -14,6 +14,7 @@ Game::~Game()
 {
     if (this->worldProxy != NULL) {
         delete this->worldProxy;
+        this->worldProxy = NULL;
     }
 }
 

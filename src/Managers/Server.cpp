@@ -46,7 +46,9 @@ int Server::run()
             temp->setLogger(this->logger);
             temp->run();
             temp->addListener("session_close", this);
-            this->sessions.push_back(temp);
+            temp->addListener("player_moved", this);
+            temp->addListener("invalidate_players", this);
+            this->sessions[spot] = temp;
         } else {
             this->logger->warn(
                 "%d connections open already, connection denied",
@@ -103,7 +105,21 @@ int Server::firstFreeSpot()
     return this->sessions.size() - 1;
 }
 
-void Server::act(int i)
+void Server::act(std::string name, std::string value)
+{
+    this->logger->info("listened %s, %s", name.c_str(), value.c_str());
+    if (name == "session_close") {
+        this->cleanSessions();
+    } else if(name == "player_moved") {
+        this->logger->info("Player moved: %s", value.c_str());
+        this->broadcastPlayerLocation(value);
+    } else if(name == "invalidate_players") {
+        this->logger->info("Players invalidated: %s", value.c_str());
+        this->broadcastInvalidatePlayers();
+    }
+}
+
+void Server::cleanSessions()
 {
     for (int i = 0; i < this->sessions.size(); ++i) {
         if (this->sessions[i] != NULL) {
@@ -111,9 +127,35 @@ void Server::act(int i)
                 this->sessions[i]->cleanup();
                 delete this->sessions[i];
                 this->sessions[i] = NULL;
+                this->logger->info("Client: %i disconnected", i);
             }
         }
     }
-    this->logger->info("Client: %i disconnected", i);
+    this->broadcastInvalidatePlayers();
+}
+
+void Server::broadcastPlayerLocation(std::string value)
+{
+    std::stringstream ss;
+    ss.str(value);
+    int id;
+    ss>>id;
+    for (int i = 0; i < this->sessions.size(); ++i) {
+        if (this->sessions[i] != NULL && i != id) {
+            this->logger->info("Broadcasting: %s about %d to %d", value.c_str(), id, i);
+            this->sessions[i]->write(ss.str());
+        }
+    }
+}
+
+void Server::broadcastInvalidatePlayers()
+{
+    this->logger->info("Broadcasting: players invalidated");
+    std::string msg = "0 " + boost::lexical_cast<std::string>(ServerSession::PLAYER_INVALIDATE) + "\n";
+    for (int i = 0; i < this->sessions.size(); ++i) {
+        if (this->sessions[i] != NULL) {
+            this->sessions[i]->write(msg);
+        }
+    }
 }
 

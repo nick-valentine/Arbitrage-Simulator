@@ -9,13 +9,13 @@
 class Listener
 {
 public:
-    virtual void act(int i){std::cout<<i<<" Notified";};
+    virtual void act(std::string name, std::string context){std::cout<<name<<"."<<context<<" Notified";};
 };
 
 class Notifier
 {
 public:
-    void notify(std::string name, int value);
+    void notify(std::string name, std::string value);
     void addListener(std::string name, Listener *l);
 private:
     std::map< std::string, std::vector<Listener*> > listeners;

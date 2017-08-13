@@ -39,6 +39,7 @@ public:
     virtual int getHeight();
     virtual int getWidth();
 protected:
+    static const int getchTimeout = 11;
     WINDOW *win; 
 
     int y;

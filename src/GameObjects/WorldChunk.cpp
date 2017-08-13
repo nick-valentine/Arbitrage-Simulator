@@ -128,19 +128,18 @@ void WorldChunk::organizeTiles(std::vector<Tile> tiles)
 }
 
 
-void WorldChunk::draw(Window::window_ptr window, int playerY, int playerX)
+void WorldChunk::draw(Window::window_ptr window, int offsetTop, int offsetLeft)
 {
     int currX, currY;
-    int halfHeight = window->getHeight() / 2;
-    int halfWidth = window->getWidth() / 2;
     Tile::setPallete();
-    for(unsigned int i = 0; i < WorldChunk::chunk_height; ++i) {
-        for(unsigned int j = 0; j < WorldChunk::chunk_width; ++j) {
+    for(unsigned int i = 0; i < this->tiles.size(); ++i) {
+        for(unsigned int j = 0; j < this->tiles[i].size(); ++j) {
             this->tiles[i][j].drawAt(
                 window, 
-                (top + i - playerY) + halfHeight,
-                (left + j - playerX) + halfWidth,
-                this->doCullTile(playerY, playerX, top + i, left + j, i, j)
+                (top + i - offsetTop),
+                (left + j - offsetLeft),
+                //this->doCullTile(offsetTop, offsetLeft, top + i, left + j, i, j)
+                false
             );
         }
     }    
@@ -156,6 +155,7 @@ City WorldChunk::getCity(int y, int x)
     return City();
 }
 
+// @todo: move to render pipeline
 bool WorldChunk::doCullTile(
     int playerY, 
     int playerX, 
@@ -171,7 +171,6 @@ bool WorldChunk::doCullTile(
     if(distance < WorldChunk::maxViewDistance) {
         return false;
     } else {
-    //    return true;
         return true;
     }
 }
@@ -256,4 +255,16 @@ unsigned int WorldChunk::getChunkHeight()
 {
     return WorldChunk::chunk_height;
 }
+
+unsigned int WorldChunk::setChunkWidth(unsigned int w)
+{
+    return WorldChunk::chunk_width = w;
+}
+
+unsigned int WorldChunk::setChunkHeight(unsigned int h)
+{
+    WorldChunk::chunk_height = h;
+}
+
+
 

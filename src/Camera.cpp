@@ -34,8 +34,9 @@ int Camera::getX() const
     return this->pos_x;
 }
 
-void Camera::render(Window::window_ptr window, WorldInteractionInterface &worldProxy, Player &player)
+void Camera::render(Window::window_ptr window, WorldInteractionInterface &worldProxy)
 {
-    worldProxy.draw(window);
-    player.draw(window, this->pos_y, this->pos_x);
+    int halfHeight = window->getHeight() / 2;
+    int halfWidth = window->getWidth() / 2;
+    worldProxy.draw(window, this->pos_y - halfHeight, this->pos_x - halfWidth);
 }

@@ -5,6 +5,19 @@ Connection::Connection()
     this->connected = false;
 }
 
+Connection::Connection(Connection &other)
+{
+    this->socket = other.socket;
+    this->connected = other.connected;
+}
+
+Connection &Connection::operator=(Connection &other)
+{
+    this->socket = other.socket;
+    this->connected = other.connected;
+    return *this;
+}
+
 Connection::Connection(std::string ip, std::string port)
 {
     this->connect(ip, port);
@@ -43,6 +56,7 @@ void Connection::bind(socket_ptr sock)
 
 std::string Connection::read()
 {
+    std::lock_guard<std::mutex> lock(this->readGuard);
     if (this->connected) {
         boost::system::error_code error;
         boost::asio::streambuf sb;
@@ -66,8 +80,21 @@ std::string Connection::read()
     }
 }
 
+bool Connection::poll()
+{
+    try {
+        boost::asio::socket_base::bytes_readable command(true);
+        this->socket->io_control(command);
+        std::size_t bytes_readable = command.get(); 
+        return bytes_readable != 0;
+    } catch (boost::system::system_error& e) {
+        return false;
+    }
+}
+
 bool Connection::write(std::string msg)
 {
+    std::lock_guard<std::mutex> lock(this->writeGuard);
     if (this->connected) {
         boost::system::error_code ignored_error;
         boost::asio::write(
@@ -75,7 +102,25 @@ bool Connection::write(std::string msg)
             boost::asio::buffer(msg), 
             ignored_error
         );
+        if (ignored_error) {
+            return false;
+        }
+        return true;
     }
+    return false;
+}
+
+std::string Connection::writeRead(std::string msg)
+{
+    std::string r = "";
+    {
+        std::lock_guard<std::mutex> lock(this->writeReadGuard);
+        if (!this->write(msg)) {
+            return r;
+        }
+        r = this->read();
+    }
+    return r;
 }
 
 void Connection::close()

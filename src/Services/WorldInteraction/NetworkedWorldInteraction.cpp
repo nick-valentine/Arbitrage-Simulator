@@ -1,5 +1,6 @@
 #include "Services/WorldInteraction/NetworkedWorldInteraction.hpp"
 
+
 NetworkedWorldInteraction::NetworkedWorldInteraction(std::string server, std::string port) : LocalWorldInteraction("NetworkedWorld")
 {
     this->connected = true;
@@ -7,13 +8,15 @@ NetworkedWorldInteraction::NetworkedWorldInteraction(std::string server, std::st
         this->connected = false;
     }
     this->configure();
-    this->playerY = 0;
-    this->playerX = 0;
     this->chunksLoaded = std::vector< std::pair<int, int> >();
 }
 
 bool NetworkedWorldInteraction::loadWorld(boost::shared_ptr<Logger> logger)
 {
+    this->requestMap = std::map<int, void (*)(NetworkedWorldInteraction &myself, std::string msg)>();
+    this->requestMap[ServerSession::PLAYER_MOVE] = NetworkedWorldInteraction::PlayerMovedHandler;
+    this->requestMap[ServerSession::PLAYER_INVALIDATE] = NetworkedWorldInteraction::PlayerInvalidatedHandler;
+
     this->logger = logger;
     if (!this->connected) {
         return false;
@@ -23,39 +26,40 @@ bool NetworkedWorldInteraction::loadWorld(boost::shared_ptr<Logger> logger)
         return false;
     }
     this->getMetadata();
+    this->getAllPlayers();
+
+    this->updateFetcher = std::thread(&NetworkedWorldInteraction::updateLoop, this);
 
     return true;
 }
 
 void NetworkedWorldInteraction::cleanup()
 {
+    this->updateFetcher.join();
     this->logger->info("Quitting");
     this->quit();
 }
 
-void NetworkedWorldInteraction::draw(Window::window_ptr window)
+void NetworkedWorldInteraction::movePlayer(int index, int y, int x)
 {
-    this->draw(window, playerY, playerX);
-}
+    LocalWorldInteraction::movePlayer(index, y, x);
 
-void NetworkedWorldInteraction::draw(Window::window_ptr window, int playerY, int playerX)
-{
-    for (int i = 0; i < this->chunks.size(); ++i) {
-        for (int j = 0; j < this->chunks[i].size(); ++j) {
-            if (this->hasChunkLoaded(i, j)) {
-                this->chunks[i][j].draw(window, playerY, playerX);
-            }
-        }
+    std::string msg = boost::lexical_cast<std::string>(ServerSession::PLAYER_MOVE) + " " +
+        boost::lexical_cast<std::string>(index) + " " +
+        boost::lexical_cast<std::string>(y) + " " +
+        boost::lexical_cast<std::string>(x) + "\n";
+    msg = this->connection.writeRead(msg);
+    std::stringstream ss;
+    ss.str(msg);
+    int response;
+    ss>>response;
+    if (response != ServerSession::REQUEST_OK) {
+        this->logger->warn("Server did not acknowlege your movement");
     }
-}
 
-void NetworkedWorldInteraction::movePlayerToCoordinate(int y, int x)
-{
-    this->playerY = y;
-    this->playerX = x;
 
     int chunkX, chunkY, localX, localY;
-    this->playerCoordinatesToChunkCoordinates(chunkY, chunkX, localY, localX);
+    this->playerCoordinatesToChunkCoordinates(index, chunkY, chunkX, localY, localX);
     for (int i = chunkY-1; i <= chunkY+1; ++i) {
         for (int j = chunkX-1; j <= chunkX+1; ++j) {
             if (
@@ -66,6 +70,53 @@ void NetworkedWorldInteraction::movePlayerToCoordinate(int y, int x)
             }
         }
     }
+}
+
+Tile NetworkedWorldInteraction::getTileUnderPlayer(int index)
+{
+    int chunkY, chunkX, localY, localX;
+    this->playerCoordinatesToChunkCoordinates(index, chunkY, chunkX, localY, localX);
+    return this->getTile(chunkY, chunkX, localY, localX);
+}
+
+Tile NetworkedWorldInteraction::getTile(int chunkY, int chunkX, int localY, int localX)
+{
+    if (this->chunkInWorld(chunkY,chunkX)) {
+        if (!this->hasChunkLoaded(chunkY, chunkX)) {
+            this->fetchChunk(chunkY, chunkX);
+        }
+        return LocalWorldInteraction::getTile(chunkY, chunkX, localY, localX);
+    }
+    return Tile();
+}
+
+int NetworkedWorldInteraction::getPlayer(std::string name)
+{
+    std::string msg = boost::lexical_cast<std::string>(ServerSession::REQUEST_PLAYER) + " " + 
+        name + "\n";
+    msg = this->connection.writeRead(msg);
+    std::stringstream ss;
+    int player;
+    ss.str(msg);
+    ss>>player;
+    this->logger->info("Player fetched: %i", player);
+    return player;
+}
+
+void NetworkedWorldInteraction::getAllPlayers()
+{
+    std::string msg = boost::lexical_cast<std::string>(ServerSession::REQUEST_ALL_PLAYERS) + "\n";
+    msg = this->connection.writeRead(msg);
+    std::stringstream ss;
+    ss.str(msg);
+    this->playersFromStringstream(&ss);
+}
+
+std::string NetworkedWorldInteraction::getUpdates()
+{
+    std::string msg = boost::lexical_cast<std::string>(ServerSession::UPDATE) + "\n";
+    msg = this->connection.writeRead(msg);
+    return msg;
 }
 
 City NetworkedWorldInteraction::getCity(int y, int x)
@@ -88,6 +139,33 @@ void NetworkedWorldInteraction::configure()
     this->version = ConfigLoader::getVersion();
 }
 
+void NetworkedWorldInteraction::silentMovePlayer(int index, int y, int x)
+{
+    this->logger->info("Player %d moved to %d, %d", index, y, x);
+    this->players[index].move(y, x);
+}
+
+void NetworkedWorldInteraction::updateLoop()
+{
+    while (true) {
+        std::string msg = this->getUpdates();
+        this->updateHandler(msg);
+        std::this_thread::sleep_for(std::chrono::milliseconds(ServerSession::tickrate));
+    }
+}
+
+void NetworkedWorldInteraction::updateHandler(std::string update)
+{
+    std::stringstream ss;
+    int requestor, request_type;
+
+    ss.str(update);
+    ss>>requestor>>request_type;
+    if (this->requestMap.find(request_type) != this->requestMap.end()) {
+        this->requestMap[request_type](*this, update);
+    }
+}
+
 bool NetworkedWorldInteraction::hasChunkLoaded(int y, int x)
 {
     for (int i = 0; i < this->chunksLoaded.size(); ++i) {
@@ -98,6 +176,26 @@ bool NetworkedWorldInteraction::hasChunkLoaded(int y, int x)
     return false;
 }
 
+void NetworkedWorldInteraction::PlayerMovedHandler(NetworkedWorldInteraction &myself, std::string msg)
+{
+    myself.logger->info("Executing player moved handler");
+    int sender, type, who, y, x;
+    std::stringstream ss;
+    ss.str(msg);
+    ss>>sender>>type>>who>>y>>x;
+
+    if (myself.players.size() <= who) {
+        myself.getAllPlayers();
+    }
+    myself.silentMovePlayer(who, y, x);
+}
+
+void NetworkedWorldInteraction::PlayerInvalidatedHandler(NetworkedWorldInteraction &myself, std::string msg)
+{
+    myself.logger->info("Executing player invalidated handler");
+    myself.getAllPlayers();
+}
+
 bool NetworkedWorldInteraction::handShake()
 {
     std::string sVersion;
@@ -105,9 +203,9 @@ bool NetworkedWorldInteraction::handShake()
         //Version OK, good to continue
         return true;
     } else {
-        std::cerr<<"Your version does not match the servers.\nYou are running " +
-            this->version +
-            ".\n The server is running " +
+        std::cerr<<"Your version does not match the servers.\nYou are running "<<
+            this->version<<
+            ".\n The server is running "<<
             sVersion
         ;
         return false;
@@ -118,15 +216,13 @@ bool NetworkedWorldInteraction::handShake()
 void NetworkedWorldInteraction::getMetadata()
 {
     std::string message = boost::lexical_cast<std::string>(ServerSession::REQUEST_ITEM_MAP) + "\n";
-    this->connection.write(message);
-    std::string response = this->connection.read();
+    std::string response = this->connection.writeRead(message);
     std::stringstream ss;
     ss.str(response);
     ItemMap::fromStringStream(&ss);
 
     message = boost::lexical_cast<std::string>(ServerSession::REQUEST_WORLD_DIMS) + "\n";
-    this->connection.write(message);
-    response = this->connection.read();
+    response = this->connection.writeRead(message);
     ss.str(std::string());
     int worldX, worldY, chunkX, chunkY;
     ss.str(response);
@@ -135,13 +231,15 @@ void NetworkedWorldInteraction::getMetadata()
         >>this->chunkWidth
         >>this->chunkHeight
     ;
+    WorldChunk::setChunkWidth(this->chunkWidth);
+    WorldChunk::setChunkHeight(this->chunkHeight);
 }
 
 std::string NetworkedWorldInteraction::checkVersion()
 {
     std::string message = boost::lexical_cast<std::string>(ServerSession::VERSION_CHECK) + " " + this->version + "\n";
-    this->connection.write(message);
-    std::string response = this->connection.read();
+    this->logger->info("%s", message.c_str());
+    std::string response = this->connection.writeRead(message);
     std::stringstream ss;
 
     ss.str(response);
@@ -167,8 +265,7 @@ void NetworkedWorldInteraction::quit()
 {
     try {
         std::string message = boost::lexical_cast<std::string>(ServerSession::QUIT) + "\n";
-        this->connection.write(message);
-        std::string response = this->connection.read();
+        std::string response = this->connection.writeRead(message);
     } catch (boost::system::system_error& e) {
     }
 }
@@ -180,8 +277,7 @@ int NetworkedWorldInteraction::fetchChunk(int chunkY, int chunkX)
         boost::lexical_cast<std::string>(chunkY) + " " + 
         boost::lexical_cast<std::string>(chunkX) + "\n"
     ;
-    this->connection.write(message);
-    std::string response = this->connection.read();
+    std::string response = this->connection.writeRead(message);
     std::stringstream ss;
     ss.str(response);
     int responseType;

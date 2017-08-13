@@ -43,13 +43,24 @@ void Player::getYX(int &y, int &x)
     x = this->x;
 }
 
+void Player::setYX(int y, int x)
+{
+    this->y = y;
+    this->x = x;
+}
+
+std::string Player::getName()
+{
+    return this->name;
+}
+
 void Player::draw(Window::window_ptr window, int offsetTop, int offsetLeft)
 {
     window->put(
         /* color pair */ 0, 
         /* layer */ 10,
         Player::representation,
-        window->getHeight() / 2,
-        window->getWidth() / 2 
+        this->y - offsetTop,
+        this->x - offsetLeft
     );
 }
