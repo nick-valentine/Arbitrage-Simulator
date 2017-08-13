@@ -84,6 +84,7 @@ void CursesWindow::move(int y, int x)
 
 int CursesWindow::getCh()
 {
+    wtimeout(this->win, CursesWindow::getchTimeout);
     return wgetch(this->win);
 }
 

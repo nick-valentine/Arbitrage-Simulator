@@ -46,6 +46,8 @@ int Component::Menu::update(Context *ctx)
             return selected;
         case Input::BACK:
             return -2;
+        default:
+            return -1;
     };
 }
 
