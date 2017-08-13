@@ -39,6 +39,7 @@ public:
     int getPlayer(std::string name);
     int getPlayerCount();
     Player playerInfo(int index);
+    void setPlayer(int index, Player player);
 
     int getChunkHeight();
     int getChunkWidth();

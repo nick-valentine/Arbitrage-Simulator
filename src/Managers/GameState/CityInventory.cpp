@@ -19,6 +19,7 @@ void GameState::CityInventory::init()
     this->populateMenu(&this->cityInv, this->cityInventoryOptions);
     this->playerInventoryOptions = this->getInventory(this->player.getInventory()->getInv());
     this->populateMenu(&this->playerInv, this->playerInventoryOptions);
+    this->state = CInventory;
 }
 
 void GameState::CityInventory::setCity(City city)
@@ -34,21 +35,11 @@ void GameState::CityInventory::setPlayer(int index, Player player)
 
 void GameState::CityInventory::update(WorldInteractionInterface ** worldProxy, Context *ctx)
 {
-    int result = this->cityInv.update(ctx);
-    switch (result) {
-        case -1:
-            break;
-        case -2:
-            this->logger->debug("Back pressed");
-            this->msgDown = -1;
-            this->inventoryShouldClose = true;
-            break;
-        default:
-            this->logger->debug("%d Selected", result);
-            this->msgDown = result;
-            this->inventoryShouldClose = true;
-            break;
-    };
+    if (this->state == CInventory) {
+        this->updateCityInventory(worldProxy, ctx);
+    } else if (this->state == PInventory) {
+        this->updatePlayerInventory(worldProxy, ctx);
+    }
 }
 
 void GameState::CityInventory::render(WorldInteractionInterface *worldProxy, Window::window_ptr window)
@@ -120,3 +111,50 @@ void GameState::CityInventory::populateMenu(Component::Menu *menu, std::vector<s
     std::string head = "cnt\tcost\twgt\tname\t\t\tdesc";
     *menu = Component::Menu(head, options, 10, 10, 20, 20);
 }
+
+
+void GameState::CityInventory::updateCityInventory(WorldInteractionInterface ** worldProxy, Context *ctx)
+{
+    if (ctx->input == Input::ESCAPE) {
+        this->state = PInventory;
+    }
+    int result = this->cityInv.update(ctx);
+    switch (result) {
+        case -1:
+            break;
+        case -2:
+            this->logger->debug("Back pressed");
+            this->msgDown = -1;
+            this->inventoryShouldClose = true;
+            break;
+        default:
+            this->logger->debug("%d Selected", result);
+            this->msgDown = result;
+            this->inventoryShouldClose = true;
+            break;
+    };
+}
+
+void GameState::CityInventory::updatePlayerInventory(WorldInteractionInterface ** worldProxy, Context *ctx)
+{
+    if (ctx->input == Input::ESCAPE) {
+        this->state = CInventory;
+    }
+    int result = this->playerInv.update(ctx);
+    switch (result) {
+        case -1:
+            break;
+        case -2:
+            this->logger->debug("Back pressed");
+            this->msgDown = -1;
+            this->inventoryShouldClose = true;
+            break;
+        default:
+            this->logger->debug("%d Selected", result);
+            this->msgDown = result;
+            this->inventoryShouldClose = true;
+            break;
+    };
+}
+
+

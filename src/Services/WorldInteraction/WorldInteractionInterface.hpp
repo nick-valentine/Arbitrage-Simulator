@@ -26,6 +26,7 @@ public:
     virtual City getCity(int y, int x) = 0;
     virtual int getPlayer(std::string name) = 0;
     virtual Player playerInfo(int index) = 0;
+    virtual void setPlayer(int index, Player player) = 0;
 private:
 };
 

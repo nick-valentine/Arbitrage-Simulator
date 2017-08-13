@@ -131,6 +131,11 @@ Player LocalWorldInteraction::playerInfo(int index)
     return Player();
 }
 
+void LocalWorldInteraction::setPlayer(int index, Player player)
+{
+    this->players[index] = player;
+}
+
 int LocalWorldInteraction::getChunkHeight()
 {
     return this->chunkHeight;

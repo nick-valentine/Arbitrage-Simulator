@@ -24,6 +24,12 @@ namespace GameState
         void clearNextState();
         bool shouldClose();
     private:
+        enum State {
+            CInventory = 0,
+            PInventory
+        };
+
+        State state;
         City city;
         int playerIndex;
         Player player;
@@ -32,6 +38,9 @@ namespace GameState
 
         std::vector<std::string> getInventory(std::vector<Inventory::Record> inv);
         void populateMenu(Component::Menu *menu, std::vector<std::string> options);
+
+        void updateCityInventory(WorldInteractionInterface ** worldProxy, Context *ctx);
+        void updatePlayerInventory(WorldInteractionInterface ** worldProxy, Context *ctx);
 
         bool inventoryShouldClose;
         Component::Menu cityInv;

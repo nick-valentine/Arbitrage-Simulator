@@ -18,6 +18,18 @@ void GameState::Playing::update(WorldInteractionInterface ** worldProxy, Context
             name += char((rand() % 26) + 97);
         }
         this->player = (*worldProxy)->getPlayer(name);
+        Player pInfo = (*worldProxy)->playerInfo(this->player);
+        std::vector<int> ids = ItemMap::validIds();
+        int itemsToGive = rand() % 20;
+        for (int i = 0; i < itemsToGive; ++i) {
+            pInfo.getInventory()->add(
+                ItemMap::get(
+                    ids[rand() % ids.size()]
+                ).getId(),
+                rand() % 15
+            );
+        }
+        (*worldProxy)->setPlayer(this->player, pInfo);
     }
 
     if (this->recvMsgUp != 0) {
