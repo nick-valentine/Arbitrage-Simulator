@@ -49,6 +49,7 @@ private:
     void act(std::string name, std::string value);
     void cleanSessions();
     void broadcastPlayerLocation(std::string value);
+    void broadcastInvalidatePlayers();
 
     std::vector<ServerSession*> sessions;
 

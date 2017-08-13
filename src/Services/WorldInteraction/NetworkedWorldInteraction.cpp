@@ -115,9 +115,6 @@ std::string NetworkedWorldInteraction::getUpdates()
 {
     std::string msg = boost::lexical_cast<std::string>(ServerSession::UPDATE) + "\n";
     msg = this->connection.writeRead(msg);
-    if (msg[0] != '\n') {
-        this->logger->info("%s", msg.c_str());
-    }
     return msg;
 }
 
@@ -158,7 +155,6 @@ void NetworkedWorldInteraction::updateLoop()
 
 void NetworkedWorldInteraction::updateHandler(std::string update)
 {
-    this->logger->info("%s", update.c_str());
     std::stringstream ss;
     int requestor, request_type;
 
@@ -187,7 +183,16 @@ void NetworkedWorldInteraction::PlayerMovedHandler(NetworkedWorldInteraction &my
     ss.str(msg);
     ss>>sender>>type>>who>>y>>x;
 
+    if (myself.players.size() <= who) {
+        myself.getAllPlayers();
+    }
     myself.silentMovePlayer(who, y, x);
+}
+
+void NetworkedWorldInteraction::PlayerInvalidatedHandler(NetworkedWorldInteraction &myself, std::string msg)
+{
+    myself.logger->info("Executing player invalidated handler");
+    myself.getAllPlayers();
 }
 
 bool NetworkedWorldInteraction::handShake()

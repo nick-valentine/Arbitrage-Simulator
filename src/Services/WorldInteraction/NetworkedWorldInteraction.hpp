@@ -68,14 +68,24 @@ private:
     std::map<int, void (*)(NetworkedWorldInteraction &myself, std::string msg)> requestMap; 
 
     /**
-     * Request Handler: Version Check.
-     * Handle a request to check the compatibility of this server and a client.
+     * Request Handler: Player Moved
+     * Handle a request notifying of player movement
      *
      * @param  ServerSession &myself
      * @param  std::string msg the message the client sent
      * @return std::string the response
      */
     static void PlayerMovedHandler(NetworkedWorldInteraction &myself, std::string msg);
+
+    /**
+     * Request Handler: Player Invalidated
+     * Some player joined or left, refetch all players
+     *
+     * @param  ServerSession &myself
+     * @param  std::string msg the message the client sent
+     * @return std::string the response
+     */
+    static void PlayerInvalidatedHandler(NetworkedWorldInteraction &myself, std::string msg);
 
     bool hasChunkLoaded(int y, int x);
 

@@ -48,7 +48,8 @@ public:
         REQUEST_ITEM_MAP = 140,
         REQUEST_PLAYER = 150,
         REQUEST_ALL_PLAYERS = 160,
-        PLAYER_MOVE = 170
+        PLAYER_MOVE = 170,
+        PLAYER_INVALIDATE = 180
     };
 
     enum SESSION_STATE {
