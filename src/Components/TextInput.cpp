@@ -30,7 +30,7 @@ std::string Component::TextInput::update(Context *ctx)
     if (input >= 32 && input <= 126) {
         this->input  += char(input);
     }
-    if (ctx->input == Input::ESCAPE) {
+    if (ctx->input == Input::ESCAPE || ctx->input == Input::ENTER) {
         this->isDone = true;
     }
     return this->input;

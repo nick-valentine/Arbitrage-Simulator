@@ -6,7 +6,9 @@
 
 #include "Managers/GameState/State.hpp"
 #include "GameObjects/City.hpp"
+#include "GameObjects/ItemMap.hpp"
 #include "Components/Menu.hpp"
+#include "Components/TextInput.hpp"
 
 namespace GameState
 {
@@ -26,13 +28,22 @@ namespace GameState
     private:
         enum State {
             CInventory = 0,
-            PInventory
+            PInventory,
+            CCountQuestion,
+            PCountQuestion,
+            DisplayResults
         };
 
         State state;
         City city;
         int playerIndex;
         Player player;
+
+        int playerItemSelected;
+        int playerCountSelected;
+        int cityItemSelected;
+        int cityCountSelected;
+
         std::vector<std::string> cityInventoryOptions;
         std::vector<std::string> playerInventoryOptions;
 
@@ -41,10 +52,23 @@ namespace GameState
 
         void updateCityInventory(WorldInteractionInterface ** worldProxy, Context *ctx);
         void updatePlayerInventory(WorldInteractionInterface ** worldProxy, Context *ctx);
+        void updateCCountQuestion(WorldInteractionInterface ** worldProxy, Context *ctx);
+        void updatePCountQuestion(WorldInteractionInterface ** worldProxy, Context *ctx);
+        void updateDisplayResults(WorldInteractionInterface ** worldProxy, Context *ctx);
+
+        void renderCityInventory(WorldInteractionInterface * worldProxy, Window::window_ptr window);
+        void renderPlayerInventory(WorldInteractionInterface * worldProxy, Window::window_ptr window);
+        void renderCCountQuestion(WorldInteractionInterface * worldProxy, Window::window_ptr window);
+        void renderPCountQuestion(WorldInteractionInterface * worldProxy, Window::window_ptr window);
+        void renderDisplayResults(WorldInteractionInterface * worldProxy, Window::window_ptr window);
+
+        void popState();
+        void pushState(State newState);
 
         bool inventoryShouldClose;
         Component::Menu cityInv;
         Component::Menu playerInv;
+        Component::TextInput countInput;
     };
 }
 

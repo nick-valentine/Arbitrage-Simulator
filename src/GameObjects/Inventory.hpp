@@ -31,6 +31,7 @@ public:
     void add(Item item, int count);
 
     Record get(int itemId);
+    Record getAt(int index);
     
     std::vector<Record> getInv();
 private:

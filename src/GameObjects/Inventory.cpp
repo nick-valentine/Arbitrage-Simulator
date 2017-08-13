@@ -79,6 +79,11 @@ Inventory::Record Inventory::get(int itemId)
     return this->inv[i];
 }
 
+Inventory::Record Inventory::getAt(int index)
+{
+    return this->inv[index];
+}
+
 std::vector<Inventory::Record> Inventory::getInv()
 {
     return this->inv;

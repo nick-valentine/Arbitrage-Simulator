@@ -11,7 +11,8 @@ enum Input {
     RIGHT,
     SELECT,
     BACK,
-    ESCAPE
+    ESCAPE,
+    ENTER
 };
 
 namespace InputMapping 

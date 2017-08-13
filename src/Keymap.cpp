@@ -13,6 +13,8 @@ void Keymap::init()
     m = this->loadFile();
     this->createMap(m);
     this->inputMap[27] = Input::ESCAPE;
+    this->inputMap['\n'] = Input::ENTER;
+    this->inputMap['\r'] = Input::ENTER;
 }
 
 Input Keymap::convert(int rawInput)
