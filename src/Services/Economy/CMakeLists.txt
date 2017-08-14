@@ -1,0 +1,12 @@
+set (SOURCES
+    ${SOURCES}
+    ${CMAKE_CURRENT_SOURCE_DIR}/CityTrade.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/General.cpp
+    PARENT_SCOPE
+)
+set (HEADERS
+    ${HEADERS}
+    ${CMAKE_CURRENT_SOURCE_DIR}/CityTrade.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/General.hpp
+    PARENT_SCOPE
+)

@@ -5,6 +5,7 @@
 #include <vector>
 
 #include "Managers/GameState/State.hpp"
+#include "Services/Economy/CityTrade.hpp"
 #include "GameObjects/City.hpp"
 #include "GameObjects/ItemMap.hpp"
 #include "Components/Menu.hpp"

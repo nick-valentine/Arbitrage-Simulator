@@ -70,6 +70,12 @@ void Inventory::add(Item item, int count)
     this->add(item.getId(), count);
 }
 
+bool Inventory::has(int itemId)
+{
+    int i = this->find(itemId);
+    return i != -1;
+}
+
 Inventory::Record Inventory::get(int itemId)
 {
     int i = this->find(itemId);

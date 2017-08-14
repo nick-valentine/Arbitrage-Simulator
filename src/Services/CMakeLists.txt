@@ -1,6 +1,7 @@
 add_subdirectory (Logger)
 add_subdirectory (WindowLayout)
 add_subdirectory (WorldInteraction)
+add_subdirectory (Economy)
 
 set (SOURCES
     ${SOURCES}

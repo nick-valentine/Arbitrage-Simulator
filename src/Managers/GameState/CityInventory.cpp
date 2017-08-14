@@ -181,6 +181,18 @@ void GameState::CityInventory::updateDisplayResults(WorldInteractionInterface **
 {
     if (ctx->input == Input::ESCAPE) {
         this->inventoryShouldClose = true;
+    } else if (ctx->input == Input::ENTER) {
+        if (Economy::CityTrade::willAcceptTrade(
+            (*worldProxy), 
+            &this->city,
+            &this->player,
+            &this->playerStage,
+            &this->cityStage
+        )) {
+            this->logger->debug("Trade accepted");
+        } else {
+            this->logger->debug("Get lost");
+        }
     }
 }
 

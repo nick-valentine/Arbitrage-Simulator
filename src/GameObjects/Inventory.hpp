@@ -30,6 +30,7 @@ public:
     void add(int itemId, int count);
     void add(Item item, int count);
 
+    bool has(int itemId);
     Record get(int itemId);
     Record getAt(int index);
     
