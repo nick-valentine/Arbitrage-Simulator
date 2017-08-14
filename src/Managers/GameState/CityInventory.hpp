@@ -29,20 +29,27 @@ namespace GameState
         enum State {
             CInventory = 0,
             PInventory,
-            CCountQuestion,
-            PCountQuestion,
+            CountQuestion,
             DisplayResults
         };
 
+        enum Stage {
+            p = 0,
+            c
+        };
+
         State state;
+        State lastState;
         City city;
         int playerIndex;
         Player player;
 
-        int playerItemSelected;
-        int playerCountSelected;
-        int cityItemSelected;
-        int cityCountSelected;
+        Stage stageFor;
+        int itemStage;
+        int countStage;
+
+        Inventory playerStage;
+        Inventory cityStage;
 
         std::vector<std::string> cityInventoryOptions;
         std::vector<std::string> playerInventoryOptions;
@@ -52,18 +59,18 @@ namespace GameState
 
         void updateCityInventory(WorldInteractionInterface ** worldProxy, Context *ctx);
         void updatePlayerInventory(WorldInteractionInterface ** worldProxy, Context *ctx);
-        void updateCCountQuestion(WorldInteractionInterface ** worldProxy, Context *ctx);
-        void updatePCountQuestion(WorldInteractionInterface ** worldProxy, Context *ctx);
+        void updateCountQuestion(WorldInteractionInterface ** worldProxy, Context *ctx);
         void updateDisplayResults(WorldInteractionInterface ** worldProxy, Context *ctx);
 
         void renderCityInventory(WorldInteractionInterface * worldProxy, Window::window_ptr window);
         void renderPlayerInventory(WorldInteractionInterface * worldProxy, Window::window_ptr window);
-        void renderCCountQuestion(WorldInteractionInterface * worldProxy, Window::window_ptr window);
-        void renderPCountQuestion(WorldInteractionInterface * worldProxy, Window::window_ptr window);
+        void renderCountQuestion(WorldInteractionInterface * worldProxy, Window::window_ptr window);
         void renderDisplayResults(WorldInteractionInterface * worldProxy, Window::window_ptr window);
 
         void popState();
         void pushState(State newState);
+
+        void displayItem(Window::window_ptr window, Inventory::Record rec, int y, int x);
 
         bool inventoryShouldClose;
         Component::Menu cityInv;

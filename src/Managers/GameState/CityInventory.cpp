@@ -36,15 +36,15 @@ void GameState::CityInventory::setPlayer(int index, Player player)
 
 void GameState::CityInventory::update(WorldInteractionInterface ** worldProxy, Context *ctx)
 {
+    if (ctx->input == Input::ENTER && this->state != CountQuestion) {
+        this->state = DisplayResults;
+    }
     switch (this->state) {
         case CInventory:
             return this->updateCityInventory(worldProxy, ctx);
         case PInventory:
             return this->updatePlayerInventory(worldProxy, ctx);
-        case CCountQuestion:
-            return this->updateCCountQuestion(worldProxy, ctx);
-        case PCountQuestion:
-            return this->updatePCountQuestion(worldProxy, ctx);
+        case CountQuestion: return this->updateCountQuestion(worldProxy, ctx);
         case DisplayResults:
             return this->updateDisplayResults(worldProxy, ctx);
     };
@@ -57,10 +57,8 @@ void GameState::CityInventory::render(WorldInteractionInterface *worldProxy, Win
             return this->renderCityInventory(worldProxy, window);
         case PInventory:
             return this->renderPlayerInventory(worldProxy, window);
-        case CCountQuestion:
-            return this->renderCCountQuestion(worldProxy, window);
-        case PCountQuestion:
-            return this->renderPCountQuestion(worldProxy, window);
+        case CountQuestion:
+            return this->renderCountQuestion(worldProxy, window);
         case DisplayResults:
             return this->renderDisplayResults(worldProxy, window);
     };
@@ -115,6 +113,10 @@ void GameState::CityInventory::populateMenu(Component::Menu *menu, std::vector<s
 
 void GameState::CityInventory::updateCityInventory(WorldInteractionInterface ** worldProxy, Context *ctx)
 {
+    if (ctx->input == Input::RIGHT || ctx->input == Input::LEFT) {
+        this->state = PInventory;
+    }
+    this->stageFor = c;
     int result = this->cityInv.update(ctx);
     switch (result) {
         case -1:
@@ -125,52 +127,53 @@ void GameState::CityInventory::updateCityInventory(WorldInteractionInterface ** 
             break;
         default:
             this->logger->debug("City: %d Selected", result);
-            this->cityItemSelected = result;
+            this->itemStage = this->city.getInventory()->getInv()[result].itemId;
             this->countInput = Component::TextInput("How Many: ", 5, 5);
-            this->state = CCountQuestion;
+            this->state = CountQuestion;
+            this->lastState = CInventory;
             break;
     };
 }
 
 void GameState::CityInventory::updatePlayerInventory(WorldInteractionInterface ** worldProxy, Context *ctx)
 {
+    if (ctx->input == Input::RIGHT || ctx->input == Input::LEFT) {
+        this->state = CInventory;
+    }
+    this->stageFor = p;
     int result = this->playerInv.update(ctx);
     switch (result) {
         case -1:
             break;
         case -2:
             this->logger->debug("Back pressed");
-            this->state = CInventory;
+            this->inventoryShouldClose = true;
             break;
         default:
             this->logger->debug("Player: %d Selected", result);
-            this->playerItemSelected = result;
+            this->itemStage = this->player.getInventory()->getInv()[result].itemId;
             this->countInput = Component::TextInput("How Many: ", 5, 5);
-            this->state = PCountQuestion;
+            this->state = CountQuestion;
+            this->lastState = PInventory;
             break;
     };
 }
 
-// @todo: refactor
-void GameState::CityInventory::updateCCountQuestion(WorldInteractionInterface ** worldProxy, Context *ctx)
+void GameState::CityInventory::updateCountQuestion(WorldInteractionInterface ** worldProxy, Context *ctx)
 {
     std::string output = this->countInput.update(ctx);
     if (this->countInput.done()) {
         std::stringstream ss;
         ss.str(output);
-        this->state = PInventory;
-        ss>>this->cityCountSelected;
-    }
-}
-
-void GameState::CityInventory::updatePCountQuestion(WorldInteractionInterface ** worldProxy, Context *ctx)
-{
-    std::string output = this->countInput.update(ctx);
-    if (this->countInput.done()) {
-        std::stringstream ss;
-        ss.str(output);
-        this->state = DisplayResults;
-        ss>>this->playerCountSelected;
+        this->state = this->lastState;
+        ss>>this->countStage;
+        if (this->stageFor == p) {
+            this->playerStage.add(this->itemStage, this->countStage);
+        } else if (this->stageFor == c) {
+            this->cityStage.add(this->itemStage, this->countStage);
+        }
+        this->itemStage = 0;
+        this->countStage = 0;
     }
 }
 
@@ -210,36 +213,33 @@ void GameState::CityInventory::renderPlayerInventory(WorldInteractionInterface *
     this->playerInv.render(window);
 }
 
-void GameState::CityInventory::renderCCountQuestion(WorldInteractionInterface * worldProxy, Window::window_ptr window)
-{
-    this->countInput.render(window);
-}
-
-void GameState::CityInventory::renderPCountQuestion(WorldInteractionInterface * worldProxy, Window::window_ptr window)
+void GameState::CityInventory::renderCountQuestion(WorldInteractionInterface * worldProxy, Window::window_ptr window)
 {
     this->countInput.render(window);
 }
 
 void GameState::CityInventory::renderDisplayResults(WorldInteractionInterface * worldProxy, Window::window_ptr window)
 {
-    std::stringstream ss;
-    Item playerItem = ItemMap::get(
-        player.getInventory()->getAt(playerItemSelected).itemId
-    );
-    Item cityItem = ItemMap::get(
-        city.getInventory()->getAt(cityItemSelected).itemId
-    );
-    ss<<"Player chosen item: "<<playerItem.getName();
-    window->putstr(5, 5, ss.str(), 0);
-    ss.str("");
-    ss<<"Player chosen count: "<<playerCountSelected;
-    window->putstr(6, 5, ss.str(), 0);
-    ss.str("");
-    ss<<"City chosen item: "<<cityItem.getName();
-    window->putstr(7, 5, ss.str(), 0);
-    ss.str("");
-    ss<<"City chosen count: "<<cityCountSelected;
-    window->putstr(8, 5, ss.str(), 0);
-    ss.str("");
+    int borderHeight = window->getHeight() * 0.1;
+    int borderWidth = window->getWidth() * 0.1;
+    int halfWidth = window->getWidth() / 2;
+
+    window->putstr(borderHeight - 1, borderWidth, this->player.getName(), 0);
+    std::vector<Inventory::Record> pInv = this->playerStage.getInv();
+    for (int i = 0; i < pInv.size(); ++i) {
+        this->displayItem(window, pInv[i], borderHeight + i, borderWidth);
+    }
+    window->putstr(borderHeight - 1, halfWidth, this->city.getName(), 0);
+    std::vector<Inventory::Record> cInv = this->cityStage.getInv();
+    for (int i = 0; i < cInv.size(); ++i) {
+        this->displayItem(window, cInv[i], borderHeight + i, halfWidth);
+    }
 }
 
+void GameState::CityInventory::displayItem(Window::window_ptr window, Inventory::Record rec, int y, int x)
+{
+    std::stringstream ss;
+    Item i = ItemMap::get(rec.itemId);
+    ss<<rec.count<<"\t"<<i.getName();
+    window->putstr(y, x, ss.str(), 0);
+}
